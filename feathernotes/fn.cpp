@@ -565,6 +565,7 @@ void FN::newNote()
         raise();
         return;
     }
+    closeTagsDialog();
 
     if (timer_->isActive()) timer_->stop();
 
@@ -885,6 +886,7 @@ void FN::openFile()
         raise();
         return;
     }
+    closeTagsDialog();
 
     if (timer_->isActive()) timer_->stop();
 
@@ -1880,6 +1882,8 @@ void FN::handleTags()
 
     if (newTags != tags)
     {
+        closeTagsDialog();
+
         if (newTags.isEmpty())
             node.toElement().removeAttribute ("tag");
         else
