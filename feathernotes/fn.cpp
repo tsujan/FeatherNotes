@@ -3790,14 +3790,20 @@ void FN::prefEnlightenment (int checked)
     if (checked == Qt::Checked)
     {
         underE_ = true;
-        if (QAction *actionshowMainWindow = tray_->contextMenu()->findChild<QAction *>("raiseHide"))
-            actionshowMainWindow->setText("&Raise");
+        if (tray_)
+        {
+            if (QAction *actionshowMainWindow = tray_->contextMenu()->findChild<QAction *>("raiseHide"))
+                actionshowMainWindow->setText("&Raise");
+        }
     }
     else if (checked == Qt::Unchecked)
     {
         underE_ = false;
-        if (QAction *actionshowMainWindow = tray_->contextMenu()->findChild<QAction *>("raiseHide"))
-            actionshowMainWindow->setText("&Raise/Hide");
+        if (tray_)
+        {
+            if (QAction *actionshowMainWindow = tray_->contextMenu()->findChild<QAction *>("raiseHide"))
+                actionshowMainWindow->setText("&Raise/Hide");
+        }
     }
 }
 /*************************/
