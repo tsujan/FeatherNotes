@@ -21,6 +21,7 @@
 #include "spinbox.h"
 #include "simplecrypt.h"
 #include "settings.h"
+#include "help.h"
 
 #include <QToolButton>
 #include <QFileDialog>
@@ -87,9 +88,6 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
     splitterSizes_ = QByteArray::fromBase64 ("AAAA/wAAAAAAAAACAAAAoAAAAeoBAAAABgEAAAAB");
     remSize_ = true;
     remSplitter_ = true;
-    isMaxed_ = false;
-    wasMaxed_ = false;
-    isFull_ = false;
     remPosition_ = true;
     wrapByDefault_ = true;
     indentByDefault_ = true;
@@ -208,6 +206,7 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
     connect (ui->allButton, &QAbstractButton::clicked, this, &FN::replaceAll);
 
     connect (ui->actionAbout, &QAction::triggered, this, &FN::aboutDialog);
+    connect (ui->actionHelp, &QAction::triggered, this, &FN::showHelpDialog);
 
     /* Once the tray icon is created, it'll persist even if the systray
        disappears temporarily. But for the tray icon to be created, the
@@ -300,16 +299,10 @@ void FN::closeEvent (QCloseEvent *event)
     if (!quitting_)
     {
         event->ignore();
-        if (!isFull_ && !isMaxed_)
+        if (!isMaximized() && !isFullScreen())
         {
             position_.setX (geometry().x());
             position_.setY (geometry().y());
-        }
-        else if (isMaxed_)
-        {
-            //setParent (dummyWidget, Qt::SubWindow);
-            //setWindowState (windowState() & ~Qt::WindowMaximized);
-            wasMaxed_ = true;
         }
         if (tray_ && QSystemTrayIcon::isSystemTrayAvailable())
             QTimer::singleShot (0, this, SLOT (hide()));
@@ -445,15 +438,17 @@ void FN::fullScreening()
 /*************************/
 void FN::defaultSize()
 {
-    if (isMaximized() && isFullScreen())
+    if (isMaximized() || isFullScreen())
+        return;
+    /*if (isMaximized() && isFullScreen())
         showMaximized();
     if (isMaximized())
-        showNormal();
+        showNormal();*/
     if (size() != QSize (650, 400))
     {
         setVisible (false);
         resize (650, 400);
-        showNormal();
+        QTimer::singleShot (250, this, SLOT (showNormal()));
     }
     QList<int> sizes; sizes << 160 << 490;
     ui->splitter->setSizes (sizes);
@@ -516,44 +511,6 @@ void FN::resizeEvent (QResizeEvent *event)
     if (windowState() == Qt::WindowNoState)
         winSize_ = event->size();
     QWidget::resizeEvent (event);
-}
-/*************************/
-void FN::changeEvent (QEvent *event)
-{
-    if (/*remSize_ && */event->type() == QEvent::WindowStateChange)
-    {
-        if (windowState() == Qt::WindowFullScreen)
-        {
-            isFull_ = true;
-            isMaxed_ = false;
-        }
-        else if (windowState() == (Qt::WindowFullScreen ^ Qt::WindowMaximized))
-        {
-            isFull_ = true;
-            isMaxed_ = true;
-        }
-        else
-        {
-            isFull_ = false;
-
-            if (windowState() == Qt::WindowMaximized)
-                isMaxed_ = true;
-            else if (isVisible() && windowState() == Qt::WindowNoState)
-            {
-                QWindowStateChangeEvent* e = static_cast<QWindowStateChangeEvent*>(event);
-                if (e->oldState() == Qt::WindowMaximized)
-                {
-                    isMaxed_ = false;
-                    /* a workaround for a bug, that prevents a window from keeping
-                       its size when moved to another desktop after unmaximization */
-                    hide();
-                    setGeometry (position_.x(), position_.y(), winSize_.width(), winSize_.height());
-                    QTimer::singleShot (0, this, SLOT (show()));
-                }
-            }
-        }
-    }
-    QWidget::changeEvent (event);
 }
 /*************************/
 void FN::newNote()
@@ -2012,7 +1969,6 @@ void FN::nodeChanged (const QModelIndex&, const QModelIndex&)
 /*************************/
 void FN::showHideSearch()
 {
-    QWidget *cw = ui->stackedWidget->currentWidget();
     bool visibility = ui->lineEdit->isVisible();
 
     ui->lineEdit->setVisible (!visibility);
@@ -2026,27 +1982,31 @@ void FN::showHideSearch()
 
     if (!visibility)
         ui->lineEdit->setFocus();
-    else if (cw)
+    else
     {
-        /* return focus to the document */
-        qobject_cast< TextEdit *>(cw)->setFocus();
-        /* cancel search */
-        QHash<TextEdit*,QString>::iterator it;
-        for (it = searchEntries_.begin(); it != searchEntries_.end(); ++it)
+        ui->dockReplace->setVisible (false); // no replace dock without searchbar
+        if (QWidget *cw = ui->stackedWidget->currentWidget())
         {
-            ui->lineEdit->setText (QString());
-            it.value() = QString();
-            disconnect (it.key()->verticalScrollBar(), &QAbstractSlider::valueChanged, this, &FN::scrolled);
-            disconnect (it.key()->horizontalScrollBar(), &QAbstractSlider::valueChanged, this, &FN::scrolled);
-            disconnect (it.key(), &TextEdit::resized, this, &FN::hlight);
-            disconnect (it.key(), &QTextEdit::textChanged, this, &FN::hlight);
-            QList<QTextEdit::ExtraSelection> extraSelections;
-            greenSels_[it.key()] = extraSelections;
-            it.key()->setExtraSelections (extraSelections);
+            /* return focus to the document */
+            qobject_cast< TextEdit *>(cw)->setFocus();
+            /* cancel search */
+            QHash<TextEdit*,QString>::iterator it;
+            for (it = searchEntries_.begin(); it != searchEntries_.end(); ++it)
+            {
+                ui->lineEdit->setText (QString());
+                it.value() = QString();
+                disconnect (it.key()->verticalScrollBar(), &QAbstractSlider::valueChanged, this, &FN::scrolled);
+                disconnect (it.key()->horizontalScrollBar(), &QAbstractSlider::valueChanged, this, &FN::scrolled);
+                disconnect (it.key(), &TextEdit::resized, this, &FN::hlight);
+                disconnect (it.key(), &QTextEdit::textChanged, this, &FN::hlight);
+                QList<QTextEdit::ExtraSelection> extraSelections;
+                greenSels_[it.key()] = extraSelections;
+                it.key()->setExtraSelections (extraSelections);
+            }
+            ui->everywhereButton->setChecked (false);
+            ui->tagsButton->setChecked (false);
+            ui->namesButton->setChecked (false);
         }
-        ui->everywhereButton->setChecked (false);
-        ui->tagsButton->setChecked (false);
-        ui->namesButton->setChecked (false);
     }
 }
 /*************************/
@@ -2648,6 +2608,17 @@ void FN::replaceDock()
 {
     if (!ui->dockReplace->isVisible())
     {
+        if (!ui->lineEdit->isVisible()) // replace dock needs searchbar
+        {
+            ui->lineEdit->setVisible (true);
+            ui->nextButton->setVisible (true);
+            ui->prevButton->setVisible (true);
+            ui->caseButton->setVisible (true);
+            ui->wholeButton->setVisible (true);
+            ui->everywhereButton->setVisible (true);
+            ui->tagsButton->setVisible (true);
+            ui->namesButton->setVisible (true);
+        }
         ui->dockReplace->setWindowTitle (tr ("Replacement"));
         ui->dockReplace->setVisible (true);
         ui->dockReplace->setTabOrder (ui->lineEditFind, ui->lineEditReplace);
@@ -2660,7 +2631,7 @@ void FN::replaceDock()
     }
 
     ui->dockReplace->setVisible (false);
-    closeReplaceDock (false);
+    // closeReplaceDock(false) is automatically called here
 }
 /*************************/
 // When the dock is closed with its titlebar button,
@@ -2982,13 +2953,6 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
 
     if (!isVisible())
     {
-        /* first set the window state to maximized
-           again if it was unmaximized before */
-        if (wasMaxed_)
-        {
-            setWindowState (windowState() ^ Qt::WindowMaximized);
-            wasMaxed_ = false;
-        }
         /* make the widget an independent window again */
         /*if (parent() != nullptr)
             setParent (nullptr, Qt::Window);
@@ -3014,17 +2978,10 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
         {
             if (isActiveWindow())
             {
-                if (!isFull_ && !isMaxed_)
+                if (!isMaximized() && !isFullScreen())
                 {
                     position_.setX (g.x());
                     position_.setY (g.y());
-                }
-                /* the size may not be remembered without unmaximizing
-                   the window on hiding and remaximaizing it on showing */
-                if (isMaxed_)
-                {
-                    //setWindowState (windowState() & ~Qt::WindowMaximized);
-                    wasMaxed_ = true;
                 }
                 /* instead of hiding the window in the ususal way,
                    reparent it to preserve its state info */
@@ -3946,12 +3903,6 @@ void FN::readAndApplyConfig()
     {
         winSize_ = settings.value ("size", QSize (650, 400)).toSize();
         resize (winSize_);
-        if (settings.value ("max", false).toBool())
-            setWindowState (Qt::WindowMaximized);
-        if (settings.value ("fullscreen", false).toBool() && settings.value ("max", false).toBool())
-            setWindowState (windowState() ^ Qt::WindowFullScreen);
-        else if (settings.value ("fullscreen", false).toBool())
-            setWindowState (Qt::WindowFullScreen);
     }
 
     if (settings.value ("splitterSizes").toString() == "none")
@@ -4032,17 +3983,9 @@ void FN::writeGeometryConfig()
     settings.beginGroup ("window");
 
     if (remSize_)
-    {
         settings.setValue ("size", winSize_);
-        settings.setValue ("max", isMaxed_);
-        settings.setValue ("fullscreen", isFull_);
-    }
     else
-    {
         settings.setValue ("size", "none");
-        settings.remove ("max");
-        settings.remove ("fullscreen");
-    }
 
     if (remSplitter_)
         settings.setValue ("splitterSizes", ui->splitter->saveState());
@@ -4052,7 +3995,7 @@ void FN::writeGeometryConfig()
     if (remPosition_)
     {
         QPoint CurrPos;
-        if (!isFull_ && !isMaxed_)
+        if (!isMaximized() && !isFullScreen())
         {
             CurrPos.setX (geometry().x());
             CurrPos.setY (geometry().y());
@@ -4622,6 +4565,18 @@ void FN::aboutDialog()
                         "<center>A lightweight notes manager</center>\n"\
                         "<center>based on Qt5</center><br>"\
                         "<center>Author: <a href='mailto:tsujan2000@gmail.com?Subject=My%20Subject'>Pedram Pourang (aka. Tsu Jan)</a></center><p></p>"));
+}
+/*************************/
+void FN::showHelpDialog()
+{
+    FHelp *dlg = new FHelp (this);
+    dlg->resize (ui->stackedWidget->size().expandedTo (ui->treeView->size()));
+    switch (dlg->exec()) {
+    case QDialog::Rejected:
+    default:
+        delete dlg;
+        break;
+    }
 }
 
 }

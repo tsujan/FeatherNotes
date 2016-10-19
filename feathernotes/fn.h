@@ -157,6 +157,7 @@ private slots:
     void reallySetPswrd();
     void checkPswrd();
     void aboutDialog();
+    void showHelpDialog();
 
 private:
     void enableActions (bool enable);
@@ -165,7 +166,6 @@ private:
     void createTrayIcon();
     void closeEvent (QCloseEvent *event);
     void resizeEvent (QResizeEvent *event);
-    void changeEvent (QEvent *event);
     void showEvent (QShowEvent *event);
     void showDoc (QDomDocument &doc);
     void setTitle (const QString& fname);
@@ -214,7 +214,7 @@ private:
     QTextTable *txtTable_; // Text table at the right-click position.
     int imgScale_, imgRescale_; QString lastImgPath_;
     bool shownBefore_,
-         remSize_, remSplitter_, isMaxed_, isFull_, wasMaxed_,
+         remSize_, remSplitter_,
          remPosition_,
          hasTray_,
          minToTray_,

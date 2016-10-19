@@ -28,9 +28,11 @@ HEADERS += fn.h \
            spinbox.h \
            simplecrypt.h \
            vscrollbar.h \
-           settings.h
+           settings.h \
+           help.h
 
-FORMS += fn.ui
+FORMS += fn.ui \
+         helpDialog.ui
 
 RESOURCES += data/fn.qrc
 

@@ -1,6 +1,8 @@
 V0.4.4
 ---------
  * Transformed signal-slot connections into the new syntax.
+ * Removed saving of window states because although it works with well-behaved window managers like kwin and openbox, some WM's don't respect window states completely.
+ * Added a preliminary help doc.
 
 V0.4.3
 ---------
