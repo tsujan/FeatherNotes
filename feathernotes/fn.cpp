@@ -290,20 +290,20 @@ FN::~FN()
 /*************************/
 bool FN::close()
 {
+    QObject *sender = QObject::sender();
+    if (sender != nullptr && sender->objectName() == "trayQuit" && findChildren<QDialog *>().count() > 0)
+    { // don't respond to the tray icon when there's a dialog
+        activateWindow();
+        raise();
+        return false;
+    }
+
     quitting_ = true;
     return QWidget::close();
 }
 /*************************/
 void FN::closeEvent (QCloseEvent *event)
 {
-    QObject *sender = QObject::sender();
-    if (sender != nullptr && sender->objectName() == "trayQuit" && findChildren<QDialog *>().count() > 0)
-    { // don't respond to the tray icon when there's a dialog
-        event->ignore();
-        activateWindow();
-        raise();
-        return;
-    }
     if (!quitting_)
     {
         event->ignore();
@@ -328,7 +328,7 @@ void FN::closeEvent (QCloseEvent *event)
         {
             if (tray_)
             {
-                if (underE_ && sender != nullptr && sender->objectName() == "trayQuit")
+                if (underE_ && QObject::sender() != nullptr && QObject::sender()->objectName() == "trayQuit")
                 {
                     if (!isVisible())
                     {
@@ -354,7 +354,7 @@ void FN::closeEvent (QCloseEvent *event)
         {
             if (tray_)
             {
-                if (underE_ && sender != nullptr && sender->objectName() == "trayQuit")
+                if (underE_ && QObject::sender() != nullptr && QObject::sender()->objectName() == "trayQuit")
                 {
                     if (!isVisible())
                     {
@@ -623,6 +623,8 @@ void FN::newNote()
         QSpacerItem *spacer = new QSpacerItem (350, 0);
         QGridLayout *layout = qobject_cast< QGridLayout *>(msgBox.layout());
         layout->addItem (spacer, layout->rowCount(), 0, 1, layout->columnCount());
+        msgBox.setParent (this, Qt::Dialog);
+        msgBox.setWindowModality (Qt::WindowModal);
         msgBox.show();
         msgBox.move (x() + width()/2 - msgBox.width()/2,
                      y() + height()/2 - msgBox.height()/ 2);
@@ -829,6 +831,7 @@ void FN::showDoc (QDomDocument &doc)
     connect (model_, &QAbstractItemModel::dataChanged, this, &FN::nodeChanged);
     connect (model_, &DomModel::treeChanged, this, &FN::noteModified);
     connect (model_, &DomModel::treeChanged, this, &FN::docProp);
+    connect (model_, &DomModel::treeChanged, this, &FN::closeTagsDialog);
 
     /* enable widgets */
     if (!ui->actionSaveAs->isEnabled())
@@ -1704,6 +1707,8 @@ void FN::collapseAll()
 /*************************/
 void FN::newNode()
 {
+    closeTagsDialog();
+
     QModelIndex index = ui->treeView->currentIndex();
     if (QObject::sender() == ui->actionNewSibling)
     {
@@ -1724,6 +1729,8 @@ void FN::newNode()
 /*************************/
 void FN::deleteNode()
 {
+    closeTagsDialog();
+
     QMessageBox msgBox;
     msgBox.setIcon (QMessageBox::Question);
     msgBox.setWindowTitle ("Deletion");
@@ -1771,6 +1778,8 @@ void FN::deleteNode()
 /*************************/
 void FN::moveUpNode()
 {
+    closeTagsDialog();
+
     QModelIndex index = ui->treeView->currentIndex();
     QModelIndex pIndex = model_->parent (index);
 
@@ -1781,6 +1790,8 @@ void FN::moveUpNode()
 /*************************/
 void FN::moveLeftNode()
 {
+    closeTagsDialog();
+
     QModelIndex index = ui->treeView->currentIndex();
     QModelIndex pIndex = model_->parent (index);
 
@@ -1791,6 +1802,8 @@ void FN::moveLeftNode()
 /*************************/
 void FN::moveDownNode()
 {
+    closeTagsDialog();
+
     QModelIndex index = ui->treeView->currentIndex();
     QModelIndex pIndex = model_->parent (index);
 
@@ -1801,6 +1814,8 @@ void FN::moveDownNode()
 /*************************/
 void FN::moveRightNode()
 {
+    closeTagsDialog();
+
     QModelIndex index = ui->treeView->currentIndex();
     QModelIndex pIndex = model_->parent (index);
 
@@ -2428,6 +2443,21 @@ void FN::findInTags()
     TagsDialog->raise();
 }
 /*************************/
+// Closes tag matches dialog.
+void FN::closeTagsDialog()
+{
+    QList<QDialog *> list = findChildren<QDialog*>();
+    for (int i = 0; i < list.count(); ++i)
+    {
+        QList<QListWidget *> list1 = list.at (i)->findChildren<QListWidget *>();
+        if (!list1.isEmpty()) // the only non-modal dialog (tag dialog) has a list widget
+        {
+            list.at (i)->done (QDialog::Rejected);
+            break;
+        }
+    }
+}
+/*************************/
 void FN::find()
 {
     QWidget *cw = ui->stackedWidget->currentWidget();
@@ -2439,19 +2469,7 @@ void FN::find()
         return;
     }
     else
-    {
-        /* close tag matches dialog */
-        QList<QDialog *> list = findChildren<QDialog*>();
-        for (int i = 0; i < list.count(); ++i)
-        {
-            QList<QListWidget *> list1 = list.at (i)->findChildren<QListWidget *>();
-            if (!list1.isEmpty())
-            {
-                list.at (i)->done (QDialog::Rejected);
-                break;
-            }
-        }
-    }
+        closeTagsDialog();
 
     if (ui->namesButton->isChecked())
     {

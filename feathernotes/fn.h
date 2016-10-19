@@ -158,6 +158,7 @@ private slots:
     void checkPswrd();
     void aboutDialog();
     void showHelpDialog();
+    void closeTagsDialog();
 
 private:
     void enableActions (bool enable);
