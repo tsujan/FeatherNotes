@@ -296,6 +296,14 @@ bool FN::close()
 /*************************/
 void FN::closeEvent (QCloseEvent *event)
 {
+    QObject *sender = QObject::sender();
+    if (sender != nullptr && sender->objectName() == "trayQuit" && findChildren<QDialog *>().count() > 0)
+    { // don't respond to the tray icon when there's a dialog
+        event->ignore();
+        activateWindow();
+        raise();
+        return;
+    }
     if (!quitting_)
     {
         event->ignore();
@@ -318,20 +326,52 @@ void FN::closeEvent (QCloseEvent *event)
     {
         if (!xmlPath_.isEmpty() && !QFile::exists (xmlPath_))
         {
-            if (!underE_ && tray_ && (!isVisible() || !isActiveWindow()))
+            if (tray_)
             {
-                activateTray();
-                QCoreApplication::processEvents();
+                if (underE_ && sender != nullptr && sender->objectName() == "trayQuit")
+                {
+                    if (!isVisible())
+                    {
+                        activateTray();
+                        QCoreApplication::processEvents();
+                    }
+                    else
+                    {
+                        activateWindow();
+                        raise();
+                    }
+                }
+                else if (!underE_ && (!isVisible() || !isActiveWindow()))
+                {
+                    activateTray();
+                    QCoreApplication::processEvents();
+                }
             }
             if (unSaved (false))
                 keep = true;
         }
         else if (saveNeeded_)
         {
-            if (!underE_ && tray_ && (!isVisible() || !isActiveWindow()))
+            if (tray_)
             {
-                activateTray();
-                QCoreApplication::processEvents();
+                if (underE_ && sender != nullptr && sender->objectName() == "trayQuit")
+                {
+                    if (!isVisible())
+                    {
+                        activateTray();
+                        QCoreApplication::processEvents();
+                    }
+                    else
+                    {
+                        activateWindow();
+                        raise();
+                    }
+                }
+                else if (!underE_ && (!isVisible() || !isActiveWindow()))
+                {
+                    activateTray();
+                    QCoreApplication::processEvents();
+                }
             }
             if (unSaved (true))
                 keep = true;
@@ -399,7 +439,6 @@ void FN::createTrayIcon()
     QAction *actionshowMainWindow = trayMenu->addAction (tr("&Raise/Hide"));
     if (underE_)
         actionshowMainWindow->setText ("&Raise");
-    actionshowMainWindow->setObjectName ("raiseHide");
     connect (actionshowMainWindow, &QAction::triggered, this, &FN::activateTray);
     QAction *actionNewTray = trayMenu->addAction (QIcon (":icons/document-new.svg"), tr("&New Note"));
     QAction *actionOpenTray = trayMenu->addAction (QIcon (":icons/document-open.svg"), tr("&Open"));
@@ -408,6 +447,10 @@ void FN::createTrayIcon()
     connect (actionNewTray, &QAction::triggered, this, &FN::newNote);
     connect (actionOpenTray, &QAction::triggered, this, &FN::openFile);
     connect (antionQuitTray, &QAction::triggered, this, &FN::close);
+    actionshowMainWindow->setObjectName ("raiseHide");
+    actionNewTray->setObjectName("trayNew");
+    actionOpenTray->setObjectName("trayOpen");
+    antionQuitTray->setObjectName("trayQuit");
     tray_->setContextMenu (trayMenu);
     tray_->setVisible (true);
     connect (tray_, &QSystemTrayIcon::activated, this, &FN::trayActivated );
@@ -515,12 +558,36 @@ void FN::resizeEvent (QResizeEvent *event)
 /*************************/
 void FN::newNote()
 {
+    QObject *sender = QObject::sender();
+    if (sender != nullptr && sender->objectName() == "trayNew" && findChildren<QDialog *>().count() > 0)
+    { // don't respond to the tray icon when there's a dialog
+        activateWindow();
+        raise();
+        return;
+    }
+
     if (timer_->isActive()) timer_->stop();
 
-    if (!underE_ && tray_ && (!isVisible() || !isActiveWindow()))
+    if (tray_)
     {
-        activateTray();
-        QCoreApplication::processEvents();
+        if (underE_ && sender != nullptr && sender->objectName() == "trayNew")
+        {
+            if (!isVisible())
+            {
+                activateTray();
+                QCoreApplication::processEvents();
+            }
+            else
+            {
+                activateWindow();
+                raise();
+            }
+        }
+        else if (!underE_ && (!isVisible() || !isActiveWindow()))
+        {
+            activateTray();
+            QCoreApplication::processEvents();
+        }
     }
 
     if (!xmlPath_.isEmpty() && !QFile::exists (xmlPath_))
@@ -634,6 +701,8 @@ bool FN::unSaved (bool modified)
                                | QMessageBox::Cancel);
     msgBox.setButtonText (QMessageBox::Discard, tr ("Discard changes"));
     msgBox.setDefaultButton (QMessageBox::Save);
+    msgBox.setParent (this, Qt::Dialog);
+    msgBox.setWindowModality (Qt::WindowModal);
     /* enforce a central position */
     msgBox.show();
     msgBox.move (x() + width()/2 - msgBox.width()/2,
@@ -806,12 +875,36 @@ void FN::fileOpen (QString filePath)
 /*************************/
 void FN::openFile()
 {
+    QObject *sender = QObject::sender();
+    if (sender != nullptr && sender->objectName() == "trayOpen" && findChildren<QDialog *>().count() > 0)
+    { // don't respond to the tray icon when there's a dialog
+        activateWindow();
+        raise();
+        return;
+    }
+
     if (timer_->isActive()) timer_->stop();
 
-    if (!underE_ && tray_ && (!isVisible() || !isActiveWindow()))
+    if (tray_)
     {
-        activateTray();
-        QCoreApplication::processEvents();
+        if (underE_ && sender != nullptr && sender->objectName() == "trayOpen")
+        {
+            if (!isVisible())
+            {
+                activateTray();
+                QCoreApplication::processEvents();
+            }
+            else
+            {
+                activateWindow();
+                raise();
+            }
+        }
+        else if (!underE_ && (!isVisible() || !isActiveWindow()))
+        {
+            activateTray();
+            QCoreApplication::processEvents();
+        }
     }
 
     if (!xmlPath_.isEmpty() && !QFile::exists (xmlPath_))
@@ -2951,6 +3044,13 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
     if (!tray_) return;
     if (r != QSystemTrayIcon::Trigger) return;
 
+    if (QObject::sender() == tray_ && findChildren<QDialog *>().count() > 0)
+    { // don't respond to the tray icon when there's a dialog
+        activateWindow();
+        raise();
+        return;
+    }
+
     if (!isVisible())
     {
         /* make the widget an independent window again */
@@ -3015,6 +3115,14 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
 /*************************/
 void FN::activateTray()
 {
+    QObject *sender = QObject::sender();
+    if (sender != nullptr && sender->objectName() == "raiseHide" && findChildren<QDialog *>().count() > 0)
+    { // don't respond to the tray icon when there's a dialog
+        activateWindow();
+        raise();
+        return;
+    }
+
     trayActivated (QSystemTrayIcon::Trigger);
 }
 /*************************/
@@ -3881,6 +3989,7 @@ void FN::setAutoSave (int value)
 /*************************/
 void FN::setEDiff (int value)
 {
+    if (QObject::sender() == nullptr) return;
     if (QObject::sender()->objectName() == "EX")
         EShift_.setWidth (value);
     else if (QObject::sender()->objectName() == "EY")
@@ -3995,7 +4104,7 @@ void FN::writeGeometryConfig()
     if (remPosition_)
     {
         QPoint CurrPos;
-        if (!isMaximized() && !isFullScreen())
+        if (isVisible() && !isMaximized() && !isFullScreen())
         {
             CurrPos.setX (geometry().x());
             CurrPos.setY (geometry().y());
@@ -4470,7 +4579,8 @@ void FN::reallySetPswrd()
 /*************************/
 bool FN::isPswrdCorrect()
 {
-    if (!underE_ && tray_ && (!isVisible() || !isActiveWindow()))
+    if (tray_ && ((underE_ && QObject::sender() == nullptr) // opened by command line
+                  || (!underE_&& (!isVisible() || !isActiveWindow()))))
     {
         activateTray();
         QCoreApplication::processEvents();
