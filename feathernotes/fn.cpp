@@ -3581,19 +3581,21 @@ void FN::PrefDialog()
     QCheckBox *splitterSizeBox = new QCheckBox (tr ("Remember &tree width"));
     splitterSizeBox->setToolTip (tr ("Saves tree width after closing\nthis dialog and also on exit.\nUncheck for a width ratio of 160/490."));
     QCheckBox *positionBox = new QCheckBox (tr ("Save &position"));
-    positionBox->setToolTip (tr ("Saves position after closing\nthis dialog and also on exit."));
+    positionBox->setToolTip (tr ("Saves position after closing\nthis dialog and also on exit."
+                                 "\n"
+                                 "\n(This may not work correctly\nunder GTK+ DE's like Unity\nand Cinnamon.)"));
     QCheckBox *hasTrayBox = new QCheckBox (tr ("Add to s&ystray"));
     hasTrayBox->setToolTip (tr ("Decides whether a systray icon should be used.\nIf checked, the titlebar close button iconifies\nthe window to the systray instead of quitting.\n\nNeeds restarting of FeatherNotes to take effect."));
     QCheckBox *minTrayBox = new QCheckBox (tr ("Start i&conified to tray"));
-    minTrayBox->setToolTip (tr ("You could use the command line\noption --tray instead of this."));
+    minTrayBox->setToolTip (tr ("The command line option --tray\ncan be used instead of this."));
     minTrayBox->setChecked (minToTray_);
     if (!hasTray_)
         minTrayBox->setDisabled (true);
-    QCheckBox *transBox = new QCheckBox (tr ("Workaround for Qt5's translucency bug\n(Needs app restart)"));
+    QCheckBox *transBox = new QCheckBox (tr ("Workaround for Qt&5's translucency bug\n(Needs app restart)"));
     transBox->setToolTip (tr ("Check this only if you see weird effects with translucent themes!"));
-    QCheckBox *EBox = new QCheckBox (tr ("Running under Enlightenment?"));
+    QCheckBox *EBox = new QCheckBox (tr ("Running &under Enlightenment?"));
     EBox->setToolTip (tr ("Check this under Enlightenment (or, probably, another DE)\nto use the systray icon more easily!"));
-    QLabel *ELabel = new QLabel ("Shift: ");
+    QLabel *ELabel = new QLabel (tr ("Shift: "));
     QString EToolTip (tr ("Some DE's (like Enlightenment) may not report the window position"
                           "\ncorrectly. If that is the case, you could fix it here."
                           "\n"
@@ -3604,6 +3606,7 @@ void FN::PrefDialog()
                           "\nand then restart FeatherNotes!"));
     ELabel->setToolTip (EToolTip);
     QLabel *XLabel = new QLabel(" × ");
+    XLabel->setToolTip (EToolTip);
     QSpinBox *Espin1 = new QSpinBox();
     ELabel->setObjectName ("EL");
     XLabel->setObjectName ("XL");
