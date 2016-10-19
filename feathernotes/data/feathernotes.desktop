@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Name=FeatherNotes
+Comment=Lightweight notes manager
+Exec=feathernotes %f
+Icon=feathernotes
+Terminal=false
+Type=Application
+MimeType=text/feathernotes-fnx;
+Categories=Qt;Utility;TextEditor;
+X-KDE-StartupNotify=false

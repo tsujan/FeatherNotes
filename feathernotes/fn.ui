@@ -1,0 +1,1639 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FeatherNotes::FN</class>
+ <widget class="QMainWindow" name="FN">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>650</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>FeatherNotes</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="data/fn.qrc">
+    <normaloff>:/icons/feathernotes.svg</normaloff>:/icons/feathernotes.svg
+   </iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QSplitter" name="splitter">
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QTreeView" name="treeView">
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="dragEnabled">
+        <bool>true</bool>
+       </property>
+       <property name="dragDropMode">
+        <enum>QAbstractItemView::InternalMove</enum>
+       </property>
+       <property name="animated">
+        <bool>true</bool>
+       </property>
+       <attribute name="headerVisible">
+        <bool>false</bool>
+       </attribute>
+      </widget>
+      <widget class="QStackedWidget" name="stackedWidget"/>
+     </widget>
+    </item>
+    <item>
+     <layout class="QGridLayout" name="gridLayout">
+      <property name="rightMargin">
+       <number>2</number>
+      </property>
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="nextButton">
+        <property name="toolTip">
+         <string>Next (F3)</string>
+        </property>
+        <property name="icon">
+         <iconset resource="data/fn.qrc">
+          <normaloff>:/icons/go-down.svg</normaloff>:/icons/go-down.svg
+         </iconset>
+        </property>
+        <property name="shortcut">
+         <string>F3</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="prevButton">
+        <property name="toolTip">
+         <string>Previous (F4)</string>
+        </property>
+        <property name="icon">
+         <iconset resource="data/fn.qrc">
+          <normaloff>:/icons/go-up.svg</normaloff>:/icons/go-up.svg
+         </iconset>
+        </property>
+        <property name="shortcut">
+         <string>F4</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" rowspan="2">
+       <widget class="FeatherNotes::LineEdit" name="lineEdit">
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>Search...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4" colspan="2">
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="spacing">
+         <number>3</number>
+        </property>
+        <item alignment="Qt::AlignHCenter">
+         <widget class="QRadioButton" name="namesButton">
+          <property name="toolTip">
+           <string>Search only in names (Ctrl+Shift+F7)</string>
+          </property>
+          <property name="text">
+           <string>Names</string>
+          </property>
+          <property name="shortcut">
+           <string>Ctrl+Shift+F7</string>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignHCenter">
+         <widget class="QRadioButton" name="tagsButton">
+          <property name="toolTip">
+           <string>Search only in tags (Shift+F7)</string>
+          </property>
+          <property name="text">
+           <string>Tags</string>
+          </property>
+          <property name="shortcut">
+           <string>Shift+F7</string>
+          </property>
+          <property name="autoExclusive">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignHCenter">
+         <widget class="QRadioButton" name="everywhereButton">
+          <property name="toolTip">
+           <string>Search in all nodes (F7)</string>
+          </property>
+          <property name="text">
+           <string>All</string>
+          </property>
+          <property name="shortcut">
+           <string>F7</string>
+          </property>
+          <property name="autoExclusive">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="4" colspan="2">
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <property name="spacing">
+         <number>3</number>
+        </property>
+        <item alignment="Qt::AlignHCenter">
+         <widget class="QPushButton" name="wholeButton">
+          <property name="toolTip">
+           <string>F6</string>
+          </property>
+          <property name="text">
+           <string>Whole Word</string>
+          </property>
+          <property name="shortcut">
+           <string>F6</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignHCenter">
+         <widget class="QPushButton" name="caseButton">
+          <property name="toolTip">
+           <string>F5</string>
+          </property>
+          <property name="text">
+           <string>Match Case</string>
+          </property>
+          <property name="shortcut">
+           <string>F5</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>650</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionOpen"/>
+    <addaction name="separator"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSaveAs"/>
+    <addaction name="separator"/>
+    <addaction name="actionPrint"/>
+    <addaction name="actionPrintNodes"/>
+    <addaction name="actionPrintAll"/>
+    <addaction name="actionExportHTML"/>
+    <addaction name="separator"/>
+    <addaction name="actionPassword"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>&amp;Edit</string>
+    </property>
+    <addaction name="actionUndo"/>
+    <addaction name="actionRedo"/>
+    <addaction name="separator"/>
+    <addaction name="actionCut"/>
+    <addaction name="actionCopy"/>
+    <addaction name="actionPaste"/>
+    <addaction name="actionPasteHTML"/>
+    <addaction name="actionDelete"/>
+    <addaction name="separator"/>
+    <addaction name="actionSelectAll"/>
+   </widget>
+   <widget class="QMenu" name="menuFormat">
+    <property name="title">
+     <string>Fo&amp;rmat</string>
+    </property>
+    <addaction name="actionClear"/>
+    <addaction name="separator"/>
+    <addaction name="actionBold"/>
+    <addaction name="actionItalic"/>
+    <addaction name="actionUnderline"/>
+    <addaction name="actionStrike"/>
+    <addaction name="actionSuper"/>
+    <addaction name="actionSub"/>
+    <addaction name="separator"/>
+    <addaction name="actionTextColor"/>
+    <addaction name="actionBgColor"/>
+    <addaction name="separator"/>
+    <addaction name="actionLeft"/>
+    <addaction name="actionCenter"/>
+    <addaction name="actionRight"/>
+    <addaction name="actionJust"/>
+    <addaction name="separator"/>
+    <addaction name="actionLTR"/>
+    <addaction name="actionRTL"/>
+    <addaction name="separator"/>
+    <addaction name="actionH3"/>
+    <addaction name="actionH2"/>
+    <addaction name="actionH1"/>
+    <addaction name="separator"/>
+    <addaction name="actionLink"/>
+    <addaction name="actionEmbedImage"/>
+    <addaction name="actionTable"/>
+   </widget>
+   <widget class="QMenu" name="menuTree">
+    <property name="title">
+     <string>&amp;Tree</string>
+    </property>
+    <addaction name="actionExpandAll"/>
+    <addaction name="actionCollapseAll"/>
+    <addaction name="separator"/>
+    <addaction name="actionPrepSibling"/>
+    <addaction name="actionNewSibling"/>
+    <addaction name="actionNewChild"/>
+    <addaction name="actionDeleteNode"/>
+    <addaction name="separator"/>
+    <addaction name="actionMoveUp"/>
+    <addaction name="actionMoveDown"/>
+    <addaction name="actionMoveLeft"/>
+    <addaction name="actionMoveRight"/>
+    <addaction name="separator"/>
+    <addaction name="actionTags"/>
+    <addaction name="actionRenameNode"/>
+    <addaction name="actionProp"/>
+   </widget>
+   <widget class="QMenu" name="menuOptions">
+    <property name="title">
+     <string>&amp;Options</string>
+    </property>
+    <addaction name="actionDocFont"/>
+    <addaction name="actionNodeFont"/>
+    <addaction name="separator"/>
+    <addaction name="actionWrap"/>
+    <addaction name="actionIndent"/>
+    <addaction name="separator"/>
+    <addaction name="actionPref"/>
+   </widget>
+   <widget class="QMenu" name="menuSearch">
+    <property name="title">
+     <string>&amp;Search</string>
+    </property>
+    <addaction name="actionFind"/>
+    <addaction name="actionReplace"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="actionHelp"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuFormat"/>
+   <addaction name="menuTree"/>
+   <addaction name="menuOptions"/>
+   <addaction name="menuSearch"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>16</width>
+     <height>16</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNew"/>
+   <addaction name="actionOpen"/>
+   <addaction name="actionSave"/>
+   <addaction name="separator"/>
+   <addaction name="actionUndo"/>
+   <addaction name="actionRedo"/>
+   <addaction name="separator"/>
+   <addaction name="actionFind"/>
+   <addaction name="separator"/>
+   <addaction name="actionClear"/>
+   <addaction name="separator"/>
+   <addaction name="actionBold"/>
+   <addaction name="actionItalic"/>
+   <addaction name="actionUnderline"/>
+   <addaction name="actionStrike"/>
+   <addaction name="actionSuper"/>
+   <addaction name="actionSub"/>
+   <addaction name="separator"/>
+   <addaction name="actionTextColor"/>
+   <addaction name="actionBgColor"/>
+   <addaction name="separator"/>
+   <addaction name="actionLeft"/>
+   <addaction name="actionCenter"/>
+   <addaction name="actionRight"/>
+   <addaction name="actionJust"/>
+   <addaction name="separator"/>
+   <addaction name="actionLTR"/>
+   <addaction name="actionRTL"/>
+   <addaction name="separator"/>
+   <addaction name="actionEmbedImage"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QDockWidget" name="dockReplace">
+   <property name="features">
+    <set>QDockWidget::DockWidgetClosable|QDockWidget::DockWidgetFloatable</set>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::BottomDockWidgetArea</set>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QGridLayout" name="gridLayout_3">
+     <property name="leftMargin">
+      <number>5</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>5</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item row="0" column="0">
+      <layout class="QGridLayout" name="gridLayout_2">
+       <property name="horizontalSpacing">
+        <number>2</number>
+       </property>
+       <property name="verticalSpacing">
+        <number>0</number>
+       </property>
+       <item row="0" column="0" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Find:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Replace with:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1" alignment="Qt::AlignVCenter">
+        <widget class="FeatherNotes::LineEdit" name="lineEditFind">
+         <property name="minimumSize">
+          <size>
+           <width>150</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="placeholderText">
+          <string>To be replaced</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1" alignment="Qt::AlignVCenter">
+        <widget class="FeatherNotes::LineEdit" name="lineEditReplace">
+         <property name="minimumSize">
+          <size>
+           <width>150</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="placeholderText">
+          <string>Replacing text</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2" alignment="Qt::AlignVCenter">
+        <widget class="QPushButton" name="rplPrevButton">
+         <property name="toolTip">
+          <string>Previous (F9)</string>
+         </property>
+         <property name="icon">
+          <iconset resource="data/fn.qrc">
+           <normaloff>:/icons/go-up.svg</normaloff>:/icons/go-up.svg
+          </iconset>
+         </property>
+         <property name="shortcut">
+          <string>F9</string>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2" alignment="Qt::AlignVCenter">
+        <widget class="QPushButton" name="rplNextButton">
+         <property name="toolTip">
+          <string>Next (F8)</string>
+         </property>
+         <property name="icon">
+          <iconset resource="data/fn.qrc">
+           <normaloff>:/icons/go-down.svg</normaloff>:/icons/go-down.svg
+          </iconset>
+         </property>
+         <property name="shortcut">
+          <string>F8</string>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3" alignment="Qt::AlignVCenter">
+        <widget class="QPushButton" name="allButton">
+         <property name="toolTip">
+          <string>Replace all (F10)</string>
+         </property>
+         <property name="icon">
+          <iconset resource="data/fn.qrc">
+           <normaloff>:/icons/arrow-down-double.svg</normaloff>:/icons/arrow-down-double.svg
+          </iconset>
+         </property>
+         <property name="shortcut">
+          <string>F10</string>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionSave">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/document-save.svg</normaloff>:/icons/document-save.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Save</string>
+   </property>
+   <property name="toolTip">
+    <string>Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/document-open.svg</normaloff>:/icons/document-open.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Open</string>
+   </property>
+   <property name="toolTip">
+    <string>Open a file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/edit-undo.svg</normaloff>:/icons/edit-undo.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Undo</string>
+   </property>
+   <property name="toolTip">
+    <string>Undo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="actionRedo">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/edit-redo.svg</normaloff>:/icons/edit-redo.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Redo</string>
+   </property>
+   <property name="toolTip">
+    <string>Redo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Z</string>
+   </property>
+  </action>
+  <action name="actionFind">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/edit-find.svg</normaloff>:/icons/edit-find.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Find</string>
+   </property>
+   <property name="toolTip">
+    <string>Show/hide searchbar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="actionClear">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/edit-clear.svg</normaloff>:/icons/edit-clear.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Clear All Formats</string>
+   </property>
+   <property name="toolTip">
+    <string>Clear all formats</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
+  <action name="actionBold">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/format-text-bold.svg</normaloff>:/icons/format-text-bold.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Bold</string>
+   </property>
+   <property name="toolTip">
+    <string>Bold</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+B</string>
+   </property>
+  </action>
+  <action name="actionItalic">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/format-text-italic.svg</normaloff>:/icons/format-text-italic.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Italic</string>
+   </property>
+   <property name="toolTip">
+    <string>Italic</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
+  <action name="actionUnderline">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/format-text-underline.svg</normaloff>:/icons/format-text-underline.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Underline</string>
+   </property>
+   <property name="toolTip">
+    <string>Underline</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+U</string>
+   </property>
+  </action>
+  <action name="actionStrike">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/format-text-strikethrough.svg</normaloff>:/icons/format-text-strikethrough.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Strike Through</string>
+   </property>
+   <property name="toolTip">
+    <string>Strike through</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+T</string>
+   </property>
+  </action>
+  <action name="actionTextColor">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/format-text-color.svg</normaloff>:/icons/format-text-color.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Te&amp;xt Color</string>
+   </property>
+   <property name="toolTip">
+    <string>Text color</string>
+   </property>
+  </action>
+  <action name="actionBgColor">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/format-fill-color.svg</normaloff>:/icons/format-fill-color.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Back&amp;ground Color</string>
+   </property>
+   <property name="toolTip">
+    <string>Background color</string>
+   </property>
+  </action>
+  <action name="actionOptions">
+   <property name="text">
+    <string>Options</string>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/document-new.svg</normaloff>:/icons/document-new.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>&amp;New Note</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+Shift+N</string>
+   </property>
+  </action>
+  <action name="actionSaveAs">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/document-save-as.svg</normaloff>:/icons/document-save-as.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Save &amp;As</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="actionPrint">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/document-print.svg</normaloff>:/icons/document-print.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Print</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="actionPrintNodes">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/document-print.svg</normaloff>:/icons/document-print.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>P&amp;rint with Sub-Nodes</string>
+   </property>
+  </action>
+  <action name="actionPassword">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/document-encrypt.svg</normaloff>:/icons/document-encrypt.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Set Pass&amp;word</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/application-exit.svg</normaloff>:/icons/application-exit.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Quit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionCut">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/edit-cut.svg</normaloff>:/icons/edit-cut.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Cut</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/edit-copy.svg</normaloff>:/icons/edit-copy.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>C&amp;opy</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionPaste">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/edit-paste.svg</normaloff>:/icons/edit-paste.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Paste</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="actionDelete">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/edit-delete.svg</normaloff>:/icons/edit-delete.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Delete</string>
+   </property>
+  </action>
+  <action name="actionSelectAll">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/edit-select-all.svg</normaloff>:/icons/edit-select-all.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Sellect All</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="actionEmbedImage">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/image-x-generic.svg</normaloff>:/icons/image-x-generic.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Embed &amp;Image</string>
+   </property>
+   <property name="toolTip">
+    <string>Embed Image</string>
+   </property>
+  </action>
+  <action name="actionExpandAll">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/view-sort-ascending.svg</normaloff>:/icons/view-sort-ascending.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>E&amp;xpand All</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Down</string>
+   </property>
+  </action>
+  <action name="actionCollapseAll">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/view-sort-descending.svg</normaloff>:/icons/view-sort-descending.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Collap&amp;se All</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Up</string>
+   </property>
+  </action>
+  <action name="actionNewSibling">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/list-add.svg</normaloff>:/icons/list-add.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Append Sibling</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionNewChild">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/list-add.svg</normaloff>:/icons/list-add.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Append &amp;Child</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+N</string>
+   </property>
+  </action>
+  <action name="actionDeleteNode">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/user-trash.svg</normaloff>:/icons/user-trash.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Delete Node</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+  <action name="actionMoveUp">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/go-up.svg</normaloff>:/icons/go-up.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Move &amp;Up</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Up</string>
+   </property>
+  </action>
+  <action name="actionMoveDown">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/go-down.svg</normaloff>:/icons/go-down.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Move Do&amp;wn</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Down</string>
+   </property>
+  </action>
+  <action name="actionRenameNode">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/edit-rename.svg</normaloff>:/icons/edit-rename.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Re&amp;name Node</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+R</string>
+   </property>
+  </action>
+  <action name="actionProp">
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/document-properties.svg</normaloff>:/icons/document-properties.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Tree Pr&amp;operties</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+P</string>
+   </property>
+  </action>
+  <action name="actionDocFont">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/preferences-desktop-font.svg</normaloff>:/icons/preferences-desktop-font.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Document &amp;Font</string>
+   </property>
+  </action>
+  <action name="actionWrap">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Wrap Lines</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+W</string>
+   </property>
+  </action>
+  <action name="actionIndent">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Auto-Indentation</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+I</string>
+   </property>
+  </action>
+  <action name="actionPref">
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/preferences-system.svg</normaloff>:/icons/preferences-system.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Preferences</string>
+   </property>
+  </action>
+  <action name="actionReplace">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/edit-find-replace.svg</normaloff>:/icons/edit-find-replace.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Find and &amp;Replace</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/help-contents.svg</normaloff>:/icons/help-contents.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Help</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+H</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/help-about.svg</normaloff>:/icons/help-about.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>&amp;About</string>
+   </property>
+  </action>
+  <action name="actionPrintAll">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/document-print.svg</normaloff>:/icons/document-print.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Print All N&amp;odes</string>
+   </property>
+  </action>
+  <action name="actionSuper">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/format-text-superscript.svg</normaloff>:/icons/format-text-superscript.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Superscrip&amp;t</string>
+   </property>
+   <property name="toolTip">
+    <string>Superscript</string>
+   </property>
+  </action>
+  <action name="actionSub">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/format-text-subscript.svg</normaloff>:/icons/format-text-subscript.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Subscri&amp;pt</string>
+   </property>
+   <property name="toolTip">
+    <string>Subscript</string>
+   </property>
+  </action>
+  <action name="actionCenter">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/format-justify-center.svg</normaloff>:/icons/format-justify-center.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>C&amp;enter</string>
+   </property>
+   <property name="toolTip">
+    <string>Align center</string>
+   </property>
+  </action>
+  <action name="actionRight">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/format-justify-right.svg</normaloff>:/icons/format-justify-right.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Right</string>
+   </property>
+   <property name="toolTip">
+    <string>Align right</string>
+   </property>
+  </action>
+  <action name="actionLeft">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/format-justify-left.svg</normaloff>:/icons/format-justify-left.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Left</string>
+   </property>
+   <property name="toolTip">
+    <string>Align left</string>
+   </property>
+  </action>
+  <action name="actionJust">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/format-justify-fill.svg</normaloff>:/icons/format-justify-fill.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Justify</string>
+   </property>
+   <property name="toolTip">
+    <string>Justify</string>
+   </property>
+  </action>
+  <action name="actionPrepSibling">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/list-add.svg</normaloff>:/icons/list-add.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Prepend Sibling</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+M</string>
+   </property>
+  </action>
+  <action name="actionMoveLeft">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/go-previous.svg</normaloff>:/icons/go-previous.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Move &amp;Left</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Left</string>
+   </property>
+  </action>
+  <action name="actionMoveRight">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/go-next.svg</normaloff>:/icons/go-next.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Move &amp;Right</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Right</string>
+   </property>
+  </action>
+  <action name="actionH2">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/zoom-in.svg</normaloff>:/icons/zoom-in.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>h&amp;2</string>
+   </property>
+   <property name="toolTip">
+    <string>Header 2</string>
+   </property>
+  </action>
+  <action name="actionH1">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/zoom-in.svg</normaloff>:/icons/zoom-in.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>h&amp;1</string>
+   </property>
+   <property name="toolTip">
+    <string>Header 1</string>
+   </property>
+  </action>
+  <action name="actionH3">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/zoom-in.svg</normaloff>:/icons/zoom-in.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>h&amp;3</string>
+   </property>
+   <property name="toolTip">
+    <string>Header 3</string>
+   </property>
+  </action>
+  <action name="actionNodeFont">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/preferences-desktop-font.svg</normaloff>:/icons/preferences-desktop-font.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Node Font</string>
+   </property>
+   <property name="toolTip">
+    <string>Node Font</string>
+   </property>
+  </action>
+  <action name="actionImageScale">
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/image-x-generic.svg</normaloff>:/icons/image-x-generic.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Scale I&amp;mage</string>
+   </property>
+  </action>
+  <action name="actionPasteHTML">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/edit-paste.svg</normaloff>:/icons/edit-paste.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Paste &amp;HTML</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+V</string>
+   </property>
+  </action>
+  <action name="actionTags">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/mail-attachment.svg</normaloff>:/icons/mail-attachment.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Tags</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+T</string>
+   </property>
+  </action>
+  <action name="actionLink">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/insert-link.svg</normaloff>:/icons/insert-link.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Insert Lin&amp;k</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+  </action>
+  <action name="actionCopyLink">
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/link.svg</normaloff>:/icons/link.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Copy Link</string>
+   </property>
+  </action>
+  <action name="actionTable">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/insert-table.svg</normaloff>:/icons/insert-table.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>I&amp;nsert Table</string>
+   </property>
+  </action>
+  <action name="actionTableAppendRow">
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/edit-table-insert-row-below.svg</normaloff>:/icons/edit-table-insert-row-below.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Append Row</string>
+   </property>
+  </action>
+  <action name="actionTableDeleteRow">
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/edit-table-delete-row.svg</normaloff>:/icons/edit-table-delete-row.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Delete Row</string>
+   </property>
+  </action>
+  <action name="actionTableAppendCol">
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/edit-table-insert-column-right.svg</normaloff>:/icons/edit-table-insert-column-right.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Append Column</string>
+   </property>
+  </action>
+  <action name="actionTableDeleteCol">
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/edit-table-delete-column.svg</normaloff>:/icons/edit-table-delete-column.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Delete Column</string>
+   </property>
+  </action>
+  <action name="actionTableMergeCells">
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/edit-table-cell-merge.svg</normaloff>:/icons/edit-table-cell-merge.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Merge Cells</string>
+   </property>
+  </action>
+  <action name="actionTablePrependRow">
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/edit-table-insert-row-above.svg</normaloff>:/icons/edit-table-insert-row-above.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Prepend Row</string>
+   </property>
+  </action>
+  <action name="actionTablePrependCol">
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/edit-table-insert-column-left.svg</normaloff>:/icons/edit-table-insert-column-left.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Prepend Column</string>
+   </property>
+  </action>
+  <action name="actionExportHTML">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Export &amp;HTML</string>
+   </property>
+  </action>
+  <action name="actionImageSave">
+   <property name="icon">
+    <iconset>
+     <normaloff/>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Save Image</string>
+   </property>
+  </action>
+  <action name="actionRTL">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/format-text-direction-rtl.svg</normaloff>:/icons/format-text-direction-rtl.svg</iconset>
+   </property>
+   <property name="text">
+    <string>RTL</string>
+   </property>
+  </action>
+  <action name="actionLTR">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/format-text-direction-ltr.svg</normaloff>:/icons/format-text-direction-ltr.svg</iconset>
+   </property>
+   <property name="text">
+    <string>LTR</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>LineEdit</class>
+   <extends>QLineEdit</extends>
+   <header location="global">lineedit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="data/fn.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionQuit</sender>
+   <signal>triggered()</signal>
+   <receiver>FN</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>323</x>
+     <y>198</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

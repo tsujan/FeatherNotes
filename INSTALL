@@ -1,0 +1,24 @@
+First install build dependencies. In Debian-based systems, they are:
+
+* g++ >= 5
+* libx11-dev and libxext-dev (for X11)
+* qtbase5-dev and libqt5x11extras5-dev (for Qt5)
+* libqt5svg5 (for showing own icons)
+
+In Arch-based systems, the required package are:
+
+ * gcc (or gcc-multilib for multilib systems)
+ * libx11 and libxext (for X11)
+ * qt5-base and qt5-x11extras (for Qt5)
+ * qt5-svg (for showing own icons)
+
+Then open a terminal inside this folder and issue the following commands:
+
+	qmake && make
+	sudo make install
+
+If your default Qt installation is not Qt5, put the full path of Qt5 qmake in the first command.
+
+Afterward, you could use this command for cleaning the source directory:
+
+	make distclean

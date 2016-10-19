@@ -1,0 +1,16 @@
+<svg width="48" version="1.0" xmlns="http://www.w3.org/2000/svg" height="48">
+<g style="stroke:none;color:#000">
+<rect width="24" x="5" y="3.9875824" rx="1.5045455" ry="1.4557252" height="3.4937403" id="rect3961"/>
+<rect width="39" x="5" y="11.923367" rx="1.5045455" ry="1.7157706" height="3.4937403" id="rect3963"/>
+<rect width="30" x="5" y="19.859148" rx="1.5045455" ry="1.4557252" height="3.4937403" id="rect3965"/>
+<rect width="17" x="5" y="27.794931" rx="1.5045455" ry="1.4557252" height="3.4937403" id="rect3967"/>
+<path id="path3969" d="m 41,38.8252 -29.4,0 0,-5.6912 -7.6,7.1885 7.6,7.1885 0,-5.6912 29.4,0"/>
+<g style="fill:#dcdcdc">
+<rect width="24" x="5" y="1.4499999" rx="1.5045455" ry="1.4583334" height="3.5" id="rect4968"/>
+<rect width="39" x="5" y="9.4000006" rx="1.5045455" ry="1.7188447" height="3.5" id="rect4970"/>
+<rect width="30" x="5" y="17.35" rx="1.5045455" ry="1.4583334" height="3.5" id="rect4972"/>
+<rect width="17" x="5" y="25.300001" rx="1.5045455" ry="1.4583334" height="3.5" id="rect4976"/>
+<path id="path4988" d="m 41,36.35 -29.4,0 0,-5.7005 -7.6,7.2005 7.6,7.2005 0,-5.7005 29.4,0"/>
+</g>
+</g>
+</svg>
