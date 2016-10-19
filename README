@@ -15,3 +15,5 @@ FeatherNotes is a lightweight Qt5 hierarchical notes-manager for Linux. It is in
 * Auto-saving;
 
 And other features that can be found in its settings, on its menus or when it is actually used.
+
+Please see INSTALL for instructions on compilation and installation!

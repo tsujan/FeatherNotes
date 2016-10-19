@@ -2,7 +2,8 @@ QT += core gui\
       xml \
       widgets \
       printsupport \
-      x11extras
+      x11extras \
+      svg
 
 TARGET = feathernotes
 TEMPLATE = app
