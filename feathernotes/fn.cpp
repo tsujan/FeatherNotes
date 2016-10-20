@@ -4601,11 +4601,26 @@ void FN::reallySetPswrd()
 /*************************/
 bool FN::isPswrdCorrect()
 {
-    if (tray_ && ((underE_ && QObject::sender() == nullptr) // opened by command line
-                  || (!underE_&& (!isVisible() || !isActiveWindow()))))
+    if (tray_)
     {
-        activateTray();
-        QCoreApplication::processEvents();
+        if (underE_ && QObject::sender() == nullptr) // opened by command line
+        {
+            if (!isVisible())
+            {
+                activateTray();
+                QCoreApplication::processEvents();
+            }
+            else // not needed really
+            {
+                activateWindow();
+                raise();
+            }
+        }
+        else if (!underE_&& (!isVisible() || !isActiveWindow()))
+        {
+            activateTray();
+            QCoreApplication::processEvents();
+        }
     }
 
     QDialog *dialog = new QDialog (this);
