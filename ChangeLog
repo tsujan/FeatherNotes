@@ -4,6 +4,8 @@ V0.4.4
  * Removed saving of window states because although it works with well-behaved window managers like kwin and openbox, some WM's don't respect window states completely.
  * Added a preliminary help doc.
  * Don't respond to the tray icon when there's a dialog!
+ * Put the real image scale in the scale dialog!
+ * Implemented auto-scrolling to selected file in file dialogs.
 
 V0.4.3
 ---------

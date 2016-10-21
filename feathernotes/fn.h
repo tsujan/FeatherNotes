@@ -213,7 +213,7 @@ private:
     QModelIndexList tagsList_;
     QString linkAtPos_; // Text hyperlink at the right-click position.
     QTextTable *txtTable_; // Text table at the right-click position.
-    int imgScale_, imgRescale_; QString lastImgPath_;
+    int imgScale_; QString lastImgPath_;
     bool shownBefore_,
          remSize_, remSplitter_,
          remPosition_,

@@ -29,7 +29,8 @@ HEADERS += fn.h \
            simplecrypt.h \
            vscrollbar.h \
            settings.h \
-           help.h
+           help.h \
+           filedialog.h
 
 FORMS += fn.ui \
          helpDialog.ui
