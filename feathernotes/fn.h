@@ -90,6 +90,7 @@ private slots:
     void imageEmbed (QString path);
     void setImagePath (bool);
     void scaleImage();
+    void saveImage();
     void addTable();
     void tableMergeCells();
     void tablePrependRow();

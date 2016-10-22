@@ -151,6 +151,7 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
 
     connect (ui->actionEmbedImage, &QAction::triggered, this, &FN::embedImage);
     connect (ui->actionImageScale, &QAction::triggered, this, &FN::scaleImage);
+    connect (ui->actionImageSave, &QAction::triggered, this, &FN::saveImage);
 
     connect (ui->actionTable, &QAction::triggered, this, &FN::addTable);
     connect (ui->actionTableMergeCells, &QAction::triggered, this, &FN::tableMergeCells);
@@ -621,8 +622,8 @@ void FN::newNote()
                                    | QMessageBox::No);
         msgBox.setDefaultButton (QMessageBox::No);
         QSpacerItem *spacer = new QSpacerItem (350, 0);
-        QGridLayout *layout = qobject_cast< QGridLayout *>(msgBox.layout());
-        layout->addItem (spacer, layout->rowCount(), 0, 1, layout->columnCount());
+        if (QGridLayout *layout = qobject_cast< QGridLayout *>(msgBox.layout()))
+            layout->addItem (spacer, layout->rowCount(), 0, 1, layout->columnCount());
         msgBox.setParent (this, Qt::Dialog);
         msgBox.setWindowModality (Qt::WindowModal);
         msgBox.show();
@@ -1353,7 +1354,11 @@ void FN::txtContextMenu (const QPoint &p)
     {
         menu->addAction (ui->actionLink);
         if (isImageSelected())
+        {
             menu->addAction (ui->actionImageScale);
+            menu->addAction (ui->actionImageSave);
+        }
+        menu->addSeparator();
     }
     menu->addAction (ui->actionEmbedImage);
     menu->addAction (ui->actionTable);
@@ -3393,7 +3398,7 @@ void FN::setImagePath (bool)
     dialog.setAcceptMode (QFileDialog::AcceptOpen);
     dialog.setWindowTitle (tr ("Open Image..."));
     dialog.setFileMode (QFileDialog::ExistingFiles);
-    dialog.setNameFilter (tr ("Image Files (*.png *.jpg *.jpeg *.svg *.svgz *.bmp *.gif)"));
+    dialog.setNameFilter (tr ("Image Files (*.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)"));
     if (QFileInfo (path).isDir())
         dialog.setDirectory (path);
     else
@@ -3532,6 +3537,112 @@ void FN::scaleImage()
         imageSize = QSize (-1, -1); // for the next image
     }
     cur.insertHtml (txt);
+}
+/*************************/
+void FN::saveImage()
+{
+    TextEdit *textEdit = qobject_cast< TextEdit *>(ui->stackedWidget->currentWidget());
+    QTextCursor cur = textEdit->textCursor();
+    QTextDocumentFragment docFrag = cur.selection();
+    QString txt = docFrag.toHtml();
+
+    QString path;
+    if (!xmlPath_.isEmpty())
+    {
+        QDir dir = QFileInfo (xmlPath_).absoluteDir();
+        if (!dir.exists())
+            dir = QDir::home();
+        path = dir.path();
+    }
+    else
+    {
+        QDir dir = QDir::home();
+        path = dir.path();
+    }
+
+    QRegExp imageExp = QRegExp ("base64,.*\"(?=\\s*width=\"[0-9]+\"\\s*height=\"[0-9]+\"\\s*/*>)");
+    QRegExp sizeExp = QRegExp ("width=\"[0-9]+\"\\s*height=\"[0-9]+\"\\s*/*>");
+    QRegExp endExp = QRegExp ("\"\\s*/*>");
+    int indx;
+    int endIndex = 0;
+    while ((indx = sizeExp.indexIn (txt, endIndex)) != -1)
+    {
+        int pos = imageExp.indexIn (txt, endIndex);
+        QString str = txt.mid (pos, imageExp.matchedLength());
+        str.remove (0, 7);
+        QImage image;
+        if (!image.loadFromData (QByteArray::fromBase64 (str.toUtf8())))
+            continue;
+
+        endIndex = endExp.indexIn (txt, indx);
+
+        bool retry (true);
+        bool err (false);
+        while (retry)
+        {
+            if (err)
+            {
+                QMessageBox msgBox;
+                msgBox.setIcon (QMessageBox::Question);
+                msgBox.setText (tr ("<center><b><big>Image cannot be saved! Retry?</big></b></center>"));
+                msgBox.setInformativeText (tr ("<center>Maybe you did not choose a proper extension</center>\n"
+                                               "<center>or do not have write permission.</center><p></p>"));
+                msgBox.setStandardButtons (QMessageBox::Yes
+                                           | QMessageBox::No);
+                msgBox.setDefaultButton (QMessageBox::No);
+                QSpacerItem *spacer = new QSpacerItem (350, 0);
+                if (QGridLayout *layout = qobject_cast< QGridLayout *>(msgBox.layout()))
+                    layout->addItem (spacer, layout->rowCount(), 0, 1, layout->columnCount());
+                msgBox.setParent (this, Qt::Dialog);
+                msgBox.setWindowModality (Qt::WindowModal);
+                msgBox.show();
+                msgBox.move (x() + width()/2 - msgBox.width()/2,
+                             y() + height()/2 - msgBox.height()/ 2);
+                switch (msgBox.exec())
+                {
+                case QMessageBox::Yes:
+                    break;
+                case QMessageBox::No:
+                default:
+                    retry = false; // next image
+                    break;
+                }
+            }
+
+            if (retry)
+            {
+                QString fname;
+                FileDialog dialog (this);
+                dialog.setAcceptMode (QFileDialog::AcceptSave);
+                dialog.setWindowTitle (tr ("Save Image As..."));
+                dialog.setFileMode (QFileDialog::AnyFile);
+                dialog.setNameFilter (tr ("Image Files (*.png *.jpg *.jpeg *.bmp);;All Files (*)"));
+                if (QFileInfo (path).isDir())
+                    dialog.setDirectory (path);
+                else
+                    dialog.selectFile (path);
+                dialog.autoScroll();
+                if (dialog.exec())
+                {
+                    fname = dialog.selectedFiles().at (0);
+                    if (fname.isEmpty() || QFileInfo (fname).isDir())
+                    {
+                        err = true;
+                        continue;
+                    }
+                }
+                else return;
+
+                if (image.save (fname))
+                {
+                    lastImgPath_ = fname;
+                    retry = false; // next image
+                }
+                else
+                    err = true;
+            }
+        }
+    }
 }
 /*************************/
 void FN::addTable()

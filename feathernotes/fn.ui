@@ -1414,7 +1414,7 @@
     </iconset>
    </property>
    <property name="text">
-    <string>Scale I&amp;mage</string>
+    <string>Scale I&amp;mage(s)</string>
    </property>
   </action>
   <action name="actionPasteHTML">
@@ -1472,7 +1472,7 @@
     </iconset>
    </property>
    <property name="text">
-    <string>Copy Link</string>
+    <string>C&amp;opy Link</string>
    </property>
   </action>
   <action name="actionTable">
@@ -1568,12 +1568,11 @@
   </action>
   <action name="actionImageSave">
    <property name="icon">
-    <iconset>
-     <normaloff/>
-    </iconset>
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/document-save.svg</normaloff>:/icons/document-save.svg</iconset>
    </property>
    <property name="text">
-    <string>Save Image</string>
+    <string>Save Ima&amp;ge(s)</string>
    </property>
   </action>
   <action name="actionRTL">

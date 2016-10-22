@@ -6,6 +6,7 @@ V0.4.4
  * Don't respond to the tray icon when there's a dialog!
  * Put the real image scale in the scale dialog!
  * Implemented auto-scrolling to selected file in file dialogs.
+ * Added the ability to save selected images.
 
 V0.4.3
 ---------
