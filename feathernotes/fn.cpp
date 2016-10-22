@@ -2035,7 +2035,11 @@ void FN::textFontDialog()
         /* change the font for all shown nodes */
         QHash<DomItem*, TextEdit*>::iterator it;
         for (it = widgets_.begin(); it != widgets_.end(); ++it)
+        {
             it.value()->document()->setDefaultFont (defaultFont_);
+            QFontMetrics metrics (defaultFont_);
+            it.value()->setTabStopWidth (4 * metrics.width (' '));
+        }
 
         /* also change the font for all nodes,
            that aren't shown yet */
