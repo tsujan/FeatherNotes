@@ -49,11 +49,14 @@ public:
         scrollJumpWorkaround = apply;
     }
 
+    void zooming (float range);
+
     bool autoIndentation;
 
 signals:
     void resized();
     void imageDropped (QString path);
+    void zoomedOut (TextEdit *textEdit); // needed for reformatting text
 
 protected:
     void keyPressEvent (QKeyEvent *event);

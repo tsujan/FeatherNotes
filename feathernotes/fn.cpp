@@ -497,20 +497,19 @@ void FN::defaultSize()
     ui->splitter->setSizes (sizes);
 }
 /*************************/
+void FN::rehighlight (TextEdit *textEdit)
+{
+    if (!searchEntries_[textEdit].isEmpty())
+        hlight();
+}
+/*************************/
 void FN::zoomingIn()
 {
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
 
     TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
-    QFont currentFont = textEdit->document()->defaultFont();
-    int size = currentFont.pointSize();
-    currentFont.setPointSize (size + 1);
-
-    textEdit->document()->setDefaultFont (currentFont);
-
-    QFontMetrics metrics (currentFont);
-    textEdit->setTabStopWidth (4 * metrics.width (' '));
+    textEdit->zooming (1.f);
 }
 /*************************/
 void FN::zoomingOut()
@@ -519,18 +518,9 @@ void FN::zoomingOut()
     if (!cw) return;
 
     TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
-    QFont currentFont = textEdit->document()->defaultFont();
-    int size = currentFont.pointSize();
-    if (size <= 3) return;
-    currentFont.setPointSize (size - 1);
+    textEdit->zooming (-1.f);
 
-    textEdit->document()->setDefaultFont (currentFont);
-
-    QFontMetrics metrics (currentFont);
-    textEdit->setTabStopWidth (4 * metrics.width (' '));
-
-    if (!searchEntries_[textEdit].isEmpty())
-        hlight();
+    rehighlight (textEdit);
 }
 /*************************/
 void FN::unZooming()
@@ -539,13 +529,12 @@ void FN::unZooming()
     if (!cw) return;
 
     TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
-    textEdit->document()->setDefaultFont (defaultFont_);
+    textEdit->setFont (defaultFont_);
     QFontMetrics metrics (defaultFont_);
     textEdit->setTabStopWidth (4 * metrics.width (' '));
 
     /* this may be a zoom-out */
-    if (!searchEntries_[textEdit].isEmpty())
-        hlight();
+    rehighlight (textEdit);
 }
 /*************************/
 void FN::resizeEvent (QResizeEvent *event)
@@ -1290,6 +1279,7 @@ TextEdit *FN::newWidget()
     connect (textEdit, &QTextEdit::copyAvailable, ui->actionLink, &QAction::setEnabled);
     connect (textEdit, &QTextEdit::copyAvailable, this, &FN::setCursorInsideSelection);
     connect (textEdit, &TextEdit::imageDropped, this, &FN::imageEmbed);
+    connect (textEdit, &TextEdit::zoomedOut, this, &FN::rehighlight);
     connect (textEdit, &QWidget::customContextMenuRequested, this, &FN::txtContextMenu);
     /* The remaining connections to QTextEdit signals are in selChanged(). */
 
@@ -2067,8 +2057,7 @@ void FN::textFontDialog()
         /* rehighlight found matches for this node
            because the font may be smaller now */
         TextEdit *textEdit = qobject_cast< TextEdit *>(ui->stackedWidget->currentWidget());
-        if (!searchEntries_[textEdit].isEmpty())
-            hlight();
+        rehighlight (textEdit);
     }
 }
 /*************************/

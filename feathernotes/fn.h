@@ -48,6 +48,7 @@ private slots:
     void showContextMenu (const QPoint &p);
     void fullScreening();
     void defaultSize();
+    void rehighlight (TextEdit *textEdit);
     void zoomingIn();
     void zoomingOut();
     void unZooming();
