@@ -8,6 +8,7 @@ V0.4.4
  * Implemented auto-scrolling to selected file in file dialogs.
  * Added the ability to save selected images.
  * Added support for text zooming with Ctrl+wheel.
+ * An option to set a fixed start size (700x500 by default).
 
 V0.4.3
 ---------

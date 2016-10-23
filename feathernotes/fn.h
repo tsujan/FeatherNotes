@@ -116,7 +116,7 @@ private slots:
     void toggleWrapping();
     void toggleIndent();
     void PrefDialog();
-    void prefSize (int checked);
+    void prefSize (int value);
     void prefSplitterSize (int checked);
     void prefPosition (int checked);
     void prefHasTray (int checked);
@@ -224,7 +224,7 @@ private:
          wrapByDefault_, indentByDefault_;
     int autoSave_;
     QPoint position_; // Excluding the window frame.
-    QSize winSize_;
+    QSize winSize_, startSize_;
     //QList<int> splitterSizes_;
     QByteArray splitterSizes_;
     QTimer *timer_;

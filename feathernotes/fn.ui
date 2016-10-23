@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>650</width>
-    <height>400</height>
+    <width>700</width>
+    <height>500</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -211,7 +211,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>650</width>
+     <width>700</width>
      <height>21</height>
     </rect>
    </property>
@@ -1609,9 +1609,9 @@
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
   <customwidget>
-   <class>LineEdit</class>
+   <class>FeatherNotes::LineEdit</class>
    <extends>QLineEdit</extends>
-   <header location="global">lineedit.h</header>
+   <header>lineedit.h</header>
   </customwidget>
  </customwidgets>
  <resources>

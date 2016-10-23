@@ -83,8 +83,7 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
     ui->treeView->setModel (model_);
 
     shownBefore_ = false;
-    winSize_ = QSize (650, 400);
-    splitterSizes_ = QByteArray::fromBase64 ("AAAA/wAAAAAAAAACAAAAoAAAAeoBAAAABgEAAAAB");
+    splitterSizes_ = QByteArray::fromBase64 ("AAAA/wAAAAEAAAACAAAAqgAAAhIB/////wEAAAABAA==");
     remSize_ = true;
     remSplitter_ = true;
     remPosition_ = true;
@@ -487,13 +486,13 @@ void FN::defaultSize()
         showMaximized();
     if (isMaximized())
         showNormal();*/
-    if (size() != QSize (650, 400))
+    if (size() != startSize_)
     {
         setVisible (false);
-        resize (650, 400);
+        resize (startSize_);
         QTimer::singleShot (250, this, SLOT (showNormal()));
     }
-    QList<int> sizes; sizes << 160 << 490;
+    QList<int> sizes; sizes << 170 << 530;
     ui->splitter->setSizes (sizes);
 }
 /*************************/
@@ -539,8 +538,7 @@ void FN::unZooming()
 /*************************/
 void FN::resizeEvent (QResizeEvent *event)
 {
-    //if (!remSize_) return;
-    if (windowState() == Qt::WindowNoState)
+    if (remSize_ && windowState() == Qt::WindowNoState)
         winSize_ = event->size();
     QWidget::resizeEvent (event);
 }
@@ -2637,7 +2635,7 @@ void FN::hlight() const
     QString str = visCur.selection().toPlainText(); // '\n' is included in this way
     Qt::CaseSensitivity cs = Qt::CaseInsensitive;
     if (ui->caseButton->isChecked()) cs = Qt::CaseSensitive;
-    while (str.contains (txt, cs) // don't waste time if the seach text isn't visible
+    while (str.contains (txt, cs) // don't waste time if the search text isn't visible
            && !(found = finding (txt, start, searchFlags_)).isNull())
     {
         QTextEdit::ExtraSelection extra;
@@ -3068,7 +3066,11 @@ void FN::showEvent (QShowEvent *event)
     {
         shownBefore_ = true;
         if (remPosition_)
-            setGeometry (position_.x() - (underE_ ? EShift_.width() : 0), position_.y() - (underE_ ? EShift_.height() : 0), winSize_.width(), winSize_.height());
+        {
+            QSize theSize = (remSize_ ? winSize_ : startSize_);
+            setGeometry (position_.x() - (underE_ ? EShift_.width() : 0), position_.y() - (underE_ ? EShift_.height() : 0),
+                         theSize.width(), theSize.height());
+        }
     }
     QWidget::showEvent (event);
 }
@@ -3080,7 +3082,6 @@ void FN::showAndFocus()
     raise();
     if (ui->stackedWidget->count() > 0)
         qobject_cast< TextEdit *>(ui->stackedWidget->currentWidget())->setFocus();
-
 }
 /*************************/
 void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
@@ -3831,14 +3832,37 @@ void FN::PrefDialog()
 
     QGroupBox *windowGoupBox = new QGroupBox (tr ("Window"));
     QGridLayout *windowGrid = new QGridLayout;
+
+    /* saved window size */
     QCheckBox *winSizeBox = new QCheckBox (tr ("Remember window &size"));
-    winSizeBox->setToolTip (tr ("Saves window size after closing\nthis dialog and also on exit.\nUncheck for 650x400."));
+    winSizeBox->setToolTip (tr ("Saves window size after closing\nthis dialog and also on exit.\n\nUncheck to set a fixed size!"));
+
+    /* fixed start size */
+    QSize ag = QApplication::desktop()->availableGeometry().size() - QSize (50, 100);
+    QLabel *winLabel = new QLabel (tr ("Start with this size: "));
+    QLabel *winXLabel = new QLabel(" × ");
+    QSpinBox *winSpinX = new QSpinBox();
+    winLabel->setObjectName ("WL");
+    winXLabel->setObjectName ("WXL");
+    winSpinX->setObjectName ("WX");
+    winSpinX->setRange (-ag.width(), ag.width());
+    QSpinBox *winSpinY = new QSpinBox();
+    winSpinY->setObjectName ("WY");
+    winSpinY->setRange (-ag.height(), ag.height());
+    winSpinX->setSuffix (tr (" px"));
+    winSpinY->setSuffix (tr (" px"));
+
+    /* saved splite size */
     QCheckBox *splitterSizeBox = new QCheckBox (tr ("Remember &tree width"));
-    splitterSizeBox->setToolTip (tr ("Saves tree width after closing\nthis dialog and also on exit.\nUncheck for a width ratio of 160/490."));
+    splitterSizeBox->setToolTip (tr ("Saves tree width after closing\nthis dialog and also on exit.\n\nUncheck for a width ratio of 170/530."));
+
+    /* saved position */
     QCheckBox *positionBox = new QCheckBox (tr ("Save &position"));
     positionBox->setToolTip (tr ("Saves position after closing\nthis dialog and also on exit."
                                  "\n"
                                  "\n(This may not work correctly\nunder GTK+ DE's like Unity\nand Cinnamon.)"));
+
+    /* tray icon */
     QCheckBox *hasTrayBox = new QCheckBox (tr ("Add to s&ystray"));
     hasTrayBox->setToolTip (tr ("Decides whether a systray icon should be used.\nIf checked, the titlebar close button iconifies\nthe window to the systray instead of quitting.\n\nNeeds restarting of FeatherNotes to take effect."));
     QCheckBox *minTrayBox = new QCheckBox (tr ("Start i&conified to tray"));
@@ -3846,76 +3870,112 @@ void FN::PrefDialog()
     minTrayBox->setChecked (minToTray_);
     if (!hasTray_)
         minTrayBox->setDisabled (true);
+
+    /* translucency bug workaround */
     QCheckBox *transBox = new QCheckBox (tr ("Workaround for Qt&5's translucency bug\n(Needs app restart)"));
     transBox->setToolTip (tr ("Check this only if you see weird effects with translucent themes!"));
+
+    /* Enlightenment workaround */
     QCheckBox *EBox = new QCheckBox (tr ("Running &under Enlightenment?"));
     EBox->setToolTip (tr ("Check this under Enlightenment (or, probably, another DE)\nto use the systray icon more easily!"));
-    QLabel *ELabel = new QLabel (tr ("Shift: "));
+    QLabel *ELabel = new QLabel (tr ("Shifts (X × Y): "));
     QString EToolTip (tr ("Some DE's (like Enlightenment) may not report the window position"
-                          "\ncorrectly. If that is the case, you could fix it here."
+                          "\ncorrectly. If that is the case, you could try to fix the problem here."
                           "\n"
-                          "\nIf the panel is on the bottom or top, the y-coordinate should be set;"
-                          "\nif it is on the left or right, the x-coordinate should be set."
+                          "\nIf the panel is on the bottom or top, the Y-coordinate should be set;"
+                          "\nif it is on the left or right, the X-coordinate should be set."
                           "\n"
-                          "\nAfter choosing the coordinates, put the window in a proper position"
-                          "\nand then restart FeatherNotes!"));
+                          "\nAfter choosing the coordinate shifts, put the window in a proper"
+                          "\nposition and then restart FeatherNotes!"));
     ELabel->setToolTip (EToolTip);
     QLabel *XLabel = new QLabel(" × ");
     XLabel->setToolTip (EToolTip);
-    QSpinBox *Espin1 = new QSpinBox();
+    QSpinBox *ESpinX = new QSpinBox();
     ELabel->setObjectName ("EL");
     XLabel->setObjectName ("XL");
-    Espin1->setObjectName ("EX");
-    Espin1->setRange (-200, 200);
-    QSpinBox *Espin2 = new QSpinBox();
-    Espin2->setObjectName ("EY");
-    Espin2->setRange (-200, 200);
-    Espin1->setToolTip (EToolTip);
-    Espin2->setToolTip (EToolTip);
-    Espin1->setSuffix (tr (" px"));
-    Espin2->setSuffix (tr (" px"));
+    ESpinX->setObjectName ("EX");
+    ESpinX->setRange (-200, 200);
+    QSpinBox *ESpinY = new QSpinBox();
+    ESpinY->setObjectName ("EY");
+    ESpinY->setRange (-200, 200);
+    ESpinX->setToolTip (EToolTip);
+    ESpinY->setToolTip (EToolTip);
+    ESpinX->setSuffix (tr (" px"));
+    ESpinY->setSuffix (tr (" px"));
+
     windowGrid->addWidget (winSizeBox, 0, 0, 1, 4);
-    windowGrid->addWidget (splitterSizeBox, 1, 0, 1, 4);
-    windowGrid->addWidget (positionBox, 2, 0, 1, 4);
-    windowGrid->addWidget (hasTrayBox, 3, 0, 1, 4);
-    windowGrid->addWidget (minTrayBox, 4, 1, 1, 3);
-    windowGrid->addWidget (transBox, 5, 0, 1, 4);
-    windowGrid->addWidget (EBox, 6, 0, 1, 4);
-    windowGrid->addWidget (ELabel, 7, 0, 1, 1);
-    windowGrid->addWidget (Espin1, 7, 1, 1, 1);
-    windowGrid->addWidget (XLabel, 7, 2, 1, 1);
-    windowGrid->addWidget (Espin2, 7, 3, 1, 1, Qt::AlignLeft);
+
+    windowGrid->addWidget (winLabel, 1, 0, 1, 1, Qt::AlignRight);
+    windowGrid->addWidget (winSpinX, 1, 1, 1, 1);
+    windowGrid->addWidget (winXLabel, 1, 2, 1, 1);
+    windowGrid->addWidget (winSpinY, 1, 3, 1, 1, Qt::AlignLeft);
+
+    windowGrid->addWidget (splitterSizeBox, 2, 0, 1, 4);
+    windowGrid->addWidget (positionBox, 3, 0, 1, 4);
+    windowGrid->addWidget (hasTrayBox, 4, 0, 1, 4);
+    windowGrid->addWidget (minTrayBox, 5, 1, 1, 3);
+    windowGrid->addWidget (transBox, 6, 0, 1, 4);
+
+    windowGrid->addWidget (EBox, 7, 0, 1, 4);
+    windowGrid->addWidget (ELabel, 8, 0, 1, 1, Qt::AlignRight);
+    windowGrid->addWidget (ESpinX, 8, 1, 1, 1);
+    windowGrid->addWidget (XLabel, 8, 2, 1, 1);
+    windowGrid->addWidget (ESpinY, 8, 3, 1, 1, Qt::AlignLeft);
+
     windowGrid->setColumnStretch (3, 1);
     windowGrid->setColumnMinimumWidth(0, style()->pixelMetric (QStyle::PM_IndicatorWidth) + style()->pixelMetric (QStyle::PM_CheckBoxLabelSpacing));
     windowGoupBox->setLayout (windowGrid);
+
     winSizeBox->setChecked (remSize_);
-    connect (winSizeBox, &QCheckBox::stateChanged, this, &FN::prefSize);
-    splitterSizeBox->setChecked (remSplitter_);
-    connect (splitterSizeBox, &QCheckBox::stateChanged, this, &FN::prefSplitterSize);
-    positionBox->setChecked (remPosition_);
-    connect (positionBox, &QCheckBox::stateChanged, this, &FN::prefPosition);
-    hasTrayBox->setChecked (hasTray_);
-    connect (hasTrayBox, &QCheckBox::stateChanged, this, &FN::prefHasTray);
-    connect (hasTrayBox, &QAbstractButton::toggled, minTrayBox, &QWidget::setEnabled);
-    minTrayBox->setChecked (minToTray_);
-    connect (minTrayBox, &QCheckBox::stateChanged, this, &FN::prefMinTray);
-    transBox->setChecked (translucencyWorkaround_);
-    connect (transBox, &QCheckBox::stateChanged, this, &FN::prefTranslucency);
-    EBox->setChecked (underE_);
-    connect (EBox, &QCheckBox::stateChanged, this, &FN::prefEnlightenment);
-    Espin1->setValue (EShift_.width());
-    Espin2->setValue (EShift_.height());
-    if (!underE_)
+    if (remSize_)
     {
-        ELabel->setDisabled (true);
-        Espin1->setDisabled (true);
-        XLabel->setDisabled (true);
-        Espin2->setDisabled (true);
+        winSpinX->setValue (winSize_.width());
+        winSpinY->setValue (winSize_.height());
+        winSpinX->setEnabled (false);
+        winSpinY->setEnabled (false);
+        winLabel->setEnabled (false);
+        winXLabel->setEnabled (false);
     }
     else
     {
-        connect (Espin1, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &FN::setEDiff);
-        connect (Espin2, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &FN::setEDiff);
+        winSpinX->setValue (startSize_.width());
+        winSpinY->setValue (startSize_.height());
+        connect (winSpinX, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &FN::prefSize);
+        connect (winSpinY, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &FN::prefSize);
+    }
+    connect (winSizeBox, &QCheckBox::stateChanged, this, &FN::prefSize);
+
+    splitterSizeBox->setChecked (remSplitter_);
+    connect (splitterSizeBox, &QCheckBox::stateChanged, this, &FN::prefSplitterSize);
+
+    positionBox->setChecked (remPosition_);
+    connect (positionBox, &QCheckBox::stateChanged, this, &FN::prefPosition);
+
+    hasTrayBox->setChecked (hasTray_);
+    connect (hasTrayBox, &QCheckBox::stateChanged, this, &FN::prefHasTray);
+    connect (hasTrayBox, &QAbstractButton::toggled, minTrayBox, &QWidget::setEnabled);
+
+    minTrayBox->setChecked (minToTray_);
+    connect (minTrayBox, &QCheckBox::stateChanged, this, &FN::prefMinTray);
+
+    transBox->setChecked (translucencyWorkaround_);
+    connect (transBox, &QCheckBox::stateChanged, this, &FN::prefTranslucency);
+
+    EBox->setChecked (underE_);
+    connect (EBox, &QCheckBox::stateChanged, this, &FN::prefEnlightenment);
+    ESpinX->setValue (EShift_.width());
+    ESpinY->setValue (EShift_.height());
+    if (!underE_ || !remPosition_)
+    {
+        ELabel->setDisabled (true);
+        ESpinX->setDisabled (true);
+        XLabel->setDisabled (true);
+        ESpinY->setDisabled (true);
+    }
+    else
+    {
+        connect (ESpinX, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &FN::setEDiff);
+        connect (ESpinY, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &FN::setEDiff);
     }
     connect (EBox, &QCheckBox::stateChanged, this, &FN::prefEDiff);
 
@@ -3961,6 +4021,10 @@ void FN::PrefDialog()
     workaroundBox->setChecked (scrollJumpWorkaround_);
     connect (workaroundBox, &QCheckBox::stateChanged, this, &FN::prefScrollJump);
 
+    /**************
+     *** Dialog ***
+     **************/
+
     QPushButton *closeButton = new QPushButton (QIcon (":icons/dialog-cancel.svg"), "Close");
     mainGrid->addWidget (windowGoupBox, 0, 0);
     mainGrid->addWidget (textGoupBox, 0, 1);
@@ -3985,15 +4049,67 @@ void FN::PrefDialog()
     }
 }
 /*************************/
-void FN::prefSize (int checked)
+void FN::prefSize (int value)
 {
-    if (checked == Qt::Checked)
+    if (QObject::sender() == nullptr) return;
+    if (qobject_cast<QCheckBox *>(QObject::sender()))
     {
-        remSize_ = true;
-        winSize_ = size();
+        QList<QDialog *> list = findChildren<QDialog*>();
+        if (list.isEmpty()) return;
+        QSpinBox *winSpinX = nullptr;
+        QSpinBox *winSpinY = nullptr;
+        QLabel *winLabel = nullptr;
+        QLabel *winXLabel = nullptr;
+        for (int i = 0; i < list.count(); ++i)
+        {
+            winSpinX = list.at (i)->findChild<QSpinBox *>("WX");
+            if (winSpinX != nullptr)
+            {
+                winSpinY = list.at (i)->findChild<QSpinBox *>("WY");
+                if (winSpinY != nullptr)
+                {
+                    winLabel = list.at (i)->findChild<QLabel *>("WL");
+                    winXLabel = list.at (i)->findChild<QLabel *>("WXL");
+                    if (winLabel != nullptr && winXLabel != nullptr)
+                        break;
+                }
+                else
+                    winSpinX = nullptr;
+            }
+        }
+        if (winSpinX == nullptr || winSpinY == nullptr || winLabel == nullptr || winXLabel == nullptr)
+            return;
+
+        if (value == Qt::Checked)
+        {
+            remSize_ = true;
+            winSize_ = size();
+            disconnect (winSpinX, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &FN::prefSize);
+            disconnect (winSpinY, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &FN::prefSize);
+            winSpinX->setEnabled (false);
+            winSpinY->setEnabled (false);
+            winLabel->setEnabled (false);
+            winXLabel->setEnabled (false);
+        }
+        else if (value == Qt::Unchecked)
+        {
+            remSize_ = false;
+            startSize_ = winSize_;
+            winSpinX->setEnabled (true);
+            winSpinY->setEnabled (true);
+            winLabel->setEnabled (true);
+            winXLabel->setEnabled (true);
+            connect (winSpinX, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &FN::prefSize);
+            connect (winSpinY, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &FN::prefSize);
+        }
     }
-    else if (checked == Qt::Unchecked)
-        remSize_ = false;
+    else if (QSpinBox *sb = qobject_cast<QSpinBox *>(QObject::sender()))
+    {
+        if (QObject::sender()->objectName() == "WX")
+            startSize_.setWidth (sb->value());
+        else if (QObject::sender()->objectName() == "WY")
+            startSize_.setHeight (sb->value());
+    }
 }
 /*************************/
 void FN::prefSplitterSize (int checked)
@@ -4009,14 +4125,56 @@ void FN::prefSplitterSize (int checked)
 /*************************/
 void FN::prefPosition (int checked)
 {
+    QList<QDialog *> list = findChildren<QDialog*>();
+    if (list.isEmpty()) return;
+    QSpinBox *ESpinX = nullptr;
+    QSpinBox *ESpinY = nullptr;
+    QLabel *ELabel = nullptr;
+    QLabel *XLabel = nullptr;
+    for (int i = 0; i < list.count(); ++i)
+    {
+        ESpinX = list.at (i)->findChild<QSpinBox *>("EX");
+        if (ESpinX != nullptr)
+        {
+            ESpinY = list.at (i)->findChild<QSpinBox *>("EY");
+            if (ESpinY != nullptr)
+            {
+                ELabel = list.at (i)->findChild<QLabel *>("EL");
+                XLabel = list.at (i)->findChild<QLabel *>("XL");
+                if (ELabel != nullptr && XLabel != nullptr)
+                    break;
+            }
+            else
+                ESpinX = nullptr;
+        }
+    }
+    if (ESpinX == nullptr || ESpinY == nullptr || ELabel == nullptr || XLabel == nullptr)
+        return;
+
     if (checked == Qt::Checked)
     {
         remPosition_ = true;
         position_.setX (geometry().x());
         position_.setY (geometry().y());
+        if (underE_)
+        {
+            ELabel->setEnabled (true);
+            XLabel->setEnabled (true);
+            ESpinX->setEnabled (true);
+            ESpinY->setEnabled (true);
+        }
     }
     else if (checked == Qt::Unchecked)
+    {
         remPosition_ = false;
+        if (underE_)
+        {
+            ELabel->setEnabled (false);
+            XLabel->setEnabled (false);
+            ESpinX->setEnabled (false);
+            ESpinY->setEnabled (false);
+        }
+    }
 }
 /*************************/
 void FN::prefHasTray (int checked)
@@ -4111,48 +4269,48 @@ void FN::prefEDiff (int checked)
 {
     QList<QDialog *> list = findChildren<QDialog*>();
     if (list.isEmpty()) return;
-    QSpinBox *spinX = nullptr;
-    QSpinBox *spinY = nullptr;
+    QSpinBox *ESpinX = nullptr;
+    QSpinBox *ESpinY = nullptr;
     QLabel *ELabel = nullptr;
-    QLabel *XLabell = nullptr;
+    QLabel *XLabel = nullptr;
     for (int i = 0; i < list.count(); ++i)
     {
-        spinX = list.at (i)->findChild<QSpinBox *>("EX");
-        if (spinX != nullptr)
+        ESpinX = list.at (i)->findChild<QSpinBox *>("EX");
+        if (ESpinX != nullptr)
         {
-            spinY = list.at (i)->findChild<QSpinBox *>("EY");
-            if (spinY != nullptr)
+            ESpinY = list.at (i)->findChild<QSpinBox *>("EY");
+            if (ESpinY != nullptr)
             {
                 ELabel = list.at (i)->findChild<QLabel *>("EL");
-                XLabell = list.at (i)->findChild<QLabel *>("XL");
-                if (ELabel != nullptr && XLabell != nullptr)
+                XLabel = list.at (i)->findChild<QLabel *>("XL");
+                if (ELabel != nullptr && XLabel != nullptr)
                     break;
             }
             else
-                spinX = nullptr;
+                ESpinX = nullptr;
         }
     }
-    if (spinX == nullptr || spinY == nullptr || ELabel == nullptr || XLabell == nullptr)
+    if (ESpinX == nullptr || ESpinY == nullptr || ELabel == nullptr || XLabel == nullptr)
         return;
 
     if (checked == Qt::Checked)
     {
         ELabel->setEnabled (true);
-        XLabell->setEnabled (true);
-        spinX->setEnabled (true);
-        spinY->setEnabled (true);
-        EShift_ = QSize (spinX->value(), spinY->value());
-        connect (spinX, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &FN::setEDiff);
-        connect (spinY, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &FN::setEDiff);
+        XLabel->setEnabled (true);
+        ESpinX->setEnabled (true);
+        ESpinY->setEnabled (true);
+        EShift_ = QSize (ESpinX->value(), ESpinY->value());
+        connect (ESpinX, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &FN::setEDiff);
+        connect (ESpinY, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &FN::setEDiff);
     }
     else if (checked == Qt::Unchecked)
     {
-        disconnect (spinX, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &FN::setEDiff);
-        disconnect (spinY, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &FN::setEDiff);
-        spinX->setEnabled (false);
-        spinY->setEnabled (false);
+        disconnect (ESpinX, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &FN::setEDiff);
+        disconnect (ESpinY, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &FN::setEDiff);
+        ESpinX->setEnabled (false);
+        ESpinY->setEnabled (false);
         ELabel->setEnabled (false);
-        XLabell->setEnabled (false);
+        XLabel->setEnabled (false);
     }
 }
 /*************************/
@@ -4196,20 +4354,26 @@ void FN::readAndApplyConfig()
 
     settings.beginGroup ("window");
 
+    startSize_ = settings.value ("startSize", QSize (700, 500)).toSize();
+    if (!startSize_.isValid() || startSize_.isNull())
+        startSize_ = QSize (700, 500);
     if (settings.value ("size").toString() == "none")
+    {
         remSize_ = false; // true by default
+        resize (startSize_);
+    }
     else
     {
-        winSize_ = settings.value ("size", QSize (650, 400)).toSize();
+        winSize_ = settings.value ("size", QSize (700, 500)).toSize();
+        if (!winSize_.isValid() || winSize_.isNull())
+            winSize_ = QSize (700, 500);
         resize (winSize_);
     }
 
     if (settings.value ("splitterSizes").toString() == "none")
         remSplitter_ = false; // true by default
     else
-        splitterSizes_ = settings.value ("splitterSizes",
-                                        QByteArray::fromBase64 ("AAAA/wAAAAAAAAACAAAAoAAAAeoBAAAABgEAAAAB"))
-                                        .toByteArray();
+        splitterSizes_ = settings.value ("splitterSizes", splitterSizes_).toByteArray();
     ui->splitter->restoreState (splitterSizes_);
 
     if (settings.value ("position").toString() == "none")
@@ -4285,6 +4449,7 @@ void FN::writeGeometryConfig()
         settings.setValue ("size", winSize_);
     else
         settings.setValue ("size", "none");
+    settings.setValue ("startSize", startSize_);
 
     if (remSplitter_)
         settings.setValue ("splitterSizes", ui->splitter->saveState());
@@ -4905,4 +5070,3 @@ void FN::showHelpDialog()
 }
 
 }
-
