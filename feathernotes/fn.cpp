@@ -3997,7 +3997,7 @@ void FN::PrefDialog()
         spinBox->setValue (autoSave_);
     else
         spinBox->setValue (5);
-    QCheckBox *workaroundBox = new QCheckBox (tr ("Workaround for &Qt5's scroll jumb bug"));
+    QCheckBox *workaroundBox = new QCheckBox (tr ("Workaround for &Qt5's scroll jump bug"));
     textGrid->addWidget (wrapBox, 0, 0, 1, 2);
     textGrid->addWidget (indentBox, 1, 0, 1, 2);
     textGrid->addWidget (autoSaveBox, 2, 0);
