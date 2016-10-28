@@ -543,6 +543,23 @@ void FN::resizeEvent (QResizeEvent *event)
     QWidget::resizeEvent (event);
 }
 /*************************/
+// This computes the width of a message box text for the box width to be set.
+// We suppose that <p> and <br> aren't used inside the text.
+static inline int textSize(const QFont &font, const QString &text)
+{
+  int tw = 0;
+  if (!text.isEmpty())
+  {
+    QString t (text);
+    t.remove (QRegExp ("</{,1}center>|</{,1}b>|</{,1}i>|</{,1}p>|<br>"));
+    /* deal with newlines */
+    QStringList l = t.split ('\n');
+    for (int i = 0; i < l.size(); i++)
+      tw = qMax (tw, QFontMetrics (font).width (l[i]));
+  }
+  return tw;
+}
+/*************************/
 void FN::newNote()
 {
     QObject *sender = QObject::sender();
@@ -602,15 +619,14 @@ void FN::newNote()
     {
         QMessageBox msgBox;
         msgBox.setIcon (QMessageBox::Question);
+        msgBox.setWindowTitle ("FeatherNotes"); // kwin sets an ugly title
         msgBox.setText (tr ("<center><b><big>New note?</big></b></center>"));
-        msgBox.setInformativeText (tr ("<center><i>Do you really want to leave this document</i></center>"\
+        msgBox.setInformativeText (tr ("<center><i>Do you really want to leave this document</i></center>\n"\
                                        "<center><i>and create an empty one?</i></center>"));
-        msgBox.setStandardButtons (QMessageBox::Yes
-                                   | QMessageBox::No);
+        msgBox.setStandardButtons (QMessageBox::Yes | QMessageBox::No);
         msgBox.setDefaultButton (QMessageBox::No);
-        QSpacerItem *spacer = new QSpacerItem (350, 0);
         if (QGridLayout *layout = qobject_cast< QGridLayout *>(msgBox.layout()))
-            layout->addItem (spacer, layout->rowCount(), 0, 1, layout->columnCount());
+            layout->setColumnMinimumWidth (layout->columnCount() - 1, textSize (msgBox.font(), msgBox.informativeText()) + 10);
         msgBox.setParent (this, Qt::Dialog);
         msgBox.setWindowModality (Qt::WindowModal);
         msgBox.show();
@@ -1754,8 +1770,11 @@ void FN::deleteNode()
     msgBox.setIcon (QMessageBox::Question);
     msgBox.setWindowTitle ("Deletion");
     msgBox.setText (tr ("<center><b><big>Delete this node?</big></b></center>"));
-    msgBox.setInformativeText (tr ("<center><i>This action cannot be undone!</i></center>"));
+    msgBox.setInformativeText (tr ("<center><b><i>Warning!</i></b></center>\n<center>This action cannot be undone.</center>"));
     msgBox.setStandardButtons (QMessageBox::Yes | QMessageBox::No);
+    msgBox.setDefaultButton (QMessageBox::No);
+    if (QGridLayout *layout = qobject_cast< QGridLayout *>(msgBox.layout()))
+        layout->setColumnMinimumWidth (layout->columnCount() - 1, textSize (msgBox.font(), msgBox.informativeText()) + 10);
     msgBox.show();
     msgBox.move (x() + width()/2 - msgBox.width()/2,
                  y() + height()/2 - msgBox.height()/ 2);
@@ -3578,15 +3597,14 @@ void FN::saveImage()
             {
                 QMessageBox msgBox;
                 msgBox.setIcon (QMessageBox::Question);
+                msgBox.setWindowTitle ("Error");
                 msgBox.setText (tr ("<center><b><big>Image cannot be saved! Retry?</big></b></center>"));
-                msgBox.setInformativeText (tr ("<center>Maybe you did not choose a proper extension</center>\n"
+                msgBox.setInformativeText (tr ("<center>Maybe you did not choose a proper extension</center>\n"\
                                                "<center>or do not have write permission.</center><p></p>"));
-                msgBox.setStandardButtons (QMessageBox::Yes
-                                           | QMessageBox::No);
+                msgBox.setStandardButtons (QMessageBox::Yes | QMessageBox::No);
                 msgBox.setDefaultButton (QMessageBox::No);
-                QSpacerItem *spacer = new QSpacerItem (350, 0);
                 if (QGridLayout *layout = qobject_cast< QGridLayout *>(msgBox.layout()))
-                    layout->addItem (spacer, layout->rowCount(), 0, 1, layout->columnCount());
+                    layout->setColumnMinimumWidth (layout->columnCount() - 1, textSize (msgBox.font(), msgBox.informativeText()) + 10);
                 msgBox.setParent (this, Qt::Dialog);
                 msgBox.setWindowModality (Qt::WindowModal);
                 msgBox.show();
@@ -5052,9 +5070,9 @@ void FN::aboutDialog()
 {
     QMessageBox::about (this, "About FeatherNotes",
                         tr ("<center><b><big>FeatherNotes 0.4.4</big></b></center><br>"\
-                        "<center>A lightweight notes manager</center>\n"\
-                        "<center>based on Qt5</center><br>"\
-                        "<center>Author: <a href='mailto:tsujan2000@gmail.com?Subject=My%20Subject'>Pedram Pourang (aka. Tsu Jan)</a></center><p></p>"));
+                            "<center>A lightweight notes manager</center>\n"\
+                            "<center>based on Qt5</center><br>"\
+                            "<center>Author: <a href='mailto:tsujan2000@gmail.com?Subject=My%20Subject'>Pedram Pourang (aka. Tsu Jan)</a></center><p></p>"));
 }
 /*************************/
 void FN::showHelpDialog()

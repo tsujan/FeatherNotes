@@ -9,6 +9,7 @@ V0.4.4
  * Added the ability to save selected images.
  * Added support for text zooming with Ctrl+wheel.
  * An option to set a fixed start size (700x500 by default).
+ * Set minimum widths of some message boxes.
 
 V0.4.3
 ---------
