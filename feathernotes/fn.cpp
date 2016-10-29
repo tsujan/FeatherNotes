@@ -1250,7 +1250,8 @@ void FN::deleteText()
 /*************************/
 void FN::selectAllText()
 {
-    qobject_cast< TextEdit *>(ui->stackedWidget->currentWidget())->selectAll();
+    if (QWidget *cw = ui->stackedWidget->currentWidget())
+        qobject_cast< TextEdit *>(cw)->selectAll();
 }
 /*************************/
 TextEdit *FN::newWidget()
@@ -1314,12 +1315,15 @@ void FN::setCursorInsideSelection (bool sel)
 {
     if (!sel)
     {
-        TextEdit *textEdit = qobject_cast< TextEdit *>(ui->stackedWidget->currentWidget());
-        /* WARNING: Qt4 didn't need disconnecting. Why?! */
-        disconnect (textEdit, &QTextEdit::copyAvailable, this, &FN::setCursorInsideSelection);
-        QTextCursor cur = textEdit->textCursor();
-        textEdit->setTextCursor (cur);
-        connect (textEdit, &QTextEdit::copyAvailable, this, &FN::setCursorInsideSelection);
+        if (QWidget *cw = ui->stackedWidget->currentWidget())
+        {
+            TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
+            /* WARNING: Qt4 didn't need disconnecting. Why?! */
+            disconnect (textEdit, &QTextEdit::copyAvailable, this, &FN::setCursorInsideSelection);
+            QTextCursor cur = textEdit->textCursor();
+            textEdit->setTextCursor (cur);
+            connect (textEdit, &QTextEdit::copyAvailable, this, &FN::setCursorInsideSelection);
+        }
     }
 }
 /*************************/
@@ -1394,16 +1398,24 @@ void FN::copyLink()
     clipboard->setText (linkAtPos_);
 }
 /*************************/
-void FN::selChanged (const QItemSelection &selected, const QItemSelection& /*deselected*/)
+void FN::selChanged (const QItemSelection &selected, const QItemSelection& deselected)
 {
-    if (selected.isEmpty()) // if the last node is closed
+    if (selected.isEmpty()) // if the last node is closed, for example
     {
         if (ui->lineEdit->isVisible())
             showHideSearch();
         if (ui->dockReplace->isVisible())
             replaceDock();
         enableActions (false);
+        if (QWidget *widget = ui->stackedWidget->currentWidget())
+            widget->setVisible (false);
         return;
+    }
+    else if (deselected.isEmpty()) // a row is selected after Ctrl + left click
+    {
+        if (QWidget *widget = ui->stackedWidget->currentWidget())
+            widget->setVisible (true);
+        enableActions (true);
     }
 
     /* if a widget is paired with this DOM item, show it;
@@ -2077,8 +2089,11 @@ void FN::textFontDialog()
 
         /* rehighlight found matches for this node
            because the font may be smaller now */
-        TextEdit *textEdit = qobject_cast< TextEdit *>(ui->stackedWidget->currentWidget());
-        rehighlight (textEdit);
+        if (QWidget *cw = ui->stackedWidget->currentWidget())
+        {
+            TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
+            rehighlight (textEdit);
+        }
     }
 }
 /*************************/
