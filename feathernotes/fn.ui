@@ -34,22 +34,7 @@
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
-      <widget class="QTreeView" name="treeView">
-       <property name="acceptDrops">
-        <bool>true</bool>
-       </property>
-       <property name="dragEnabled">
-        <bool>true</bool>
-       </property>
-       <property name="dragDropMode">
-        <enum>QAbstractItemView::InternalMove</enum>
-       </property>
-       <property name="animated">
-        <bool>true</bool>
-       </property>
-       <attribute name="headerVisible">
-        <bool>false</bool>
-       </attribute>
+      <widget class="FeatherNotes::TreeView" name="treeView">
       </widget>
       <widget class="QStackedWidget" name="stackedWidget"/>
      </widget>

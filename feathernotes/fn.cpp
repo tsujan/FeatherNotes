@@ -1398,25 +1398,25 @@ void FN::copyLink()
     clipboard->setText (linkAtPos_);
 }
 /*************************/
-void FN::selChanged (const QItemSelection &selected, const QItemSelection& deselected)
+void FN::selChanged (const QItemSelection &selected, const QItemSelection& /*deselected*/)
 {
-    if (selected.isEmpty()) // if the last node is closed, for example
+    if (selected.isEmpty()) // if the last node is closed
     {
         if (ui->lineEdit->isVisible())
             showHideSearch();
         if (ui->dockReplace->isVisible())
             replaceDock();
         enableActions (false);
-        if (QWidget *widget = ui->stackedWidget->currentWidget())
-            widget->setVisible (false);
+        /*if (QWidget *widget = ui->stackedWidget->currentWidget())
+            widget->setVisible (false);*/
         return;
     }
-    else if (deselected.isEmpty()) // a row is selected after Ctrl + left click
+    /*else if (deselected.isEmpty()) // a row is selected after Ctrl + left click
     {
         if (QWidget *widget = ui->stackedWidget->currentWidget())
             widget->setVisible (true);
         enableActions (true);
-    }
+    }*/
 
     /* if a widget is paired with this DOM item, show it;
        otherwise create a widget and pair it with the item */

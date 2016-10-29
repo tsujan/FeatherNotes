@@ -30,7 +30,8 @@ HEADERS += fn.h \
            vscrollbar.h \
            settings.h \
            help.h \
-           filedialog.h
+           filedialog.h \
+           treeview.h
 
 FORMS += fn.ui \
          helpDialog.ui
