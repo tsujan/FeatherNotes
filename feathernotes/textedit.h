@@ -28,6 +28,8 @@
 
 namespace FeatherNotes {
 
+using ::operator|; // for setAlignment()
+
 /* Here, I subclassed QTextEdit to gain control
    over pressing Enter and have auto-indentation.
    I also replaced its vertical scrollbar for faster

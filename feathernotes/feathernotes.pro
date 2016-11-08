@@ -1,4 +1,4 @@
-QT += core gui\
+QT += core gui \
       xml \
       widgets \
       printsupport \
@@ -31,7 +31,8 @@ HEADERS += fn.h \
            settings.h \
            help.h \
            filedialog.h \
-           treeview.h
+           treeview.h \
+           messagebox.h
 
 FORMS += fn.ui \
          helpDialog.ui

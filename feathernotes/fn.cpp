@@ -23,9 +23,9 @@
 #include "settings.h"
 #include "help.h"
 #include "filedialog.h"
+#include "messagebox.h"
 
 #include <QToolButton>
-#include <QMessageBox>
 #include <QPrinter>
 #include <QPrintDialog>
 #include <QFontDialog>
@@ -543,23 +543,6 @@ void FN::resizeEvent (QResizeEvent *event)
     QWidget::resizeEvent (event);
 }
 /*************************/
-// This computes the width of a message box text for the box width to be set.
-// We suppose that <p> and <br> aren't used inside the text.
-static inline int textSize(const QFont &font, const QString &text)
-{
-  int tw = 0;
-  if (!text.isEmpty())
-  {
-    QString t (text);
-    t.remove (QRegExp ("</{,1}center>|</{,1}b>|</{,1}i>|</{,1}p>|<br>"));
-    /* deal with newlines */
-    QStringList l = t.split ('\n');
-    for (int i = 0; i < l.size(); i++)
-      tw = qMax (tw, QFontMetrics (font).width (l[i]));
-  }
-  return tw;
-}
-/*************************/
 void FN::newNote()
 {
     QObject *sender = QObject::sender();
@@ -617,16 +600,16 @@ void FN::newNote()
     /* show user a prompt */
     if (!xmlPath_.isEmpty())
     {
-        QMessageBox msgBox;
+        MessageBox msgBox;
         msgBox.setIcon (QMessageBox::Question);
         msgBox.setWindowTitle ("FeatherNotes"); // kwin sets an ugly title
         msgBox.setText (tr ("<center><b><big>New note?</big></b></center>"));
         msgBox.setInformativeText (tr ("<center><i>Do you really want to leave this document</i></center>\n"\
                                        "<center><i>and create an empty one?</i></center>"));
         msgBox.setStandardButtons (QMessageBox::Yes | QMessageBox::No);
+        msgBox.changeButtonText (QMessageBox::Yes, tr ("Yes"));
+        msgBox.changeButtonText (QMessageBox::No, tr ("No"));
         msgBox.setDefaultButton (QMessageBox::No);
-        if (QGridLayout *layout = qobject_cast< QGridLayout *>(msgBox.layout()))
-            layout->setColumnMinimumWidth (layout->columnCount() - 1, textSize (msgBox.font(), msgBox.informativeText()) + 10);
         msgBox.setParent (this, Qt::Dialog);
         msgBox.setWindowModality (Qt::WindowModal);
         msgBox.show();
@@ -695,7 +678,7 @@ void FN::setTitle (const QString& fname)
 bool FN::unSaved (bool modified)
 {
     int unsaved = false;
-    QMessageBox msgBox;
+    MessageBox msgBox;
     msgBox.setIcon (QMessageBox::Warning);
     msgBox.setText (tr ("<center><b><big>Save changes?</big></b></center>"));
     if (modified)
@@ -705,7 +688,9 @@ bool FN::unSaved (bool modified)
     msgBox.setStandardButtons (QMessageBox::Save
                                | QMessageBox::Discard
                                | QMessageBox::Cancel);
-    msgBox.setButtonText (QMessageBox::Discard, tr ("Discard changes"));
+    msgBox.changeButtonText (QMessageBox::Save, tr ("Save"));
+    msgBox.changeButtonText (QMessageBox::Discard, tr ("Discard changes"));
+    msgBox.changeButtonText (QMessageBox::Cancel, tr ("Cancel"));
     msgBox.setDefaultButton (QMessageBox::Save);
     msgBox.setParent (this, Qt::Dialog);
     msgBox.setWindowModality (Qt::WindowModal);
@@ -982,11 +967,12 @@ void FN::autoSaving()
 /*************************/
 void FN::notSaved()
 {
-    QMessageBox msgBox (QMessageBox::Warning,
-                        tr ("FeatherNotes"),
-                        tr ("<center><b><big>Cannot be saved!</big></b></center>"),
-                        QMessageBox::Close,
-                        this);
+    MessageBox msgBox (QMessageBox::Warning,
+                       tr ("FeatherNotes"),
+                       tr ("<center><b><big>Cannot be saved!</big></b></center>"),
+                       QMessageBox::Close,
+                       this);
+    msgBox.changeButtonText (QMessageBox::Close, tr ("Close"));
     msgBox.exec();
 }
 /*************************/
@@ -1550,11 +1536,49 @@ void FN::alignmentChanged()
 
     Qt::Alignment a = qobject_cast< TextEdit *>(cw)->alignment();
     if (a & Qt::AlignLeft)
-        ui->actionLeft->setChecked (true);
+    {
+        if (a & Qt::AlignAbsolute)
+            ui->actionLeft->setChecked (true);
+        else // get alignment from text layout direction
+        {
+            QTextCursor cur = qobject_cast< TextEdit *>(cw)->textCursor();
+            QTextBlockFormat fmt = cur.blockFormat();
+            if (fmt.layoutDirection() == Qt::LeftToRight)
+                ui->actionLeft->setChecked (true);
+            else if (fmt.layoutDirection() == Qt::RightToLeft)
+                ui->actionRight->setChecked (true);
+            else // Qt::LayoutDirectionAuto
+            {
+                if (QApplication::isLeftToRight())
+                    ui->actionLeft->setChecked (true);
+                else if (QApplication::isRightToLeft())
+                    ui->actionRight->setChecked (true);
+            }
+        }
+    }
     else if (a & Qt::AlignHCenter)
         ui->actionCenter->setChecked (true);
     else if (a & Qt::AlignRight)
-        ui->actionRight->setChecked (true);
+    {
+        if (a & Qt::AlignAbsolute)
+            ui->actionRight->setChecked (true);
+        else // get alignment from text layout direction
+        {
+            QTextCursor cur = qobject_cast< TextEdit *>(cw)->textCursor();
+            QTextBlockFormat fmt = cur.blockFormat();
+            if (fmt.layoutDirection() == Qt::RightToLeft)
+                ui->actionRight->setChecked (true);
+            else if (fmt.layoutDirection() == Qt::LeftToRight)
+                ui->actionLeft->setChecked (true);
+            else // Qt::LayoutDirectionAuto
+            {
+                if (QApplication::isRightToLeft())
+                    ui->actionRight->setChecked (true);
+                else if (QApplication::isLeftToRight())
+                    ui->actionLeft->setChecked (true);
+            }
+        }
+    }
     else if (a & Qt::AlignJustify)
         ui->actionJust->setChecked (true);
 }
@@ -1570,7 +1594,7 @@ void FN::directionChanged()
         ui->actionLTR->setChecked (true);
     else if (fmt.layoutDirection() == Qt::RightToLeft)
         ui->actionRTL->setChecked (true);
-    else
+    else // Qt::LayoutDirectionAuto
     {
         if (QApplication::isLeftToRight())
             ui->actionLTR->setChecked (true);
@@ -1701,11 +1725,11 @@ void FN::textAlign (QAction *a)
 
     TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
     if (a == ui->actionLeft)
-        textEdit->setAlignment (Qt::AlignLeft);
+        textEdit->setAlignment (Qt::AlignLeft | Qt::AlignAbsolute);
     else if (a == ui->actionCenter)
         textEdit->setAlignment (Qt::AlignHCenter);
     else if (a == ui->actionRight)
-        textEdit->setAlignment (Qt::AlignRight);
+        textEdit->setAlignment (Qt::AlignRight | Qt::AlignAbsolute);
     else if (a == ui->actionJust)
         textEdit->setAlignment (Qt::AlignJustify);
 }
@@ -1725,6 +1749,8 @@ void FN::textDirection (QAction *a)
     if (!cur.hasSelection())
         cur.select (QTextCursor::WordUnderCursor);
     cur.mergeBlockFormat (fmt);
+
+    alignmentChanged();
 }
 /*************************/
 void FN::makeHeader()
@@ -1778,15 +1804,15 @@ void FN::deleteNode()
 {
     closeTagsDialog();
 
-    QMessageBox msgBox;
+    MessageBox msgBox;
     msgBox.setIcon (QMessageBox::Question);
     msgBox.setWindowTitle ("Deletion");
     msgBox.setText (tr ("<center><b><big>Delete this node?</big></b></center>"));
     msgBox.setInformativeText (tr ("<center><b><i>Warning!</i></b></center>\n<center>This action cannot be undone.</center>"));
     msgBox.setStandardButtons (QMessageBox::Yes | QMessageBox::No);
+    msgBox.changeButtonText (QMessageBox::Yes, tr ("Yes"));
+    msgBox.changeButtonText (QMessageBox::No, tr ("No"));
     msgBox.setDefaultButton (QMessageBox::No);
-    if (QGridLayout *layout = qobject_cast< QGridLayout *>(msgBox.layout()))
-        layout->setColumnMinimumWidth (layout->columnCount() - 1, textSize (msgBox.font(), msgBox.informativeText()) + 10);
     msgBox.show();
     msgBox.move (x() + width()/2 - msgBox.width()/2,
                  y() + height()/2 - msgBox.height()/ 2);
@@ -3610,16 +3636,16 @@ void FN::saveImage()
         {
             if (err)
             {
-                QMessageBox msgBox;
+                MessageBox msgBox;
                 msgBox.setIcon (QMessageBox::Question);
                 msgBox.setWindowTitle ("Error");
                 msgBox.setText (tr ("<center><b><big>Image cannot be saved! Retry?</big></b></center>"));
                 msgBox.setInformativeText (tr ("<center>Maybe you did not choose a proper extension</center>\n"\
                                                "<center>or do not have write permission.</center><p></p>"));
                 msgBox.setStandardButtons (QMessageBox::Yes | QMessageBox::No);
+                msgBox.changeButtonText (QMessageBox::Yes, tr ("Yes"));
+                msgBox.changeButtonText (QMessageBox::No, tr ("No"));
                 msgBox.setDefaultButton (QMessageBox::No);
-                if (QGridLayout *layout = qobject_cast< QGridLayout *>(msgBox.layout()))
-                    layout->setColumnMinimumWidth (layout->columnCount() - 1, textSize (msgBox.font(), msgBox.informativeText()) + 10);
                 msgBox.setParent (this, Qt::Dialog);
                 msgBox.setWindowModality (Qt::WindowModal);
                 msgBox.show();
@@ -4768,11 +4794,12 @@ void FN::exportHTML()
     if (!success)
     {
         QString str = writer.device()->errorString ();
-        QMessageBox msgBox (QMessageBox::Warning,
-                            tr ("FeatherNotes"),
-                            tr ("<center><b><big>Cannot be saved!</big></b></center>"),
-                            QMessageBox::Close,
-                            this);
+        MessageBox msgBox (QMessageBox::Warning,
+                           tr ("FeatherNotes"),
+                           tr ("<center><b><big>Cannot be saved!</big></b></center>"),
+                           QMessageBox::Close,
+                           this);
+        msgBox.changeButtonText (QMessageBox::Close, tr ("Close"));
         msgBox.setInformativeText (tr ("<center><i>%1.</i></center>").arg (str));
         msgBox.setParent (this, Qt::Dialog);
         msgBox.setWindowModality (Qt::WindowModal);
@@ -5083,11 +5110,17 @@ void FN::checkPswrd()
 /*************************/
 void FN::aboutDialog()
 {
-    QMessageBox::about (this, "About FeatherNotes",
-                        tr ("<center><b><big>FeatherNotes 0.4.4</big></b></center><br>"\
-                            "<center>A lightweight notes manager</center>\n"\
-                            "<center>based on Qt5</center><br>"\
-                            "<center>Author: <a href='mailto:tsujan2000@gmail.com?Subject=My%20Subject'>Pedram Pourang (aka. Tsu Jan)</a></center><p></p>"));
+    MessageBox msgBox (this);
+    msgBox.setText ("<center><b><big>FeatherNotes 0.4.4</big></b></center><br>");
+    msgBox.setInformativeText (tr ("<center>A lightweight notes manager</center>\n"\
+                                   "<center>based on Qt5</center><br>"\
+                                   "<center>Author: <a href='mailto:tsujan2000@gmail.com?Subject=My%20Subject'>Pedram Pourang (aka. Tsu Jan)</a> </center><p></p>"));
+    msgBox.setStandardButtons (QMessageBox::Ok);
+    msgBox.changeButtonText (QMessageBox::Ok, tr ("Ok"));
+    QIcon FPIcon = QIcon (":icons/feathernotes.svg");
+    msgBox.setIconPixmap (FPIcon.pixmap(64, 64));
+    msgBox.setWindowTitle (tr ("About FeatherNotes"));
+    msgBox.exec();
 }
 /*************************/
 void FN::showHelpDialog()

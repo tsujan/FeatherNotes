@@ -12,6 +12,7 @@ V0.4.4
  * Set minimum widths of some message boxes.
  * Changed node moving shortcuts from Ctrl+ to Alt+ for all of them to work when the text edit has focus.
  * Don't let a selected node be deselected by Ctrl + left click!
+ * Fixed text direction (for RTL).
 
 V0.4.3
 ---------
