@@ -1549,9 +1549,12 @@ void FN::alignmentChanged()
                 ui->actionRight->setChecked (true);
             else // Qt::LayoutDirectionAuto
             {
-                if (QApplication::isLeftToRight())
+                /* textDirection() returns either Qt::LeftToRight
+                   or Qt::RightToLeft (-> qtextobject.cpp) */
+                QTextBlock blk = cur.block();
+                if (blk.textDirection() == Qt::LeftToRight)
                     ui->actionLeft->setChecked (true);
-                else if (QApplication::isRightToLeft())
+                else
                     ui->actionRight->setChecked (true);
             }
         }
@@ -1572,10 +1575,11 @@ void FN::alignmentChanged()
                 ui->actionLeft->setChecked (true);
             else // Qt::LayoutDirectionAuto
             {
-                if (QApplication::isRightToLeft())
-                    ui->actionRight->setChecked (true);
-                else if (QApplication::isLeftToRight())
+                QTextBlock blk = cur.block();
+                if (blk.textDirection() == Qt::LeftToRight)
                     ui->actionLeft->setChecked (true);
+                else
+                    ui->actionRight->setChecked (true);
             }
         }
     }
@@ -1596,9 +1600,10 @@ void FN::directionChanged()
         ui->actionRTL->setChecked (true);
     else // Qt::LayoutDirectionAuto
     {
-        if (QApplication::isLeftToRight())
+        QTextBlock blk = cur.block();
+        if (blk.textDirection() == Qt::LeftToRight)
             ui->actionLTR->setChecked (true);
-        else if (QApplication::isRightToLeft())
+        else
             ui->actionRTL->setChecked (true);
     }
 }
