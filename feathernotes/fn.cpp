@@ -1725,11 +1725,11 @@ void FN::textAlign (QAction *a)
 
     TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
     if (a == ui->actionLeft)
-        textEdit->setAlignment (Qt::AlignLeft | Qt::AlignAbsolute);
+        textEdit->setAlignment (Qt::Alignment (Qt::AlignLeft | Qt::AlignAbsolute));
     else if (a == ui->actionCenter)
         textEdit->setAlignment (Qt::AlignHCenter);
     else if (a == ui->actionRight)
-        textEdit->setAlignment (Qt::AlignRight | Qt::AlignAbsolute);
+        textEdit->setAlignment (Qt::Alignment (Qt::AlignRight | Qt::AlignAbsolute));
     else if (a == ui->actionJust)
         textEdit->setAlignment (Qt::AlignJustify);
 }
