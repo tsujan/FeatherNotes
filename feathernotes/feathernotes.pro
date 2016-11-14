@@ -53,7 +53,7 @@ unix {
 
   #MAKE INSTALL
 
-  INSTALLS += target mime desktop iconsvg
+  INSTALLS += target mime desktop appIcon fileIcon
 
   target.path =$$BINDIR
 
@@ -63,6 +63,9 @@ unix {
   desktop.path = $$DATADIR/applications
   desktop.files += ./data/$${TARGET}.desktop
 
-  iconsvg.path = $$DATADIR/pixmaps
-  iconsvg.files += ./data/$${TARGET}.svg
+  appIcon.path = $$DATADIR/icons/hicolor/scalable/apps
+  appIcon.files += ./data/$${TARGET}.svg
+
+  fileIcon.path = $$DATADIR/icons/hicolor/scalable/mimetypes
+  fileIcon.files += ./data/text-feathernotes-fnx.svg
 }
