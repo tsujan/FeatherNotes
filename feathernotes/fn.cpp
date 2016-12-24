@@ -323,7 +323,7 @@ void FN::closeEvent (QCloseEvent *event)
     bool keep = false;
     if (ui->stackedWidget->currentIndex() > -1)
     {
-        if (!xmlPath_.isEmpty() && !QFile::exists (xmlPath_))
+        if (!xmlPath_.isEmpty() && (!QFile::exists (xmlPath_) || !QFileInfo (xmlPath_).isFile()))
         {
             if (tray_)
             {
@@ -3612,11 +3612,17 @@ void FN::saveImage()
         if (!dir.exists())
             dir = QDir::home();
         path = dir.path();
+
+        QString shownName = QFileInfo (xmlPath_).fileName();
+        if (shownName.endsWith (".fnx"))
+            shownName.chop (4);
+        path += "/" + shownName;
     }
     else
     {
         QDir dir = QDir::home();
         path = dir.path();
+        path += "/" + tr ("untitled");
     }
 
     QRegExp imageExp = QRegExp ("base64,.*\"(?=\\s*width=\"[0-9]+\"\\s*height=\"[0-9]+\"\\s*/*>)");
@@ -3624,6 +3630,8 @@ void FN::saveImage()
     QRegExp endExp = QRegExp ("\"\\s*/*>");
     int indx;
     int endIndex = 0;
+    int n = 1;
+    QString extension = "png";
     while ((indx = sizeExp.indexIn (txt, endIndex)) != -1)
     {
         int pos = imageExp.indexIn (txt, endIndex);
@@ -3662,7 +3670,7 @@ void FN::saveImage()
                     break;
                 case QMessageBox::No:
                 default:
-                    retry = false; // next image
+                    retry = false; // next image without saving this one
                     break;
                 }
             }
@@ -3675,10 +3683,7 @@ void FN::saveImage()
                 dialog.setWindowTitle (tr ("Save Image As..."));
                 dialog.setFileMode (QFileDialog::AnyFile);
                 dialog.setNameFilter (tr ("Image Files (*.png *.jpg *.jpeg *.bmp);;All Files (*)"));
-                if (QFileInfo (path).isDir())
-                    dialog.setDirectory (path);
-                else
-                    dialog.selectFile (path);
+                dialog.selectFile (QString ("%1-%2.%3").arg (path).arg (n).arg (extension));
                 dialog.autoScroll();
                 if (dialog.exec())
                 {
@@ -3694,7 +3699,24 @@ void FN::saveImage()
                 if (image.save (fname))
                 {
                     lastImgPath_ = fname;
-                    retry = false; // next image
+                    QFileInfo info = QFileInfo (lastImgPath_);
+                    QString shownName = info.fileName();
+                    extension = shownName.split (".").last();
+                    shownName.chop (extension.count() + 1);
+                    /* if the name ends with a number following a dash,
+                       use it; otherwise, increase the number by one */
+                    int m = 0;
+                    QRegExp exp = QRegExp ("-[1-9]+[0-9]*");
+                    int indx = shownName.lastIndexOf (exp);
+                    if (indx > -1 && indx == shownName.count() - exp.matchedLength())
+                    {
+                        QString number = shownName.split ("-").last();
+                        shownName.chop (number.count() + 1);
+                        m = number.toInt() + 1;
+                    }
+                    n = m > n ? m : n+1;
+                    path = info.dir().path() + "/" + shownName;
+                    retry = false; // next image after saving this one
                 }
                 else
                     err = true;
