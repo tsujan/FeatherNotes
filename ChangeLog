@@ -13,6 +13,7 @@ V0.4.4
  * Changed node moving shortcuts from Ctrl+ to Alt+ for all of them to work when the text edit has focus.
  * Don't let a selected node be deselected by Ctrl + left click!
  * Fixed text direction (for RTL).
+ * A workaround for Qt's backward search bug.
 
 V0.4.3
 ---------

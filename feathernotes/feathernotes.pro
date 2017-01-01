@@ -11,6 +11,7 @@ CONFIG += c++11
 
 SOURCES += main.cpp\
            fn.cpp \
+           find.cpp \
            domitem.cpp \
            dommodel.cpp \
            lineedit.cpp \
