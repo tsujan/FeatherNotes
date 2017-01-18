@@ -263,7 +263,6 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
                 showMinimized();
             else if (!hasTray_)
                 show();
-            //else winId(); // for translucency with Kvantum
             if (sl.count() > 1)
                 filePath = sl.at (1);
         }
@@ -3566,10 +3565,6 @@ void FN::PrefDialog()
     if (!hasTray_)
         minTrayBox->setDisabled (true);
 
-    /* translucency bug workaround */
-    QCheckBox *transBox = new QCheckBox (tr ("Workaround for Qt&5's translucency bug\n(Needs app restart)"));
-    transBox->setToolTip (tr ("Check this only if you see weird effects with translucent themes!"));
-
     /* Enlightenment workaround */
     QCheckBox *EBox = new QCheckBox (tr ("Running &under Enlightenment?"));
     EBox->setToolTip (tr ("Check this under Enlightenment (or, probably, another DE)\nto use the systray icon more easily!"));
@@ -3598,26 +3593,25 @@ void FN::PrefDialog()
     ESpinX->setSuffix (tr (" px"));
     ESpinY->setSuffix (tr (" px"));
 
-    windowGrid->addWidget (winSizeBox, 0, 0, 1, 4);
+    windowGrid->addWidget (winSizeBox, 0, 0, 1, 5);
+    windowGrid->addWidget (winLabel, 1, 0, 1, 2, Qt::AlignRight);
+    windowGrid->addWidget (winSpinX, 1, 2, 1, 1);
+    windowGrid->addWidget (winXLabel, 1, 3, 1, 1);
+    windowGrid->addWidget (winSpinY, 1, 4, 1, 1, Qt::AlignLeft);
 
-    windowGrid->addWidget (winLabel, 1, 0, 1, 1, Qt::AlignRight);
-    windowGrid->addWidget (winSpinX, 1, 1, 1, 1);
-    windowGrid->addWidget (winXLabel, 1, 2, 1, 1);
-    windowGrid->addWidget (winSpinY, 1, 3, 1, 1, Qt::AlignLeft);
+    windowGrid->addWidget (splitterSizeBox, 2, 0, 1, 5);
+    windowGrid->addWidget (positionBox, 3, 0, 1, 5);
 
-    windowGrid->addWidget (splitterSizeBox, 2, 0, 1, 4);
-    windowGrid->addWidget (positionBox, 3, 0, 1, 4);
-    windowGrid->addWidget (hasTrayBox, 4, 0, 1, 4);
-    windowGrid->addWidget (minTrayBox, 5, 1, 1, 3);
-    windowGrid->addWidget (transBox, 6, 0, 1, 4);
+    windowGrid->addWidget (hasTrayBox, 4, 0, 1, 5);
+    windowGrid->addWidget (minTrayBox, 5, 1, 1, 4);
 
-    windowGrid->addWidget (EBox, 7, 0, 1, 4);
-    windowGrid->addWidget (ELabel, 8, 0, 1, 1, Qt::AlignRight);
-    windowGrid->addWidget (ESpinX, 8, 1, 1, 1);
-    windowGrid->addWidget (XLabel, 8, 2, 1, 1);
-    windowGrid->addWidget (ESpinY, 8, 3, 1, 1, Qt::AlignLeft);
+    windowGrid->addWidget (EBox, 6, 0, 1, 5);
+    windowGrid->addWidget (ELabel, 7, 0, 1, 2, Qt::AlignRight);
+    windowGrid->addWidget (ESpinX, 7, 2, 1, 1);
+    windowGrid->addWidget (XLabel, 7, 3, 1, 1);
+    windowGrid->addWidget (ESpinY, 7, 4, 1, 1, Qt::AlignLeft);
 
-    windowGrid->setColumnStretch (3, 1);
+    windowGrid->setColumnStretch (4, 1);
     windowGrid->setColumnMinimumWidth(0, style()->pixelMetric (QStyle::PM_IndicatorWidth) + style()->pixelMetric (QStyle::PM_CheckBoxLabelSpacing));
     windowGoupBox->setLayout (windowGrid);
 
@@ -3652,9 +3646,6 @@ void FN::PrefDialog()
 
     minTrayBox->setChecked (minToTray_);
     connect (minTrayBox, &QCheckBox::stateChanged, this, &FN::prefMinTray);
-
-    transBox->setChecked (translucencyWorkaround_);
-    connect (transBox, &QCheckBox::stateChanged, this, &FN::prefTranslucency);
 
     EBox->setChecked (underE_);
     connect (EBox, &QCheckBox::stateChanged, this, &FN::prefEnlightenment);
@@ -3693,6 +3684,7 @@ void FN::PrefDialog()
     else
         spinBox->setValue (5);
     QCheckBox *workaroundBox = new QCheckBox (tr ("Workaround for &Qt5's scroll jump bug"));
+    workaroundBox->setToolTip (tr ("This is not a complete fix but\nprevents annoying scroll jumps."));
     textGrid->addWidget (wrapBox, 0, 0, 1, 2);
     textGrid->addWidget (indentBox, 1, 0, 1, 2);
     textGrid->addWidget (autoSaveBox, 2, 0);
@@ -3888,14 +3880,6 @@ void FN::prefMinTray (int checked)
         minToTray_ = false;
 }
 /*************************/
-void FN::prefTranslucency (int checked)
-{
-    if (checked == Qt::Checked)
-        translucencyWorkaround_ = true;
-    else if (checked == Qt::Unchecked)
-        translucencyWorkaround_ = false;
-}
-/*************************/
 void FN::prefEnlightenment (int checked)
 {
     if (checked == Qt::Checked)
@@ -4086,15 +4070,6 @@ void FN::readAndApplyConfig()
     else
         minToTray_ = false;
 
-    if (settings.value ("translucencyWorkaround").toBool())
-    {
-        translucencyWorkaround_ = true; // false by default
-        qApp->setAttribute (Qt::AA_DontCreateNativeWidgetSiblings);
-        qApp->setAttribute (Qt::AA_NativeWindows);
-    }
-    else
-        translucencyWorkaround_ = false;
-
     if (settings.value ("underE").toBool())
         underE_ = true; // false by default
     else
@@ -4182,7 +4157,6 @@ void FN::writeConfig()
 
     settings.setValue ("hasTray", hasTray_);
     settings.setValue ("minToTray", minToTray_);
-    settings.setValue ("translucencyWorkaround", translucencyWorkaround_);
     settings.setValue ("underE", underE_);
     settings.setValue ("Shift", EShift_);
 

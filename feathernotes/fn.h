@@ -121,7 +121,6 @@ private slots:
     void prefPosition (int checked);
     void prefHasTray (int checked);
     void prefMinTray (int checked);
-    void prefTranslucency (int checked);
     void prefEnlightenment (int checked);
     void prefWrap (int checked);
     void prefIndent (int checked);
@@ -230,7 +229,6 @@ private:
     QTimer *timer_;
     QString pswrd_;
     bool scrollJumpWorkaround_; // Should a workaround for Qt5's "scroll jump" bug be applied?
-    bool translucencyWorkaround_; // Should a workaround for the translucency bug of Qt-5.7 be applied?
     bool underE_; // Is FeatherNotes running under Enlightenment?
     QSize EShift_; // The shift Enlightenment's panel creates (a bug?).
 };

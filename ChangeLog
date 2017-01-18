@@ -14,6 +14,7 @@ V0.4.4
  * Don't let a selected node be deselected by Ctrl + left click!
  * Fixed text direction (for RTL).
  * A workaround for Qt's backward search bug.
+ * Removed the translucency workaround.
 
 V0.4.3
 ---------
