@@ -148,6 +148,7 @@ private slots:
     void replace();
     void replaceAll();
     void showAndFocus();
+    void stealFocus();
     void trayActivated (QSystemTrayIcon::ActivationReason r);
     void activateTray();
     void txtPrint();

@@ -15,6 +15,7 @@ V0.4.4
  * Fixed text direction (for RTL).
  * A workaround for Qt's backward search bug.
  * Removed the translucency workaround.
+ * A method for bypassing focus stealing prevention.
 
 V0.4.3
 ---------

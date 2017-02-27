@@ -2755,6 +2755,13 @@ void FN::showAndFocus()
     raise();
     if (ui->stackedWidget->count() > 0)
         qobject_cast< TextEdit *>(ui->stackedWidget->currentWidget())->setFocus();
+    // to bypass focus stealing prevention
+    QTimer::singleShot (0, this, SLOT (stealFocus()));
+}
+/*************************/
+void FN::stealFocus()
+{
+    windowHandle()->requestActivate();
 }
 /*************************/
 void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
@@ -2779,7 +2786,6 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
 
         if (onWhichDesktop (winId()) != fromDesktop())
             moveToCurrentDesktop (winId());
-        //setTime();
         showAndFocus();
     }
     else if (onWhichDesktop (winId()) == fromDesktop())
@@ -2808,7 +2814,6 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
             }
             else
             {
-                //setTime();
                 if (isMinimized())
                     showNormal();
                 showAndFocus();
@@ -2824,7 +2829,6 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
     else
     {
         moveToCurrentDesktop (winId());
-        //setTime();
         if (isMinimized())
             showNormal();
         showAndFocus();
