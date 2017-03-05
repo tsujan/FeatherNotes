@@ -121,6 +121,8 @@ private slots:
     void prefPosition (int checked);
     void prefHasTray (int checked);
     void prefMinTray (int checked);
+    void prefToolbar (int checked);
+    void prefMenubar (int checked);
     void prefEnlightenment (int checked);
     void prefWrap (int checked);
     void prefIndent (int checked);
@@ -221,7 +223,10 @@ private:
          remPosition_,
          hasTray_,
          minToTray_,
-         wrapByDefault_, indentByDefault_;
+         wrapByDefault_,
+         indentByDefault_,
+         noToolbar_,
+         noMenubar_;
     int autoSave_;
     QPoint position_; // Excluding the window frame.
     QSize winSize_, startSize_;

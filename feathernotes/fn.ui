@@ -15,15 +15,23 @@
   </property>
   <property name="windowIcon">
    <iconset resource="data/fn.qrc">
-    <normaloff>:/icons/feathernotes.svg</normaloff>:/icons/feathernotes.svg
-   </iconset>
+    <normaloff>:/icons/feathernotes.svg</normaloff>:/icons/feathernotes.svg</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <property name="spacing">
      <number>0</number>
     </property>
-    <property name="margin">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
      <number>0</number>
     </property>
     <item>
@@ -54,8 +62,7 @@
         </property>
         <property name="icon">
          <iconset resource="data/fn.qrc">
-          <normaloff>:/icons/go-down.svg</normaloff>:/icons/go-down.svg
-         </iconset>
+          <normaloff>:/icons/go-down.svg</normaloff>:/icons/go-down.svg</iconset>
         </property>
         <property name="shortcut">
          <string>F3</string>
@@ -72,8 +79,7 @@
         </property>
         <property name="icon">
          <iconset resource="data/fn.qrc">
-          <normaloff>:/icons/go-up.svg</normaloff>:/icons/go-up.svg
-         </iconset>
+          <normaloff>:/icons/go-up.svg</normaloff>:/icons/go-up.svg</iconset>
         </property>
         <property name="shortcut">
          <string>F4</string>
@@ -239,7 +245,7 @@
    </widget>
    <widget class="QMenu" name="menuFormat">
     <property name="title">
-     <string>Fo&amp;rmat</string>
+     <string>For&amp;mat</string>
     </property>
     <addaction name="actionClear"/>
     <addaction name="separator"/>
@@ -373,6 +379,7 @@
    <addaction name="actionRTL"/>
    <addaction name="separator"/>
    <addaction name="actionEmbedImage"/>
+   <addaction name="actionMenu"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <widget class="QDockWidget" name="dockReplace">
@@ -457,8 +464,7 @@
          </property>
          <property name="icon">
           <iconset resource="data/fn.qrc">
-           <normaloff>:/icons/go-up.svg</normaloff>:/icons/go-up.svg
-          </iconset>
+           <normaloff>:/icons/go-up.svg</normaloff>:/icons/go-up.svg</iconset>
          </property>
          <property name="shortcut">
           <string>F9</string>
@@ -475,8 +481,7 @@
          </property>
          <property name="icon">
           <iconset resource="data/fn.qrc">
-           <normaloff>:/icons/go-down.svg</normaloff>:/icons/go-down.svg
-          </iconset>
+           <normaloff>:/icons/go-down.svg</normaloff>:/icons/go-down.svg</iconset>
          </property>
          <property name="shortcut">
           <string>F8</string>
@@ -493,8 +498,7 @@
          </property>
          <property name="icon">
           <iconset resource="data/fn.qrc">
-           <normaloff>:/icons/arrow-down-double.svg</normaloff>:/icons/arrow-down-double.svg
-          </iconset>
+           <normaloff>:/icons/arrow-down-double.svg</normaloff>:/icons/arrow-down-double.svg</iconset>
          </property>
          <property name="shortcut">
           <string>F10</string>
@@ -515,8 +519,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/document-save.svg</normaloff>:/icons/document-save.svg
-    </iconset>
+     <normaloff>:/icons/document-save.svg</normaloff>:/icons/document-save.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Save</string>
@@ -531,8 +534,7 @@
   <action name="actionOpen">
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/document-open.svg</normaloff>:/icons/document-open.svg
-    </iconset>
+     <normaloff>:/icons/document-open.svg</normaloff>:/icons/document-open.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Open</string>
@@ -550,8 +552,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/edit-undo.svg</normaloff>:/icons/edit-undo.svg
-    </iconset>
+     <normaloff>:/icons/edit-undo.svg</normaloff>:/icons/edit-undo.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Undo</string>
@@ -569,8 +570,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/edit-redo.svg</normaloff>:/icons/edit-redo.svg
-    </iconset>
+     <normaloff>:/icons/edit-redo.svg</normaloff>:/icons/edit-redo.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Redo</string>
@@ -588,8 +588,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/edit-find.svg</normaloff>:/icons/edit-find.svg
-    </iconset>
+     <normaloff>:/icons/edit-find.svg</normaloff>:/icons/edit-find.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Find</string>
@@ -607,8 +606,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/edit-clear.svg</normaloff>:/icons/edit-clear.svg
-    </iconset>
+     <normaloff>:/icons/edit-clear.svg</normaloff>:/icons/edit-clear.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Clear All Formats</string>
@@ -629,8 +627,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/format-text-bold.svg</normaloff>:/icons/format-text-bold.svg
-    </iconset>
+     <normaloff>:/icons/format-text-bold.svg</normaloff>:/icons/format-text-bold.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Bold</string>
@@ -651,8 +648,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/format-text-italic.svg</normaloff>:/icons/format-text-italic.svg
-    </iconset>
+     <normaloff>:/icons/format-text-italic.svg</normaloff>:/icons/format-text-italic.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Italic</string>
@@ -673,8 +669,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/format-text-underline.svg</normaloff>:/icons/format-text-underline.svg
-    </iconset>
+     <normaloff>:/icons/format-text-underline.svg</normaloff>:/icons/format-text-underline.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Underline</string>
@@ -695,8 +690,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/format-text-strikethrough.svg</normaloff>:/icons/format-text-strikethrough.svg
-    </iconset>
+     <normaloff>:/icons/format-text-strikethrough.svg</normaloff>:/icons/format-text-strikethrough.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Strike Through</string>
@@ -714,8 +708,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/format-text-color.svg</normaloff>:/icons/format-text-color.svg
-    </iconset>
+     <normaloff>:/icons/format-text-color.svg</normaloff>:/icons/format-text-color.svg</iconset>
    </property>
    <property name="text">
     <string>Te&amp;xt Color</string>
@@ -733,8 +726,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/format-fill-color.svg</normaloff>:/icons/format-fill-color.svg
-    </iconset>
+     <normaloff>:/icons/format-fill-color.svg</normaloff>:/icons/format-fill-color.svg</iconset>
    </property>
    <property name="text">
     <string>Back&amp;ground Color</string>
@@ -754,8 +746,7 @@
   <action name="actionNew">
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/document-new.svg</normaloff>:/icons/document-new.svg
-    </iconset>
+     <normaloff>:/icons/document-new.svg</normaloff>:/icons/document-new.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;New Note</string>
@@ -770,8 +761,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/document-save-as.svg</normaloff>:/icons/document-save-as.svg
-    </iconset>
+     <normaloff>:/icons/document-save-as.svg</normaloff>:/icons/document-save-as.svg</iconset>
    </property>
    <property name="text">
     <string>Save &amp;As</string>
@@ -786,8 +776,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/document-print.svg</normaloff>:/icons/document-print.svg
-    </iconset>
+     <normaloff>:/icons/document-print.svg</normaloff>:/icons/document-print.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Print</string>
@@ -802,8 +791,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/document-print.svg</normaloff>:/icons/document-print.svg
-    </iconset>
+     <normaloff>:/icons/document-print.svg</normaloff>:/icons/document-print.svg</iconset>
    </property>
    <property name="text">
     <string>P&amp;rint with Sub-Nodes</string>
@@ -815,8 +803,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/document-encrypt.svg</normaloff>:/icons/document-encrypt.svg
-    </iconset>
+     <normaloff>:/icons/document-encrypt.svg</normaloff>:/icons/document-encrypt.svg</iconset>
    </property>
    <property name="text">
     <string>Set Pass&amp;word</string>
@@ -825,8 +812,7 @@
   <action name="actionQuit">
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/application-exit.svg</normaloff>:/icons/application-exit.svg
-    </iconset>
+     <normaloff>:/icons/application-exit.svg</normaloff>:/icons/application-exit.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Quit</string>
@@ -841,8 +827,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/edit-cut.svg</normaloff>:/icons/edit-cut.svg
-    </iconset>
+     <normaloff>:/icons/edit-cut.svg</normaloff>:/icons/edit-cut.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Cut</string>
@@ -857,8 +842,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/edit-copy.svg</normaloff>:/icons/edit-copy.svg
-    </iconset>
+     <normaloff>:/icons/edit-copy.svg</normaloff>:/icons/edit-copy.svg</iconset>
    </property>
    <property name="text">
     <string>C&amp;opy</string>
@@ -873,8 +857,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/edit-paste.svg</normaloff>:/icons/edit-paste.svg
-    </iconset>
+     <normaloff>:/icons/edit-paste.svg</normaloff>:/icons/edit-paste.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Paste</string>
@@ -889,8 +872,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/edit-delete.svg</normaloff>:/icons/edit-delete.svg
-    </iconset>
+     <normaloff>:/icons/edit-delete.svg</normaloff>:/icons/edit-delete.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Delete</string>
@@ -902,8 +884,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/edit-select-all.svg</normaloff>:/icons/edit-select-all.svg
-    </iconset>
+     <normaloff>:/icons/edit-select-all.svg</normaloff>:/icons/edit-select-all.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Sellect All</string>
@@ -918,8 +899,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/image-x-generic.svg</normaloff>:/icons/image-x-generic.svg
-    </iconset>
+     <normaloff>:/icons/image-x-generic.svg</normaloff>:/icons/image-x-generic.svg</iconset>
    </property>
    <property name="text">
     <string>E&amp;mbed Image</string>
@@ -937,8 +917,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/view-sort-ascending.svg</normaloff>:/icons/view-sort-ascending.svg
-    </iconset>
+     <normaloff>:/icons/view-sort-ascending.svg</normaloff>:/icons/view-sort-ascending.svg</iconset>
    </property>
    <property name="text">
     <string>E&amp;xpand All</string>
@@ -953,8 +932,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/view-sort-descending.svg</normaloff>:/icons/view-sort-descending.svg
-    </iconset>
+     <normaloff>:/icons/view-sort-descending.svg</normaloff>:/icons/view-sort-descending.svg</iconset>
    </property>
    <property name="text">
     <string>Collap&amp;se All</string>
@@ -969,8 +947,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/list-add.svg</normaloff>:/icons/list-add.svg
-    </iconset>
+     <normaloff>:/icons/list-add.svg</normaloff>:/icons/list-add.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Append Sibling</string>
@@ -985,8 +962,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/list-add.svg</normaloff>:/icons/list-add.svg
-    </iconset>
+     <normaloff>:/icons/list-add.svg</normaloff>:/icons/list-add.svg</iconset>
    </property>
    <property name="text">
     <string>Append &amp;Child</string>
@@ -1001,8 +977,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/user-trash.svg</normaloff>:/icons/user-trash.svg
-    </iconset>
+     <normaloff>:/icons/user-trash.svg</normaloff>:/icons/user-trash.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Delete Node</string>
@@ -1017,8 +992,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/go-up.svg</normaloff>:/icons/go-up.svg
-    </iconset>
+     <normaloff>:/icons/go-up.svg</normaloff>:/icons/go-up.svg</iconset>
    </property>
    <property name="text">
     <string>Move &amp;Up</string>
@@ -1033,8 +1007,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/go-down.svg</normaloff>:/icons/go-down.svg
-    </iconset>
+     <normaloff>:/icons/go-down.svg</normaloff>:/icons/go-down.svg</iconset>
    </property>
    <property name="text">
     <string>Move Do&amp;wn</string>
@@ -1049,8 +1022,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/edit-rename.svg</normaloff>:/icons/edit-rename.svg
-    </iconset>
+     <normaloff>:/icons/edit-rename.svg</normaloff>:/icons/edit-rename.svg</iconset>
    </property>
    <property name="text">
     <string>Re&amp;name Node</string>
@@ -1062,8 +1034,7 @@
   <action name="actionProp">
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/document-properties.svg</normaloff>:/icons/document-properties.svg
-    </iconset>
+     <normaloff>:/icons/document-properties.svg</normaloff>:/icons/document-properties.svg</iconset>
    </property>
    <property name="text">
     <string>Tree Pr&amp;operties</string>
@@ -1078,8 +1049,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/preferences-desktop-font.svg</normaloff>:/icons/preferences-desktop-font.svg
-    </iconset>
+     <normaloff>:/icons/preferences-desktop-font.svg</normaloff>:/icons/preferences-desktop-font.svg</iconset>
    </property>
    <property name="text">
     <string>Document &amp;Font</string>
@@ -1122,8 +1092,7 @@
   <action name="actionPref">
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/preferences-system.svg</normaloff>:/icons/preferences-system.svg
-    </iconset>
+     <normaloff>:/icons/preferences-system.svg</normaloff>:/icons/preferences-system.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Preferences</string>
@@ -1138,8 +1107,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/edit-find-replace.svg</normaloff>:/icons/edit-find-replace.svg
-    </iconset>
+     <normaloff>:/icons/edit-find-replace.svg</normaloff>:/icons/edit-find-replace.svg</iconset>
    </property>
    <property name="text">
     <string>Find and &amp;Replace</string>
@@ -1151,8 +1119,7 @@
   <action name="actionHelp">
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/help-contents.svg</normaloff>:/icons/help-contents.svg
-    </iconset>
+     <normaloff>:/icons/help-contents.svg</normaloff>:/icons/help-contents.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Help</string>
@@ -1164,8 +1131,7 @@
   <action name="actionAbout">
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/help-about.svg</normaloff>:/icons/help-about.svg
-    </iconset>
+     <normaloff>:/icons/help-about.svg</normaloff>:/icons/help-about.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;About</string>
@@ -1177,11 +1143,10 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/document-print.svg</normaloff>:/icons/document-print.svg
-    </iconset>
+     <normaloff>:/icons/document-print.svg</normaloff>:/icons/document-print.svg</iconset>
    </property>
    <property name="text">
-    <string>Print All N&amp;odes</string>
+    <string>Pr&amp;int All Nodes</string>
    </property>
   </action>
   <action name="actionSuper">
@@ -1193,8 +1158,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/format-text-superscript.svg</normaloff>:/icons/format-text-superscript.svg
-    </iconset>
+     <normaloff>:/icons/format-text-superscript.svg</normaloff>:/icons/format-text-superscript.svg</iconset>
    </property>
    <property name="text">
     <string>Superscrip&amp;t</string>
@@ -1215,8 +1179,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/format-text-subscript.svg</normaloff>:/icons/format-text-subscript.svg
-    </iconset>
+     <normaloff>:/icons/format-text-subscript.svg</normaloff>:/icons/format-text-subscript.svg</iconset>
    </property>
    <property name="text">
     <string>Subscri&amp;pt</string>
@@ -1237,8 +1200,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/format-justify-center.svg</normaloff>:/icons/format-justify-center.svg
-    </iconset>
+     <normaloff>:/icons/format-justify-center.svg</normaloff>:/icons/format-justify-center.svg</iconset>
    </property>
    <property name="text">
     <string>C&amp;enter</string>
@@ -1259,8 +1221,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/format-justify-right.svg</normaloff>:/icons/format-justify-right.svg
-    </iconset>
+     <normaloff>:/icons/format-justify-right.svg</normaloff>:/icons/format-justify-right.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Right</string>
@@ -1281,8 +1242,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/format-justify-left.svg</normaloff>:/icons/format-justify-left.svg
-    </iconset>
+     <normaloff>:/icons/format-justify-left.svg</normaloff>:/icons/format-justify-left.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Left</string>
@@ -1303,8 +1263,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/format-justify-fill.svg</normaloff>:/icons/format-justify-fill.svg
-    </iconset>
+     <normaloff>:/icons/format-justify-fill.svg</normaloff>:/icons/format-justify-fill.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Justify</string>
@@ -1322,8 +1281,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/list-add.svg</normaloff>:/icons/list-add.svg
-    </iconset>
+     <normaloff>:/icons/list-add.svg</normaloff>:/icons/list-add.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Prepend Sibling</string>
@@ -1338,8 +1296,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/go-previous.svg</normaloff>:/icons/go-previous.svg
-    </iconset>
+     <normaloff>:/icons/go-previous.svg</normaloff>:/icons/go-previous.svg</iconset>
    </property>
    <property name="text">
     <string>Move &amp;Left</string>
@@ -1354,8 +1311,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/go-next.svg</normaloff>:/icons/go-next.svg
-    </iconset>
+     <normaloff>:/icons/go-next.svg</normaloff>:/icons/go-next.svg</iconset>
    </property>
    <property name="text">
     <string>Move &amp;Right</string>
@@ -1370,8 +1326,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/zoom-in.svg</normaloff>:/icons/zoom-in.svg
-    </iconset>
+     <normaloff>:/icons/zoom-in.svg</normaloff>:/icons/zoom-in.svg</iconset>
    </property>
    <property name="text">
     <string>h&amp;2</string>
@@ -1389,8 +1344,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/zoom-in.svg</normaloff>:/icons/zoom-in.svg
-    </iconset>
+     <normaloff>:/icons/zoom-in.svg</normaloff>:/icons/zoom-in.svg</iconset>
    </property>
    <property name="text">
     <string>h&amp;1</string>
@@ -1408,8 +1362,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/zoom-in.svg</normaloff>:/icons/zoom-in.svg
-    </iconset>
+     <normaloff>:/icons/zoom-in.svg</normaloff>:/icons/zoom-in.svg</iconset>
    </property>
    <property name="text">
     <string>h&amp;3</string>
@@ -1427,8 +1380,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/preferences-desktop-font.svg</normaloff>:/icons/preferences-desktop-font.svg
-    </iconset>
+     <normaloff>:/icons/preferences-desktop-font.svg</normaloff>:/icons/preferences-desktop-font.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Node Font</string>
@@ -1440,8 +1392,7 @@
   <action name="actionImageScale">
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/image-x-generic.svg</normaloff>:/icons/image-x-generic.svg
-    </iconset>
+     <normaloff>:/icons/image-x-generic.svg</normaloff>:/icons/image-x-generic.svg</iconset>
    </property>
    <property name="text">
     <string>Scale I&amp;mage(s)</string>
@@ -1453,8 +1404,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/edit-paste.svg</normaloff>:/icons/edit-paste.svg
-    </iconset>
+     <normaloff>:/icons/edit-paste.svg</normaloff>:/icons/edit-paste.svg</iconset>
    </property>
    <property name="text">
     <string>Paste &amp;HTML</string>
@@ -1469,8 +1419,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/mail-attachment.svg</normaloff>:/icons/mail-attachment.svg
-    </iconset>
+     <normaloff>:/icons/mail-attachment.svg</normaloff>:/icons/mail-attachment.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Tags</string>
@@ -1485,8 +1434,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/insert-link.svg</normaloff>:/icons/insert-link.svg
-    </iconset>
+     <normaloff>:/icons/insert-link.svg</normaloff>:/icons/insert-link.svg</iconset>
    </property>
    <property name="text">
     <string>Insert Lin&amp;k</string>
@@ -1498,8 +1446,7 @@
   <action name="actionCopyLink">
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/link.svg</normaloff>:/icons/link.svg
-    </iconset>
+     <normaloff>:/icons/link.svg</normaloff>:/icons/link.svg</iconset>
    </property>
    <property name="text">
     <string>C&amp;opy Link</string>
@@ -1511,8 +1458,7 @@
    </property>
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/insert-table.svg</normaloff>:/icons/insert-table.svg
-    </iconset>
+     <normaloff>:/icons/insert-table.svg</normaloff>:/icons/insert-table.svg</iconset>
    </property>
    <property name="text">
     <string>I&amp;nsert Table</string>
@@ -1524,8 +1470,7 @@
   <action name="actionTableAppendRow">
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/edit-table-insert-row-below.svg</normaloff>:/icons/edit-table-insert-row-below.svg
-    </iconset>
+     <normaloff>:/icons/edit-table-insert-row-below.svg</normaloff>:/icons/edit-table-insert-row-below.svg</iconset>
    </property>
    <property name="text">
     <string>Append Row</string>
@@ -1534,8 +1479,7 @@
   <action name="actionTableDeleteRow">
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/edit-table-delete-row.svg</normaloff>:/icons/edit-table-delete-row.svg
-    </iconset>
+     <normaloff>:/icons/edit-table-delete-row.svg</normaloff>:/icons/edit-table-delete-row.svg</iconset>
    </property>
    <property name="text">
     <string>Delete Row</string>
@@ -1544,8 +1488,7 @@
   <action name="actionTableAppendCol">
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/edit-table-insert-column-right.svg</normaloff>:/icons/edit-table-insert-column-right.svg
-    </iconset>
+     <normaloff>:/icons/edit-table-insert-column-right.svg</normaloff>:/icons/edit-table-insert-column-right.svg</iconset>
    </property>
    <property name="text">
     <string>Append Column</string>
@@ -1554,8 +1497,7 @@
   <action name="actionTableDeleteCol">
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/edit-table-delete-column.svg</normaloff>:/icons/edit-table-delete-column.svg
-    </iconset>
+     <normaloff>:/icons/edit-table-delete-column.svg</normaloff>:/icons/edit-table-delete-column.svg</iconset>
    </property>
    <property name="text">
     <string>Delete Column</string>
@@ -1564,8 +1506,7 @@
   <action name="actionTableMergeCells">
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/edit-table-cell-merge.svg</normaloff>:/icons/edit-table-cell-merge.svg
-    </iconset>
+     <normaloff>:/icons/edit-table-cell-merge.svg</normaloff>:/icons/edit-table-cell-merge.svg</iconset>
    </property>
    <property name="text">
     <string>Merge Cells</string>
@@ -1574,8 +1515,7 @@
   <action name="actionTablePrependRow">
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/edit-table-insert-row-above.svg</normaloff>:/icons/edit-table-insert-row-above.svg
-    </iconset>
+     <normaloff>:/icons/edit-table-insert-row-above.svg</normaloff>:/icons/edit-table-insert-row-above.svg</iconset>
    </property>
    <property name="text">
     <string>Prepend Row</string>
@@ -1584,8 +1524,7 @@
   <action name="actionTablePrependCol">
    <property name="icon">
     <iconset resource="data/fn.qrc">
-     <normaloff>:/icons/edit-table-insert-column-left.svg</normaloff>:/icons/edit-table-insert-column-left.svg
-    </iconset>
+     <normaloff>:/icons/edit-table-insert-column-left.svg</normaloff>:/icons/edit-table-insert-column-left.svg</iconset>
    </property>
    <property name="text">
     <string>Prepend Column</string>
@@ -1642,6 +1581,18 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+Alt+Shift+Right</string>
+   </property>
+  </action>
+  <action name="actionMenu">
+   <property name="icon">
+    <iconset resource="data/fn.qrc">
+     <normaloff>:/icons/application-menu.svg</normaloff>:/icons/application-menu.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Menu</string>
+   </property>
+   <property name="toolTip">
+    <string>Menu</string>
    </property>
   </action>
  </widget>

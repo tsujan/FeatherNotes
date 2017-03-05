@@ -16,6 +16,7 @@ V0.4.4
  * A workaround for Qt's backward search bug.
  * Removed the translucency workaround.
  * A method for bypassing focus stealing prevention.
+ * Options for hiding toolbar or menubar.
 
 V0.4.3
 ---------

@@ -1,6 +1,7 @@
 <RCC>
   <qresource>
     <file>icons/application-exit.svg</file>
+    <file>icons/application-menu.svg</file>
     <file>icons/arrow-down-double.svg</file>
     <file>icons/dialog-cancel.svg</file>
     <file>icons/dialog-ok.svg</file>

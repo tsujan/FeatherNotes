@@ -89,7 +89,25 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
     remPosition_ = true;
     wrapByDefault_ = true;
     indentByDefault_ = true;
+    noToolbar_ =false;
+    noMenubar_ = false;
     readAndApplyConfig();
+
+    QWidget* spacer = new QWidget();
+    spacer->setSizePolicy (QSizePolicy::Expanding, QSizePolicy::Preferred);
+    ui->mainToolBar->insertWidget (ui->actionMenu, spacer);
+    QMenu *menu = new QMenu (ui->mainToolBar);
+    menu->addMenu (ui->menuFile);
+    menu->addMenu (ui->menuEdit);
+    menu->addMenu (ui->menuFormat);
+    menu->addMenu (ui->menuTree);
+    menu->addMenu (ui->menuOptions);
+    menu->addMenu (ui->menuSearch);
+    menu->addMenu (ui->menuHelp);
+    ui->actionMenu->setMenu(menu);
+    QList<QToolButton*> tbList = ui->mainToolBar->findChildren<QToolButton*>();
+    if (!tbList.isEmpty())
+        tbList.at (tbList.count() - 1)->setPopupMode (QToolButton::InstantPopup);
 
     if (hasTray_)
         quitting_ = false;
@@ -234,9 +252,11 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
     connect (defaultsize, &QShortcut::activated, this, &FN::defaultSize);
 
     QShortcut *zoomin = new QShortcut (QKeySequence (tr ("Ctrl+=", "Zoom in")), this);
+    QShortcut *zoominPlus = new QShortcut (QKeySequence (tr ("Ctrl++", "Zoom in")), this);
     QShortcut *zoomout = new QShortcut (QKeySequence (tr ("Ctrl+-", "Zoom out")), this);
     QShortcut *unzoom = new QShortcut (QKeySequence (tr ("Ctrl+0", "Unzoom")), this);
     connect (zoomin, &QShortcut::activated, this, &FN::zoomingIn);
+    connect (zoominPlus, &QShortcut::activated, this, &FN::zoomingIn);
     connect (zoomout, &QShortcut::activated, this, &FN::zoomingOut);
     connect (unzoom, &QShortcut::activated, this, &FN::unZooming);
 
@@ -3569,6 +3589,13 @@ void FN::PrefDialog()
     if (!hasTray_)
         minTrayBox->setDisabled (true);
 
+    /* toolbar and menubar */
+    QCheckBox *noToolbar = new QCheckBox (tr ("Do not show t&oolbar"));
+    noToolbar->setObjectName ("TOOLBAR");
+    QCheckBox *noMenubar = new QCheckBox (tr ("Do not show menubar"));
+    noMenubar->setToolTip (tr ("If the menubar is hidden,\na menu button appears on the toolbar."));
+    noMenubar->setObjectName ("MENUBAR");
+
     /* Enlightenment workaround */
     QCheckBox *EBox = new QCheckBox (tr ("Running &under Enlightenment?"));
     EBox->setToolTip (tr ("Check this under Enlightenment (or, probably, another DE)\nto use the systray icon more easily!"));
@@ -3609,11 +3636,14 @@ void FN::PrefDialog()
     windowGrid->addWidget (hasTrayBox, 4, 0, 1, 5);
     windowGrid->addWidget (minTrayBox, 5, 1, 1, 4);
 
-    windowGrid->addWidget (EBox, 6, 0, 1, 5);
-    windowGrid->addWidget (ELabel, 7, 0, 1, 2, Qt::AlignRight);
-    windowGrid->addWidget (ESpinX, 7, 2, 1, 1);
-    windowGrid->addWidget (XLabel, 7, 3, 1, 1);
-    windowGrid->addWidget (ESpinY, 7, 4, 1, 1, Qt::AlignLeft);
+    windowGrid->addWidget (noToolbar, 6, 0, 1, 5);
+    windowGrid->addWidget (noMenubar, 7, 0, 1, 5);
+
+    windowGrid->addWidget (EBox, 8, 0, 1, 5);
+    windowGrid->addWidget (ELabel, 9, 0, 1, 2, Qt::AlignRight);
+    windowGrid->addWidget (ESpinX, 9, 2, 1, 1);
+    windowGrid->addWidget (XLabel, 9, 3, 1, 1);
+    windowGrid->addWidget (ESpinY, 9, 4, 1, 1, Qt::AlignLeft);
 
     windowGrid->setColumnStretch (4, 1);
     windowGrid->setColumnMinimumWidth(0, style()->pixelMetric (QStyle::PM_IndicatorWidth) + style()->pixelMetric (QStyle::PM_CheckBoxLabelSpacing));
@@ -3650,6 +3680,11 @@ void FN::PrefDialog()
 
     minTrayBox->setChecked (minToTray_);
     connect (minTrayBox, &QCheckBox::stateChanged, this, &FN::prefMinTray);
+
+    noToolbar->setChecked (noToolbar_);
+    noMenubar->setChecked (noMenubar_);
+    connect (noToolbar, &QCheckBox::stateChanged, this, &FN::prefToolbar);
+    connect (noMenubar, &QCheckBox::stateChanged, this, &FN::prefMenubar);
 
     EBox->setChecked (underE_);
     connect (EBox, &QCheckBox::stateChanged, this, &FN::prefEnlightenment);
@@ -3884,6 +3919,56 @@ void FN::prefMinTray (int checked)
         minToTray_ = false;
 }
 /*************************/
+void FN::prefToolbar (int checked)
+{
+    if (checked == Qt::Checked)
+    {
+        ui->mainToolBar->setVisible (false);
+        noToolbar_ = true;
+        QList<QDialog *> list = findChildren<QDialog*>();
+        if (list.isEmpty()) return;
+        for (int i = 0; i < list.count(); ++i)
+        {
+            if (QCheckBox *check = list.at (i)->findChild<QCheckBox *>("MENUBAR"))
+            {
+                check->setChecked (false);
+                break;
+            }
+        }
+    }
+    else if (checked == Qt::Unchecked)
+    {
+        ui->mainToolBar->setVisible (true);
+        noToolbar_ = false;
+    }
+}
+/*************************/
+void FN::prefMenubar (int checked)
+{
+    if (checked == Qt::Checked)
+    {
+        ui->menuBar->setVisible (false);
+        ui->actionMenu->setVisible (true);
+        noMenubar_ = true;
+        QList<QDialog *> list = findChildren<QDialog*>();
+        if (list.isEmpty()) return;
+        for (int i = 0; i < list.count(); ++i)
+        {
+            if (QCheckBox *check = list.at (i)->findChild<QCheckBox *>("TOOLBAR"))
+            {
+                check->setChecked (false);
+                break;
+            }
+        }
+    }
+    else if (checked == Qt::Unchecked)
+    {
+        ui->menuBar->setVisible (true);
+        ui->actionMenu->setVisible (false);
+        noMenubar_ = false;
+    }
+}
+/*************************/
 void FN::prefEnlightenment (int checked)
 {
     if (checked == Qt::Checked)
@@ -4084,6 +4169,19 @@ void FN::readAndApplyConfig()
     else
         EShift_ = QSize (0, 0);
 
+    if (settings.value ("noToolbar").toBool())
+        noToolbar_ = true; // false by default
+    if (settings.value ("noMenubar").toBool())
+        noMenubar_ = true; // false by default
+    if (noToolbar_ && noMenubar_)
+    { // we don't want to hide all actions
+        noToolbar_ = false;
+        noMenubar_ = true;
+    }
+    ui->mainToolBar->setVisible (!noToolbar_);
+    ui->menuBar->setVisible (!noMenubar_);
+    ui->actionMenu->setVisible (noMenubar_);
+
     settings.endGroup();
 
     /************
@@ -4163,6 +4261,8 @@ void FN::writeConfig()
     settings.setValue ("minToTray", minToTray_);
     settings.setValue ("underE", underE_);
     settings.setValue ("Shift", EShift_);
+    settings.setValue ("noToolbar", noToolbar_);
+    settings.setValue ("noMenubar", noMenubar_);
 
     settings.endGroup();
 
