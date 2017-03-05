@@ -404,7 +404,7 @@ void FN::find()
     }
     /* matches highlights should come here,
        after the text area is scrolled */
-    hlight();
+    QTimer::singleShot (0, this, SLOT (hlight()));
     connect (textEdit->verticalScrollBar(), &QAbstractSlider::valueChanged, this, &FN::scrolled);
     connect (textEdit->horizontalScrollBar(), &QAbstractSlider::valueChanged, this, &FN::scrolled);
     connect (textEdit, &TextEdit::resized, this, &FN::hlight);
@@ -413,7 +413,7 @@ void FN::find()
     if (nxtIndx.isValid())
     {
         searchOtherNode_ = true;
-        ui->treeView->setCurrentIndex (nxtIndx);
+        ui->treeView->setCurrentIndex (nxtIndx); // selChanged() is immediately called
         textEdit = qobject_cast< TextEdit *>(ui->stackedWidget->currentWidget());
         ui->lineEdit->setText (txt);
         searchEntries_[textEdit] = txt;
@@ -446,11 +446,11 @@ void FN::hlight() const
         start.setPosition (startPos);
     else
         start.setPosition (0);
-    int h = textEdit->geometry().height();
     int w = textEdit->geometry().width();
+    int h = textEdit->geometry().height();
     /* get the visible text to check if
        the search string is inside it */
-    Point = QPoint (h, w);
+    Point = QPoint (w, h);
     QTextCursor end = textEdit->cursorForPosition (Point);
     int endPos = end.position() + txt.length();
     end.movePosition (QTextCursor::End);
