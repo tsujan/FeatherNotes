@@ -119,6 +119,7 @@ private slots:
     void prefSize (int value);
     void prefSplitterSize (int checked);
     void prefPosition (int checked);
+    void prefIcon (int checked);
     void prefHasTray (int checked);
     void prefMinTray (int checked);
     void prefToolbar (int checked);
@@ -226,7 +227,8 @@ private:
          wrapByDefault_,
          indentByDefault_,
          noToolbar_,
-         noMenubar_;
+         noMenubar_,
+         sysIcon_;
     int autoSave_;
     QPoint position_; // Excluding the window frame.
     QSize winSize_, startSize_;

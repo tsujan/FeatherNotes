@@ -17,6 +17,7 @@ V0.4.4
  * Removed the translucency workaround.
  * A method for bypassing focus stealing prevention.
  * Options for hiding toolbar or menubar.
+ * An option to choose between own and system icons.
 
 V0.4.3
 ---------
