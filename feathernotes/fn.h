@@ -122,6 +122,7 @@ private slots:
     void prefIcon (int checked);
     void prefHasTray (int checked);
     void prefMinTray (int checked);
+    void prefTree (int checked);
     void prefToolbar (int checked);
     void prefMenubar (int checked);
     void prefEnlightenment (int checked);
@@ -226,6 +227,7 @@ private:
          minToTray_,
          wrapByDefault_,
          indentByDefault_,
+         transparentTree_,
          noToolbar_,
          noMenubar_,
          sysIcon_;

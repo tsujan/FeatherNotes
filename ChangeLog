@@ -18,6 +18,7 @@ V0.4.4
  * A method for bypassing focus stealing prevention.
  * Options for hiding toolbar or menubar.
  * An option to choose between own and system icons.
+ * An option for a transparent tree view.
 
 V0.4.3
 ---------

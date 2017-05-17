@@ -89,7 +89,8 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
     remPosition_ = true;
     wrapByDefault_ = true;
     indentByDefault_ = true;
-    noToolbar_ =false;
+    transparentTree_ = false;
+    noToolbar_ = false;
     noMenubar_ = false;
     sysIcon_ = false;
     readAndApplyConfig();
@@ -126,7 +127,7 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
     ui->actionRTL->setActionGroup (aGroup1);
 
     /* sinal connections */
-    connect(ui->treeView, &QWidget::customContextMenuRequested, this, &FN::showContextMenu);
+    connect (ui->treeView, &QWidget::customContextMenuRequested, this, &FN::showContextMenu);
 
     connect (ui->actionNew, &QAction::triggered, this, &FN::newNote);
     connect (ui->actionOpen, &QAction::triggered, this, &FN::openFile);
@@ -3601,6 +3602,10 @@ void FN::PrefDialog()
     if (!hasTray_)
         minTrayBox->setDisabled (true);
 
+    /* tree transparency */
+    QCheckBox *transparentTree = new QCheckBox (tr ("Transparent t&ree view"));
+    transparentTree->setToolTip (tr ("Merge the tree view with its surroundings?"));
+
     /* toolbar and menubar */
     QCheckBox *noToolbar = new QCheckBox (tr ("Do not show t&oolbar"));
     noToolbar->setObjectName ("TOOLBAR");
@@ -3650,14 +3655,16 @@ void FN::PrefDialog()
     windowGrid->addWidget (hasTrayBox, 5, 0, 1, 5);
     windowGrid->addWidget (minTrayBox, 6, 1, 1, 4);
 
-    windowGrid->addWidget (noToolbar, 7, 0, 1, 5);
-    windowGrid->addWidget (noMenubar, 8, 0, 1, 5);
+    windowGrid->addWidget (transparentTree, 7, 0, 1, 5);
 
-    windowGrid->addWidget (EBox, 9, 0, 1, 5);
-    windowGrid->addWidget (ELabel, 10, 0, 1, 2, Qt::AlignRight);
-    windowGrid->addWidget (ESpinX, 10, 2, 1, 1);
-    windowGrid->addWidget (XLabel, 10, 3, 1, 1);
-    windowGrid->addWidget (ESpinY, 10, 4, 1, 1, Qt::AlignLeft);
+    windowGrid->addWidget (noToolbar, 8, 0, 1, 5);
+    windowGrid->addWidget (noMenubar, 9, 0, 1, 5);
+
+    windowGrid->addWidget (EBox, 10, 0, 1, 5);
+    windowGrid->addWidget (ELabel, 11, 0, 1, 2, Qt::AlignRight);
+    windowGrid->addWidget (ESpinX, 11, 2, 1, 1);
+    windowGrid->addWidget (XLabel, 11, 3, 1, 1);
+    windowGrid->addWidget (ESpinY, 11, 4, 1, 1, Qt::AlignLeft);
 
     windowGrid->setColumnStretch (4, 1);
     windowGrid->setColumnMinimumWidth(0, style()->pixelMetric (QStyle::PM_IndicatorWidth) + style()->pixelMetric (QStyle::PM_CheckBoxLabelSpacing));
@@ -3697,6 +3704,9 @@ void FN::PrefDialog()
 
     minTrayBox->setChecked (minToTray_);
     connect (minTrayBox, &QCheckBox::stateChanged, this, &FN::prefMinTray);
+
+    transparentTree->setChecked (transparentTree_);
+    connect (transparentTree, &QCheckBox::stateChanged, this, &FN::prefTree);
 
     noToolbar->setChecked (noToolbar_);
     noMenubar->setChecked (noMenubar_);
@@ -3942,6 +3952,24 @@ void FN::prefMinTray (int checked)
         minToTray_ = true;
     else if (checked == Qt::Unchecked)
         minToTray_ = false;
+}
+/*************************/
+void FN::prefTree (int checked)
+{
+    if (checked == Qt::Checked)
+    {
+        transparentTree_ = true;
+        ui->treeView->setFrameShape (QFrame::NoFrame);
+        if (ui->treeView->viewport())
+            ui->treeView->viewport()->setAutoFillBackground (false);
+    }
+    else if (checked == Qt::Unchecked)
+    {
+        transparentTree_ = false;
+        ui->treeView->setFrameShape (QFrame::StyledPanel);
+        if (ui->treeView->viewport())
+            ui->treeView->viewport()->setAutoFillBackground (true);
+    }
 }
 /*************************/
 void FN::prefToolbar (int checked)
@@ -4193,6 +4221,14 @@ void FN::readAndApplyConfig()
         EShift_ = settings.value ("Shift").toSize();
     else
         EShift_ = QSize (0, 0);
+
+    if (settings.value ("transparentTree").toBool())
+    {
+        transparentTree_ = true; // false by default
+        ui->treeView->setFrameShape (QFrame::NoFrame);
+        if (ui->treeView->viewport()) // not needed
+            ui->treeView->viewport()->setAutoFillBackground (false);
+    }
 
     if (settings.value ("noToolbar").toBool())
         noToolbar_ = true; // false by default
@@ -4505,6 +4541,7 @@ void FN::writeConfig()
     settings.setValue ("minToTray", minToTray_);
     settings.setValue ("underE", underE_);
     settings.setValue ("Shift", EShift_);
+    settings.setValue ("transparentTree", transparentTree_);
     settings.setValue ("noToolbar", noToolbar_);
     settings.setValue ("noMenubar", noMenubar_);
     settings.setValue ("sysIcon", sysIcon_);
