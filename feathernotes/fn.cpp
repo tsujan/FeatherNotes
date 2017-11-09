@@ -3961,14 +3961,27 @@ void FN::prefTree (int checked)
         transparentTree_ = true;
         ui->treeView->setFrameShape (QFrame::NoFrame);
         if (ui->treeView->viewport())
+        {
+            QPalette p = ui->treeView->palette();
+            p.setColor (QPalette::Base, QColor (Qt::transparent));
+            ui->treeView->setPalette (p);
             ui->treeView->viewport()->setAutoFillBackground (false);
+        }
     }
     else if (checked == Qt::Unchecked)
     {
         transparentTree_ = false;
         ui->treeView->setFrameShape (QFrame::StyledPanel);
         if (ui->treeView->viewport())
+        {
+            QPalette p = ui->treeView->palette();
+            p.setColor (QPalette::Active, QPalette::Base,
+                        QApplication::palette().color (QPalette::Active, QPalette::Base));
+            p.setColor (QPalette::Inactive, QPalette::Base,
+                        QApplication::palette().color (QPalette::Inactive, QPalette::Base));
+            ui->treeView->setPalette (p);
             ui->treeView->viewport()->setAutoFillBackground (true);
+        }
     }
 }
 /*************************/
@@ -4227,7 +4240,12 @@ void FN::readAndApplyConfig()
         transparentTree_ = true; // false by default
         ui->treeView->setFrameShape (QFrame::NoFrame);
         if (ui->treeView->viewport()) // not needed
+        {
+            QPalette p = ui->treeView->palette();
+            p.setColor (QPalette::Base, QColor (Qt::transparent));
+            ui->treeView->setPalette (p);
             ui->treeView->viewport()->setAutoFillBackground (false);
+        }
     }
 
     if (settings.value ("noToolbar").toBool())
@@ -4433,8 +4451,8 @@ void FN::readAndApplyConfig()
         icn = QIcon::fromTheme ("edit-table-insert-row-below");
         if (!icn.isNull())
         {
-              ui->actionTableAppendRow->setIcon (icn);
-          ui->actionTableAppendCol->setIcon (icn);
+            ui->actionTableAppendRow->setIcon (icn);
+            ui->actionTableAppendCol->setIcon (icn);
         }
         icn = QIcon::fromTheme ("edit-table-delete-row");
         if (!icn.isNull())
