@@ -19,6 +19,7 @@
 #include <QDesktopServices>
 #include <QToolTip>
 #include <QTimer>
+#include <QTextBlock>
 
 namespace FeatherNotes {
 
@@ -26,16 +27,49 @@ void TextEdit::keyPressEvent (QKeyEvent *event)
 {
     if (autoIndentation && (event->key() == Qt::Key_Return || event->key() == Qt::Key_Enter))
     {
-        /* first get the current cursor for computing the indentation */
-        QTextCursor start = textCursor();
-        QString indent = computeIndentation (start);
-        /* then press Enter normally... */
-        QTextEdit::keyPressEvent (event);
-        /* ... and insert indentation */
-        start = textCursor();
-        start.insertText (indent);
-        event->accept();
-        return;
+        QTextCursor cur = textCursor();
+        if (event->modifiers() & Qt::ShiftModifier)
+        {
+            QString prefix;
+            cur.clearSelection();
+            setTextCursor (cur);
+            QString blockText = cur.block().text();
+            int i = 0;
+            int curBlockPos = cur.position() - cur.block().position();
+            while (i < curBlockPos)
+            {
+                QChar ch = blockText.at (i);
+                if (!ch.isLetterOrNumber())
+                {
+                    prefix += ch;
+                    ++i;
+                }
+                else break;
+            }
+            if (!prefix.isEmpty())
+            {
+                cur.beginEditBlock();
+                /* first press Enter normally... */
+                cur.insertText (QChar (QChar::ParagraphSeparator));
+                /* ... then, handle Shift+Enter */
+                cur.insertText (prefix);
+                cur.endEditBlock();
+                event->accept();
+                return;
+            }
+        }
+        else
+        {
+            QString indent = computeIndentation (cur);
+            cur.beginEditBlock();
+            /* first press Enter normally... */
+            cur.insertText (QChar (QChar::ParagraphSeparator));
+            /* ... then, insert indentation... */
+            cur.insertText (indent);
+            cur.endEditBlock();
+            event->accept();
+            return;
+        }
     }
     else if (event->key() == Qt::Key_Left || event->key() == Qt::Key_Right)
     {

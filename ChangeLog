@@ -19,6 +19,7 @@ V0.4.4
  * Options for hiding toolbar or menubar.
  * An option to choose between own and system icons.
  * An option for a transparent tree view.
+ * Support Shift+Enter (useful e.g. to create lists).
 
 V0.4.3
 ---------

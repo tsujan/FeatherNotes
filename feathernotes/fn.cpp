@@ -48,7 +48,7 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
     ui->setupUi (this);
     imgScale_ = 100;
 
-    QStyledItemDelegate *delegate = new QStyledItemDelegate();
+    QStyledItemDelegate *delegate = new QStyledItemDelegate (this);
     ui->treeView->setItemDelegate (delegate);
     ui->treeView->setContextMenuPolicy (Qt::CustomContextMenu);
 
