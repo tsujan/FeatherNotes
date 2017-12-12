@@ -70,7 +70,7 @@ protected:
     virtual void wheelEvent (QWheelEvent *e);
 
 private:
-    QString computeIndentation (QTextCursor& cur) const;
+    QString computeIndentation (const QTextCursor &cur) const;
     QPoint pressPoint;
     bool scrollJumpWorkaround; // for working around Qt5's scroll jump bug
 };

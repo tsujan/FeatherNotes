@@ -54,6 +54,7 @@ void TextEdit::keyPressEvent (QKeyEvent *event)
                 /* ... then, handle Shift+Enter */
                 cur.insertText (prefix);
                 cur.endEditBlock();
+                ensureCursorVisible();
                 event->accept();
                 return;
             }
@@ -61,14 +62,18 @@ void TextEdit::keyPressEvent (QKeyEvent *event)
         else
         {
             QString indent = computeIndentation (cur);
-            cur.beginEditBlock();
-            /* first press Enter normally... */
-            cur.insertText (QChar (QChar::ParagraphSeparator));
-            /* ... then, insert indentation... */
-            cur.insertText (indent);
-            cur.endEditBlock();
-            event->accept();
-            return;
+            if (!indent.isEmpty())
+            {
+                cur.beginEditBlock();
+                /* first press Enter normally... */
+                cur.insertText (QChar (QChar::ParagraphSeparator));
+                /* ... then, insert indentation... */
+                cur.insertText (indent);
+                cur.endEditBlock();
+                ensureCursorVisible();
+                event->accept();
+                return;
+            }
         }
     }
     else if (event->key() == Qt::Key_Left || event->key() == Qt::Key_Right)
@@ -110,16 +115,17 @@ void TextEdit::keyPressEvent (QKeyEvent *event)
     QTextEdit::keyPressEvent (event);
 }
 /*************************/
-QString TextEdit::computeIndentation (QTextCursor& cur) const
+QString TextEdit::computeIndentation (const QTextCursor& cur) const
 {
-    if (cur.hasSelection())
+    QTextCursor cusror = cur;
+    if (cusror.hasSelection())
     {// this is more intuitive to me
-        if (cur.anchor() <= cur.position())
-            cur.setPosition (cur.anchor());
+        if (cusror.anchor() <= cusror.position())
+            cusror.setPosition (cusror.anchor());
         else
-            cur.setPosition (cur.position());
+            cusror.setPosition (cusror.position());
     }
-    QTextCursor tmp = cur;
+    QTextCursor tmp = cusror;
     tmp.movePosition (QTextCursor::StartOfBlock);
     QString str;
     if (tmp.atBlockEnd())
@@ -128,7 +134,7 @@ QString TextEdit::computeIndentation (QTextCursor& cur) const
     tmp.setPosition (++pos, QTextCursor::KeepAnchor);
     QString selected;
     while (!tmp.atBlockEnd()
-           && tmp <= cur
+           && tmp <= cusror
            && ((selected = tmp.selectedText()) == " "
                || (selected = tmp.selectedText()) == "\t"))
     {
@@ -137,7 +143,7 @@ QString TextEdit::computeIndentation (QTextCursor& cur) const
         tmp.setPosition (++pos, QTextCursor::KeepAnchor);
     }
     if (tmp.atBlockEnd()
-        && tmp <= cur
+        && tmp <= cusror
         && ((selected = tmp.selectedText()) == " "
             || (selected = tmp.selectedText()) == "\t"))
     {
