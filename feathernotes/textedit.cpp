@@ -25,12 +25,12 @@ namespace FeatherNotes {
 
 void TextEdit::keyPressEvent (QKeyEvent *event)
 {
-    if (autoIndentation && (event->key() == Qt::Key_Return || event->key() == Qt::Key_Enter))
+    if (event->key() == Qt::Key_Return || event->key() == Qt::Key_Enter)
     {
-        QTextCursor cur = textCursor();
         if (event->modifiers() & Qt::ShiftModifier)
         {
             QString prefix;
+            QTextCursor cur = textCursor();
             cur.clearSelection();
             setTextCursor (cur);
             QString blockText = cur.block().text();
@@ -59,8 +59,9 @@ void TextEdit::keyPressEvent (QKeyEvent *event)
                 return;
             }
         }
-        else
+        else if (autoIndentation)
         {
+            QTextCursor cur = textCursor();
             QString indent = computeIndentation (cur);
             if (!indent.isEmpty())
             {

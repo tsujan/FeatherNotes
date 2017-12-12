@@ -1259,7 +1259,7 @@ TextEdit *FN::newWidget()
 {
     TextEdit *textEdit = new TextEdit;
     textEdit->setScrollJumpWorkaround (scrollJumpWorkaround_);
-    textEdit->autoIndentation = true;
+    //textEdit->autoIndentation = true; // auto-indentation is enabled by default
     textEdit->setStyleSheet ("QTextEdit {"
                              "color: black;}");
     QPalette palette = QApplication::palette();

@@ -39,6 +39,7 @@ class TextEdit : public QTextEdit
 public:
     TextEdit (QWidget *parent = 0) : QTextEdit (parent)
     {
+        autoIndentation = true;
         pressPoint = QPoint();
         scrollJumpWorkaround = false;
         VScrollBar *vScrollBar = new VScrollBar;
@@ -70,7 +71,7 @@ protected:
     virtual void wheelEvent (QWheelEvent *e);
 
 private:
-    QString computeIndentation (const QTextCursor &cur) const;
+    QString computeIndentation (const QTextCursor& cur) const;
     QPoint pressPoint;
     bool scrollJumpWorkaround; // for working around Qt5's scroll jump bug
 };
