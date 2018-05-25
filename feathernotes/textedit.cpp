@@ -82,7 +82,8 @@ QTextCursor TextEdit::backTabCursor (const QTextCursor& cursor) const
     if (n == 0) n = textTab_.count();
 
     tmp.setPosition (txtStart);
-    if (blockText.at (indx - 1) == " ")
+    QChar ch = blockText.at (indx - 1);
+    if (ch == QChar (QChar::Space))
         tmp.setPosition(txtStart - n, QTextCursor::KeepAnchor);
     else // the previous character is a tab
     {
