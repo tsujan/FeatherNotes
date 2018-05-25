@@ -1,16 +1,10 @@
-<svg width="128" version="1.0" xmlns="http://www.w3.org/2000/svg" height="128" xmlns:xlink="http://www.w3.org/1999/xlink">
-<defs id="defs4">
-<clipPath id="clipPath3405" clipPathUnits="userSpaceOnUse">
-<path style="fill:url(#linearGradient3409);stroke:none;stroke-linejoin:round;stroke-linecap:round;stroke-width:8;stroke-dashoffset:4" id="path3407" d="m 185.5,28 c -0.99276,-0.001631 -1.95066,0.365936 -2.6875,1.03125 l -40,36 c -0.83978,0.758484 -1.31903,1.83715 -1.31903,2.96875 0,1.1316 0.47925,2.21027 1.31903,2.96875 l 40,36 c 0.73684,0.66531 1.69474,1.03288 2.6875,1.03125 h 56 c 2.20905,-0.00022 3.99978,-1.79095 4,-4 v -72 c -0.00022,-2.20905 -1.79095,-3.99978 -4,-4 h -56 z "/>
-</clipPath>
-<linearGradient gradientTransform="matrix(0,1,-1,0,-39.9985,140.0029)" id="linearGradient26907" y1="-383.9971" y2="-383.9971" x1="-84.002403" x2="-12.0029" gradientUnits="userSpaceOnUse">
-<stop offset="0" style="stop-color:#888a85" id="stop26909"/>
-<stop offset="1" id="stop26911"/>
-</linearGradient>
-<linearGradient gradientTransform="translate(129.5,0)" xlink:href="#linearGradient26907" id="linearGradient3409" y1="-16" x1="72" y2="64" gradientUnits="userSpaceOnUse" x2="72"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+<defs id="defs1">
+<style type="text/css" id="current-color-scheme">
+.ColorScheme-Text {
+color:#000;
+}
+</style>
 </defs>
-<g style="stroke:none;stroke-linejoin:round;stroke-linecap:round" id="layer1">
-<path style="fill:#505050;stroke-width:8;stroke-dashoffset:4" id="path2941" d="m 56,24 c -1.98431,-0.00326 -3.90222,0.732684 -5.375,2.0625 l -40,36 c -1.67791,1.51548 -2.625,3.67651 -2.625,5.9375 -8e-07,2.26099 0.947089,4.42202 2.625,5.9375 l 40,36 c 1.47277,1.3298 3.39068,2.06576 5.375,2.0625 h 56 c 4.37052,-0.00044 7.99956,-3.62948 8,-8 v -72 c -0.00044,-4.37052 -3.62948,-7.99956 -8,-8 h -56 z "/>
-<path style="fill:#fff;stroke-width:.885" id="rect3376" d="m 59.1782,37.8643 l -11.8125,11.7812 17.0625,17.0625 -17.0625,17.0312 11.8125,11.8125 17.0312,-17.0625 17.0625,17.0625 11.7812,-11.8125 -17.0312,-17.0312 17.0312,-17.0625 -11.7812,-11.7812 -17.0625,17.0312 -17.0312,-17.0312 z "/>
-</g>
+<path style="fill:currentColor;fill-opacity:1;stroke:none" d="m 6,2 l -5.293,5.293 -.707,.707 .707,.707 5.293,5.293 h 9 1 v -12 h -1 -9 z  m 2.002,3 l 2.0098,2.0098 2.0098,-2.0098 .9902,.9902 -2.0098,2.0098 2.0098,2.0098 -.9902,.9902 -2.0098,-2.0098 -2.0098,2.0098 -.9902,-.9902 2.0098,-2.0098 -2.0098,-2.0098 .9902,-.9902 z " class="ColorScheme-Text"/>
 </svg>

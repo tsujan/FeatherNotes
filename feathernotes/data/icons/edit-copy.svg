@@ -1,9 +1,10 @@
-<svg width="48" version="1.1" xmlns="http://www.w3.org/2000/svg" height="48">
-<defs id="defs7386"/>
-<g id="layer12" transform="translate(-80,-636)">
-<path id="path4190" d="m 83.75,639.3813 0,31.9127 33.875,0 0,-31.917 -10.9596,.004 z "/>
-<path style="fill:#a9bbbf" id="rect4090" d="m 82.75,638.3814 0,31.9127 33.875,0 0,-31.917 -10.9596,.004 z "/>
-<path id="path4188" d="m 98.25,654.7557 0,27.7883 29.4969,0 0,-27.792 -9.5431,.003 z "/>
-<path style="fill:#ecf0f1" id="path4186" d="m 97.25,653.7558 0,27.7883 29.497,0 0,-27.792 -9.5431,.003 z "/>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+<defs id="defs1">
+<style type="text/css" id="current-color-scheme">
+.ColorScheme-Text {
+color:#000;
+}
+</style>
+</defs>
+<path style="fill:currentColor;fill-opacity:1;stroke:none" d="m 3,2 v 11 h 3 v 1 h 5 l 3,-3 v -7 h -1 v -2 h -9.21484 -0.785156 z  m 1,1 h 8 v 1 h -6 v 8 h -2 v -9 z  m 3,2 h 6 v 5 h -3 v 3 h -3 v -8 z " class="ColorScheme-Text"/>
 </svg>

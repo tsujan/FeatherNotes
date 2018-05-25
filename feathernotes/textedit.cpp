@@ -20,20 +20,112 @@
 #include <QToolTip>
 #include <QTimer>
 #include <QTextBlock>
+#include <QRegularExpression>
 
 namespace FeatherNotes {
+
+// Finds the (remaining) spaces that should be inserted with Ctrl+Tab.
+QString TextEdit::remainingSpaces (const QString& spaceTab, const QTextCursor& cursor) const
+{
+    QTextCursor tmp = cursor;
+    QString txt = cursor.block().text().left (cursor.positionInBlock());
+    QFontMetricsF fm = QFontMetricsF (document()->defaultFont());
+    qreal spaceL = fm.width (" ");
+    int n = 0, i = 0;
+    while ((i = txt.indexOf("\t", i)) != -1)
+    { // find tab widths in terms of spaces
+        tmp.setPosition (tmp.block().position() + i);
+        qreal x = (qreal)(cursorRect (tmp).right());
+        tmp.setPosition (tmp.position() + 1);
+        x = (qreal)(cursorRect (tmp).right()) - x;
+        n += qMax (qRound (x / spaceL) - 1, 0);
+        ++i;
+    }
+    n += txt.count();
+    n = spaceTab.count() - n % spaceTab.count();
+    QString res;
+    for (int i = 0 ; i < n; ++i)
+        res += " ";
+    return res;
+}
+/*************************/
+// Returns a cursor that selects the spaces to be removed by a backtab.
+QTextCursor TextEdit::backTabCursor (const QTextCursor& cursor) const
+{
+    QTextCursor tmp = cursor;
+    tmp.movePosition (QTextCursor::StartOfBlock);
+    /* find the start of the real text */
+    const QString blockText = cursor.block().text();
+    int indx = 0;
+    QRegularExpressionMatch match;
+    if (blockText.indexOf (QRegularExpression ("^\\s+"), 0, &match) > -1)
+        indx = match.capturedLength();
+    else
+        return tmp;
+    int txtStart = cursor.block().position() + indx;
+
+    QString txt = blockText.left (indx);
+    QFontMetricsF fm = QFontMetricsF (document()->defaultFont());
+    qreal spaceL = fm.width (" ");
+    int n = 0, i = 0;
+    while ((i = txt.indexOf("\t", i)) != -1)
+    { // find tab widths in terms of spaces
+        tmp.setPosition (tmp.block().position() + i);
+        qreal x = (qreal)(cursorRect (tmp).right());
+        tmp.setPosition (tmp.position() + 1);
+        x = (qreal)(cursorRect (tmp).right()) - x;
+        n += qMax (qRound (x / spaceL) - 1, 0);
+        ++i;
+    }
+    n += txt.count();
+    n = n % textTab_.count();
+    if (n == 0) n = textTab_.count();
+
+    tmp.setPosition (txtStart);
+    if (blockText.at (indx - 1) == " ")
+        tmp.setPosition(txtStart - n, QTextCursor::KeepAnchor);
+    else // the previous character is a tab
+    {
+        qreal x = (qreal)(cursorRect (tmp).right());
+        tmp.setPosition(txtStart - 1, QTextCursor::KeepAnchor);
+        x -= (qreal)(cursorRect (tmp).right());
+        n -= qRound (x / spaceL);
+        if (n < 0) n = 0; // impossible
+        tmp.setPosition (tmp.position() - n, QTextCursor::KeepAnchor);
+    }
+
+    return tmp;
+}
+/*************************/
+static inline bool isOnlySpaces (const QString &str)
+{
+    int i = 0;
+    while (i < str.size())
+    { // always skip the starting spaces
+        QChar ch = str.at (i);
+        if (ch == QChar (QChar::Space) || ch == QChar (QChar::Tabulation))
+            ++i;
+        else return false;
+    }
+    return true;
+}
 
 void TextEdit::keyPressEvent (QKeyEvent *event)
 {
     if (event->key() == Qt::Key_Return || event->key() == Qt::Key_Enter)
     {
-        if (event->modifiers() & Qt::ShiftModifier)
+        QTextCursor cur = textCursor();
+        bool isBracketed (false);
+        QString selTxt = cur.selectedText();
+        QString prefix, indent;
+        bool withShift (event->modifiers() & Qt::ShiftModifier);
+
+        /* with Shift+Enter, find the non-letter prefix */
+        if (withShift)
         {
-            QString prefix;
-            QTextCursor cur = textCursor();
             cur.clearSelection();
             setTextCursor (cur);
-            QString blockText = cur.block().text();
+            const QString blockText = cur.block().text();
             int i = 0;
             int curBlockPos = cur.position() - cur.block().position();
             while (i < curBlockPos)
@@ -46,32 +138,144 @@ void TextEdit::keyPressEvent (QKeyEvent *event)
                 }
                 else break;
             }
-            if (!prefix.isEmpty())
+        }
+        else
+        {
+            /* find the indentation */
+            if (autoIndentation)
+                indent = computeIndentation (cur);
+            /* check whether a bracketed text is selected
+               so that the cursor position is at its start */
+            QTextCursor anchorCur = cur;
+            anchorCur.setPosition (cur.anchor());
+            if (autoBracket
+                && cur.position() == cur.selectionStart()
+                && !cur.atBlockStart() && !anchorCur.atBlockEnd())
             {
-                cur.beginEditBlock();
-                /* first press Enter normally... */
-                cur.insertText (QChar (QChar::ParagraphSeparator));
-                /* ... then, handle Shift+Enter */
-                cur.insertText (prefix);
-                cur.endEditBlock();
-                ensureCursorVisible();
-                event->accept();
-                return;
+                cur.setPosition (cur.position());
+                cur.movePosition (QTextCursor::PreviousCharacter);
+                cur.movePosition (QTextCursor::NextCharacter,
+                                  QTextCursor::KeepAnchor,
+                                  selTxt.size() + 2);
+                QString selTxt1 = cur.selectedText();
+                if (selTxt1 == "{" + selTxt + "}" || selTxt1 == "(" + selTxt + ")")
+                    isBracketed = true;
+                cur = textCursor(); // reset the current cursor
             }
         }
-        else if (autoIndentation)
+
+        if (withShift || autoIndentation || isBracketed)
         {
-            QTextCursor cur = textCursor();
-            QString indent = computeIndentation (cur);
-            if (!indent.isEmpty())
+            cur.beginEditBlock();
+            /* first press Enter normally... */
+            cur.insertText (QChar (QChar::ParagraphSeparator));
+            /* ... then, insert indentation... */
+            cur.insertText (indent);
+            /* ... and handle Shift+Enter or brackets */
+            if (withShift)
+                cur.insertText (prefix);
+            else if (isBracketed)
             {
-                cur.beginEditBlock();
-                /* first press Enter normally... */
-                cur.insertText (QChar (QChar::ParagraphSeparator));
-                /* ... then, insert indentation... */
-                cur.insertText (indent);
-                cur.endEditBlock();
-                ensureCursorVisible();
+                cur.movePosition (QTextCursor::PreviousBlock);
+                cur.movePosition (QTextCursor::EndOfBlock);
+                int start = -1;
+                QStringList lines = selTxt.split (QChar (QChar::ParagraphSeparator));
+                if (lines.size() == 1)
+                {
+                    cur.insertText (QChar (QChar::ParagraphSeparator));
+                    cur.insertText (indent);
+                    start = cur.position();
+                    if (!isOnlySpaces (lines. at (0)))
+                        cur.insertText (lines. at (0));
+                }
+                else // multi-line
+                {
+                    for (int i = 0; i < lines.size(); ++i)
+                    {
+                        if (i == 0 && isOnlySpaces (lines. at (0)))
+                            continue;
+                        cur.insertText (QChar (QChar::ParagraphSeparator));
+                        if (i == 0)
+                        {
+                            cur.insertText (indent);
+                            start = cur.position();
+                        }
+                        else if (i == 1 && start == -1)
+                            start = cur.position(); // the first line was only spaces
+                        cur.insertText (lines. at (i));
+                    }
+                }
+                cur.setPosition (start, start >= cur.block().position()
+                                            ? QTextCursor::MoveAnchor
+                                            : QTextCursor::KeepAnchor);
+                setTextCursor (cur);
+            }
+            cur.endEditBlock();
+            ensureCursorVisible();
+            event->accept();
+            return;
+        }
+    }
+    else if (event->key() == Qt::Key_ParenLeft
+             || event->key() == Qt::Key_BraceLeft
+             || event->key() == Qt::Key_BracketLeft
+             || event->key() == Qt::Key_QuoteDbl)
+    {
+        if (autoBracket)
+        {
+            QTextCursor cursor = textCursor();
+            bool autoB (false);
+            if (!cursor.hasSelection())
+            {
+                if (cursor.atBlockEnd())
+                    autoB = true;
+                else
+                {
+                    QTextCursor tmp = cursor;
+                    tmp.movePosition (QTextCursor::NextCharacter, QTextCursor::KeepAnchor);
+                    if (!tmp.selectedText().at (0).isLetterOrNumber())
+                        autoB = true;
+                }
+            }
+            else if (cursor.position() == cursor.selectionStart())
+                autoB = true;
+            if (autoB)
+            {
+                int pos = cursor.position();
+                int anch = cursor.anchor();
+                cursor.beginEditBlock();
+                cursor.setPosition (anch);
+                if (event->key() == Qt::Key_ParenLeft)
+                {
+                    cursor.insertText (")");
+                    cursor.setPosition (pos);
+                    cursor.insertText ("(");
+                }
+                else if (event->key() == Qt::Key_BraceLeft)
+                {
+                    cursor.insertText ("}");
+                    cursor.setPosition (pos);
+                    cursor.insertText ("{");
+                }
+                else if (event->key() == Qt::Key_BracketLeft)
+                {
+                    cursor.insertText ("]");
+                    cursor.setPosition (pos);
+                    cursor.insertText ("[");
+                }
+                else// if (event->key() == Qt::Key_QuoteDbl)
+                {
+                    cursor.insertText ("\"");
+                    cursor.setPosition (pos);
+                    cursor.insertText ("\"");
+                }
+                /* select the text and set the cursor at its start */
+                cursor.setPosition (anch + 1, QTextCursor::MoveAnchor);
+                cursor.setPosition (pos + 1, QTextCursor::KeepAnchor);
+                cursor.endEditBlock();
+                /* WARNING: Why does putting "setTextCursor()" before "endEditBlock()"
+                            cause a crash with huge lines? Most probably, a Qt bug. */
+                setTextCursor (cursor);
                 event->accept();
                 return;
             }
@@ -104,6 +308,84 @@ void TextEdit::keyPressEvent (QKeyEvent *event)
             event->accept();
             return;
         }
+    }
+    else if (event->key() == Qt::Key_Tab)
+    {
+        QTextCursor cursor = textCursor();
+        int newLines = cursor.selectedText().count (QChar (QChar::ParagraphSeparator));
+        if (newLines > 0)
+        {
+            cursor.beginEditBlock();
+            cursor.setPosition (qMin (cursor.anchor(), cursor.position())); // go to the first block
+            cursor.movePosition (QTextCursor::StartOfBlock);
+            for (int i = 0; i <= newLines; ++i)
+            {
+                /* skip all spaces to align the real text */
+                int indx = 0;
+                QRegularExpressionMatch match;
+                if (cursor.block().text().indexOf (QRegularExpression ("^\\s+"), 0, &match) > -1)
+                    indx = match.capturedLength();
+                cursor.setPosition (cursor.block().position() + indx);
+                if (event->modifiers() & Qt::ControlModifier)
+                {
+                    cursor.insertText (remainingSpaces (event->modifiers() & Qt::MetaModifier
+                                                        ? "  " : textTab_, cursor));
+                }
+                else
+                    cursor.insertText ("\t");
+                if (!cursor.movePosition (QTextCursor::NextBlock))
+                    break; // not needed
+            }
+            cursor.endEditBlock();
+            event->accept();
+            return;
+        }
+        else if (event->modifiers() & Qt::ControlModifier)
+        {
+            QTextCursor tmp (cursor);
+            tmp.setPosition (qMin (tmp.anchor(), tmp.position()));
+            cursor.insertText (remainingSpaces (event->modifiers() & Qt::MetaModifier
+                                                ? "  " : textTab_, tmp));
+            event->accept();
+            return;
+        }
+    }
+    else if (event->key() == Qt::Key_Backtab)
+    {
+        QTextCursor cursor = textCursor();
+        int newLines = cursor.selectedText().count (QChar (QChar::ParagraphSeparator));
+        cursor.setPosition (qMin (cursor.anchor(), cursor.position()));
+        cursor.beginEditBlock();
+        cursor.movePosition (QTextCursor::StartOfBlock);
+        for (int i = 0; i <= newLines; ++i)
+        {
+            if (cursor.atBlockEnd())
+            {
+                if (!cursor.movePosition (QTextCursor::NextBlock))
+                    break; // not needed
+                continue;
+            }
+            cursor = backTabCursor (cursor);
+            cursor.removeSelectedText();
+            if (!cursor.movePosition (QTextCursor::NextBlock))
+                break; // not needed
+        }
+        cursor.endEditBlock();
+
+        /* otherwise, do nothing with SHIFT+TAB */
+        event->accept();
+        return;
+    }
+    else if (event->key() == Qt::Key_Insert)
+    {
+        setOverwriteMode (!overwriteMode());
+        if (!overwriteMode())
+        {
+            setCursorWidth (1);
+            update(); // otherwise, a part of the thick cursor might remain
+        }
+        else
+            setCursorWidth (QFontMetrics(font()).averageCharWidth());
     }
     /* because of a bug in Qt5, the non-breaking space (ZWNJ) isn't inserted with SHIFT+SPACE */
     else if (event->key() == 0x200c)

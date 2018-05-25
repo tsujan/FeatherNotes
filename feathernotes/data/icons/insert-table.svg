@@ -1,17 +1,10 @@
-<svg width="128" version="1.0" xmlns="http://www.w3.org/2000/svg" height="128">
-<g style="stroke:none">
-<path style="fill:#8c8c8c" id="path4161" d="m 0,8 0,104.9063 128,0 L 128,8 Z"/>
-<g style="fill:#fff">
-<path id="path4159" d="M 7.5938,15.7188 40,15.7188 40,40.5 7.5938,40.5 Z"/>
-<path id="path4157" d="m 48,15.7188 32,0 0,24.7812 -32,0 z"/>
-<path id="path4153" d="M 7.5938,48 40,48 l 0,21.0938 0,3.90625 -32.4062,0 z"/>
-<path id="path4151" d="m 48,48 32,0 0,25 -32,0 z"/>
-<path id="path4149" d="m 88,48 32,0 0,25 -32,0 z"/>
-<path id="path4147" d="m 7.5938,80.5 32.4062,0 0,25.2188 -32.4062,0 z"/>
-<path id="path4145" d="m 48,80.5 32,0 0,25.2188 -32,0 z"/>
-<path id="rect6427" d="m 88,80.5 32,0 0,25.2188 -32,0 z"/>
-</g>
-</g>
-<circle cx="-84.454689" cy="-55.751625" style="fill:#0a0" r="31.99345" id="circle3581_2_" transform="matrix(-0.96592582,0.25881906,-0.25881906,-0.96592582,0,0)"/>
-<path style="fill:#fff;fill-rule:evenodd;stroke:none" id="rect3232" d="m 91.0065,11.9935 0,15 -15,0 0,10 15,0 0,15 10,0 0,-15 15,0 0,-10 -15,0 0,-15 -10,0 z "/>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+<defs id="defs1">
+<style type="text/css" id="current-color-scheme">
+.ColorScheme-Text {
+color:#000;
+}
+</style>
+</defs>
+<path style="fill:currentColor;fill-opacity:1;stroke:none" id="path4" d="m 2,2 v 12 h 7 v -1 h -2 v -3 h 2 v -1 h -2 v -3 h 2 v 3 h 1 v -3 h 3 v 3 h 1 v -7 h -12 z  m 1,1 h 3 v 2 h -3 v -2 z  m 4,0 h 2 v 2 h -2 v -2 z  m 3,0 h 3 v 2 h -3 v -2 z  m -7,3 h 3 v 3 h -3 v -3 z  m 8,3 v 2 h -2 v 1 h 2 v 2 h 1 v -2 h 2 v -1 h -2 v -2 h -1 z  m -8,1 h 3 v 3 h -3 v -3 z " class="ColorScheme-Text"/>
 </svg>

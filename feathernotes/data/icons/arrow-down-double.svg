@@ -1,8 +1,10 @@
-<svg width="48" version="1.1" xmlns="http://www.w3.org/2000/svg" height="48">
-<g style="stroke-linecap:round;image-rendering:auto;isolation:auto;fill-rule:evenodd;stroke-width:12;color-interpolation:sRGB;shape-rendering:auto;solid-opacity:1;stroke:none;text-rendering:auto;line-height:normal;color-rendering:auto;solid-color:#000000;text-transform:none;text-decoration-style:solid;mix-blend-mode:normal;font-family:sans-serif;white-space:normal;text-decoration-line:none;color:#000;text-align:start;text-decoration-color:#000000;text-indent:0">
-<path style="opacity:.6;color-interpolation-filters:linearRGB;fill:#fff" id="path4169" d="m 7.0999,6.8761 a 6.0006,5.75408 0 0,0 1.9082,4.49118 l 16.4961,15.1329 16.4961,-15.1329 a 6.0006,5.75408 0 1,0 -8.29492,-8.31562 l -8.2012,7.5234 -8.2012,-7.5234 a 6.0006,5.75408 0 0,0 -10.2031,3.82443 Z "/>
-<path style="color-interpolation-filters:linearRGB;fill:#919191" id="path4137" d="m 5.6001,5.4555 a 6.0006,5.73072 0 0,0 1.9082,4.47294 l 16.4961,15.0715 16.4961,-15.0715 a 6.0006,5.73072 0 1,0 -8.29492,-8.28186 l -8.2012,7.4928 -8.2012,-7.4928 a 6.0006,5.73072 0 0,0 -10.2031,3.80891 Z "/>
-<path style="opacity:.6;color-interpolation-filters:linearRGB;fill:#fff" id="path4156" d="m 7.0999,28.3759 a 6.0006,5.75408 0 0,0 1.9082,4.49118 l 16.4961,15.1329 16.4961,-15.1329 a 6.0006,5.75408 0 1,0 -8.29492,-8.31562 l -8.2012,7.5234 -8.2012,-7.5234 a 6.0006,5.75408 0 0,0 -10.2031,3.82443 z "/>
-<path style="color-interpolation-filters:linearRGB;fill:#919191" id="path4158" d="m 5.6001,26.9553 a 6.0006,5.73072 0 0,0 1.9082,4.47294 l 16.4961,15.0715 16.4961,-15.0715 a 6.0006,5.73072 0 1,0 -8.29492,-8.28186 l -8.2012,7.4928 -8.2012,-7.4928 a 6.0006,5.73072 0 0,0 -10.2031,3.8089 z "/>
-</g>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+<defs id="defs1">
+<style type="text/css" id="current-color-scheme">
+.ColorScheme-Text {
+color:#000;
+}
+</style>
+</defs>
+<path style="fill:currentColor;fill-opacity:1;stroke:none" id="path4" d="m 2.7188,2.5 l -.7188,.748 6,6.252 1.875,-1.9531 4.125,-4.2988 -.7188,-.748 -4.125,4.2988 -1.1562,1.2363 -1.1562,-1.2363 -4.125,-4.2988 z  m 0,4 l -.7188,.748 6,6.252 1.875,-1.9531 4.125,-4.2988 -.7188,-.748 -4.125,4.2988 -1.1562,1.2363 -1.1562,-1.2363 -4.125,-4.2988 z " class="ColorScheme-Text"/>
 </svg>

@@ -33,27 +33,64 @@ void handleQuitSignals (const std::vector<int>& quitSignals)
 
 int main(int argc, char *argv[])
 {
-    QApplication app (argc, argv);
-
-    handleQuitSignals ({SIGQUIT, SIGINT, SIGTERM, SIGHUP}); // -> https://en.wikipedia.org/wiki/Unix_signal
-
-    if (QString::fromUtf8 (argv[1]) == "--help")
+    const QString name = "FeatherNotes";
+    const QString version = "0.4.5";
+    const QString option = QString::fromUtf8 (argv[1]);
+    if (option == "--help" || option == "-h")
     {
         QTextStream out (stdout);
-        out << "\nUsage:\n	feathernotes [options] [file] "\
+        out << "FeatherNotes - Lightweight Qt5 hierarchical notes-manager\n"\
+               "\nUsage:\n	feathernotes [options] [file] "\
                "Open the specified file\nOptions:\n"\
+               "--version or -v  Show version information and exit.\n"\
                "--help          Show this help and exit\n"\
                "-m, --min	Start minimized\n"\
                "-t, --tray	Start iconified to tray if there is a tray icon\n\n";
         return 0;
     }
+    else if (option == "--version" || option == "-v")
+    {
+        QTextStream out (stdout);
+        out << name << " " << version <<  endl;
+        return 0;
+    }
+
+    QApplication app (argc, argv);
+    app.setApplicationName (name);
+    app.setApplicationVersion (version);
+
+    handleQuitSignals ({SIGQUIT, SIGINT, SIGTERM, SIGHUP}); // -> https://en.wikipedia.org/wiki/Unix_signal
+
+#if QT_VERSION >= 0x050500
+    app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
+#endif
+
+    QStringList langs (QLocale::system().uiLanguages());
+    QString lang; // bcp47Name() doesn't work under vbox
+    if (!langs.isEmpty())
+        lang = langs.first().replace ('-', '_');
+
+    QTranslator qtTranslator;
+    if (!qtTranslator.load ("qt_" + lang, QLibraryInfo::location (QLibraryInfo::TranslationsPath)))
+    { // not needed; doesn't happen
+        if (!langs.isEmpty())
+        {
+            lang = langs.first().split (QLatin1Char ('-')).first();
+            qtTranslator.load ("qt_" + lang, QLibraryInfo::location (QLibraryInfo::TranslationsPath));
+        }
+    }
+    app.installTranslator (&qtTranslator);
+
+    QTranslator FPTranslator;
+    FPTranslator.load ("feathernotes_" + lang, DATADIR "/feathernotes/translations");
+    app.installTranslator (&FPTranslator);
 
     QString message;
     if (argc > 1)
         message += QString::fromUtf8 (argv[1]);
     if (argc > 2)
     {
-        message += "\n";
+        message += "\n\r"; // a string that can't be used in file names
         message += QString::fromUtf8 (argv[2]);
     }
 

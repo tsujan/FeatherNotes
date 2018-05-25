@@ -1,3 +1,11 @@
+V0.4.5
+---------
+ * Added some text-editor shortcuts of FeatherPad.
+ * Auto-bracketing support.
+ * Better text tabulation.
+ * Translation support.
+ * Added SVG symbolic icons (that change color to have high contrast with their backgrounds) and removed system icon support because some important icons may not be found in system themes.
+
 V0.4.4
 ---------
  * Transformed signal-slot connections into the new syntax.

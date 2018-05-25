@@ -20,7 +20,6 @@
 
 #include <QShortcut>
 #include <QLineEdit>
-#include <QIcon>
 #include <QKeyEvent>
 
 namespace FeatherNotes {

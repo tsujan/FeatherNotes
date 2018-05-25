@@ -119,7 +119,6 @@ private slots:
     void prefSize (int value);
     void prefSplitterSize (int checked);
     void prefPosition (int checked);
-    void prefIcon (int checked);
     void prefHasTray (int checked);
     void prefMinTray (int checked);
     void prefTree (int checked);
@@ -128,6 +127,7 @@ private slots:
     void prefEnlightenment (int checked);
     void prefWrap (int checked);
     void prefIndent (int checked);
+    void prefAutoBracket (int checked);
     void prefAutoSave (int checked);
     void prefEDiff (int checked);
     void prefScrollJump (int checked);
@@ -230,7 +230,7 @@ private:
          transparentTree_,
          noToolbar_,
          noMenubar_,
-         sysIcon_;
+         autoBracket_;
     int autoSave_;
     QPoint position_; // Excluding the window frame.
     QSize winSize_, startSize_;

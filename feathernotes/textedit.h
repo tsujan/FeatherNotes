@@ -40,6 +40,8 @@ public:
     TextEdit (QWidget *parent = 0) : QTextEdit (parent)
     {
         autoIndentation = true;
+        autoBracket = false;
+        textTab_ = "    "; // the default text tab is four spaces
         pressPoint = QPoint();
         scrollJumpWorkaround = false;
         VScrollBar *vScrollBar = new VScrollBar;
@@ -53,6 +55,7 @@ public:
     void zooming (float range);
 
     bool autoIndentation;
+    bool autoBracket;
 
 signals:
     void resized();
@@ -72,6 +75,10 @@ protected:
 
 private:
     QString computeIndentation (const QTextCursor& cur) const;
+    QString remainingSpaces (const QString& spaceTab, const QTextCursor& cursor) const;
+    QTextCursor backTabCursor(const QTextCursor& cursor) const;
+
+    QString textTab_; // text tab in terms of spaces
     QPoint pressPoint;
     bool scrollJumpWorkaround; // for working around Qt5's scroll jump bug
 };

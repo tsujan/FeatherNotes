@@ -24,6 +24,7 @@
 #include "help.h"
 #include "filedialog.h"
 #include "messagebox.h"
+#include "svgicons.h"
 
 #include <QToolButton>
 #include <QPrinter>
@@ -92,7 +93,7 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
     transparentTree_ = false;
     noToolbar_ = false;
     noMenubar_ = false;
-    sysIcon_ = false;
+    autoBracket_ = false;
     readAndApplyConfig();
 
     QWidget* spacer = new QWidget();
@@ -271,7 +272,7 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
     }
     else
     {
-        QStringList sl = message.split ("\n");
+        QStringList sl = message.split ("\n\r");
         if (sl.at (0) != "--min" && sl.at (0) != "-m"
             && sl.at (0) != "--tray" && sl.at (0) != "-t")
         {
@@ -444,7 +445,10 @@ void FN::checkForTray()
 /*************************/
 void FN::createTrayIcon()
 {
-    tray_ = new QSystemTrayIcon (QIcon::fromTheme ("feathernotes"), this);
+    QIcon icn = QIcon::fromTheme ("feathernotes");
+    if (icn.isNull())
+        icn = QIcon (":icons/feathernotes.svg");
+    tray_ = new QSystemTrayIcon (icn, this);
     if (xmlPath_.isEmpty())
         tray_->setToolTip ("FeatherNotes");
     else
@@ -460,10 +464,11 @@ void FN::createTrayIcon()
     if (underE_)
         actionshowMainWindow->setText ("&Raise");
     connect (actionshowMainWindow, &QAction::triggered, this, &FN::activateTray);
-    QAction *actionNewTray = trayMenu->addAction (QIcon (":icons/document-new.svg"), tr("&New Note"));
-    QAction *actionOpenTray = trayMenu->addAction (QIcon (":icons/document-open.svg"), tr("&Open"));
+    /* use system icons with the tray menu because it gets its style from the panel */
+    QAction *actionNewTray = trayMenu->addAction (QIcon::fromTheme ("document-new"), tr("&New Note"));
+    QAction *actionOpenTray = trayMenu->addAction (QIcon::fromTheme ("document-open"), tr("&Open"));
     trayMenu->addSeparator();
-    QAction *antionQuitTray = trayMenu->addAction (QIcon (":icons/application-exit.svg"), tr("&Quit"));
+    QAction *antionQuitTray = trayMenu->addAction (QIcon::fromTheme ("application-exit"), tr("&Quit"));
     connect (actionNewTray, &QAction::triggered, this, &FN::newNote);
     connect (actionOpenTray, &QAction::triggered, this, &FN::openFile);
     connect (antionQuitTray, &QAction::triggered, this, &FN::close);
@@ -1260,6 +1265,7 @@ TextEdit *FN::newWidget()
     TextEdit *textEdit = new TextEdit;
     textEdit->setScrollJumpWorkaround (scrollJumpWorkaround_);
     //textEdit->autoIndentation = true; // auto-indentation is enabled by default
+    textEdit->autoBracket = autoBracket_;
     textEdit->setStyleSheet ("QTextEdit {"
                              "color: black;}");
     QPalette palette = QApplication::palette();
@@ -1942,8 +1948,8 @@ void FN::handleTags()
     lineEdit->setToolTip ("Tag(s) for this node");
     connect (lineEdit, &QLineEdit::returnPressed, dialog, &QDialog::accept);
     QSpacerItem *spacer = new QSpacerItem (1, 5);
-    QPushButton *cancelButton = new QPushButton (QIcon (":icons/dialog-cancel.svg"), "Cancel");
-    QPushButton *okButton = new QPushButton (QIcon (":icons/dialog-ok.svg"), "OK");
+    QPushButton *cancelButton = new QPushButton (symbolicIcon::icon (":icons/dialog-cancel.svg"), tr ("Cancel"));
+    QPushButton *okButton = new QPushButton (symbolicIcon::icon (":icons/dialog-ok.svg"), tr ("OK"));
     connect (cancelButton, &QAbstractButton::clicked, dialog, &QDialog::reject);
     connect (okButton, &QAbstractButton::clicked, dialog, &QDialog::accept);
 
@@ -2343,7 +2349,7 @@ void FN::findInTags()
     listWidget->setSelectionMode (QAbstractItemView::SingleSelection);
     connect (listWidget, &QListWidget::itemActivated, this, &FN::selectRow);
     connect (listWidget, &QListWidget::currentRowChanged, this, &FN::chooseRow);
-    QPushButton *closeButton = new QPushButton (QIcon (":icons/dialog-cancel.svg"), "Close");
+    QPushButton *closeButton = new QPushButton (symbolicIcon::icon (":icons/dialog-cancel.svg"), tr ("Close"));
     connect (closeButton, &QAbstractButton::clicked, TagsDialog, &QDialog::reject);
     connect (TagsDialog, &QDialog::finished, this, &FN::clearTagsList);
 
@@ -2903,9 +2909,9 @@ void FN::insertLink()
     linkEntry->setText (href);
     connect (linkEntry, &QLineEdit::returnPressed, dialog, &QDialog::accept);
     QSpacerItem *spacer = new QSpacerItem (1, 5);
-    QPushButton *cancelButton = new QPushButton (QIcon (":icons/dialog-cancel.svg"), "Cancel");
+    QPushButton *cancelButton = new QPushButton (symbolicIcon::icon (":icons/dialog-cancel.svg"), tr ("Cancel"));
     connect (cancelButton, &QAbstractButton::clicked, dialog, &QDialog::reject);
-    QPushButton *okButton = new QPushButton (QIcon (":icons/dialog-ok.svg"), "OK");
+    QPushButton *okButton = new QPushButton (symbolicIcon::icon (":icons/dialog-ok.svg"), tr ("OK"));
     connect (okButton, &QAbstractButton::clicked, dialog,  &QDialog::accept);
 
     /* fit in the grid */
@@ -2973,13 +2979,7 @@ void FN::embedImage()
     ImagePathEntry_->setToolTip (tr ("Image path"));
     connect (ImagePathEntry_, &QLineEdit::returnPressed, dialog, &QDialog::accept);
     QToolButton *openBtn = new QToolButton();
-    openBtn->setIcon (QIcon (":icons/document-open.svg"));
-    if (sysIcon_)
-    {
-        QIcon icn = QIcon::fromTheme ("document-open");
-        if (!icn.isNull())
-            openBtn->setIcon (icn);
-    }
+    openBtn->setIcon (symbolicIcon::icon (":icons/document-open.svg"));
     openBtn->setToolTip (tr ("Open image"));
     connect (openBtn, &QAbstractButton::clicked, this, &FN::setImagePath);
     QLabel *label = new QLabel();
@@ -2991,8 +2991,8 @@ void FN::embedImage()
     spinBox->setToolTip (tr ("Scaling percentage"));
     connect (spinBox, &QAbstractSpinBox::editingFinished, dialog, &QDialog::accept);
     QSpacerItem *spacer = new QSpacerItem (1, 10);
-    QPushButton *cancelButton = new QPushButton (QIcon (":icons/dialog-cancel.svg"), "Cancel");
-    QPushButton *okButton = new QPushButton (QIcon (":icons/dialog-ok.svg"), "OK");
+    QPushButton *cancelButton = new QPushButton (symbolicIcon::icon (":icons/dialog-cancel.svg"), tr ("Cancel"));
+    QPushButton *okButton = new QPushButton (symbolicIcon::icon (":icons/dialog-ok.svg"), tr ("OK"));
     connect (cancelButton, &QAbstractButton::clicked, dialog, &QDialog::reject);
     connect (okButton, &QAbstractButton::clicked, dialog, &QDialog::accept);
 
@@ -3149,8 +3149,8 @@ void FN::scaleImage()
     spinBox->setToolTip (tr ("Scaling percentage"));
     connect (spinBox, &QAbstractSpinBox::editingFinished, dialog, &QDialog::accept);
     QSpacerItem *spacer = new QSpacerItem (1, 10);
-    QPushButton *cancelButton = new QPushButton (QIcon (":icons/dialog-cancel.svg"), "Cancel");
-    QPushButton *okButton = new QPushButton (QIcon (":icons/dialog-ok.svg"), "OK");
+    QPushButton *cancelButton = new QPushButton (symbolicIcon::icon (":icons/dialog-cancel.svg"), tr ("Cancel"));
+    QPushButton *okButton = new QPushButton (symbolicIcon::icon (":icons/dialog-ok.svg"), tr ("OK"));
     connect (cancelButton, &QAbstractButton::clicked, dialog, &QDialog::reject);
     connect (okButton, &QAbstractButton::clicked, dialog, &QDialog::accept);
 
@@ -3389,8 +3389,8 @@ void FN::addTable()
     spinBoxCol->setValue (1);
     connect (spinBoxCol, &QAbstractSpinBox::editingFinished, dialog, &QDialog::accept);
     QSpacerItem *spacer = new QSpacerItem (1, 10);
-    QPushButton *cancelButton = new QPushButton (QIcon (":icons/dialog-cancel.svg"), "Cancel");
-    QPushButton *okButton = new QPushButton (QIcon (":icons/dialog-ok.svg"), "OK");
+    QPushButton *cancelButton = new QPushButton (symbolicIcon::icon (":icons/dialog-cancel.svg"), tr ("Cancel"));
+    QPushButton *okButton = new QPushButton (symbolicIcon::icon (":icons/dialog-ok.svg"), tr ("OK"));
     connect (cancelButton, &QAbstractButton::clicked, dialog, &QDialog::reject);
     connect (okButton, &QAbstractButton::clicked, dialog, &QDialog::accept);
 
@@ -3588,11 +3588,6 @@ void FN::PrefDialog()
                                  "\n"
                                  "\n(This may not work correctly\nunder GTK+ DE's like Unity\nand Cinnamon.)"));
 
-    QCheckBox *iconBox = new QCheckBox (tr ("Use own ico&ns"));
-    iconBox->setToolTip (tr ("Uncheck this if you want FeatherNotes\nto use system icons!"
-                             "\n"
-                             "\nNeeds application restart to take effect"));
-
     /* tray icon */
     QCheckBox *hasTrayBox = new QCheckBox (tr ("Add to s&ystray"));
     hasTrayBox->setToolTip (tr ("Decides whether a systray icon should be used.\nIf checked, the titlebar close button iconifies\nthe window to the systray instead of quitting.\n\nNeeds restarting of FeatherNotes to take effect."));
@@ -3650,21 +3645,19 @@ void FN::PrefDialog()
     windowGrid->addWidget (splitterSizeBox, 2, 0, 1, 5);
     windowGrid->addWidget (positionBox, 3, 0, 1, 5);
 
-    windowGrid->addWidget (iconBox, 4, 0, 1, 5);
+    windowGrid->addWidget (hasTrayBox, 4, 0, 1, 5);
+    windowGrid->addWidget (minTrayBox, 5, 1, 1, 4);
 
-    windowGrid->addWidget (hasTrayBox, 5, 0, 1, 5);
-    windowGrid->addWidget (minTrayBox, 6, 1, 1, 4);
+    windowGrid->addWidget (transparentTree,6, 0, 1, 5);
 
-    windowGrid->addWidget (transparentTree, 7, 0, 1, 5);
+    windowGrid->addWidget (noToolbar, 7, 0, 1, 5);
+    windowGrid->addWidget (noMenubar, 8, 0, 1, 5);
 
-    windowGrid->addWidget (noToolbar, 8, 0, 1, 5);
-    windowGrid->addWidget (noMenubar, 9, 0, 1, 5);
-
-    windowGrid->addWidget (EBox, 10, 0, 1, 5);
-    windowGrid->addWidget (ELabel, 11, 0, 1, 2, Qt::AlignRight);
-    windowGrid->addWidget (ESpinX, 11, 2, 1, 1);
-    windowGrid->addWidget (XLabel, 11, 3, 1, 1);
-    windowGrid->addWidget (ESpinY, 11, 4, 1, 1, Qt::AlignLeft);
+    windowGrid->addWidget (EBox, 9, 0, 1, 5);
+    windowGrid->addWidget (ELabel, 10, 0, 1, 2, Qt::AlignRight);
+    windowGrid->addWidget (ESpinX, 10, 2, 1, 1);
+    windowGrid->addWidget (XLabel, 10, 3, 1, 1);
+    windowGrid->addWidget (ESpinY, 10, 4, 1, 1, Qt::AlignLeft);
 
     windowGrid->setColumnStretch (4, 1);
     windowGrid->setColumnMinimumWidth(0, style()->pixelMetric (QStyle::PM_IndicatorWidth) + style()->pixelMetric (QStyle::PM_CheckBoxLabelSpacing));
@@ -3694,9 +3687,6 @@ void FN::PrefDialog()
 
     positionBox->setChecked (remPosition_);
     connect (positionBox, &QCheckBox::stateChanged, this, &FN::prefPosition);
-
-    iconBox->setChecked (!sysIcon_);
-    connect (iconBox, &QCheckBox::stateChanged, this, &FN::prefIcon);
 
     hasTrayBox->setChecked (hasTray_);
     connect (hasTrayBox, &QCheckBox::stateChanged, this, &FN::prefHasTray);
@@ -3740,6 +3730,8 @@ void FN::PrefDialog()
     textGrid->setHorizontalSpacing (0);
     QCheckBox *wrapBox = new QCheckBox (tr ("&Wrap lines by default"));
     QCheckBox *indentBox = new QCheckBox (tr ("Auto-&indent by default"));
+    QCheckBox *autoBracketBox = new QCheckBox (tr ("Auto-&bracket\n(Requires application restart)"));
+    autoBracketBox->setToolTip (tr ("This covers parentheses, braces, brackets and quotes.\n\nNeeds restarting of FeatherNotes to take effect."));
     QCheckBox *autoSaveBox = new QCheckBox (tr ("&Auto-save every"));
     QSpinBox *spinBox = new QSpinBox();
     spinBox->setObjectName ("autoSaveSpin");
@@ -3753,15 +3745,18 @@ void FN::PrefDialog()
     workaroundBox->setToolTip (tr ("This is not a complete fix but\nprevents annoying scroll jumps."));
     textGrid->addWidget (wrapBox, 0, 0, 1, 2);
     textGrid->addWidget (indentBox, 1, 0, 1, 2);
-    textGrid->addWidget (autoSaveBox, 2, 0);
-    textGrid->addWidget (spinBox, 2, 1);
-    textGrid->addWidget (workaroundBox, 3, 0, 1, 2);
+    textGrid->addWidget (autoBracketBox, 2, 0, 1, 2);
+    textGrid->addWidget (autoSaveBox, 3, 0);
+    textGrid->addWidget (spinBox, 4, 1);
+    textGrid->addWidget (workaroundBox, 5, 0, 1, 2);
     textGrid->setColumnStretch (2, 1);
     textGoupBox->setLayout (textGrid);
     wrapBox->setChecked (wrapByDefault_);
     connect (wrapBox, &QCheckBox::stateChanged, this, &FN::prefWrap);
     indentBox->setChecked (indentByDefault_);
     connect (indentBox, &QCheckBox::stateChanged, this, &FN::prefIndent);
+    autoBracketBox->setChecked (autoBracket_);
+    connect (autoBracketBox, &QCheckBox::stateChanged, this, &FN::prefAutoBracket);
     if (autoSave_ > -1)
     {
         autoSave_ = spinBox->value();
@@ -3778,7 +3773,7 @@ void FN::PrefDialog()
      *** Dialog ***
      **************/
 
-    QPushButton *closeButton = new QPushButton (QIcon (":icons/dialog-cancel.svg"), "Close");
+    QPushButton *closeButton = new QPushButton (symbolicIcon::icon (":icons/dialog-cancel.svg"), tr ("Close"));
     mainGrid->addWidget (windowGoupBox, 0, 0);
     mainGrid->addWidget (textGoupBox, 0, 1);
     mainGrid->addWidget (closeButton, 1, 1, Qt::AlignRight);
@@ -3930,14 +3925,6 @@ void FN::prefPosition (int checked)
     }
 }
 /*************************/
-void FN::prefIcon (int checked)
-{
-    if (checked == Qt::Checked)
-        sysIcon_ = false;
-    else if (checked == Qt::Unchecked)
-        sysIcon_ = true;
-}
-/*************************/
 void FN::prefHasTray (int checked)
 {
     if (checked == Qt::Checked)
@@ -4071,6 +4058,14 @@ void FN::prefIndent (int checked)
         indentByDefault_ = true;
     else if (checked == Qt::Unchecked)
         indentByDefault_ = false;
+}
+/*************************/
+void FN::prefAutoBracket (int checked)
+{
+    if (checked == Qt::Checked)
+        autoBracket_ = true;
+    else if (checked == Qt::Unchecked)
+        autoBracket_ = false;
 }
 /*************************/
 void FN::prefAutoSave (int checked)
@@ -4261,224 +4256,96 @@ void FN::readAndApplyConfig()
     ui->menuBar->setVisible (!noMenubar_);
     ui->actionMenu->setVisible (noMenubar_);
 
-    if (settings.value ("sysIcon").toBool())
-    {
-        sysIcon_ = true; // false by default
-        /* set icons only if they exist in the theme */
-        QIcon icn;
-        icn = QIcon::fromTheme ("go-down");
-        if (!icn.isNull())
-        {
-            ui->nextButton->setIcon (icn);
-            ui->rplNextButton->setIcon (icn);
-            ui->actionMoveDown->setIcon (icn);
-        }
-        icn = QIcon::fromTheme ("go-up");
-        if (!icn.isNull())
-        {
-            ui->prevButton->setIcon (icn);
-            ui->rplPrevButton->setIcon (icn);
-            ui->actionMoveUp->setIcon (icn);
-        }
-        icn = QIcon::fromTheme ("arrow-down-double");
-        if (!icn.isNull())
-            ui->allButton->setIcon (icn);
-        icn = QIcon::fromTheme ("document-save");
-        if (!icn.isNull())
-        {
-            ui->actionSave->setIcon (icn);
-            ui->actionImageSave->setIcon (icn);
-        }
-        icn = QIcon::fromTheme ("document-open");
-        if (!icn.isNull())
-            ui->actionOpen->setIcon (icn);
-        icn = QIcon::fromTheme ("edit-undo");
-        if (!icn.isNull())
-            ui->actionUndo->setIcon (icn);
-        icn = QIcon::fromTheme ("edit-redo");
-        if (!icn.isNull())
-            ui->actionRedo->setIcon (icn);
-        icn = QIcon::fromTheme ("edit-find");
-        if (!icn.isNull())
-            ui->actionFind->setIcon (icn);
-        icn = QIcon::fromTheme ("edit-clear");
-        if (!icn.isNull())
-            ui->actionClear->setIcon (icn);
-        icn = QIcon::fromTheme ("format-text-bold");
-        if (!icn.isNull())
-            ui->actionBold->setIcon (icn);
-        icn = QIcon::fromTheme ("format-text-italic");
-        if (!icn.isNull())
-            ui->actionItalic->setIcon (icn);
-        icn = QIcon::fromTheme ("format-text-underline");
-        if (!icn.isNull())
-            ui->actionUnderline->setIcon (icn);
-        icn = QIcon::fromTheme ("format-text-strikethrough");
-        if (!icn.isNull())
-            ui->actionStrike->setIcon (icn);
-        icn = QIcon::fromTheme ("format-text-color");
-        if (!icn.isNull())
-            ui->actionTextColor->setIcon (icn);
-        icn = QIcon::fromTheme ("format-fill-color");
-        if (!icn.isNull())
-            ui->actionBgColor->setIcon (icn);
-        icn = QIcon::fromTheme ("document-new");
-        if (!icn.isNull())
-            ui->actionNew->setIcon (icn);
-        icn = QIcon::fromTheme ("document-save-as");
-        if (!icn.isNull())
-            ui->actionSaveAs->setIcon (icn);
-        icn = QIcon::fromTheme ("document-print");
-        if (!icn.isNull())
-        {
-            ui->actionPrint->setIcon (icn);
-            ui->actionPrintNodes->setIcon (icn);
-            ui->actionPrintAll->setIcon (icn);
-        }
-        icn = QIcon::fromTheme ("document-encrypt");
-        if (!icn.isNull())
-            ui->actionPassword->setIcon (icn);
-        icn = QIcon::fromTheme ("application-exit");
-        if (!icn.isNull())
-            ui->actionQuit->setIcon (icn);
-        icn = QIcon::fromTheme ("edit-cut");
-        if (!icn.isNull())
-            ui->actionCut->setIcon (icn);
-        icn = QIcon::fromTheme ("edit-copy");
-        if (!icn.isNull())
-            ui->actionCopy->setIcon (icn);
-        icn = QIcon::fromTheme ("edit-paste");
-        if (!icn.isNull())
-        {
-            ui->actionPaste->setIcon (icn);
-            ui->actionPasteHTML->setIcon (icn);
-        }
-        icn = QIcon::fromTheme ("edit-delete");
-        if (!icn.isNull())
-            ui->actionDelete->setIcon (icn);
-        icn = QIcon::fromTheme ("edit-select-all");
-        if (!icn.isNull())
-            ui->actionSelectAll->setIcon (icn);
-        icn = QIcon::fromTheme ("image-x-generic");
-        if (!icn.isNull())
-        {
-            ui->actionEmbedImage->setIcon (icn);
-            ui->actionImageScale->setIcon (icn);
-        }
-        icn = QIcon::fromTheme ("view-sort-ascending");
-        if (!icn.isNull())
-            ui->actionExpandAll->setIcon (icn);
-        icn = QIcon::fromTheme ("view-sort-descending");
-        if (!icn.isNull())
-            ui->actionCollapseAll->setIcon (icn);
-        icn = QIcon::fromTheme ("list-add");
-        if (!icn.isNull())
-        {
-            ui->actionNewSibling->setIcon (icn);
-            ui->actionNewChild->setIcon (icn);
-            ui->actionPrepSibling->setIcon (icn);
-        }
-        icn = QIcon::fromTheme ("user-trash");
-        if (!icn.isNull())
-            ui->actionDeleteNode->setIcon (icn);
-        icn = QIcon::fromTheme ("edit-rename");
-        if (!icn.isNull())
-            ui->actionRenameNode->setIcon (icn);
-        icn = QIcon::fromTheme ("document-properties");
-        if (!icn.isNull())
-            ui->actionProp->setIcon (icn);
-        icn = QIcon::fromTheme ("preferences-desktop-font");
-        if (!icn.isNull())
-        {
-            ui->actionDocFont->setIcon (icn);
-            ui->actionNodeFont->setIcon (icn);
-        }
-        icn = QIcon::fromTheme ("preferences-system");
-        if (!icn.isNull())
-            ui->actionPref->setIcon (icn);
-        icn = QIcon::fromTheme ("edit-find-replace");
-        if (!icn.isNull())
-            ui->actionReplace->setIcon (icn);
-        icn = QIcon::fromTheme ("help-contents");
-        if (!icn.isNull())
-            ui->actionHelp->setIcon (icn);
-        icn = QIcon::fromTheme ("help-about");
-        if (!icn.isNull())
-            ui->actionAbout->setIcon (icn);
-        icn = QIcon::fromTheme ("format-text-superscript");
-        if (!icn.isNull())
-            ui->actionSuper->setIcon (icn);
-        icn = QIcon::fromTheme ("format-text-subscript");
-        if (!icn.isNull())
-            ui->actionSub->setIcon (icn);
-        icn = QIcon::fromTheme ("format-justify-center");
-        if (!icn.isNull())
-            ui->actionCenter->setIcon (icn);
-        icn = QIcon::fromTheme ("format-justify-right");
-        if (!icn.isNull())
-            ui->actionRight->setIcon (icn);
-        icn = QIcon::fromTheme ("format-justify-left");
-        if (!icn.isNull())
-            ui->actionLeft->setIcon (icn);
-        icn = QIcon::fromTheme ("format-justify-fill");
-        if (!icn.isNull())
-          ui->actionJust->setIcon (icn);
-        icn = QIcon::fromTheme ("go-previous");
-        if (!icn.isNull())
-            ui->actionMoveLeft->setIcon (icn);
-        icn = QIcon::fromTheme ("go-next");
-        if (!icn.isNull())
-            ui->actionMoveRight->setIcon (icn);
-        icn = QIcon::fromTheme ("zoom-in");
-        if (!icn.isNull())
-        {
-            ui->actionH1->setIcon (icn);
-            ui->actionH2->setIcon (icn);
-            ui->actionH3->setIcon (icn);
-        }
-        icn = QIcon::fromTheme ("mail-attachment");
-        if (!icn.isNull())
-            ui->actionTags->setIcon (icn);
-        icn = QIcon::fromTheme ("insert-link");
-        if (!icn.isNull())
-            ui->actionLink->setIcon (icn);
-        icn = QIcon::fromTheme ("link");
-        if (!icn.isNull())
-            ui->actionCopyLink->setIcon (icn);
-        icn = QIcon::fromTheme ("insert-table");
-        if (!icn.isNull())
-            ui->actionTable->setIcon (icn);
-        icn = QIcon::fromTheme ("edit-table-insert-row-below");
-        if (!icn.isNull())
-        {
-            ui->actionTableAppendRow->setIcon (icn);
-            ui->actionTableAppendCol->setIcon (icn);
-        }
-        icn = QIcon::fromTheme ("edit-table-delete-row");
-        if (!icn.isNull())
-            ui->actionTableDeleteRow->setIcon (icn);
-        icn = QIcon::fromTheme ("edit-table-delete-column");
-        if (!icn.isNull())
-            ui->actionTableDeleteCol->setIcon (icn);
-        icn = QIcon::fromTheme ("edit-table-cell-merge");
-        if (!icn.isNull())
-            ui->actionTableMergeCells->setIcon (icn);
-        icn = QIcon::fromTheme ("edit-table-insert-row-above");
-        if (!icn.isNull())
-            ui->actionTablePrependRow->setIcon (icn);
-        icn = QIcon::fromTheme ("edit-table-insert-column-left");
-        if (!icn.isNull())
-            ui->actionTablePrependCol->setIcon (icn);
-        icn = QIcon::fromTheme ("format-text-direction-rtl");
-        if (!icn.isNull())
-            ui->actionRTL->setIcon (icn);
-        icn = QIcon::fromTheme ("format-text-direction-ltr");
-        if (!icn.isNull())
-            ui->actionLTR->setIcon (icn);
-        icn = QIcon::fromTheme ("application-menu");
-        if (!icn.isNull())
-            ui->actionMenu->setIcon (icn);
-    }
+    QIcon icn;
+    icn = symbolicIcon::icon (":icons/go-down.svg");
+    ui->nextButton->setIcon (icn);
+    ui->rplNextButton->setIcon (icn);
+    ui->actionMoveDown->setIcon (icn);
+    icn = symbolicIcon::icon (":icons/go-up.svg");
+    ui->prevButton->setIcon (icn);
+    ui->rplPrevButton->setIcon (icn);
+    ui->actionMoveUp->setIcon (icn);
+    ui->allButton->setIcon (symbolicIcon::icon (":icons/arrow-down-double.svg"));
+    icn = symbolicIcon::icon (":icons/document-save.svg");
+    ui->actionSave->setIcon (icn);
+    ui->actionImageSave->setIcon (icn);
+    ui->actionOpen->setIcon (symbolicIcon::icon (":icons/document-open.svg"));
+    ui->actionUndo->setIcon (symbolicIcon::icon (":icons/edit-undo.svg"));
+    ui->actionRedo->setIcon (symbolicIcon::icon (":icons/edit-redo.svg"));
+    ui->actionFind->setIcon (symbolicIcon::icon (":icons/edit-find.svg"));
+    ui->actionClear->setIcon (symbolicIcon::icon (":icons/edit-clear.svg"));
+    ui->actionBold->setIcon (symbolicIcon::icon (":icons/format-text-bold.svg"));
+    ui->actionItalic->setIcon (symbolicIcon::icon (":icons/format-text-italic.svg"));
+    ui->actionUnderline->setIcon (symbolicIcon::icon (":icons/format-text-underline.svg"));
+    ui->actionStrike->setIcon (symbolicIcon::icon (":icons/format-text-strikethrough.svg"));
+    ui->actionTextColor->setIcon (symbolicIcon::icon (":icons/format-text-color.svg"));
+    ui->actionBgColor->setIcon (symbolicIcon::icon (":icons/format-fill-color.svg"));
+    ui->actionNew->setIcon (symbolicIcon::icon (":icons/document-new.svg"));
+    ui->actionSaveAs->setIcon (symbolicIcon::icon (":icons/document-save-as.svg"));
+    icn = symbolicIcon::icon (":icons/document-print.svg");
+    ui->actionPrint->setIcon (icn);
+    ui->actionPrintNodes->setIcon (icn);
+    ui->actionPrintAll->setIcon (icn);
+    ui->actionPassword->setIcon (symbolicIcon::icon (":icons/document-encrypt.svg"));
+    ui->actionQuit->setIcon (symbolicIcon::icon (":icons/application-exit.svg"));
+    ui->actionCut->setIcon (symbolicIcon::icon (":icons/edit-cut.svg"));
+    ui->actionCopy->setIcon (symbolicIcon::icon (":icons/edit-copy.svg"));
+    icn = symbolicIcon::icon (":icons/edit-paste.svg");
+    ui->actionPaste->setIcon (icn);
+    ui->actionPasteHTML->setIcon (icn);
+    ui->actionDelete->setIcon (symbolicIcon::icon (":icons/edit-delete.svg"));
+    ui->actionSelectAll->setIcon (symbolicIcon::icon (":icons/edit-select-all.svg"));
+    icn = symbolicIcon::icon (":icons/image-x-generic.svg");
+    ui->actionEmbedImage->setIcon (icn);
+    ui->actionImageScale->setIcon (icn);
+    ui->actionExpandAll->setIcon (symbolicIcon::icon (":icons/view-sort-ascending.svg"));
+    ui->actionCollapseAll->setIcon (symbolicIcon::icon (":icons/view-sort-descending.svg"));
+    icn = symbolicIcon::icon (":icons/list-add.svg");
+    ui->actionNewSibling->setIcon (icn);
+    ui->actionNewChild->setIcon (icn);
+    ui->actionPrepSibling->setIcon (icn);
+    ui->actionDeleteNode->setIcon (symbolicIcon::icon (":icons/user-trash.svg"));
+    ui->actionRenameNode->setIcon (symbolicIcon::icon (":icons/edit-rename.svg"));
+    ui->actionProp->setIcon (symbolicIcon::icon (":icons/document-properties.svg"));
+    icn = symbolicIcon::icon (":icons/preferences-desktop-font.svg");
+    ui->actionDocFont->setIcon (icn);
+    ui->actionNodeFont->setIcon (icn);
+    ui->actionPref->setIcon (symbolicIcon::icon (":icons/preferences-system.svg"));
+    ui->actionReplace->setIcon (symbolicIcon::icon (":icons/edit-find-replace.svg"));
+    ui->actionHelp->setIcon (symbolicIcon::icon (":icons/help-contents.svg"));
+    ui->actionAbout->setIcon (symbolicIcon::icon (":icons/help-about.svg"));
+    ui->actionSuper->setIcon (symbolicIcon::icon (":icons/format-text-superscript.svg"));
+    ui->actionSub->setIcon (symbolicIcon::icon (":icons/format-text-subscript.svg"));
+    ui->actionCenter->setIcon (symbolicIcon::icon (":icons/format-justify-center.svg"));
+    ui->actionRight->setIcon (symbolicIcon::icon (":icons/format-justify-right.svg"));
+    ui->actionLeft->setIcon (symbolicIcon::icon (":icons/format-justify-left.svg"));
+    ui->actionJust->setIcon (symbolicIcon::icon (":icons/format-justify-fill.svg"));
+    ui->actionMoveLeft->setIcon (symbolicIcon::icon (":icons/go-previous.svg"));
+    ui->actionMoveRight->setIcon (symbolicIcon::icon (":icons/go-next.svg"));
+    icn = symbolicIcon::icon (":icons/zoom-in.svg");
+    ui->actionH1->setIcon (icn);
+    ui->actionH2->setIcon (icn);
+    ui->actionH3->setIcon (icn);
+    ui->actionTags->setIcon (symbolicIcon::icon (":icons/mail-attachment.svg"));
+    ui->actionLink->setIcon (symbolicIcon::icon (":icons/insert-link.svg"));
+    ui->actionCopyLink->setIcon (symbolicIcon::icon (":icons/link.svg"));
+    ui->actionTable->setIcon (symbolicIcon::icon (":icons/insert-table.svg"));
+    icn = symbolicIcon::icon (":icons/edit-table-insert-row-below.svg");
+    ui->actionTableAppendRow->setIcon (icn);
+    ui->actionTableAppendCol->setIcon (icn);
+    ui->actionTableDeleteRow->setIcon (symbolicIcon::icon (":icons/edit-table-delete-row.svg"));
+    ui->actionTableDeleteCol->setIcon (symbolicIcon::icon (":icons/edit-table-delete-column.svg"));
+    ui->actionTableMergeCells->setIcon (symbolicIcon::icon (":icons/edit-table-cell-merge.svg"));
+    ui->actionTablePrependRow->setIcon (symbolicIcon::icon (":icons/edit-table-insert-row-above.svg"));
+    ui->actionTablePrependCol->setIcon (symbolicIcon::icon (":icons/edit-table-insert-column-left.svg"));
+    ui->actionRTL->setIcon (symbolicIcon::icon (":icons/format-text-direction-rtl.svg"));
+    ui->actionLTR->setIcon (symbolicIcon::icon (":icons/format-text-direction-ltr.svg"));
+    ui->actionMenu->setIcon (icn = symbolicIcon::icon (":icons/application-menu.svg"));
+
+    icn = QIcon::fromTheme ("feathernotes");
+    if (icn.isNull())
+        icn = QIcon (":icons/feathernotes.svg");
+    setWindowIcon (icn);
 
     settings.endGroup();
 
@@ -4499,6 +4366,9 @@ void FN::readAndApplyConfig()
         indentByDefault_ = false; // true by default
         ui->actionIndent->setChecked (false);
     }
+
+    if (settings.value ("autoBracket").toBool())
+        autoBracket_ = true; // false by default
 
     autoSave_ = settings.value ("autoSave", -1).toInt();
 
@@ -4562,7 +4432,6 @@ void FN::writeConfig()
     settings.setValue ("transparentTree", transparentTree_);
     settings.setValue ("noToolbar", noToolbar_);
     settings.setValue ("noMenubar", noMenubar_);
-    settings.setValue ("sysIcon", sysIcon_);
 
     settings.endGroup();
 
@@ -4574,6 +4443,7 @@ void FN::writeConfig()
 
     settings.setValue ("noWrap", !wrapByDefault_);
     settings.setValue ("noIndent", !indentByDefault_);
+    settings.setValue ("autoBracket", autoBracket_);
 
     settings.setValue ("autoSave", autoSave_);
     if (autoSave_ >= 1)
@@ -4713,19 +4583,13 @@ void FN::exportHTML()
     connect (htmlPahEntry_, &QLineEdit::returnPressed, dialog, &QDialog::accept);
 
     QToolButton *openBtn = new QToolButton();
-    openBtn->setIcon (QIcon (":icons/document-open.svg"));
-    if (sysIcon_)
-    {
-        QIcon icn = QIcon::fromTheme ("document-open");
-        if (!icn.isNull())
-            openBtn->setIcon (icn);
-    }
+    openBtn->setIcon (symbolicIcon::icon (":icons/document-open.svg"));
     openBtn->setToolTip (tr ("Select path"));
     connect (openBtn,&QAbstractButton::clicked, this, &FN::setHTMLPath);
     QSpacerItem *spacer = new QSpacerItem (1, 5);
-    QPushButton *cancelButton = new QPushButton (QIcon (":icons/dialog-cancel.svg"), "Cancel");
+    QPushButton *cancelButton = new QPushButton (symbolicIcon::icon (":icons/dialog-cancel.svg"), tr ("Cancel"));
     connect (cancelButton, &QAbstractButton::clicked, dialog, &QDialog::reject);
-    QPushButton *okButton = new QPushButton (QIcon (":icons/dialog-ok.svg"), "OK");
+    QPushButton *okButton = new QPushButton (symbolicIcon::icon (":icons/dialog-ok.svg"), tr ("OK"));
     connect (okButton, &QAbstractButton::clicked, dialog, &QDialog::accept);
 
 
@@ -4943,8 +4807,8 @@ void FN::setPswd()
     connect (lineEdit2, &QLineEdit::returnPressed, this, &FN::reallySetPswrd);
     QLabel *label = new QLabel();
     QSpacerItem *spacer = new QSpacerItem (1, 10);
-    QPushButton *cancelButton = new QPushButton (QIcon (":icons/dialog-cancel.svg"), "Cancel");
-    QPushButton *okButton = new QPushButton (QIcon (":icons/dialog-ok.svg"), "OK");
+    QPushButton *cancelButton = new QPushButton (symbolicIcon::icon (":icons/dialog-cancel.svg"), tr ("Cancel"));
+    QPushButton *okButton = new QPushButton (symbolicIcon::icon (":icons/dialog-ok.svg"), tr ("OK"));
     connect (cancelButton, &QAbstractButton::clicked, dialog, &QDialog::reject);
     connect (okButton, &QAbstractButton::clicked, this, &FN::reallySetPswrd);
 
@@ -5059,8 +4923,8 @@ bool FN::isPswrdCorrect()
     connect (lineEdit, &QLineEdit::returnPressed, this, &FN::checkPswrd);
     QLabel *label = new QLabel();
     QSpacerItem *spacer = new QSpacerItem (1, 5);
-    QPushButton *cancelButton = new QPushButton (QIcon (":icons/dialog-cancel.svg"), "Cancel");
-    QPushButton *okButton = new QPushButton (QIcon (":icons/dialog-ok.svg"), "OK");
+    QPushButton *cancelButton = new QPushButton (symbolicIcon::icon (":icons/dialog-cancel.svg"), tr ("Cancel"));
+    QPushButton *okButton = new QPushButton (symbolicIcon::icon (":icons/dialog-ok.svg"), tr ("OK"));
     connect (cancelButton, &QAbstractButton::clicked, dialog, &QDialog::reject);
     connect (okButton, &QAbstractButton::clicked, this, &FN::checkPswrd);
 
@@ -5131,14 +4995,16 @@ void FN::checkPswrd()
 void FN::aboutDialog()
 {
     MessageBox msgBox (this);
-    msgBox.setText ("<center><b><big>FeatherNotes 0.4.4</big></b></center><br>");
-    msgBox.setInformativeText (tr ("<center>A lightweight notes manager</center>\n"\
-                                   "<center>based on Qt5</center><br>"\
-                                   "<center>Author: <a href='mailto:tsujan2000@gmail.com?Subject=My%20Subject'>Pedram Pourang (aka. Tsu Jan)</a> </center><p></p>"));
+    msgBox.setText (QString ("<center><b><big>%1 %2</big></b></center><br>").arg (qApp->applicationName()).arg (qApp->applicationVersion()));
+    msgBox.setInformativeText (tr ("<center>A lightweight notes manager</center>\n<center>based on Qt5</center><br>")
+                               + "<center>" + tr ("Author:") + " <a href='mailto:tsujan2000@gmail.com?Subject=My%20Subject'>Pedram Pourang ("
+                               + tr ("aka.") + " Tsu Jan)</a> </center><p></p>");
     msgBox.setStandardButtons (QMessageBox::Ok);
-    msgBox.changeButtonText (QMessageBox::Ok, tr ("Ok"));
-    QIcon FPIcon = QIcon (":icons/feathernotes.svg");
-    msgBox.setIconPixmap (FPIcon.pixmap(64, 64));
+    msgBox.changeButtonText (QMessageBox::Ok, tr ("OK"));
+    QIcon FNIcon = QIcon::fromTheme ("feathernotes");
+    if (FNIcon.isNull())
+        FNIcon = QIcon (":icons/feathernotes.svg");
+    msgBox.setIconPixmap (FNIcon.pixmap(64, 64));
     msgBox.setWindowTitle (tr ("About FeatherNotes"));
     msgBox.exec();
 }

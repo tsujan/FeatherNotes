@@ -1,12 +1,10 @@
-<svg width="128" version="1.0" xmlns="http://www.w3.org/2000/svg" height="128">
-<g style="stroke:none">
-<path style="fill:#8c8c8c" id="path4161" d="m 0,8 0,104.9063 128,0 L 128,8 Z"/>
-<path style="fill:#fff" id="path4159" d="M 7.5938,15.7188 120,15.7188 120,40.5 7.5938,40.5 Z"/>
-<path style="fill:#ff3219" id="path4149" d="M 7.5938,48 120,48 120,73 7.594,73 Z"/>
-<path style="fill:#fff" id="path4147" d="m 7.5938,80.5 112.4062,0 0,25.2188 -112.4062,0 z"/>
-</g>
-<g style="fill:none;stroke:#fff;stroke-linecap:round;stroke-width:8.855;stroke-miterlimit:0" id="g16" transform="translate(40.032814,36.020394)">
-<path id="path3341" d="M 34.5726,34.5726 13.4273,13.4273"/>
-<path id="path3803" d="M 13.4274,34.5726 34.5727,13.4273"/>
-</g>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+<defs id="defs1">
+<style type="text/css" id="current-color-scheme">
+.ColorScheme-Text {
+color:#000;
+}
+</style>
+</defs>
+<path style="fill:currentColor;fill-opacity:1;stroke:none" id="path4" d="m 2,2 v 12 h 12 v -11 -1 h -12 z  m 1,1 h 3 v 2 h -3 v -2 z  m 4,0 h 2 v 2 h -2 v -2 z  m 3,0 h 3 v 2 h -3 v -2 z  m -6.2812,3 h 2.5625 l 4,4 h -2.5625 l -4,-4 z  m 4,0 h 2.5625 l 2.7188,2.7168 v 1.2832 h -1.28125 l -4,-4 z  m 4.002,0 h 1.2793 v 1.2793 l -1.2793,-1.2793 z  m -8.7207,.7188 l 3.2812,3.2812 h -3.28125 v -3.28125 z  m 0,4.2812 h 3 v 2 h -3 v -2 z  m 4,0 h 2 v 2 h -2 v -2 z  m 3,0 h 3 v 2 h -3 v -2 z " class="ColorScheme-Text"/>
 </svg>

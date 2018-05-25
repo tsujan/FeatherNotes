@@ -1,21 +1,10 @@
-<svg width="160" version="1.0" xmlns="http://www.w3.org/2000/svg" height="160" xmlns:xlink="http://www.w3.org/1999/xlink">
-<defs id="defs3"/>
-<g style="fill-rule:evenodd;stroke:none">
-<path style="fill:#646464;stroke-width:2" id="path2861" d="m 9.8812,10.6534 125.9201,-4e-4 14.3177,22.666 0,116.028 -140.0936,-4e-4 z"/>
-<path style="opacity:.3;fill:#6e6e6e;fill-opacity:0" id="path4604" d="m 9.8812,10.6534 125.9201,-4e-4 14.3176,22.666 -1.0977,114.3623 -138.9958,1.6653 z"/>
-</g>
-<g style="stroke-width:1.737">
-<rect width="86.521606" x="36.415855" y="91.721077" rx="7.599535" ry="6.8321171" height="43.164425" style="fill:#fff;fill-rule:evenodd;stroke:none" id="rect6597" transform="matrix(0.99999882,-0.00153932,0.00285462,0.99999593,0,0)"/>
-<g style="stroke:#3f3f3f;fill:none">
-<path id="path7227" d="m 47.2599,102.2701 66.7972,.1475 -66.7972,-.1475 z "/>
-<path id="path7229" d="m 47.2202,113.0409 66.7972,.1475 -66.7972,-.1475 z "/>
-<path id="path7230" d="m 47.5029,124.5756 66.7972,.1475 -66.7972,-.1475 z "/>
-</g>
-</g>
-<g style="fill-rule:evenodd" id="g3807" transform="matrix(1.2034208,0.66260332,-0.58671595,1.3590743,34.285524,-84.900545)">
-<g style="stroke:none" id="g51">
-<rect width="48.911644" x="20.710957" y="67.924309" rx="0" ry="0.5331794" height="27.910036" style="fill:#fff;stroke-width:1.25" id="rect4105" transform="matrix(0.898421,-0.439136,0.439136,0.898421,0,0)"/>
-<path style="fill:#636363;stroke-width:1.141" id="rect4729" d="m 54.2633,70.1297 10.3538,-.0452 .0999,22.8901 -10.3538,.0452 z " transform="matrix(0.900765,-0.434306,0.434306,0.900765,0,0)"/>
-</g>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+<defs id="defs1">
+<style type="text/css" id="current-color-scheme">
+.ColorScheme-Text {
+color:#000;
+}
+</style>
+</defs>
+<path style="fill:currentColor;fill-opacity:1;stroke:none" d="m 2,2 v 12 h 1 1 6 1 1 2 v -9.71875 l -2.2812,-2.2812 h -0.03125 -0.6875 -7 -1 -1 z  m 1,1 h 1 1 v 3 1 h 6 v -1 -3 h 0.28125 l 1.7188,1.7188 v 0.28125 8 h -1 v -4 h -1 -6 -1.03125 v 4 h -0.96875 v -10 z  m 3,0 h 1.90625 v 3 h -1.90625 v -3 z  m -1,7 h 1 4 1 v 3 h -1 -4 -1 v -3 z " class="ColorScheme-Text"/>
 </svg>

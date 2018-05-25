@@ -1,24 +1,54 @@
 First install build dependencies. In Debian-based systems, they are:
 
-* g++ >= 5
-* libx11-dev and libxext-dev (for X11)
-* qtbase5-dev and libqt5x11extras5-dev (for Qt5)
-* libqt5svg5 (for showing own icons)
+ * g++ >= 5
+ * libx11-dev and libxext-dev (for X11)
+ * qtbase5-dev and libqt5x11extras5-dev (for Qt5)
+ * libqt5svg5-dev (for hard-coded SVG icons)
+ * qttools5-dev-tools (for localization)
 
 In Arch-based systems, the required package are:
 
  * gcc (or gcc-multilib for multilib systems)
  * libx11 and libxext (for X11)
  * qt5-base and qt5-x11extras (for Qt5)
- * qt5-svg (for showing own icons)
+ * qt5-svg (for hard-coded SVG icons)
+ * qt5-tools (for localization)
 
-Then open a terminal inside this folder and issue the following commands:
+In Red Hat based systems like Fedora:
+
+ * gcc-c++
+ * libX11-devel
+ * libXext-devel
+ * qt5-qtx11extras-devel
+ * qt5-qtbase-devel
+ * qt5-qtsvg-devel
+ * qt5-qttools-devel
+
+And, finally, in OpenSUSE:
+
+ * gcc-c++
+ * libX11-devel
+ * libXext-devel
+ * libqt5-qtx11extras-devel
+ * libqt5-qtbase-devel
+ * libqt5-qtsvg-devel
+ * libqt5-qttools-devel
+
+Then, open a terminal inside this folder and issue the following commands:
 
 	qmake && make
 	sudo make install
 
-If your default Qt installation is not Qt5, put the full path of Qt5 qmake in the first command.
+If your default Qt installation is not Qt5, put the full path of Qt5 qmake in the first command but before that, put the full path of Qt5's "lrelease" binary into 'feathernotes/feathernotes.pro' (only one place).
 
 Afterward, you could use this command for cleaning the source directory:
 
 	make distclean
+
+**********************************
+*   Translation (Localization)   *
+**********************************
+
+The file 'feathernotes/data/translations/feathernotes.ts' can serve as the basis for translation. The translated file should be saved in the same directory as "feathernotes_LN.ts", where "LN" is the abbreviation for the target language, like "de", "fr", etc.
+
+If you have translated FeatherNotes's GUI into your language, please make a "Pull Request" (PR) at https://github.com/tsujan/FeatherNotes for your work to be merged into FeatherNotes!

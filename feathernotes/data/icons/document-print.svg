@@ -1,30 +1,10 @@
-<svg width="48" version="1.1" xmlns="http://www.w3.org/2000/svg" height="48" xmlns:xlink="http://www.w3.org/1999/xlink">
-<defs id="defs8683">
-<linearGradient gradientTransform="matrix(1,0,0,0.6666666,-2.7080474e-4,5.6666589)" xlink:href="#linearGradient7644" id="linearGradient7650" y1="24.43815" x1="20.125" y2="20" x2="20.125" gradientUnits="userSpaceOnUse"/>
-<linearGradient id="linearGradient7644">
-<stop offset="0" id="stop7646"/>
-<stop offset="1" style="stop-opacity:0" id="stop7648"/>
-</linearGradient>
-<linearGradient id="linearGradient2222">
-<stop offset="0" style="stop-color:#d3d7cf" id="stop2224"/>
-<stop offset="1" style="stop-color:#eeeeec" id="stop2226"/>
-</linearGradient>
-<linearGradient gradientTransform="matrix(1,0,0,0.921571,-2.7080474e-4,4.2781389)" xlink:href="#linearGradient2222" id="linearGradient2220" y1="25.740677" x1="35.000271" y2="25.295452" x2="35.000271" gradientUnits="userSpaceOnUse"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+<defs id="defs1">
+<style type="text/css" id="current-color-scheme">
+.ColorScheme-Text {
+color:#000;
+}
+</style>
 </defs>
-<g style="stroke-linejoin:round" id="g50">
-<path style="fill:url(#linearGradient2220);stroke:#828480;stroke-linecap:square" id="rect1314" d="m 6.9997,19.5 -2.25,2.7488 c -2.15059,2.62735 -3.25,5.06864 -3.25,8.75493 v 5.49628 h 45 v -5.49628 c 0,-3.68629 -1.09941,-6.12758 -3.25,-8.75493 l -2.25,-2.7488 h -34 z "/>
-<g style="stroke-linecap:round" id="g53">
-<path style="fill:#474a48;stroke:#474a48" id="rect2412" d="m 2.4997,36.5 0,2.9062 c 0,1.15175 0.942003,2.09375 2.09375,2.09375 h 38.8125 c 1.15175,0 2.09375,-0.942005 2.09375,-2.09375 v -2.90625 h -43 z "/>
-<rect width="29.000111" x="9.4996176" y="20.49988" rx="0.5078125" height="10.000113" ry="0.5" style="fill:#426b84;stroke:#426b84;stroke-width:.5" id="rect2319"/>
-</g>
-<path style="fill:#f0f1ef;stroke:#828480;stroke-linecap:square" id="rect2233" d="m 12.1197,5.5 23.76,0 c 0.897479,0 1.62,0.665754 1.62,1.5 v 14.6869 l -27,-.0039 v -14.683 c 0,-0.834246 0.72252,-1.5 1.62,-1.5 z "/>
-</g>
-<g style="stroke-linecap:square" id="g58">
-<rect width="5.3306642" x="39.010239" y="29.97648" rx="1.7768881" height="3.728013" ry="1.864" style="fill:#57ae3d;stroke:none;stroke-width:.91" id="rect2320"/>
-<path style="fill:#e1e4de;stroke:#646662;stroke-width:1.152" id="path3330" d="m 9.2614,34.5759 29.4768,0 c 0.959254,0 1.68576,1.12956 1.68576,2.30939 v 8.35139 h -32.8483 v -8.3514 c 0,-1.28936 0.746149,-2.30938 1.68574,-2.30938 z "/>
-</g>
-<g style="fill-rule:evenodd" id="g62">
-<rect width="28" x="9.9997292" y="18.99999" rx="0" height="2" ry="0" style="opacity:.15;stroke-opacity:0;fill:url(#linearGradient7650);stroke:none;stroke-linejoin:round;stroke-linecap:round;stroke-miterlimit:10.433" id="rect7639"/>
-<path style="fill:#888a85;stroke:#002236;fill-opacity:.75;stroke-linecap:square" id="path2259" d="m 10.4997,21.5 27.0001,0"/>
-</g>
+<path style="fill:currentColor;fill-opacity:1;stroke:none" d="m 4,2 v 1 2 h -1 -1 v 1 5 1 h 1 2 v 1 1 h 5 1 v -1 -1 h 2 1 v -1 -5 -1 h -2 v -2 -1 h -8 z  m 1,1 h 6 v 2 h -6 v -2 z  m -2,3 h 10 v 5 h -1 v -1 h -8 v 1 h -1 v -5 z  m 7,1 v 1 h 2 v -1 h -2 z  m -4,5 h 4 v 1 h -4 v -1 z " class="ColorScheme-Text"/>
 </svg>
