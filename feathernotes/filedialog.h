@@ -32,7 +32,7 @@ public:
         tView = nullptr;
         p = parent;
         setViewMode (QFileDialog::Detail);
-        setOption (QFileDialog::DontUseNativeDialog);
+        //setOption (QFileDialog::DontUseNativeDialog);
     }
 
     void autoScroll() {
