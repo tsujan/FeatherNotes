@@ -6,5 +6,5 @@ color:#000;
 }
 </style>
 </defs>
-<path style="fill:currentColor;fill-opacity:1;stroke:none" id="path4" d="m 2,2 v 12 h 12 v -11 -1 h -12 z  m 1,1 h 3 v 2 h -3 v -2 z  m 4,0 h 2 v 2 h -2 v -2 z  m 3,0 h 3 v 2 h -3 v -2 z  m -6.2812,3 h 2.5625 l 4,4 h -2.5625 l -4,-4 z  m 4,0 h 2.5625 l 2.7188,2.7168 v 1.2832 h -1.28125 l -4,-4 z  m 4.002,0 h 1.2793 v 1.2793 l -1.2793,-1.2793 z  m -8.7207,.7188 l 3.2812,3.2812 h -3.28125 v -3.28125 z  m 0,4.2812 h 3 v 2 h -3 v -2 z  m 4,0 h 2 v 2 h -2 v -2 z  m 3,0 h 3 v 2 h -3 v -2 z " class="ColorScheme-Text"/>
+<path style="fill:currentColor;fill-opacity:1;stroke:none" id="path4" d="m 2,5 v 6 H 14 V 5 Z m 1.71875,1 h 2.5625 l 4,4 h -2.5625 z m 4,0 h 2.5625 L 13,8.7167969 V 10 h -1.28125 z m 4.001953,0 H 13 V 7.2792969 Z M 3,6.71875 6.28125,10 H 3 Z" class="ColorScheme-Text"/>
 </svg>

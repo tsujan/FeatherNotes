@@ -1,8 +1,12 @@
 <RCC>
   <qresource>
+    <file>icons/all.svg</file>
     <file>icons/application-exit.svg</file>
     <file>icons/application-menu.svg</file>
     <file>icons/arrow-down-double.svg</file>
+    <file>icons/case.svg</file>
+    <file>icons/child.svg</file>
+    <file>icons/collapse.svg</file>
     <file>icons/dialog-cancel.svg</file>
     <file>icons/dialog-ok.svg</file>
     <file>icons/document-encrypt.svg</file>
@@ -30,6 +34,7 @@
     <file>icons/edit-table-insert-row-above.svg</file>
     <file>icons/edit-table-insert-row-below.svg</file>
     <file>icons/edit-undo.svg</file>
+    <file>icons/expand.svg</file>
     <file>icons/feathernotes.svg</file>
     <file>icons/format-fill-color.svg</file>
     <file>icons/format-justify-center.svg</file>
@@ -55,13 +60,13 @@
     <file>icons/insert-link.svg</file>
     <file>icons/insert-table.svg</file>
     <file>icons/link.svg</file>
-    <file>icons/list-add.svg</file>
-    <file>icons/mail-attachment.svg</file>
     <file>icons/preferences-desktop-font.svg</file>
     <file>icons/preferences-system.svg</file>
+    <file>icons/tag.svg</file>
+    <file>icons/sibling-above.svg</file>
+    <file>icons/sibling-below.svg</file>
     <file>icons/user-trash.svg</file>
-    <file>icons/view-sort-ascending.svg</file>
-    <file>icons/view-sort-descending.svg</file>
+    <file>icons/whole.svg</file>
     <file>icons/zoom-in.svg</file>
   </qresource>
 </RCC>

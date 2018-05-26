@@ -48,7 +48,10 @@
       <property name="rightMargin">
        <number>2</number>
       </property>
-      <property name="spacing">
+      <property name="horizontalSpacing">
+       <number>3</number>
+      </property>
+      <property name="verticalSpacing">
        <number>0</number>
       </property>
       <item row="1" column="1">
@@ -100,9 +103,6 @@
           <property name="toolTip">
            <string>Search only in names (Ctrl+Shift+F7)</string>
           </property>
-          <property name="text">
-           <string>Names</string>
-          </property>
           <property name="shortcut">
            <string>Ctrl+Shift+F7</string>
           </property>
@@ -112,9 +112,6 @@
          <widget class="QRadioButton" name="tagsButton">
           <property name="toolTip">
            <string>Search only in tags (Shift+F7)</string>
-          </property>
-          <property name="text">
-           <string>Tags</string>
           </property>
           <property name="shortcut">
            <string>Shift+F7</string>
@@ -128,9 +125,6 @@
          <widget class="QRadioButton" name="everywhereButton">
           <property name="toolTip">
            <string>Search in all nodes (F7)</string>
-          </property>
-          <property name="text">
-           <string>All</string>
           </property>
           <property name="shortcut">
            <string>F7</string>
@@ -148,15 +142,15 @@
          <number>3</number>
         </property>
         <item alignment="Qt::AlignHCenter">
-         <widget class="QPushButton" name="wholeButton">
+         <widget class="QToolButton" name="caseButton">
           <property name="toolTip">
-           <string>F6</string>
+           <string>Match Case (F5)</string>
           </property>
           <property name="text">
-           <string>Whole Word</string>
+           <string>Match Case</string>
           </property>
           <property name="shortcut">
-           <string>F6</string>
+           <string>F5</string>
           </property>
           <property name="checkable">
            <bool>true</bool>
@@ -164,15 +158,15 @@
          </widget>
         </item>
         <item alignment="Qt::AlignHCenter">
-         <widget class="QPushButton" name="caseButton">
+         <widget class="QToolButton" name="wholeButton">
           <property name="toolTip">
-           <string>F5</string>
+           <string>Whole Word (F6)</string>
           </property>
           <property name="text">
-           <string>Match Case</string>
+           <string>Whole Word</string>
           </property>
           <property name="shortcut">
-           <string>F5</string>
+           <string>F6</string>
           </property>
           <property name="checkable">
            <bool>true</bool>

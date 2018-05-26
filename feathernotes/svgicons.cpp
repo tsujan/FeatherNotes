@@ -38,7 +38,7 @@ public:
 
     ~symbolicIconEngine() override {}
 
-    symbolicIconEngine * clone() const override {
+    symbolicIconEngine* clone() const override {
         return new symbolicIconEngine (fileName);
     }
 

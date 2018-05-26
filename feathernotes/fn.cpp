@@ -496,6 +496,7 @@ void FN::showContextMenu (const QPoint &p)
     menu.addAction (ui->actionDeleteNode);
     menu.addSeparator();
     menu.addAction (ui->actionTags);
+    menu.addAction (ui->actionRenameNode);
     menu.exec (ui->treeView->mapToGlobal (p));
 }
 /*************************/
@@ -4298,14 +4299,12 @@ void FN::readAndApplyConfig()
     icn = symbolicIcon::icon (":icons/image-x-generic.svg");
     ui->actionEmbedImage->setIcon (icn);
     ui->actionImageScale->setIcon (icn);
-    ui->actionExpandAll->setIcon (symbolicIcon::icon (":icons/view-sort-ascending.svg"));
-    ui->actionCollapseAll->setIcon (symbolicIcon::icon (":icons/view-sort-descending.svg"));
-    icn = symbolicIcon::icon (":icons/list-add.svg");
-    ui->actionNewSibling->setIcon (icn);
-    ui->actionNewChild->setIcon (icn);
-    ui->actionPrepSibling->setIcon (icn);
+    ui->actionExpandAll->setIcon (symbolicIcon::icon (":icons/expand.svg"));
+    ui->actionCollapseAll->setIcon (symbolicIcon::icon (":icons/collapse.svg"));
     ui->actionDeleteNode->setIcon (symbolicIcon::icon (":icons/user-trash.svg"));
-    ui->actionRenameNode->setIcon (symbolicIcon::icon (":icons/edit-rename.svg"));
+    icn = symbolicIcon::icon (":icons/edit-rename.svg");
+    ui->actionRenameNode->setIcon (icn);
+    ui->namesButton->setIcon (icn);
     ui->actionProp->setIcon (symbolicIcon::icon (":icons/document-properties.svg"));
     icn = symbolicIcon::icon (":icons/preferences-desktop-font.svg");
     ui->actionDocFont->setIcon (icn);
@@ -4326,13 +4325,14 @@ void FN::readAndApplyConfig()
     ui->actionH1->setIcon (icn);
     ui->actionH2->setIcon (icn);
     ui->actionH3->setIcon (icn);
-    ui->actionTags->setIcon (symbolicIcon::icon (":icons/mail-attachment.svg"));
+    icn = symbolicIcon::icon (":icons/tag.svg");
+    ui->actionTags->setIcon (icn);
+    ui->tagsButton->setIcon (icn);
     ui->actionLink->setIcon (symbolicIcon::icon (":icons/insert-link.svg"));
     ui->actionCopyLink->setIcon (symbolicIcon::icon (":icons/link.svg"));
     ui->actionTable->setIcon (symbolicIcon::icon (":icons/insert-table.svg"));
-    icn = symbolicIcon::icon (":icons/edit-table-insert-row-below.svg");
-    ui->actionTableAppendRow->setIcon (icn);
-    ui->actionTableAppendCol->setIcon (icn);
+    ui->actionTableAppendRow->setIcon (symbolicIcon::icon (":icons/edit-table-insert-row-below.svg"));
+    ui->actionTableAppendCol->setIcon (symbolicIcon::icon (":icons/edit-table-insert-column-right.svg"));
     ui->actionTableDeleteRow->setIcon (symbolicIcon::icon (":icons/edit-table-delete-row.svg"));
     ui->actionTableDeleteCol->setIcon (symbolicIcon::icon (":icons/edit-table-delete-column.svg"));
     ui->actionTableMergeCells->setIcon (symbolicIcon::icon (":icons/edit-table-cell-merge.svg"));
@@ -4340,7 +4340,15 @@ void FN::readAndApplyConfig()
     ui->actionTablePrependCol->setIcon (symbolicIcon::icon (":icons/edit-table-insert-column-left.svg"));
     ui->actionRTL->setIcon (symbolicIcon::icon (":icons/format-text-direction-rtl.svg"));
     ui->actionLTR->setIcon (symbolicIcon::icon (":icons/format-text-direction-ltr.svg"));
-    ui->actionMenu->setIcon (icn = symbolicIcon::icon (":icons/application-menu.svg"));
+    ui->actionMenu->setIcon (symbolicIcon::icon (":icons/application-menu.svg"));
+
+    ui->actionPrepSibling->setIcon (symbolicIcon::icon (":icons/sibling-above.svg"));
+    ui->actionNewSibling->setIcon (symbolicIcon::icon (":icons/sibling-below.svg"));
+    ui->actionNewChild->setIcon (symbolicIcon::icon (":icons/child.svg"));
+
+    ui->everywhereButton->setIcon (symbolicIcon::icon (":icons/all.svg"));
+    ui->wholeButton->setIcon (symbolicIcon::icon (":icons/whole.svg"));
+    ui->caseButton->setIcon (symbolicIcon::icon (":icons/case.svg"));
 
     icn = QIcon::fromTheme ("feathernotes");
     if (icn.isNull())
