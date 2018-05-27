@@ -2086,6 +2086,7 @@ void FN::nodeIcon()
         if (!curIcn.isEmpty())
         {
             node.toElement().removeAttribute ("icon");
+            emit ui->treeView->dataChanged (index, index);
             noteModified();
         }
     }
@@ -2107,6 +2108,7 @@ void FN::nodeIcon()
             if (curIcn != icn)
             {
                 node.toElement().setAttribute ("icon", icn);
+                emit ui->treeView->dataChanged (index, index);
                 noteModified();
             }
         }

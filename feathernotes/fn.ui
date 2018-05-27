@@ -277,6 +277,7 @@
     <addaction name="actionTags"/>
     <addaction name="actionNodeIcon"/>
     <addaction name="actionRenameNode"/>
+    <addaction name="separator"/>
     <addaction name="actionProp"/>
    </widget>
    <widget class="QMenu" name="menuOptions">
@@ -1295,7 +1296,10 @@
     <bool>false</bool>
    </property>
    <property name="text">
-    <string>Node Icon</string>
+    <string>Node &amp;Icon</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+C</string>
    </property>
   </action>
  </widget>
