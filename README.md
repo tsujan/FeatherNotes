@@ -17,4 +17,12 @@ FeatherNotes (by Pedram Pourang, a.k.a. Tsu Jan <tsujan2000@gmail.com>) is a lig
   * Auto-saving; and
   * Other features that can be found in its settings, on its menus or when it is actually used.
 
-Please see INSTALL for instructions on compilation and installation!
+Please see INSTALL for instructions on compilation, installation and translation!
+
+FeatherNotes' homepage is <https://github.com/tsujan/FeatherNotes>.
+
+## Screenshot
+
+The active Qt widget style determines the look and feel of every Qt application. The following screenshot is taken with a Kvantum theme:
+
+![FeatherNotes](screenshots/FeatherNotes.png?raw=true "FeatherNotes")
