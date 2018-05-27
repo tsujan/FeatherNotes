@@ -275,8 +275,8 @@
     <addaction name="actionMoveRight"/>
     <addaction name="separator"/>
     <addaction name="actionTags"/>
-    <addaction name="actionRenameNode"/>
     <addaction name="actionNodeIcon"/>
+    <addaction name="actionRenameNode"/>
     <addaction name="actionProp"/>
    </widget>
    <widget class="QMenu" name="menuOptions">
