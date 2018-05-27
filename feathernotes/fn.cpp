@@ -199,6 +199,7 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
 
     connect (ui->actionTags, &QAction::triggered, this, &FN::handleTags);
     connect (ui->actionRenameNode, &QAction::triggered, this, &FN::renameNode);
+    connect (ui->actionNodeIcon, &QAction::triggered, this, &FN::nodeIcon);
     connect (ui->actionProp, &QAction::triggered, this, &FN::toggleStatusBar);
 
     connect (ui->actionDocFont, &QAction::triggered, this, &FN::textFontDialog);
@@ -496,6 +497,7 @@ void FN::showContextMenu (const QPoint &p)
     menu.addAction (ui->actionDeleteNode);
     menu.addSeparator();
     menu.addAction (ui->actionTags);
+    menu.addAction (ui->actionNodeIcon);
     menu.addAction (ui->actionRenameNode);
     menu.exec (ui->treeView->mapToGlobal (p));
 }
@@ -786,6 +788,7 @@ void FN::enableActions (bool enable)
 
     ui->actionTags->setEnabled (enable);
     ui->actionRenameNode->setEnabled (enable);
+    ui->actionNodeIcon->setEnabled (enable);
 
     ui->actionDocFont->setEnabled (enable);
     ui->actionNodeFont->setEnabled (enable);
@@ -1997,6 +2000,117 @@ void FN::handleTags()
 void FN::renameNode()
 {
     ui->treeView->edit (ui->treeView->currentIndex());
+}
+/*************************/
+void FN::nodeIcon()
+{
+    QDialog *dlg = new QDialog (this);
+    dlg->setWindowTitle (tr ("Node Icon"));
+    QGridLayout *grid = new QGridLayout;
+    grid->setSpacing (5);
+    dlg->setContentsMargins (5, 5, 5, 5);
+
+    LineEdit *ImagePathEntry = new LineEdit();
+    ImagePathEntry->returnOnClear = false;
+    ImagePathEntry->setMinimumWidth (200);
+    ImagePathEntry->setToolTip (tr ("Image path"));
+    connect (ImagePathEntry, &QLineEdit::returnPressed, dlg, &QDialog::accept);
+    QToolButton *openBtn = new QToolButton();
+    openBtn->setIcon (symbolicIcon::icon (":icons/document-open.svg"));
+    openBtn->setToolTip (tr ("Open image"));
+    connect (openBtn, &QAbstractButton::clicked, dlg, [=] {
+        QString path;
+        if (!xmlPath_.isEmpty())
+        {
+            QDir dir = QFileInfo (xmlPath_).absoluteDir();
+            if (!dir.exists())
+                dir = QDir::home();
+            path = dir.path();
+        }
+        else
+        {
+            QDir dir = QDir::home();
+            path = dir.path();
+        }
+        QString file;
+        FileDialog dialog (this);
+        dialog.setAcceptMode (QFileDialog::AcceptOpen);
+        dialog.setWindowTitle (tr ("Open Image..."));
+        dialog.setFileMode (QFileDialog::ExistingFiles);
+        dialog.setNameFilter (tr ("Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)"));
+        dialog.setDirectory (path);
+        if (dialog.exec())
+        {
+            QStringList files = dialog.selectedFiles();
+            if (files.count() > 0)
+                file = files.at (0);
+        }
+        ImagePathEntry->setText (file);
+    });
+    QSpacerItem *spacer = new QSpacerItem (1, 10, QSizePolicy::Minimum, QSizePolicy::MinimumExpanding);
+    QPushButton *cancelButton = new QPushButton (symbolicIcon::icon (":icons/dialog-cancel.svg"), tr ("Cancel"));
+    QPushButton *okButton = new QPushButton (symbolicIcon::icon (":icons/dialog-ok.svg"), tr ("OK"));
+    connect (cancelButton, &QAbstractButton::clicked, dlg, &QDialog::reject);
+    connect (okButton, &QAbstractButton::clicked, dlg, &QDialog::accept);
+
+    grid->addWidget (ImagePathEntry, 0, 0, 1, 4);
+    grid->addWidget (openBtn, 0, 4, Qt::AlignCenter);
+    grid->addItem (spacer, 1, 0);
+    grid->addWidget (cancelButton, 2, 2, Qt::AlignRight);
+    grid->addWidget (okButton, 2, 3, 1, 2, Qt::AlignCenter);
+    grid->setColumnStretch (1, 1);
+
+    dlg->setLayout (grid);
+    dlg->resize (dlg->sizeHint());
+
+    QString imagePath;
+    switch (dlg->exec()) {
+    case QDialog::Accepted:
+        imagePath = ImagePathEntry->text();
+        delete dlg;
+        break;
+    case QDialog::Rejected:
+    default:
+        delete dlg;
+        return;
+        break;
+    }
+
+    QModelIndex index = ui->treeView->currentIndex();
+    DomItem *item = static_cast<DomItem*>(index.internalPointer());
+    QDomNode node = item->node();
+    QString curIcn = node.toElement().attribute ("icon");
+
+    if (imagePath.isEmpty())
+    {
+        if (!curIcn.isEmpty())
+        {
+            node.toElement().removeAttribute ("icon");
+            noteModified();
+        }
+    }
+    else
+    {
+        QFile file (imagePath);
+        if (file.open (QIODevice::ReadOnly))
+        {
+            QDataStream in (&file);
+            QByteArray rawarray;
+            QDataStream datastream (&rawarray, QIODevice::WriteOnly);
+            char a;
+            while (in.readRawData (&a, 1) != 0)
+                datastream.writeRawData (&a, 1);
+            file.close();
+            QByteArray base64array = rawarray.toBase64();
+            const QString icn = QString (base64array);
+
+            if (curIcn != icn)
+            {
+                node.toElement().setAttribute ("icon", icn);
+                noteModified();
+            }
+        }
+    }
 }
 /*************************/
 void FN::toggleStatusBar()
@@ -4299,6 +4413,7 @@ void FN::readAndApplyConfig()
     icn = symbolicIcon::icon (":icons/image-x-generic.svg");
     ui->actionEmbedImage->setIcon (icn);
     ui->actionImageScale->setIcon (icn);
+    ui->actionNodeIcon->setIcon (icn);
     ui->actionExpandAll->setIcon (symbolicIcon::icon (":icons/expand.svg"));
     ui->actionCollapseAll->setIcon (symbolicIcon::icon (":icons/collapse.svg"));
     ui->actionDeleteNode->setIcon (symbolicIcon::icon (":icons/user-trash.svg"));

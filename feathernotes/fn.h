@@ -110,6 +110,7 @@ private slots:
     void moveRightNode();
     void handleTags();
     void renameNode();
+    void nodeIcon();
     void toggleStatusBar();
     void textFontDialog();
     void nodeFontDialog();

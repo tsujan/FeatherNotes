@@ -45,7 +45,7 @@ QVariant DomModel::data (const QModelIndex &index, int role) const
     if (!index.isValid())
         return QVariant();
 
-    if (role != Qt::DisplayRole && role != Qt::EditRole)
+    if (role != Qt::DisplayRole && role != Qt::EditRole && role != Qt::DecorationRole)
         return QVariant();
 
     DomItem *item = static_cast<DomItem*>(index.internalPointer());
@@ -56,7 +56,18 @@ QVariant DomModel::data (const QModelIndex &index, int role) const
     QDomNamedNodeMap attributeMap = node.attributes();
 
     if (index.column() == 0)
+    {
+        if (role == Qt::DecorationRole)
+        {
+            QString str = attributeMap.namedItem ("icon").nodeValue();
+            if (str.isEmpty())
+                return QVariant();
+            QImage image;
+            image.loadFromData (QByteArray::fromBase64 (str.toUtf8()));
+            return QVariant (QIcon (QPixmap::fromImage (image)));
+        }
         return attributeMap.namedItem ("name").nodeValue();
+    }
     else
         return QVariant();
 }

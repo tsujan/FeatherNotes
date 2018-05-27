@@ -276,6 +276,7 @@
     <addaction name="separator"/>
     <addaction name="actionTags"/>
     <addaction name="actionRenameNode"/>
+    <addaction name="actionNodeIcon"/>
     <addaction name="actionProp"/>
    </widget>
    <widget class="QMenu" name="menuOptions">
@@ -1287,6 +1288,14 @@
    </property>
    <property name="toolTip">
     <string>Menu</string>
+   </property>
+  </action>
+  <action name="actionNodeIcon">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Node Icon</string>
    </property>
   </action>
  </widget>
