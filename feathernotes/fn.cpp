@@ -461,9 +461,9 @@ void FN::createTrayIcon()
     }
     QMenu *trayMenu = new QMenu (this);
     /* we don't want shortcuts to be shown here */
-    QAction *actionshowMainWindow = trayMenu->addAction (tr("&Raise/Hide"));
+    QAction *actionshowMainWindow = trayMenu->addAction (tr ("&Raise/Hide"));
     if (underE_)
-        actionshowMainWindow->setText ("&Raise");
+        actionshowMainWindow->setText (tr ("&Raise"));
     connect (actionshowMainWindow, &QAction::triggered, this, &FN::activateTray);
     /* use system icons with the tray menu because it gets its style from the panel */
     QAction *actionNewTray = trayMenu->addAction (QIcon::fromTheme ("document-new"), tr("&New Note"));
@@ -1836,7 +1836,7 @@ void FN::deleteNode()
 
     MessageBox msgBox;
     msgBox.setIcon (QMessageBox::Question);
-    msgBox.setWindowTitle ("Deletion");
+    msgBox.setWindowTitle (tr ("Deletion"));
     msgBox.setText (tr ("<center><b><big>Delete this node?</big></b></center>"));
     msgBox.setInformativeText (tr ("<center><b><i>Warning!</i></b></center>\n<center>This action cannot be undone.</center>"));
     msgBox.setStandardButtons (QMessageBox::Yes | QMessageBox::No);
@@ -1949,7 +1949,7 @@ void FN::handleTags()
     lineEdit->returnOnClear = false;
     lineEdit->setMinimumWidth (250);
     lineEdit->setText (tags);
-    lineEdit->setToolTip ("Tag(s) for this node");
+    lineEdit->setToolTip (tr ("Tag(s) for this node"));
     connect (lineEdit, &QLineEdit::returnPressed, dialog, &QDialog::accept);
     QSpacerItem *spacer = new QSpacerItem (1, 5);
     QPushButton *cancelButton = new QPushButton (symbolicIcon::icon (":icons/dialog-cancel.svg"), tr ("Cancel"));
@@ -4147,7 +4147,7 @@ void FN::prefEnlightenment (int checked)
         if (tray_)
         {
             if (QAction *actionshowMainWindow = tray_->contextMenu()->findChild<QAction *>("raiseHide"))
-                actionshowMainWindow->setText("&Raise");
+                actionshowMainWindow->setText (tr ("&Raise"));
         }
     }
     else if (checked == Qt::Unchecked)
@@ -4156,7 +4156,7 @@ void FN::prefEnlightenment (int checked)
         if (tray_)
         {
             if (QAction *actionshowMainWindow = tray_->contextMenu()->findChild<QAction *>("raiseHide"))
-                actionshowMainWindow->setText("&Raise/Hide");
+                actionshowMainWindow->setText (tr ("&Raise/Hide"));
         }
     }
 }
@@ -4690,7 +4690,7 @@ void FN::exportHTML()
     groupBox->setLayout (vbox);
 
     QLabel *label = new QLabel();
-    label->setText ("Output file:");
+    label->setText (tr ("Output file:"));
 
     htmlPahEntry_ = new LineEdit();
     htmlPahEntry_->returnOnClear = false;
@@ -4923,12 +4923,12 @@ void FN::setPswd()
     LineEdit *lineEdit1 = new LineEdit();
     lineEdit1->setMinimumWidth (200);
     lineEdit1->setEchoMode (QLineEdit::Password);
-    lineEdit1->setPlaceholderText ("Type password");
+    lineEdit1->setPlaceholderText (tr ("Type password"));
     connect (lineEdit1, &QLineEdit::returnPressed, this, &FN::reallySetPswrd);
     LineEdit *lineEdit2 = new LineEdit();
     lineEdit2->returnOnClear = false;
     lineEdit2->setEchoMode (QLineEdit::Password);
-    lineEdit2->setPlaceholderText ("Retype password");
+    lineEdit2->setPlaceholderText (tr ("Retype password"));
     connect (lineEdit2, &QLineEdit::returnPressed, this, &FN::reallySetPswrd);
     QLabel *label = new QLabel();
     QSpacerItem *spacer = new QSpacerItem (1, 10);
@@ -5004,7 +5004,7 @@ void FN::reallySetPswrd()
 
     if (lineEdit1->text() != lineEdit2->text())
     {
-        listLabel.at (0)->setText ("<center>Not the same as above. Retry!</center>");
+        listLabel.at (0)->setText (tr ("<center>Passwords were different. Retry!</center>"));
         listLabel.at (0)->setVisible (true);
     }
     else
@@ -5110,7 +5110,7 @@ void FN::checkPswrd()
 
     if (listEdit.at (0)->text() != pswrd_)
     {
-        listLabel.at (0)->setText ("<center>Wrong password. Retry!</center>");
+        listLabel.at (0)->setText (tr ("<center>Wrong password. Retry!</center>"));
         listLabel.at (0)->setVisible (true);
     }
     else

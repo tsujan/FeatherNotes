@@ -980,6 +980,7 @@
     </message>
     <message>
         <location filename="../../fn.cpp" line="464"/>
+        <location filename="../../fn.cpp" line="4159"/>
         <source>&amp;Raise/Hide</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1183,6 +1184,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../fn.cpp" line="466"/>
+        <location filename="../../fn.cpp" line="4150"/>
+        <source>&amp;Raise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../fn.cpp" line="662"/>
         <source>New Node</source>
         <translation type="unfinished"></translation>
@@ -1196,6 +1203,16 @@
         <location filename="../../fn.cpp" line="4865"/>
         <location filename="../../fn.cpp" line="4891"/>
         <source>Untitled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../fn.cpp" line="1839"/>
+        <source>Deletion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../fn.cpp" line="1952"/>
+        <source>Tag(s) for this node</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1481,6 +1498,11 @@ prevents annoying scroll jumps.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../fn.cpp" line="4693"/>
+        <source>Output file:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../fn.cpp" line="4712"/>
         <source>Select path</source>
         <translation type="unfinished"></translation>
@@ -1501,8 +1523,28 @@ prevents annoying scroll jumps.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../fn.cpp" line="4926"/>
+        <source>Type password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../fn.cpp" line="4931"/>
+        <source>Retype password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../fn.cpp" line="5007"/>
+        <source>&lt;center&gt;Passwords were different. Retry!&lt;/center&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../fn.cpp" line="5039"/>
         <source>Enter Password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../fn.cpp" line="5113"/>
+        <source>&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

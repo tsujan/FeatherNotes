@@ -980,6 +980,7 @@
     </message>
     <message>
         <location filename="../../fn.cpp" line="464"/>
+        <location filename="../../fn.cpp" line="4159"/>
         <source>&amp;Raise/Hide</source>
         <translation>Le&amp;vi/Kaŝi</translation>
     </message>
@@ -1185,6 +1186,12 @@
         <translation>Malfermi Bildon...</translation>
     </message>
     <message>
+        <location filename="../../fn.cpp" line="466"/>
+        <location filename="../../fn.cpp" line="4150"/>
+        <source>&amp;Raise</source>
+        <translation>&amp;Levi</translation>
+    </message>
+    <message>
         <location filename="../../fn.cpp" line="662"/>
         <source>New Node</source>
         <translation>Nova Nodo</translation>
@@ -1199,6 +1206,16 @@
         <location filename="../../fn.cpp" line="4891"/>
         <source>Untitled</source>
         <translation>Sentitola</translation>
+    </message>
+    <message>
+        <location filename="../../fn.cpp" line="1839"/>
+        <source>Deletion</source>
+        <translation>Forviŝado</translation>
+    </message>
+    <message>
+        <location filename="../../fn.cpp" line="1952"/>
+        <source>Tag(s) for this node</source>
+        <translation>Etikedo(j) por ĉi tiu nodo</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2040"/>
@@ -1494,17 +1511,22 @@ prevents annoying scroll jumps.</source>
     <message>
         <location filename="../../fn.cpp" line="4678"/>
         <source>&amp;Current node</source>
-        <translation>La &amp;nuna nodo</translation>
+        <translation>La &amp;nunan nodon</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4680"/>
         <source>With all &amp;sub-nodes</source>
-        <translation>Kun ĉiuj &amp;subnodoj</translation>
+        <translation>Kun ĉiuj ĝiaj &amp;subnodoj</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4681"/>
         <source>&amp;All nodes</source>
-        <translation>Ĉi&amp;uj Nodoj</translation>
+        <translation>Ĉi&amp;ujn nodojn</translation>
+    </message>
+    <message>
+        <location filename="../../fn.cpp" line="4693"/>
+        <source>Output file:</source>
+        <translation>Eliga dosiero:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4712"/>
@@ -1527,9 +1549,29 @@ prevents annoying scroll jumps.</source>
         <translation>Aldoni Pasvorton</translation>
     </message>
     <message>
+        <location filename="../../fn.cpp" line="4926"/>
+        <source>Type password</source>
+        <translation>Tajpu pasvorton</translation>
+    </message>
+    <message>
+        <location filename="../../fn.cpp" line="4931"/>
+        <source>Retype password</source>
+        <translation>Retajpu pasvorton</translation>
+    </message>
+    <message>
+        <location filename="../../fn.cpp" line="5007"/>
+        <source>&lt;center&gt;Passwords were different. Retry!&lt;/center&gt;</source>
+        <translation>&lt;center&gt;La pasvortoj estis malsamaj. Reprovu!&lt;/center&gt;</translation>
+    </message>
+    <message>
         <location filename="../../fn.cpp" line="5039"/>
         <source>Enter Password</source>
-        <translation>Enmeti Pasvorton</translation>
+        <translation>Enmetu Pasvorton</translation>
+    </message>
+    <message>
+        <location filename="../../fn.cpp" line="5113"/>
+        <source>&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</source>
+        <translation>&lt;center&gt;Malĝusta pasvorto. Reprovu!&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5124"/>
