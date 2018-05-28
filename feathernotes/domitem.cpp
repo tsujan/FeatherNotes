@@ -97,7 +97,7 @@ void DomItem::addChild (DomItem *item)
         /*QDomElement e = QDomDocument().createElement ("node");
         e.setAttribute ("name", "New Node");*/
         QDomDocument doc;
-        doc.setContent (QString ("<node name=\"New Note\"></node>"), false);
+        doc.setContent (QString ("<node name=\""+ QObject::tr ("New Node") + "\"></node>"), false);
         itemNode = doc.documentElement();
     }
 
@@ -134,7 +134,7 @@ void DomItem::insertAt (int n, DomItem *item)
     else
     {
         QDomDocument doc;
-        doc.setContent (QString ("<node name=\"New Note\"></node>"), false);
+        doc.setContent (QString ("<node name=\""+ QObject::tr ("New Node") + "\"></node>"), false);
         itemNode = doc.documentElement();
     }
 

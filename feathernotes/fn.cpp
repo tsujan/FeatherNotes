@@ -659,7 +659,7 @@ void FN::newNote()
     root.setAttribute ("nodefont", nodeFont_.toString());
     doc.appendChild (root);
     QDomElement e = doc.createElement ("node");
-    e.setAttribute ("name", "New Node");
+    e.setAttribute ("name", tr ("New Node"));
     root.appendChild (e);
 
     showDoc (doc);
@@ -1068,7 +1068,7 @@ bool FN::saveFile()
         if (fname.isEmpty())
         {
             QDir dir = QDir::home();
-            fname = dir.filePath ("Untitled.fnx");
+            fname = dir.filePath (tr ("Untitled") + ".fnx");
         }
         else
         {
@@ -3100,11 +3100,11 @@ void FN::embedImage()
     openBtn->setToolTip (tr ("Open image"));
     connect (openBtn, &QAbstractButton::clicked, this, &FN::setImagePath);
     QLabel *label = new QLabel();
-    label->setText ("Scale to");
+    label->setText (tr ("Scale to"));
     SpinBox *spinBox = new SpinBox();
     spinBox->setRange (1, 200);
     spinBox->setValue (imgScale_);
-    spinBox->setSuffix ("%");
+    spinBox->setSuffix (tr ("%"));
     spinBox->setToolTip (tr ("Scaling percentage"));
     connect (spinBox, &QAbstractSpinBox::editingFinished, dialog, &QDialog::accept);
     QSpacerItem *spacer = new QSpacerItem (1, 10);
@@ -3214,7 +3214,7 @@ void FN::setImagePath (bool)
     dialog.setAcceptMode (QFileDialog::AcceptOpen);
     dialog.setWindowTitle (tr ("Open Image..."));
     dialog.setFileMode (QFileDialog::ExistingFiles);
-    dialog.setNameFilter (tr ("Image Files (*.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)"));
+    dialog.setNameFilter (tr ("Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)"));
     if (QFileInfo (path).isDir())
         dialog.setDirectory (path);
     else
@@ -3259,10 +3259,10 @@ void FN::scaleImage()
     grid->setContentsMargins (5, 5, 5, 5);
 
     QLabel *label = new QLabel();
-    label->setText ("Scale to");
+    label->setText (tr ("Scale to"));
     SpinBox *spinBox = new SpinBox();
     spinBox->setRange (1, 200);
-    spinBox->setSuffix ("%");
+    spinBox->setSuffix (tr ("%"));
     spinBox->setToolTip (tr ("Scaling percentage"));
     connect (spinBox, &QAbstractSpinBox::editingFinished, dialog, &QDialog::accept);
     QSpacerItem *spacer = new QSpacerItem (1, 10);
@@ -3439,7 +3439,7 @@ void FN::saveImage()
                 dialog.setAcceptMode (QFileDialog::AcceptSave);
                 dialog.setWindowTitle (tr ("Save Image As..."));
                 dialog.setFileMode (QFileDialog::AnyFile);
-                dialog.setNameFilter (tr ("Image Files (*.png *.jpg *.jpeg *.bmp);;All Files (*)"));
+                dialog.setNameFilter (tr ("Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)"));
                 dialog.selectFile (QString ("%1-%2.%3").arg (path).arg (n).arg (extension));
                 dialog.autoScroll();
                 if (dialog.exec())
@@ -3494,13 +3494,13 @@ void FN::addTable()
     grid->setContentsMargins (5, 5, 5, 5);
 
     QLabel *labelRow = new QLabel();
-    labelRow->setText ("Rows:");
+    labelRow->setText (tr ("Rows:"));
     SpinBox *spinBoxRow = new SpinBox();
     spinBoxRow->setRange (1, 100);
     spinBoxRow->setValue (1);
     connect (spinBoxRow, &QAbstractSpinBox::editingFinished, dialog, &QDialog::accept);
     QLabel *labelCol = new QLabel();
-    labelCol->setText ("Columns:");
+    labelCol->setText (tr ("Columns:"));
     SpinBox *spinBoxCol = new SpinBox();
     spinBoxCol->setRange (1, 100);
     spinBoxCol->setValue (1);
@@ -3864,8 +3864,8 @@ void FN::PrefDialog()
     textGrid->addWidget (indentBox, 1, 0, 1, 2);
     textGrid->addWidget (autoBracketBox, 2, 0, 1, 2);
     textGrid->addWidget (autoSaveBox, 3, 0);
-    textGrid->addWidget (spinBox, 4, 1);
-    textGrid->addWidget (workaroundBox, 5, 0, 1, 2);
+    textGrid->addWidget (spinBox, 3, 1);
+    textGrid->addWidget (workaroundBox, 4, 0, 1, 2);
     textGrid->setColumnStretch (2, 1);
     textGoupBox->setLayout (textGrid);
     wrapBox->setChecked (wrapByDefault_);
@@ -4594,7 +4594,7 @@ void FN::txtPrint()
     QString fname;
     if (QObject::sender() == ui->actionPrintAll)
     {
-        if (xmlPath_.isEmpty()) fname = "Untitled";
+        if (xmlPath_.isEmpty()) fname = tr ("Untitled");
         else
         {
             fname = QFileInfo (xmlPath_).fileName();
@@ -4603,7 +4603,7 @@ void FN::txtPrint()
         }
     }
     else if ((fname = model_->data (indx, Qt::DisplayRole).toString()).isEmpty())
-            fname = "Untitled";
+            fname = tr ("Untitled");
     fname= dir.filePath (fname);
 
     QPrinter printer (QPrinter::HighResolution);
@@ -4701,7 +4701,7 @@ void FN::exportHTML()
         dir = QFileInfo (xmlPath_).absoluteDir();
     QString fname;
     if ((fname = model_->data (indx, Qt::DisplayRole).toString()).isEmpty())
-        fname = "Untitled";
+        fname = tr ("Untitled");
     fname.append (".html");
     fname = dir.filePath (fname);
     htmlPahEntry_->setText (fname);
@@ -4809,7 +4809,7 @@ void FN::exportHTML()
                            QMessageBox::Close,
                            this);
         msgBox.changeButtonText (QMessageBox::Close, tr ("Close"));
-        msgBox.setInformativeText (tr ("<center><i>%1.</i></center>").arg (str));
+        msgBox.setInformativeText (QString ("<center><i>%1.</i></center>").arg (str));
         msgBox.setParent (this, Qt::Dialog);
         msgBox.setWindowModality (Qt::WindowModal);
         msgBox.exec();
@@ -4853,7 +4853,7 @@ void FN::setHTMLName (bool checked)
     QString fname;
     if (index == 2)
     {
-        if (xmlPath_.isEmpty()) fname = "Untitled";
+        if (xmlPath_.isEmpty()) fname = tr ("Untitled");
         else
         {
             fname = QFileInfo (xmlPath_).fileName();
@@ -4862,7 +4862,7 @@ void FN::setHTMLName (bool checked)
         }
     }
     else if ((fname = model_->data (indx, Qt::DisplayRole).toString()).isEmpty())
-        fname = "Untitled";
+        fname = tr ("Untitled");
     fname.append (".html");
 
     QString str = htmlPahEntry_->text();
@@ -4888,7 +4888,7 @@ void FN::setHTMLPath (bool)
 {
     QString path;
     if ((path = htmlPahEntry_->text()).isEmpty())
-        path = QDir::home().filePath ("Untitled.fnx");
+        path = QDir::home().filePath (tr ("Untitled") + ".fnx");
 
     QString HTMLPath;
     FileDialog dialog (this);
