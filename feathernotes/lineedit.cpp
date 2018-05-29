@@ -32,7 +32,7 @@ LineEdit::LineEdit (QWidget *parent)
     QToolButton *clearButton = list.at (0);
     if (clearButton)
     {
-        clearButton->setToolTip ("Clear text (Ctrl+K)");
+        clearButton->setToolTip (tr ("Clear text (Ctrl+K)"));
         connect (clearButton, &QAbstractButton::clicked, this, &LineEdit::Klear);
     }
     connect (this, &QLineEdit::editingFinished, this, &LineEdit::unfocused);

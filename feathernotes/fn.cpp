@@ -194,8 +194,16 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
     connect (ui->actionDeleteNode, &QAction::triggered, this, &FN::deleteNode);
     connect (ui->actionMoveUp, &QAction::triggered, this, &FN::moveUpNode);
     connect (ui->actionMoveDown, &QAction::triggered, this, &FN::moveDownNode);
-    connect (ui->actionMoveLeft, &QAction::triggered, this, &FN::moveLeftNode);
-    connect (ui->actionMoveRight, &QAction::triggered, this, &FN::moveRightNode);
+    if (QApplication::layoutDirection() == Qt::RightToLeft)
+    {
+        connect (ui->actionMoveLeft, &QAction::triggered, this, &FN::moveRightNode);
+        connect (ui->actionMoveRight, &QAction::triggered, this, &FN::moveLeftNode);
+    }
+    else
+    {
+        connect (ui->actionMoveLeft, &QAction::triggered, this, &FN::moveLeftNode);
+        connect (ui->actionMoveRight, &QAction::triggered, this, &FN::moveRightNode);
+    }
 
     connect (ui->actionTags, &QAction::triggered, this, &FN::handleTags);
     connect (ui->actionRenameNode, &QAction::triggered, this, &FN::renameNode);
