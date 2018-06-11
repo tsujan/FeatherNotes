@@ -45,6 +45,9 @@
     </item>
     <item>
      <layout class="QGridLayout" name="gridLayout">
+      <property name="leftMargin">
+       <number>2</number>
+      </property>
       <property name="rightMargin">
        <number>2</number>
       </property>
