@@ -17,6 +17,7 @@
 
 #include "textedit.h"
 #include <QDesktopServices>
+#include <QProcess>
 #include <QToolTip>
 #include <QTimer>
 #include <QTextBlock>
@@ -522,8 +523,11 @@ void TextEdit::mouseReleaseEvent (QMouseEvent *e)
     {
         QUrl url (str);
         if (url.isRelative()) // treat relative URLs as local paths
-            url = QUrl::fromUserInput (str, "/");
-        QDesktopServices::openUrl (url);
+            url = QUrl::fromUserInput (str, "/", QUrl::AssumeLocalFile);
+        /* QDesktopServices::openUrl() may resort to "xdg-open", which isn't
+           the best choice. "gio" is always reliable, so we check it first. */
+        if (!QProcess::startDetached ("gio", QStringList() << "open" << url.toString()))
+            QDesktopServices::openUrl (url);
     }
     pressPoint = QPoint();
 }

@@ -6,6 +6,7 @@ V0.4.5
  * Translation support.
  * Added SVG symbolic icons (that change color to have high contrast with their backgrounds) and removed system icon support because some important icons may not be found in system themes.
  * Support node icons.
+ * First try "gio" for openeing hyperlinks because Qt may resort to "xdg-open", which isn't a good choice sometimes.
 
 V0.4.4
 ---------
