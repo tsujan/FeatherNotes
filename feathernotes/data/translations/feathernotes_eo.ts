@@ -1565,6 +1565,7 @@ prevents annoying scroll jumps.</source>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5047"/>
+        <location filename="../../fn.cpp" line="5055"/>
         <source>Enter Password</source>
         <translation>Enmetu Pasvorton</translation>
     </message>

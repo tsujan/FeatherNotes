@@ -507,7 +507,7 @@ void FN::showContextMenu (const QPoint &p)
     menu.addAction (ui->actionTags);
     menu.addAction (ui->actionNodeIcon);
     menu.addAction (ui->actionRenameNode);
-    menu.exec (ui->treeView->mapToGlobal (p));
+    menu.exec (ui->treeView->viewport()->mapToGlobal (p));
 }
 /*************************/
 void FN::fullScreening()
@@ -1406,7 +1406,7 @@ void FN::txtContextMenu (const QPoint &p)
         }
     }
 
-    menu->exec (textEdit->mapToGlobal (p));
+    menu->exec (textEdit->viewport()->mapToGlobal (p));
     delete menu;
     txtTable_ = nullptr;
 }
@@ -5052,7 +5052,7 @@ bool FN::isPswrdCorrect()
     LineEdit *lineEdit = new LineEdit();
     lineEdit->setMinimumWidth (200);
     lineEdit->setEchoMode (QLineEdit::Password);
-    lineEdit->setPlaceholderText ("Enter password");
+    lineEdit->setPlaceholderText (tr ("Enter Password"));
     connect (lineEdit, &QLineEdit::returnPressed, this, &FN::checkPswrd);
     QLabel *label = new QLabel();
     QSpacerItem *spacer = new QSpacerItem (1, 5);
