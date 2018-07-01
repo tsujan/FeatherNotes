@@ -1206,7 +1206,7 @@
         <location filename="../../fn.cpp" line="2464"/>
         <source>%n Match(es)</source>
         <translation>
-            <numerusform>%n Match</numerusform>
+            <numerusform>One Match</numerusform>
             <numerusform>%n Matches</numerusform>
         </translation>
     </message>
@@ -1214,7 +1214,7 @@
         <location filename="../../fn.cpp" line="2878"/>
         <source>%n Replacement(s)</source>
         <translation>
-            <numerusform>%n Replacement</numerusform>
+            <numerusform>One Replacement</numerusform>
             <numerusform>%n Replacements</numerusform>
         </translation>
     </message>

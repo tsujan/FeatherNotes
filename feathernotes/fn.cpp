@@ -2460,10 +2460,8 @@ void FN::findInTags()
 
     QDialog *TagsDialog = new QDialog (this);
     TagsDialog->setAttribute (Qt::WA_DeleteOnClose, true);
-    if (matches > 1)
-        TagsDialog->setWindowTitle (tr ("%1 Matches").arg (matches));
-    else if (matches == 1)
-        TagsDialog->setWindowTitle (tr ("One Match"));
+    if (matches >= 1)
+        TagsDialog->setWindowTitle (tr ("%n Match(es)", "", matches));
     else
         TagsDialog->setWindowTitle (tr ("No Match"));
     QGridLayout *grid = new QGridLayout;
@@ -2876,10 +2874,8 @@ void FN::replaceAll()
     {
         if (replCount_ == 0)
             ui->dockReplace->setWindowTitle (tr ("No Replacement"));
-        else if (replCount_ == 1)
-            ui->dockReplace->setWindowTitle (tr ("One Replacement"));
         else
-            ui->dockReplace->setWindowTitle (tr ("%1 Replacements").arg (replCount_));
+            ui->dockReplace->setWindowTitle (tr ("%n Replacement(s)", "", replCount_));
         replCount_ = 0;
     }
 }

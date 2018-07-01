@@ -770,7 +770,7 @@
     <bool>false</bool>
    </property>
    <property name="text">
-    <string>&amp;Sellect All</string>
+    <string>&amp;Select All</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+A</string>
