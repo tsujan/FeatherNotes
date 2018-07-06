@@ -38,7 +38,8 @@ HEADERS += fn.h \
            svgicons.h
 
 FORMS += fn.ui \
-         helpDialog.ui
+         helpDialog.ui \
+         about.ui
 
 RESOURCES += data/fn.qrc
 

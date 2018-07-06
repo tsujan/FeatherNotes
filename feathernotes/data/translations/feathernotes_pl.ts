@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="eo">
+<TS version="2.1" language="pl_PL">
 <context>
     <name>FeatherNotes::AboutDialog</name>
     <message>
         <location filename="../../about.ui" line="113"/>
         <source>License</source>
-        <translation>Licenco</translation>
+        <translation>Licencja</translation>
     </message>
 </context>
 <context>
@@ -16,1027 +16,1027 @@
         <location filename="../../fn.cpp" line="1004"/>
         <location filename="../../fn.cpp" line="4816"/>
         <source>FeatherNotes</source>
-        <translation></translation>
+        <translation>FeatherNotes</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="63"/>
         <source>Next (F3)</source>
-        <translation>Sekva (F3)</translation>
+        <translation>Następne (F3)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="66"/>
         <source>F3</source>
-        <translation></translation>
+        <translation>F3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="76"/>
         <source>Previous (F4)</source>
-        <translation>Antaŭa (F4)</translation>
+        <translation>Poprzednie (F4)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="79"/>
         <source>F4</source>
-        <translation></translation>
+        <translation>F4</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="95"/>
         <source>Search...</source>
-        <translation>Serĉi...</translation>
+        <translation>Szukaj…</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="107"/>
         <source>Search only in names (Ctrl+Shift+F7)</source>
-        <translation>Serĉi nur la nomojn (Ctrl+Shift+F7)</translation>
+        <translation>Szukaj tylko w nazwach (Ctrl+Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="110"/>
         <source>Ctrl+Shift+F7</source>
-        <translation></translation>
+        <translation>Ctrl+Shift+F7</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="117"/>
         <source>Search only in tags (Shift+F7)</source>
-        <translation>Serĉi nur la etikedojn (Shift+F7)</translation>
+        <translation>Szukaj tylko w tagach (Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="120"/>
         <source>Shift+F7</source>
-        <translation></translation>
+        <translation>Shift+F7</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="130"/>
         <source>Search in all nodes (F7)</source>
-        <translation>Serĉi ĉiujn nodojn (F7)</translation>
+        <translation>Szukaj we wszystkich węzłach (F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="133"/>
         <source>F7</source>
-        <translation></translation>
+        <translation>F7</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="166"/>
         <source>Whole Word (F6)</source>
-        <translation>Tuta Vorto (F6)</translation>
+        <translation>Pełny wyraz (F6)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="169"/>
         <source>Whole Word</source>
-        <translation>Tuta Vorto</translation>
+        <translation>Pełny wyraz</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="172"/>
         <source>F6</source>
-        <translation></translation>
+        <translation>F6</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="150"/>
         <source>Match Case (F5)</source>
-        <translation>Uskleciva (F5)</translation>
+        <translation>Dopasuj (F5)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="153"/>
         <source>Match Case</source>
-        <translation>Uskleciva</translation>
+        <translation>Dopasuj</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="156"/>
         <source>F5</source>
-        <translation></translation>
+        <translation>F5</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="199"/>
         <source>&amp;File</source>
-        <translation>&amp;Dosiero</translation>
+        <translation>&amp;Plik</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="218"/>
         <source>&amp;Edit</source>
-        <translation>R&amp;edakti</translation>
+        <translation>&amp;Edytuj</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="233"/>
         <source>For&amp;mat</source>
-        <translation>For&amp;mato</translation>
+        <translation>For&amp;matowanie</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="265"/>
         <source>&amp;Tree</source>
-        <translation>&amp;Arbo</translation>
+        <translation>&amp;Drzewo</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="288"/>
         <source>&amp;Options</source>
-        <translation>A&amp;gordoj</translation>
+        <translation>&amp;Opcje</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="300"/>
         <source>&amp;Search</source>
-        <translation>&amp;Serĉi</translation>
+        <translation>&amp;Szukaj</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="307"/>
         <location filename="../../fn.ui" line="952"/>
         <source>&amp;Help</source>
-        <translation>&amp;Helpo</translation>
+        <translation>&amp;Pomoc</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="410"/>
         <source>Find:</source>
-        <translation>Trovu:</translation>
+        <translation>Szukaj:</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="417"/>
         <source>Replace with:</source>
-        <translation>Anstataŭigu per:</translation>
+        <translation>Zastąp z:</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="430"/>
         <source>To be replaced</source>
-        <translation>Anstataŭigota teksto</translation>
+        <translation>Do zastąpienia</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="443"/>
         <source>Replacing text</source>
-        <translation>Anstataŭiganta teksto</translation>
+        <translation>Tekst zastępujący</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="450"/>
         <source>Previous (F9)</source>
-        <translation>Antaŭa (F9)</translation>
+        <translation>Poprzednie (F9)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="453"/>
         <source>F9</source>
-        <translation></translation>
+        <translation>F9</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="463"/>
         <source>Next (F8)</source>
-        <translation>Sekva (F8)</translation>
+        <translation>Następne (F8)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="466"/>
         <source>F8</source>
-        <translation></translation>
+        <translation>F8</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="476"/>
         <source>Replace all (F10)</source>
-        <translation>Anstataŭigu ĉion (F10)</translation>
+        <translation>Zastąp wszystkie (F10)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="479"/>
         <source>F10</source>
-        <translation></translation>
+        <translation>F10</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="496"/>
         <source>&amp;Save</source>
-        <translation>Kon&amp;servi</translation>
+        <translation>Zapi&amp;sz</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="499"/>
         <location filename="../../fn.cpp" line="723"/>
         <source>Save</source>
-        <translation>Konservi</translation>
+        <translation>Zapisz</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="502"/>
         <source>Ctrl+S</source>
-        <translation></translation>
+        <translation>Ctrl+S</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="507"/>
         <location filename="../../fn.cpp" line="479"/>
         <source>&amp;Open</source>
-        <translation>&amp;Malfermi</translation>
+        <translation>&amp;Otwórz</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="510"/>
         <source>Open a file</source>
-        <translation>Malfermi dosieron</translation>
+        <translation>Otwórz plik</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="513"/>
         <source>Ctrl+O</source>
-        <translation></translation>
+        <translation>Ctrl+O</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="521"/>
         <source>&amp;Undo</source>
-        <translation>Malfar&amp;u</translation>
+        <translation>&amp;Cofnij</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="524"/>
         <source>Undo</source>
-        <translation>Malfaru</translation>
+        <translation>Cofnij</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="527"/>
         <source>Ctrl+Z</source>
-        <translation></translation>
+        <translation>Ctrl+Z</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="535"/>
         <source>&amp;Redo</source>
-        <translation>Refa&amp;ru</translation>
+        <translation>Powtó&amp;rz</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="538"/>
         <source>Redo</source>
-        <translation>Refaru</translation>
+        <translation>Powtórz</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="541"/>
         <source>Ctrl+Shift+Z</source>
-        <translation></translation>
+        <translation>Ctrl+Shift+Z</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="549"/>
         <source>&amp;Find</source>
-        <translation>&amp;Trovi</translation>
+        <translation>&amp;Szukaj</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="552"/>
         <source>Show/hide searchbar</source>
-        <translation>Enfokusigi/malkaŝi la serĉ-breton</translation>
+        <translation>Pokaż/ukryj pasek wyszukiwania</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="555"/>
         <source>Ctrl+F</source>
-        <translation></translation>
+        <translation>Ctrl+F</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="563"/>
         <source>&amp;Clear All Formats</source>
-        <translation>&amp;Viŝi ĉiujn formatojn</translation>
+        <translation>Wy&amp;czyść całe formatowanie</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="566"/>
         <source>Clear all formats</source>
-        <translation>Viŝi ĉiujn formatojn</translation>
+        <translation>Wyczyść całe formatowanie</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="569"/>
         <source>Ctrl+E</source>
-        <translation></translation>
+        <translation>Ctrl+E</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="580"/>
         <source>&amp;Bold</source>
-        <translation>&amp;Diklitera</translation>
+        <translation>Pogru&amp;bienie</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="583"/>
         <source>Bold</source>
-        <translation>Diklitera</translation>
+        <translation>Pogrubienie</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="586"/>
         <source>Ctrl+B</source>
-        <translation></translation>
+        <translation>Ctrl+B</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="597"/>
         <source>&amp;Italic</source>
-        <translation>Kurs&amp;iva</translation>
+        <translation>Pochylen&amp;ie</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="600"/>
         <source>Italic</source>
-        <translation>Kursiva</translation>
+        <translation>Pochylenie</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="603"/>
         <source>Ctrl+I</source>
-        <translation></translation>
+        <translation>Ctrl+I</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="614"/>
         <source>&amp;Underline</source>
-        <translation>S&amp;ubstreki</translation>
+        <translation>&amp;Podkreślenie</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="617"/>
         <source>Underline</source>
-        <translation>Substreki</translation>
+        <translation>Podkreślenie</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="620"/>
         <source>Ctrl+U</source>
-        <translation></translation>
+        <translation>Ctrl+U</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="631"/>
         <source>&amp;Strike Through</source>
-        <translation>Tra&amp;streki</translation>
+        <translation>P&amp;rzekreślenie</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="634"/>
         <source>Strike through</source>
-        <translation>Trastreki</translation>
+        <translation>Przekreślenie</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="637"/>
         <source>Ctrl+T</source>
-        <translation></translation>
+        <translation>Ctrl+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="645"/>
         <source>Te&amp;xt Color</source>
-        <translation>Te&amp;kst-koloro</translation>
+        <translation>&amp;Kolor tekstu</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="648"/>
         <source>Text color</source>
-        <translation>Tekst-koloro</translation>
+        <translation>Kolor tekstu</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="651"/>
         <source>Alt+Shift+T</source>
-        <translation></translation>
+        <translation>Alt+Shift+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="659"/>
         <source>Back&amp;ground Color</source>
-        <translation>Fo&amp;n-koloro</translation>
+        <translation>Ko&amp;lor tła</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="662"/>
         <source>Background color</source>
-        <translation>Fon-koloro</translation>
+        <translation>Kolor tła</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="665"/>
         <source>Alt+Shift+B</source>
-        <translation></translation>
+        <translation>Alt+Shift+B</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="670"/>
         <source>Options</source>
-        <translation>Agordoj</translation>
+        <translation>Opcje</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="675"/>
         <location filename="../../fn.cpp" line="478"/>
         <source>&amp;New Note</source>
-        <translation>&amp;Nova Noto</translation>
+        <translation>&amp;Nowa notatka</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="678"/>
         <source>Ctrl+Alt+Shift+N</source>
-        <translation></translation>
+        <translation>Ctrl+Alt+Shift+N</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="686"/>
         <source>Save &amp;As</source>
-        <translation>Konser&amp;vi Kiel</translation>
+        <translation>Z&amp;apisz jako</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="689"/>
         <source>Ctrl+Shift+S</source>
-        <translation></translation>
+        <translation>Ctrl+Shift+S</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="697"/>
         <source>&amp;Print</source>
-        <translation>&amp;Presi</translation>
+        <translation>Wy&amp;drukuj</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="700"/>
         <source>Ctrl+P</source>
-        <translation></translation>
+        <translation>Ctrl+P</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="708"/>
         <source>P&amp;rint with Sub-Nodes</source>
-        <translation>P&amp;resi kub Sub-Nodoj</translation>
+        <translation>Wydrukuj z węzłami pochodnymi</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="716"/>
         <source>Set Pass&amp;word</source>
-        <translation>Aldoni Pas&amp;vorton</translation>
+        <translation>Usta&amp;w hasło</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="721"/>
         <location filename="../../fn.cpp" line="481"/>
         <source>&amp;Quit</source>
-        <translation>Forl&amp;asi</translation>
+        <translation>&amp;Zakończ</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="724"/>
         <source>Ctrl+Q</source>
-        <translation></translation>
+        <translation>Ctrl+Q</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="732"/>
         <source>&amp;Cut</source>
-        <translation>&amp;Tranĉu</translation>
+        <translation>&amp;Wytnij</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="735"/>
         <source>Ctrl+X</source>
-        <translation></translation>
+        <translation>Ctrl+X</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="743"/>
         <source>C&amp;opy</source>
-        <translation>&amp;Kopiu</translation>
+        <translation>K&amp;opiuj</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="746"/>
         <source>Ctrl+C</source>
-        <translation></translation>
+        <translation>Ctrl+C</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="754"/>
         <source>&amp;Paste</source>
-        <translation>Algl&amp;uu</translation>
+        <translation>W&amp;klej</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="757"/>
         <source>Ctrl+V</source>
-        <translation></translation>
+        <translation>Ctrl+V</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="765"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Forviŝu</translation>
+        <translation>&amp;Usuń</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="773"/>
         <source>&amp;Select All</source>
-        <translation>Selectu &amp;Ĉion</translation>
+        <translation>Zaznacz wszy&amp;stko</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="776"/>
         <source>Ctrl+A</source>
-        <translation></translation>
+        <translation>Ctrl+A</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="784"/>
         <source>E&amp;mbed Image</source>
-        <translation>En&amp;meti Bildon</translation>
+        <translation>&amp;Osadź obraz</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="787"/>
         <location filename="../../fn.cpp" line="3096"/>
         <source>Embed Image</source>
-        <translation>Enmeti Bildon</translation>
+        <translation>Osadź obraz</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="790"/>
         <source>Ctrl+Alt+Shift+I</source>
-        <translation></translation>
+        <translation>Ctrl+Alt+Shift+I</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="798"/>
         <source>E&amp;xpand All</source>
-        <translation>E&amp;kspansii Ĉion</translation>
+        <translation>Rozwiń &amp;wszystko</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="801"/>
         <source>Ctrl+Shift+Down</source>
-        <translation></translation>
+        <translation>Ctrl+Shift+Down</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="809"/>
         <source>Collap&amp;se All</source>
-        <translation>Kolap&amp;si Ĉion</translation>
+        <translation>Zwiń wszy&amp;stko</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="812"/>
         <source>Ctrl+Shift+Up</source>
-        <translation></translation>
+        <translation>Ctrl+Shift+Up</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="820"/>
         <source>&amp;Append Sibling</source>
-        <translation>&amp;Aldoni Gefraton Suben</translation>
+        <translation>Umieść bliźni&amp;aka</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="823"/>
         <source>Ctrl+N</source>
-        <translation></translation>
+        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="831"/>
         <source>Append &amp;Child</source>
-        <translation>Aldoni Id&amp;on</translation>
+        <translation>Umieść dzie&amp;cko</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="834"/>
         <source>Ctrl+Shift+N</source>
-        <translation></translation>
+        <translation>Ctrl+Shift+N</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="842"/>
         <source>&amp;Delete Node</source>
-        <translation>&amp;Forviŝi la Nodon</translation>
+        <translation>&amp;Usuń węzeł</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="845"/>
         <source>Ctrl+D</source>
-        <translation></translation>
+        <translation>Ctrl+D</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="853"/>
         <source>Move &amp;Up</source>
-        <translation>Movi S&amp;upren</translation>
+        <translation>Przenieś w &amp;górę</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="856"/>
         <source>Alt+Up</source>
-        <translation></translation>
+        <translation>Alt+Up</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="864"/>
         <source>Move Do&amp;wn</source>
-        <translation>Movi Malsu&amp;pren</translation>
+        <translation>Przenieś &amp;w dół</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="867"/>
         <source>Alt+Down</source>
-        <translation></translation>
+        <translation>Alt+Down</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="875"/>
         <source>Re&amp;name Node</source>
-        <translation>Re&amp;nomi la Nodon</translation>
+        <translation>Zmień &amp;nazwę węzła</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="878"/>
         <source>Ctrl+Shift+R</source>
-        <translation></translation>
+        <translation>Ctrl+Shift+R</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="883"/>
         <source>Tree Pr&amp;operties</source>
-        <translation>Eco&amp;j</translation>
+        <translation>Właściw&amp;ości drzewa</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="886"/>
         <source>Ctrl+Shift+D</source>
-        <translation></translation>
+        <translation>Ctrl+Shift+D</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="894"/>
         <source>Document &amp;Font</source>
-        <translation>Dokumenta &amp;Tiparo</translation>
+        <translation>&amp;Czcionka dokumentu</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="908"/>
         <source>&amp;Wrap Lines</source>
-        <translation>Ĉirkaŭ&amp;fermi Liniojn</translation>
+        <translation>Zawijaj &amp;wiersze</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="911"/>
         <source>Ctrl+W</source>
-        <translation></translation>
+        <translation>Ctrl+W</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="925"/>
         <source>&amp;Auto-Indentation</source>
-        <translation>&amp;Mem-Alinei</translation>
+        <translation>&amp;Automatyczne wcięcia</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="928"/>
         <source>Ctrl+Shift+I</source>
-        <translation></translation>
+        <translation>Ctrl+Shift+I</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="933"/>
         <source>&amp;Preferences</source>
-        <translation>A&amp;gordoj</translation>
+        <translation>&amp;Preferencje</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="936"/>
         <source>Ctrl+Shift+P</source>
-        <translation></translation>
+        <translation>Ctrl+Shift+P</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="944"/>
         <source>Find and &amp;Replace</source>
-        <translation>T&amp;rovi kaj Anstataŭigi</translation>
+        <translation>&amp;Znajdź i zastąp</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="947"/>
         <source>Ctrl+R</source>
-        <translation></translation>
+        <translation>Ctrl+R</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="955"/>
         <source>Ctrl+H</source>
-        <translation></translation>
+        <translation>Ctrl+H</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="960"/>
         <source>&amp;About</source>
-        <translation>&amp;Pri</translation>
+        <translation>O progr&amp;amie</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="968"/>
         <source>Pr&amp;int All Nodes</source>
-        <translation>Pres&amp;i Ĉiujn Nodojn</translation>
+        <translation>Wydrukuj wszystk&amp;ie węzły</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="979"/>
         <source>Superscrip&amp;t</source>
-        <translation>Suprindi&amp;co</translation>
+        <translation>Indeks &amp;górny</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="982"/>
         <source>Superscript</source>
-        <translation>Suprindico</translation>
+        <translation>Indeks górny</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="985"/>
         <source>Alt+Shift+U</source>
-        <translation></translation>
+        <translation>Alt+Shift+U</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="996"/>
         <source>Subscri&amp;pt</source>
-        <translation>Subindic&amp;o</translation>
+        <translation>Indeks &amp;dolny</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="999"/>
         <source>Subscript</source>
-        <translation>Subindico</translation>
+        <translation>Indeks dolny</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1002"/>
         <source>Alt+Shift+S</source>
-        <translation></translation>
+        <translation>Alt+Shift+S</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1013"/>
         <source>C&amp;enter</source>
-        <translation>C&amp;entrigi</translation>
+        <translation>&amp;Wyśrodkuj</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1016"/>
         <source>Align center</source>
-        <translation>Centra vicigo</translation>
+        <translation>Wyrównaj do środka</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1019"/>
         <source>Alt+Shift+Down</source>
-        <translation></translation>
+        <translation>Alt+Shift+Down</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1030"/>
         <source>&amp;Right</source>
-        <translation>Dekst&amp;ren</translation>
+        <translation>Wyrównaj do p&amp;rawej</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1033"/>
         <source>Align right</source>
-        <translation>Dekstra vicigo</translation>
+        <translation>Wyrównaj do prawej</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1036"/>
         <source>Alt+Shift+Right</source>
-        <translation></translation>
+        <translation>Alt+Shift+Right</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1047"/>
         <source>&amp;Left</source>
-        <translation>Ma&amp;ldekstren</translation>
+        <translation>Wyrównaj do &amp;lewej</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1050"/>
         <source>Align left</source>
-        <translation>Maldekstra vicigo</translation>
+        <translation>Wyrównaj do lewej</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1053"/>
         <source>Alt+Shift+Left</source>
-        <translation></translation>
+        <translation>Alt+Shift+Left</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1064"/>
         <source>&amp;Justify</source>
-        <translation>Alka&amp;drigi</translation>
+        <translation>Wy&amp;justuj</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1067"/>
         <source>Justify</source>
-        <translation>Alkadrigi</translation>
+        <translation>Wyjustuj</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1070"/>
         <source>Alt+Shift+Up</source>
-        <translation></translation>
+        <translation>Alt+Shift+Up</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1078"/>
         <source>&amp;Prepend Sibling</source>
-        <translation>Aldoni &amp;Gefraton Supren</translation>
+        <translation>&amp;Poprzedź bliźniakiem</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1081"/>
         <source>Ctrl+M</source>
-        <translation></translation>
+        <translation>Ctrl+M</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1089"/>
         <source>Move &amp;Left</source>
-        <translation>Movi Ma&amp;ldekstren</translation>
+        <translation>Przenieś w &amp;lewo</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1092"/>
         <source>Alt+Left</source>
-        <translation></translation>
+        <translation>Alt+Left</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1100"/>
         <source>Move &amp;Right</source>
-        <translation>Movi Deskt&amp;ren</translation>
+        <translation>Przenieś w p&amp;rawo</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1103"/>
         <source>Alt+Right</source>
-        <translation></translation>
+        <translation>Alt+Right</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1111"/>
         <source>h&amp;2</source>
-        <translation></translation>
+        <translation>h&amp;2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1114"/>
         <source>Header 2</source>
-        <translation>Kaplinio 2</translation>
+        <translation>Nagłówek 2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1117"/>
         <source>Ctrl+2</source>
-        <translation></translation>
+        <translation>Ctrl+2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1125"/>
         <source>h&amp;1</source>
-        <translation></translation>
+        <translation>h&amp;1</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1128"/>
         <source>Header 1</source>
-        <translation>Kaplinio 1</translation>
+        <translation>Nagłówek 1</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1131"/>
         <source>Ctrl+1</source>
-        <translation></translation>
+        <translation>Ctrl+1</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1139"/>
         <source>h&amp;3</source>
-        <translation></translation>
+        <translation>h&amp;3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1142"/>
         <source>Header 3</source>
-        <translation>Kaplinio 3</translation>
+        <translation>Nagłówek 3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1145"/>
         <source>Ctrl+3</source>
-        <translation></translation>
+        <translation>Ctrl+3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1153"/>
         <source>&amp;Node Font</source>
-        <translation>&amp;Noda Tiparo</translation>
+        <translation>Czcio&amp;nka węzła</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1156"/>
         <source>Node Font</source>
-        <translation>Noda Tiparo</translation>
+        <translation>Czcionka węzła</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1161"/>
         <source>Scale I&amp;mage(s)</source>
-        <translation>Regrandigi Bildo(&amp;j)n</translation>
+        <translation>&amp;Skaluj obraz(y)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1169"/>
         <source>Paste &amp;HTML</source>
-        <translation>Algluu &amp;HTML</translation>
+        <translation>Wklej &amp;HTML</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1172"/>
         <source>Ctrl+Shift+V</source>
-        <translation></translation>
+        <translation>Ctrl+Shift+V</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1180"/>
         <source>&amp;Tags</source>
-        <translation>E&amp;tikedoj</translation>
+        <translation>&amp;Tagi</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1183"/>
         <source>Ctrl+Shift+T</source>
-        <translation></translation>
+        <translation>Ctrl+Shift+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1191"/>
         <source>Insert Lin&amp;k</source>
-        <translation>Enmeti Li&amp;gilon</translation>
+        <translation>Umieść odnośni&amp;k</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1194"/>
         <source>Ctrl+L</source>
-        <translation></translation>
+        <translation>Ctrl+L</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1199"/>
         <source>C&amp;opy Link</source>
-        <translation>K&amp;opii Ligilon</translation>
+        <translation>Sk&amp;opiuj odnośnik</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1207"/>
         <source>I&amp;nsert Table</source>
-        <translation>E&amp;nmenti Tabelon</translation>
+        <translation>&amp;Umieść tabelę</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1210"/>
         <source>Ctrl+Alt+Shift+T</source>
-        <translation></translation>
+        <translation>Ctrl+Alt+Shift+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1215"/>
         <source>Append Row</source>
-        <translation>Aldoni Vicon</translation>
+        <translation>Umieść rząd</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1220"/>
         <source>Delete Row</source>
-        <translation>Forviŝi Vicon</translation>
+        <translation>Usuń rząd</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1225"/>
         <source>Append Column</source>
-        <translation>Aldoni Kolumnon</translation>
+        <translation>Umieść kolumnę</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1230"/>
         <source>Delete Column</source>
-        <translation>Forviŝi Kolumnon</translation>
+        <translation>Usuń kolumnę</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1235"/>
         <source>Merge Cells</source>
-        <translation>Kunigi Ĉelojn</translation>
+        <translation>Połącz komórki</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1240"/>
         <source>Prepend Row</source>
-        <translation>Aldoni Vicon Antaŭen</translation>
+        <translation>Poprzedź rzędem</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1245"/>
         <source>Prepend Column</source>
-        <translation>Aldoni Kolumnon Antaŭen</translation>
+        <translation>Poprzedź kolumną</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1253"/>
         <source>Export &amp;HTML</source>
-        <translation>Eksporti &amp;HTML</translation>
+        <translation>Eksportuj &amp;HTML</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1258"/>
         <source>Save Ima&amp;ge(s)</source>
-        <translation>Konservi Bildo(&amp;j)n</translation>
+        <translation>&amp;Zapisz obraz(y)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1269"/>
         <source>RTL</source>
-        <translation>Desktra alliniigo</translation>
+        <translation>Od prawej do lewej</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1272"/>
         <source>Ctrl+Alt+Shift+Left</source>
-        <translation></translation>
+        <translation>Ctrl+Alt+Shift+Left</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1283"/>
         <source>LTR</source>
-        <translation>Maldesktra alliniigo</translation>
+        <translation>Od lewej do prawej</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1286"/>
         <source>Ctrl+Alt+Shift+Right</source>
-        <translation></translation>
+        <translation>Ctrl+Alt+Shift+Right</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1291"/>
         <location filename="../../fn.ui" line="1294"/>
         <source>Menu</source>
-        <translation>Menuo</translation>
+        <translation>Menu</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1302"/>
         <source>Node &amp;Icon</source>
-        <translation>&amp;Ikono por Nodo</translation>
+        <translation>&amp;Ikona węzła</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1305"/>
         <source>Ctrl+Shift+C</source>
-        <translation></translation>
+        <translation>Ctrl+Shift+C</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2017"/>
         <source>Node Icon</source>
-        <translation>Ikono por Nodo</translation>
+        <translation>Ikona węzła</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="261"/>
         <source>F11</source>
         <comment>Fullscreen</comment>
-        <translation></translation>
+        <translation>F11</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="264"/>
         <source>Ctrl+Shift+W</source>
         <comment>Default size</comment>
-        <translation></translation>
+        <translation>Ctrl+Shift+W</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="267"/>
         <source>Ctrl+=</source>
         <comment>Zoom in</comment>
-        <translation></translation>
+        <translation>Ctrl+=</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="268"/>
         <source>Ctrl++</source>
         <comment>Zoom in</comment>
-        <translation></translation>
+        <translation>Ctrl++</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="269"/>
         <source>Ctrl+-</source>
         <comment>Zoom out</comment>
-        <translation></translation>
+        <translation>Ctrl+-</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="270"/>
         <source>Ctrl+0</source>
         <comment>Unzoom</comment>
-        <translation></translation>
+        <translation>Ctrl+0</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="473"/>
         <location filename="../../fn.cpp" line="4168"/>
         <source>&amp;Raise/Hide</source>
-        <translation>Le&amp;vi/Kaŝi</translation>
+        <translation>Wznieś/Uk&amp;ryj</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="638"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;New note?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Novan noton?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Nowa notatka?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="639"/>
         <source>&lt;center&gt;&lt;i&gt;Do you really want to leave this document&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;and create an empty one?&lt;/i&gt;&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;i&gt;Ĉu vi vere volas forlasi ĉi tiun dokumenton&lt;/i&gt;&lt;/center&gt;
-&lt;center&gt;&lt;i&gt;kaj estigi alian malplenan?&lt;/i&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;i&gt;Czy na pewno chcesz zamknąć ten dokument&lt;/i&gt;&lt;/center&gt;
+&lt;center&gt;&lt;i&gt;i utworzyć nowy?&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="642"/>
         <location filename="../../fn.cpp" line="1852"/>
         <location filename="../../fn.cpp" line="3425"/>
         <source>Yes</source>
-        <translation>Jes</translation>
+        <translation>Tak</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="643"/>
         <location filename="../../fn.cpp" line="1853"/>
         <location filename="../../fn.cpp" line="3426"/>
         <source>No</source>
-        <translation>Ne</translation>
+        <translation>Nie</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="715"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Save changes?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Konservi la ŝanĝojn?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Zapisać zmiany?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="717"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been modified.&lt;/i&gt;&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;i&gt;La dokumento estas modifita.&lt;/i&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;i&gt;Ten dokument został zmodyfikowany.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="719"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been removed.&lt;/i&gt;&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;i&gt;La dokumento forestas.&lt;/i&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;i&gt;Ten dokument został usunięty.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="724"/>
         <source>Discard changes</source>
-        <translation>Preterlasi ŝanĝojn</translation>
+        <translation>Odrzuć zmiany</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="725"/>
@@ -1050,25 +1050,25 @@
         <location filename="../../fn.cpp" line="4944"/>
         <location filename="../../fn.cpp" line="5060"/>
         <source>Cancel</source>
-        <translation>Rezigni</translation>
+        <translation>Anuluj</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="977"/>
         <source>Open file...</source>
-        <translation>Malfermi dosieron...</translation>
+        <translation>Otwórz plik…</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="979"/>
         <location filename="../../fn.cpp" line="1098"/>
         <location filename="../../fn.cpp" line="1118"/>
         <source>FeatherNotes documents (*.fnx)</source>
-        <translation>Dokumentoj de FeatherNotes (*.fnx)</translation>
+        <translation>Dokumenty FeatherNotes (*.fnx)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1005"/>
         <location filename="../../fn.cpp" line="4817"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be saved!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Ne eblas konservi!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Nie można zapisać!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1008"/>
@@ -1076,30 +1076,30 @@
         <location filename="../../fn.cpp" line="3902"/>
         <location filename="../../fn.cpp" line="4820"/>
         <source>Close</source>
-        <translation>Fermi</translation>
+        <translation>Zamknij</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1096"/>
         <location filename="../../fn.cpp" line="1116"/>
         <source>Save As...</source>
-        <translation>Konservi Kiel...</translation>
+        <translation>Zapisz jako…</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1849"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Delete this node?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Forviŝi la nodon?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Usunąć ten węzeł?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1850"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;i&gt;Warning!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
 &lt;center&gt;This action cannot be undone.&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;b&gt;&lt;i&gt;Averto!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
-&lt;center&gt;Ĉi tiu ago ne malfareblas.&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;i&gt;Ostrzeżenie!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
+&lt;center&gt;Nie możesz tego cofnąć.&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1952"/>
         <source>Tags</source>
-        <translation>Etikedoj</translation>
+        <translation>Tagi</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1965"/>
@@ -1112,96 +1112,96 @@
         <location filename="../../fn.cpp" line="4945"/>
         <location filename="../../fn.cpp" line="5061"/>
         <source>OK</source>
-        <translation>Bone</translation>
+        <translation>OK</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2155"/>
         <location filename="../../fn.cpp" line="2188"/>
         <source>&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</source>
-        <translation>&lt;b&gt;Ĉefaj nodoj:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Ĉiuj nodoj:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</translation>
+        <translation>&lt;b&gt;Główne węzły:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Wszystkie węzły:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2161"/>
         <location filename="../../fn.cpp" line="2194"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</source>
-        <translation>&lt;b&gt;Noto:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Ĉefaj nodoj:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Ĉiuj nodoj:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</translation>
+        <translation>&lt;b&gt;Notatka:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Główne węzły:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Wszystkie węzły:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2465"/>
         <source>%1 Matches</source>
-        <translation>%1 Trovitaj</translation>
+        <translation>%1 wystąpienia</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2467"/>
         <source>One Match</source>
-        <translation>Unu Trovita</translation>
+        <translation>Jedno wystąpienie</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2469"/>
         <location filename="../../fn.cpp" line="2780"/>
         <source>No Match</source>
-        <translation>Nenio Trovita</translation>
+        <translation>Brak wystąpień</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2584"/>
         <location filename="../../fn.cpp" line="2636"/>
         <source>Replacement</source>
-        <translation>Anstataŭigo</translation>
+        <translation>Zastąpienie</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2879"/>
         <source>No Replacement</source>
-        <translation>Neniu Anstataŭigo</translation>
+        <translation>Bez zamiennika</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2881"/>
         <source>One Replacement</source>
-        <translation>Unu Anstataŭigo</translation>
+        <translation>Jeden zamiennik</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2883"/>
         <source>%1 Replacements</source>
-        <translation>%1 Anstataŭigoj</translation>
+        <translation>%1 zamienniki</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3026"/>
         <source>Insert Link</source>
-        <translation>Enmeti Ligilon</translation>
+        <translation>Wstaw odnośnik</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2025"/>
         <location filename="../../fn.cpp" line="3105"/>
         <source>Image path</source>
-        <translation>Bildpado</translation>
+        <translation>Ścieżka obrazu</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2029"/>
         <location filename="../../fn.cpp" line="3109"/>
         <source>Open image</source>
-        <translation>Malfermi bildon</translation>
+        <translation>Otwórz obraz</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3117"/>
         <location filename="../../fn.cpp" line="3275"/>
         <source>Scaling percentage</source>
-        <translation>Regrandiga procento</translation>
+        <translation>Skalowanie procentowo</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2047"/>
         <location filename="../../fn.cpp" line="3224"/>
         <source>Open Image...</source>
-        <translation>Malfermi Bildon...</translation>
+        <translation>Otwórz obraz…</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="475"/>
         <location filename="../../fn.cpp" line="4159"/>
         <source>&amp;Raise</source>
-        <translation>&amp;Levi</translation>
+        <translation>&amp;Podnieś</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="671"/>
         <source>New Node</source>
-        <translation>Nova Nodo</translation>
+        <translation>Nowa gałąź</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1080"/>
@@ -1212,93 +1212,93 @@
         <location filename="../../fn.cpp" line="4874"/>
         <location filename="../../fn.cpp" line="4900"/>
         <source>Untitled</source>
-        <translation>Sentitola</translation>
+        <translation>Bez tytułu</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1848"/>
         <source>Deletion</source>
-        <translation>Forviŝado</translation>
+        <translation>Usuwanie</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1961"/>
         <source>Tag(s) for this node</source>
-        <translation>Etikedo(j) por ĉi tiu nodo</translation>
+        <translation>Tag(i) dla tego węzła</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2049"/>
         <location filename="../../fn.cpp" line="3226"/>
         <location filename="../../fn.cpp" line="3451"/>
         <source>Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)</source>
-        <translation>Bild-Dosieroj (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;Ĉiuj Dosieroj (*)</translation>
+        <translation>Pliki obrazów (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;Wszystkie pliki (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3112"/>
         <location filename="../../fn.cpp" line="3271"/>
         <source>Scale to</source>
-        <translation>Regrandigu al</translation>
+        <translation>Skaluj do</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3116"/>
         <location filename="../../fn.cpp" line="3274"/>
         <source>%</source>
-        <translation></translation>
+        <translation>%</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3265"/>
         <source>Scale Image(s)</source>
-        <translation>Regrandigi Bildo(j)n</translation>
+        <translation>Skaluj obraz(y)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3391"/>
         <source>untitled</source>
-        <translation>sentitola</translation>
+        <translation>bez tytułu</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3421"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Image cannot be saved! Retry?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;La bildo ne povas esto konservita! Reprovi?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Nie udało się zapisać obrazu! Spróbować ponownie?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3422"/>
         <source>&lt;center&gt;Maybe you did not choose a proper extension&lt;/center&gt;
 &lt;center&gt;or do not have write permission.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</source>
-        <translation>&lt;center&gt;Eble vi ne selektis ĝustan dosiertipon&lt;/center&gt;
-&lt;center&gt;aŭ vi ne havas permeson por skribi.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</translation>
+        <translation>&lt;center&gt;Może wybrałeś złe rozszerzenie&lt;/center&gt;
+&lt;center&gt;lub nie masz uprawnień do zapisu?&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3449"/>
         <source>Save Image As...</source>
-        <translation>Konservi Bildon Kiel...</translation>
+        <translation>Zapisz obraz jako…</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3500"/>
         <source>Insert Table</source>
-        <translation>Enmenti Tabelon</translation>
+        <translation>Wstaw tabelę</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3506"/>
         <source>Rows:</source>
-        <translation>Vicoj:</translation>
+        <translation>Rzędy:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3512"/>
         <source>Columns:</source>
-        <translation>Kolumnoj:</translation>
+        <translation>Kolumny:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3677"/>
         <source>Preferences</source>
-        <translation>Agordoj</translation>
+        <translation>Preferencje</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3685"/>
         <source>Window</source>
-        <translation>Fenestro</translation>
+        <translation>Okno</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3689"/>
         <source>Remember window &amp;size</source>
-        <translation>Memoru la &amp;grandon de la fenestro</translation>
+        <translation>&amp;Zapamiętaj rozmiar okna</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3690"/>
@@ -1306,15 +1306,15 @@
 this dialog and also on exit.
 
 Uncheck to set a fixed size!</source>
-        <translation>Konservu la grandon de la fenestro post
-ĉi tiu dialogo estas fermiat kaj forlasante.
+        <translation>Zapisuje rozmiar okna po zamknięciu
+tego okna i przy wyjściu.
 
-Malmarku por fiksita grando!</translation>
+Odznacz, aby pozostawić stały rozmiar!</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3694"/>
         <source>Start with this size: </source>
-        <translation>Startu kun ĉi tiu grando: </translation>
+        <translation>Rozpocznij z tym rozmiarem: </translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3704"/>
@@ -1322,12 +1322,12 @@ Malmarku por fiksita grando!</translation>
         <location filename="../../fn.cpp" line="3762"/>
         <location filename="../../fn.cpp" line="3763"/>
         <source> px</source>
-        <translation></translation>
+        <translation>piks.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3708"/>
         <source>Remember &amp;tree width</source>
-        <translation>Memoru la larĝon de la &amp;flankpanelo</translation>
+        <translation>Zapamię&amp;taj szerokość drzewa</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3709"/>
@@ -1335,15 +1335,12 @@ Malmarku por fiksita grando!</translation>
 this dialog and also on exit.
 
 Uncheck for a width ratio of 170/530.</source>
-        <translation>Konservu la larĝon de la flankpanelo post
-ĉi tiu dialogo estas fermiat kaj forlasante.
-
-Malmarku por la proprcio 170/530.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3712"/>
         <source>Save &amp;position</source>
-        <translation>Konservi &amp;pozicion</translation>
+        <translation>Zapisz &amp;położenie</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3713"/>
@@ -1353,16 +1350,17 @@ this dialog and also on exit.
 (This may not work correctly
 under GTK+ DE&apos;s like Unity
 and Cinnamon.)</source>
-        <translation>Konservu la pozicion post ĉi tiu
-dialogo estas fermiat kaj forlasante.
+        <translation>Zapisuje położenie po zamknięciu
+tego okna i po wyjściu.
 
-(Ĉi tio eble ne havas ĝustan efikon
-kun labortablaj medioj bazitaj sur GTK+.)</translation>
+(Może to nie działać na DE
+opartych o GTK+, np. Unity
+i Cinnamon.)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3718"/>
         <source>Add to s&amp;ystray</source>
-        <translation>Aldoni al la ta&amp;skopleto</translation>
+        <translation>Dodaj do zasobnika s&amp;ystemu</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3719"/>
@@ -1371,67 +1369,62 @@ If checked, the titlebar close button iconifies
 the window to the systray instead of quitting.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation>Ĉi tio determinas ĉu taskopleto devas esti uzita.
-Se ĝi estus markita, la fermanta butono de la titolbreto
-ikonigus la fenestron en al taskopleton anstataŭ fermadon.
-
-Restartigo de la aplikaĵo necesas.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3720"/>
         <source>Start i&amp;conified to tray</source>
-        <translation>Starti i&amp;konigite en la taskopleton</translation>
+        <translation>Uru&amp;chamiaj jako ikona w zasobniku</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3721"/>
         <source>The command line option --tray
 can be used instead of this.</source>
-        <translation>La komandlinia opcio --tray
-povas esti uzita anstataŭe.</translation>
+        <translation>Zamiast tego możesz skorzystać
+z opcji wiersza poleceń --tray.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3727"/>
         <source>Transparent t&amp;ree view</source>
-        <translation>Diafana a&amp;rbovido</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3728"/>
         <source>Merge the tree view with its surroundings?</source>
-        <translation>Kunfandi la arbovidon kun ĝia ĉirkaŭaĵo?</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3731"/>
         <source>Do not show t&amp;oolbar</source>
-        <translation>Kaŝu la ilbre&amp;ton</translation>
+        <translation>Nie p&amp;okazuj paska narzędzi</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3733"/>
         <source>Do not show &amp;menubar</source>
-        <translation>Kaŝu la &amp;menubreton</translation>
+        <translation>Nie pokazuj paska &amp;menu</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3734"/>
         <source>If the menubar is hidden,
 a menu button appears on the toolbar.</source>
-        <translation>Se la menubreto estus kaŝita,
-menubutono aperus sur la ilbreto.</translation>
+        <translation>Jeżeli pasek menu jest ukryty, przycisk menu pojawi się na pasku zadań.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3738"/>
         <source>Running &amp;under Enlightenment?</source>
-        <translation>Funkcii su&amp;b Enlightenment?</translation>
+        <translation>&amp;Uruchamiasz na Enlightenment?</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3739"/>
         <source>Check this under Enlightenment (or, probably, another DE)
 to use the systray icon more easily!</source>
-        <translation>Marku ĉi tion sub Enlightenment (aŭ eble alia labortabla
-medio) por uzi la taskopletan ikonon pli facile!</translation>
+        <translation>Zaznacz to pod Enlightenment (lub innym DE)
+aby łatwiej korzystać z ikony w zasobniku!</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3740"/>
         <source>Shifts (X × Y): </source>
-        <translation>Movoj (X × Y): </translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3741"/>
@@ -1443,174 +1436,171 @@ if it is on the left or right, the X-coordinate should be set.
 
 After choosing the coordinate shifts, put the window in a proper
 position and then restart FeatherNotes!</source>
-        <translation>Iuj labortablaj medioj eblas ne sciigi la pozicion de la fenstro ĝuste.
-Ĉe tia okazo, vi povas provi forigi la problemon ĉi tie.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3854"/>
         <source>Text</source>
-        <translation>Teksto</translation>
+        <translation>Tekst</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3857"/>
         <source>&amp;Wrap lines by default</source>
-        <translation>Ĉirkaŭfermu la &amp;liniojn defaŭlte</translation>
+        <translation>Domyślnie za&amp;wijaj wiersze</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3858"/>
         <source>Auto-&amp;indent by default</source>
-        <translation>Mem-al&amp;ineu defaŭlte</translation>
+        <translation>Domyśln&amp;ie twórz automatyczne wcięcia</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3859"/>
         <source>Auto-&amp;bracket
 (Requires application restart)</source>
-        <translation>&amp;Aŭtomata enkrampigo
-(Restartigo de la aplikaĵo necesas)</translation>
+        <translation>Automatyczne &amp;nawiasy
+(wymaga ponownego uruchomienia aplikacji)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3860"/>
         <source>This covers parentheses, braces, brackets and quotes.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation>Ĉi tio pritraktas la rondan, rektan kaj kunigan
-krampojn kaj ankaŭ la citmarkojn.
+        <translation>Obejmuje to nawiasy, nawiasy klamrowe i cudzysłowy.
 
-Restartigo de la aplikaĵo necesas.</translation>
+Musisz uruchomić ponownie FeatherNotes, aby uzyskać efekt.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3861"/>
         <source>&amp;Auto-save every</source>
-        <translation>Mem-konser&amp;vi ĉiun</translation>
+        <translation>&amp;Automatycznie zapisuj co</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3865"/>
         <source> minute(s)</source>
-        <translation> minuto(j)n</translation>
+        <translation>minut(y)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3870"/>
         <source>Workaround for &amp;Qt5&apos;s scroll jump bug</source>
-        <translation>Proviza korekto por la ruluma salto ĉe &amp;Qt5</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3871"/>
         <source>This is not a complete fix but
 prevents annoying scroll jumps.</source>
-        <translation>Ĉi tio ne estas kompleta solvo sed detenas
-ĝenantajn saltojn komence de rulumado.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4625"/>
         <source>Print Document</source>
-        <translation>Presi la Dokumenton</translation>
+        <translation>Wydrukuj dokument</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4681"/>
         <source>Export HTML</source>
-        <translation>Eksporti HTML</translation>
+        <translation>Eksportuj HTML</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4686"/>
         <source>Export:</source>
-        <translation>Eksporti:</translation>
+        <translation>Eksportuj:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4687"/>
         <source>&amp;Current node</source>
-        <translation>La &amp;nunan nodon</translation>
+        <translation>Obe&amp;cny węzeł</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4689"/>
         <source>With all &amp;sub-nodes</source>
-        <translation>Kun ĉiuj ĝiaj &amp;subnodoj</translation>
+        <translation>Ze w&amp;szystkimi węzłami pochodnymi</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4690"/>
         <source>&amp;All nodes</source>
-        <translation>Ĉi&amp;ujn nodojn</translation>
+        <translation>&amp;Wszystkie węzły</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4702"/>
         <source>Output file:</source>
-        <translation>Eliga dosiero:</translation>
+        <translation>Plik wyjściowy:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4721"/>
         <source>Select path</source>
-        <translation>Selekti padon</translation>
+        <translation>Wybierz ścieżkę</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4905"/>
         <source>Save HTML As...</source>
-        <translation>Konservi HTML Kiel...</translation>
+        <translation>Zapisz HTML jako…</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4907"/>
         <source>HTML Files (*.html *.htm)</source>
-        <translation>HTML-Dosieroj (*.html *.htm)</translation>
+        <translation>Pliki HTML (*.html *.htm)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4927"/>
         <source>Set Password</source>
-        <translation>Aldoni Pasvorton</translation>
+        <translation>Ustaw hasło</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4935"/>
         <source>Type password</source>
-        <translation>Tajpu pasvorton</translation>
+        <translation>Wprowadź hasło</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4940"/>
         <source>Retype password</source>
-        <translation>Retajpu pasvorton</translation>
+        <translation>Wprowadź hasło ponownie</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5016"/>
         <source>&lt;center&gt;Passwords were different. Retry!&lt;/center&gt;</source>
-        <translation>&lt;center&gt;La pasvortoj estis malsamaj. Reprovu!&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;Hasła nie pasują do siebie. Spróbuj ponownie!&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5048"/>
         <location filename="../../fn.cpp" line="5056"/>
         <source>Enter Password</source>
-        <translation>Enmetu Pasvorton</translation>
+        <translation>Wprowadź hasło</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5122"/>
         <source>&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</source>
-        <translation>&lt;center&gt;Malĝusta pasvorto. Reprovu!&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;Nieprawidłowe hasło. Spróbuj ponownie!&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5161"/>
         <source>A lightweight notes manager</source>
-        <translation>Malpeza notadministrilo</translation>
+        <translation>Lekki menedżer notatek</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5162"/>
         <source>based on Qt5</source>
-        <translation>bazita sur Qt5</translation>
+        <translation>oparty o Qt5</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5163"/>
         <source>Author</source>
-        <translation>Verkinto</translation>
+        <translation>Autor</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5165"/>
         <location filename="../../fn.cpp" line="5166"/>
         <source>About FeatherNotes</source>
-        <translation>Pri FeatherNotes</translation>
+        <translation>O FeatherNotes</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5165"/>
         <source>Translators</source>
-        <translation>Tradukintoj</translation>
+        <translation>Tłumacze</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5164"/>
         <source>aka.</source>
-        <translation>akk.</translation>
+        <translation>aka.</translation>
     </message>
 </context>
 <context>
@@ -1618,13 +1608,12 @@ prevents annoying scroll jumps.</source>
     <message>
         <location filename="../../lineedit.cpp" line="35"/>
         <source>Clear text (Ctrl+K)</source>
-        <translation>Viŝi la tekston (Ctrl+K)</translation>
+        <translation>Wyczyść tekst (Ctrl+K)</translation>
     </message>
     <message>
         <location filename="../../lineedit.cpp" line="81"/>
         <source>Ctrl+K</source>
         <comment>Clear text</comment>
-        <translatorcomment>Viŝi la tekston</translatorcomment>
         <translation>Ctrl+K</translation>
     </message>
 </context>
@@ -1633,7 +1622,7 @@ prevents annoying scroll jumps.</source>
     <message>
         <location filename="../../helpDialog.ui" line="14"/>
         <source>Help</source>
-        <translation>Helpo</translation>
+        <translation>Pomoc</translation>
     </message>
 </context>
 <context>
@@ -1642,7 +1631,7 @@ prevents annoying scroll jumps.</source>
         <location filename="../../domitem.cpp" line="100"/>
         <location filename="../../domitem.cpp" line="137"/>
         <source>New Node</source>
-        <translation>Nova Nodo</translation>
+        <translation>Nowy węzeł</translation>
     </message>
 </context>
 </TS>

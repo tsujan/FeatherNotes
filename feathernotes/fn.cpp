@@ -17,6 +17,7 @@
 
 #include "fn.h"
 #include "ui_fn.h"
+#include "ui_about.h"
 #include "dommodel.h"
 #include "spinbox.h"
 #include "simplecrypt.h"
@@ -5127,19 +5128,44 @@ void FN::checkPswrd()
 /*************************/
 void FN::aboutDialog()
 {
-    MessageBox msgBox (this);
-    msgBox.setText (QString ("<center><b><big>%1 %2</big></b></center><br>").arg (qApp->applicationName()).arg (qApp->applicationVersion()));
-    msgBox.setInformativeText (tr ("<center>A lightweight notes manager</center>\n<center>based on Qt5</center><br>")
-                               + "<center>" + tr ("Author:") + " <a href='mailto:tsujan2000@gmail.com?Subject=My%20Subject'>Pedram Pourang ("
-                               + tr ("aka.") + " Tsu Jan)</a> </center><p></p>");
-    msgBox.setStandardButtons (QMessageBox::Ok);
-    msgBox.changeButtonText (QMessageBox::Ok, tr ("OK"));
-    QIcon FNIcon = QIcon::fromTheme ("feathernotes");
-    if (FNIcon.isNull())
-        FNIcon = QIcon (":icons/feathernotes.svg");
-    msgBox.setIconPixmap (FNIcon.pixmap(64, 64));
-    msgBox.setWindowTitle (tr ("About FeatherNotes"));
-    msgBox.exec();
+    class AboutDialog : public QDialog {
+    public:
+        explicit AboutDialog (QWidget* parent = nullptr, Qt::WindowFlags f = 0) : QDialog (parent, f) {
+            aboutUi.setupUi (this);
+            aboutUi.textLabel->setOpenExternalLinks (true);
+        }
+        void setTabTexts (const QString& first, const QString& sec) {
+            aboutUi.tabWidget->setTabText (0, first);
+            aboutUi.tabWidget->setTabText (1, sec);
+        }
+        void setMainIcon (const QIcon& icn) {
+            aboutUi.iconLabel->setPixmap (icn.pixmap (64, 64));
+        }
+        void settMainTitle (const QString& title) {
+            aboutUi.titleLabel->setText (title);
+        }
+        void setMainText (const QString& txt) {
+            aboutUi.textLabel->setText (txt);
+        }
+    private:
+        Ui::AboutDialog aboutUi;
+    };
+
+    AboutDialog dialog (this);
+
+    QIcon FPIcon = QIcon::fromTheme ("feathernotes");
+    if (FPIcon.isNull())
+        FPIcon = QIcon (":icons/feathernotes.svg");
+    dialog.setMainIcon (FPIcon);
+    dialog.settMainTitle (QString ("<center><b><big>%1 %2</big></b></center><br>").arg (qApp->applicationName()).arg (qApp->applicationVersion()));
+    dialog.setMainText ("<center> " + tr ("A lightweight notes manager") + " </center>\n<center> "
+                        + tr ("based on Qt5") + " </center><br><center> "
+                        + tr ("Author")+": <a href='mailto:tsujan2000@gmail.com?Subject=My%20Subject'>Pedram Pourang ("
+                        + tr ("aka.") + " Tsu Jan)</a> </center><p></p>");
+    dialog.setTabTexts (tr ("About FeatherNotes"), tr ("Translators"));
+    dialog.setWindowTitle (tr ("About FeatherNotes"));
+    dialog.setWindowModality (Qt::WindowModal);
+    dialog.exec();
 }
 /*************************/
 void FN::showHelpDialog()
