@@ -13,8 +13,8 @@
     <name>FeatherNotes::FN</name>
     <message>
         <location filename="../../fn.ui" line="14"/>
-        <location filename="../../fn.cpp" line="1004"/>
-        <location filename="../../fn.cpp" line="4816"/>
+        <location filename="../../fn.cpp" line="1005"/>
+        <location filename="../../fn.cpp" line="4821"/>
         <source>FeatherNotes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -480,7 +480,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="787"/>
-        <location filename="../../fn.cpp" line="3096"/>
+        <location filename="../../fn.cpp" line="3099"/>
         <source>Embed Image</source>
         <translation type="unfinished"></translation>
     </message>
@@ -946,7 +946,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2017"/>
+        <location filename="../../fn.cpp" line="2020"/>
         <source>Node Icon</source>
         <translation type="unfinished"></translation>
     </message>
@@ -988,7 +988,7 @@
     </message>
     <message>
         <location filename="../../fn.cpp" line="473"/>
-        <location filename="../../fn.cpp" line="4168"/>
+        <location filename="../../fn.cpp" line="4173"/>
         <source>&amp;Raise/Hide</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1005,15 +1005,15 @@
     </message>
     <message>
         <location filename="../../fn.cpp" line="642"/>
-        <location filename="../../fn.cpp" line="1852"/>
-        <location filename="../../fn.cpp" line="3425"/>
+        <location filename="../../fn.cpp" line="1855"/>
+        <location filename="../../fn.cpp" line="3429"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="643"/>
-        <location filename="../../fn.cpp" line="1853"/>
-        <location filename="../../fn.cpp" line="3426"/>
+        <location filename="../../fn.cpp" line="1856"/>
+        <location filename="../../fn.cpp" line="3430"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1039,15 +1039,15 @@
     </message>
     <message>
         <location filename="../../fn.cpp" line="725"/>
-        <location filename="../../fn.cpp" line="1964"/>
-        <location filename="../../fn.cpp" line="2060"/>
-        <location filename="../../fn.cpp" line="3038"/>
-        <location filename="../../fn.cpp" line="3120"/>
-        <location filename="../../fn.cpp" line="3278"/>
-        <location filename="../../fn.cpp" line="3518"/>
-        <location filename="../../fn.cpp" line="4724"/>
-        <location filename="../../fn.cpp" line="4944"/>
-        <location filename="../../fn.cpp" line="5060"/>
+        <location filename="../../fn.cpp" line="1967"/>
+        <location filename="../../fn.cpp" line="2063"/>
+        <location filename="../../fn.cpp" line="3041"/>
+        <location filename="../../fn.cpp" line="3123"/>
+        <location filename="../../fn.cpp" line="3282"/>
+        <location filename="../../fn.cpp" line="3523"/>
+        <location filename="../../fn.cpp" line="4729"/>
+        <location filename="../../fn.cpp" line="4950"/>
+        <location filename="../../fn.cpp" line="5066"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1058,141 +1058,141 @@
     </message>
     <message>
         <location filename="../../fn.cpp" line="979"/>
-        <location filename="../../fn.cpp" line="1098"/>
-        <location filename="../../fn.cpp" line="1118"/>
+        <location filename="../../fn.cpp" line="1099"/>
+        <location filename="../../fn.cpp" line="1120"/>
         <source>FeatherNotes documents (*.fnx)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1005"/>
-        <location filename="../../fn.cpp" line="4817"/>
+        <location filename="../../fn.cpp" line="1006"/>
+        <location filename="../../fn.cpp" line="4822"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be saved!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1008"/>
-        <location filename="../../fn.cpp" line="2478"/>
-        <location filename="../../fn.cpp" line="3902"/>
-        <location filename="../../fn.cpp" line="4820"/>
+        <location filename="../../fn.cpp" line="1009"/>
+        <location filename="../../fn.cpp" line="2481"/>
+        <location filename="../../fn.cpp" line="3907"/>
+        <location filename="../../fn.cpp" line="4825"/>
         <source>Close</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1096"/>
-        <location filename="../../fn.cpp" line="1116"/>
+        <location filename="../../fn.cpp" line="1097"/>
+        <location filename="../../fn.cpp" line="1118"/>
         <source>Save As...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1849"/>
+        <location filename="../../fn.cpp" line="1852"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Delete this node?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1850"/>
+        <location filename="../../fn.cpp" line="1853"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;i&gt;Warning!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
 &lt;center&gt;This action cannot be undone.&lt;/center&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1952"/>
+        <location filename="../../fn.cpp" line="1955"/>
         <source>Tags</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1965"/>
-        <location filename="../../fn.cpp" line="2061"/>
-        <location filename="../../fn.cpp" line="3040"/>
-        <location filename="../../fn.cpp" line="3121"/>
-        <location filename="../../fn.cpp" line="3279"/>
-        <location filename="../../fn.cpp" line="3519"/>
-        <location filename="../../fn.cpp" line="4726"/>
-        <location filename="../../fn.cpp" line="4945"/>
-        <location filename="../../fn.cpp" line="5061"/>
+        <location filename="../../fn.cpp" line="1968"/>
+        <location filename="../../fn.cpp" line="2064"/>
+        <location filename="../../fn.cpp" line="3043"/>
+        <location filename="../../fn.cpp" line="3124"/>
+        <location filename="../../fn.cpp" line="3283"/>
+        <location filename="../../fn.cpp" line="3524"/>
+        <location filename="../../fn.cpp" line="4731"/>
+        <location filename="../../fn.cpp" line="4951"/>
+        <location filename="../../fn.cpp" line="5067"/>
         <source>OK</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2155"/>
-        <location filename="../../fn.cpp" line="2188"/>
+        <location filename="../../fn.cpp" line="2158"/>
+        <location filename="../../fn.cpp" line="2191"/>
         <source>&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2161"/>
-        <location filename="../../fn.cpp" line="2194"/>
+        <location filename="../../fn.cpp" line="2164"/>
+        <location filename="../../fn.cpp" line="2197"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2465"/>
+        <location filename="../../fn.cpp" line="2468"/>
         <source>%1 Matches</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2467"/>
+        <location filename="../../fn.cpp" line="2470"/>
         <source>One Match</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2469"/>
-        <location filename="../../fn.cpp" line="2780"/>
+        <location filename="../../fn.cpp" line="2472"/>
+        <location filename="../../fn.cpp" line="2783"/>
         <source>No Match</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2584"/>
-        <location filename="../../fn.cpp" line="2636"/>
+        <location filename="../../fn.cpp" line="2587"/>
+        <location filename="../../fn.cpp" line="2639"/>
         <source>Replacement</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2879"/>
+        <location filename="../../fn.cpp" line="2882"/>
         <source>No Replacement</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2881"/>
+        <location filename="../../fn.cpp" line="2884"/>
         <source>One Replacement</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2883"/>
+        <location filename="../../fn.cpp" line="2886"/>
         <source>%1 Replacements</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3026"/>
+        <location filename="../../fn.cpp" line="3029"/>
         <source>Insert Link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2025"/>
-        <location filename="../../fn.cpp" line="3105"/>
+        <location filename="../../fn.cpp" line="2028"/>
+        <location filename="../../fn.cpp" line="3108"/>
         <source>Image path</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2029"/>
-        <location filename="../../fn.cpp" line="3109"/>
+        <location filename="../../fn.cpp" line="2032"/>
+        <location filename="../../fn.cpp" line="3112"/>
         <source>Open image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3117"/>
-        <location filename="../../fn.cpp" line="3275"/>
+        <location filename="../../fn.cpp" line="3120"/>
+        <location filename="../../fn.cpp" line="3279"/>
         <source>Scaling percentage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2047"/>
-        <location filename="../../fn.cpp" line="3224"/>
+        <location filename="../../fn.cpp" line="2050"/>
+        <location filename="../../fn.cpp" line="3227"/>
         <source>Open Image...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="475"/>
-        <location filename="../../fn.cpp" line="4159"/>
+        <location filename="../../fn.cpp" line="4164"/>
         <source>&amp;Raise</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1202,103 +1202,103 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1080"/>
-        <location filename="../../fn.cpp" line="4606"/>
-        <location filename="../../fn.cpp" line="4615"/>
-        <location filename="../../fn.cpp" line="4713"/>
-        <location filename="../../fn.cpp" line="4865"/>
-        <location filename="../../fn.cpp" line="4874"/>
-        <location filename="../../fn.cpp" line="4900"/>
+        <location filename="../../fn.cpp" line="1081"/>
+        <location filename="../../fn.cpp" line="4611"/>
+        <location filename="../../fn.cpp" line="4620"/>
+        <location filename="../../fn.cpp" line="4718"/>
+        <location filename="../../fn.cpp" line="4870"/>
+        <location filename="../../fn.cpp" line="4879"/>
+        <location filename="../../fn.cpp" line="4905"/>
         <source>Untitled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1848"/>
+        <location filename="../../fn.cpp" line="1851"/>
         <source>Deletion</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1961"/>
+        <location filename="../../fn.cpp" line="1964"/>
         <source>Tag(s) for this node</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2049"/>
-        <location filename="../../fn.cpp" line="3226"/>
-        <location filename="../../fn.cpp" line="3451"/>
+        <location filename="../../fn.cpp" line="2052"/>
+        <location filename="../../fn.cpp" line="3229"/>
+        <location filename="../../fn.cpp" line="3455"/>
         <source>Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3112"/>
-        <location filename="../../fn.cpp" line="3271"/>
+        <location filename="../../fn.cpp" line="3115"/>
+        <location filename="../../fn.cpp" line="3275"/>
         <source>Scale to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3116"/>
-        <location filename="../../fn.cpp" line="3274"/>
+        <location filename="../../fn.cpp" line="3119"/>
+        <location filename="../../fn.cpp" line="3278"/>
         <source>%</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3265"/>
+        <location filename="../../fn.cpp" line="3269"/>
         <source>Scale Image(s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3391"/>
+        <location filename="../../fn.cpp" line="3395"/>
         <source>untitled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3421"/>
+        <location filename="../../fn.cpp" line="3425"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Image cannot be saved! Retry?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3422"/>
+        <location filename="../../fn.cpp" line="3426"/>
         <source>&lt;center&gt;Maybe you did not choose a proper extension&lt;/center&gt;
 &lt;center&gt;or do not have write permission.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3449"/>
+        <location filename="../../fn.cpp" line="3453"/>
         <source>Save Image As...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3500"/>
+        <location filename="../../fn.cpp" line="3505"/>
         <source>Insert Table</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3506"/>
+        <location filename="../../fn.cpp" line="3511"/>
         <source>Rows:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3512"/>
+        <location filename="../../fn.cpp" line="3517"/>
         <source>Columns:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3677"/>
+        <location filename="../../fn.cpp" line="3682"/>
         <source>Preferences</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3685"/>
+        <location filename="../../fn.cpp" line="3690"/>
         <source>Window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3689"/>
+        <location filename="../../fn.cpp" line="3694"/>
         <source>Remember window &amp;size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3690"/>
+        <location filename="../../fn.cpp" line="3695"/>
         <source>Saves window size after closing
 this dialog and also on exit.
 
@@ -1306,25 +1306,25 @@ Uncheck to set a fixed size!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3694"/>
+        <location filename="../../fn.cpp" line="3699"/>
         <source>Start with this size: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3704"/>
-        <location filename="../../fn.cpp" line="3705"/>
-        <location filename="../../fn.cpp" line="3762"/>
-        <location filename="../../fn.cpp" line="3763"/>
+        <location filename="../../fn.cpp" line="3709"/>
+        <location filename="../../fn.cpp" line="3710"/>
+        <location filename="../../fn.cpp" line="3767"/>
+        <location filename="../../fn.cpp" line="3768"/>
         <source> px</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3708"/>
+        <location filename="../../fn.cpp" line="3713"/>
         <source>Remember &amp;tree width</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3709"/>
+        <location filename="../../fn.cpp" line="3714"/>
         <source>Saves tree width after closing
 this dialog and also on exit.
 
@@ -1332,12 +1332,12 @@ Uncheck for a width ratio of 170/530.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3712"/>
+        <location filename="../../fn.cpp" line="3717"/>
         <source>Save &amp;position</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3713"/>
+        <location filename="../../fn.cpp" line="3718"/>
         <source>Saves position after closing
 this dialog and also on exit.
 
@@ -1347,12 +1347,12 @@ and Cinnamon.)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3718"/>
+        <location filename="../../fn.cpp" line="3723"/>
         <source>Add to s&amp;ystray</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3719"/>
+        <location filename="../../fn.cpp" line="3724"/>
         <source>Decides whether a systray icon should be used.
 If checked, the titlebar close button iconifies
 the window to the systray instead of quitting.
@@ -1361,60 +1361,60 @@ Needs restarting of FeatherNotes to take effect.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3720"/>
+        <location filename="../../fn.cpp" line="3725"/>
         <source>Start i&amp;conified to tray</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3721"/>
+        <location filename="../../fn.cpp" line="3726"/>
         <source>The command line option --tray
 can be used instead of this.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3727"/>
+        <location filename="../../fn.cpp" line="3732"/>
         <source>Transparent t&amp;ree view</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3728"/>
+        <location filename="../../fn.cpp" line="3733"/>
         <source>Merge the tree view with its surroundings?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3731"/>
+        <location filename="../../fn.cpp" line="3736"/>
         <source>Do not show t&amp;oolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3733"/>
+        <location filename="../../fn.cpp" line="3738"/>
         <source>Do not show &amp;menubar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3734"/>
+        <location filename="../../fn.cpp" line="3739"/>
         <source>If the menubar is hidden,
 a menu button appears on the toolbar.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3738"/>
+        <location filename="../../fn.cpp" line="3743"/>
         <source>Running &amp;under Enlightenment?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3739"/>
+        <location filename="../../fn.cpp" line="3744"/>
         <source>Check this under Enlightenment (or, probably, another DE)
 to use the systray icon more easily!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3740"/>
+        <location filename="../../fn.cpp" line="3745"/>
         <source>Shifts (X × Y): </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3741"/>
+        <location filename="../../fn.cpp" line="3746"/>
         <source>Some DE&apos;s (like Enlightenment) may not report the window position
 correctly. If that is the case, you could try to fix the problem here.
 
@@ -1426,163 +1426,163 @@ position and then restart FeatherNotes!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3854"/>
+        <location filename="../../fn.cpp" line="3859"/>
         <source>Text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3857"/>
+        <location filename="../../fn.cpp" line="3862"/>
         <source>&amp;Wrap lines by default</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3858"/>
+        <location filename="../../fn.cpp" line="3863"/>
         <source>Auto-&amp;indent by default</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3859"/>
+        <location filename="../../fn.cpp" line="3864"/>
         <source>Auto-&amp;bracket
 (Requires application restart)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3860"/>
+        <location filename="../../fn.cpp" line="3865"/>
         <source>This covers parentheses, braces, brackets and quotes.
 
 Needs restarting of FeatherNotes to take effect.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3861"/>
+        <location filename="../../fn.cpp" line="3866"/>
         <source>&amp;Auto-save every</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3865"/>
+        <location filename="../../fn.cpp" line="3870"/>
         <source> minute(s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3870"/>
+        <location filename="../../fn.cpp" line="3875"/>
         <source>Workaround for &amp;Qt5&apos;s scroll jump bug</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3871"/>
+        <location filename="../../fn.cpp" line="3876"/>
         <source>This is not a complete fix but
 prevents annoying scroll jumps.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4625"/>
+        <location filename="../../fn.cpp" line="4630"/>
         <source>Print Document</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4681"/>
+        <location filename="../../fn.cpp" line="4686"/>
         <source>Export HTML</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4686"/>
+        <location filename="../../fn.cpp" line="4691"/>
         <source>Export:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4687"/>
+        <location filename="../../fn.cpp" line="4692"/>
         <source>&amp;Current node</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4689"/>
+        <location filename="../../fn.cpp" line="4694"/>
         <source>With all &amp;sub-nodes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4690"/>
+        <location filename="../../fn.cpp" line="4695"/>
         <source>&amp;All nodes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4702"/>
+        <location filename="../../fn.cpp" line="4707"/>
         <source>Output file:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4721"/>
+        <location filename="../../fn.cpp" line="4726"/>
         <source>Select path</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4905"/>
+        <location filename="../../fn.cpp" line="4910"/>
         <source>Save HTML As...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4907"/>
+        <location filename="../../fn.cpp" line="4912"/>
         <source>HTML Files (*.html *.htm)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4927"/>
+        <location filename="../../fn.cpp" line="4933"/>
         <source>Set Password</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4935"/>
+        <location filename="../../fn.cpp" line="4941"/>
         <source>Type password</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4940"/>
+        <location filename="../../fn.cpp" line="4946"/>
         <source>Retype password</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5016"/>
+        <location filename="../../fn.cpp" line="5022"/>
         <source>&lt;center&gt;Passwords were different. Retry!&lt;/center&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5048"/>
-        <location filename="../../fn.cpp" line="5056"/>
+        <location filename="../../fn.cpp" line="5054"/>
+        <location filename="../../fn.cpp" line="5062"/>
         <source>Enter Password</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5122"/>
+        <location filename="../../fn.cpp" line="5128"/>
         <source>&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5161"/>
+        <location filename="../../fn.cpp" line="5167"/>
         <source>A lightweight notes manager</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5162"/>
+        <location filename="../../fn.cpp" line="5168"/>
         <source>based on Qt5</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5163"/>
+        <location filename="../../fn.cpp" line="5169"/>
         <source>Author</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5165"/>
-        <location filename="../../fn.cpp" line="5166"/>
+        <location filename="../../fn.cpp" line="5171"/>
+        <location filename="../../fn.cpp" line="5172"/>
         <source>About FeatherNotes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5165"/>
+        <location filename="../../fn.cpp" line="5171"/>
         <source>Translators</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5164"/>
+        <location filename="../../fn.cpp" line="5170"/>
         <source>aka.</source>
         <translation type="unfinished"></translation>
     </message>

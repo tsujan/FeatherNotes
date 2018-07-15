@@ -981,6 +981,7 @@ void FN::openFile()
         dialog.setDirectory (path);
     else
     {
+        dialog.setDirectory (path.section ("/", 0, -2)); // workaround for KDE
         dialog.selectFile (path);
         dialog.autoScroll();
     }
@@ -1096,6 +1097,7 @@ bool FN::saveFile()
             dialog.setWindowTitle (tr ("Save As..."));
             dialog.setFileMode (QFileDialog::AnyFile);
             dialog.setNameFilter (tr ("FeatherNotes documents (*.fnx)"));
+            dialog.setDirectory (fname.section ("/", 0, -2)); // workaround for KDE
             dialog.selectFile (fname);
             dialog.autoScroll();
             if (dialog.exec())
@@ -1116,6 +1118,7 @@ bool FN::saveFile()
         dialog.setWindowTitle (tr ("Save As..."));
         dialog.setFileMode (QFileDialog::AnyFile);
         dialog.setNameFilter (tr ("FeatherNotes documents (*.fnx)"));
+        dialog.setDirectory (fname.section ("/", 0, -2)); // workaround for KDE
         dialog.selectFile (fname);
         dialog.autoScroll();
         if (dialog.exec())
@@ -3228,6 +3231,7 @@ void FN::setImagePath (bool)
         dialog.setDirectory (path);
     else
     {
+        dialog.setDirectory (path.section ("/", 0, -2)); // workaround for KDE
         dialog.selectFile (path);
         dialog.autoScroll();
     }
@@ -3449,6 +3453,7 @@ void FN::saveImage()
                 dialog.setWindowTitle (tr ("Save Image As..."));
                 dialog.setFileMode (QFileDialog::AnyFile);
                 dialog.setNameFilter (tr ("Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)"));
+                dialog.setDirectory (path.section ("/", 0, -2)); // workaround for KDE
                 dialog.selectFile (QString ("%1-%2.%3").arg (path).arg (n).arg (extension));
                 dialog.autoScroll();
                 if (dialog.exec())
@@ -4613,7 +4618,7 @@ void FN::txtPrint()
     }
     else if ((fname = model_->data (indx, Qt::DisplayRole).toString()).isEmpty())
             fname = tr ("Untitled");
-    fname= dir.filePath (fname);
+    fname = dir.filePath (fname);
 
     QPrinter printer (QPrinter::HighResolution);
     if (printer.outputFormat() == QPrinter::PdfFormat)
@@ -4719,7 +4724,7 @@ void FN::exportHTML()
     QToolButton *openBtn = new QToolButton();
     openBtn->setIcon (symbolicIcon::icon (":icons/document-open.svg"));
     openBtn->setToolTip (tr ("Select path"));
-    connect (openBtn,&QAbstractButton::clicked, this, &FN::setHTMLPath);
+    connect (openBtn, &QAbstractButton::clicked, this, &FN::setHTMLPath);
     QSpacerItem *spacer = new QSpacerItem (1, 5);
     QPushButton *cancelButton = new QPushButton (symbolicIcon::icon (":icons/dialog-cancel.svg"), tr ("Cancel"));
     connect (cancelButton, &QAbstractButton::clicked, dialog, &QDialog::reject);
@@ -4897,7 +4902,7 @@ void FN::setHTMLPath (bool)
 {
     QString path;
     if ((path = htmlPahEntry_->text()).isEmpty())
-        path = QDir::home().filePath (tr ("Untitled") + ".fnx");
+        path = QDir::home().filePath (tr ("Untitled") + ".html");
 
     QString HTMLPath;
     FileDialog dialog (this);
@@ -4905,6 +4910,7 @@ void FN::setHTMLPath (bool)
     dialog.setWindowTitle (tr ("Save HTML As..."));
     dialog.setFileMode (QFileDialog::AnyFile);
     dialog.setNameFilter (tr ("HTML Files (*.html *.htm)"));
+    dialog.setDirectory (path.section ("/", 0, -2)); // workaround for KDE
     dialog.selectFile (path);
     dialog.autoScroll();
     if (dialog.exec())
