@@ -9,6 +9,7 @@ V0.4.5
  * First try "gio" for openeing hyperlinks because Qt may resort to "xdg-open", which isn't a good choice sometimes.
  * Polish translation and a fix by Marcin Mikołajczak (m4sk1n at GitHub).
  * Added a workaround for a new bug in KDE's file dialog, which doesn't change directory with selectFile().
+ * Wayland support.
 
 V0.4.4
 ---------

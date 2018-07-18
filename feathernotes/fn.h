@@ -37,7 +37,7 @@ class DomModel;
 class FN : public QMainWindow
 {
     Q_OBJECT
-    
+
 public:
     explicit FN (const QString& message, QWidget *parent = nullptr);
     ~FN();
@@ -197,6 +197,7 @@ private:
     bool isPswrdCorrect();
 
     Ui::FN *ui;
+    bool isX11_;
     //QWidget *dummyWidget; // For hiding the main window while keeping all its state info.
     QSystemTrayIcon *tray_;
     bool quitting_;

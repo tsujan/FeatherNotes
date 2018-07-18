@@ -47,6 +47,17 @@ namespace FeatherNotes {
 
 FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new Ui::FN)
 {
+    // For now, the lack of x11 is seen as wayland.
+#if defined Q_WS_X11 || defined Q_OS_LINUX || defined Q_OS_FREEBSD
+#if QT_VERSION < 0x050200
+    isX11_ = true;
+#else
+    isX11_ = QX11Info::isPlatformX11();
+#endif
+#else
+    isX11_ = false;
+#endif
+
     ui->setupUi (this);
     imgScale_ = 100;
 
@@ -2941,13 +2952,13 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
         QTimer::singleShot (0, this, SLOT (show()));*/
         show();
 
-        if (onWhichDesktop (winId()) != fromDesktop())
+        if (isX11_ && onWhichDesktop (winId()) != fromDesktop())
             moveToCurrentDesktop (winId());
         showAndFocus();
     }
-    else if (onWhichDesktop (winId()) == fromDesktop())
+    else if (!isX11_ || onWhichDesktop (winId()) == fromDesktop())
     {
-        if (underE_)
+        if (isX11_ && underE_)
         {
             hide();
             QTimer::singleShot (250, this, SLOT (show()));
@@ -2985,7 +2996,8 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
     }
     else
     {
-        moveToCurrentDesktop (winId());
+        if (isX11_)
+            moveToCurrentDesktop (winId());
         if (isMinimized())
             showNormal();
         showAndFocus();
