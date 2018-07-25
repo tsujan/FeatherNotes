@@ -1306,7 +1306,10 @@
 this dialog and also on exit.
 
 Uncheck to set a fixed size!</source>
-        <translation></translation>
+        <translation>Speichert Fenstergröße nach Schließen
+dieses Dialoges und Beenden des Programms.
+
+Auswahl aufheben für vorgegebene Fenstergröße!</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3711"/>
@@ -1324,7 +1327,7 @@ Uncheck to set a fixed size!</source>
     <message>
         <location filename="../../fn.cpp" line="3725"/>
         <source>Remember &amp;tree width</source>
-        <translation></translation>
+        <translation>Baumbrei&amp;te beibehalten</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3726"/>
@@ -1332,7 +1335,10 @@ Uncheck to set a fixed size!</source>
 this dialog and also on exit.
 
 Uncheck for a width ratio of 170/530.</source>
-        <translation></translation>
+        <translation>Speichert Breite des Baumverzeichnisses nach Schließen
+dieses Dialoges und Beenden des Programms.
+
+Auswahl aufheben für ein Breitenverhältnis von 170/530.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3729"/>
@@ -1347,12 +1353,17 @@ this dialog and also on exit.
 (This may not work correctly
 under GTK+ DE&apos;s like Unity
 and Cinnamon.)</source>
-        <translation></translation>
+        <translation>Speichert Fensterposition nach Schließen
+dieses Dialoges und Beendung des Programms.
+
+(Die einwandfreie Funktionsfähigkeit unter
+GTK+ Desktopumgebungen wie Unity
+und Cinnamon ist nicht gewährleistet.)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3735"/>
         <source>Add to s&amp;ystray</source>
-        <translation>Anzeigen im S&amp;ystray</translation>
+        <translation>Zur S&amp;ystemleiste hinzufügen</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3736"/>
@@ -1361,18 +1372,23 @@ If checked, the titlebar close button iconifies
 the window to the systray instead of quitting.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation></translation>
+        <translation>Entscheidet darüber, ob ein Systemleistensymbol verwendet werden soll.
+Wenn ausgewählt, wird das offene Fenster geschlossen und in der Systemleiste angezeigt 
+ohne die Anwendung selbst zu schließen.
+
+Dies benötigt den Neustart von FeatherNotes, um wirksam zu werden.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3737"/>
         <source>Start i&amp;conified to tray</source>
-        <translation>Starte minimiert im S&amp;ystray</translation>
+        <translation>Starte minimiert in der S&amp;ystemleiste</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3738"/>
         <source>The command line option --tray
 can be used instead of this.</source>
-        <translation></translation>
+        <translation>Die Option der Kommandozeile --Die Systemleiste 
+kann stattdessen verwendet werden.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3744"/>
@@ -1382,7 +1398,7 @@ can be used instead of this.</source>
     <message>
         <location filename="../../fn.cpp" line="3745"/>
         <source>Merge the tree view with its surroundings?</source>
-        <translation></translation>
+        <translation>Die Ansicht des Verzeichnisbaums an seine Umgebung anpassen?</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3748"/>
@@ -1404,13 +1420,14 @@ dann erscheint ein Knopf in der Werkzeugleiste.</translation>
     <message>
         <location filename="../../fn.cpp" line="3755"/>
         <source>Running &amp;under Enlightenment?</source>
-        <translation></translation>
+        <translation>Läuft dieses System unter Enlightenment?</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3756"/>
         <source>Check this under Enlightenment (or, probably, another DE)
 to use the systray icon more easily!</source>
-        <translation></translation>
+        <translation>Treffe diese Auswahl unter Benutzung von Enlightenment (oder ähnlichen Desktopumgebungen),
+um das Symbol von FeatherNotes in der Systemleiste einfacher verwenden zu können!</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3757"/>
@@ -1427,7 +1444,15 @@ if it is on the left or right, the X-coordinate should be set.
 
 After choosing the coordinate shifts, put the window in a proper
 position and then restart FeatherNotes!</source>
-        <translation></translation>
+        <translation>Einige Desktopumgebungen (wie Enlightenment) könnten die Fensterposition 
+nicht korrekt darstellen. Sollte dies der Fall sein, so kann an dieser Stelle 
+versucht werden, das Problem zu beheben.
+
+Befindet sich die Leiste unten oder oben, so müssen die Y-Koordinaten eingestellt werden;
+befindet sie sich links oder rechts, so müssen die Y-Koordinaten eingestellt werden.
+
+Nach Einstellung des Versatzes, das Fenster geeignet platzieren 
+und FeatherNotes neustarten!</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3871"/>
@@ -1456,7 +1481,9 @@ position and then restart FeatherNotes!</source>
         <source>This covers parentheses, braces, brackets and quotes.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation></translation>
+        <translation>Dies beinhaltet runde- , geschweifte-, eckige Klammern und Anführungszeichen.
+
+Dies benötigt den Neustart von FeatherNotes, um wirksam zu werden.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3878"/>
@@ -1471,13 +1498,14 @@ Needs restarting of FeatherNotes to take effect.</source>
     <message>
         <location filename="../../fn.cpp" line="3887"/>
         <source>Workaround for &amp;Qt5&apos;s scroll jump bug</source>
-        <translation></translation>
+        <translation>Umgehungslösung des Scroll-Jump-Bugs von &amp;QT5</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3888"/>
         <source>This is not a complete fix but
 prevents annoying scroll jumps.</source>
-        <translation></translation>
+        <translation>Das ist keine vollständige Reparatur aber 
+es verhindert störende Sprünge beim Scrollen.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4642"/>
@@ -1497,17 +1525,17 @@ prevents annoying scroll jumps.</source>
     <message>
         <location filename="../../fn.cpp" line="4704"/>
         <source>&amp;Current node</source>
-        <translation></translation>
+        <translation>&amp;Aktueller Knotenpunkt</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4706"/>
         <source>With all &amp;sub-nodes</source>
-        <translation></translation>
+        <translation>Mit allen &amp;Unterknotenpunkten</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4707"/>
         <source>&amp;All nodes</source>
-        <translation></translation>
+        <translation>&amp;Alle Knotenpunkte</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4719"/>
@@ -1532,17 +1560,17 @@ prevents annoying scroll jumps.</source>
     <message>
         <location filename="../../fn.cpp" line="4945"/>
         <source>Set Password</source>
-        <translation>Passwort setzen</translation>
+        <translation>Kennwort setzen</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4953"/>
         <source>Type password</source>
-        <translation>Passwort eingeben</translation>
+        <translation>Kennwort eingeben</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4958"/>
         <source>Retype password</source>
-        <translation>Passwort wiederholen</translation>
+        <translation>Kennwort wiederholen</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5034"/>
@@ -1553,12 +1581,12 @@ prevents annoying scroll jumps.</source>
         <location filename="../../fn.cpp" line="5066"/>
         <location filename="../../fn.cpp" line="5074"/>
         <source>Enter Password</source>
-        <translation>Passwort eingeben</translation>
+        <translation>Kennwort eingeben</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5140"/>
         <source>&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</source>
-        <translation>&lt;center&gt;Falsches Passwort. Noch einmal versuchen!&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;Falsches Kennwort. Noch einmal versuchen!&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5179"/>
@@ -1620,7 +1648,7 @@ prevents annoying scroll jumps.</source>
         <location filename="../../domitem.cpp" line="100"/>
         <location filename="../../domitem.cpp" line="137"/>
         <source>New Node</source>
-        <translation></translation>
+        <translation>Neuer Knotenpunkt</translation>
     </message>
 </context>
 </TS>
