@@ -1087,7 +1087,7 @@
     <message>
         <location filename="../../fn.cpp" line="1863"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Delete this node?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Diesen Knotenpunkt entfernen?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1864"/>
@@ -1118,7 +1118,7 @@
         <location filename="../../fn.cpp" line="2169"/>
         <location filename="../../fn.cpp" line="2202"/>
         <source>&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</source>
-        <translation></translation>
+        <translation>&lt;b&gt;Hauptknotenpunke:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Gesamtknotenpunkte:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2175"/>
@@ -1178,30 +1178,30 @@
         <location filename="../../fn.cpp" line="2043"/>
         <location filename="../../fn.cpp" line="3124"/>
         <source>Open image</source>
-        <translation>Öffne Bild</translation>
+        <translation>Bild öffnen</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3132"/>
         <location filename="../../fn.cpp" line="3291"/>
         <source>Scaling percentage</source>
-        <translation></translation>
+        <translation>Skalierungsprozentsatz</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2061"/>
         <location filename="../../fn.cpp" line="3239"/>
         <source>Open Image...</source>
-        <translation>Öffne Bild…</translation>
+        <translation>Bild öffnen…</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="486"/>
         <location filename="../../fn.cpp" line="4176"/>
         <source>&amp;Raise</source>
-        <translation></translation>
+        <translation>&amp;Hervorheben</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="682"/>
         <source>New Node</source>
-        <translation></translation>
+        <translation>Neuer Knotenpunkt</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1092"/>
@@ -1222,7 +1222,7 @@
     <message>
         <location filename="../../fn.cpp" line="1975"/>
         <source>Tag(s) for this node</source>
-        <translation></translation>
+        <translation>Schlagwort(e) für diesen Knotenpunkt</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2063"/>
@@ -1235,7 +1235,7 @@
         <location filename="../../fn.cpp" line="3127"/>
         <location filename="../../fn.cpp" line="3287"/>
         <source>Scale to</source>
-        <translation></translation>
+        <translation>Skaliere zu</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3131"/>
@@ -1262,7 +1262,8 @@
         <location filename="../../fn.cpp" line="3438"/>
         <source>&lt;center&gt;Maybe you did not choose a proper extension&lt;/center&gt;
 &lt;center&gt;or do not have write permission.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;Auswahl einer womöglich nicht geeigneten Dateiendung&lt;/center&gt;
+&lt;center&gt;oder keine Schreibberechtigung.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3465"/>
