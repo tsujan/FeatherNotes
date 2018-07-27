@@ -1446,10 +1446,10 @@ After choosing the coordinate shifts, put the window in a proper
 position and then restart FeatherNotes!</source>
         <translation>Einige Desktopumgebungen (wie Enlightenment) könnten die Fensterposition 
 nicht korrekt darstellen. Sollte dies der Fall sein, so kann an dieser Stelle 
-versucht werden, das Problem zu beheben.
+versucht werden, dieses Problem zu beheben.
 
 Befindet sich die Leiste unten oder oben, so müssen die Y-Koordinaten eingestellt werden;
-befindet sie sich links oder rechts, so müssen die Y-Koordinaten eingestellt werden.
+befindet sie sich links oder rechts, so müssen die X-Koordinaten eingestellt werden.
 
 Nach Einstellung des Versatzes, das Fenster geeignet platzieren 
 und FeatherNotes neustarten!</translation>
