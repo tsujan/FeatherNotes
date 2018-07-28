@@ -6,7 +6,7 @@
     <message>
         <location filename="../../about.ui" line="113"/>
         <source>License</source>
-        <translation></translation>
+        <translation>Licencija</translation>
     </message>
 </context>
 <context>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../../fn.ui" line="63"/>
         <source>Next (F3)</source>
-        <translation></translation>
+        <translation>Kitas (F3)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="66"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../../fn.ui" line="76"/>
         <source>Previous (F4)</source>
-        <translation></translation>
+        <translation>Ankstesnis (F4)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="79"/>
@@ -41,7 +41,7 @@
     <message>
         <location filename="../../fn.ui" line="95"/>
         <source>Search...</source>
-        <translation></translation>
+        <translation>Ieškoti...</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="107"/>
@@ -106,63 +106,63 @@
     <message>
         <location filename="../../fn.ui" line="199"/>
         <source>&amp;File</source>
-        <translation></translation>
+        <translation>&amp;Failas</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="218"/>
         <source>&amp;Edit</source>
-        <translation></translation>
+        <translation>&amp;Taisa</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="233"/>
         <source>For&amp;mat</source>
-        <translation></translation>
+        <translation>For&amp;matavimas</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="265"/>
         <source>&amp;Tree</source>
-        <translation></translation>
+        <translation>&amp;Medis</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="288"/>
         <source>&amp;Options</source>
-        <translation></translation>
+        <translation>&amp;Parinktys</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="300"/>
         <source>&amp;Search</source>
-        <translation></translation>
+        <translation>Paieš&amp;ka</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="307"/>
         <location filename="../../fn.ui" line="952"/>
         <source>&amp;Help</source>
-        <translation></translation>
+        <translation>Ž&amp;inynas</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="410"/>
         <source>Find:</source>
-        <translation></translation>
+        <translation>Rasti:</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="417"/>
         <source>Replace with:</source>
-        <translation></translation>
+        <translation>Kuo pakeisti:</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="430"/>
         <source>To be replaced</source>
-        <translation></translation>
+        <translation>Bus pakeista</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="443"/>
         <source>Replacing text</source>
-        <translation></translation>
+        <translation>Tekstas, kuriuo keičiama</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="450"/>
         <source>Previous (F9)</source>
-        <translation></translation>
+        <translation>Ankstesnis (F9)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="453"/>
@@ -172,7 +172,7 @@
     <message>
         <location filename="../../fn.ui" line="463"/>
         <source>Next (F8)</source>
-        <translation></translation>
+        <translation>Kitas (F8)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="466"/>
@@ -182,7 +182,7 @@
     <message>
         <location filename="../../fn.ui" line="476"/>
         <source>Replace all (F10)</source>
-        <translation></translation>
+        <translation>Pakeisti visus (F10)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="479"/>
@@ -192,189 +192,189 @@
     <message>
         <location filename="../../fn.ui" line="496"/>
         <source>&amp;Save</source>
-        <translation></translation>
+        <translation>Į&amp;rašyti</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="499"/>
         <location filename="../../fn.cpp" line="734"/>
         <source>Save</source>
-        <translation></translation>
+        <translation>Įrašyti</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="502"/>
         <source>Ctrl+S</source>
-        <translation></translation>
+        <translation>Ctrl(Vald)+S</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="507"/>
         <location filename="../../fn.cpp" line="490"/>
         <source>&amp;Open</source>
-        <translation></translation>
+        <translation>A&amp;tverti</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="510"/>
         <source>Open a file</source>
-        <translation></translation>
+        <translation>Atverti failą</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="513"/>
         <source>Ctrl+O</source>
-        <translation></translation>
+        <translation>Ctrl(Vald)+O</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="521"/>
         <source>&amp;Undo</source>
-        <translation></translation>
+        <translation>A&amp;tšaukti</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="524"/>
         <source>Undo</source>
-        <translation></translation>
+        <translation>Atšaukti</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="527"/>
         <source>Ctrl+Z</source>
-        <translation></translation>
+        <translation>Ctrl(Vald)+Z</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="535"/>
         <source>&amp;Redo</source>
-        <translation></translation>
+        <translation>&amp;Grąžinti</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="538"/>
         <source>Redo</source>
-        <translation></translation>
+        <translation>Grąžinti</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="541"/>
         <source>Ctrl+Shift+Z</source>
-        <translation></translation>
+        <translation>Ctrl(Vald)+Shift(Lyg2)+Z</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="549"/>
         <source>&amp;Find</source>
-        <translation></translation>
+        <translation>&amp;Rasti</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="552"/>
         <source>Show/hide searchbar</source>
-        <translation></translation>
+        <translation>Rodyti/slėpti paieškos juostą</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="555"/>
         <source>Ctrl+F</source>
-        <translation></translation>
+        <translation>Ctrl(Vald)+F</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="563"/>
         <source>&amp;Clear All Formats</source>
-        <translation></translation>
+        <translation>&amp;Išvalyti visą formatavimą</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="566"/>
         <source>Clear all formats</source>
-        <translation></translation>
+        <translation>Išvalyti visą formatavimą</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="569"/>
         <source>Ctrl+E</source>
-        <translation></translation>
+        <translation>Ctrl(Vald)+E</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="580"/>
         <source>&amp;Bold</source>
-        <translation></translation>
+        <translation>&amp;Pusjuodis</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="583"/>
         <source>Bold</source>
-        <translation></translation>
+        <translation>Pusjuodis</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="586"/>
         <source>Ctrl+B</source>
-        <translation></translation>
+        <translation>Ctrl(Vald)+B</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="597"/>
         <source>&amp;Italic</source>
-        <translation></translation>
+        <translation>&amp;Kursyvas</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="600"/>
         <source>Italic</source>
-        <translation></translation>
+        <translation>Kursyvas</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="603"/>
         <source>Ctrl+I</source>
-        <translation></translation>
+        <translation>Ctrl(Vald)+I</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="614"/>
         <source>&amp;Underline</source>
-        <translation></translation>
+        <translation>Pa&amp;brauktas</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="617"/>
         <source>Underline</source>
-        <translation></translation>
+        <translation>Pabrauktas</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="620"/>
         <source>Ctrl+U</source>
-        <translation></translation>
+        <translation>Ctrl(Vald)+U</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="631"/>
         <source>&amp;Strike Through</source>
-        <translation></translation>
+        <translation>Pe&amp;rbrauktas</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="634"/>
         <source>Strike through</source>
-        <translation></translation>
+        <translation>Perbrauktas</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="637"/>
         <source>Ctrl+T</source>
-        <translation></translation>
+        <translation>Ctrl(Vald)+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="645"/>
         <source>Te&amp;xt Color</source>
-        <translation></translation>
+        <translation>Te&amp;ksto spalva</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="648"/>
         <source>Text color</source>
-        <translation></translation>
+        <translation>Teksto spalva</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="651"/>
         <source>Alt+Shift+T</source>
-        <translation></translation>
+        <translation>Alt+Shift(Lyg2)+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="659"/>
         <source>Back&amp;ground Color</source>
-        <translation></translation>
+        <translation>&amp;Fono spalva</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="662"/>
         <source>Background color</source>
-        <translation></translation>
+        <translation>Fono spalva</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="665"/>
         <source>Alt+Shift+B</source>
-        <translation></translation>
+        <translation>Alt+Shift(Lyg2)+B</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="670"/>
         <source>Options</source>
-        <translation></translation>
+        <translation>Parinktys</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="675"/>
