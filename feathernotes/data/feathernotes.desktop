@@ -2,6 +2,7 @@
 Version=1.0
 Name=FeatherNotes
 Comment=Lightweight notes manager
+Comment[lt]=Supaprastinta užrašų tvarkytuvė
 Comment[pl]=Lekki menedżer notatek
 Exec=feathernotes %f
 Icon=feathernotes
