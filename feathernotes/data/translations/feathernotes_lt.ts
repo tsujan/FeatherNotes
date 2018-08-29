@@ -46,27 +46,27 @@
     <message>
         <location filename="../../fn.ui" line="107"/>
         <source>Search only in names (Ctrl+Shift+F7)</source>
-        <translation></translation>
+        <translation>Ieškoti tik pavadinimuose (Ctrl(Vald)+Shift(Lyg2)+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="110"/>
         <source>Ctrl+Shift+F7</source>
-        <translation></translation>
+        <translation>Ctrl(Vald)+Shift(Lyg2)+F7</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="117"/>
         <source>Search only in tags (Shift+F7)</source>
-        <translation></translation>
+        <translation>Ieškoti tik žymėse (Shift(Lyg2)+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="120"/>
         <source>Shift+F7</source>
-        <translation></translation>
+        <translation>Shift(Lyg2)+F7</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="130"/>
         <source>Search in all nodes (F7)</source>
-        <translation></translation>
+        <translation>Ieškoti visuose mazguose (F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="133"/>
@@ -76,12 +76,12 @@
     <message>
         <location filename="../../fn.ui" line="166"/>
         <source>Whole Word (F6)</source>
-        <translation></translation>
+        <translation>Visas žodis (F6)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="169"/>
         <source>Whole Word</source>
-        <translation></translation>
+        <translation>Visas žodis</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="172"/>
@@ -91,12 +91,12 @@
     <message>
         <location filename="../../fn.ui" line="150"/>
         <source>Match Case (F5)</source>
-        <translation></translation>
+        <translation>Skirti raidžių dydį (F5)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="153"/>
         <source>Match Case</source>
-        <translation></translation>
+        <translation>Skirti raidžių dydį</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="156"/>
@@ -512,7 +512,7 @@
     <message>
         <location filename="../../fn.ui" line="820"/>
         <source>&amp;Append Sibling</source>
-        <translation></translation>
+        <translation>Pridėti &amp;giminingą žemiau</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="823"/>
@@ -522,7 +522,7 @@
     <message>
         <location filename="../../fn.ui" line="831"/>
         <source>Append &amp;Child</source>
-        <translation></translation>
+        <translation>Pridėti pa&amp;valdųjį</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="834"/>
@@ -642,12 +642,12 @@
     <message>
         <location filename="../../fn.ui" line="979"/>
         <source>Superscrip&amp;t</source>
-        <translation></translation>
+        <translation>Viršu&amp;tinis indeksas</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="982"/>
         <source>Superscript</source>
-        <translation></translation>
+        <translation>Viršutinis indeksas</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="985"/>
@@ -657,12 +657,12 @@
     <message>
         <location filename="../../fn.ui" line="996"/>
         <source>Subscri&amp;pt</source>
-        <translation></translation>
+        <translation>A&amp;patinis indeksas</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="999"/>
         <source>Subscript</source>
-        <translation></translation>
+        <translation>Apatinis indeksas</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1002"/>
@@ -732,7 +732,7 @@
     <message>
         <location filename="../../fn.ui" line="1078"/>
         <source>&amp;Prepend Sibling</source>
-        <translation></translation>
+        <translation>&amp;Pridėti giminingą aukščiau</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1081"/>
@@ -817,7 +817,7 @@
     <message>
         <location filename="../../fn.ui" line="1161"/>
         <source>Scale I&amp;mage(s)</source>
-        <translation></translation>
+        <translation>Keisti pa&amp;veikslo(-ų) mastelį</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1169"/>
@@ -867,7 +867,7 @@
     <message>
         <location filename="../../fn.ui" line="1215"/>
         <source>Append Row</source>
-        <translation></translation>
+        <translation>Pridėti eilutę apačioje</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1220"/>
@@ -877,7 +877,7 @@
     <message>
         <location filename="../../fn.ui" line="1225"/>
         <source>Append Column</source>
-        <translation></translation>
+        <translation>Pridėti stulpelį dešinėje</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1230"/>
@@ -887,17 +887,17 @@
     <message>
         <location filename="../../fn.ui" line="1235"/>
         <source>Merge Cells</source>
-        <translation></translation>
+        <translation>Sulieti langelius</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1240"/>
         <source>Prepend Row</source>
-        <translation></translation>
+        <translation>Pridėti eilutę aukščiau</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1245"/>
         <source>Prepend Column</source>
-        <translation></translation>
+        <translation>Pridėti stulpelį kairėje</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1253"/>
@@ -990,12 +990,12 @@
         <location filename="../../fn.cpp" line="484"/>
         <location filename="../../fn.cpp" line="4185"/>
         <source>&amp;Raise/Hide</source>
-        <translation></translation>
+        <translation>&amp;Iškelti/Slėpti</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="649"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;New note?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Nauji užrašai?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="650"/>
@@ -1124,23 +1124,23 @@
         <location filename="../../fn.cpp" line="2175"/>
         <location filename="../../fn.cpp" line="2208"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</source>
-        <translation></translation>
+        <translation>&lt;b&gt;Užrašai:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Pagrindinių mazgų:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Viso mazgų:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2479"/>
         <source>%1 Matches</source>
-        <translation></translation>
+        <translation>%1 atitikmenys(-ų)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2481"/>
         <source>One Match</source>
-        <translation></translation>
+        <translation>Vienas atitikmuo</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2483"/>
         <location filename="../../fn.cpp" line="2794"/>
         <source>No Match</source>
-        <translation></translation>
+        <translation>Atitikmenų nėra</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2598"/>
@@ -1184,7 +1184,7 @@
         <location filename="../../fn.cpp" line="3132"/>
         <location filename="../../fn.cpp" line="3291"/>
         <source>Scaling percentage</source>
-        <translation></translation>
+        <translation>Mastelio keitimo procentinė dalis</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2061"/>
@@ -1196,7 +1196,7 @@
         <location filename="../../fn.cpp" line="486"/>
         <location filename="../../fn.cpp" line="4176"/>
         <source>&amp;Raise</source>
-        <translation></translation>
+        <translation>&amp;Iškelti</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="682"/>
@@ -1246,7 +1246,7 @@
     <message>
         <location filename="../../fn.cpp" line="3281"/>
         <source>Scale Image(s)</source>
-        <translation></translation>
+        <translation>Keisti paveikslo(-ų) mastelį</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3407"/>
@@ -1262,7 +1262,8 @@
         <location filename="../../fn.cpp" line="3438"/>
         <source>&lt;center&gt;Maybe you did not choose a proper extension&lt;/center&gt;
 &lt;center&gt;or do not have write permission.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;Galbūt, nepasirinkote tinkamo prievardžio&lt;/center&gt;
+&lt;center&gt;arba neturite leidimų rašyti.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3465"/>
