@@ -5148,7 +5148,7 @@ void FN::aboutDialog()
 {
     class AboutDialog : public QDialog {
     public:
-        explicit AboutDialog (QWidget* parent = nullptr, Qt::WindowFlags f = 0) : QDialog (parent, f) {
+        explicit AboutDialog (QWidget* parent = nullptr, Qt::WindowFlags f = nullptr) : QDialog (parent, f) {
             aboutUi.setupUi (this);
             aboutUi.textLabel->setOpenExternalLinks (true);
         }

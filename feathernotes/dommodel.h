@@ -32,7 +32,7 @@ class DomModel : public QAbstractItemModel
     Q_OBJECT
 
 public:
-    DomModel (QDomDocument document, QObject *parent = 0);
+    DomModel (QDomDocument document, QObject *parent = nullptr);
     ~DomModel();
 
     QVariant data (const QModelIndex &index, int role) const;

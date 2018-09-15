@@ -36,9 +36,9 @@ QString TextEdit::remainingSpaces (const QString& spaceTab, const QTextCursor& c
     while ((i = txt.indexOf("\t", i)) != -1)
     { // find tab widths in terms of spaces
         tmp.setPosition (tmp.block().position() + i);
-        qreal x = (qreal)(cursorRect (tmp).right());
+        qreal x = static_cast<qreal>(cursorRect (tmp).right());
         tmp.setPosition (tmp.position() + 1);
-        x = (qreal)(cursorRect (tmp).right()) - x;
+        x = static_cast<qreal>(cursorRect (tmp).right()) - x;
         n += qMax (qRound (x / spaceL) - 1, 0);
         ++i;
     }
@@ -72,9 +72,9 @@ QTextCursor TextEdit::backTabCursor (const QTextCursor& cursor) const
     while ((i = txt.indexOf("\t", i)) != -1)
     { // find tab widths in terms of spaces
         tmp.setPosition (tmp.block().position() + i);
-        qreal x = (qreal)(cursorRect (tmp).right());
+        qreal x = static_cast<qreal>(cursorRect (tmp).right());
         tmp.setPosition (tmp.position() + 1);
-        x = (qreal)(cursorRect (tmp).right()) - x;
+        x = static_cast<qreal>(cursorRect (tmp).right()) - x;
         n += qMax (qRound (x / spaceL) - 1, 0);
         ++i;
     }
@@ -88,9 +88,9 @@ QTextCursor TextEdit::backTabCursor (const QTextCursor& cursor) const
         tmp.setPosition(txtStart - n, QTextCursor::KeepAnchor);
     else // the previous character is a tab
     {
-        qreal x = (qreal)(cursorRect (tmp).right());
+        qreal x = static_cast<qreal>(cursorRect (tmp).right());
         tmp.setPosition(txtStart - 1, QTextCursor::KeepAnchor);
-        x -= (qreal)(cursorRect (tmp).right());
+        x -= static_cast<qreal>(cursorRect (tmp).right());
         n -= qRound (x / spaceL);
         if (n < 0) n = 0; // impossible
         tmp.setPosition (tmp.position() - n, QTextCursor::KeepAnchor);
@@ -554,9 +554,9 @@ void TextEdit::zooming (float range)
 {
     if (range == 0.f) return;
     QFont f = document()->defaultFont();
-    const float newSize = f.pointSizeF() + range;
+    const float newSize = static_cast<float>(f.pointSizeF()) + range;
     if (newSize <= 0) return;
-    f.setPointSizeF (newSize);
+    f.setPointSizeF (static_cast<qreal>(newSize));
     setFont (f);
     QFontMetrics metrics (f);
     setTabStopWidth (4 * metrics.width (' '));

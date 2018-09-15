@@ -27,14 +27,15 @@ namespace FeatherNotes {
 class SpinBox : public QSpinBox
 {
 public:
-    SpinBox (QWidget *p = 0) : QSpinBox (p) {}
+    SpinBox (QWidget *p = nullptr) : QSpinBox (p) {}
 
-    bool event (QEvent *event)
-    {
+    bool event (QEvent *event) {
 #ifdef QT_KEYPAD_NAVIGATION
         if (event->type() == QEvent::EnterEditFocus
-            || event->type() == QEvent::LeaveEditFocus)
+                || event->type() == QEvent::LeaveEditFocus)
+        {
             return QWidget::event(event);
+        }
         else
 #endif
             return QSpinBox::event (event);

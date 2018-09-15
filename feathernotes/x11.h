@@ -18,7 +18,6 @@
 #ifndef X11_H
 #define X11_H
 
-#include <QList>
 #if defined Q_WS_X11 || defined Q_OS_LINUX
 #include <X11/Xlib.h>
 #endif

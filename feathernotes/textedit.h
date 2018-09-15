@@ -37,7 +37,7 @@ class TextEdit : public QTextEdit
     Q_OBJECT
 
 public:
-    TextEdit (QWidget *parent = 0) : QTextEdit (parent)
+    TextEdit (QWidget *parent = nullptr) : QTextEdit (parent)
     {
         autoIndentation = true;
         autoBracket = false;

@@ -28,7 +28,7 @@ class VScrollBar : public QScrollBar
 {
     Q_OBJECT
 public:
-    VScrollBar (QWidget *parent = 0);
+    VScrollBar (QWidget *parent = nullptr);
 
 protected:
     bool event (QEvent *event);

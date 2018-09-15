@@ -26,7 +26,7 @@ namespace FeatherNotes {
 class DomItem
 {
 public:
-    DomItem (QDomNode &node, int row, DomItem *parent = 0);
+    DomItem (QDomNode &node, int row, DomItem *parent = nullptr);
     ~DomItem();
     DomItem *child (int i);
     int childCount();
