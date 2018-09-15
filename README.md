@@ -10,6 +10,7 @@ FeatherNotes (by Pedram Pourang, a.k.a. Tsu Jan <tsujan2000@gmail.com>) is a lig
   * Correct position/size saving and restoring with most window managers;
   * Compact but complete search and replacement widgets;
   * The ability to include searchable tags (hidden info on each node);
+  * Support for optional node icons;
   * Support for local and remote hyperlinks (bookmarks);
   * Text zooming;
   * Printing and exporting to HTML and PDF;
