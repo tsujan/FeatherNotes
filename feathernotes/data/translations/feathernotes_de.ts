@@ -66,7 +66,7 @@
     <message>
         <location filename="../../fn.ui" line="130"/>
         <source>Search in all nodes (F7)</source>
-        <translation></translation>
+        <translation>In allen Knoten suchen (F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="133"/>
@@ -162,7 +162,7 @@
     <message>
         <location filename="../../fn.ui" line="450"/>
         <source>Previous (F9)</source>
-        <translation></translation>
+        <translation>Vorheriger (F9)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="453"/>
@@ -410,7 +410,7 @@
     <message>
         <location filename="../../fn.ui" line="708"/>
         <source>P&amp;rint with Sub-Nodes</source>
-        <translation></translation>
+        <translation>Mit Unterknoten d&amp;rucken</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="716"/>
@@ -522,7 +522,7 @@
     <message>
         <location filename="../../fn.ui" line="831"/>
         <source>Append &amp;Child</source>
-        <translation></translation>
+        <translation>&amp;Kind anhängen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="834"/>
@@ -572,7 +572,7 @@
     <message>
         <location filename="../../fn.ui" line="883"/>
         <source>Tree Pr&amp;operties</source>
-        <translation></translation>
+        <translation>Baumei&amp;genschaften</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="886"/>
@@ -637,7 +637,7 @@
     <message>
         <location filename="../../fn.ui" line="968"/>
         <source>Pr&amp;int All Nodes</source>
-        <translation></translation>
+        <translation>Alle Knoten &amp;drucken</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="979"/>
@@ -717,12 +717,12 @@
     <message>
         <location filename="../../fn.ui" line="1064"/>
         <source>&amp;Justify</source>
-        <translation></translation>
+        <translation>&amp;Justieren</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1067"/>
         <source>Justify</source>
-        <translation></translation>
+        <translation>Justieren</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1070"/>
@@ -817,7 +817,7 @@
     <message>
         <location filename="../../fn.ui" line="1161"/>
         <source>Scale I&amp;mage(s)</source>
-        <translation></translation>
+        <translation>Bild(er) s&amp;kalieren</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1169"/>
@@ -990,7 +990,7 @@
         <location filename="../../fn.cpp" line="484"/>
         <location filename="../../fn.cpp" line="4185"/>
         <source>&amp;Raise/Hide</source>
-        <translation></translation>
+        <translation>E&amp;rhöhen/Ausblenden</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="649"/>
@@ -1124,7 +1124,7 @@
         <location filename="../../fn.cpp" line="2175"/>
         <location filename="../../fn.cpp" line="2208"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</source>
-        <translation></translation>
+        <translation>&lt;b&gt;Hinweis:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Hauptknoten:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Alle Knoten:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2479"/>
