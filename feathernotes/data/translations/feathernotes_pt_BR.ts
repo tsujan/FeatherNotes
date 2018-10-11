@@ -1432,7 +1432,7 @@ para usar o ícone da bandeja do sistema mais facilmente!</translation>
     <message>
         <location filename="../../fn.cpp" line="3757"/>
         <source>Shifts (X × Y): </source>
-        <translation></translation>
+        <translation>Deslocamento (X × Y): </translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3758"/>
@@ -1450,7 +1450,7 @@ da janela corretamente. Se for esse o caso, você pode tentar corrigir o problem
 Se o painel estiver na parte inferior ou superior, a coordenada Y deve ser definida;
 se estiver à esquerda ou à direita, a coordenada X deve ser definida.
 
-Depois de escolher os turnos de coordenadas, coloque a janela em uma
+Depois de escolher o deslocamento das coordenadas, coloque a janela em uma
 posição adequada e reinicie o FeatherNotes!</translation>
     </message>
     <message>
@@ -1574,7 +1574,7 @@ mas evita saltos de rolagem irritantes.</translation>
     <message>
         <location filename="../../fn.cpp" line="5034"/>
         <source>&lt;center&gt;Passwords were different. Retry!&lt;/center&gt;</source>
-        <translation>&lt;center&gt;As senhas eram diferentes. Tente novamente!&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;As senhas não conferem. Tente novamente!&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5066"/>
