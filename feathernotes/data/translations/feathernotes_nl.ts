@@ -6,7 +6,7 @@
     <message>
         <location filename="../../about.ui" line="119"/>
         <source>License</source>
-        <translation></translation>
+        <translation>Licentie</translation>
     </message>
 </context>
 <context>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../../fn.ui" line="63"/>
         <source>Next (F3)</source>
-        <translation></translation>
+        <translation>Volgende (F3)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="66"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../../fn.ui" line="76"/>
         <source>Previous (F4)</source>
-        <translation></translation>
+        <translation>Volgende (F4)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="79"/>
@@ -41,12 +41,12 @@
     <message>
         <location filename="../../fn.ui" line="95"/>
         <source>Search...</source>
-        <translation></translation>
+        <translation>Zoeken...</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="107"/>
         <source>Search only in names (Ctrl+Shift+F7)</source>
-        <translation></translation>
+        <translation>Alleen namen doorzoeken (Ctrl+Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="110"/>
@@ -56,7 +56,7 @@
     <message>
         <location filename="../../fn.ui" line="117"/>
         <source>Search only in tags (Shift+F7)</source>
-        <translation></translation>
+        <translation>Alleen labels doorzoeken (Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="120"/>
@@ -66,7 +66,7 @@
     <message>
         <location filename="../../fn.ui" line="130"/>
         <source>Search in all nodes (F7)</source>
-        <translation></translation>
+        <translation>Alle notities doorzoeken (F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="133"/>
@@ -76,12 +76,12 @@
     <message>
         <location filename="../../fn.ui" line="166"/>
         <source>Whole Word (F6)</source>
-        <translation></translation>
+        <translation>Volledig woord (F6)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="169"/>
         <source>Whole Word</source>
-        <translation></translation>
+        <translation>Volledig woord</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="172"/>
@@ -91,12 +91,12 @@
     <message>
         <location filename="../../fn.ui" line="150"/>
         <source>Match Case (F5)</source>
-        <translation></translation>
+        <translation>Overeenkomstig met hoofdlettergebruik (F5)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="153"/>
         <source>Match Case</source>
-        <translation></translation>
+        <translation>Overeenkomstig met hoofdlettergebruik</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="156"/>
@@ -106,63 +106,63 @@
     <message>
         <location filename="../../fn.ui" line="199"/>
         <source>&amp;File</source>
-        <translation></translation>
+        <translation>&amp;Bestand</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="218"/>
         <source>&amp;Edit</source>
-        <translation></translation>
+        <translation>B&amp;ewerken</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="233"/>
         <source>For&amp;mat</source>
-        <translation></translation>
+        <translation>Op&amp;maak</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="265"/>
         <source>&amp;Tree</source>
-        <translation></translation>
+        <translation>&amp;Boomweergave</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="288"/>
         <source>&amp;Options</source>
-        <translation></translation>
+        <translation>&amp;Opties</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="300"/>
         <source>&amp;Search</source>
-        <translation></translation>
+        <translation>&amp;Zoeken</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="307"/>
         <location filename="../../fn.ui" line="952"/>
         <source>&amp;Help</source>
-        <translation></translation>
+        <translation>&amp;Hulp</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="410"/>
         <source>Find:</source>
-        <translation></translation>
+        <translation>Zoeken:</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="417"/>
         <source>Replace with:</source>
-        <translation></translation>
+        <translation>Vervangen door:</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="430"/>
         <source>To be replaced</source>
-        <translation></translation>
+        <translation>Te vervangen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="443"/>
         <source>Replacing text</source>
-        <translation></translation>
+        <translation>Bezig met vervangen van tekst</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="450"/>
         <source>Previous (F9)</source>
-        <translation></translation>
+        <translation>Vorige (F9)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="453"/>
@@ -172,7 +172,7 @@
     <message>
         <location filename="../../fn.ui" line="463"/>
         <source>Next (F8)</source>
-        <translation></translation>
+        <translation>Volgende (F8)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="466"/>
@@ -182,7 +182,7 @@
     <message>
         <location filename="../../fn.ui" line="476"/>
         <source>Replace all (F10)</source>
-        <translation></translation>
+        <translation>Alles vervangen (F10)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="479"/>
@@ -192,13 +192,13 @@
     <message>
         <location filename="../../fn.ui" line="496"/>
         <source>&amp;Save</source>
-        <translation></translation>
+        <translation>Op&amp;slaan</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="499"/>
         <location filename="../../fn.cpp" line="734"/>
         <source>Save</source>
-        <translation></translation>
+        <translation>Opslaan</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="502"/>
@@ -209,12 +209,12 @@
         <location filename="../../fn.ui" line="507"/>
         <location filename="../../fn.cpp" line="490"/>
         <source>&amp;Open</source>
-        <translation></translation>
+        <translation>&amp;Openen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="510"/>
         <source>Open a file</source>
-        <translation></translation>
+        <translation>Open een bestand</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="513"/>
@@ -224,12 +224,12 @@
     <message>
         <location filename="../../fn.ui" line="521"/>
         <source>&amp;Undo</source>
-        <translation></translation>
+        <translation>&amp;Ongedaan maken</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="524"/>
         <source>Undo</source>
-        <translation></translation>
+        <translation>Ongedaan maken</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="527"/>
@@ -239,12 +239,12 @@
     <message>
         <location filename="../../fn.ui" line="535"/>
         <source>&amp;Redo</source>
-        <translation></translation>
+        <translation>&amp;Opnieuw</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="538"/>
         <source>Redo</source>
-        <translation></translation>
+        <translation>Opnieuw</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="541"/>
@@ -254,12 +254,12 @@
     <message>
         <location filename="../../fn.ui" line="549"/>
         <source>&amp;Find</source>
-        <translation></translation>
+        <translation>&amp;Zoeken</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="552"/>
         <source>Show/hide searchbar</source>
-        <translation></translation>
+        <translation>Zoekbalk tonen/verbergen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="555"/>
@@ -269,12 +269,12 @@
     <message>
         <location filename="../../fn.ui" line="563"/>
         <source>&amp;Clear All Formats</source>
-        <translation></translation>
+        <translation>Alle opmaken &amp;wissen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="566"/>
         <source>Clear all formats</source>
-        <translation></translation>
+        <translation>Alle opmaken wissen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="569"/>
@@ -284,12 +284,12 @@
     <message>
         <location filename="../../fn.ui" line="580"/>
         <source>&amp;Bold</source>
-        <translation></translation>
+        <translation>&amp;Vetgedrukt</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="583"/>
         <source>Bold</source>
-        <translation></translation>
+        <translation>Vetgedrukt</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="586"/>
@@ -299,12 +299,12 @@
     <message>
         <location filename="../../fn.ui" line="597"/>
         <source>&amp;Italic</source>
-        <translation></translation>
+        <translation>Curs&amp;ief</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="600"/>
         <source>Italic</source>
-        <translation></translation>
+        <translation>Cursief</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="603"/>
@@ -314,12 +314,12 @@
     <message>
         <location filename="../../fn.ui" line="614"/>
         <source>&amp;Underline</source>
-        <translation></translation>
+        <translation>&amp;Onderstrepen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="617"/>
         <source>Underline</source>
-        <translation></translation>
+        <translation>Onderstrepen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="620"/>
@@ -329,12 +329,12 @@
     <message>
         <location filename="../../fn.ui" line="631"/>
         <source>&amp;Strike Through</source>
-        <translation></translation>
+        <translation>&amp;Doorhalen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="634"/>
         <source>Strike through</source>
-        <translation></translation>
+        <translation>Doorhalen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="637"/>
@@ -344,12 +344,12 @@
     <message>
         <location filename="../../fn.ui" line="645"/>
         <source>Te&amp;xt Color</source>
-        <translation></translation>
+        <translation>Te&amp;kstkleur</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="648"/>
         <source>Text color</source>
-        <translation></translation>
+        <translation>Tekstkleur</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="651"/>
@@ -359,12 +359,12 @@
     <message>
         <location filename="../../fn.ui" line="659"/>
         <source>Back&amp;ground Color</source>
-        <translation></translation>
+        <translation>Achter&amp;grondkleur</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="662"/>
         <source>Background color</source>
-        <translation></translation>
+        <translation>Achtergrondkleur</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="665"/>
@@ -374,13 +374,13 @@
     <message>
         <location filename="../../fn.ui" line="670"/>
         <source>Options</source>
-        <translation></translation>
+        <translation>Opties</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="675"/>
         <location filename="../../fn.cpp" line="489"/>
         <source>&amp;New Note</source>
-        <translation></translation>
+        <translation>&amp;Nieuwe notitie</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="678"/>
@@ -390,7 +390,7 @@
     <message>
         <location filename="../../fn.ui" line="686"/>
         <source>Save &amp;As</source>
-        <translation></translation>
+        <translation>Opslaan &amp;als</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="689"/>
@@ -400,7 +400,7 @@
     <message>
         <location filename="../../fn.ui" line="697"/>
         <source>&amp;Print</source>
-        <translation></translation>
+        <translation>&amp;Afdrukken</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="700"/>
@@ -410,18 +410,18 @@
     <message>
         <location filename="../../fn.ui" line="708"/>
         <source>P&amp;rint with Sub-Nodes</source>
-        <translation></translation>
+        <translation>Afd&amp;rukken met subnotities</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="716"/>
         <source>Set Pass&amp;word</source>
-        <translation></translation>
+        <translation>&amp;Wachtwoord instellen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="721"/>
         <location filename="../../fn.cpp" line="492"/>
         <source>&amp;Quit</source>
-        <translation></translation>
+        <translation>&amp;Afsluiten</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="724"/>
@@ -431,7 +431,7 @@
     <message>
         <location filename="../../fn.ui" line="732"/>
         <source>&amp;Cut</source>
-        <translation></translation>
+        <translation>&amp;Knippen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="735"/>
@@ -441,7 +441,7 @@
     <message>
         <location filename="../../fn.ui" line="743"/>
         <source>C&amp;opy</source>
-        <translation></translation>
+        <translation>K&amp;opiëren</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="746"/>
@@ -451,7 +451,7 @@
     <message>
         <location filename="../../fn.ui" line="754"/>
         <source>&amp;Paste</source>
-        <translation></translation>
+        <translation>&amp;Plakken</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="757"/>
@@ -461,12 +461,12 @@
     <message>
         <location filename="../../fn.ui" line="765"/>
         <source>&amp;Delete</source>
-        <translation></translation>
+        <translation>&amp;Verwijderen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="773"/>
         <source>&amp;Select All</source>
-        <translation></translation>
+        <translation>Alles &amp;selecteren</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="776"/>
@@ -476,13 +476,13 @@
     <message>
         <location filename="../../fn.ui" line="784"/>
         <source>E&amp;mbed Image</source>
-        <translation></translation>
+        <translation>Afbeelding i&amp;nvoegen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="787"/>
         <location filename="../../fn.cpp" line="3111"/>
         <source>Embed Image</source>
-        <translation></translation>
+        <translation>Afbeelding invoegen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="790"/>
@@ -492,7 +492,7 @@
     <message>
         <location filename="../../fn.ui" line="798"/>
         <source>E&amp;xpand All</source>
-        <translation></translation>
+        <translation>Alles &amp;uitklappen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="801"/>
@@ -502,17 +502,17 @@
     <message>
         <location filename="../../fn.ui" line="809"/>
         <source>Collap&amp;se All</source>
-        <translation></translation>
+        <translation>Alles &amp;inklappen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="812"/>
         <source>Ctrl+Shift+Up</source>
-        <translation></translation>
+        <translation>Ctrl+Shift+pijltje omhoog</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="820"/>
         <source>&amp;Append Sibling</source>
-        <translation></translation>
+        <translation>Gelijksoortige &amp;toekennen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="823"/>
@@ -522,7 +522,7 @@
     <message>
         <location filename="../../fn.ui" line="831"/>
         <source>Append &amp;Child</source>
-        <translation></translation>
+        <translation>Sub &amp;toekennen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="834"/>
@@ -532,7 +532,7 @@
     <message>
         <location filename="../../fn.ui" line="842"/>
         <source>&amp;Delete Node</source>
-        <translation></translation>
+        <translation>Node verwij&amp;deren</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="845"/>
@@ -542,27 +542,27 @@
     <message>
         <location filename="../../fn.ui" line="853"/>
         <source>Move &amp;Up</source>
-        <translation></translation>
+        <translation>&amp;Omhoog verplaatsen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="856"/>
         <source>Alt+Up</source>
-        <translation></translation>
+        <translation>Alt+pijltje omhoog</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="864"/>
         <source>Move Do&amp;wn</source>
-        <translation></translation>
+        <translation>Omlaag &amp;verplaatsen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="867"/>
         <source>Alt+Down</source>
-        <translation></translation>
+        <translation>Alt+pijltje omlaag</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="875"/>
         <source>Re&amp;name Node</source>
-        <translation></translation>
+        <translation>Node&amp;naam wijzigen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="878"/>
@@ -572,7 +572,7 @@
     <message>
         <location filename="../../fn.ui" line="883"/>
         <source>Tree Pr&amp;operties</source>
-        <translation></translation>
+        <translation>B&amp;oomweergave-eigenschappen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="886"/>
@@ -582,12 +582,12 @@
     <message>
         <location filename="../../fn.ui" line="894"/>
         <source>Document &amp;Font</source>
-        <translation></translation>
+        <translation>Document&amp;lettertype</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="908"/>
         <source>&amp;Wrap Lines</source>
-        <translation></translation>
+        <translation>Regels o&amp;mslaan</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="911"/>
@@ -597,7 +597,7 @@
     <message>
         <location filename="../../fn.ui" line="925"/>
         <source>&amp;Auto-Indentation</source>
-        <translation></translation>
+        <translation>&amp;Automatisch inspringen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="928"/>
@@ -607,7 +607,7 @@
     <message>
         <location filename="../../fn.ui" line="933"/>
         <source>&amp;Preferences</source>
-        <translation></translation>
+        <translation>&amp;Voorkeuren</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="936"/>
@@ -617,7 +617,7 @@
     <message>
         <location filename="../../fn.ui" line="944"/>
         <source>Find and &amp;Replace</source>
-        <translation></translation>
+        <translation>Zoeken en ve&amp;rvangen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="947"/>
@@ -632,12 +632,12 @@
     <message>
         <location filename="../../fn.ui" line="960"/>
         <source>&amp;About</source>
-        <translation></translation>
+        <translation>&amp;Over</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="968"/>
         <source>Pr&amp;int All Nodes</source>
-        <translation></translation>
+        <translation>Alle not&amp;ities afdrukken</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="979"/>
@@ -672,67 +672,67 @@
     <message>
         <location filename="../../fn.ui" line="1013"/>
         <source>C&amp;enter</source>
-        <translation></translation>
+        <translation>C&amp;entreren</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1016"/>
         <source>Align center</source>
-        <translation></translation>
+        <translation>Gecentreerd uitlijnen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1019"/>
         <source>Alt+Shift+Down</source>
-        <translation></translation>
+        <translation>Alt+Shift+pijltje omlaag</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1030"/>
         <source>&amp;Right</source>
-        <translation></translation>
+        <translation>&amp;Rechts</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1033"/>
         <source>Align right</source>
-        <translation></translation>
+        <translation>Rechts uitlijnen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1036"/>
         <source>Alt+Shift+Right</source>
-        <translation></translation>
+        <translation>Alt+Shift+pijltje naar rechts</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1047"/>
         <source>&amp;Left</source>
-        <translation></translation>
+        <translation>&amp;Links</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1050"/>
         <source>Align left</source>
-        <translation></translation>
+        <translation>Links uitlijnen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1053"/>
         <source>Alt+Shift+Left</source>
-        <translation></translation>
+        <translation>Alt+Shift+pijltje naar links</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1064"/>
         <source>&amp;Justify</source>
-        <translation></translation>
+        <translation>U&amp;itvullen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1067"/>
         <source>Justify</source>
-        <translation></translation>
+        <translation>Uitvullen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1070"/>
         <source>Alt+Shift+Up</source>
-        <translation></translation>
+        <translation>Alt+Shift+pijltje omhoog</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1078"/>
         <source>&amp;Prepend Sibling</source>
-        <translation></translation>
+        <translation>Gelijksoortige &amp;bijvoegen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1081"/>
@@ -742,32 +742,32 @@
     <message>
         <location filename="../../fn.ui" line="1089"/>
         <source>Move &amp;Left</source>
-        <translation></translation>
+        <translation>Naar &amp;links verplaatsen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1092"/>
         <source>Alt+Left</source>
-        <translation></translation>
+        <translation>Alt+pijltje naar links</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1100"/>
         <source>Move &amp;Right</source>
-        <translation></translation>
+        <translation>Naar &amp;rechts verplaatsen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1103"/>
         <source>Alt+Right</source>
-        <translation></translation>
+        <translation>Alt+pijltje naar rechts</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1111"/>
         <source>h&amp;2</source>
-        <translation></translation>
+        <translation>k&amp;2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1114"/>
         <source>Header 2</source>
-        <translation></translation>
+        <translation>Kop 2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1117"/>
@@ -777,12 +777,12 @@
     <message>
         <location filename="../../fn.ui" line="1125"/>
         <source>h&amp;1</source>
-        <translation></translation>
+        <translation>k&amp;1</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1128"/>
         <source>Header 1</source>
-        <translation></translation>
+        <translation>Kop 1</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1131"/>
@@ -792,12 +792,12 @@
     <message>
         <location filename="../../fn.ui" line="1139"/>
         <source>h&amp;3</source>
-        <translation></translation>
+        <translation>k&amp;3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1142"/>
         <source>Header 3</source>
-        <translation></translation>
+        <translation>Kop 3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1145"/>
@@ -807,22 +807,22 @@
     <message>
         <location filename="../../fn.ui" line="1153"/>
         <source>&amp;Node Font</source>
-        <translation></translation>
+        <translation>&amp;Nodelettertype</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1156"/>
         <source>Node Font</source>
-        <translation></translation>
+        <translation>Nodelettertype</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1161"/>
         <source>Scale I&amp;mage(s)</source>
-        <translation></translation>
+        <translation>Grootte van afbeeldi&amp;ng(en) wijzigen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1169"/>
         <source>Paste &amp;HTML</source>
-        <translation></translation>
+        <translation>&amp;HTML plakken</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1172"/>
@@ -832,7 +832,7 @@
     <message>
         <location filename="../../fn.ui" line="1180"/>
         <source>&amp;Tags</source>
-        <translation></translation>
+        <translation>&amp;Labels</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1183"/>
@@ -842,7 +842,7 @@
     <message>
         <location filename="../../fn.ui" line="1191"/>
         <source>Insert Lin&amp;k</source>
-        <translation></translation>
+        <translation>Lin&amp;k invoegen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1194"/>
@@ -852,12 +852,12 @@
     <message>
         <location filename="../../fn.ui" line="1199"/>
         <source>C&amp;opy Link</source>
-        <translation></translation>
+        <translation>Link k&amp;opiëren</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1207"/>
         <source>I&amp;nsert Table</source>
-        <translation></translation>
+        <translation>Tabel i&amp;nvoegen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1210"/>
@@ -867,67 +867,67 @@
     <message>
         <location filename="../../fn.ui" line="1215"/>
         <source>Append Row</source>
-        <translation></translation>
+        <translation>Rij toevoegen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1220"/>
         <source>Delete Row</source>
-        <translation></translation>
+        <translation>Rij verwijderen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1225"/>
         <source>Append Column</source>
-        <translation></translation>
+        <translation>Kolom toevoegen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1230"/>
         <source>Delete Column</source>
-        <translation></translation>
+        <translation>Kolom verwijderen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1235"/>
         <source>Merge Cells</source>
-        <translation></translation>
+        <translation>Cellen samenvoegen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1240"/>
         <source>Prepend Row</source>
-        <translation></translation>
+        <translation>Rij erboven invoegen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1245"/>
         <source>Prepend Column</source>
-        <translation></translation>
+        <translation>Kolom erboven invoegen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1253"/>
         <source>Export &amp;HTML</source>
-        <translation></translation>
+        <translation>&amp;HTML exporteren</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1258"/>
         <source>Save Ima&amp;ge(s)</source>
-        <translation></translation>
+        <translation>Afbeeldin&amp;g(en) opslaan</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1269"/>
         <source>RTL</source>
-        <translation></translation>
+        <translation>RNL</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1272"/>
         <source>Ctrl+Alt+Shift+Left</source>
-        <translation></translation>
+        <translation>Ctrl+Alt+Shift+pijltje links</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1283"/>
         <source>LTR</source>
-        <translation></translation>
+        <translation>LNR</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1286"/>
         <source>Ctrl+Alt+Shift+Right</source>
-        <translation></translation>
+        <translation>Ctrl+Alt+Shift+pijltje rechts</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1291"/>
@@ -938,7 +938,7 @@
     <message>
         <location filename="../../fn.ui" line="1302"/>
         <source>Node &amp;Icon</source>
-        <translation></translation>
+        <translation>Nodep&amp;ictogram</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1305"/>
@@ -948,7 +948,7 @@
     <message>
         <location filename="../../fn.cpp" line="2031"/>
         <source>Node Icon</source>
-        <translation></translation>
+        <translation>Nodepictogram</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="272"/>
@@ -990,52 +990,53 @@
         <location filename="../../fn.cpp" line="484"/>
         <location filename="../../fn.cpp" line="4185"/>
         <source>&amp;Raise/Hide</source>
-        <translation></translation>
+        <translation>Tonen/Ve&amp;rbergen</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="649"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;New note?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Nieuwe notitie?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="650"/>
         <source>&lt;center&gt;&lt;i&gt;Do you really want to leave this document&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;and create an empty one?&lt;/i&gt;&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;&lt;i&gt;Weet je zeker dat je dit document wilt sluiten&lt;/i&gt;&lt;/center&gt;
+&lt;center&gt;&lt;i&gt;en een nieuw, leeg document wilt creëren?&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="653"/>
         <location filename="../../fn.cpp" line="1866"/>
         <location filename="../../fn.cpp" line="3441"/>
         <source>Yes</source>
-        <translation></translation>
+        <translation>Ja</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="654"/>
         <location filename="../../fn.cpp" line="1867"/>
         <location filename="../../fn.cpp" line="3442"/>
         <source>No</source>
-        <translation></translation>
+        <translation>Nee</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="726"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Save changes?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Wijzigingen opslaan?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="728"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been modified.&lt;/i&gt;&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;&lt;i&gt;Het document is bewerkt.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="730"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been removed.&lt;/i&gt;&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;&lt;i&gt;Het document is verwijderd.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="735"/>
         <source>Discard changes</source>
-        <translation></translation>
+        <translation>Wijzigingen verwerpen</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="736"/>
@@ -1049,25 +1050,25 @@
         <location filename="../../fn.cpp" line="4962"/>
         <location filename="../../fn.cpp" line="5078"/>
         <source>Cancel</source>
-        <translation></translation>
+        <translation>Annuleren</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="988"/>
         <source>Open file...</source>
-        <translation></translation>
+        <translation>Bestand openen...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="990"/>
         <location filename="../../fn.cpp" line="1110"/>
         <location filename="../../fn.cpp" line="1131"/>
         <source>FeatherNotes documents (*.fnx)</source>
-        <translation></translation>
+        <translation>FeatherNotes-documenten (*.fnx)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1017"/>
         <location filename="../../fn.cpp" line="4834"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be saved!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Opslaan mislukt!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1020"/>
@@ -1075,29 +1076,30 @@
         <location filename="../../fn.cpp" line="3919"/>
         <location filename="../../fn.cpp" line="4837"/>
         <source>Close</source>
-        <translation></translation>
+        <translation>Sluiten</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1108"/>
         <location filename="../../fn.cpp" line="1129"/>
         <source>Save As...</source>
-        <translation></translation>
+        <translation>Opslaan als...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1863"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Delete this node?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Deze node verwijderen?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1864"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;i&gt;Warning!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
 &lt;center&gt;This action cannot be undone.&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;i&gt;Waarschuwing!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
+&lt;center&gt;Deze actie kan niet ongedaan worden gemaakt.&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1966"/>
         <source>Tags</source>
-        <translation></translation>
+        <translation>Labels</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1979"/>
@@ -1110,96 +1112,96 @@
         <location filename="../../fn.cpp" line="4963"/>
         <location filename="../../fn.cpp" line="5079"/>
         <source>OK</source>
-        <translation></translation>
+        <translation>Oké</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2169"/>
         <location filename="../../fn.cpp" line="2202"/>
         <source>&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</source>
-        <translation></translation>
+        <translation>&lt;b&gt;Hoofdnotities:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Alle notities:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2175"/>
         <location filename="../../fn.cpp" line="2208"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</source>
-        <translation></translation>
+        <translation>&lt;b&gt;Notitie:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Hoofdnodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Alle nodes:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2479"/>
         <source>%1 Matches</source>
-        <translation></translation>
+        <translation>%1 overeenkomsten</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2481"/>
         <source>One Match</source>
-        <translation></translation>
+        <translation>Eén overeenkomst</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2483"/>
         <location filename="../../fn.cpp" line="2794"/>
         <source>No Match</source>
-        <translation></translation>
+        <translation>Geen overeenkomst</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2598"/>
         <location filename="../../fn.cpp" line="2650"/>
         <source>Replacement</source>
-        <translation></translation>
+        <translation>Vervanging</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2893"/>
         <source>No Replacement</source>
-        <translation></translation>
+        <translation>Geen vervanging</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2895"/>
         <source>One Replacement</source>
-        <translation></translation>
+        <translation>Eén vervanging</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2897"/>
         <source>%1 Replacements</source>
-        <translation></translation>
+        <translation>%1 vervangingen</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3041"/>
         <source>Insert Link</source>
-        <translation></translation>
+        <translation>Link invoegen</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2039"/>
         <location filename="../../fn.cpp" line="3120"/>
         <source>Image path</source>
-        <translation></translation>
+        <translation>Afbeeldingspad</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2043"/>
         <location filename="../../fn.cpp" line="3124"/>
         <source>Open image</source>
-        <translation></translation>
+        <translation>Afbeelding openen</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3132"/>
         <location filename="../../fn.cpp" line="3291"/>
         <source>Scaling percentage</source>
-        <translation></translation>
+        <translation>Schaalpercentage</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2061"/>
         <location filename="../../fn.cpp" line="3239"/>
         <source>Open Image...</source>
-        <translation></translation>
+        <translation>Afbeelding openen...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="486"/>
         <location filename="../../fn.cpp" line="4176"/>
         <source>&amp;Raise</source>
-        <translation></translation>
+        <translation>Naa&amp;r voren brengen</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="682"/>
         <source>New Node</source>
-        <translation></translation>
+        <translation>Nieuwe node</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1092"/>
@@ -1210,30 +1212,30 @@
         <location filename="../../fn.cpp" line="4891"/>
         <location filename="../../fn.cpp" line="4917"/>
         <source>Untitled</source>
-        <translation></translation>
+        <translation>Naamloos</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1862"/>
         <source>Deletion</source>
-        <translation></translation>
+        <translation>Verwijdering</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1975"/>
         <source>Tag(s) for this node</source>
-        <translation></translation>
+        <translation>Label(s) van deze node</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2063"/>
         <location filename="../../fn.cpp" line="3241"/>
         <location filename="../../fn.cpp" line="3467"/>
         <source>Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)</source>
-        <translation></translation>
+        <translation>Afbeeldingsbestanden (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;Alle bestanden (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3127"/>
         <location filename="../../fn.cpp" line="3287"/>
         <source>Scale to</source>
-        <translation></translation>
+        <translation>Schalen naar</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3131"/>
@@ -1244,58 +1246,59 @@
     <message>
         <location filename="../../fn.cpp" line="3281"/>
         <source>Scale Image(s)</source>
-        <translation></translation>
+        <translation>Afbeelding(en) schalen</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3407"/>
         <source>untitled</source>
-        <translation></translation>
+        <translation>naamloos</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3437"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Image cannot be saved! Retry?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Afbeelding kan niet worden opgeslagen! Opnieuw proberen?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3438"/>
         <source>&lt;center&gt;Maybe you did not choose a proper extension&lt;/center&gt;
 &lt;center&gt;or do not have write permission.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;Misschien heb je een ongeldige extensie gekozen&lt;/center&gt;
+&lt;center&gt;of geen schrijftoegang.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3465"/>
         <source>Save Image As...</source>
-        <translation></translation>
+        <translation>Afbeelding opslaan als...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3517"/>
         <source>Insert Table</source>
-        <translation></translation>
+        <translation>Tabel invoegen</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3523"/>
         <source>Rows:</source>
-        <translation></translation>
+        <translation>Rijen:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3529"/>
         <source>Columns:</source>
-        <translation></translation>
+        <translation>Kolommen:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3694"/>
         <source>Preferences</source>
-        <translation></translation>
+        <translation>Voorkeuren</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3702"/>
         <source>Window</source>
-        <translation></translation>
+        <translation>Venster</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3706"/>
         <source>Remember window &amp;size</source>
-        <translation></translation>
+        <translation>Ven&amp;sterafmetingen onthouden</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3707"/>
@@ -1303,12 +1306,15 @@
 this dialog and also on exit.
 
 Uncheck to set a fixed size!</source>
-        <translation></translation>
+        <translation>Slaat de vensterafmetingen op, zowel na het sluiten
+van dit venster als bij het afsluiten van de applicatie.
+
+Vink dit uit om vaste afmetingen in te stellen!</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3711"/>
         <source>Start with this size: </source>
-        <translation></translation>
+        <translation>Opstarten met deze afmetingen: </translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3721"/>
@@ -1321,7 +1327,7 @@ Uncheck to set a fixed size!</source>
     <message>
         <location filename="../../fn.cpp" line="3725"/>
         <source>Remember &amp;tree width</source>
-        <translation></translation>
+        <translation>Breed&amp;te van boomweergave onthouden</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3726"/>
@@ -1329,12 +1335,15 @@ Uncheck to set a fixed size!</source>
 this dialog and also on exit.
 
 Uncheck for a width ratio of 170/530.</source>
-        <translation></translation>
+        <translation>Slaat de breedte van de boomweergave op, zowel na het sluiten
+van dit venster als bij het afsluiten van de applicatie.
+
+Vink dit uit voor een breedteverhouding van 170/530.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3729"/>
         <source>Save &amp;position</source>
-        <translation></translation>
+        <translation>&amp;Positie onthouden</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3730"/>
@@ -1344,12 +1353,17 @@ this dialog and also on exit.
 (This may not work correctly
 under GTK+ DE&apos;s like Unity
 and Cinnamon.)</source>
-        <translation></translation>
+        <translation>Onthoudt de positie, zowel na het sluiten van
+dit venster als bij het afsluiten van de applicatie.
+
+(Dit werkt mogelijk niet goed
+in GTK+-werkomgevingen als Unity
+en Cinnamon.)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3735"/>
         <source>Add to s&amp;ystray</source>
-        <translation></translation>
+        <translation>S&amp;ysteemvakpictogram tonen</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3736"/>
@@ -1358,38 +1372,43 @@ If checked, the titlebar close button iconifies
 the window to the systray instead of quitting.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation></translation>
+        <translation>Bepaalt of er wel of geen systeemvakpictogram moet worden gebruikt.
+Als dit wordt aangevinkt, dan wordt het venster, bij afsluiten, geminimaliseerd
+naar het systeemvak in plaats van afgesloten.
+
+FeatherNotes moet worden herstart om de wijziging toe te passen.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3737"/>
         <source>Start i&amp;conified to tray</source>
-        <translation></translation>
+        <translation>Gem&amp;inimaliseerd in systeemvak opstarten</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3738"/>
         <source>The command line option --tray
 can be used instead of this.</source>
-        <translation></translation>
+        <translation>De opdrachtregeloptie --tray
+kan eveneens worden gebruikt.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3744"/>
         <source>Transparent t&amp;ree view</source>
-        <translation></translation>
+        <translation>Doorzich&amp;tige boomweergave</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3745"/>
         <source>Merge the tree view with its surroundings?</source>
-        <translation></translation>
+        <translation>Wil je de boomweergave laten opgaan in de omgeving?</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3748"/>
         <source>Do not show t&amp;oolbar</source>
-        <translation></translation>
+        <translation>Werkbalk nie&amp;t tonen</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3750"/>
         <source>Do not show &amp;menubar</source>
-        <translation></translation>
+        <translation>&amp;Menubalk niet tonen</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3751"/>
@@ -1492,7 +1511,7 @@ prevents annoying scroll jumps.</source>
     <message>
         <location filename="../../fn.cpp" line="4704"/>
         <source>&amp;Current node</source>
-        <translation></translation>
+        <translation>&amp;Huidige node</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4706"/>
@@ -1615,7 +1634,7 @@ prevents annoying scroll jumps.</source>
         <location filename="../../domitem.cpp" line="100"/>
         <location filename="../../domitem.cpp" line="137"/>
         <source>New Node</source>
-        <translation></translation>
+        <translation>Nieuwe node</translation>
     </message>
 </context>
 </TS>
