@@ -1414,23 +1414,25 @@ kan eveneens worden gebruikt.</translation>
         <location filename="../../fn.cpp" line="3751"/>
         <source>If the menubar is hidden,
 a menu button appears on the toolbar.</source>
-        <translation></translation>
+        <translation>Als de menubalk verborgen is,
+dan verschijnt er een menuknop op de werkbalk.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3755"/>
         <source>Running &amp;under Enlightenment?</source>
-        <translation></translation>
+        <translation>Gebr&amp;uik je Enlightenment?</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3756"/>
         <source>Check this under Enlightenment (or, probably, another DE)
 to use the systray icon more easily!</source>
-        <translation></translation>
+        <translation>Vink dit dan aan (kan ook op andere werkomgevingen)
+om gebruik van het systeemvakpictogram eenvoudiger te maken!</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3757"/>
         <source>Shifts (X × Y): </source>
-        <translation></translation>
+        <translation>Posities (X × Y): </translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3758"/>
