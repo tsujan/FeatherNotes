@@ -1444,71 +1444,82 @@ if it is on the left or right, the X-coordinate should be set.
 
 After choosing the coordinate shifts, put the window in a proper
 position and then restart FeatherNotes!</source>
-        <translation></translation>
+        <translation>Sommige werkomgevingen (zoals Enlightenment) geven de vensterpositie niet altijd
+goed door. Als dat het geval is, dan kun je hier proberen om het probleem op te lossen.
+
+Als het paneel zich onder of boven bevindt, dan moet het Y-coördinaat worden ingesteld;
+als het zich links of rechts bevindt, dan moet het X-coördinaat worden ingesteld.
+
+Plaats, na het kiezen van de coördinaten, het venster op een goede positie en
+herstart FeatherNotes!</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3871"/>
         <source>Text</source>
-        <translation></translation>
+        <translation>Tekst</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3874"/>
         <source>&amp;Wrap lines by default</source>
-        <translation></translation>
+        <translation>Regels standaard om&amp;slaan</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3875"/>
         <source>Auto-&amp;indent by default</source>
-        <translation></translation>
+        <translation>Standaard automatisch &amp;inspringen</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3876"/>
         <source>Auto-&amp;bracket
 (Requires application restart)</source>
-        <translation></translation>
+        <translation>Automatische &amp;haakjes
+(herstart vereist)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3877"/>
         <source>This covers parentheses, braces, brackets and quotes.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation></translation>
+        <translation>Dit beslaat enkele/dubbele aanhalingstekens en ronde/vierkante haakjes.
+
+FeatherNotes moet worden herstart om de instelling toe te passen.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3878"/>
         <source>&amp;Auto-save every</source>
-        <translation></translation>
+        <translation>&amp;Automatisch opslaan, elke</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3882"/>
         <source> minute(s)</source>
-        <translation></translation>
+        <translation> minu(u)t(en)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3887"/>
         <source>Workaround for &amp;Qt5&apos;s scroll jump bug</source>
-        <translation></translation>
+        <translation>Omzeiling voor &amp;Qt5&apos;s scroll-verspringbug</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3888"/>
         <source>This is not a complete fix but
 prevents annoying scroll jumps.</source>
-        <translation></translation>
+        <translation>Dit is geen volledige oplossing,
+maar voorkomt vervelende scroll-verspringingen.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4642"/>
         <source>Print Document</source>
-        <translation></translation>
+        <translation>Document afdrukken</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4698"/>
         <source>Export HTML</source>
-        <translation></translation>
+        <translation>HTML exporteren</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4703"/>
         <source>Export:</source>
-        <translation></translation>
+        <translation>Exporteren:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4704"/>
@@ -1518,94 +1529,94 @@ prevents annoying scroll jumps.</source>
     <message>
         <location filename="../../fn.cpp" line="4706"/>
         <source>With all &amp;sub-nodes</source>
-        <translation></translation>
+        <translation>Inclusief alle &amp;subnodes</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4707"/>
         <source>&amp;All nodes</source>
-        <translation></translation>
+        <translation>&amp;Alle nodes</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4719"/>
         <source>Output file:</source>
-        <translation></translation>
+        <translation>Uitvoerbestand:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4738"/>
         <source>Select path</source>
-        <translation></translation>
+        <translation>Pad kiezen</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4922"/>
         <source>Save HTML As...</source>
-        <translation></translation>
+        <translation>HTML opslaan als...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4924"/>
         <source>HTML Files (*.html *.htm)</source>
-        <translation></translation>
+        <translation>HTML-bestanden (*.html *.htm)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4945"/>
         <source>Set Password</source>
-        <translation></translation>
+        <translation>Wachtwoord instellen</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4953"/>
         <source>Type password</source>
-        <translation></translation>
+        <translation>Typ een wachtwoord</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4958"/>
         <source>Retype password</source>
-        <translation></translation>
+        <translation>Typ het wachtwoord opnieuw</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5034"/>
         <source>&lt;center&gt;Passwords were different. Retry!&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;De wachtwoorden komen niet overeen. Probeer het opnieuw!&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5066"/>
         <location filename="../../fn.cpp" line="5074"/>
         <source>Enter Password</source>
-        <translation></translation>
+        <translation>Voer wachtwoord in</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5140"/>
         <source>&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;Verkeerd wachtwoord. Probeer het opnieuw!&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5179"/>
         <source>A lightweight notes manager</source>
-        <translation></translation>
+        <translation>Een lichte notitiebeheerder</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5180"/>
         <source>based on Qt5</source>
-        <translation></translation>
+        <translation>gebaseerd op Qt5</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5181"/>
         <source>Author</source>
-        <translation></translation>
+        <translation>Maker</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5183"/>
         <location filename="../../fn.cpp" line="5184"/>
         <source>About FeatherNotes</source>
-        <translation></translation>
+        <translation>Over FeatherNotes</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5183"/>
         <source>Translators</source>
-        <translation></translation>
+        <translation>Vertalers</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5182"/>
         <source>aka.</source>
-        <translation></translation>
+        <translation>ook bekend als</translation>
     </message>
 </context>
 <context>
@@ -1613,7 +1624,7 @@ prevents annoying scroll jumps.</source>
     <message>
         <location filename="../../lineedit.cpp" line="35"/>
         <source>Clear text (Ctrl+K)</source>
-        <translation></translation>
+        <translation>Tekst wissen (Ctrl+K)</translation>
     </message>
     <message>
         <location filename="../../lineedit.cpp" line="81"/>
@@ -1627,7 +1638,7 @@ prevents annoying scroll jumps.</source>
     <message>
         <location filename="../../helpDialog.ui" line="14"/>
         <source>Help</source>
-        <translation></translation>
+        <translation>Hulp</translation>
     </message>
 </context>
 <context>
