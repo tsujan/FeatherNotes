@@ -642,12 +642,12 @@
     <message>
         <location filename="../../fn.ui" line="979"/>
         <source>Superscrip&amp;t</source>
-        <translation></translation>
+        <translation>Bovenschrif&amp;t</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="982"/>
         <source>Superscript</source>
-        <translation></translation>
+        <translation>Bovenschrift</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="985"/>
@@ -657,12 +657,12 @@
     <message>
         <location filename="../../fn.ui" line="996"/>
         <source>Subscri&amp;pt</source>
-        <translation></translation>
+        <translation>Onderschri&amp;ft</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="999"/>
         <source>Subscript</source>
-        <translation></translation>
+        <translation>Onderschrift</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1002"/>
