@@ -44,7 +44,7 @@ public:
 
 private slots:
     bool close();
-    void checkForTray();
+    void checkTray();
     void showContextMenu (const QPoint &p);
     void fullScreening();
     void defaultSize();

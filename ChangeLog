@@ -1,3 +1,7 @@
+V0.4.6
+---------
+ * Removed an old workaround for KDE's clipboard.
+
 V0.4.5
 ---------
  * Added some text-editor shortcuts of FeatherPad.

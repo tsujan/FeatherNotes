@@ -263,7 +263,7 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
             QTimer *trayTimer = new QTimer (this);
             trayTimer->setSingleShot (true);
             trayTimer->setInterval (5000);
-            connect (trayTimer, &QTimer::timeout, this, &FN::checkForTray);
+            connect (trayTimer, &QTimer::timeout, this, &FN::checkTray);
             trayTimer->start();
             ++trayCounter_;
         }
@@ -438,28 +438,26 @@ void FN::closeEvent (QCloseEvent *event)
     }
 }
 /*************************/
-void FN::checkForTray()
+void FN::checkTray()
 {
-    QTimer *trayTimer = qobject_cast<QTimer*>(sender());
-    if (trayTimer)
+    if (QTimer *trayTimer = qobject_cast<QTimer*>(sender()))
     {
-        trayTimer->deleteLater();
         if (QSystemTrayIcon::isSystemTrayAvailable())
         {
+            trayTimer->deleteLater();
             createTrayIcon();
             trayCounter_ = 0; // not needed
         }
         else if (trayCounter_ < 12)
         {
-            trayTimer = new QTimer (this);
-            trayTimer->setSingleShot (true);
-            trayTimer->setInterval (5000);
-            connect (trayTimer, &QTimer::timeout, this, &FN::checkForTray);
             trayTimer->start();
             ++trayCounter_;
         }
         else
+        {
+            trayTimer->deleteLater();
             show();
+        }
     }
 }
 /*************************/
@@ -1330,11 +1328,11 @@ TextEdit *FN::newWidget()
     connect (textEdit, &QWidget::customContextMenuRequested, this, &FN::txtContextMenu);
     /* The remaining connections to QTextEdit signals are in selChanged(). */
 
-    /* I don't know why, under KDE, when text is selected
-       for the first time, it isn't copied to the selection
-       clipboard. Perhaps it has something to do with Klipper.
-       I neither know why this s a workaround: */
-    QApplication::clipboard()->text (QClipboard::Selection);
+    /* I don't know why, under KDE, when a text is selected for the first time,
+       it may not be copied to the selection clipboard. Perhaps it has something
+       to do with Klipper. I neither know why the following line is a workaround
+       but it can cause a long delay when FeatherPad is started. */
+    //QApplication::clipboard()->text (QClipboard::Selection);
 
     return textEdit;
 }
