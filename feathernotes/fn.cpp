@@ -671,7 +671,7 @@ void FN::newNote()
     }
 
     QDomDocument doc;
-    QDomProcessingInstruction inst = doc.createProcessingInstruction ("xml", "version=\'1.0\' encoding=\'utf-8\'");
+    QDomProcessingInstruction inst = doc.createProcessingInstruction ("xml", R"(version='1.0' encoding='utf-8')");
     doc.insertBefore(inst, QDomNode());
     QDomElement root = doc.createElement ("feathernotes");
     root.setAttribute ("txtfont", defaultFont_.toString());
@@ -1486,7 +1486,7 @@ void FN::selChanged (const QItemSelection &selected, const QItemSelection& /*des
         QDomNodeList list = item->node().childNodes();
         text = list.item (0).nodeValue();
         /* this is needed for text zooming */
-        QRegExp regExp = QRegExp ("^<\\!DOCTYPE[A-Za-z0-9/<>,;.:\\-\\=\\{\\}\\s\\\"]+</style></head><body\\sstyle\\=[A-Za-z0-9/<>;:\\-\\s\\\"\\\\']+>");
+        QRegExp regExp = QRegExp (R"(^<\!DOCTYPE[A-Za-z0-9/<>,;.:\-\=\{\}\s\"]+</style></head><body\sstyle\=[A-Za-z0-9/<>;:\-\s\"\\']+>)");
         if (regExp.indexIn (text) > -1)
         {
             QString str = "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
@@ -3208,7 +3208,7 @@ void FN::imageEmbed (QString path)
     }
     TextEdit *textEdit = qobject_cast< TextEdit *>(ui->stackedWidget->currentWidget());
     //QString ("<img src=\"data:image/png;base64,%1\">")
-    textEdit->insertHtml (QString ("<img src=\"data:image;base64,%1\" width=\"%2\" height=\"%3\" />")
+    textEdit->insertHtml (QString (R"(<img src="data:image;base64,%1" width="%2" height="%3" />)")
                           .arg (QString (base64array))
                           .arg (w)
                           .arg (h));
@@ -3268,7 +3268,7 @@ bool FN::isImageSelected()
 
     QTextDocumentFragment docFrag = cur.selection();
     QString txt = docFrag.toHtml();
-    if (txt.contains (QRegExp ("<img\\ssrc=\"data:image;base64,.*\"\\s*width=\"[0-9]+\"\\s*height=\"[0-9]+\"\\s*/*>")))
+    if (txt.contains (QRegExp (R"(<img\ssrc="data:image;base64,.*"\s*width="[0-9]+"\s*height="[0-9]+"\s*/*>)")))
         return true;
 
     return false;
@@ -3307,8 +3307,8 @@ void FN::scaleImage()
     QTextCursor cur = textEdit->textCursor();
     QTextDocumentFragment docFrag = cur.selection();
     QString txt = docFrag.toHtml();
-    QRegExp imageExp = QRegExp ("base64,.*\"(?=\\s*width=\"[0-9]+\"\\s*height=\"[0-9]+\"\\s*/*>)");
-    QRegExp sizeExp = QRegExp ("width=\"[0-9]+\"\\s*height=\"[0-9]+\"\\s*/*>");
+    QRegExp imageExp = QRegExp (R"(base64,.*"(?=\s*width="[0-9]+"\s*height="[0-9]+"\s*/*>))");
+    QRegExp sizeExp = QRegExp (R"(width="[0-9]+"\s*height="[0-9]+"\s*/*>)");
     QSize imageSize;
     int indx;
     int W = 0;
@@ -3322,7 +3322,7 @@ void FN::scaleImage()
         {
             imageSize = image.size();
             bool ok;
-            QRegExp heightExp = QRegExp ("\"\\s*height=\"[0-9]+\"\\s*/*>");
+            QRegExp heightExp = QRegExp (R"("\s*height="[0-9]+"\s*/*>)");
             int indx1 = heightExp.indexIn (txt, indx);
             QString w = txt.mid (indx + 7, indx1 -  indx - 7);
             W = w.toInt(&ok);
@@ -3373,7 +3373,7 @@ void FN::scaleImage()
 
         int W = imageSize.width() * scale / 100;
         int H = imageSize.height() * scale / 100;
-        txt.replace (indx, sizeExp.matchedLength(), QString ("width=\"%1\" height=\"%2\" />").arg (W).arg (H));
+        txt.replace (indx, sizeExp.matchedLength(), QString (R"(width="%1" height="%2" />)").arg (W).arg (H));
         imageSize = QSize (-1, -1); // for the next image
     }
     cur.insertHtml (txt);
@@ -3406,8 +3406,8 @@ void FN::saveImage()
         path += "/" + tr ("untitled");
     }
 
-    QRegExp imageExp = QRegExp ("base64,.*\"(?=\\s*width=\"[0-9]+\"\\s*height=\"[0-9]+\"\\s*/*>)");
-    QRegExp sizeExp = QRegExp ("width=\"[0-9]+\"\\s*height=\"[0-9]+\"\\s*/*>");
+    QRegExp imageExp = QRegExp (R"(base64,.*"(?=\s*width="[0-9]+"\s*height="[0-9]+"\s*/*>))");
+    QRegExp sizeExp = QRegExp (R"(width="[0-9]+"\s*height="[0-9]+"\s*/*>)");
     QRegExp endExp = QRegExp ("\"\\s*/*>");
     int indx;
     int endIndex = 0;
