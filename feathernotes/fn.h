@@ -183,7 +183,7 @@ private:
     TextEdit *newWidget();
     void mergeFormatOnWordOrSelection (const QTextCharFormat &format);
     void setNewFont (DomItem *item, QTextCharFormat &fmt);
-    QTextCursor finding (const QString str,
+    QTextCursor finding (const QString& str,
                          const QTextCursor& start,
                          QTextDocument::FindFlags flags) const;
     void findInTags();
