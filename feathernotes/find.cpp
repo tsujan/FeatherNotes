@@ -493,7 +493,7 @@ void FN::reallySetSearchFlags (bool h)
     else if (!ui->wholeButton->isChecked() && ui->caseButton->isChecked())
         searchFlags_ = QTextDocument::FindCaseSensitively;
     else
-        searchFlags_ = 0;
+        searchFlags_ = nullptr;
 
     /* deselect text for consistency */
     if (QObject::sender() == ui->caseButton || (QObject::sender() == ui->wholeButton))
