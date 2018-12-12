@@ -666,7 +666,6 @@ void FN::newNote()
             if (autoSave_ >= 1)
                 timer_->start (autoSave_ * 1000 * 60);
             return;
-            break;
         }
     }
 
@@ -1874,7 +1873,6 @@ void FN::deleteNode()
     case QMessageBox::No:
     default:
         return;
-        break;
     }
 
     QModelIndex index = ui->treeView->currentIndex();
@@ -2003,7 +2001,6 @@ void FN::handleTags()
     default:
         delete dialog;
         return;
-        break;
     }
 
     if (newTags != tags)
@@ -2095,7 +2092,6 @@ void FN::nodeIcon()
     default:
         delete dlg;
         return;
-        break;
     }
 
     QModelIndex index = ui->treeView->currentIndex();
@@ -3080,7 +3076,6 @@ void FN::insertLink()
     default:
         delete dialog;
         return;
-        break;
     }
 
     if (!address.isEmpty())
@@ -3169,7 +3164,6 @@ void FN::embedImage()
         delete dialog;
         ImagePathEntry_ = nullptr;
         return;
-        break;
     }
 
     imageEmbed (lastImgPath_);
@@ -3351,7 +3345,6 @@ void FN::scaleImage()
     default:
         delete dialog;
         return;
-        break;
     }
 
     int endIndex = 0;
@@ -3565,7 +3558,6 @@ void FN::addTable()
     default:
         delete dialog;
         return;
-        break;
     }
 
     TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
@@ -3935,7 +3927,6 @@ void FN::PrefDialog()
         writeGeometryConfig();
         delete dialog;
         return;
-        break;
     }
 }
 /*************************/
@@ -4776,7 +4767,6 @@ void FN::exportHTML()
         delete dialog;
         htmlPahEntry_ = nullptr;
         return;
-        break;
     }
 
     QTextDocument *doc = nullptr;
@@ -4993,7 +4983,6 @@ void FN::setPswd()
     default:
         delete dialog;
         return;
-        break;
     }
 }
 /*************************/
