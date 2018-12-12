@@ -712,7 +712,7 @@ void FN::setTitle (const QString& fname)
     if (w > 200 * metrics.width (' ')) w = 200 * metrics.width (' ');
     QString elidedPath = metrics.elidedText (path, Qt::ElideMiddle, w);
 
-    setWindowTitle (QString ("[*]%1 (%2)").arg (shownName).arg (elidedPath));
+    setWindowTitle (QString ("[*]%1 (%2)").arg (shownName, elidedPath));
     if (tray_)
         tray_->setToolTip (shownName);
 }
