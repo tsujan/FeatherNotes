@@ -325,8 +325,7 @@ FN::~FN()
         if (timer_->isActive()) timer_->stop();
         delete timer_;
     }
-    if (tray_)
-        delete tray_; // also deleted at closeEvent() (this is fr Ctrl+C in terminal)
+    delete tray_; // also deleted at closeEvent() (this is fr Ctrl+C in terminal)
     delete ui;
 }
 /*************************/
