@@ -6,7 +6,7 @@
     <message>
         <location filename="../../about.ui" line="119"/>
         <source>License</source>
-        <translation></translation>
+        <translation>Лицензия</translation>
     </message>
 </context>
 <context>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../../fn.ui" line="63"/>
         <source>Next (F3)</source>
-        <translation></translation>
+        <translation>Далее (F3)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="66"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../../fn.ui" line="76"/>
         <source>Previous (F4)</source>
-        <translation></translation>
+        <translation>Предыдущая (F4)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="79"/>
@@ -41,7 +41,7 @@
     <message>
         <location filename="../../fn.ui" line="95"/>
         <source>Search...</source>
-        <translation></translation>
+        <translation>Поиск...</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="107"/>
@@ -56,7 +56,7 @@
     <message>
         <location filename="../../fn.ui" line="117"/>
         <source>Search only in tags (Shift+F7)</source>
-        <translation></translation>
+        <translation>Искать только по тегам (Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="120"/>
@@ -76,12 +76,12 @@
     <message>
         <location filename="../../fn.ui" line="166"/>
         <source>Whole Word (F6)</source>
-        <translation></translation>
+        <translation>Слово целиком (F6)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="169"/>
         <source>Whole Word</source>
-        <translation></translation>
+        <translation>Слово целиком</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="172"/>
@@ -91,12 +91,12 @@
     <message>
         <location filename="../../fn.ui" line="150"/>
         <source>Match Case (F5)</source>
-        <translation></translation>
+        <translation>Учитывать регистр</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="153"/>
         <source>Match Case</source>
-        <translation></translation>
+        <translation>Учитывать регистр</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="156"/>
@@ -106,17 +106,17 @@
     <message>
         <location filename="../../fn.ui" line="199"/>
         <source>&amp;File</source>
-        <translation></translation>
+        <translation>&amp;Файл</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="218"/>
         <source>&amp;Edit</source>
-        <translation></translation>
+        <translation>&amp;Правка</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="233"/>
         <source>For&amp;mat</source>
-        <translation></translation>
+        <translation>Формат</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="265"/>
@@ -126,43 +126,43 @@
     <message>
         <location filename="../../fn.ui" line="288"/>
         <source>&amp;Options</source>
-        <translation></translation>
+        <translation>&amp;Настройки</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="300"/>
         <source>&amp;Search</source>
-        <translation></translation>
+        <translation>&amp;Поиск</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="307"/>
         <location filename="../../fn.ui" line="952"/>
         <source>&amp;Help</source>
-        <translation></translation>
+        <translation>&amp;Справка</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="410"/>
         <source>Find:</source>
-        <translation></translation>
+        <translation>Найти:</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="417"/>
         <source>Replace with:</source>
-        <translation></translation>
+        <translation>Заменить на:</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="430"/>
         <source>To be replaced</source>
-        <translation></translation>
+        <translation>Подлежит замене</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="443"/>
         <source>Replacing text</source>
-        <translation></translation>
+        <translation>Замена текста</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="450"/>
         <source>Previous (F9)</source>
-        <translation></translation>
+        <translation>Предыдущий (F9)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="453"/>
@@ -172,7 +172,7 @@
     <message>
         <location filename="../../fn.ui" line="463"/>
         <source>Next (F8)</source>
-        <translation></translation>
+        <translation>Далее (F8)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="466"/>
@@ -182,7 +182,7 @@
     <message>
         <location filename="../../fn.ui" line="476"/>
         <source>Replace all (F10)</source>
-        <translation></translation>
+        <translation>Заменить все</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="479"/>
@@ -192,13 +192,13 @@
     <message>
         <location filename="../../fn.ui" line="496"/>
         <source>&amp;Save</source>
-        <translation></translation>
+        <translation>&amp;Сохранить</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="499"/>
         <location filename="../../fn.cpp" line="734"/>
         <source>Save</source>
-        <translation></translation>
+        <translation>Сохранить</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="502"/>
@@ -209,12 +209,12 @@
         <location filename="../../fn.ui" line="507"/>
         <location filename="../../fn.cpp" line="490"/>
         <source>&amp;Open</source>
-        <translation></translation>
+        <translation>&amp;Открыть</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="510"/>
         <source>Open a file</source>
-        <translation></translation>
+        <translation>Открыть файл</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="513"/>
@@ -224,12 +224,12 @@
     <message>
         <location filename="../../fn.ui" line="521"/>
         <source>&amp;Undo</source>
-        <translation></translation>
+        <translation>&amp;Отменить</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="524"/>
         <source>Undo</source>
-        <translation></translation>
+        <translation>Отменить</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="527"/>
@@ -239,12 +239,12 @@
     <message>
         <location filename="../../fn.ui" line="535"/>
         <source>&amp;Redo</source>
-        <translation></translation>
+        <translation>&amp;Восстановить</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="538"/>
         <source>Redo</source>
-        <translation></translation>
+        <translation>Повторить</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="541"/>
@@ -254,12 +254,12 @@
     <message>
         <location filename="../../fn.ui" line="549"/>
         <source>&amp;Find</source>
-        <translation></translation>
+        <translation>&amp;Найти</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="552"/>
         <source>Show/hide searchbar</source>
-        <translation></translation>
+        <translation>Показать/скрыть строку поиска</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="555"/>
@@ -284,12 +284,12 @@
     <message>
         <location filename="../../fn.ui" line="580"/>
         <source>&amp;Bold</source>
-        <translation></translation>
+        <translation>Жирный</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="583"/>
         <source>Bold</source>
-        <translation></translation>
+        <translation>Жирный</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="586"/>
@@ -299,12 +299,12 @@
     <message>
         <location filename="../../fn.ui" line="597"/>
         <source>&amp;Italic</source>
-        <translation></translation>
+        <translation>Курсив</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="600"/>
         <source>Italic</source>
-        <translation></translation>
+        <translation>Курсив</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="603"/>
@@ -314,12 +314,12 @@
     <message>
         <location filename="../../fn.ui" line="614"/>
         <source>&amp;Underline</source>
-        <translation></translation>
+        <translation>Подчеркнутый</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="617"/>
         <source>Underline</source>
-        <translation></translation>
+        <translation>Подчеркнутый</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="620"/>
@@ -344,12 +344,12 @@
     <message>
         <location filename="../../fn.ui" line="645"/>
         <source>Te&amp;xt Color</source>
-        <translation></translation>
+        <translation>Цвет текста</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="648"/>
         <source>Text color</source>
-        <translation></translation>
+        <translation>Цвет текста</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="651"/>
@@ -359,12 +359,12 @@
     <message>
         <location filename="../../fn.ui" line="659"/>
         <source>Back&amp;ground Color</source>
-        <translation></translation>
+        <translation>Цвет фона</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="662"/>
         <source>Background color</source>
-        <translation></translation>
+        <translation>Цвет фона</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="665"/>
@@ -374,13 +374,13 @@
     <message>
         <location filename="../../fn.ui" line="670"/>
         <source>Options</source>
-        <translation></translation>
+        <translation>Параметры</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="675"/>
         <location filename="../../fn.cpp" line="489"/>
         <source>&amp;New Note</source>
-        <translation></translation>
+        <translation>&amp;Новая заметка</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="678"/>
@@ -390,7 +390,7 @@
     <message>
         <location filename="../../fn.ui" line="686"/>
         <source>Save &amp;As</source>
-        <translation></translation>
+        <translation>Сохранить &amp;как</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="689"/>
@@ -400,7 +400,7 @@
     <message>
         <location filename="../../fn.ui" line="697"/>
         <source>&amp;Print</source>
-        <translation></translation>
+        <translation>&amp;Печать</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="700"/>
@@ -415,13 +415,13 @@
     <message>
         <location filename="../../fn.ui" line="716"/>
         <source>Set Pass&amp;word</source>
-        <translation></translation>
+        <translation>Установить пароль</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="721"/>
         <location filename="../../fn.cpp" line="492"/>
         <source>&amp;Quit</source>
-        <translation></translation>
+        <translation>&amp;Выход</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="724"/>
@@ -431,7 +431,7 @@
     <message>
         <location filename="../../fn.ui" line="732"/>
         <source>&amp;Cut</source>
-        <translation></translation>
+        <translation>&amp;Вырезать</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="735"/>
@@ -441,7 +441,7 @@
     <message>
         <location filename="../../fn.ui" line="743"/>
         <source>C&amp;opy</source>
-        <translation></translation>
+        <translation>&amp;Копировать</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="746"/>
@@ -451,7 +451,7 @@
     <message>
         <location filename="../../fn.ui" line="754"/>
         <source>&amp;Paste</source>
-        <translation></translation>
+        <translation>&amp;Вставить</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="757"/>
@@ -461,12 +461,12 @@
     <message>
         <location filename="../../fn.ui" line="765"/>
         <source>&amp;Delete</source>
-        <translation></translation>
+        <translation>&amp;Удалить</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="773"/>
         <source>&amp;Select All</source>
-        <translation></translation>
+        <translation>&amp;Выбрать все</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="776"/>
@@ -476,13 +476,13 @@
     <message>
         <location filename="../../fn.ui" line="784"/>
         <source>E&amp;mbed Image</source>
-        <translation></translation>
+        <translation>Вставить изображение</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="787"/>
         <location filename="../../fn.cpp" line="3111"/>
         <source>Embed Image</source>
-        <translation></translation>
+        <translation>Вставить изображение</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="790"/>
@@ -542,7 +542,7 @@
     <message>
         <location filename="../../fn.ui" line="853"/>
         <source>Move &amp;Up</source>
-        <translation></translation>
+        <translation>&amp;Выше</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="856"/>
@@ -552,7 +552,7 @@
     <message>
         <location filename="../../fn.ui" line="864"/>
         <source>Move Do&amp;wn</source>
-        <translation></translation>
+        <translation>&amp;Ниже</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="867"/>
