@@ -18,6 +18,7 @@
 #ifndef MESSAGEBOX_H
 #define MESSAGEBOX_H
 
+#include <QRegularExpression>
 #include <QMessageBox>
 #include <QAbstractButton>
 #include <QGridLayout>
@@ -29,11 +30,11 @@ namespace FeatherNotes {
 class MessageBox : public QMessageBox {
     Q_OBJECT
 public:
-    MessageBox (QWidget *parent = Q_NULLPTR) : QMessageBox (parent) {}
+    MessageBox (QWidget *parent = nullptr) : QMessageBox (parent) {}
     MessageBox (Icon icon, const QString &title,
                 const QString &text,
                 StandardButtons buttons = NoButton,
-                QWidget *parent = Q_NULLPTR,
+                QWidget *parent = nullptr,
                 Qt::WindowFlags f = Qt::Dialog/* | Qt::MSWindowsFixedSizeDialogHint*/) : QMessageBox (icon, title, text, buttons, parent, f) {}
 
     void changeButtonText (QMessageBox::StandardButton btn, const QString &text) {
@@ -51,7 +52,7 @@ public:
                 int tw = 0;
                 QString t (text);
                 /* we suppose that <p> isn't used inside the text */
-                t.remove (QRegExp ("</{,1}center>|</{,1}b>|</{,1}i>|</{,1}p>|</a>|<a\\s+href\\s*=\\s*[A-Za-z0-9_%@:'\\.\\?\\=]+>"));
+                t.remove (QRegularExpression (R"(</{,1}center>|</{,1}b>|</{,1}i>|</{,1}p>|</a>|<a\s+href\s*=\s*[A-Za-z0-9_%@:'.?=]+>)"));
                 t.replace ("<br>", "\n");
                 QStringList l = t.split ('\n'); // deal with newlines
                 for (int i = 0; i < l.size(); i++)

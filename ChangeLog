@@ -1,6 +1,8 @@
 V0.4.6
 ---------
  * Removed an old workaround for KDE's clipboard.
+ * Use C++11 raw string literals (thanks to shlyakpavel at GitHub).
+ * Set the point size of the default document font to that of the widget font.
 
 V0.4.5
 ---------

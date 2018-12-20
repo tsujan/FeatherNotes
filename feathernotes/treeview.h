@@ -29,7 +29,7 @@ class TreeView : public QTreeView
 {
     Q_OBJECT
 public:
-    TreeView (QWidget *parent = Q_NULLPTR) : QTreeView (parent) {
+    TreeView (QWidget *parent = nullptr) : QTreeView (parent) {
         setDragDropMode (QAbstractItemView::InternalMove);
         setHeaderHidden (true);
         setAnimated (true);
@@ -49,7 +49,7 @@ public:
 
 protected:
     /* see "qabstractitemview.cpp" */
-    virtual QItemSelectionModel::SelectionFlags selectionCommand (const QModelIndex &index, const QEvent *event = Q_NULLPTR) const {
+    virtual QItemSelectionModel::SelectionFlags selectionCommand (const QModelIndex &index, const QEvent *event = nullptr) const {
         Qt::KeyboardModifiers keyModifiers = Qt::NoModifier;
         if (event)
         {

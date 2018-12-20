@@ -59,7 +59,7 @@ QTextCursor TextEdit::backTabCursor (const QTextCursor& cursor) const
     const QString blockText = cursor.block().text();
     int indx = 0;
     QRegularExpressionMatch match;
-    if (blockText.indexOf (QRegularExpression ("^\\s+"), 0, &match) > -1)
+    if (blockText.indexOf (QRegularExpression (R"(^\s+)"), 0, &match) > -1)
         indx = match.capturedLength();
     else
         return tmp;
@@ -325,7 +325,7 @@ void TextEdit::keyPressEvent (QKeyEvent *event)
                 /* skip all spaces to align the real text */
                 int indx = 0;
                 QRegularExpressionMatch match;
-                if (cursor.block().text().indexOf (QRegularExpression ("^\\s+"), 0, &match) > -1)
+                if (cursor.block().text().indexOf (QRegularExpression (R"(^\s+)"), 0, &match) > -1)
                     indx = match.capturedLength();
                 cursor.setPosition (cursor.block().position() + indx);
                 if (event->modifiers() & Qt::ControlModifier)

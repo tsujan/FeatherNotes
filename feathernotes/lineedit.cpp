@@ -41,7 +41,7 @@ LineEdit::LineEdit (QWidget *parent)
 /*************************/
 LineEdit::~LineEdit()
 {
-    if (klear) delete klear;
+    delete klear;
 }
 /*************************/
 void LineEdit::focusInEvent (QFocusEvent * ev)

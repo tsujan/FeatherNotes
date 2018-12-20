@@ -15,7 +15,7 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <signal.h>
+#include <csignal> // signal.h in C
 #include <QApplication>
 #include "fn.h"
 

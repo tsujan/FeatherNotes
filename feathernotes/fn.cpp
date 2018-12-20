@@ -73,8 +73,9 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
     ui->statusBar->setVisible (false);
 
     saveNeeded_ = 0;
-    defaultFont_ = QFont ("Monospace", 8);
-    nodeFont_ = QFont ("Monospace", 8);
+    defaultFont_ = QFont ("Monospace");
+    defaultFont_.setPointSize (qMax (font().pointSize(), 9));
+    nodeFont_ = font();
 
     /* search bar */
     ui->lineEdit->setVisible (false);
@@ -325,8 +326,8 @@ FN::~FN()
         if (timer_->isActive()) timer_->stop();
         delete timer_;
     }
-    if (tray_)
-        delete tray_; // also deleted at closeEvent() (this is fr Ctrl+C in terminal)
+    delete tray_; // also deleted at closeEvent() (this is for Ctrl+C in terminal)
+    tray_ = nullptr;
     delete ui;
 }
 /*************************/
@@ -430,11 +431,8 @@ void FN::closeEvent (QCloseEvent *event)
     else
     {
         writeGeometryConfig();
-        if (tray_)
-        {
-            delete tray_; // otherwise the app won't quit under KDE
-            tray_ = nullptr;
-        }
+        delete tray_; // otherwise the app won't quit under KDE
+        tray_ = nullptr;
         event->accept();
     }
 }
@@ -665,7 +663,6 @@ void FN::newNote()
             if (autoSave_ >= 1)
                 timer_->start (autoSave_ * 1000 * 60);
             return;
-            break;
         }
     }
 
@@ -844,8 +841,19 @@ void FN::showDoc (QDomDocument &doc)
     }
 
     QDomElement root = doc.firstChildElement ("feathernotes");
-    defaultFont_.fromString (root.attribute ("txtfont", "Monospace,8,-1,5,50,0,0,0,0,0"));
-    nodeFont_.fromString (root.attribute ("nodefont", "Monospace,8,-1,5,50,0,0,0,0,0"));
+    QString fontStr = root.attribute ("txtfont");
+    if (!fontStr.isEmpty())
+        defaultFont_.fromString (fontStr);
+    else // defaultFont_ may have changed by the user
+    {
+        defaultFont_ = QFont ("Monospace");
+        defaultFont_.setPointSize (qMax (font().pointSize(), 9));
+    }
+    fontStr = root.attribute ("nodefont");
+    if (!fontStr.isEmpty())
+        nodeFont_.fromString (fontStr);
+    else // nodeFont_ may have changed by the user
+        nodeFont_ = font();
 
     DomModel *newModel = new DomModel (doc, this);
     QItemSelectionModel *m = ui->treeView->selectionModel();
@@ -1485,14 +1493,15 @@ void FN::selChanged (const QItemSelection &selected, const QItemSelection& /*des
         QDomNodeList list = item->node().childNodes();
         text = list.item (0).nodeValue();
         /* this is needed for text zooming */
-        QRegExp regExp = QRegExp ("^<\\!DOCTYPE[A-Za-z0-9/<>,;.:\\-\\=\\{\\}\\s\\\"]+</style></head><body\\sstyle\\=[A-Za-z0-9/<>;:\\-\\s\\\"\\\\']+>");
-        if (regExp.indexIn (text) > -1)
+        QRegularExpressionMatch match;
+        QRegularExpression regex (R"(^<!DOCTYPE[A-Za-z0-9/<>,;.:\-={}\s"]+</style></head><body\sstyle=[A-Za-z0-9/<>;:\-\s"']+>)");
+        if (text.indexOf (regex, 0, &match) > -1)
         {
             QString str = "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
                           "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
                           "p, li { white-space: pre-wrap; }\n"
                           "</style></head><body>";
-            text.replace (0, regExp.matchedLength(), str);
+            text.replace (0, match.capturedLength(), str);
         }
         textEdit = newWidget();
         textEdit->setHtml (text);
@@ -1873,7 +1882,6 @@ void FN::deleteNode()
     case QMessageBox::No:
     default:
         return;
-        break;
     }
 
     QModelIndex index = ui->treeView->currentIndex();
@@ -2002,7 +2010,6 @@ void FN::handleTags()
     default:
         delete dialog;
         return;
-        break;
     }
 
     if (newTags != tags)
@@ -2094,7 +2101,6 @@ void FN::nodeIcon()
     default:
         delete dlg;
         return;
-        break;
     }
 
     QModelIndex index = ui->treeView->currentIndex();
@@ -2381,12 +2387,13 @@ void FN::findInNames()
         cs = Qt::CaseSensitive;
     if (ui->wholeButton->isChecked())
     {
-        QRegExp regExp;
-        regExp.setCaseSensitivity (cs);
-        regExp.setPattern (QString ("\\b%1\\b").arg (txt));
+        QRegularExpression regex;
+        if (cs == Qt::CaseInsensitive)
+            regex.setPatternOptions (QRegularExpression::CaseInsensitiveOption);
+        regex.setPattern (QString ("\\b%1\\b").arg (txt));
         while ((indx = model_->adjacentIndex (indx, down)).isValid())
         {
-            if (regExp.indexIn (model_->data (indx, Qt::DisplayRole).toString()) != -1)
+            if (model_->data (indx, Qt::DisplayRole).toString().indexOf (regex) != -1)
             {
                 found = true;
                 break;
@@ -3079,7 +3086,6 @@ void FN::insertLink()
     default:
         delete dialog;
         return;
-        break;
     }
 
     if (!address.isEmpty())
@@ -3168,7 +3174,6 @@ void FN::embedImage()
         delete dialog;
         ImagePathEntry_ = nullptr;
         return;
-        break;
     }
 
     imageEmbed (lastImgPath_);
@@ -3267,7 +3272,7 @@ bool FN::isImageSelected()
 
     QTextDocumentFragment docFrag = cur.selection();
     QString txt = docFrag.toHtml();
-    if (txt.contains (QRegExp ("<img\\ssrc=\"data:image;base64,.*\"\\s*width=\"[0-9]+\"\\s*height=\"[0-9]+\"\\s*/*>")))
+    if (txt.contains (QRegularExpression (R"(<img\ssrc="data:image;base64,.*"\s*width="[0-9]+"\s*height="[0-9]+"\s*/*>)")))
         return true;
 
     return false;
@@ -3306,23 +3311,24 @@ void FN::scaleImage()
     QTextCursor cur = textEdit->textCursor();
     QTextDocumentFragment docFrag = cur.selection();
     QString txt = docFrag.toHtml();
-    QRegExp imageExp = QRegExp ("base64,.*\"(?=\\s*width=\"[0-9]+\"\\s*height=\"[0-9]+\"\\s*/*>)");
-    QRegExp sizeExp = QRegExp ("width=\"[0-9]+\"\\s*height=\"[0-9]+\"\\s*/*>");
+    QRegularExpression imageExp (R"(base64,.*"(?=\s*width="[0-9]+"\s*height="[0-9]+"\s*/*>))");
+    QRegularExpression sizeExp (R"(width="[0-9]+"\s*height="[0-9]+"\s*/*>)");
     QSize imageSize;
     int indx;
     int W = 0;
-    if ((indx = sizeExp.indexIn (txt, 0)) != -1)
+    if ((indx = txt.indexOf (sizeExp)) != -1)
     {
-        int pos = imageExp.indexIn (txt, 0);
-        QString str = txt.mid (pos, imageExp.matchedLength());
+        QRegularExpressionMatch imageMatch;
+        int pos = txt.indexOf (imageExp, 0, &imageMatch);
+        QString str = txt.mid (pos, imageMatch.capturedLength());
         str.remove (0, 7);
         QImage image;
         if (image.loadFromData (QByteArray::fromBase64 (str.toUtf8())))
         {
             imageSize = image.size();
             bool ok;
-            QRegExp heightExp = QRegExp ("\"\\s*height=\"[0-9]+\"\\s*/*>");
-            int indx1 = heightExp.indexIn (txt, indx);
+            QRegularExpression heightExp (R"("\s*height="[0-9]+"\s*/*>)");
+            int indx1 = txt.indexOf (heightExp, indx);
             QString w = txt.mid (indx + 7, indx1 -  indx - 7);
             W = w.toInt(&ok);
             if (!ok) W = 0;
@@ -3350,17 +3356,18 @@ void FN::scaleImage()
     default:
         delete dialog;
         return;
-        break;
     }
 
     int endIndex = 0;
-    QRegExp endExp = QRegExp ("\"\\s*/*>");
-    while ((indx = sizeExp.indexIn (txt, endIndex)) != -1)
+    QRegularExpression endExp (R"("\s*/*>)");
+    QRegularExpressionMatch sizeMatch;
+    while ((indx = txt.indexOf (sizeExp, endIndex, &sizeMatch)) != -1)
     {
         if (!imageSize.isValid()) // already calculated for the first image
         {
-            int pos = imageExp.indexIn (txt, endIndex);
-            QString str = txt.mid (pos, imageExp.matchedLength());
+            QRegularExpressionMatch imageMatch;
+            int pos = txt.indexOf (imageExp, endIndex, &imageMatch);
+            QString str = txt.mid (pos, imageMatch.capturedLength());
             str.remove (0, 7);
             QImage image;
             if (!image.loadFromData (QByteArray::fromBase64 (str.toUtf8())))
@@ -3368,11 +3375,11 @@ void FN::scaleImage()
             imageSize = image.size();
         }
 
-        endIndex = endExp.indexIn (txt, indx);
+        endIndex = txt.indexOf (endExp, indx);
 
         int W = imageSize.width() * scale / 100;
         int H = imageSize.height() * scale / 100;
-        txt.replace (indx, sizeExp.matchedLength(), QString ("width=\"%1\" height=\"%2\" />").arg (W).arg (H));
+        txt.replace (indx, sizeMatch.capturedLength(), QString ("width=\"%1\" height=\"%2\" />").arg (W).arg (H));
         imageSize = QSize (-1, -1); // for the next image
     }
     cur.insertHtml (txt);
@@ -3405,23 +3412,24 @@ void FN::saveImage()
         path += "/" + tr ("untitled");
     }
 
-    QRegExp imageExp = QRegExp ("base64,.*\"(?=\\s*width=\"[0-9]+\"\\s*height=\"[0-9]+\"\\s*/*>)");
-    QRegExp sizeExp = QRegExp ("width=\"[0-9]+\"\\s*height=\"[0-9]+\"\\s*/*>");
-    QRegExp endExp = QRegExp ("\"\\s*/*>");
+    QRegularExpression imageExp (R"(base64,.*"(?=\s*width="[0-9]+"\s*height="[0-9]+"\s*/*>))");
+    QRegularExpression sizeExp (R"(width="[0-9]+"\s*height="[0-9]+"\s*/*>)");
+    QRegularExpression endExp (R"(\"\s*/*>)");
     int indx;
     int endIndex = 0;
     int n = 1;
     QString extension = "png";
-    while ((indx = sizeExp.indexIn (txt, endIndex)) != -1)
+    while ((indx = txt.indexOf (sizeExp, endIndex)) != -1)
     {
-        int pos = imageExp.indexIn (txt, endIndex);
-        QString str = txt.mid (pos, imageExp.matchedLength());
+        QRegularExpressionMatch imageMatch;
+        int pos = txt.indexOf (imageExp, endIndex, &imageMatch);
+        QString str = txt.mid (pos, imageMatch.capturedLength());
         str.remove (0, 7);
         QImage image;
         if (!image.loadFromData (QByteArray::fromBase64 (str.toUtf8())))
             continue;
 
-        endIndex = endExp.indexIn (txt, indx);
+        endIndex = txt.indexOf (endExp, indx);
 
         bool retry (true);
         bool err (false);
@@ -3564,7 +3572,6 @@ void FN::addTable()
     default:
         delete dialog;
         return;
-        break;
     }
 
     TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
@@ -3933,7 +3940,6 @@ void FN::PrefDialog()
         writeConfig();
         writeGeometryConfig();
         delete dialog;
-        return;
         break;
     }
 }
@@ -4775,7 +4781,6 @@ void FN::exportHTML()
         delete dialog;
         htmlPahEntry_ = nullptr;
         return;
-        break;
     }
 
     QTextDocument *doc = nullptr;
@@ -4991,7 +4996,6 @@ void FN::setPswd()
     case QDialog::Rejected:
     default:
         delete dialog;
-        return;
         break;
     }
 }
