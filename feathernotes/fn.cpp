@@ -37,11 +37,10 @@
 #include <QToolTip>
 #include <QDesktopWidget>
 #include <QStyledItemDelegate>
-#if defined Q_WS_X11 || defined Q_OS_LINUX
+#ifdef HAS_X11
 #include <QX11Info>
-#endif
-
 #include "x11.h"
+#endif
 
 namespace FeatherNotes {
 
@@ -2957,10 +2956,13 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
         QTimer::singleShot (0, this, SLOT (show()));*/
         show();
 
+#ifdef HAS_X11
         if (isX11_ && onWhichDesktop (winId()) != fromDesktop())
             moveToCurrentDesktop (winId());
+#endif
         showAndFocus();
     }
+    #ifdef HAS_X11
     else if (!isX11_ || onWhichDesktop (winId()) == fromDesktop())
     {
         if (isX11_ && underE_)
@@ -2999,10 +3001,13 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
             QTimer::singleShot (0, this, SLOT (showAndFocus()));
         }
     }
+#endif
     else
     {
+        #ifdef HAS_X11
         if (isX11_)
             moveToCurrentDesktop (winId());
+        #endif
         if (isMinimized())
             showNormal();
         showAndFocus();
