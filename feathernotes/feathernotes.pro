@@ -2,7 +2,6 @@ QT += core gui \
       xml \
       widgets \
       printsupport \
-      x11extras \
       svg
 
 TARGET = feathernotes
@@ -15,7 +14,6 @@ SOURCES += main.cpp\
            domitem.cpp \
            dommodel.cpp \
            lineedit.cpp \
-           x11.cpp \
            textedit.cpp \
            simplecrypt.cpp \
            vscrollbar.cpp \
@@ -26,7 +24,6 @@ HEADERS += fn.h \
            dommodel.h \
            textedit.h \
            lineedit.h \
-           x11.h \
            spinbox.h \
            simplecrypt.h \
            vscrollbar.h \
@@ -43,7 +40,16 @@ FORMS += fn.ui \
 
 RESOURCES += data/fn.qrc
 
-unix:!macx: LIBS += -lX11
+contains(WITHOUT_X11, YES) {
+  message("Compiling without X11...")
+}
+else:unix:!macx:!haiku {
+  QT += x11extras
+  SOURCES += x11.cpp
+  HEADERS += x11.h
+  LIBS += -lX11
+  DEFINES += HAS_X11
+}
 
 unix {
   #TRANSLATIONS
