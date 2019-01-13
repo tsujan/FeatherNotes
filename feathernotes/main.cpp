@@ -82,7 +82,7 @@ int main(int argc, char *argv[])
     app.installTranslator (&qtTranslator);
 
     QTranslator FPTranslator;
-    FPTranslator.load ("feathernotes_" + lang, DATADIR "/feathernotes/translations");
+    FPTranslator.load ("feathernotes_" + lang, QStringLiteral (DATADIR) + "/feathernotes/translations");
     app.installTranslator (&FPTranslator);
 
     QString message;
