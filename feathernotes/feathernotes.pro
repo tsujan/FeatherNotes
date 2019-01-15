@@ -4,7 +4,13 @@ QT += core gui \
       printsupport \
       svg
 
-TARGET = feathernotes
+haiku|macx {
+  TARGET = FeatherNotes
+}
+else {
+  TARGET = feathernotes
+}
+
 TEMPLATE = app
 CONFIG += c++11
 
@@ -51,7 +57,7 @@ else:unix:!macx:!haiku {
   DEFINES += HAS_X11
 }
 
-unix {
+unix:!macx {
   #TRANSLATIONS
   exists($$[QT_INSTALL_BINS]/lrelease) {
     TRANSLATIONS = $$system("find data/translations/ -name 'feathernotes_*.ts'")
@@ -91,4 +97,33 @@ unix {
   trans.files += data/translations/translations
 
   INSTALLS += target mime desktop appIcon fileIcon trans
+}
+else:macx {
+  #TRANSLATIONS
+  exists($$[QT_INSTALL_BINS]/lrelease) {
+    TRANSLATIONS = $$system("find data/translations/ -name 'feathernotes_*.ts'")
+    updateqm.input = TRANSLATIONS
+    updateqm.output = data/translations/translations/${QMAKE_FILE_BASE}.qm
+    updateqm.commands = $$[QT_INSTALL_BINS]/lrelease ${QMAKE_FILE_IN} -qm data/translations/translations/${QMAKE_FILE_BASE}.qm
+    updateqm.CONFIG += no_link target_predeps
+    QMAKE_EXTRA_COMPILERS += updateqm
+  }
+
+  #VARIABLES
+  isEmpty(PREFIX) {
+    PREFIX = /Applications/
+  }
+  BINDIR = $$PREFIX
+  DATADIR = "$$BINDIR/$$TARGET".app
+
+  DEFINES += DATADIR=\\\"$$DATADIR\\\" PKGDATADIR=\\\"$$PKGDATADIR\\\"
+
+  #MAKE INSTALL
+
+  target.path =$$BINDIR
+
+  trans.path = $$DATADIR/feathernotes
+  trans.files += data/translations/translations
+
+  INSTALLS += target trans
 }
