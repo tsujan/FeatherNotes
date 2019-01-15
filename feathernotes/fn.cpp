@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2019 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -35,17 +35,27 @@
 #include <QCheckBox>
 #include <QGroupBox>
 #include <QToolTip>
-#include <QDesktopWidget>
+#include <QScreen>
+#include <QWindow>
 #include <QStyledItemDelegate>
+
 #ifdef HAS_X11
+#if defined Q_WS_X11 || defined Q_OS_LINUX
 #include <QX11Info>
+#endif
 #include "x11.h"
 #endif
 
 namespace FeatherNotes {
 
+static QSize TOOLBAR_ICON_SIZE;
+
+// Regex of an embedded image (should be checked for the image):
+static const QRegularExpression EMBEDDED_IMG (R"(<\s*img(?=\s)[^<>]*(?<=\s)src\s*=\s*"data:[^<>]*;base64\s*,[a-zA-Z0-9+=/\s]+"[^<>]*/*>)");
+
 FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new Ui::FN)
 {
+#ifdef HAS_X11
     // For now, the lack of x11 is seen as wayland.
 #if defined Q_WS_X11 || defined Q_OS_LINUX || defined Q_OS_FREEBSD
 #if QT_VERSION < 0x050200
@@ -55,15 +65,23 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
 #endif
 #else
     isX11_ = false;
-#endif
+#endif // defined Q_WS_X11
+#else
+    isX11_ = false;
+#endif // HAS_X11
 
     ui->setupUi (this);
     imgScale_ = 100;
+
+    TOOLBAR_ICON_SIZE = ui->mainToolBar->iconSize();
 
     QStyledItemDelegate *delegate = new QStyledItemDelegate (this);
     ui->treeView->setItemDelegate (delegate);
     ui->treeView->setContextMenuPolicy (Qt::CustomContextMenu);
 
+    /* NOTE: The auto-saving timer starts only when a new note is created,
+       a file is opened, or it is enabled in Preferences. It saves the doc
+       only if it belongs to an existing file that needs saving. */
     timer_ = new QTimer (this);
     connect (timer_, &QTimer::timeout, this, &FN::autoSaving);
 
@@ -85,7 +103,7 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
     ui->everywhereButton->setVisible (false);
     ui->tagsButton->setVisible (false);
     ui->namesButton->setVisible (false);
-    searchOtherNode_ = false;
+    searchingOtherNode_ = false;
     rplOtherNode_ = false;
     replCount_ = 0;
 
@@ -103,6 +121,7 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
     wrapByDefault_ = true;
     indentByDefault_ = true;
     transparentTree_ = false;
+    smallToolbarIcons_ = false;
     noToolbar_ = false;
     noMenubar_ = false;
     autoBracket_ = false;
@@ -472,7 +491,9 @@ void FN::createTrayIcon()
         QString shownName = QFileInfo (xmlPath_).fileName();
         if (shownName.endsWith (".fnx"))
             shownName.chop (4);
-        tray_->setToolTip (shownName);
+        tray_->setToolTip ("<p style='white-space:pre'>"
+                           + shownName
+                           + "</p>");
     }
     QMenu *trayMenu = new QMenu (this);
     /* we don't want shortcuts to be shown here */
@@ -702,14 +723,22 @@ void FN::setTitle (const QString& fname)
         shownName.chop (4);
 
     QString path (fileInfo.dir().path());
-    QFontMetrics metrics (QToolTip::font());
-    int w = QApplication::desktop()->screenGeometry().width();
-    if (w > 200 * metrics.width (' ')) w = 200 * metrics.width (' ');
-    QString elidedPath = metrics.elidedText (path, Qt::ElideMiddle, w);
+    setWindowTitle (QString ("[*]%1 (%2)").arg (shownName).arg (path));
 
-    setWindowTitle (QString ("[*]%1 (%2)").arg (shownName).arg (elidedPath));
     if (tray_)
-        tray_->setToolTip (shownName);
+    {
+        QFontMetrics metrics (QToolTip::font());
+        int w = 0;
+        if (QWindow *win = windowHandle())
+        {
+            if (QScreen *sc = win->screen())
+                w = sc->availableGeometry().width();
+        }
+        if (w > 200 * metrics.width (' ')) w = 200 * metrics.width (' ');
+        tray_->setToolTip ("<p style='white-space:pre'>"
+                           + metrics.elidedText (shownName, Qt::ElideMiddle, w)
+                           + "</p>");
+    }
 }
 /*************************/
 bool FN::unSaved (bool modified)
@@ -1010,8 +1039,11 @@ void FN::openFile()
 /*************************/
 void FN::autoSaving()
 {
-    if (xmlPath_.isEmpty() || saveNeeded_ == 0)
+    if (xmlPath_.isEmpty() || saveNeeded_ == 0
+        || !QFile::exists (xmlPath_)) // the file is deleted (but might be restored later)
+    {
         return;
+    }
     fileSave (xmlPath_);
 }
 /*************************/
@@ -1402,6 +1434,7 @@ void FN::txtContextMenu (const QPoint &p)
         menu->addAction (ui->actionLink);
         if (isImageSelected())
         {
+            menu->addSeparator();
             menu->addAction (ui->actionImageScale);
             menu->addAction (ui->actionImageSave);
         }
@@ -1977,7 +2010,9 @@ void FN::handleTags()
     lineEdit->returnOnClear = false;
     lineEdit->setMinimumWidth (250);
     lineEdit->setText (tags);
-    lineEdit->setToolTip (tr ("Tag(s) for this node"));
+    lineEdit->setToolTip ("<p style='white-space:pre'>"
+                          + tr ("Tag(s) for this node")
+                          + "</p>");
     connect (lineEdit, &QLineEdit::returnPressed, dialog, &QDialog::accept);
     QSpacerItem *spacer = new QSpacerItem (1, 5);
     QPushButton *cancelButton = new QPushButton (symbolicIcon::icon (":icons/dialog-cancel.svg"), tr ("Cancel"));
@@ -2384,12 +2419,12 @@ void FN::findInNames()
     Qt::CaseSensitivity cs = Qt::CaseInsensitive;
     if (ui->caseButton->isChecked())
         cs = Qt::CaseSensitive;
+    QRegularExpression regex;
     if (ui->wholeButton->isChecked())
     {
-        QRegularExpression regex;
         if (cs == Qt::CaseInsensitive)
             regex.setPatternOptions (QRegularExpression::CaseInsensitiveOption);
-        regex.setPattern (QString ("\\b%1\\b").arg (txt));
+        regex.setPattern (QString ("\\b%1\\b").arg (QRegularExpression::escape (txt)));
         while ((indx = model_->adjacentIndex (indx, down)).isValid())
         {
             if (model_->data (indx, Qt::DisplayRole).toString().indexOf (regex) != -1)
@@ -2410,6 +2445,55 @@ void FN::findInNames()
             }
         }
     }
+
+    /* if nothing is found, search again from the first/last index to the current index */
+    if (!indx.isValid())
+    {
+        if (down)
+            indx = model_->index (0, 0);
+        else
+            indx = model_->index (model_->rowCount() - 1, 0);
+        if (indx == ui->treeView->currentIndex())
+            return;
+
+        if (ui->wholeButton->isChecked())
+        {
+            if (model_->data (indx, Qt::DisplayRole).toString().indexOf (regex) != -1)
+                found = true;
+            else
+            {
+                while ((indx = model_->adjacentIndex (indx, down)).isValid())
+                {
+                    if (indx == ui->treeView->currentIndex())
+                        return;
+                    if (model_->data (indx, Qt::DisplayRole).toString().indexOf (regex) != -1)
+                    {
+                        found = true;
+                        break;
+                    }
+                }
+            }
+        }
+        else
+        {
+            if (model_->data (indx, Qt::DisplayRole).toString().contains (txt, cs))
+                found = true;
+            else
+            {
+                while ((indx = model_->adjacentIndex (indx, down)).isValid())
+                {
+                    if (indx == ui->treeView->currentIndex())
+                        return;
+                    if (model_->data (indx, Qt::DisplayRole).toString().contains (txt, cs))
+                    {
+                        found = true;
+                        break;
+                    }
+                }
+            }
+        }
+    }
+
     if (found)
         ui->treeView->setCurrentIndex (indx);
 }
@@ -2457,13 +2541,12 @@ void FN::findInTags()
         }
     }
 
-    QModelIndex index = model_->index (0, 0, QModelIndex());
-    DomItem *item = static_cast<DomItem*>(index.internalPointer());
+    QModelIndex nxtIndx = model_->index (0, 0, QModelIndex());
+    DomItem *item = static_cast<DomItem*>(nxtIndx.internalPointer());
     QDomNode node = item->node();
     QDomNamedNodeMap attributeMap = node.attributes();
     QString tags = attributeMap.namedItem ("tag").nodeValue();
 
-    QModelIndex nxtIndx = index;
     while (nxtIndx.isValid())
     {
         item = static_cast<DomItem*>(nxtIndx.internalPointer());
@@ -2689,52 +2772,45 @@ void FN::replace()
             start.movePosition (QTextCursor::End, QTextCursor::MoveAnchor);
     }
 
-
     QTextCursor found;
     if (!backwardSearch)
         found = finding (txtFind, start, searchFlags_);
     else
         found = finding (txtFind, start, searchFlags_ | QTextDocument::FindBackward);
 
+    QList<QTextEdit::ExtraSelection> gsel = greenSels_[textEdit];
     QModelIndex nxtIndx;
     if (found.isNull())
     {
-        if (!ui->everywhereButton->isChecked())
+        if (ui->everywhereButton->isChecked())
         {
-            if (backwardSearch)
-            {
-                start.movePosition (QTextCursor::End, QTextCursor::MoveAnchor);
-                found = finding (txtFind, start, searchFlags_ | QTextDocument::FindBackward);
-            }
-            else
-            {
-                start.movePosition (QTextCursor::Start, QTextCursor::MoveAnchor);
-                found = finding (txtFind, start, searchFlags_);
-            }
-        }
-        else
-        {
-            QModelIndex indx = ui->treeView->currentIndex();
+            nxtIndx = ui->treeView->currentIndex();
+            Qt::CaseSensitivity cs = Qt::CaseInsensitive;
+            if (ui->caseButton->isChecked()) cs = Qt::CaseSensitive;
             QString text;
-            nxtIndx = indx;
-            while (!text.contains (txtFind))
+            while (!text.contains (txtFind, cs))
             {
                 nxtIndx = model_->adjacentIndex (nxtIndx, !backwardSearch);
                 if (!nxtIndx.isValid()) break;
                 DomItem *item = static_cast<DomItem*>(nxtIndx.internalPointer());
-                QDomNodeList list = item->node().childNodes();
-                text = list.item (0).nodeValue();
+                if (TextEdit *thisTextEdit = widgets_.value (item))
+                    text = thisTextEdit->toPlainText(); // the node text may have been edited
+                else
+                {
+                    QDomNodeList list = item->node().childNodes();
+                    text = list.item (0).nodeValue();
+                }
             }
         }
+        rplOtherNode_ = false;
     }
-
-    QColor green = QColor (Qt::green);
-    QColor black = QColor (Qt::black);
-    QList<QTextEdit::ExtraSelection> gsel = greenSels_[textEdit];
-    int pos;
-    QTextCursor tmp = start;
-    if (!found.isNull())
+    else
     {
+        QColor green = QColor (Qt::green);
+        QColor black = QColor (Qt::black);
+        int pos;
+        QTextCursor tmp = start;
+
         start.setPosition (found.anchor());
         pos = found.anchor();
         start.setPosition (found.position(), QTextCursor::KeepAnchor);
@@ -2764,6 +2840,7 @@ void FN::replace()
         extraSelections.prepend (extra);
         gsel.append (extra);
     }
+
     greenSels_[textEdit] = gsel;
     textEdit->setExtraSelections (extraSelections);
     hlight();
@@ -2781,16 +2858,24 @@ void FN::replaceAll()
     QString txtFind = ui->lineEditFind->text();
     if (txtFind.isEmpty()) return;
 
+    Qt::CaseSensitivity cs = Qt::CaseInsensitive;
+    if (ui->caseButton->isChecked()) cs = Qt::CaseSensitive;
+
     QModelIndex nxtIndx;
     /* start with the first node when replacing everywhere */
     if (!rplOtherNode_ && ui->everywhereButton->isChecked())
     {
-        QModelIndex indx = model_->index (0, 0);
-        DomItem *item = static_cast<DomItem*>(indx.internalPointer());
-        QDomNodeList list = item->node().childNodes();
-        QString text = list.item (0).nodeValue();
-        nxtIndx = indx;
-        while (!text.contains (txtFind))
+        nxtIndx = model_->index (0, 0);
+        DomItem *item = static_cast<DomItem*>(nxtIndx.internalPointer());
+        QString text;
+        if (TextEdit *thisTextEdit = widgets_.value (item))
+            text = thisTextEdit->toPlainText(); // the node text may have been edited
+        else
+        {
+            QDomNodeList list = item->node().childNodes();
+            text = list.item (0).nodeValue();
+        }
+        while (!text.contains (txtFind, cs))
         {
             nxtIndx = model_->adjacentIndex (nxtIndx, true);
             if (!nxtIndx.isValid())
@@ -2799,8 +2884,13 @@ void FN::replaceAll()
                 return;
             }
             item = static_cast<DomItem*>(nxtIndx.internalPointer());
-            list = item->node().childNodes();
-            text = list.item (0).nodeValue();
+            if (TextEdit *thisTextEdit = widgets_.value (item))
+                text = thisTextEdit->toPlainText();
+            else
+            {
+                QDomNodeList list = item->node().childNodes();
+                text = list.item (0).nodeValue();
+            }
         }
         rplOtherNode_ = true;
         ui->treeView->setCurrentIndex (nxtIndx);
@@ -2862,6 +2952,7 @@ void FN::replaceAll()
         gsel.append (extra);
         ++replCount_;
     }
+    rplOtherNode_ = false;
     greenSels_[textEdit] = gsel;
     start.endEditBlock();
     textEdit->setExtraSelections (extraSelections);
@@ -2870,18 +2961,22 @@ void FN::replaceAll()
     orig.setPosition (orig.anchor());
     textEdit->setTextCursor (orig);
 
-    if (ui->everywhereButton->isChecked())
+    if (ui->everywhereButton->isChecked() && model_->rowCount() > 1)
     {
-        QModelIndex indx = ui->treeView->currentIndex();
+        nxtIndx = ui->treeView->currentIndex();
         QString text;
-        nxtIndx = indx;
-        while (!text.contains (txtFind))
+        while (!text.contains (txtFind, cs))
         {
             nxtIndx = model_->adjacentIndex (nxtIndx, true);
             if (!nxtIndx.isValid()) break;
             DomItem *item = static_cast<DomItem*>(nxtIndx.internalPointer());
-            QDomNodeList list = item->node().childNodes();
-            text = list.item (0).nodeValue();
+            if (TextEdit *thisTextEdit = widgets_.value (item))
+                text = thisTextEdit->toPlainText();
+            else
+            {
+                QDomNodeList list = item->node().childNodes();
+                text = list.item (0).nodeValue();
+            }
         }
     }
 
@@ -2962,7 +3057,7 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
 #endif
         showAndFocus();
     }
-    #ifdef HAS_X11
+#ifdef HAS_X11
     else if (!isX11_ || onWhichDesktop (winId()) == fromDesktop())
     {
         if (isX11_ && underE_)
@@ -2971,9 +3066,20 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
             QTimer::singleShot (250, this, SLOT (show()));
             return;
         }
-        const QRect sr = QApplication::desktop()->screenGeometry();
+        QRect sr;
+        if (QWindow *win = windowHandle())
+        {
+            if (QScreen *sc = win->screen())
+                sr = sc->virtualGeometry();
+        }
+        if (sr.isNull())
+        {
+            if (QScreen *pScreen = QApplication::primaryScreen())
+                sr = pScreen->virtualGeometry();
+        }
         QRect g = geometry();
-        if (g.x() >= 0 && g.x() + g.width() <= sr.width())
+        if (g.x() >= sr.left() && g.x() + g.width() <= sr.left() + sr.width()
+            && g.y() >= sr.top() && g.y() + g.height() <= sr.top() + sr.height())
         {
             if (isActiveWindow())
             {
@@ -3001,17 +3107,19 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
             QTimer::singleShot (0, this, SLOT (showAndFocus()));
         }
     }
-#endif
     else
     {
-        #ifdef HAS_X11
         if (isX11_)
             moveToCurrentDesktop (winId());
-        #endif
         if (isMinimized())
             showNormal();
         showAndFocus();
     }
+#else
+    /* without X11, just iconify the window */
+    else
+        QTimer::singleShot (0, this, SLOT (hide()));
+#endif
 }
 /*************************/
 void FN::activateTray()
@@ -3277,7 +3385,7 @@ bool FN::isImageSelected()
 
     QTextDocumentFragment docFrag = cur.selection();
     QString txt = docFrag.toHtml();
-    if (txt.contains (QRegularExpression (R"(<img\ssrc="data:image;base64,.*"\s*width="[0-9]+"\s*height="[0-9]+"\s*/*>)")))
+    if (txt.contains (QRegularExpression (EMBEDDED_IMG)))
         return true;
 
     return false;
@@ -3315,33 +3423,52 @@ void FN::scaleImage()
     TextEdit *textEdit = qobject_cast< TextEdit *>(ui->stackedWidget->currentWidget());
     QTextCursor cur = textEdit->textCursor();
     QTextDocumentFragment docFrag = cur.selection();
+    if (docFrag.isEmpty()) return;
     QString txt = docFrag.toHtml();
-    QRegularExpression imageExp (R"(base64,.*"(?=\s*width="[0-9]+"\s*height="[0-9]+"\s*/*>))");
-    QRegularExpression sizeExp (R"(width="[0-9]+"\s*height="[0-9]+"\s*/*>)");
+
+    QRegularExpression imageExp (R"((?<=\s)src\s*=\s*"data:[^<>]*;base64\s*,[a-zA-Z0-9+=/\s]+)");
+    QRegularExpressionMatch match;
     QSize imageSize;
-    int indx;
-    int W = 0;
-    if ((indx = txt.indexOf (sizeExp)) != -1)
-    {
-        QRegularExpressionMatch imageMatch;
-        int pos = txt.indexOf (imageExp, 0, &imageMatch);
-        QString str = txt.mid (pos, imageMatch.capturedLength());
-        str.remove (0, 7);
-        QImage image;
-        if (image.loadFromData (QByteArray::fromBase64 (str.toUtf8())))
-        {
-            imageSize = image.size();
-            bool ok;
-            QRegularExpression heightExp (R"("\s*height="[0-9]+"\s*/*>)");
-            int indx1 = txt.indexOf (heightExp, indx);
-            QString w = txt.mid (indx + 7, indx1 -  indx - 7);
-            W = w.toInt(&ok);
-            if (!ok) W = 0;
-        }
-    }
+    int W = 0, H = 0;
+
+    int startIndex = txt.indexOf (EMBEDDED_IMG, 0, &match);
+    if (startIndex == -1) return;
+
+    QString str = txt.mid (startIndex, match.capturedLength());
+    int indx = str.lastIndexOf (imageExp, -1, &match);
+    QString imgStr = str.mid (indx, match.capturedLength());
+    imgStr.remove (QRegularExpression (R"(src\s*=\s*"data:[^<>]*;base64\s*,)"));
+    QImage image;
+    if (image.loadFromData (QByteArray::fromBase64 (imgStr.toUtf8())))
+        imageSize = image.size();
+    if (imageSize.isEmpty()) return;
+
     int scale = 100;
-    if (imageSize.isValid() && W > 0)
+
+    /* first, check the (last) width */
+    if ((indx = str.lastIndexOf (QRegularExpression (R"(width\s*=\s*"\s*(\+|-){0,1}[0-9]+\s*")"), -1, &match)) != -1)
+    {
+        bool ok;
+        str = str.mid (indx, match.capturedLength());
+        str.remove (QRegularExpression (R"(width\s*=\s*"\s*)"));
+        str.remove (QRegularExpression (R"(\s*")"));
+        W = str.toInt(&ok);
+        if (!ok) W = 0;
+        W = qMax (W, 0);
         scale = 100 * W / imageSize.width();
+    }
+    /* if there's no width, check the (last) height */
+    else if ((indx = str.lastIndexOf (QRegularExpression (R"(height\s*=\s*"\s*(\+|-){0,1}[0-9]+\s*")"), -1, &match)) != -1)
+    {
+        bool ok;
+        str = str.mid (indx, match.capturedLength());
+        str.remove (QRegularExpression (R"(height\s*=\s*"\s*)"));
+        str.remove (QRegularExpression (R"(\s*")"));
+        H = str.toInt(&ok);
+        if (!ok) H = 0;
+        H = qMax (H, 0);
+        scale = 100 * H / imageSize.height();
+    }
 
     spinBox->setValue (scale);
     /* show the dialog */
@@ -3363,29 +3490,40 @@ void FN::scaleImage()
         return;
     }
 
-    int endIndex = 0;
-    QRegularExpression endExp (R"("\s*/*>)");
-    QRegularExpressionMatch sizeMatch;
-    while ((indx = txt.indexOf (sizeExp, endIndex, &sizeMatch)) != -1)
+    while ((indx = txt.indexOf (EMBEDDED_IMG, startIndex, &match)) != -1)
     {
-        if (!imageSize.isValid()) // already calculated for the first image
+        str = txt.mid (indx, match.capturedLength());
+
+        if (imageSize.isEmpty()) // already calculated for the first image
         {
             QRegularExpressionMatch imageMatch;
-            int pos = txt.indexOf (imageExp, endIndex, &imageMatch);
-            QString str = txt.mid (pos, imageMatch.capturedLength());
-            str.remove (0, 7);
-            QImage image;
-            if (!image.loadFromData (QByteArray::fromBase64 (str.toUtf8())))
+            int pos = str.lastIndexOf (imageExp, -1, &imageMatch);
+
+            if (pos == -1)
+            {
+                startIndex = indx + match.capturedLength();
                 continue;
+            }
+            imgStr = str.mid (pos, imageMatch.capturedLength());
+            imgStr.remove (QRegularExpression (R"(src\s*=\s*"data:[^<>]*;base64\s*,)"));
+            QImage image;
+            if (!image.loadFromData (QByteArray::fromBase64 (imgStr.toUtf8())))
+            {
+                startIndex = indx + match.capturedLength();
+                continue;
+            }
             imageSize = image.size();
+            if (imageSize.isEmpty()) return;
         }
 
-        endIndex = txt.indexOf (endExp, indx);
+        W = imageSize.width() * scale / 100;
+        H = imageSize.height() * scale / 100;
+        txt.replace (indx, match.capturedLength(), "<img src=\"data:image;base64," + imgStr + QString ("\" width=\"%1\" height=\"%2\">").arg (W).arg (H));
+        imageSize = QSize(); // for the next image
 
-        int W = imageSize.width() * scale / 100;
-        int H = imageSize.height() * scale / 100;
-        txt.replace (indx, sizeMatch.capturedLength(), QString ("width=\"%1\" height=\"%2\" />").arg (W).arg (H));
-        imageSize = QSize (-1, -1); // for the next image
+        /* since the text is changed, startIndex should be found again */
+        indx = txt.indexOf (EMBEDDED_IMG, startIndex, &match);
+        startIndex = indx + match.capturedLength();
     }
     cur.insertHtml (txt);
 }
@@ -3395,6 +3533,7 @@ void FN::saveImage()
     TextEdit *textEdit = qobject_cast< TextEdit *>(ui->stackedWidget->currentWidget());
     QTextCursor cur = textEdit->textCursor();
     QTextDocumentFragment docFrag = cur.selection();
+    if (docFrag.isEmpty()) return;
     QString txt = docFrag.toHtml();
 
     QString path;
@@ -3417,24 +3556,25 @@ void FN::saveImage()
         path += "/" + tr ("untitled");
     }
 
-    QRegularExpression imageExp (R"(base64,.*"(?=\s*width="[0-9]+"\s*height="[0-9]+"\s*/*>))");
-    QRegularExpression sizeExp (R"(width="[0-9]+"\s*height="[0-9]+"\s*/*>)");
-    QRegularExpression endExp (R"(\"\s*/*>)");
+    QRegularExpression imageExp (R"((?<=\s)src\s*=\s*"data:[^<>]*;base64\s*,[a-zA-Z0-9+=/\s]+)");
     int indx;
-    int endIndex = 0;
+    int startIndex = 0;
     int n = 1;
     QString extension = "png";
-    while ((indx = txt.indexOf (sizeExp, endIndex)) != -1)
+    QRegularExpressionMatch match;
+    while ((indx = txt.indexOf (EMBEDDED_IMG, startIndex, &match)) != -1)
     {
-        QRegularExpressionMatch imageMatch;
-        int pos = txt.indexOf (imageExp, endIndex, &imageMatch);
-        QString str = txt.mid (pos, imageMatch.capturedLength());
-        str.remove (0, 7);
+        QString str = txt.mid (indx, match.capturedLength());
+        startIndex = indx + match.capturedLength();
+
+        indx = str.lastIndexOf (imageExp, -1, &match);
+
+        if (indx == -1) continue;
+        str = str.mid (indx, match.capturedLength());
+        str.remove (QRegularExpression (R"(src\s*=\s*"data:[^<>]*;base64\s*,)"));
         QImage image;
         if (!image.loadFromData (QByteArray::fromBase64 (str.toUtf8())))
             continue;
-
-        endIndex = txt.indexOf (endExp, indx);
 
         bool retry (true);
         bool err (false);
@@ -3475,7 +3615,7 @@ void FN::saveImage()
                 dialog.setAcceptMode (QFileDialog::AcceptSave);
                 dialog.setWindowTitle (tr ("Save Image As..."));
                 dialog.setFileMode (QFileDialog::AnyFile);
-                dialog.setNameFilter (tr ("Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)"));
+                dialog.setNameFilter (tr ("Image Files (*.png *.jpg *.jpeg *.bmp);;All Files (*)"));
                 dialog.setDirectory (path.section ("/", 0, -2)); // workaround for KDE
                 dialog.selectFile (QString ("%1-%2.%3").arg (path).arg (n).arg (extension));
                 dialog.autoScroll();
@@ -3500,15 +3640,15 @@ void FN::saveImage()
                     /* if the name ends with a number following a dash,
                        use it; otherwise, increase the number by one */
                     int m = 0;
-                    QRegExp exp = QRegExp ("-[1-9]+[0-9]*");
-                    int indx = shownName.lastIndexOf (exp);
-                    if (indx > -1 && indx == shownName.count() - exp.matchedLength())
+                    QRegularExpression exp ("-[1-9]+[0-9]*");
+                    indx = shownName.lastIndexOf (QRegularExpression ("-[1-9]+[0-9]*"), -1, &match);
+                    if (indx > -1 && indx == shownName.count() - match.capturedLength())
                     {
                         QString number = shownName.split ("-").last();
                         shownName.chop (number.count() + 1);
                         m = number.toInt() + 1;
                     }
-                    n = m > n ? m : n+1;
+                    n = m > n ? m : n + 1;
                     path = info.dir().path() + "/" + shownName;
                     retry = false; // next image after saving this one
                 }
@@ -3714,10 +3854,22 @@ void FN::PrefDialog()
 
     /* saved window size */
     QCheckBox *winSizeBox = new QCheckBox (tr ("Remember window &size"));
-    winSizeBox->setToolTip (tr ("Saves window size after closing\nthis dialog and also on exit.\n\nUncheck to set a fixed size!"));
+    winSizeBox->setToolTip ("<p style='white-space:pre'>"
+                            + tr ("Saves window size after closing\nthis dialog and also on exit.\n\nUncheck to set a fixed size!")
+                            + "</p>");
 
     /* fixed start size */
-    QSize ag = QApplication::desktop()->availableGeometry().size() - QSize (50, 100);
+    QSize ag;
+    if (QWindow *win = windowHandle())
+    {
+        if (QScreen *sc = win->screen())
+            ag = sc->availableVirtualGeometry().size();
+    }
+    if (!ag.isValid())
+    {
+        if (QScreen *pScreen = QApplication::primaryScreen())
+            ag = pScreen->availableVirtualGeometry().size();
+    }
     QLabel *winLabel = new QLabel (tr ("Start with this size: "));
     QLabel *winXLabel = new QLabel(" × ");
     QSpinBox *winSpinX = new QSpinBox();
@@ -3733,46 +3885,68 @@ void FN::PrefDialog()
 
     /* saved splite size */
     QCheckBox *splitterSizeBox = new QCheckBox (tr ("Remember &tree width"));
-    splitterSizeBox->setToolTip (tr ("Saves tree width after closing\nthis dialog and also on exit.\n\nUncheck for a width ratio of 170/530."));
+    splitterSizeBox->setToolTip ("<p style='white-space:pre'>"
+                                 + tr ("Saves tree width after closing\nthis dialog and also on exit.\n\nUncheck for a width ratio of 170/530.")
+                                 + "</p>");
 
     /* saved position */
     QCheckBox *positionBox = new QCheckBox (tr ("Save &position"));
-    positionBox->setToolTip (tr ("Saves position after closing\nthis dialog and also on exit."
-                                 "\n"
-                                 "\n(This may not work correctly\nunder GTK+ DE's like Unity\nand Cinnamon.)"));
+    positionBox->setToolTip ("<p style='white-space:pre'>"
+                             + tr ("Saves position after closing\nthis dialog and also on exit."
+                                   "\n"
+                                   "\n(This may not work correctly\nunder GTK+ DE's like Unity\nand Cinnamon.)")
+                             + "</p>");
 
     /* tray icon */
     QCheckBox *hasTrayBox = new QCheckBox (tr ("Add to s&ystray"));
-    hasTrayBox->setToolTip (tr ("Decides whether a systray icon should be used.\nIf checked, the titlebar close button iconifies\nthe window to the systray instead of quitting.\n\nNeeds restarting of FeatherNotes to take effect."));
+    hasTrayBox->setToolTip ("<p style='white-space:pre'>"
+                            + tr ("Decides whether a systray icon should be used.\nIf checked, the titlebar close button iconifies\nthe window to the systray instead of quitting.\n\nNeeds restarting of FeatherNotes to take effect.")
+                            + "</p>");
     QCheckBox *minTrayBox = new QCheckBox (tr ("Start i&conified to tray"));
-    minTrayBox->setToolTip (tr ("The command line option --tray\ncan be used instead of this."));
+    minTrayBox->setToolTip ("<p style='white-space:pre'>"
+                            + tr ("The command line option --tray\ncan be used instead of this.")
+                            + "</p>");
     minTrayBox->setChecked (minToTray_);
     if (!hasTray_)
         minTrayBox->setDisabled (true);
 
     /* tree transparency */
     QCheckBox *transparentTree = new QCheckBox (tr ("Transparent t&ree view"));
-    transparentTree->setToolTip (tr ("Merge the tree view with its surroundings?"));
+    transparentTree->setToolTip ("<p style='white-space:pre'>"
+                                 + tr ("Merge the tree view with its surroundings?")
+                                 + "</p>");
+
+    /* toolbar icon size */
+    QCheckBox *smallToolbarIcons = new QCheckBox (tr ("Small toolbar icons"));
+    smallToolbarIcons->setToolTip ("<p style='white-space:pre'>"
+                                   + tr ("By default, the active widget style determines\nthe size of toolbar icons.")
+                                   + "</p>");
 
     /* toolbar and menubar */
     QCheckBox *noToolbar = new QCheckBox (tr ("Do not show t&oolbar"));
     noToolbar->setObjectName ("TOOLBAR");
     QCheckBox *noMenubar = new QCheckBox (tr ("Do not show &menubar"));
-    noMenubar->setToolTip (tr ("If the menubar is hidden,\na menu button appears on the toolbar."));
+    noMenubar->setToolTip ("<p style='white-space:pre'>"
+                           + tr ("If the menubar is hidden,\na menu button appears on the toolbar.")
+                           + "</p>");
     noMenubar->setObjectName ("MENUBAR");
 
     /* Enlightenment workaround */
     QCheckBox *EBox = new QCheckBox (tr ("Running &under Enlightenment?"));
-    EBox->setToolTip (tr ("Check this under Enlightenment (or, probably, another DE)\nto use the systray icon more easily!"));
+    EBox->setToolTip ("<p style='white-space:pre'>"
+                      + tr ("Check this under Enlightenment (or, probably, another DE)\nto use the systray icon more easily!")
+                      + "</p>");
     QLabel *ELabel = new QLabel (tr ("Shifts (X × Y): "));
-    QString EToolTip (tr ("Some DE's (like Enlightenment) may not report the window position"
-                          "\ncorrectly. If that is the case, you could try to fix the problem here."
-                          "\n"
-                          "\nIf the panel is on the bottom or top, the Y-coordinate should be set;"
-                          "\nif it is on the left or right, the X-coordinate should be set."
-                          "\n"
-                          "\nAfter choosing the coordinate shifts, put the window in a proper"
-                          "\nposition and then restart FeatherNotes!"));
+    QString EToolTip ("<p style='white-space:pre'>"
+                      + tr ("Some DE's (like Enlightenment) may not report the window position"
+                            "\ncorrectly. If that is the case, you could try to fix the problem here."
+                            "\n"
+                            "\nIf the panel is on the bottom or top, the Y-coordinate should be set;"
+                            "\nif it is on the left or right, the X-coordinate should be set."
+                            "\n"
+                            "\nAfter choosing the coordinate shifts, put the window in a proper"
+                            "\nposition and then restart FeatherNotes!")
+                      + "</p>");
     ELabel->setToolTip (EToolTip);
     QLabel *XLabel = new QLabel(" × ");
     XLabel->setToolTip (EToolTip);
@@ -3801,16 +3975,18 @@ void FN::PrefDialog()
     windowGrid->addWidget (hasTrayBox, 4, 0, 1, 5);
     windowGrid->addWidget (minTrayBox, 5, 1, 1, 4);
 
-    windowGrid->addWidget (transparentTree,6, 0, 1, 5);
+    windowGrid->addWidget (transparentTree, 6, 0, 1, 5);
 
-    windowGrid->addWidget (noToolbar, 7, 0, 1, 5);
-    windowGrid->addWidget (noMenubar, 8, 0, 1, 5);
+    windowGrid->addWidget (smallToolbarIcons, 7, 0, 1, 5);
 
-    windowGrid->addWidget (EBox, 9, 0, 1, 5);
-    windowGrid->addWidget (ELabel, 10, 0, 1, 2, Qt::AlignRight);
-    windowGrid->addWidget (ESpinX, 10, 2, 1, 1);
-    windowGrid->addWidget (XLabel, 10, 3, 1, 1);
-    windowGrid->addWidget (ESpinY, 10, 4, 1, 1, Qt::AlignLeft);
+    windowGrid->addWidget (noToolbar, 8, 0, 1, 5);
+    windowGrid->addWidget (noMenubar, 9, 0, 1, 5);
+
+    windowGrid->addWidget (EBox, 10, 0, 1, 5);
+    windowGrid->addWidget (ELabel, 11, 0, 1, 2, Qt::AlignRight);
+    windowGrid->addWidget (ESpinX, 11, 2, 1, 1);
+    windowGrid->addWidget (XLabel, 11, 3, 1, 1);
+    windowGrid->addWidget (ESpinY, 11, 4, 1, 1, Qt::AlignLeft);
 
     windowGrid->setColumnStretch (4, 1);
     windowGrid->setColumnMinimumWidth(0, style()->pixelMetric (QStyle::PM_IndicatorWidth) + style()->pixelMetric (QStyle::PM_CheckBoxLabelSpacing));
@@ -3851,6 +4027,9 @@ void FN::PrefDialog()
     transparentTree->setChecked (transparentTree_);
     connect (transparentTree, &QCheckBox::stateChanged, this, &FN::prefTree);
 
+    smallToolbarIcons->setChecked (smallToolbarIcons_);
+    connect (smallToolbarIcons, &QCheckBox::stateChanged, this, &FN::prefToolbarIcons);
+
     noToolbar->setChecked (noToolbar_);
     noMenubar->setChecked (noMenubar_);
     connect (noToolbar, &QCheckBox::stateChanged, this, &FN::prefToolbar);
@@ -3884,7 +4063,9 @@ void FN::PrefDialog()
     QCheckBox *wrapBox = new QCheckBox (tr ("&Wrap lines by default"));
     QCheckBox *indentBox = new QCheckBox (tr ("Auto-&indent by default"));
     QCheckBox *autoBracketBox = new QCheckBox (tr ("Auto-&bracket\n(Requires application restart)"));
-    autoBracketBox->setToolTip (tr ("This covers parentheses, braces, brackets and quotes.\n\nNeeds restarting of FeatherNotes to take effect."));
+    autoBracketBox->setToolTip ("<p style='white-space:pre'>"
+                                + tr ("This covers parentheses, braces, brackets and quotes.\n\nNeeds restarting of FeatherNotes to take effect.")
+                                + "</p>");
     QCheckBox *autoSaveBox = new QCheckBox (tr ("&Auto-save every"));
     QSpinBox *spinBox = new QSpinBox();
     spinBox->setObjectName ("autoSaveSpin");
@@ -3895,7 +4076,9 @@ void FN::PrefDialog()
     else
         spinBox->setValue (5);
     QCheckBox *workaroundBox = new QCheckBox (tr ("Workaround for &Qt5's scroll jump bug"));
-    workaroundBox->setToolTip (tr ("This is not a complete fix but\nprevents annoying scroll jumps."));
+    workaroundBox->setToolTip ("<p style='white-space:pre'>"
+                               + tr ("This is not a complete fix but\nprevents annoying scroll jumps.")
+                               + "</p>");
     textGrid->addWidget (wrapBox, 0, 0, 1, 2);
     textGrid->addWidget (indentBox, 1, 0, 1, 2);
     textGrid->addWidget (autoBracketBox, 2, 0, 1, 2);
@@ -4121,6 +4304,20 @@ void FN::prefTree (int checked)
             ui->treeView->setPalette (p);
             ui->treeView->viewport()->setAutoFillBackground (true);
         }
+    }
+}
+/*************************/
+void FN::prefToolbarIcons (int checked)
+{
+    if (checked == Qt::Checked)
+    {
+        ui->mainToolBar->setIconSize (QSize (16, 16));
+        smallToolbarIcons_ = true;
+    }
+    else if (checked == Qt::Unchecked)
+    {
+        ui->mainToolBar->setIconSize (TOOLBAR_ICON_SIZE);
+        smallToolbarIcons_ = false;
     }
 }
 /*************************/
@@ -4395,6 +4592,12 @@ void FN::readAndApplyConfig()
         }
     }
 
+    if (settings.value ("smallToolbarIcons").toBool())
+    {
+        smallToolbarIcons_ = true;
+        ui->mainToolBar->setIconSize (QSize (16, 16));
+    }
+
     if (settings.value ("noToolbar").toBool())
         noToolbar_ = true; // false by default
     if (settings.value ("noMenubar").toBool())
@@ -4590,6 +4793,7 @@ void FN::writeConfig()
     settings.setValue ("underE", underE_);
     settings.setValue ("Shift", EShift_);
     settings.setValue ("transparentTree", transparentTree_);
+    settings.setValue ("smallToolbarIcons", smallToolbarIcons_);
     settings.setValue ("noToolbar", noToolbar_);
     settings.setValue ("noMenubar", noMenubar_);
 
@@ -4659,8 +4863,6 @@ void FN::txtPrint()
     }
     else
     {
-        /* node texts aren't set for an unsaved doc */
-        if (saveNeeded_) setNodesTexts();
         QString text;
         if (QObject::sender() == ui->actionPrintNodes)
         {
@@ -4668,10 +4870,15 @@ void FN::txtPrint()
             QModelIndex sibling = model_->sibling (indx.row() + 1, 0, indx);
             while (indx != sibling)
             {
-                DomItem *item = static_cast<DomItem*>(indx.internalPointer());
-                QDomNodeList lst = item->node().childNodes();
                 text.append (nodeAddress (indx));
-                text.append (lst.item (0).nodeValue());
+                DomItem *item = static_cast<DomItem*>(indx.internalPointer());
+                if (TextEdit *thisTextEdit = widgets_.value (item))
+                    text.append (thisTextEdit->toHtml()); // the node text may have been edited
+                else
+                {
+                    QDomNodeList lst = item->node().childNodes();
+                    text.append (lst.item (0).nodeValue());
+                }
                 indx = model_->adjacentIndex (indx, true);
             }
         }
@@ -4680,10 +4887,15 @@ void FN::txtPrint()
             indx = model_->index (0, 0, QModelIndex());
             while (indx.isValid())
             {
-                DomItem *item = static_cast<DomItem*>(indx.internalPointer());
-                QDomNodeList lst = item->node().childNodes();
                 text.append (nodeAddress (indx));
-                text.append (lst.item (0).nodeValue());
+                DomItem *item = static_cast<DomItem*>(indx.internalPointer());
+                if (TextEdit *thisTextEdit = widgets_.value (item))
+                    text.append (thisTextEdit->toHtml());
+                else
+                {
+                    QDomNodeList lst = item->node().childNodes();
+                    text.append (lst.item (0).nodeValue());
+                }
                 indx = model_->adjacentIndex (indx, true);
             }
         }
@@ -4791,14 +5003,9 @@ void FN::exportHTML()
     QTextDocument *doc = nullptr;
     bool newDocCreated = false;
     if (sel == 0)
-    {
-        doc = qobject_cast< TextEdit *>(cw)
-              ->document();
-    }
+        doc = qobject_cast< TextEdit *>(cw)->document();
     else
     {
-        /* first set node texts */
-        if (saveNeeded_) setNodesTexts();
         QString text;
         if (sel == 1)
         {
@@ -4806,10 +5013,15 @@ void FN::exportHTML()
             QModelIndex sibling = model_->sibling (indx.row() + 1, 0, indx);
             while (indx != sibling)
             {
-                DomItem *item = static_cast<DomItem*>(indx.internalPointer());
-                QDomNodeList lst = item->node().childNodes();
                 text.append (nodeAddress (indx));
-                text.append (lst.item (0).nodeValue());
+                DomItem *item = static_cast<DomItem*>(indx.internalPointer());
+                if (TextEdit *thisTextEdit = widgets_.value (item))
+                    text.append (thisTextEdit->toHtml()); // the node text may have been edited
+                else
+                {
+                    QDomNodeList lst = item->node().childNodes();
+                    text.append (lst.item (0).nodeValue());
+                }
                 indx = model_->adjacentIndex (indx, true);
             }
         }
@@ -4818,10 +5030,15 @@ void FN::exportHTML()
             indx = model_->index (0, 0, QModelIndex());
             while (indx.isValid())
             {
-                DomItem *item = static_cast<DomItem*>(indx.internalPointer());
-                QDomNodeList lst = item->node().childNodes();
                 text.append (nodeAddress (indx));
-                text.append (lst.item (0).nodeValue());
+                DomItem *item = static_cast<DomItem*>(indx.internalPointer());
+                if (TextEdit *thisTextEdit = widgets_.value (item))
+                    text.append (thisTextEdit->toHtml());
+                else
+                {
+                    QDomNodeList lst = item->node().childNodes();
+                    text.append (lst.item (0).nodeValue());
+                }
                 indx = model_->adjacentIndex (indx, true);
             }
         }

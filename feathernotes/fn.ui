@@ -38,8 +38,7 @@
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
-      <widget class="FeatherNotes::TreeView" name="treeView">
-      </widget>
+      <widget class="FeatherNotes::TreeView" name="treeView"/>
       <widget class="QStackedWidget" name="stackedWidget"/>
      </widget>
     </item>
@@ -59,6 +58,9 @@
       </property>
       <item row="1" column="1">
        <widget class="QPushButton" name="nextButton">
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
         <property name="toolTip">
          <string>Next (F3)</string>
         </property>
@@ -72,6 +74,9 @@
       </item>
       <item row="0" column="1">
        <widget class="QPushButton" name="prevButton">
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
         <property name="toolTip">
          <string>Previous (F4)</string>
         </property>
@@ -103,6 +108,9 @@
         </property>
         <item alignment="Qt::AlignHCenter">
          <widget class="QRadioButton" name="namesButton">
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
           <property name="toolTip">
            <string>Search only in names (Ctrl+Shift+F7)</string>
           </property>
@@ -113,6 +121,9 @@
         </item>
         <item alignment="Qt::AlignHCenter">
          <widget class="QRadioButton" name="tagsButton">
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
           <property name="toolTip">
            <string>Search only in tags (Shift+F7)</string>
           </property>
@@ -126,6 +137,9 @@
         </item>
         <item alignment="Qt::AlignHCenter">
          <widget class="QRadioButton" name="everywhereButton">
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
           <property name="toolTip">
            <string>Search in all nodes (F7)</string>
           </property>
@@ -146,6 +160,9 @@
         </property>
         <item alignment="Qt::AlignHCenter">
          <widget class="QToolButton" name="caseButton">
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
           <property name="toolTip">
            <string>Match Case (F5)</string>
           </property>
@@ -162,6 +179,9 @@
         </item>
         <item alignment="Qt::AlignHCenter">
          <widget class="QToolButton" name="wholeButton">
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
           <property name="toolTip">
            <string>Whole Word (F6)</string>
           </property>
@@ -324,12 +344,6 @@
    <property name="movable">
     <bool>false</bool>
    </property>
-   <property name="iconSize">
-    <size>
-     <width>16</width>
-     <height>16</height>
-    </size>
-   </property>
    <attribute name="toolBarArea">
     <enum>TopToolBarArea</enum>
    </attribute>
@@ -446,6 +460,9 @@
        </item>
        <item row="0" column="2" alignment="Qt::AlignVCenter">
         <widget class="QPushButton" name="rplPrevButton">
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
          <property name="toolTip">
           <string>Previous (F9)</string>
          </property>
@@ -459,6 +476,9 @@
        </item>
        <item row="1" column="2" alignment="Qt::AlignVCenter">
         <widget class="QPushButton" name="rplNextButton">
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
          <property name="toolTip">
           <string>Next (F8)</string>
          </property>
@@ -472,6 +492,9 @@
        </item>
        <item row="1" column="3" alignment="Qt::AlignVCenter">
         <widget class="QPushButton" name="allButton">
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
          <property name="toolTip">
           <string>Replace all (F10)</string>
          </property>
@@ -1312,6 +1335,11 @@
    <class>FeatherNotes::LineEdit</class>
    <extends>QLineEdit</extends>
    <header>lineedit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>FeatherNotes::TreeView</class>
+   <extends>QTreeView</extends>
+   <header>treeview.h</header>
   </customwidget>
  </customwidgets>
  <connections>

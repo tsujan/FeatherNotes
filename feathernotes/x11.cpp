@@ -43,7 +43,7 @@ long fromDesktop()
     int actual_format;
     long unsigned nitems;
     long unsigned bytes;
-    long *data = NULL;
+    long *data = nullptr;
     int status;
 
     /* QX11Info::appRootWindow() or even RootWindow (disp, 0)
@@ -80,7 +80,7 @@ long onWhichDesktop (Window w)
     unsigned long nitems_ret;
     unsigned long bytes_after_ret;
 
-    long *desktop = NULL;
+    long *desktop = nullptr;
 
     int status = XGetWindowProperty (disp, w,
                                      wm_desktop,
@@ -110,7 +110,7 @@ void moveToCurrentDesktop (Window w)
     int fmt_ret;
     unsigned long nitems_ret;
     unsigned long bytes_after_ret;
-    long *desktop = NULL;
+    long *desktop = nullptr;
     long *current_desktop;
 
     int status = XGetWindowProperty (disp, XDefaultRootWindow (disp),

@@ -348,15 +348,15 @@ void FN::find()
     if (QObject::sender() == ui->prevButton)
     {
         backwardSearch = true;
-        if (searchOtherNode_)
+        if (searchingOtherNode_)
             start.movePosition (QTextCursor::End, QTextCursor::MoveAnchor);
     }
     else // Next button or Enter is pressed
     {
-        if (searchOtherNode_)
+        if (searchingOtherNode_)
             start.movePosition (QTextCursor::Start, QTextCursor::MoveAnchor);
     }
-    searchOtherNode_ = false;
+    searchingOtherNode_ = false;
 
     reallySetSearchFlags (false);
     QTextDocument::FindFlags newFlags = searchFlags_;
@@ -368,7 +368,7 @@ void FN::find()
     QModelIndex nxtIndx;
     if (found.isNull())
     {
-        if (!ui->everywhereButton->isChecked())
+        if (!ui->everywhereButton->isChecked() || model_->rowCount() == 1)
         {
             if (backwardSearch)
                 start.movePosition (QTextCursor::End, QTextCursor::MoveAnchor);
@@ -379,19 +379,35 @@ void FN::find()
         else
         {
             /* go to the next node... */
-            QModelIndex indx = ui->treeView->currentIndex();
+            nxtIndx = ui->treeView->currentIndex();
             QString text;
-            nxtIndx = indx;
             /* ... but skip nodes that don't contain the search string */
             Qt::CaseSensitivity cs = Qt::CaseInsensitive;
             if (ui->caseButton->isChecked()) cs = Qt::CaseSensitive;
             while (!text.contains (txt, cs))
             {
                 nxtIndx = model_->adjacentIndex (nxtIndx, !backwardSearch);
-                if (!nxtIndx.isValid()) break;
+                if (!nxtIndx.isValid())
+                { // search again from the first/last index
+                    if (!backwardSearch)
+                        nxtIndx = model_->index (0, 0);
+                    else
+                        nxtIndx = model_->index (model_->rowCount() - 1, 0);
+                }
                 DomItem *item = static_cast<DomItem*>(nxtIndx.internalPointer());
-                QDomNodeList list = item->node().childNodes();
-                text = list.item (0).nodeValue();
+                if (TextEdit *thisTextEdit = widgets_.value (item))
+                    text = thisTextEdit->toPlainText(); // the node text may have been edited
+                else
+                {
+                    QDomNodeList list = item->node().childNodes();
+                    text = list.item (0).nodeValue();
+                }
+                if (nxtIndx == ui->treeView->currentIndex())
+                { // the current index is reached again; stop the search
+                    if (!text.contains (txt, cs))
+                        nxtIndx = QModelIndex();
+                    break;
+                }
             }
         }
     }
@@ -404,7 +420,7 @@ void FN::find()
     }
     /* matches highlights should come here,
        after the text area is scrolled */
-    QTimer::singleShot (0, this, SLOT (hlight()));
+    hlight();
     connect (textEdit->verticalScrollBar(), &QAbstractSlider::valueChanged, this, &FN::scrolled);
     connect (textEdit->horizontalScrollBar(), &QAbstractSlider::valueChanged, this, &FN::scrolled);
     connect (textEdit, &TextEdit::resized, this, &FN::hlight);
@@ -412,8 +428,8 @@ void FN::find()
 
     if (nxtIndx.isValid())
     {
-        searchOtherNode_ = true;
-        ui->treeView->setCurrentIndex (nxtIndx); // selChanged() is immediately called
+        searchingOtherNode_ = true;
+        ui->treeView->setCurrentIndex (nxtIndx); // selChanged() is called immediately
         textEdit = qobject_cast< TextEdit *>(ui->stackedWidget->currentWidget());
         ui->lineEdit->setText (txt);
         searchEntries_[textEdit] = txt;

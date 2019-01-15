@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2019 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -123,6 +123,7 @@ private slots:
     void prefHasTray (int checked);
     void prefMinTray (int checked);
     void prefTree (int checked);
+    void prefToolbarIcons (int checked);
     void prefToolbar (int checked);
     void prefMenubar (int checked);
     void prefEnlightenment (int checked);
@@ -213,7 +214,7 @@ private:
     QHash<DomItem*,TextEdit*> widgets_;
     QTextDocument::FindFlags searchFlags_; // Whole word and case sensitivity flags.
     QHash<TextEdit*,QString> searchEntries_; // Search entries, one for each QTextEdit.
-    bool searchOtherNode_; // Needed when jumping to another node during search.
+    bool searchingOtherNode_; // Needed when jumping to another node during search.
     bool rplOtherNode_; // Like above but for replacement.
     int replCount_; // Needed for counting replacements in all nodes.
     QHash<TextEdit*,QList<QTextEdit::ExtraSelection> > greenSels_; // For replaced matches.
@@ -230,6 +231,7 @@ private:
          wrapByDefault_,
          indentByDefault_,
          transparentTree_,
+         smallToolbarIcons_,
          noToolbar_,
          noMenubar_,
          autoBracket_;

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2019 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -22,6 +22,8 @@
 #include <QTimer>
 #include <QTextBlock>
 #include <QRegularExpression>
+#include <QBuffer>
+#include <QMimeDatabase>
 
 namespace FeatherNotes {
 
@@ -452,7 +454,8 @@ bool TextEdit::event (QEvent *e)
         QHelpEvent *helpEvent = static_cast<QHelpEvent *>(e);
         QString str = anchorAt (helpEvent->pos());
         if (!str.isEmpty())
-            QToolTip::showText (helpEvent->globalPos(), str);
+            QToolTip::showText (helpEvent->globalPos(),
+                                "<p style='white-space:pre'>" + str + "</p>");
         else
         {
             QToolTip::hideText();
@@ -477,15 +480,28 @@ void TextEdit::insertFromMimeData (const QMimeData *source)
     if (source->hasImage())
     {
         QImage image = qvariant_cast<QImage>(source->imageData());
-        document()->addResource (QTextDocument::ImageResource, QUrl ("image"), image);
-        textCursor().insertImage ("image");
+        if (!image.isNull())
+        {
+            QByteArray rawarray;
+            QBuffer buffer (&rawarray);
+            buffer.open (QIODevice::WriteOnly);
+            image.save (&buffer, "PNG");
+            buffer.close();
+
+            insertHtml (QString ("<img src=\"data:image;base64,%1\" />")
+                        .arg (QString (rawarray.toBase64())));
+        }
     }
     else if (source->hasUrls())
     {
-        foreach (QUrl url, source->urls())
+        const auto urls = source->urls();
+        for (const QUrl &url : source->urls())
         {
-            QFileInfo info (url.toLocalFile());
-            if (QImageReader::supportedImageFormats().contains(info.suffix().toLower().toLatin1()))
+            QMimeDatabase mimeDatabase;
+            QMimeType mimeType = mimeDatabase.mimeTypeForFile (QFileInfo (url.toLocalFile()));
+            QByteArray ba;
+            ba.append (mimeType.name());
+            if (QImageReader::supportedMimeTypes().contains (ba))
                 emit imageDropped (url.path());
             else
                 textCursor().insertText (url.toString());

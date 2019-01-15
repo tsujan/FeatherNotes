@@ -45,6 +45,19 @@ Afterward, you could use this command for cleaning the source directory:
 
 	make distclean
 
+*******************************
+*   Compilation without X11   *
+*******************************
+
+If you do not want the X11 support, you could compile FeatherNotes with:
+
+	qmake WITHOUT_X11=YES
+	make
+
+The result will have all features except for virtual desktop awareness.
+
+Please also note that FeatherNotes works under Wayland and you do not need to disable its X11 support for that.
+
 **********************************
 *   Translation (Localization)   *
 **********************************

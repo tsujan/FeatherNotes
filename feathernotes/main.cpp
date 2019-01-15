@@ -42,10 +42,10 @@ int main(int argc, char *argv[])
         out << "FeatherNotes - Lightweight Qt5 hierarchical notes-manager\n"\
                "\nUsage:\n	feathernotes [options] [file] "\
                "Open the specified file\nOptions:\n"\
-               "--version or -v  Show version information and exit.\n"\
-               "--help          Show this help and exit\n"\
-               "-m, --min	Start minimized\n"\
-               "-t, --tray	Start iconified to tray if there is a tray icon\n\n";
+               "--version or -v   Show version information and exit.\n"\
+               "--help            Show this help and exit\n"\
+               "-m, --min         Start minimized\n"\
+               "-t, --tray        Start iconified to tray if there is a tray icon\n\n";
         return 0;
     }
     else if (option == "--version" || option == "-v")
