@@ -15,10 +15,11 @@ FeatherNotes (by Pedram Pourang, a.k.a. Tsu Jan <tsujan2000@gmail.com>) is a lig
   * Text zooming;
   * Printing and exporting to HTML and PDF;
   * Password protection;
-  * Auto-saving; and
+  * Auto-saving;
+  * macOS support (by [Pavel Shlyak](https://github.com/shlyakpavel)); and
   * Other features that can be found in its settings, on its menus or when it is actually used.
 
-Please see INSTALL for instructions on compilation, installation and translation!
+Please see INSTALL for instructions on compilation, installation and translation! (For translations, also see below.)
 
 FeatherNotes' homepage is <https://github.com/tsujan/FeatherNotes>.
 

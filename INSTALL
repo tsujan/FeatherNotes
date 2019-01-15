@@ -56,7 +56,9 @@ If you do not want the X11 support, you could compile FeatherNotes with:
 
 The result will have all features except for virtual desktop awareness.
 
-Please also note that FeatherNotes works under Wayland and you do not need to disable its X11 support for that.
+Please also note that, on Linux, FeatherNotes works under Wayland and you do not need to disable its X11 support for that.
+
+Compilation on macOS does not require "WITHOUT_X11=YES" either.
 
 **********************************
 *   Translation (Localization)   *
