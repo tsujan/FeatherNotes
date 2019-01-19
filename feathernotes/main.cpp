@@ -17,6 +17,9 @@
 
 #include <csignal> // signal.h in C
 #include <QApplication>
+#include <QLibraryInfo>
+#include <QTranslator>
+#include <QTextStream>
 #include "fn.h"
 
 void handleQuitSignals (const std::vector<int>& quitSignals)

@@ -21,10 +21,14 @@
 #include <QInputEvent>
 #include <QApplication>
 #include <QTreeView>
+#include <QMimeDatabase>
+#include <QMimeData>
+#include <QFileInfo>
 
 namespace FeatherNotes {
 
-/* We don't want Ctrl + left click to deselect a selected node in the single-selection mode. */
+/* We don't want Ctrl + left click to deselect a selected node in the single-selection mode.
+   In addition, we want to open FeatherNotes docs by DND. */
 class TreeView : public QTreeView
 {
     Q_OBJECT
@@ -46,6 +50,9 @@ public:
         setEditTriggers (QAbstractItemView::DoubleClicked | QAbstractItemView::EditKeyPressed);
         setTextElideMode (Qt::ElideRight);
     }
+
+signals:
+    void FNDocDropped (const QString &path);
 
 protected:
     /* see "qabstractitemview.cpp" */
@@ -70,6 +77,49 @@ protected:
             return QItemSelectionModel::ClearAndSelect | QItemSelectionModel::Rows;
         else
             return QTreeView::selectionCommand (index, event);
+    }
+
+    virtual void dragEnterEvent (QDragEnterEvent *event) {
+        if (event->mimeData()->hasUrls())
+        {
+            bool FNDocFound (false);
+            const auto urls = event->mimeData()->urls();
+            for (const QUrl &url : urls)
+            {
+                QMimeDatabase mimeDatabase;
+                QMimeType mimeType = mimeDatabase.mimeTypeForFile (QFileInfo (url.toLocalFile()));
+                if (mimeType.name() == "text/feathernotes-fnx")
+                {
+                    FNDocFound = true;
+                    event->acceptProposedAction();
+                    break;
+                }
+            }
+            if (!FNDocFound)
+            {
+                event->ignore();
+                return;
+            }
+        }
+        QTreeView::dragEnterEvent (event);
+    }
+
+    virtual void dropEvent (QDropEvent *event) {
+        if (event->mimeData()->hasUrls())
+        {
+            const auto urls = event->mimeData()->urls();
+            for (const QUrl &url : urls)
+            {
+                QMimeDatabase mimeDatabase;
+                QMimeType mimeType = mimeDatabase.mimeTypeForFile (QFileInfo (url.toLocalFile()));
+                if (mimeType.name() == "text/feathernotes-fnx")
+                {
+                    emit FNDocDropped (url.path());
+                    break;
+                }
+            }
+        }
+        QTreeView::dropEvent (event);
     }
 };
 

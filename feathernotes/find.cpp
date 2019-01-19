@@ -18,6 +18,8 @@
 #include "fn.h"
 #include "ui_fn.h"
 #include "dommodel.h"
+#include <QTextBlock>
+#include <QTextDocumentFragment>
 
 namespace FeatherNotes {
 
@@ -501,15 +503,12 @@ void FN::rehighlight (TextEdit *textEdit)
 }
 /*************************/
 void FN::reallySetSearchFlags (bool h)
-{
-    if (ui->wholeButton->isChecked() && ui->caseButton->isChecked())
-        searchFlags_ = QTextDocument::FindWholeWords | QTextDocument::FindCaseSensitively;
-    else if (ui->wholeButton->isChecked() && !ui->caseButton->isChecked())
+{   
+    searchFlags_ = QTextDocument::FindFlags();
+    if (ui->wholeButton->isChecked())
         searchFlags_ = QTextDocument::FindWholeWords;
-    else if (!ui->wholeButton->isChecked() && ui->caseButton->isChecked())
-        searchFlags_ = QTextDocument::FindCaseSensitively;
-    else
-        searchFlags_ = 0;
+    if (ui->caseButton->isChecked())
+        searchFlags_ |= QTextDocument::FindCaseSensitively;
 
     /* deselect text for consistency */
     if (QObject::sender() == ui->caseButton || (QObject::sender() == ui->wholeButton))

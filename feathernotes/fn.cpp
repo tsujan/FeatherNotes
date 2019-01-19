@@ -26,7 +26,9 @@
 #include "filedialog.h"
 #include "messagebox.h"
 #include "svgicons.h"
+#include "pref.h"
 
+#include <QTextStream>
 #include <QToolButton>
 #include <QPrinter>
 #include <QPrintDialog>
@@ -38,6 +40,12 @@
 #include <QScreen>
 #include <QWindow>
 #include <QStyledItemDelegate>
+#include <QTextTable>
+#include <QTextBlock>
+#include <QTextDocumentFragment>
+#include <QTextDocumentWriter>
+#include <QClipboard>
+#include <QMimeDatabase>
 
 #ifdef HAS_X11
 #if defined Q_WS_X11 || defined Q_OS_LINUX
@@ -158,8 +166,10 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
     ui->actionLTR->setActionGroup (aGroup1);
     ui->actionRTL->setActionGroup (aGroup1);
 
-    /* sinal connections */
+    /* signal connections */
+
     connect (ui->treeView, &QWidget::customContextMenuRequested, this, &FN::showContextMenu);
+    connect (ui->treeView, &TreeView::FNDocDropped, this, &FN::openFNDoc);
 
     connect (ui->actionNew, &QAction::triggered, this, &FN::newNote);
     connect (ui->actionOpen, &QAction::triggered, this, &FN::openFile);
@@ -246,7 +256,7 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
 
     connect (ui->actionWrap, &QAction::triggered, this, &FN::toggleWrapping);
     connect (ui->actionIndent, &QAction::triggered, this, &FN::toggleIndent);
-    connect (ui->actionPref, &QAction::triggered, this, &FN::PrefDialog);
+    connect (ui->actionPref, &QAction::triggered, this, &FN::prefDialog);
 
     connect (ui->actionFind, &QAction::triggered, this, &FN::showHideSearch);
     connect (ui->nextButton, &QAbstractButton::clicked, this, &FN::find);
@@ -335,6 +345,8 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
     /*dummyWidget = nullptr;
     if (hasTray_)
         dummyWidget = new QWidget();*/
+
+    setAcceptDrops (true);
 }
 /*************************/
 FN::~FN()
@@ -374,9 +386,9 @@ void FN::closeEvent (QCloseEvent *event)
             position_.setY (geometry().y());
         }
         if (tray_ && QSystemTrayIcon::isSystemTrayAvailable())
-            QTimer::singleShot (0, this, SLOT (hide()));
+            QTimer::singleShot (0, this, &QWidget::hide);
         else
-            QTimer::singleShot (0, this, SLOT (showMinimized()));
+            QTimer::singleShot (0, this, &QWidget::showMinimized);
         return;
     }
 
@@ -555,7 +567,7 @@ void FN::defaultSize()
     {
         setVisible (false);
         resize (startSize_);
-        QTimer::singleShot (250, this, SLOT (showNormal()));
+        QTimer::singleShot (250, this, &QWidget::showNormal);
     }
     QList<int> sizes; sizes << 170 << 530;
     ui->splitter->setSizes (sizes);
@@ -905,12 +917,13 @@ void FN::showDoc (QDomDocument &doc)
         enableActions (true);
 }
 /*************************/
-void FN::fileOpen (QString filePath)
+void FN::fileOpen (const QString &filePath)
 {
     if (!filePath.isEmpty())
     {
-        filePath.remove ("file://");
-        QFile file (filePath);
+        QString fPath = filePath;
+        fPath.remove ("file://");
+        QFile file (fPath);
 
         if (file.open (QIODevice::ReadOnly))
         {
@@ -930,7 +943,7 @@ void FN::fileOpen (QString filePath)
                 if (!pswrd_.isEmpty() && !isPswrdCorrect())
                     return;
                 showDoc (document);
-                xmlPath_ = filePath;
+                xmlPath_ = fPath;
                 setTitle (xmlPath_);
                 docProp();
             }
@@ -1035,6 +1048,99 @@ void FN::openFile()
 
     if (!filePath.isEmpty())
         fileOpen (filePath);
+}
+/*************************/
+void FN::openFNDoc (const QString &filePath)
+{
+    if (filePath.isEmpty()) return; // impossible
+
+    closeTagsDialog();
+
+    if (timer_->isActive()) timer_->stop();
+
+    if (!xmlPath_.isEmpty() && !QFile::exists (xmlPath_))
+    {
+        if (unSaved (false))
+        {
+            if (autoSave_ >= 1)
+                timer_->start (autoSave_ * 1000 * 60);
+            return;
+        }
+    }
+    else if (saveNeeded_)
+    {
+        if (unSaved (true))
+        {
+            if (autoSave_ >= 1)
+                timer_->start (autoSave_ * 1000 * 60);
+            return;
+        }
+    }
+
+    /* TextEdit::insertFromMimeData() should first return */
+    QTimer::singleShot (0, this, [this, filePath] () {
+        fileOpen (filePath);
+        activateWindow();
+        raise();
+    });
+}
+/*************************/
+void FN::dragMoveEvent (QDragMoveEvent *event)
+{
+    if (event->mimeData()->hasUrls())
+    {
+        const auto urls = event->mimeData()->urls();
+        for (const QUrl &url : urls)
+        {
+            QMimeDatabase mimeDatabase;
+            QMimeType mimeType = mimeDatabase.mimeTypeForFile (QFileInfo (url.toLocalFile()));
+            if (mimeType.name() == "text/feathernotes-fnx")
+            {
+                event->acceptProposedAction();
+                return;
+            }
+        }
+    }
+    event->ignore();
+}
+/*************************/
+void FN::dragEnterEvent (QDragEnterEvent *event)
+{
+    if (event->mimeData()->hasUrls())
+    {
+        const auto urls = event->mimeData()->urls();
+        for (const QUrl &url : urls)
+        {
+            QMimeDatabase mimeDatabase;
+            QMimeType mimeType = mimeDatabase.mimeTypeForFile (QFileInfo (url.toLocalFile()));
+            if (mimeType.name() == "text/feathernotes-fnx")
+            {
+                event->acceptProposedAction();
+                return;
+            }
+        }
+    }
+    event->ignore();
+}
+/*************************/
+void FN::dropEvent (QDropEvent *event)
+{
+    if (event->mimeData()->hasUrls())
+    {
+        const auto urls = event->mimeData()->urls();
+        for (const QUrl &url : urls)
+        {
+            QMimeDatabase mimeDatabase;
+            QMimeType mimeType = mimeDatabase.mimeTypeForFile (QFileInfo (url.toLocalFile()));
+            if (mimeType.name() == "text/feathernotes-fnx")
+            {
+                openFNDoc (url.path());
+                break;
+            }
+        }
+    }
+
+    event->acceptProposedAction();
 }
 /*************************/
 void FN::autoSaving()
@@ -1188,7 +1294,7 @@ bool FN::saveFile()
     return true;
 }
 /*************************/
-bool FN::fileSave (QString filePath)
+bool FN::fileSave (const QString &filePath)
 {
     QFile outputFile (filePath);
     if (pswrd_.isEmpty())
@@ -1365,6 +1471,7 @@ TextEdit *FN::newWidget()
     connect (textEdit, &QTextEdit::copyAvailable, ui->actionLink, &QAction::setEnabled);
     connect (textEdit, &QTextEdit::copyAvailable, this, &FN::setCursorInsideSelection);
     connect (textEdit, &TextEdit::imageDropped, this, &FN::imageEmbed);
+    connect (textEdit, &TextEdit::FNDocDropped, this, &FN::openFNDoc);
     connect (textEdit, &TextEdit::zoomedOut, this, &FN::rehighlight);
     connect (textEdit, &QWidget::customContextMenuRequested, this, &FN::txtContextMenu);
     /* The remaining connections to QTextEdit signals are in selChanged(). */
@@ -3023,7 +3130,7 @@ void FN::showAndFocus()
     if (ui->stackedWidget->count() > 0)
         qobject_cast< TextEdit *>(ui->stackedWidget->currentWidget())->setFocus();
     // to bypass focus stealing prevention
-    QTimer::singleShot (0, this, SLOT (stealFocus()));
+    QTimer::singleShot (0, this, &FN::stealFocus);
 }
 /*************************/
 void FN::stealFocus()
@@ -3063,7 +3170,7 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
         if (isX11_ && underE_)
         {
             hide();
-            QTimer::singleShot (250, this, SLOT (show()));
+            QTimer::singleShot (250, this, &QWidget::show);
             return;
         }
         QRect sr;
@@ -3091,7 +3198,7 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
                 /* instead of hiding the window in the ususal way,
                    reparent it to preserve its state info */
                 //setParent (dummyWidget, Qt::SubWindow);
-                QTimer::singleShot (0, this, SLOT (hide()));
+                QTimer::singleShot (0, this, &QWidget::hide);
             }
             else
             {
@@ -3104,7 +3211,7 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
         {
             hide();
             setGeometry (position_.x(), position_.y(), g.width(), g.height());
-            QTimer::singleShot (0, this, SLOT (showAndFocus()));
+            QTimer::singleShot (0, this, &FN::showAndFocus);
         }
     }
     else
@@ -3118,7 +3225,7 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
 #else
     /* without X11, just iconify the window */
     else
-        QTimer::singleShot (0, this, SLOT (hide()));
+        QTimer::singleShot (0, this, &QWidget::hide);
 #endif
 }
 /*************************/
@@ -3292,7 +3399,7 @@ void FN::embedImage()
     imageEmbed (lastImgPath_);
 }
 /*************************/
-void FN::imageEmbed (QString path)
+void FN::imageEmbed (const QString &path)
 {
     if (path.isEmpty()) return;
 
@@ -3329,6 +3436,9 @@ void FN::imageEmbed (QString path)
                           .arg (QString (base64array))
                           .arg (w)
                           .arg (h));
+
+    activateWindow();
+    raise();
 }
 /*************************/
 void FN::setImagePath (bool)
@@ -3838,691 +3948,142 @@ void FN::toggleIndent()
     }
 }
 /*************************/
-void FN::PrefDialog()
+void FN::prefDialog()
 {
-    QDialog *dialog = new QDialog (this);
-    dialog->setWindowTitle (tr ("Preferences"));
+    /* first, update settings because another
+       FeatherNotes window may have changed them  */
+    readAndApplyConfig (false);
 
-    QGridLayout *mainGrid = new QGridLayout;
-
-    /**************
-     *** Window ***
-     **************/
-
-    QGroupBox *windowGoupBox = new QGroupBox (tr ("Window"));
-    QGridLayout *windowGrid = new QGridLayout;
-
-    /* saved window size */
-    QCheckBox *winSizeBox = new QCheckBox (tr ("Remember window &size"));
-    winSizeBox->setToolTip ("<p style='white-space:pre'>"
-                            + tr ("Saves window size after closing\nthis dialog and also on exit.\n\nUncheck to set a fixed size!")
-                            + "</p>");
-
-    /* fixed start size */
-    QSize ag;
-    if (QWindow *win = windowHandle())
-    {
-        if (QScreen *sc = win->screen())
-            ag = sc->availableVirtualGeometry().size();
-    }
-    if (!ag.isValid())
-    {
-        if (QScreen *pScreen = QApplication::primaryScreen())
-            ag = pScreen->availableVirtualGeometry().size();
-    }
-    QLabel *winLabel = new QLabel (tr ("Start with this size: "));
-    QLabel *winXLabel = new QLabel(" × ");
-    QSpinBox *winSpinX = new QSpinBox();
-    winLabel->setObjectName ("WL");
-    winXLabel->setObjectName ("WXL");
-    winSpinX->setObjectName ("WX");
-    winSpinX->setRange (-ag.width(), ag.width());
-    QSpinBox *winSpinY = new QSpinBox();
-    winSpinY->setObjectName ("WY");
-    winSpinY->setRange (-ag.height(), ag.height());
-    winSpinX->setSuffix (tr (" px"));
-    winSpinY->setSuffix (tr (" px"));
-
-    /* saved splite size */
-    QCheckBox *splitterSizeBox = new QCheckBox (tr ("Remember &tree width"));
-    splitterSizeBox->setToolTip ("<p style='white-space:pre'>"
-                                 + tr ("Saves tree width after closing\nthis dialog and also on exit.\n\nUncheck for a width ratio of 170/530.")
-                                 + "</p>");
-
-    /* saved position */
-    QCheckBox *positionBox = new QCheckBox (tr ("Save &position"));
-    positionBox->setToolTip ("<p style='white-space:pre'>"
-                             + tr ("Saves position after closing\nthis dialog and also on exit."
-                                   "\n"
-                                   "\n(This may not work correctly\nunder GTK+ DE's like Unity\nand Cinnamon.)")
-                             + "</p>");
-
-    /* tray icon */
-    QCheckBox *hasTrayBox = new QCheckBox (tr ("Add to s&ystray"));
-    hasTrayBox->setToolTip ("<p style='white-space:pre'>"
-                            + tr ("Decides whether a systray icon should be used.\nIf checked, the titlebar close button iconifies\nthe window to the systray instead of quitting.\n\nNeeds restarting of FeatherNotes to take effect.")
-                            + "</p>");
-    QCheckBox *minTrayBox = new QCheckBox (tr ("Start i&conified to tray"));
-    minTrayBox->setToolTip ("<p style='white-space:pre'>"
-                            + tr ("The command line option --tray\ncan be used instead of this.")
-                            + "</p>");
-    minTrayBox->setChecked (minToTray_);
-    if (!hasTray_)
-        minTrayBox->setDisabled (true);
-
-    /* tree transparency */
-    QCheckBox *transparentTree = new QCheckBox (tr ("Transparent t&ree view"));
-    transparentTree->setToolTip ("<p style='white-space:pre'>"
-                                 + tr ("Merge the tree view with its surroundings?")
-                                 + "</p>");
-
-    /* toolbar icon size */
-    QCheckBox *smallToolbarIcons = new QCheckBox (tr ("Small toolbar icons"));
-    smallToolbarIcons->setToolTip ("<p style='white-space:pre'>"
-                                   + tr ("By default, the active widget style determines\nthe size of toolbar icons.")
-                                   + "</p>");
-
-    /* toolbar and menubar */
-    QCheckBox *noToolbar = new QCheckBox (tr ("Do not show t&oolbar"));
-    noToolbar->setObjectName ("TOOLBAR");
-    QCheckBox *noMenubar = new QCheckBox (tr ("Do not show &menubar"));
-    noMenubar->setToolTip ("<p style='white-space:pre'>"
-                           + tr ("If the menubar is hidden,\na menu button appears on the toolbar.")
-                           + "</p>");
-    noMenubar->setObjectName ("MENUBAR");
-
-    /* Enlightenment workaround */
-    QCheckBox *EBox = new QCheckBox (tr ("Running &under Enlightenment?"));
-    EBox->setToolTip ("<p style='white-space:pre'>"
-                      + tr ("Check this under Enlightenment (or, probably, another DE)\nto use the systray icon more easily!")
-                      + "</p>");
-    QLabel *ELabel = new QLabel (tr ("Shifts (X × Y): "));
-    QString EToolTip ("<p style='white-space:pre'>"
-                      + tr ("Some DE's (like Enlightenment) may not report the window position"
-                            "\ncorrectly. If that is the case, you could try to fix the problem here."
-                            "\n"
-                            "\nIf the panel is on the bottom or top, the Y-coordinate should be set;"
-                            "\nif it is on the left or right, the X-coordinate should be set."
-                            "\n"
-                            "\nAfter choosing the coordinate shifts, put the window in a proper"
-                            "\nposition and then restart FeatherNotes!")
-                      + "</p>");
-    ELabel->setToolTip (EToolTip);
-    QLabel *XLabel = new QLabel(" × ");
-    XLabel->setToolTip (EToolTip);
-    QSpinBox *ESpinX = new QSpinBox();
-    ELabel->setObjectName ("EL");
-    XLabel->setObjectName ("XL");
-    ESpinX->setObjectName ("EX");
-    ESpinX->setRange (-200, 200);
-    QSpinBox *ESpinY = new QSpinBox();
-    ESpinY->setObjectName ("EY");
-    ESpinY->setRange (-200, 200);
-    ESpinX->setToolTip (EToolTip);
-    ESpinY->setToolTip (EToolTip);
-    ESpinX->setSuffix (tr (" px"));
-    ESpinY->setSuffix (tr (" px"));
-
-    windowGrid->addWidget (winSizeBox, 0, 0, 1, 5);
-    windowGrid->addWidget (winLabel, 1, 0, 1, 2, Qt::AlignRight);
-    windowGrid->addWidget (winSpinX, 1, 2, 1, 1);
-    windowGrid->addWidget (winXLabel, 1, 3, 1, 1);
-    windowGrid->addWidget (winSpinY, 1, 4, 1, 1, Qt::AlignLeft);
-
-    windowGrid->addWidget (splitterSizeBox, 2, 0, 1, 5);
-    windowGrid->addWidget (positionBox, 3, 0, 1, 5);
-
-    windowGrid->addWidget (hasTrayBox, 4, 0, 1, 5);
-    windowGrid->addWidget (minTrayBox, 5, 1, 1, 4);
-
-    windowGrid->addWidget (transparentTree, 6, 0, 1, 5);
-
-    windowGrid->addWidget (smallToolbarIcons, 7, 0, 1, 5);
-
-    windowGrid->addWidget (noToolbar, 8, 0, 1, 5);
-    windowGrid->addWidget (noMenubar, 9, 0, 1, 5);
-
-    windowGrid->addWidget (EBox, 10, 0, 1, 5);
-    windowGrid->addWidget (ELabel, 11, 0, 1, 2, Qt::AlignRight);
-    windowGrid->addWidget (ESpinX, 11, 2, 1, 1);
-    windowGrid->addWidget (XLabel, 11, 3, 1, 1);
-    windowGrid->addWidget (ESpinY, 11, 4, 1, 1, Qt::AlignLeft);
-
-    windowGrid->setColumnStretch (4, 1);
-    windowGrid->setColumnMinimumWidth(0, style()->pixelMetric (QStyle::PM_IndicatorWidth) + style()->pixelMetric (QStyle::PM_CheckBoxLabelSpacing));
-    windowGoupBox->setLayout (windowGrid);
-
-    winSizeBox->setChecked (remSize_);
-    if (remSize_)
-    {
-        winSpinX->setValue (winSize_.width());
-        winSpinY->setValue (winSize_.height());
-        winSpinX->setEnabled (false);
-        winSpinY->setEnabled (false);
-        winLabel->setEnabled (false);
-        winXLabel->setEnabled (false);
-    }
-    else
-    {
-        winSpinX->setValue (startSize_.width());
-        winSpinY->setValue (startSize_.height());
-        connect (winSpinX, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &FN::prefSize);
-        connect (winSpinY, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &FN::prefSize);
-    }
-    connect (winSizeBox, &QCheckBox::stateChanged, this, &FN::prefSize);
-
-    splitterSizeBox->setChecked (remSplitter_);
-    connect (splitterSizeBox, &QCheckBox::stateChanged, this, &FN::prefSplitterSize);
-
-    positionBox->setChecked (remPosition_);
-    connect (positionBox, &QCheckBox::stateChanged, this, &FN::prefPosition);
-
-    hasTrayBox->setChecked (hasTray_);
-    connect (hasTrayBox, &QCheckBox::stateChanged, this, &FN::prefHasTray);
-    connect (hasTrayBox, &QAbstractButton::toggled, minTrayBox, &QWidget::setEnabled);
-
-    minTrayBox->setChecked (minToTray_);
-    connect (minTrayBox, &QCheckBox::stateChanged, this, &FN::prefMinTray);
-
-    transparentTree->setChecked (transparentTree_);
-    connect (transparentTree, &QCheckBox::stateChanged, this, &FN::prefTree);
-
-    smallToolbarIcons->setChecked (smallToolbarIcons_);
-    connect (smallToolbarIcons, &QCheckBox::stateChanged, this, &FN::prefToolbarIcons);
-
-    noToolbar->setChecked (noToolbar_);
-    noMenubar->setChecked (noMenubar_);
-    connect (noToolbar, &QCheckBox::stateChanged, this, &FN::prefToolbar);
-    connect (noMenubar, &QCheckBox::stateChanged, this, &FN::prefMenubar);
-
-    EBox->setChecked (underE_);
-    connect (EBox, &QCheckBox::stateChanged, this, &FN::prefEnlightenment);
-    ESpinX->setValue (EShift_.width());
-    ESpinY->setValue (EShift_.height());
-    if (!underE_ || !remPosition_)
-    {
-        ELabel->setDisabled (true);
-        ESpinX->setDisabled (true);
-        XLabel->setDisabled (true);
-        ESpinY->setDisabled (true);
-    }
-    else
-    {
-        connect (ESpinX, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &FN::setEDiff);
-        connect (ESpinY, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &FN::setEDiff);
-    }
-    connect (EBox, &QCheckBox::stateChanged, this, &FN::prefEDiff);
-
-    /************
-     *** Text ***
-     ************/
-
-    QGroupBox *textGoupBox = new QGroupBox (tr ("Text"));
-    QGridLayout *textGrid = new QGridLayout;
-    textGrid->setHorizontalSpacing (0);
-    QCheckBox *wrapBox = new QCheckBox (tr ("&Wrap lines by default"));
-    QCheckBox *indentBox = new QCheckBox (tr ("Auto-&indent by default"));
-    QCheckBox *autoBracketBox = new QCheckBox (tr ("Auto-&bracket\n(Requires application restart)"));
-    autoBracketBox->setToolTip ("<p style='white-space:pre'>"
-                                + tr ("This covers parentheses, braces, brackets and quotes.\n\nNeeds restarting of FeatherNotes to take effect.")
-                                + "</p>");
-    QCheckBox *autoSaveBox = new QCheckBox (tr ("&Auto-save every"));
-    QSpinBox *spinBox = new QSpinBox();
-    spinBox->setObjectName ("autoSaveSpin");
-    spinBox->setRange (1, 60);
-    spinBox->setSuffix (tr (" minute(s)"));
-    if (autoSave_ > -1)
-        spinBox->setValue (autoSave_);
-    else
-        spinBox->setValue (5);
-    QCheckBox *workaroundBox = new QCheckBox (tr ("Workaround for &Qt5's scroll jump bug"));
-    workaroundBox->setToolTip ("<p style='white-space:pre'>"
-                               + tr ("This is not a complete fix but\nprevents annoying scroll jumps.")
-                               + "</p>");
-    textGrid->addWidget (wrapBox, 0, 0, 1, 2);
-    textGrid->addWidget (indentBox, 1, 0, 1, 2);
-    textGrid->addWidget (autoBracketBox, 2, 0, 1, 2);
-    textGrid->addWidget (autoSaveBox, 3, 0);
-    textGrid->addWidget (spinBox, 3, 1);
-    textGrid->addWidget (workaroundBox, 4, 0, 1, 2);
-    textGrid->setColumnStretch (2, 1);
-    textGoupBox->setLayout (textGrid);
-    wrapBox->setChecked (wrapByDefault_);
-    connect (wrapBox, &QCheckBox::stateChanged, this, &FN::prefWrap);
-    indentBox->setChecked (indentByDefault_);
-    connect (indentBox, &QCheckBox::stateChanged, this, &FN::prefIndent);
-    autoBracketBox->setChecked (autoBracket_);
-    connect (autoBracketBox, &QCheckBox::stateChanged, this, &FN::prefAutoBracket);
-    if (autoSave_ > -1)
-    {
-        autoSave_ = spinBox->value();
-        autoSaveBox->setChecked (true);
-        connect (spinBox, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &FN::setAutoSave);
-    }
-    else
-        spinBox->setEnabled (false);
-    connect (autoSaveBox, &QCheckBox::stateChanged, this, &FN::prefAutoSave);
-    workaroundBox->setChecked (scrollJumpWorkaround_);
-    connect (workaroundBox, &QCheckBox::stateChanged, this, &FN::prefScrollJump);
-
-    /**************
-     *** Dialog ***
-     **************/
-
-    QPushButton *closeButton = new QPushButton (symbolicIcon::icon (":icons/dialog-cancel.svg"), tr ("Close"));
-    mainGrid->addWidget (windowGoupBox, 0, 0);
-    mainGrid->addWidget (textGoupBox, 0, 1);
-    mainGrid->addWidget (closeButton, 1, 1, Qt::AlignRight);
-    dialog->setLayout (mainGrid);
-
-    connect (closeButton, &QAbstractButton::clicked, dialog, &QDialog::reject);
-
-    /*dialog->setFixedSize (dialog->minimumWidth(),
-                          dialog->minimumHeight());*/
-    /*dialog->show();
-    dialog->move (x() + width()/2 - dialog->width()/2,
-                  y() + height()/2 - dialog->height()/ 2);*/
-    switch (dialog->exec()) {
-    case QDialog::Rejected:
-    default:
-        writeConfig();
-        writeGeometryConfig();
-        delete dialog;
-        break;
-    }
+    PrefDialog dlg (this);
+    dlg.exec();
 }
 /*************************/
-void FN::prefSize (int value)
+QByteArray FN::getSpltiterState() const
 {
-    if (QObject::sender() == nullptr) return;
-    if (qobject_cast<QCheckBox *>(QObject::sender()))
+    return ui->splitter->saveState();
+}
+/*************************/
+void FN::makeTreeTransparent (bool trans)
+{
+    if (trans)
     {
-        QList<QDialog *> list = findChildren<QDialog*>();
-        if (list.isEmpty()) return;
-        QSpinBox *winSpinX = nullptr;
-        QSpinBox *winSpinY = nullptr;
-        QLabel *winLabel = nullptr;
-        QLabel *winXLabel = nullptr;
-        for (int i = 0; i < list.count(); ++i)
+        if (!transparentTree_)
         {
-            winSpinX = list.at (i)->findChild<QSpinBox *>("WX");
-            if (winSpinX != nullptr)
+            transparentTree_ = true;
+            ui->treeView->setFrameShape (QFrame::NoFrame);
+            if (ui->treeView->viewport())
             {
-                winSpinY = list.at (i)->findChild<QSpinBox *>("WY");
-                if (winSpinY != nullptr)
-                {
-                    winLabel = list.at (i)->findChild<QLabel *>("WL");
-                    winXLabel = list.at (i)->findChild<QLabel *>("WXL");
-                    if (winLabel != nullptr && winXLabel != nullptr)
-                        break;
-                }
-                else
-                    winSpinX = nullptr;
+                QPalette p = ui->treeView->palette();
+                p.setColor (QPalette::Base, QColor (Qt::transparent));
+                ui->treeView->setPalette (p);
+                ui->treeView->viewport()->setAutoFillBackground (false);
             }
         }
-        if (winSpinX == nullptr || winSpinY == nullptr || winLabel == nullptr || winXLabel == nullptr)
-            return;
-
-        if (value == Qt::Checked)
-        {
-            remSize_ = true;
-            winSize_ = size();
-            disconnect (winSpinX, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &FN::prefSize);
-            disconnect (winSpinY, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &FN::prefSize);
-            winSpinX->setEnabled (false);
-            winSpinY->setEnabled (false);
-            winLabel->setEnabled (false);
-            winXLabel->setEnabled (false);
-        }
-        else if (value == Qt::Unchecked)
-        {
-            remSize_ = false;
-            startSize_ = winSize_;
-            winSpinX->setEnabled (true);
-            winSpinY->setEnabled (true);
-            winLabel->setEnabled (true);
-            winXLabel->setEnabled (true);
-            connect (winSpinX, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &FN::prefSize);
-            connect (winSpinY, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &FN::prefSize);
-        }
     }
-    else if (QSpinBox *sb = qobject_cast<QSpinBox *>(QObject::sender()))
+    else
     {
-        if (QObject::sender()->objectName() == "WX")
-            startSize_.setWidth (sb->value());
-        else if (QObject::sender()->objectName() == "WY")
-            startSize_.setHeight (sb->value());
-    }
-}
-/*************************/
-void FN::prefSplitterSize (int checked)
-{
-    if (checked == Qt::Checked)
-    {
-        remSplitter_ = true;
-        splitterSizes_ = ui->splitter->saveState();
-    }
-    else if (checked == Qt::Unchecked)
-        remSplitter_ = false;
-}
-/*************************/
-void FN::prefPosition (int checked)
-{
-    QList<QDialog *> list = findChildren<QDialog*>();
-    if (list.isEmpty()) return;
-    QSpinBox *ESpinX = nullptr;
-    QSpinBox *ESpinY = nullptr;
-    QLabel *ELabel = nullptr;
-    QLabel *XLabel = nullptr;
-    for (int i = 0; i < list.count(); ++i)
-    {
-        ESpinX = list.at (i)->findChild<QSpinBox *>("EX");
-        if (ESpinX != nullptr)
+        if (transparentTree_)
         {
-            ESpinY = list.at (i)->findChild<QSpinBox *>("EY");
-            if (ESpinY != nullptr)
+            transparentTree_ = false;
+            ui->treeView->setFrameShape (QFrame::StyledPanel);
+            if (ui->treeView->viewport())
             {
-                ELabel = list.at (i)->findChild<QLabel *>("EL");
-                XLabel = list.at (i)->findChild<QLabel *>("XL");
-                if (ELabel != nullptr && XLabel != nullptr)
-                    break;
+                QPalette p = ui->treeView->palette();
+                p.setColor (QPalette::Active, QPalette::Base,
+                            QApplication::palette().color (QPalette::Active, QPalette::Base));
+                p.setColor (QPalette::Inactive, QPalette::Base,
+                            QApplication::palette().color (QPalette::Inactive, QPalette::Base));
+                ui->treeView->setPalette (p);
+                ui->treeView->viewport()->setAutoFillBackground (true);
             }
-            else
-                ESpinX = nullptr;
         }
     }
-    if (ESpinX == nullptr || ESpinY == nullptr || ELabel == nullptr || XLabel == nullptr)
-        return;
-
-    if (checked == Qt::Checked)
+}
+/*************************/
+void FN::setToolBarIconSize (bool small)
+{
+    if (small)
     {
-        remPosition_ = true;
-        position_.setX (geometry().x());
-        position_.setY (geometry().y());
+        if (!smallToolbarIcons_)
+        {
+            smallToolbarIcons_ = true;
+            ui->mainToolBar->setIconSize (QSize (16, 16));
+        }
+    }
+    else
+    {
+        if (smallToolbarIcons_)
+        {
+            smallToolbarIcons_ = false;
+            ui->mainToolBar->setIconSize (TOOLBAR_ICON_SIZE);
+        }
+    }
+}
+/*************************/
+void FN::showToolbar (bool show)
+{
+    ui->mainToolBar->setVisible (show);
+    noToolbar_ = !show;
+}
+/*************************/
+void FN::showMenubar (bool show)
+{
+    ui->menuBar->setVisible (show);
+    ui->actionMenu->setVisible (!show);
+    noMenubar_ = !show;
+}
+/*************************/
+void FN::setUnderE (bool yes)
+{
+    if (yes)
+    {
+        if (!underE_)
+        {
+            underE_ = true;
+            if (tray_)
+            {
+                if (QAction *actionshowMainWindow = tray_->contextMenu()->findChild<QAction *>("raiseHide"))
+                    actionshowMainWindow->setText (tr ("&Raise"));
+            }
+        }
+    }
+    else
+    {
         if (underE_)
         {
-            ELabel->setEnabled (true);
-            XLabel->setEnabled (true);
-            ESpinX->setEnabled (true);
-            ESpinY->setEnabled (true);
-        }
-    }
-    else if (checked == Qt::Unchecked)
-    {
-        remPosition_ = false;
-        if (underE_)
-        {
-            ELabel->setEnabled (false);
-            XLabel->setEnabled (false);
-            ESpinX->setEnabled (false);
-            ESpinY->setEnabled (false);
-        }
-    }
-}
-/*************************/
-void FN::prefHasTray (int checked)
-{
-    if (checked == Qt::Checked)
-        hasTray_ = true;
-    else if (checked == Qt::Unchecked)
-        hasTray_ = false;
-}
-/*************************/
-void FN::prefMinTray (int checked)
-{
-    if (checked == Qt::Checked)
-        minToTray_ = true;
-    else if (checked == Qt::Unchecked)
-        minToTray_ = false;
-}
-/*************************/
-void FN::prefTree (int checked)
-{
-    if (checked == Qt::Checked)
-    {
-        transparentTree_ = true;
-        ui->treeView->setFrameShape (QFrame::NoFrame);
-        if (ui->treeView->viewport())
-        {
-            QPalette p = ui->treeView->palette();
-            p.setColor (QPalette::Base, QColor (Qt::transparent));
-            ui->treeView->setPalette (p);
-            ui->treeView->viewport()->setAutoFillBackground (false);
-        }
-    }
-    else if (checked == Qt::Unchecked)
-    {
-        transparentTree_ = false;
-        ui->treeView->setFrameShape (QFrame::StyledPanel);
-        if (ui->treeView->viewport())
-        {
-            QPalette p = ui->treeView->palette();
-            p.setColor (QPalette::Active, QPalette::Base,
-                        QApplication::palette().color (QPalette::Active, QPalette::Base));
-            p.setColor (QPalette::Inactive, QPalette::Base,
-                        QApplication::palette().color (QPalette::Inactive, QPalette::Base));
-            ui->treeView->setPalette (p);
-            ui->treeView->viewport()->setAutoFillBackground (true);
-        }
-    }
-}
-/*************************/
-void FN::prefToolbarIcons (int checked)
-{
-    if (checked == Qt::Checked)
-    {
-        ui->mainToolBar->setIconSize (QSize (16, 16));
-        smallToolbarIcons_ = true;
-    }
-    else if (checked == Qt::Unchecked)
-    {
-        ui->mainToolBar->setIconSize (TOOLBAR_ICON_SIZE);
-        smallToolbarIcons_ = false;
-    }
-}
-/*************************/
-void FN::prefToolbar (int checked)
-{
-    if (checked == Qt::Checked)
-    {
-        ui->mainToolBar->setVisible (false);
-        noToolbar_ = true;
-        QList<QDialog *> list = findChildren<QDialog*>();
-        if (list.isEmpty()) return;
-        for (int i = 0; i < list.count(); ++i)
-        {
-            if (QCheckBox *check = list.at (i)->findChild<QCheckBox *>("MENUBAR"))
+            underE_ = false;
+            if (tray_)
             {
-                check->setChecked (false);
-                break;
+                if (QAction *actionshowMainWindow = tray_->contextMenu()->findChild<QAction *>("raiseHide"))
+                    actionshowMainWindow->setText (tr ("&Raise/Hide"));
             }
         }
     }
-    else if (checked == Qt::Unchecked)
-    {
-        ui->mainToolBar->setVisible (true);
-        noToolbar_ = false;
-    }
 }
 /*************************/
-void FN::prefMenubar (int checked)
+void FN::enableScrollJumpWorkaround (bool enable)
 {
-    if (checked == Qt::Checked)
+    if (enable)
     {
-        ui->menuBar->setVisible (false);
-        ui->actionMenu->setVisible (true);
-        noMenubar_ = true;
-        QList<QDialog *> list = findChildren<QDialog*>();
-        if (list.isEmpty()) return;
-        for (int i = 0; i < list.count(); ++i)
+        if (!scrollJumpWorkaround_)
         {
-            if (QCheckBox *check = list.at (i)->findChild<QCheckBox *>("TOOLBAR"))
-            {
-                check->setChecked (false);
-                break;
-            }
+            scrollJumpWorkaround_ = true;
+            for (int i = 0; i < ui->stackedWidget->count(); ++i)
+                qobject_cast< TextEdit *>(ui->stackedWidget->widget (i))->setScrollJumpWorkaround (true);
         }
     }
-    else if (checked == Qt::Unchecked)
+    else
     {
-        ui->menuBar->setVisible (true);
-        ui->actionMenu->setVisible (false);
-        noMenubar_ = false;
-    }
-}
-/*************************/
-void FN::prefEnlightenment (int checked)
-{
-    if (checked == Qt::Checked)
-    {
-        underE_ = true;
-        if (tray_)
+        if (scrollJumpWorkaround_)
         {
-            if (QAction *actionshowMainWindow = tray_->contextMenu()->findChild<QAction *>("raiseHide"))
-                actionshowMainWindow->setText (tr ("&Raise"));
-        }
-    }
-    else if (checked == Qt::Unchecked)
-    {
-        underE_ = false;
-        if (tray_)
-        {
-            if (QAction *actionshowMainWindow = tray_->contextMenu()->findChild<QAction *>("raiseHide"))
-                actionshowMainWindow->setText (tr ("&Raise/Hide"));
+            scrollJumpWorkaround_ = false;
+            for (int i = 0; i < ui->stackedWidget->count(); ++i)
+                qobject_cast< TextEdit *>(ui->stackedWidget->widget (i))->setScrollJumpWorkaround (false);
         }
     }
 }
 /*************************/
-void FN::prefWrap (int checked)
-{
-    if (checked == Qt::Checked)
-        wrapByDefault_ = true;
-    else if (checked == Qt::Unchecked)
-        wrapByDefault_ = false;
-}
-/*************************/
-void FN::prefIndent (int checked)
-{
-    if (checked == Qt::Checked)
-        indentByDefault_ = true;
-    else if (checked == Qt::Unchecked)
-        indentByDefault_ = false;
-}
-/*************************/
-void FN::prefAutoBracket (int checked)
-{
-    if (checked == Qt::Checked)
-        autoBracket_ = true;
-    else if (checked == Qt::Unchecked)
-        autoBracket_ = false;
-}
-/*************************/
-void FN::prefAutoSave (int checked)
-{
-    QList<QDialog *> list = findChildren<QDialog*>();
-    if (list.isEmpty()) return;
-    QSpinBox *spinBox = nullptr;
-    for (int i = 0; i < list.count(); ++i)
-    {
-        spinBox = list.at (i)->findChild<QSpinBox *>("autoSaveSpin");
-        if (spinBox) break;
-    }
-    if (spinBox == nullptr) return;
-
-    if (checked == Qt::Checked)
-    {
-        spinBox->setEnabled (true);
-        autoSave_ = spinBox->value();
-        connect (spinBox, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &FN::setAutoSave);
-    }
-    else if (checked == Qt::Unchecked)
-    {
-        disconnect (spinBox, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &FN::setAutoSave);
-        spinBox->setEnabled (false);
-        autoSave_ = -1;
-    }
-}
-/*************************/
-void FN::prefEDiff (int checked)
-{
-    QList<QDialog *> list = findChildren<QDialog*>();
-    if (list.isEmpty()) return;
-    QSpinBox *ESpinX = nullptr;
-    QSpinBox *ESpinY = nullptr;
-    QLabel *ELabel = nullptr;
-    QLabel *XLabel = nullptr;
-    for (int i = 0; i < list.count(); ++i)
-    {
-        ESpinX = list.at (i)->findChild<QSpinBox *>("EX");
-        if (ESpinX != nullptr)
-        {
-            ESpinY = list.at (i)->findChild<QSpinBox *>("EY");
-            if (ESpinY != nullptr)
-            {
-                ELabel = list.at (i)->findChild<QLabel *>("EL");
-                XLabel = list.at (i)->findChild<QLabel *>("XL");
-                if (ELabel != nullptr && XLabel != nullptr)
-                    break;
-            }
-            else
-                ESpinX = nullptr;
-        }
-    }
-    if (ESpinX == nullptr || ESpinY == nullptr || ELabel == nullptr || XLabel == nullptr)
-        return;
-
-    if (checked == Qt::Checked)
-    {
-        ELabel->setEnabled (true);
-        XLabel->setEnabled (true);
-        ESpinX->setEnabled (true);
-        ESpinY->setEnabled (true);
-        EShift_ = QSize (ESpinX->value(), ESpinY->value());
-        connect (ESpinX, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &FN::setEDiff);
-        connect (ESpinY, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &FN::setEDiff);
-    }
-    else if (checked == Qt::Unchecked)
-    {
-        disconnect (ESpinX, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &FN::setEDiff);
-        disconnect (ESpinY, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &FN::setEDiff);
-        ESpinX->setEnabled (false);
-        ESpinY->setEnabled (false);
-        ELabel->setEnabled (false);
-        XLabel->setEnabled (false);
-    }
-}
-/*************************/
-void FN::prefScrollJump (int checked)
-{
-    if (checked == Qt::Checked)
-    {
-        scrollJumpWorkaround_ = true;
-        for (int i = 0; i < ui->stackedWidget->count(); ++i)
-            qobject_cast< TextEdit *>(ui->stackedWidget->widget (i))->setScrollJumpWorkaround (true);
-    }
-    else if (checked == Qt::Unchecked)
-    {
-        scrollJumpWorkaround_ = false;
-        for (int i = 0; i < ui->stackedWidget->count(); ++i)
-            qobject_cast< TextEdit *>(ui->stackedWidget->widget (i))->setScrollJumpWorkaround (false);
-    }
-}
-/*************************/
-void FN::setAutoSave (int value)
-{
-    autoSave_ = value;
-}
-/*************************/
-void FN::setEDiff (int value)
-{
-    if (QObject::sender() == nullptr) return;
-    if (QObject::sender()->objectName() == "EX")
-        EShift_.setWidth (value);
-    else if (QObject::sender()->objectName() == "EY")
-        EShift_.setHeight (value);
-}
-/*************************/
-void FN::readAndApplyConfig()
+void FN::readAndApplyConfig (bool startup)
 {
     QSettings settings ("feathernotes", "fn");
 
@@ -4533,75 +4094,69 @@ void FN::readAndApplyConfig()
     settings.beginGroup ("window");
 
     startSize_ = settings.value ("startSize", QSize (700, 500)).toSize();
-    if (!startSize_.isValid() || startSize_.isNull())
+    if (startSize_.isEmpty())
         startSize_ = QSize (700, 500);
     if (settings.value ("size").toString() == "none")
     {
         remSize_ = false; // true by default
-        resize (startSize_);
+        if (startup)
+            resize (startSize_);
     }
     else
     {
+        remSize_ = true;
         winSize_ = settings.value ("size", QSize (700, 500)).toSize();
-        if (!winSize_.isValid() || winSize_.isNull())
+        if (winSize_.isEmpty())
             winSize_ = QSize (700, 500);
-        resize (winSize_);
+        if (startup)
+            resize (winSize_);
     }
 
     if (settings.value ("splitterSizes").toString() == "none")
         remSplitter_ = false; // true by default
     else
+    {
+        remSplitter_ = true;
         splitterSizes_ = settings.value ("splitterSizes", splitterSizes_).toByteArray();
-    ui->splitter->restoreState (splitterSizes_);
+    }
+    if (startup)
+        ui->splitter->restoreState (splitterSizes_);
 
     if (settings.value ("position").toString() == "none")
         remPosition_ = false; // true by default
     else
+    {
+        remPosition_ = true;
         position_ = settings.value ("position", QPoint (0, 0)).toPoint();
+    }
 
-    if (settings.value ("hasTray").toBool())
-        hasTray_ = true; // false by default
-    else
-        hasTray_ = false;
+    hasTray_ = settings.value ("hasTray").toBool(); // false by default
 
-    if (settings.value ("minToTray").toBool())
-        minToTray_ = true; // false by default
-    else
-        minToTray_ = false;
+    minToTray_ = settings.value ("minToTray").toBool(); // false by default
 
-    if (settings.value ("underE").toBool())
-        underE_ = true; // false by default
+    bool bv = settings.value ("underE").toBool(); // false by default
+    if (startup)
+        underE_ = bv;
     else
-        underE_ = false;
+        setUnderE (bv);
 
     if (settings.contains ("Shift"))
         EShift_ = settings.value ("Shift").toSize();
     else
         EShift_ = QSize (0, 0);
 
-    if (settings.value ("transparentTree").toBool())
-    {
-        transparentTree_ = true; // false by default
-        ui->treeView->setFrameShape (QFrame::NoFrame);
-        if (ui->treeView->viewport()) // not needed
-        {
-            QPalette p = ui->treeView->palette();
-            p.setColor (QPalette::Base, QColor (Qt::transparent));
-            ui->treeView->setPalette (p);
-            ui->treeView->viewport()->setAutoFillBackground (false);
-        }
-    }
+    if (settings.value ("transparentTree").toBool()) // false by default
+        makeTreeTransparent (true);
+    else if (!startup)
+        makeTreeTransparent (false);
 
-    if (settings.value ("smallToolbarIcons").toBool())
-    {
-        smallToolbarIcons_ = true;
-        ui->mainToolBar->setIconSize (QSize (16, 16));
-    }
+    if (settings.value ("smallToolbarIcons").toBool()) // false by default
+        setToolBarIconSize (true);
+    else if (!startup)
+        setToolBarIconSize (false);
 
-    if (settings.value ("noToolbar").toBool())
-        noToolbar_ = true; // false by default
-    if (settings.value ("noMenubar").toBool())
-        noMenubar_ = true; // false by default
+    noToolbar_ = settings.value ("noToolbar").toBool(); // false by default
+    noMenubar_ = settings.value ("noMenubar").toBool(); // false by default
     if (noToolbar_ && noMenubar_)
     { // we don't want to hide all actions
         noToolbar_ = false;
@@ -4611,104 +4166,107 @@ void FN::readAndApplyConfig()
     ui->menuBar->setVisible (!noMenubar_);
     ui->actionMenu->setVisible (noMenubar_);
 
-    QIcon icn;
-    icn = symbolicIcon::icon (":icons/go-down.svg");
-    ui->nextButton->setIcon (icn);
-    ui->rplNextButton->setIcon (icn);
-    ui->actionMoveDown->setIcon (icn);
-    icn = symbolicIcon::icon (":icons/go-up.svg");
-    ui->prevButton->setIcon (icn);
-    ui->rplPrevButton->setIcon (icn);
-    ui->actionMoveUp->setIcon (icn);
-    ui->allButton->setIcon (symbolicIcon::icon (":icons/arrow-down-double.svg"));
-    icn = symbolicIcon::icon (":icons/document-save.svg");
-    ui->actionSave->setIcon (icn);
-    ui->actionImageSave->setIcon (icn);
-    ui->actionOpen->setIcon (symbolicIcon::icon (":icons/document-open.svg"));
-    ui->actionUndo->setIcon (symbolicIcon::icon (":icons/edit-undo.svg"));
-    ui->actionRedo->setIcon (symbolicIcon::icon (":icons/edit-redo.svg"));
-    ui->actionFind->setIcon (symbolicIcon::icon (":icons/edit-find.svg"));
-    ui->actionClear->setIcon (symbolicIcon::icon (":icons/edit-clear.svg"));
-    ui->actionBold->setIcon (symbolicIcon::icon (":icons/format-text-bold.svg"));
-    ui->actionItalic->setIcon (symbolicIcon::icon (":icons/format-text-italic.svg"));
-    ui->actionUnderline->setIcon (symbolicIcon::icon (":icons/format-text-underline.svg"));
-    ui->actionStrike->setIcon (symbolicIcon::icon (":icons/format-text-strikethrough.svg"));
-    ui->actionTextColor->setIcon (symbolicIcon::icon (":icons/format-text-color.svg"));
-    ui->actionBgColor->setIcon (symbolicIcon::icon (":icons/format-fill-color.svg"));
-    ui->actionNew->setIcon (symbolicIcon::icon (":icons/document-new.svg"));
-    ui->actionSaveAs->setIcon (symbolicIcon::icon (":icons/document-save-as.svg"));
-    icn = symbolicIcon::icon (":icons/document-print.svg");
-    ui->actionPrint->setIcon (icn);
-    ui->actionPrintNodes->setIcon (icn);
-    ui->actionPrintAll->setIcon (icn);
-    ui->actionPassword->setIcon (symbolicIcon::icon (":icons/document-encrypt.svg"));
-    ui->actionQuit->setIcon (symbolicIcon::icon (":icons/application-exit.svg"));
-    ui->actionCut->setIcon (symbolicIcon::icon (":icons/edit-cut.svg"));
-    ui->actionCopy->setIcon (symbolicIcon::icon (":icons/edit-copy.svg"));
-    icn = symbolicIcon::icon (":icons/edit-paste.svg");
-    ui->actionPaste->setIcon (icn);
-    ui->actionPasteHTML->setIcon (icn);
-    ui->actionDelete->setIcon (symbolicIcon::icon (":icons/edit-delete.svg"));
-    ui->actionSelectAll->setIcon (symbolicIcon::icon (":icons/edit-select-all.svg"));
-    icn = symbolicIcon::icon (":icons/image-x-generic.svg");
-    ui->actionEmbedImage->setIcon (icn);
-    ui->actionImageScale->setIcon (icn);
-    ui->actionNodeIcon->setIcon (icn);
-    ui->actionExpandAll->setIcon (symbolicIcon::icon (":icons/expand.svg"));
-    ui->actionCollapseAll->setIcon (symbolicIcon::icon (":icons/collapse.svg"));
-    ui->actionDeleteNode->setIcon (symbolicIcon::icon (":icons/user-trash.svg"));
-    icn = symbolicIcon::icon (":icons/edit-rename.svg");
-    ui->actionRenameNode->setIcon (icn);
-    ui->namesButton->setIcon (icn);
-    ui->actionProp->setIcon (symbolicIcon::icon (":icons/document-properties.svg"));
-    icn = symbolicIcon::icon (":icons/preferences-desktop-font.svg");
-    ui->actionDocFont->setIcon (icn);
-    ui->actionNodeFont->setIcon (icn);
-    ui->actionPref->setIcon (symbolicIcon::icon (":icons/preferences-system.svg"));
-    ui->actionReplace->setIcon (symbolicIcon::icon (":icons/edit-find-replace.svg"));
-    ui->actionHelp->setIcon (symbolicIcon::icon (":icons/help-contents.svg"));
-    ui->actionAbout->setIcon (symbolicIcon::icon (":icons/help-about.svg"));
-    ui->actionSuper->setIcon (symbolicIcon::icon (":icons/format-text-superscript.svg"));
-    ui->actionSub->setIcon (symbolicIcon::icon (":icons/format-text-subscript.svg"));
-    ui->actionCenter->setIcon (symbolicIcon::icon (":icons/format-justify-center.svg"));
-    ui->actionRight->setIcon (symbolicIcon::icon (":icons/format-justify-right.svg"));
-    ui->actionLeft->setIcon (symbolicIcon::icon (":icons/format-justify-left.svg"));
-    ui->actionJust->setIcon (symbolicIcon::icon (":icons/format-justify-fill.svg"));
-    ui->actionMoveLeft->setIcon (symbolicIcon::icon (":icons/go-previous.svg"));
-    ui->actionMoveRight->setIcon (symbolicIcon::icon (":icons/go-next.svg"));
-    icn = symbolicIcon::icon (":icons/zoom-in.svg");
-    ui->actionH1->setIcon (icn);
-    ui->actionH2->setIcon (icn);
-    ui->actionH3->setIcon (icn);
-    icn = symbolicIcon::icon (":icons/tag.svg");
-    ui->actionTags->setIcon (icn);
-    ui->tagsButton->setIcon (icn);
-    ui->actionLink->setIcon (symbolicIcon::icon (":icons/insert-link.svg"));
-    ui->actionCopyLink->setIcon (symbolicIcon::icon (":icons/link.svg"));
-    ui->actionTable->setIcon (symbolicIcon::icon (":icons/insert-table.svg"));
-    ui->actionTableAppendRow->setIcon (symbolicIcon::icon (":icons/edit-table-insert-row-below.svg"));
-    ui->actionTableAppendCol->setIcon (symbolicIcon::icon (":icons/edit-table-insert-column-right.svg"));
-    ui->actionTableDeleteRow->setIcon (symbolicIcon::icon (":icons/edit-table-delete-row.svg"));
-    ui->actionTableDeleteCol->setIcon (symbolicIcon::icon (":icons/edit-table-delete-column.svg"));
-    ui->actionTableMergeCells->setIcon (symbolicIcon::icon (":icons/edit-table-cell-merge.svg"));
-    ui->actionTablePrependRow->setIcon (symbolicIcon::icon (":icons/edit-table-insert-row-above.svg"));
-    ui->actionTablePrependCol->setIcon (symbolicIcon::icon (":icons/edit-table-insert-column-left.svg"));
-    ui->actionRTL->setIcon (symbolicIcon::icon (":icons/format-text-direction-rtl.svg"));
-    ui->actionLTR->setIcon (symbolicIcon::icon (":icons/format-text-direction-ltr.svg"));
-    ui->actionMenu->setIcon (symbolicIcon::icon (":icons/application-menu.svg"));
+    if (startup)
+    {
+        QIcon icn;
+        icn = symbolicIcon::icon (":icons/go-down.svg");
+        ui->nextButton->setIcon (icn);
+        ui->rplNextButton->setIcon (icn);
+        ui->actionMoveDown->setIcon (icn);
+        icn = symbolicIcon::icon (":icons/go-up.svg");
+        ui->prevButton->setIcon (icn);
+        ui->rplPrevButton->setIcon (icn);
+        ui->actionMoveUp->setIcon (icn);
+        ui->allButton->setIcon (symbolicIcon::icon (":icons/arrow-down-double.svg"));
+        icn = symbolicIcon::icon (":icons/document-save.svg");
+        ui->actionSave->setIcon (icn);
+        ui->actionImageSave->setIcon (icn);
+        ui->actionOpen->setIcon (symbolicIcon::icon (":icons/document-open.svg"));
+        ui->actionUndo->setIcon (symbolicIcon::icon (":icons/edit-undo.svg"));
+        ui->actionRedo->setIcon (symbolicIcon::icon (":icons/edit-redo.svg"));
+        ui->actionFind->setIcon (symbolicIcon::icon (":icons/edit-find.svg"));
+        ui->actionClear->setIcon (symbolicIcon::icon (":icons/edit-clear.svg"));
+        ui->actionBold->setIcon (symbolicIcon::icon (":icons/format-text-bold.svg"));
+        ui->actionItalic->setIcon (symbolicIcon::icon (":icons/format-text-italic.svg"));
+        ui->actionUnderline->setIcon (symbolicIcon::icon (":icons/format-text-underline.svg"));
+        ui->actionStrike->setIcon (symbolicIcon::icon (":icons/format-text-strikethrough.svg"));
+        ui->actionTextColor->setIcon (symbolicIcon::icon (":icons/format-text-color.svg"));
+        ui->actionBgColor->setIcon (symbolicIcon::icon (":icons/format-fill-color.svg"));
+        ui->actionNew->setIcon (symbolicIcon::icon (":icons/document-new.svg"));
+        ui->actionSaveAs->setIcon (symbolicIcon::icon (":icons/document-save-as.svg"));
+        icn = symbolicIcon::icon (":icons/document-print.svg");
+        ui->actionPrint->setIcon (icn);
+        ui->actionPrintNodes->setIcon (icn);
+        ui->actionPrintAll->setIcon (icn);
+        ui->actionPassword->setIcon (symbolicIcon::icon (":icons/document-encrypt.svg"));
+        ui->actionQuit->setIcon (symbolicIcon::icon (":icons/application-exit.svg"));
+        ui->actionCut->setIcon (symbolicIcon::icon (":icons/edit-cut.svg"));
+        ui->actionCopy->setIcon (symbolicIcon::icon (":icons/edit-copy.svg"));
+        icn = symbolicIcon::icon (":icons/edit-paste.svg");
+        ui->actionPaste->setIcon (icn);
+        ui->actionPasteHTML->setIcon (icn);
+        ui->actionDelete->setIcon (symbolicIcon::icon (":icons/edit-delete.svg"));
+        ui->actionSelectAll->setIcon (symbolicIcon::icon (":icons/edit-select-all.svg"));
+        icn = symbolicIcon::icon (":icons/image-x-generic.svg");
+        ui->actionEmbedImage->setIcon (icn);
+        ui->actionImageScale->setIcon (icn);
+        ui->actionNodeIcon->setIcon (icn);
+        ui->actionExpandAll->setIcon (symbolicIcon::icon (":icons/expand.svg"));
+        ui->actionCollapseAll->setIcon (symbolicIcon::icon (":icons/collapse.svg"));
+        ui->actionDeleteNode->setIcon (symbolicIcon::icon (":icons/user-trash.svg"));
+        icn = symbolicIcon::icon (":icons/edit-rename.svg");
+        ui->actionRenameNode->setIcon (icn);
+        ui->namesButton->setIcon (icn);
+        ui->actionProp->setIcon (symbolicIcon::icon (":icons/document-properties.svg"));
+        icn = symbolicIcon::icon (":icons/preferences-desktop-font.svg");
+        ui->actionDocFont->setIcon (icn);
+        ui->actionNodeFont->setIcon (icn);
+        ui->actionPref->setIcon (symbolicIcon::icon (":icons/preferences-system.svg"));
+        ui->actionReplace->setIcon (symbolicIcon::icon (":icons/edit-find-replace.svg"));
+        ui->actionHelp->setIcon (symbolicIcon::icon (":icons/help-contents.svg"));
+        ui->actionAbout->setIcon (symbolicIcon::icon (":icons/help-about.svg"));
+        ui->actionSuper->setIcon (symbolicIcon::icon (":icons/format-text-superscript.svg"));
+        ui->actionSub->setIcon (symbolicIcon::icon (":icons/format-text-subscript.svg"));
+        ui->actionCenter->setIcon (symbolicIcon::icon (":icons/format-justify-center.svg"));
+        ui->actionRight->setIcon (symbolicIcon::icon (":icons/format-justify-right.svg"));
+        ui->actionLeft->setIcon (symbolicIcon::icon (":icons/format-justify-left.svg"));
+        ui->actionJust->setIcon (symbolicIcon::icon (":icons/format-justify-fill.svg"));
+        ui->actionMoveLeft->setIcon (symbolicIcon::icon (":icons/go-previous.svg"));
+        ui->actionMoveRight->setIcon (symbolicIcon::icon (":icons/go-next.svg"));
+        icn = symbolicIcon::icon (":icons/zoom-in.svg");
+        ui->actionH1->setIcon (icn);
+        ui->actionH2->setIcon (icn);
+        ui->actionH3->setIcon (icn);
+        icn = symbolicIcon::icon (":icons/tag.svg");
+        ui->actionTags->setIcon (icn);
+        ui->tagsButton->setIcon (icn);
+        ui->actionLink->setIcon (symbolicIcon::icon (":icons/insert-link.svg"));
+        ui->actionCopyLink->setIcon (symbolicIcon::icon (":icons/link.svg"));
+        ui->actionTable->setIcon (symbolicIcon::icon (":icons/insert-table.svg"));
+        ui->actionTableAppendRow->setIcon (symbolicIcon::icon (":icons/edit-table-insert-row-below.svg"));
+        ui->actionTableAppendCol->setIcon (symbolicIcon::icon (":icons/edit-table-insert-column-right.svg"));
+        ui->actionTableDeleteRow->setIcon (symbolicIcon::icon (":icons/edit-table-delete-row.svg"));
+        ui->actionTableDeleteCol->setIcon (symbolicIcon::icon (":icons/edit-table-delete-column.svg"));
+        ui->actionTableMergeCells->setIcon (symbolicIcon::icon (":icons/edit-table-cell-merge.svg"));
+        ui->actionTablePrependRow->setIcon (symbolicIcon::icon (":icons/edit-table-insert-row-above.svg"));
+        ui->actionTablePrependCol->setIcon (symbolicIcon::icon (":icons/edit-table-insert-column-left.svg"));
+        ui->actionRTL->setIcon (symbolicIcon::icon (":icons/format-text-direction-rtl.svg"));
+        ui->actionLTR->setIcon (symbolicIcon::icon (":icons/format-text-direction-ltr.svg"));
+        ui->actionMenu->setIcon (symbolicIcon::icon (":icons/application-menu.svg"));
 
-    ui->actionPrepSibling->setIcon (symbolicIcon::icon (":icons/sibling-above.svg"));
-    ui->actionNewSibling->setIcon (symbolicIcon::icon (":icons/sibling-below.svg"));
-    ui->actionNewChild->setIcon (symbolicIcon::icon (":icons/child.svg"));
+        ui->actionPrepSibling->setIcon (symbolicIcon::icon (":icons/sibling-above.svg"));
+        ui->actionNewSibling->setIcon (symbolicIcon::icon (":icons/sibling-below.svg"));
+        ui->actionNewChild->setIcon (symbolicIcon::icon (":icons/child.svg"));
 
-    ui->everywhereButton->setIcon (symbolicIcon::icon (":icons/all.svg"));
-    ui->wholeButton->setIcon (symbolicIcon::icon (":icons/whole.svg"));
-    ui->caseButton->setIcon (symbolicIcon::icon (":icons/case.svg"));
+        ui->everywhereButton->setIcon (symbolicIcon::icon (":icons/all.svg"));
+        ui->wholeButton->setIcon (symbolicIcon::icon (":icons/whole.svg"));
+        ui->caseButton->setIcon (symbolicIcon::icon (":icons/case.svg"));
 
-    icn = QIcon::fromTheme ("feathernotes");
-    if (icn.isNull())
-        icn = QIcon (":icons/feathernotes.svg");
-    setWindowIcon (icn);
+        icn = QIcon::fromTheme ("feathernotes");
+        if (icn.isNull())
+            icn = QIcon (":icons/feathernotes.svg");
+        setWindowIcon (icn);
+    }
 
     settings.endGroup();
 
@@ -4721,24 +4279,38 @@ void FN::readAndApplyConfig()
     if (settings.value ("noWrap").toBool())
     {
         wrapByDefault_ = false; // true by default
-        ui->actionWrap->setChecked (false);
+        if (startup)
+            ui->actionWrap->setChecked (false);
     }
+    else
+        wrapByDefault_ = true;
 
     if (settings.value ("noIndent").toBool())
     {
         indentByDefault_ = false; // true by default
-        ui->actionIndent->setChecked (false);
+        if (startup)
+            ui->actionIndent->setChecked (false);
+    }
+    else
+        indentByDefault_ = true;
+
+    autoBracket_ = settings.value ("autoBracket").toBool(); // false by default
+
+    int as = settings.value ("autoSave", -1).toInt();
+    if (startup)
+        autoSave_ = as;
+    else if (autoSave_ != as)
+    {
+        autoSave_ = as;
+        if (autoSave_ >= 1)
+            timer_->start (autoSave_ * 1000 * 60);
+        else if (timer_->isActive())
+            timer_->stop();
     }
 
-    if (settings.value ("autoBracket").toBool())
-        autoBracket_ = true; // false by default
-
-    autoSave_ = settings.value ("autoSave", -1).toInt();
-
-    if (settings.value ("scrollJumpWorkaround").toBool())
-        scrollJumpWorkaround_ = true; // false by default
-    else
-        scrollJumpWorkaround_ = false;
+    scrollJumpWorkaround_ = settings.value ("scrollJumpWorkaround").toBool(); // false by default
+    if (!startup)
+        enableScrollJumpWorkaround (scrollJumpWorkaround_);
 
     settings.endGroup();
 }

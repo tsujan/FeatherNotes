@@ -59,7 +59,8 @@ public:
 
 signals:
     void resized();
-    void imageDropped (QString path);
+    void imageDropped (const QString &path);
+    void FNDocDropped (const QString &path);
     void zoomedOut (TextEdit *textEdit); // needed for reformatting text
 
 protected:

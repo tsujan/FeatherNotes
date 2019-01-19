@@ -495,7 +495,7 @@ void TextEdit::insertFromMimeData (const QMimeData *source)
     else if (source->hasUrls())
     {
         const auto urls = source->urls();
-        for (const QUrl &url : source->urls())
+        for (const QUrl &url : urls)
         {
             QMimeDatabase mimeDatabase;
             QMimeType mimeType = mimeDatabase.mimeTypeForFile (QFileInfo (url.toLocalFile()));
@@ -504,7 +504,12 @@ void TextEdit::insertFromMimeData (const QMimeData *source)
             if (QImageReader::supportedMimeTypes().contains (ba))
                 emit imageDropped (url.path());
             else
-                textCursor().insertText (url.toString());
+            {
+                if (mimeType.name() == "text/feathernotes-fnx")
+                    emit FNDocDropped (url.path());
+                else
+                    textCursor().insertText (url.toString());
+            }
         }
     }
     else

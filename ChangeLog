@@ -12,6 +12,9 @@ V0.4.6
  * Fixed pasting of images into the doc.
  * Fixed DND with an image without extension.
  * Added an option for small toolbar icon size.
+ * Separated the preferences code for adding new options more easily.
+ * Update settings when the Preferences dialog is shown (because settings may have been changed in another FeatherNotes window).
+ * Allow opening docs by DND.
 
 V0.4.5
 ---------

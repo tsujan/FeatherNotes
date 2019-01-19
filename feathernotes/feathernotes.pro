@@ -20,6 +20,7 @@ SOURCES += main.cpp\
            domitem.cpp \
            dommodel.cpp \
            lineedit.cpp \
+           pref.cpp \
            textedit.cpp \
            simplecrypt.cpp \
            vscrollbar.cpp \
@@ -30,6 +31,7 @@ HEADERS += fn.h \
            dommodel.h \
            textedit.h \
            lineedit.h \
+           pref.h \
            spinbox.h \
            simplecrypt.h \
            vscrollbar.h \
@@ -41,6 +43,7 @@ HEADERS += fn.h \
            svgicons.h
 
 FORMS += fn.ui \
+         predDialog.ui \
          helpDialog.ui \
          about.ui
 
@@ -57,7 +60,7 @@ else:unix:!macx:!haiku {
   DEFINES += HAS_X11
 }
 
-unix:!macx {
+unix {
   #TRANSLATIONS
   exists($$[QT_INSTALL_BINS]/lrelease) {
     TRANSLATIONS = $$system("find data/translations/ -name 'feathernotes_*.ts'")
@@ -67,7 +70,9 @@ unix:!macx {
     updateqm.CONFIG += no_link target_predeps
     QMAKE_EXTRA_COMPILERS += updateqm
   }
+}
 
+unix:!macx {
   #VARIABLES
   isEmpty(PREFIX) {
     PREFIX = /usr
@@ -99,16 +104,6 @@ unix:!macx {
   INSTALLS += target mime desktop appIcon fileIcon trans
 }
 else:macx {
-  #TRANSLATIONS
-  exists($$[QT_INSTALL_BINS]/lrelease) {
-    TRANSLATIONS = $$system("find data/translations/ -name 'feathernotes_*.ts'")
-    updateqm.input = TRANSLATIONS
-    updateqm.output = data/translations/translations/${QMAKE_FILE_BASE}.qm
-    updateqm.commands = $$[QT_INSTALL_BINS]/lrelease ${QMAKE_FILE_IN} -qm data/translations/translations/${QMAKE_FILE_BASE}.qm
-    updateqm.CONFIG += no_link target_predeps
-    QMAKE_EXTRA_COMPILERS += updateqm
-  }
-
   #VARIABLES
   isEmpty(PREFIX) {
     PREFIX = /Applications/

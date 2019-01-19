@@ -18,7 +18,7 @@
 #ifndef FN_H
 #define FN_H
 
-#include <QtGui>
+//#include <QtGui> // too much
 #include <QListWidgetItem>
 #include <QSystemTrayIcon>
 #include <QMainWindow>
@@ -42,6 +42,128 @@ public:
     explicit FN (const QString& message, QWidget *parent = nullptr);
     ~FN();
 
+    void writeGeometryConfig();
+    void writeConfig();
+
+    bool isSizeRem() const {
+        return remSize_;
+    }
+    void remSize (bool rem) {
+        remSize_ = rem;
+    }
+
+    QSize getWinSize() const {
+        return winSize_;
+    }
+    void setWinSize (const QSize &size) {
+        winSize_ = size;
+    }
+
+    QSize getStartSize() const {
+        return startSize_;
+    }
+    void setStartSize (const QSize &size) {
+        startSize_ = size;
+    }
+
+    bool isSplitterRem() const {
+        return  remSplitter_;
+    }
+    void remSplitter (bool rem) {
+        remSplitter_ = rem;
+    }
+    QByteArray getSpltiterState() const;
+    void setSplitterSizes (const QByteArray &sizes) {
+        splitterSizes_ = sizes;
+    }
+
+    bool isPositionRem() const {
+        return remPosition_;
+    }
+    void remPosition (bool rem) {
+        remPosition_ = rem;
+    }
+    void setPosition (const QPoint &pos) {
+        position_ = pos;
+    }
+
+    bool isUnderE() const {
+        return underE_;
+    }
+    void setUnderE (bool yes);
+    QSize EShift() const {
+        return EShift_;
+    }
+    void setEShift (QSize shift) {
+        EShift_ = shift;
+    }
+
+    bool hasTray() const {
+        return hasTray_;
+    }
+    void useTray (bool use) {
+        hasTray_ = use;
+    }
+
+    bool doesMinToTray() const {
+        return minToTray_;
+    }
+    void minToTray (bool yes) {
+        minToTray_ = yes;
+    }
+
+    bool hasTransparentTree() const {
+        return transparentTree_;
+    }
+    void makeTreeTransparent (bool trans);
+
+    bool hasSmallToolbarIcons() const {
+        return smallToolbarIcons_;
+    }
+    void setToolBarIconSize (bool small);
+
+    bool withoutToolbar() const {
+        return noToolbar_;
+    }
+    bool withoutMenubar() const {
+        return noMenubar_;
+    }
+    void showToolbar (bool show);
+    void showMenubar (bool show);
+
+    bool isWrappedByDefault() const {
+        return wrapByDefault_;
+    }
+    void wrapByDefault (bool wrap) {
+        wrapByDefault_ = wrap;
+    }
+
+    bool isIndentedByDefault() const {
+        return indentByDefault_;
+    }
+    void indentByDefault (bool indent) {
+        indentByDefault_ = indent;
+    }
+
+    bool hasAutoBracket() const {
+        return autoBracket_;
+    }
+    void autoBracket (bool yes) {
+        autoBracket_ = yes;
+    }
+
+    int getAutoSave() const {
+        return autoSave_;
+    }
+    void setAutoSave (int interval) {
+        autoSave_ = interval;
+    }
+
+    bool isScrollJumpWorkaroundEnabled() const {
+        return scrollJumpWorkaround_;
+    }
+    void enableScrollJumpWorkaround (bool enable);
+
 private slots:
     bool close();
     void checkTray();
@@ -54,6 +176,7 @@ private slots:
     void unZooming();
     void newNote();
     void openFile();
+    void openFNDoc (const QString &filePath);
     void autoSaving();
     bool saveFile();
     void undoing();
@@ -88,7 +211,7 @@ private slots:
     void makeHeader();
     void insertLink();
     void embedImage();
-    void imageEmbed (QString path);
+    void imageEmbed (const QString &path);
     void setImagePath (bool);
     void scaleImage();
     void saveImage();
@@ -116,25 +239,7 @@ private slots:
     void nodeFontDialog();
     void toggleWrapping();
     void toggleIndent();
-    void PrefDialog();
-    void prefSize (int value);
-    void prefSplitterSize (int checked);
-    void prefPosition (int checked);
-    void prefHasTray (int checked);
-    void prefMinTray (int checked);
-    void prefTree (int checked);
-    void prefToolbarIcons (int checked);
-    void prefToolbar (int checked);
-    void prefMenubar (int checked);
-    void prefEnlightenment (int checked);
-    void prefWrap (int checked);
-    void prefIndent (int checked);
-    void prefAutoBracket (int checked);
-    void prefAutoSave (int checked);
-    void prefEDiff (int checked);
-    void prefScrollJump (int checked);
-    void setAutoSave (int value);
-    void setEDiff (int value);
+    void prefDialog();
     void noteModified();
     void docProp();
     void nodeChanged (const QModelIndex&, const QModelIndex&);
@@ -170,8 +275,8 @@ private slots:
 
 private:
     void enableActions (bool enable);
-    void fileOpen (QString filePath);
-    bool fileSave (QString filePath);
+    void fileOpen (const QString &filePath);
+    bool fileSave (const QString &filePath);
     void createTrayIcon();
     void closeEvent (QCloseEvent *event);
     void resizeEvent (QResizeEvent *event);
@@ -191,11 +296,12 @@ private:
     void reallySetSearchFlags (bool h);
     void findInNames();
     bool isImageSelected();
-    void readAndApplyConfig();
-    void writeGeometryConfig();
-    void writeConfig();
+    void readAndApplyConfig (bool startup = true);
     QString nodeAddress (QModelIndex index);
     bool isPswrdCorrect();
+    void dragMoveEvent (QDragMoveEvent *event);
+    void dragEnterEvent (QDragEnterEvent *event);
+    void dropEvent (QDropEvent *event);
 
     Ui::FN *ui;
     bool isX11_;

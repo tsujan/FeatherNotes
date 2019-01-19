@@ -44,7 +44,7 @@ public:
 protected:
     void showEvent(QShowEvent * event) {
         if (p)
-            QTimer::singleShot (0, this, SLOT (center()));
+            QTimer::singleShot (0, this, &FileDialog::center);
         QFileDialog::showEvent (event);
     }
 

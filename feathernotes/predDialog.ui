@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FeatherNotes::PrefDialog</class>
+ <widget class="QDialog" name="prefDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>386</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Preferences</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <property name="documentMode">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>Window</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QFrame" name="windowBox">
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="0" colspan="5">
+           <widget class="QCheckBox" name="winSizeBox">
+            <property name="toolTip">
+             <string>Saves window size after closing
+this dialog and also on exit.
+
+Uncheck to set a fixed size!</string>
+            </property>
+            <property name="text">
+             <string>Remember window &amp;size</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" colspan="2">
+           <widget class="QLabel" name="winLabel">
+            <property name="text">
+             <string>Start with this size: </string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QSpinBox" name="winSpinX">
+            <property name="suffix">
+             <string> px</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QLabel" name="winXLabel">
+            <property name="text">
+             <string> × </string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="4">
+           <widget class="QSpinBox" name="winSpinY">
+            <property name="suffix">
+             <string> px</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="5">
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::MinimumExpanding</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>5</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="2" column="0" colspan="5">
+           <widget class="QCheckBox" name="splitterSizeBox">
+            <property name="toolTip">
+             <string>Saves tree width after closing
+this dialog and also on exit.
+
+Uncheck for a width ratio of 170/530.</string>
+            </property>
+            <property name="text">
+             <string>Remember &amp;tree width</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0" colspan="5">
+           <widget class="QCheckBox" name="positionBox">
+            <property name="toolTip">
+             <string>Saves position after closing
+this dialog and also on exit.
+
+(This may not work correctly
+under GTK+ DE's like Unity
+and Cinnamon.)</string>
+            </property>
+            <property name="text">
+             <string>Save &amp;position</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0" colspan="5">
+           <widget class="QCheckBox" name="hasTrayBox">
+            <property name="toolTip">
+             <string>Decides whether a systray icon should be used.
+If checked, the titlebar close button iconifies
+the window to the systray instead of quitting.
+
+Needs restarting of FeatherNotes to take effect.</string>
+            </property>
+            <property name="text">
+             <string>Add to s&amp;ystray</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>22</width>
+              <height>5</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="5" column="1" colspan="4">
+           <widget class="QCheckBox" name="minTrayBox">
+            <property name="toolTip">
+             <string>The command line option --tray
+can be used instead of this.</string>
+            </property>
+            <property name="text">
+             <string>Start i&amp;conified to tray</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0" colspan="5">
+           <widget class="QCheckBox" name="transparentTree">
+            <property name="toolTip">
+             <string>Merge the tree view with its surroundings?</string>
+            </property>
+            <property name="text">
+             <string>Transparent t&amp;ree view</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0" colspan="5">
+           <widget class="QCheckBox" name="smallToolbarIcons">
+            <property name="toolTip">
+             <string>By default, the active widget style determines
+the size of toolbar icons.</string>
+            </property>
+            <property name="text">
+             <string>Small toolbar icons</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="0" colspan="5">
+           <widget class="QCheckBox" name="noToolbar">
+            <property name="text">
+             <string>Do not show t&amp;oolbar</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="0" colspan="5">
+           <widget class="QCheckBox" name="noMenubar">
+            <property name="toolTip">
+             <string>If the menubar is hidden,
+a menu button appears on the toolbar.</string>
+            </property>
+            <property name="text">
+             <string>Do not show &amp;menubar</string>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="0" colspan="5">
+           <widget class="QCheckBox" name="EBox">
+            <property name="toolTip">
+             <string>Check this under Enlightenment (or, probably, another DE)
+to use the systray icon more easily!</string>
+            </property>
+            <property name="text">
+             <string>Running &amp;under Enlightenment?</string>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="0">
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>22</width>
+              <height>5</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="11" column="1">
+           <widget class="QLabel" name="ELabel">
+            <property name="toolTip">
+             <string>Some DE's (like Enlightenment) may not report the window position
+correctly. If that is the case, you could try to fix the problem here.
+
+If the panel is on the bottom or top, the Y-coordinate should be set;
+if it is on the left or right, the X-coordinate should be set.
+
+After choosing the coordinate shifts, put the window in a proper
+position and then restart FeatherNotes!</string>
+            </property>
+            <property name="text">
+             <string>Shifts (X × Y): </string>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="2">
+           <widget class="QSpinBox" name="ESpinX">
+            <property name="suffix">
+             <string> px</string>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="3">
+           <widget class="QLabel" name="XLabel">
+            <property name="text">
+             <string> × </string>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="4">
+           <widget class="QSpinBox" name="ESpinY">
+            <property name="suffix">
+             <string> px</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>Text</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QFrame" name="textBox">
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="0" column="0" colspan="2">
+           <widget class="QCheckBox" name="wrapBox">
+            <property name="text">
+             <string>&amp;Wrap lines by default</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" colspan="2">
+           <widget class="QCheckBox" name="indentBox">
+            <property name="text">
+             <string>Auto-&amp;indent by default</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0" colspan="2">
+           <widget class="QCheckBox" name="autoBracketBox">
+            <property name="toolTip">
+             <string>This covers parentheses, braces, brackets and quotes.
+
+Needs restarting of FeatherNotes to take effect.</string>
+            </property>
+            <property name="text">
+             <string>Auto-&amp;bracket
+(Requires application restart)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QCheckBox" name="autoSaveBox">
+            <property name="text">
+             <string>&amp;Auto-save every</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QSpinBox" name="autoSaveSpinBox">
+            <property name="suffix">
+             <string> minute(s)</string>
+            </property>
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>60</number>
+            </property>
+            <property name="value">
+             <number>5</number>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="2">
+           <spacer name="horizontalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::MinimumExpanding</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>5</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="4" column="0" colspan="2">
+           <widget class="QCheckBox" name="workaroundBox">
+            <property name="toolTip">
+             <string>This is not a complete fix but
+prevents annoying scroll jumps.</string>
+            </property>
+            <property name="text">
+             <string>Workaround for &amp;Qt5's scroll jump bug</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Close|QDialogButtonBox::Help</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>Dialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>Dialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
