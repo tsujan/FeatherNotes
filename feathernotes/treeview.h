@@ -86,6 +86,12 @@ protected:
             const auto urls = event->mimeData()->urls();
             for (const QUrl &url : urls)
             {
+                if (url.fileName().endsWith (".fnx"))
+                {
+                    FNDocFound = true;
+                    event->acceptProposedAction();
+                    break;
+                }
                 QMimeDatabase mimeDatabase;
                 QMimeType mimeType = mimeDatabase.mimeTypeForFile (QFileInfo (url.toLocalFile()));
                 if (mimeType.name() == "text/feathernotes-fnx")
@@ -110,6 +116,11 @@ protected:
             const auto urls = event->mimeData()->urls();
             for (const QUrl &url : urls)
             {
+                if (url.fileName().endsWith (".fnx"))
+                {
+                    emit FNDocDropped (url.path());
+                    break;
+                }
                 QMimeDatabase mimeDatabase;
                 QMimeType mimeType = mimeDatabase.mimeTypeForFile (QFileInfo (url.toLocalFile()));
                 if (mimeType.name() == "text/feathernotes-fnx")

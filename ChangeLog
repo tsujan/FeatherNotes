@@ -15,6 +15,7 @@ V0.4.6
  * Separated the preferences code for adding new options more easily.
  * Update settings when the Preferences dialog is shown (because settings may have been changed in another FeatherNotes window).
  * Allow opening docs by DND.
+ * Added a magic string to `text/feathernotes-fnx` but the extension has priority.
 
 V0.4.5
 ---------

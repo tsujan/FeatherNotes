@@ -505,8 +505,12 @@ void TextEdit::insertFromMimeData (const QMimeData *source)
                 emit imageDropped (url.path());
             else
             {
-                if (mimeType.name() == "text/feathernotes-fnx")
+                if (url.fileName().endsWith (".fnx")
+                    || mimeType.name() == "text/feathernotes-fnx")
+                {
                     emit FNDocDropped (url.path());
+                    return; // only open the first file
+                }
                 else
                     textCursor().insertText (url.toString());
             }

@@ -1092,6 +1092,11 @@ void FN::dragMoveEvent (QDragMoveEvent *event)
         const auto urls = event->mimeData()->urls();
         for (const QUrl &url : urls)
         {
+            if (url.fileName().endsWith (".fnx"))
+            {
+                event->acceptProposedAction();
+                return;
+            }
             QMimeDatabase mimeDatabase;
             QMimeType mimeType = mimeDatabase.mimeTypeForFile (QFileInfo (url.toLocalFile()));
             if (mimeType.name() == "text/feathernotes-fnx")
@@ -1111,6 +1116,11 @@ void FN::dragEnterEvent (QDragEnterEvent *event)
         const auto urls = event->mimeData()->urls();
         for (const QUrl &url : urls)
         {
+            if (url.fileName().endsWith (".fnx"))
+            {
+                event->acceptProposedAction();
+                return;
+            }
             QMimeDatabase mimeDatabase;
             QMimeType mimeType = mimeDatabase.mimeTypeForFile (QFileInfo (url.toLocalFile()));
             if (mimeType.name() == "text/feathernotes-fnx")
@@ -1130,6 +1140,11 @@ void FN::dropEvent (QDropEvent *event)
         const auto urls = event->mimeData()->urls();
         for (const QUrl &url : urls)
         {
+            if (url.fileName().endsWith (".fnx"))
+            {
+                openFNDoc (url.path());
+                break;
+            }
             QMimeDatabase mimeDatabase;
             QMimeType mimeType = mimeDatabase.mimeTypeForFile (QFileInfo (url.toLocalFile()));
             if (mimeType.name() == "text/feathernotes-fnx")

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
-   <mime-type type="text/feathernotes-fnx">
-      <comment>FeatherNotes Document</comment>
-      <glob pattern="*.fnx"/>
-   </mime-type>
+  <mime-type type="text/feathernotes-fnx">
+    <comment>FeatherNotes Document</comment>
+      <magic priority="50">
+        <match value="&lt;?xml version='1.0' encoding='utf-8'?&gt;\n&lt;feathernotes " type="string" offset="0"/>
+      </magic>
+    <glob pattern="*.fnx"/>
+  </mime-type>
 </mime-info>
