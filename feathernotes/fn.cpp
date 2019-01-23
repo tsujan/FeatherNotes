@@ -48,7 +48,7 @@
 #include <QMimeDatabase>
 
 #ifdef HAS_X11
-#if defined Q_WS_X11 || defined Q_OS_LINUX
+#if defined Q_WS_X11 || defined Q_OS_LINUX || defined Q_OS_OPENBSD
 #include <QX11Info>
 #endif
 #include "x11.h"
@@ -65,7 +65,7 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
 {
 #ifdef HAS_X11
     // For now, the lack of x11 is seen as wayland.
-#if defined Q_WS_X11 || defined Q_OS_LINUX || defined Q_OS_FREEBSD
+#if defined Q_WS_X11 || defined Q_OS_LINUX || defined Q_OS_FREEBSD || defined Q_OS_OPENBSD
 #if QT_VERSION < 0x050200
     isX11_ = true;
 #else
