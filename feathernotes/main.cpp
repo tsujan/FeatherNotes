@@ -85,7 +85,11 @@ int main(int argc, char *argv[])
     app.installTranslator (&qtTranslator);
 
     QTranslator FPTranslator;
+#ifdef Q_OS_HAIKU
+    FPTranslator.load ("feathernotes_" + lang, "/translations");
+#else
     FPTranslator.load ("feathernotes_" + lang, QStringLiteral (DATADIR) + "/feathernotes/translations");
+#endif
     app.installTranslator (&FPTranslator);
 
     QString message;

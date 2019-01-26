@@ -72,7 +72,7 @@ unix {
   }
 }
 
-unix:!macx {
+unix:!macx:!haiku {
   #VARIABLES
   isEmpty(PREFIX) {
     PREFIX = /usr
@@ -118,6 +118,22 @@ else:macx {
   target.path =$$BINDIR
 
   trans.path = $$DATADIR/feathernotes
+  trans.files += data/translations/translations
+
+  INSTALLS += target trans
+}
+else:haiku {
+  #VARIABLES
+  isEmpty(PREFIX) {
+    PREFIX = /boot/home/config/non-packaged/apps/FeatherNotes
+  }
+  BINDIR = $$PREFIX
+
+  #MAKE INSTALL
+
+  target.path =$$BINDIR
+
+  trans.path = $$PREFIX
   trans.files += data/translations/translations
 
   INSTALLS += target trans
