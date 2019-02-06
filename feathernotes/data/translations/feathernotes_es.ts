@@ -1058,13 +1058,6 @@
         <translation>Abrir archivo...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1037"/>
-        <location filename="../../fn.cpp" line="1268"/>
-        <location filename="../../fn.cpp" line="1289"/>
-        <source>FeatherNotes documents (*.fnx)</source>
-        <translation>Documentos de FeatherNotes (*.fnx)</translation>
-    </message>
-    <message>
         <location filename="../../fn.cpp" line="1175"/>
         <location filename="../../fn.cpp" line="4646"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be saved!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
@@ -1201,6 +1194,13 @@
         <location filename="../../fn.cpp" line="709"/>
         <source>New Node</source>
         <translation>Nuevo nodo</translation>
+    </message>
+    <message>
+        <location filename="../../fn.cpp" line="1037"/>
+        <location filename="../../fn.cpp" line="1268"/>
+        <location filename="../../fn.cpp" line="1289"/>
+        <source>FeatherNotes documents (*.fnx);;All Files (*)</source>
+        <translation>Documentos de FeatherNotes (*.fnx);;Todos los archivos (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1250"/>

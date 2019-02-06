@@ -1034,7 +1034,7 @@ void FN::openFile()
     dialog.setAcceptMode (QFileDialog::AcceptOpen);
     dialog.setWindowTitle (tr ("Open file..."));
     dialog.setFileMode (QFileDialog::ExistingFiles);
-    dialog.setNameFilter (tr ("FeatherNotes documents (*.fnx)"));
+    dialog.setNameFilter (tr ("FeatherNotes documents (*.fnx);;All Files (*)"));
     if (QFileInfo (path).isDir())
         dialog.setDirectory (path);
     else
@@ -1265,7 +1265,7 @@ bool FN::saveFile()
             dialog.setAcceptMode (QFileDialog::AcceptSave);
             dialog.setWindowTitle (tr ("Save As..."));
             dialog.setFileMode (QFileDialog::AnyFile);
-            dialog.setNameFilter (tr ("FeatherNotes documents (*.fnx)"));
+            dialog.setNameFilter (tr ("FeatherNotes documents (*.fnx);;All Files (*)"));
             dialog.setDirectory (fname.section ("/", 0, -2)); // workaround for KDE
             dialog.selectFile (fname);
             dialog.autoScroll();
@@ -1286,7 +1286,7 @@ bool FN::saveFile()
         dialog.setAcceptMode (QFileDialog::AcceptSave);
         dialog.setWindowTitle (tr ("Save As..."));
         dialog.setFileMode (QFileDialog::AnyFile);
-        dialog.setNameFilter (tr ("FeatherNotes documents (*.fnx)"));
+        dialog.setNameFilter (tr ("FeatherNotes documents (*.fnx);;All Files (*)"));
         dialog.setDirectory (fname.section ("/", 0, -2)); // workaround for KDE
         dialog.selectFile (fname);
         dialog.autoScroll();
