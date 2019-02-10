@@ -1,3 +1,7 @@
+V0.4.7
+---------
+ * No need to elide the systray tooltip.
+
 V0.4.6
 ---------
  * Removed an old workaround for KDE's clipboard.

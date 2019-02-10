@@ -739,16 +739,8 @@ void FN::setTitle (const QString& fname)
 
     if (tray_)
     {
-        QFontMetrics metrics (QToolTip::font());
-        int w = 0;
-        if (QWindow *win = windowHandle())
-        {
-            if (QScreen *sc = win->screen())
-                w = sc->availableGeometry().width();
-        }
-        if (w > 200 * metrics.width (' ')) w = 200 * metrics.width (' ');
         tray_->setToolTip ("<p style='white-space:pre'>"
-                           + metrics.elidedText (shownName, Qt::ElideMiddle, w)
+                           + shownName
                            + "</p>");
     }
 }
@@ -3150,7 +3142,8 @@ void FN::showAndFocus()
 /*************************/
 void FN::stealFocus()
 {
-    windowHandle()->requestActivate();
+    if (QWindow *win = windowHandle())
+        win->requestActivate();
 }
 /*************************/
 void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
