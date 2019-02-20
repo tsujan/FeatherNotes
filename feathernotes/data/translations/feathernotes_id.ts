@@ -6,7 +6,7 @@
     <message>
         <location filename="../../about.ui" line="119"/>
         <source>License</source>
-        <translation></translation>
+        <translation>Lisensi</translation>
     </message>
 </context>
 <context>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../../fn.ui" line="63"/>
         <source>Next (F3)</source>
-        <translation></translation>
+        <translation>Berikutnya (F3)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="66"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../../fn.ui" line="76"/>
         <source>Previous (F4)</source>
-        <translation></translation>
+        <translation>Sebelumnya (F4)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="79"/>
@@ -41,12 +41,12 @@
     <message>
         <location filename="../../fn.ui" line="95"/>
         <source>Search...</source>
-        <translation></translation>
+        <translation>Cari...</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="107"/>
         <source>Search only in names (Ctrl+Shift+F7)</source>
-        <translation></translation>
+        <translation>Cari berdasarkan nama (Ctrl + Shift + F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="110"/>
@@ -56,7 +56,7 @@
     <message>
         <location filename="../../fn.ui" line="117"/>
         <source>Search only in tags (Shift+F7)</source>
-        <translation></translation>
+        <translation>Cari bedasarkan tags (Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="120"/>
@@ -66,7 +66,7 @@
     <message>
         <location filename="../../fn.ui" line="130"/>
         <source>Search in all nodes (F7)</source>
-        <translation></translation>
+        <translation>Cari di semua node (F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="133"/>
@@ -76,12 +76,12 @@
     <message>
         <location filename="../../fn.ui" line="166"/>
         <source>Whole Word (F6)</source>
-        <translation></translation>
+        <translation>Seluruh Kata (F6)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="169"/>
         <source>Whole Word</source>
-        <translation></translation>
+        <translation>Seluruh Kata</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="172"/>
@@ -111,7 +111,7 @@
     <message>
         <location filename="../../fn.ui" line="218"/>
         <source>&amp;Edit</source>
-        <translation></translation>
+        <translation>Sunting</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="233"/>
@@ -131,7 +131,7 @@
     <message>
         <location filename="../../fn.ui" line="300"/>
         <source>&amp;Search</source>
-        <translation></translation>
+        <translation type="unfinished">Cari</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="307"/>
