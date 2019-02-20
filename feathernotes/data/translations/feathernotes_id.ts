@@ -91,12 +91,12 @@
     <message>
         <location filename="../../fn.ui" line="150"/>
         <source>Match Case (F5)</source>
-        <translation></translation>
+        <translation>Peka huruf (F5)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="153"/>
         <source>Match Case</source>
-        <translation></translation>
+        <translation>Peka huruf</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="156"/>
@@ -126,43 +126,43 @@
     <message>
         <location filename="../../fn.ui" line="288"/>
         <source>&amp;Options</source>
-        <translation></translation>
+        <translation>&amp;Opsi</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="300"/>
         <source>&amp;Search</source>
-        <translation type="unfinished">Cari</translation>
+        <translation>Cari</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="307"/>
         <location filename="../../fn.ui" line="952"/>
         <source>&amp;Help</source>
-        <translation></translation>
+        <translation>Bantuan</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="410"/>
         <source>Find:</source>
-        <translation></translation>
+        <translation>Cari:</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="417"/>
         <source>Replace with:</source>
-        <translation></translation>
+        <translation>Ganti dengan:</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="430"/>
         <source>To be replaced</source>
-        <translation></translation>
+        <translation>Untuk diganti</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="443"/>
         <source>Replacing text</source>
-        <translation></translation>
+        <translation>Mengganti teks</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="450"/>
         <source>Previous (F9)</source>
-        <translation></translation>
+        <translation>Sebelumnya (F9)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="453"/>
@@ -172,7 +172,7 @@
     <message>
         <location filename="../../fn.ui" line="463"/>
         <source>Next (F8)</source>
-        <translation></translation>
+        <translation>Selanjutnya (F8)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="466"/>
@@ -182,7 +182,7 @@
     <message>
         <location filename="../../fn.ui" line="476"/>
         <source>Replace all (F10)</source>
-        <translation></translation>
+        <translation>Ganti semua (F10)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="479"/>
@@ -192,13 +192,13 @@
     <message>
         <location filename="../../fn.ui" line="496"/>
         <source>&amp;Save</source>
-        <translation></translation>
+        <translation>&amp;Simpan</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="499"/>
         <location filename="../../fn.cpp" line="734"/>
         <source>Save</source>
-        <translation></translation>
+        <translation>Simpan</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="502"/>
@@ -209,12 +209,12 @@
         <location filename="../../fn.ui" line="507"/>
         <location filename="../../fn.cpp" line="490"/>
         <source>&amp;Open</source>
-        <translation></translation>
+        <translation>Buka</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="510"/>
         <source>Open a file</source>
-        <translation></translation>
+        <translation>Buka sebuah berkas</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="513"/>
@@ -224,12 +224,12 @@
     <message>
         <location filename="../../fn.ui" line="521"/>
         <source>&amp;Undo</source>
-        <translation></translation>
+        <translation>Tak jadi</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="524"/>
         <source>Undo</source>
-        <translation></translation>
+        <translation>Tak jadi</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="527"/>
@@ -239,12 +239,12 @@
     <message>
         <location filename="../../fn.ui" line="535"/>
         <source>&amp;Redo</source>
-        <translation></translation>
+        <translation>Jadi lagi</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="538"/>
         <source>Redo</source>
-        <translation></translation>
+        <translation>Jadi lagi</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="541"/>
@@ -254,12 +254,12 @@
     <message>
         <location filename="../../fn.ui" line="549"/>
         <source>&amp;Find</source>
-        <translation></translation>
+        <translation>Cari</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="552"/>
         <source>Show/hide searchbar</source>
-        <translation></translation>
+        <translation>Tampilkan/sembunyikan kotak pencarian</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="555"/>
@@ -269,12 +269,12 @@
     <message>
         <location filename="../../fn.ui" line="563"/>
         <source>&amp;Clear All Formats</source>
-        <translation></translation>
+        <translation>Bersihkan semua format</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="566"/>
         <source>Clear all formats</source>
-        <translation></translation>
+        <translation>Bersihkan semua format</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="569"/>
@@ -284,12 +284,12 @@
     <message>
         <location filename="../../fn.ui" line="580"/>
         <source>&amp;Bold</source>
-        <translation></translation>
+        <translation>Tebal</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="583"/>
         <source>Bold</source>
-        <translation></translation>
+        <translation>Tebal</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="586"/>
@@ -299,12 +299,12 @@
     <message>
         <location filename="../../fn.ui" line="597"/>
         <source>&amp;Italic</source>
-        <translation></translation>
+        <translation>Miring</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="600"/>
         <source>Italic</source>
-        <translation></translation>
+        <translation>Miring</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="603"/>
@@ -314,12 +314,12 @@
     <message>
         <location filename="../../fn.ui" line="614"/>
         <source>&amp;Underline</source>
-        <translation></translation>
+        <translation>Garis Bawah</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="617"/>
         <source>Underline</source>
-        <translation></translation>
+        <translation>Garis Bawah</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="620"/>
@@ -329,12 +329,12 @@
     <message>
         <location filename="../../fn.ui" line="631"/>
         <source>&amp;Strike Through</source>
-        <translation></translation>
+        <translation>Coret</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="634"/>
         <source>Strike through</source>
-        <translation></translation>
+        <translation>Coret</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="637"/>
@@ -344,12 +344,12 @@
     <message>
         <location filename="../../fn.ui" line="645"/>
         <source>Te&amp;xt Color</source>
-        <translation></translation>
+        <translation>Warna teks</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="648"/>
         <source>Text color</source>
-        <translation></translation>
+        <translation>Warna teks</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="651"/>
@@ -359,12 +359,12 @@
     <message>
         <location filename="../../fn.ui" line="659"/>
         <source>Back&amp;ground Color</source>
-        <translation></translation>
+        <translation>Warna latar belakang</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="662"/>
         <source>Background color</source>
-        <translation></translation>
+        <translation>Warna latar belakang</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="665"/>
@@ -374,13 +374,13 @@
     <message>
         <location filename="../../fn.ui" line="670"/>
         <source>Options</source>
-        <translation></translation>
+        <translation>Opsi</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="675"/>
         <location filename="../../fn.cpp" line="489"/>
         <source>&amp;New Note</source>
-        <translation></translation>
+        <translation>Catatan Baru</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="678"/>
@@ -390,7 +390,7 @@
     <message>
         <location filename="../../fn.ui" line="686"/>
         <source>Save &amp;As</source>
-        <translation></translation>
+        <translation>Simpan Seb&amp;agai</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="689"/>
@@ -400,7 +400,7 @@
     <message>
         <location filename="../../fn.ui" line="697"/>
         <source>&amp;Print</source>
-        <translation></translation>
+        <translation>Cetak</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="700"/>
@@ -410,7 +410,7 @@
     <message>
         <location filename="../../fn.ui" line="708"/>
         <source>P&amp;rint with Sub-Nodes</source>
-        <translation></translation>
+        <translation>P&amp;rint dengan Sub-Nodes</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="716"/>
@@ -421,7 +421,7 @@
         <location filename="../../fn.ui" line="721"/>
         <location filename="../../fn.cpp" line="492"/>
         <source>&amp;Quit</source>
-        <translation></translation>
+        <translation>Keluar</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="724"/>
@@ -431,7 +431,7 @@
     <message>
         <location filename="../../fn.ui" line="732"/>
         <source>&amp;Cut</source>
-        <translation></translation>
+        <translation>Potong</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="735"/>
@@ -441,7 +441,7 @@
     <message>
         <location filename="../../fn.ui" line="743"/>
         <source>C&amp;opy</source>
-        <translation></translation>
+        <translation>Salin</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="746"/>
@@ -451,7 +451,7 @@
     <message>
         <location filename="../../fn.ui" line="754"/>
         <source>&amp;Paste</source>
-        <translation></translation>
+        <translation>Tem&amp;pel</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="757"/>
@@ -461,12 +461,12 @@
     <message>
         <location filename="../../fn.ui" line="765"/>
         <source>&amp;Delete</source>
-        <translation></translation>
+        <translation>Hapus</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="773"/>
         <source>&amp;Select All</source>
-        <translation></translation>
+        <translation>Pilih &amp;Semua</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="776"/>
@@ -476,13 +476,13 @@
     <message>
         <location filename="../../fn.ui" line="784"/>
         <source>E&amp;mbed Image</source>
-        <translation></translation>
+        <translation>E&amp;mbed Gambar</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="787"/>
         <location filename="../../fn.cpp" line="3111"/>
         <source>Embed Image</source>
-        <translation></translation>
+        <translation>Embed Gambar</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="790"/>
@@ -492,7 +492,7 @@
     <message>
         <location filename="../../fn.ui" line="798"/>
         <source>E&amp;xpand All</source>
-        <translation></translation>
+        <translation>Memperluas Semua</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="801"/>
@@ -502,7 +502,7 @@
     <message>
         <location filename="../../fn.ui" line="809"/>
         <source>Collap&amp;se All</source>
-        <translation></translation>
+        <translation>Tutup Semua</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="812"/>
@@ -512,7 +512,7 @@
     <message>
         <location filename="../../fn.ui" line="820"/>
         <source>&amp;Append Sibling</source>
-        <translation></translation>
+        <translation>Tambahkan Sibling</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="823"/>
@@ -522,7 +522,7 @@
     <message>
         <location filename="../../fn.ui" line="831"/>
         <source>Append &amp;Child</source>
-        <translation></translation>
+        <translation>Tambahkan &amp;Child</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="834"/>
@@ -532,7 +532,7 @@
     <message>
         <location filename="../../fn.ui" line="842"/>
         <source>&amp;Delete Node</source>
-        <translation></translation>
+        <translation>Hapus Node</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="845"/>
@@ -542,7 +542,7 @@
     <message>
         <location filename="../../fn.ui" line="853"/>
         <source>Move &amp;Up</source>
-        <translation></translation>
+        <translation>Pindahkan Ke Atas</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="856"/>
@@ -552,7 +552,7 @@
     <message>
         <location filename="../../fn.ui" line="864"/>
         <source>Move Do&amp;wn</source>
-        <translation></translation>
+        <translation>Pindahkan Ke Bawah</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="867"/>
@@ -562,7 +562,7 @@
     <message>
         <location filename="../../fn.ui" line="875"/>
         <source>Re&amp;name Node</source>
-        <translation></translation>
+        <translation>Hapus Node</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="878"/>
@@ -572,7 +572,7 @@
     <message>
         <location filename="../../fn.ui" line="883"/>
         <source>Tree Pr&amp;operties</source>
-        <translation></translation>
+        <translation>Properti Tree</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="886"/>
@@ -582,7 +582,7 @@
     <message>
         <location filename="../../fn.ui" line="894"/>
         <source>Document &amp;Font</source>
-        <translation></translation>
+        <translation>Dokumen &amp; Font</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="908"/>
@@ -597,7 +597,7 @@
     <message>
         <location filename="../../fn.ui" line="925"/>
         <source>&amp;Auto-Indentation</source>
-        <translation></translation>
+        <translation>Indentasi otomatis</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="928"/>
@@ -607,7 +607,7 @@
     <message>
         <location filename="../../fn.ui" line="933"/>
         <source>&amp;Preferences</source>
-        <translation></translation>
+        <translation>&amp;Pengaturan</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="936"/>
@@ -617,7 +617,7 @@
     <message>
         <location filename="../../fn.ui" line="944"/>
         <source>Find and &amp;Replace</source>
-        <translation></translation>
+        <translation>Temukan dan ganti</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="947"/>
@@ -632,12 +632,12 @@
     <message>
         <location filename="../../fn.ui" line="960"/>
         <source>&amp;About</source>
-        <translation></translation>
+        <translation>Tentang</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="968"/>
         <source>Pr&amp;int All Nodes</source>
-        <translation></translation>
+        <translation>Pr&amp;int Semua Node</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="979"/>
@@ -822,7 +822,7 @@
     <message>
         <location filename="../../fn.ui" line="1169"/>
         <source>Paste &amp;HTML</source>
-        <translation></translation>
+        <translation>Tempel &amp;HTML</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1172"/>
@@ -842,7 +842,7 @@
     <message>
         <location filename="../../fn.ui" line="1191"/>
         <source>Insert Lin&amp;k</source>
-        <translation></translation>
+        <translation>Masukan Lin&amp;k</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1194"/>
@@ -852,7 +852,7 @@
     <message>
         <location filename="../../fn.ui" line="1199"/>
         <source>C&amp;opy Link</source>
-        <translation></translation>
+        <translation>Salin Link</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1207"/>
@@ -867,47 +867,47 @@
     <message>
         <location filename="../../fn.ui" line="1215"/>
         <source>Append Row</source>
-        <translation></translation>
+        <translation>Tambah Baris</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1220"/>
         <source>Delete Row</source>
-        <translation></translation>
+        <translation>Hapus Baris</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1225"/>
         <source>Append Column</source>
-        <translation></translation>
+        <translation>Tambahkan Kolom</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1230"/>
         <source>Delete Column</source>
-        <translation></translation>
+        <translation>Hapus Kolom</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1235"/>
         <source>Merge Cells</source>
-        <translation></translation>
+        <translation>Gabungkan Sel</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1240"/>
         <source>Prepend Row</source>
-        <translation></translation>
+        <translation>Tambah Baris Sebelumnya</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1245"/>
         <source>Prepend Column</source>
-        <translation></translation>
+        <translation>Tambah Kolom Sebelumnya</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1253"/>
         <source>Export &amp;HTML</source>
-        <translation></translation>
+        <translation>Ekspor &amp;HTML</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1258"/>
         <source>Save Ima&amp;ge(s)</source>
-        <translation></translation>
+        <translation>Simpan &amp;Gambar</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1269"/>
@@ -995,7 +995,7 @@
     <message>
         <location filename="../../fn.cpp" line="649"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;New note?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Catatan baru?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="650"/>
