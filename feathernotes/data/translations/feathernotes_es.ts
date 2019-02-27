@@ -1541,12 +1541,13 @@ de comandos --tray en vez de esto.</translation>
         <location filename="../../predDialog.ui" line="172"/>
         <source>By default, the active widget style determines
 the size of toolbar icons.</source>
-        <translation type="unfinished"></translation>
+        <translation>Por defecto, el estilo del control activo determina el
+tamaño de los iconos de la barra de herramientas.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="176"/>
         <source>Small toolbar icons</source>
-        <translation type="unfinished"></translation>
+        <translation>Iconos pequeños de la barra de herramientas</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="183"/>
