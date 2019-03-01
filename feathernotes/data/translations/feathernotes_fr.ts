@@ -6,7 +6,7 @@
     <message>
         <location filename="../../about.ui" line="125"/>
         <source>License</source>
-        <translation></translation>
+        <translation>Licence</translation>
     </message>
 </context>
 <context>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../../fn.ui" line="65"/>
         <source>Next (F3)</source>
-        <translation></translation>
+        <translation>Suivant (F3)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="68"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../../fn.ui" line="81"/>
         <source>Previous (F4)</source>
-        <translation></translation>
+        <translation>Précédent (F4)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="84"/>
@@ -41,32 +41,32 @@
     <message>
         <location filename="../../fn.ui" line="100"/>
         <source>Search...</source>
-        <translation></translation>
+        <translation>Chercher...</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="115"/>
         <source>Search only in names (Ctrl+Shift+F7)</source>
-        <translation></translation>
+        <translation>Rechercher uniquement dans les noms (Ctrl+Maj+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="118"/>
         <source>Ctrl+Shift+F7</source>
-        <translation></translation>
+        <translation>Ctrl+Maj+F7</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="128"/>
         <source>Search only in tags (Shift+F7)</source>
-        <translation></translation>
+        <translation>Rechercher uniquement dans les balises (Maj+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="131"/>
         <source>Shift+F7</source>
-        <translation></translation>
+        <translation>Maj+F7</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="144"/>
         <source>Search in all nodes (F7)</source>
-        <translation></translation>
+        <translation>Rechercher dans tous les nœuds (F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="147"/>
@@ -76,12 +76,12 @@
     <message>
         <location filename="../../fn.ui" line="186"/>
         <source>Whole Word (F6)</source>
-        <translation></translation>
+        <translation>Mot entier (F6)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="189"/>
         <source>Whole Word</source>
-        <translation></translation>
+        <translation>Mot entier</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="192"/>
@@ -91,12 +91,12 @@
     <message>
         <location filename="../../fn.ui" line="167"/>
         <source>Match Case (F5)</source>
-        <translation></translation>
+        <translation>Respecter la casse (F5)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="170"/>
         <source>Match Case</source>
-        <translation></translation>
+        <translation>Respecter la casse</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="173"/>
@@ -106,12 +106,12 @@
     <message>
         <location filename="../../fn.ui" line="219"/>
         <source>&amp;File</source>
-        <translation></translation>
+        <translation>&amp;Fichier</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="238"/>
         <source>&amp;Edit</source>
-        <translation></translation>
+        <translation>&amp;Éditer</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="253"/>
@@ -121,7 +121,7 @@
     <message>
         <location filename="../../fn.ui" line="285"/>
         <source>&amp;Tree</source>
-        <translation></translation>
+        <translation>&amp;Arborescence</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="308"/>
@@ -131,38 +131,38 @@
     <message>
         <location filename="../../fn.ui" line="320"/>
         <source>&amp;Search</source>
-        <translation></translation>
+        <translation>&amp;Chercher</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="327"/>
         <location filename="../../fn.ui" line="975"/>
         <source>&amp;Help</source>
-        <translation></translation>
+        <translation>&amp;Aide</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="424"/>
         <source>Find:</source>
-        <translation></translation>
+        <translation>Trouver :</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="431"/>
         <source>Replace with:</source>
-        <translation></translation>
+        <translation>Remplacer par :</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="444"/>
         <source>To be replaced</source>
-        <translation></translation>
+        <translation>À remplacer</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="457"/>
         <source>Replacing text</source>
-        <translation></translation>
+        <translation>Texte de remplacement</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="467"/>
         <source>Previous (F9)</source>
-        <translation></translation>
+        <translation>Précédent (F9)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="470"/>
@@ -172,7 +172,7 @@
     <message>
         <location filename="../../fn.ui" line="483"/>
         <source>Next (F8)</source>
-        <translation></translation>
+        <translation>Suivant (F8)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="486"/>
@@ -182,7 +182,7 @@
     <message>
         <location filename="../../fn.ui" line="499"/>
         <source>Replace all (F10)</source>
-        <translation></translation>
+        <translation>Tout remplacer (F10)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="502"/>
@@ -192,13 +192,13 @@
     <message>
         <location filename="../../fn.ui" line="519"/>
         <source>&amp;Save</source>
-        <translation></translation>
+        <translation>&amp;Enregistrer</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="522"/>
         <location filename="../../fn.cpp" line="761"/>
         <source>Save</source>
-        <translation></translation>
+        <translation>Enregistrer</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="525"/>
@@ -209,12 +209,12 @@
         <location filename="../../fn.ui" line="530"/>
         <location filename="../../fn.cpp" line="518"/>
         <source>&amp;Open</source>
-        <translation></translation>
+        <translation>&amp;Ouvrir</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="533"/>
         <source>Open a file</source>
-        <translation></translation>
+        <translation>Ouvrir un fichier</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="536"/>
@@ -224,12 +224,12 @@
     <message>
         <location filename="../../fn.ui" line="544"/>
         <source>&amp;Undo</source>
-        <translation></translation>
+        <translation>&amp;Annuler</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="547"/>
         <source>Undo</source>
-        <translation></translation>
+        <translation>Annuler</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="550"/>
@@ -239,12 +239,12 @@
     <message>
         <location filename="../../fn.ui" line="558"/>
         <source>&amp;Redo</source>
-        <translation></translation>
+        <translation>&amp;Refaire</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="561"/>
         <source>Redo</source>
-        <translation></translation>
+        <translation>Refaire</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="564"/>
