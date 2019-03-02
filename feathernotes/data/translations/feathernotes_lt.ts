@@ -1545,12 +1545,13 @@ komandų eilutės parinktis --tray.</translation>
         <location filename="../../predDialog.ui" line="172"/>
         <source>By default, the active widget style determines
 the size of toolbar icons.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pagal numatymą, aktyvus valdiklių stilius nustato
+įrankių juostos piktogramų dydį.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="176"/>
         <source>Small toolbar icons</source>
-        <translation type="unfinished"></translation>
+        <translation>Mažos įrankių juostos piktogramos</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="183"/>
