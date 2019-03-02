@@ -1547,7 +1547,7 @@ the size of toolbar icons.</source>
     <message>
         <location filename="../../predDialog.ui" line="176"/>
         <source>Small toolbar icons</source>
-        <translation type="unfinished"></translation>
+        <translation>Kleine Werkzeugleistensymbole</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="183"/>
