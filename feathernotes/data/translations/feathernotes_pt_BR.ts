@@ -1200,7 +1200,7 @@
         <location filename="../../fn.cpp" line="1260"/>
         <location filename="../../fn.cpp" line="1281"/>
         <source>FeatherNotes documents (*.fnx);;All Files (*)</source>
-        <translation>Documentos FeatherNotes (*.fnx);;All Files (*)</translation>
+        <translation>Documentos do FeatherNotes (*.fnx);;Todos os Arquivos (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1242"/>
@@ -1271,7 +1271,7 @@
     <message>
         <location filename="../../fn.cpp" line="3736"/>
         <source>Image Files (*.png *.jpg *.jpeg *.bmp);;All Files (*)</source>
-        <translation>Arquivos de imagem (*.png *.jpg *.jpeg *.bmp);;All Files (*)</translation>
+        <translation>Arquivos de imagem (*.png *.jpg *.jpeg *.bmp);;Todos os Arquivos (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3786"/>
@@ -1487,7 +1487,7 @@ this dialog and also on exit.
 under GTK+ DE&apos;s like Unity
 and Cinnamon.)</source>
         <translation>Salva a posição depois de fechar
-este diálogo e também na saída.
+este diálogo e também ao sair.
 
 (Isso pode não funcionar corretamente
 sob GTK+ DE&apos;s como Unity
@@ -1531,7 +1531,7 @@ pode ser usado em vez disso.</translation>
     <message>
         <location filename="../../predDialog.ui" line="162"/>
         <source>Merge the tree view with its surroundings?</source>
-        <translation>Mesclar a visualização da árvore com o seu entorno?</translation>
+        <translation>Mesclar a visualização da árvore com o seu arredor?</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="165"/>
@@ -1542,17 +1542,18 @@ pode ser usado em vez disso.</translation>
         <location filename="../../predDialog.ui" line="172"/>
         <source>By default, the active widget style determines
 the size of toolbar icons.</source>
-        <translation type="unfinished"></translation>
+        <translation>Por padrão, o estilo de widget ativo determina o
+tamanho dos ícones da barra de ferramentas.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="176"/>
         <source>Small toolbar icons</source>
-        <translation type="unfinished"></translation>
+        <translation>Ícones pequenos da barra de ferramenta</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="183"/>
         <source>Do not show t&amp;oolbar</source>
-        <translation>Não exibir barra de f&amp;erramentas</translation>
+        <translation>Não exibir barra de f&amp;erramenta</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="190"/>
@@ -1576,7 +1577,7 @@ para usar o ícone da bandeja do sistema mais facilmente!</translation>
     <message>
         <location filename="../../predDialog.ui" line="205"/>
         <source>Running &amp;under Enlightenment?</source>
-        <translation>Executando em Enlightenment?</translation>
+        <translation>Executando em E&amp;nlightenment?</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="228"/>
