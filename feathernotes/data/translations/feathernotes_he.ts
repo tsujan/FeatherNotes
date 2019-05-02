@@ -6,7 +6,7 @@
     <message>
         <location filename="../../about.ui" line="125"/>
         <source>License</source>
-        <translation></translation>
+        <translation>רישיון</translation>
     </message>
 </context>
 <context>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../../fn.ui" line="65"/>
         <source>Next (F3)</source>
-        <translation></translation>
+        <translation>הבא (F3)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="68"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../../fn.ui" line="81"/>
         <source>Previous (F4)</source>
-        <translation></translation>
+        <translation>הקודם (F4)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="84"/>
@@ -41,12 +41,12 @@
     <message>
         <location filename="../../fn.ui" line="100"/>
         <source>Search...</source>
-        <translation></translation>
+        <translation>חיפוש…</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="115"/>
         <source>Search only in names (Ctrl+Shift+F7)</source>
-        <translation></translation>
+        <translation>חיפוש בשמות בלבד (Ctrl+Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="118"/>
@@ -56,7 +56,7 @@
     <message>
         <location filename="../../fn.ui" line="128"/>
         <source>Search only in tags (Shift+F7)</source>
-        <translation></translation>
+        <translation>חיפוש בתגיות בלבד (Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="131"/>
@@ -66,7 +66,7 @@
     <message>
         <location filename="../../fn.ui" line="144"/>
         <source>Search in all nodes (F7)</source>
-        <translation></translation>
+        <translation>חיפוש בכל הצמתים (F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="147"/>
@@ -76,12 +76,12 @@
     <message>
         <location filename="../../fn.ui" line="186"/>
         <source>Whole Word (F6)</source>
-        <translation></translation>
+        <translation>מילה שלמה (F6)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="189"/>
         <source>Whole Word</source>
-        <translation></translation>
+        <translation>מילה שלמה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="192"/>
@@ -91,12 +91,12 @@
     <message>
         <location filename="../../fn.ui" line="167"/>
         <source>Match Case (F5)</source>
-        <translation></translation>
+        <translation>התאמת רישיות (F5)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="170"/>
         <source>Match Case</source>
-        <translation></translation>
+        <translation>התאמת רישיות</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="173"/>
@@ -111,7 +111,7 @@
     <message>
         <location filename="../../fn.ui" line="238"/>
         <source>&amp;Edit</source>
-        <translation></translation>
+        <translation>ע&amp;ריכה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="253"/>
@@ -121,7 +121,7 @@
     <message>
         <location filename="../../fn.ui" line="285"/>
         <source>&amp;Tree</source>
-        <translation></translation>
+        <translation>ע&amp;ץ</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="308"/>
@@ -131,7 +131,7 @@
     <message>
         <location filename="../../fn.ui" line="320"/>
         <source>&amp;Search</source>
-        <translation></translation>
+        <translation>&amp;חיפוש</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="327"/>
@@ -142,7 +142,7 @@
     <message>
         <location filename="../../fn.ui" line="424"/>
         <source>Find:</source>
-        <translation></translation>
+        <translation>איתור:</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="431"/>
