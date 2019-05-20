@@ -77,6 +77,13 @@ public:
         splitterSizes_ = sizes;
     }
 
+    QSize getPrefSize() const {
+        return prefSize_;
+    }
+    void setPrefSize (const QSize &s) {
+        prefSize_ = s;
+    }
+
     bool isPositionRem() const {
         return remPosition_;
     }
@@ -163,6 +170,27 @@ public:
         return scrollJumpWorkaround_;
     }
     void enableScrollJumpWorkaround (bool enable);
+
+    void updateCustomizableShortcuts();
+
+    QHash<QString, QString> customShortcutActions() const {
+        return customActions_;
+    }
+    void setActionShortcut (const QString &action, const QString &shortcut) {
+        customActions_.insert (action, shortcut);
+    }
+    void removeShortcut (const QString &action) {
+        customActions_.remove (action);
+        uncustomizedActions_ << action;
+    }
+
+    QHash<QAction*, QKeySequence> defaultShortcuts() const {
+        return defaultShortcuts_;
+    }
+
+    QStringList reservedShortcuts() const {
+        return reservedShortcuts_;
+    }
 
 private slots:
     bool close();
@@ -296,6 +324,8 @@ private:
     void reallySetSearchFlags (bool h);
     void findInNames();
     bool isImageSelected();
+    void readShortcuts();
+    QString validatedShortcut (const QVariant v);
     void readAndApplyConfig (bool startup = true);
     QString nodeAddress (QModelIndex index);
     bool isPswrdCorrect();
@@ -343,7 +373,7 @@ private:
          autoBracket_;
     int autoSave_;
     QPoint position_; // Excluding the window frame.
-    QSize winSize_, startSize_;
+    QSize winSize_, startSize_, prefSize_;
     //QList<int> splitterSizes_;
     QByteArray splitterSizes_;
     QTimer *timer_;
@@ -351,6 +381,9 @@ private:
     bool scrollJumpWorkaround_; // Should a workaround for Qt5's "scroll jump" bug be applied?
     bool underE_; // Is FeatherNotes running under Enlightenment?
     QSize EShift_; // The shift Enlightenment's panel creates (a bug?).
+    QHash<QString, QString> customActions_;
+    QHash<QAction*, QKeySequence> defaultShortcuts_;
+    QStringList uncustomizedActions_, reservedShortcuts_;
 };
 
 }

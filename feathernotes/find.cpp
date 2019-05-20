@@ -446,7 +446,7 @@ void FN::hlight() const
     if (!cw) return;
 
     TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
-    QString txt = searchEntries_[textEdit];
+    const QString txt = searchEntries_[textEdit];
     if (txt.isEmpty()) return;
 
     QList<QTextEdit::ExtraSelection> extraSelections;
@@ -458,7 +458,7 @@ void FN::hlight() const
     /* first put a start cursor at the top left edge... */
     QPoint Point (0, 0);
     QTextCursor start = textEdit->cursorForPosition (Point);
-    /* ... them move it backward by the search text length */
+    /* ... then move it backward by the search text length */
     int startPos = start.position() - txt.length();
     if (startPos >= 0)
         start.setPosition (startPos);
@@ -476,21 +476,22 @@ void FN::hlight() const
         end.setPosition (endPos);
     QTextCursor visCur = start;
     visCur.setPosition (end.position(), QTextCursor::KeepAnchor);
-    QString str = visCur.selection().toPlainText(); // '\n' is included in this way
-    Qt::CaseSensitivity cs = Qt::CaseInsensitive;
-    if (ui->caseButton->isChecked()) cs = Qt::CaseSensitive;
-    while (str.contains (txt, cs) // don't waste time if the search text isn't visible
-           && !(found = finding (txt, start, searchFlags_)).isNull())
+    const QString str = visCur.selection().toPlainText(); // '\n' is included in this way
+    Qt::CaseSensitivity cs = ui->caseButton->isChecked() ? Qt::CaseSensitive : Qt::CaseInsensitive;
+    if (str.contains (txt, cs)) // don't waste time if the searched text isn't visible
     {
-        QTextEdit::ExtraSelection extra;
-        extra.format.setBackground (yellow);
-        extra.format.setFontUnderline (true);
-        extra.format.setUnderlineStyle (QTextCharFormat::WaveUnderline);
-        extra.format.setUnderlineColor (black);
-        extra.cursor = found;
-        extraSelections.append (extra);
-        start.setPosition (found.position());
-        if (textEdit->cursorRect (start).top() >= h) break;
+        while (!(found = finding (txt, start, searchFlags_)).isNull())
+        {
+            QTextEdit::ExtraSelection extra;
+            extra.format.setBackground (yellow);
+            extra.format.setFontUnderline (true);
+            extra.format.setUnderlineStyle (QTextCharFormat::WaveUnderline);
+            extra.format.setUnderlineColor (black);
+            extra.cursor = found;
+            extraSelections.append (extra);
+            start.setPosition (found.position());
+            if (textEdit->cursorRect (start).top() >= h) break;
+        }
     }
 
     textEdit->setExtraSelections (extraSelections);
@@ -503,7 +504,7 @@ void FN::rehighlight (TextEdit *textEdit)
 }
 /*************************/
 void FN::reallySetSearchFlags (bool h)
-{   
+{
     searchFlags_ = QTextDocument::FindFlags();
     if (ui->wholeButton->isChecked())
         searchFlags_ = QTextDocument::FindWholeWords;

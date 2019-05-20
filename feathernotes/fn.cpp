@@ -121,6 +121,48 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
     model_ = new DomModel (QDomDocument(), this);
     ui->treeView->setModel (model_);
 
+    /* get the default (customizable) shortcuts before any change */
+    static const QStringList exxcluded = {"actionCut", "actionCopy", "actionPaste", "actionSelectAll"};
+    const auto allMenus = ui->menuBar->findChildren<QMenu*>();
+    for (auto thisMenu : allMenus)
+    {
+        const auto menuActions = thisMenu->actions();
+        for (auto menuAction : menuActions)
+        {
+            QKeySequence seq = menuAction->shortcut();
+            if (!seq.isEmpty() && !exxcluded.contains (menuAction->objectName()))
+                defaultShortcuts_.insert (menuAction, seq);
+        }
+    }
+
+    reservedShortcuts_
+    /* QTextEdit */
+    << QKeySequence (Qt::CTRL + Qt::SHIFT + Qt::Key_Z).toString() << QKeySequence (Qt::CTRL + Qt::Key_Z).toString() << QKeySequence (Qt::CTRL + Qt::Key_X).toString() << QKeySequence (Qt::CTRL + Qt::Key_C).toString() << QKeySequence (Qt::CTRL + Qt::Key_V).toString() << QKeySequence (Qt::CTRL + Qt::Key_A).toString()
+    << QKeySequence (Qt::SHIFT + Qt::Key_Insert).toString() << QKeySequence (Qt::SHIFT + Qt::Key_Delete).toString() << QKeySequence (Qt::CTRL + Qt::Key_Insert).toString()
+    << QKeySequence (Qt::CTRL + Qt::Key_Left).toString() << QKeySequence (Qt::CTRL + Qt::Key_Right).toString() << QKeySequence (Qt::CTRL + Qt::Key_Up).toString() << QKeySequence (Qt::CTRL + Qt::Key_Down).toString()
+    << QKeySequence (Qt::CTRL + Qt::Key_Home).toString() << QKeySequence (Qt::CTRL + Qt::Key_End).toString()
+    << QKeySequence (Qt::CTRL + Qt::SHIFT + Qt::Key_Up).toString() << QKeySequence (Qt::CTRL + Qt::SHIFT + Qt::Key_Down).toString()
+    << QKeySequence (Qt::META + Qt::Key_Up).toString() << QKeySequence (Qt::META + Qt::Key_Down).toString() << QKeySequence (Qt::META + Qt::SHIFT + Qt::Key_Up).toString() << QKeySequence (Qt::META + Qt::SHIFT + Qt::Key_Down).toString()
+    /* search and replacement */
+    << QKeySequence (Qt::Key_F3).toString() << QKeySequence (Qt::Key_F4).toString() << QKeySequence (Qt::Key_F5).toString() << QKeySequence (Qt::Key_F6).toString() << QKeySequence (Qt::Key_F7).toString()
+    << QKeySequence (Qt::Key_F8).toString() << QKeySequence (Qt::Key_F9).toString() << QKeySequence (Qt::Key_F10).toString()
+    << QKeySequence (Qt::Key_F11).toString() << QKeySequence (Qt::CTRL + Qt::SHIFT + Qt::Key_W).toString()
+    /* zooming */
+    << QKeySequence (Qt::CTRL + Qt::Key_Equal).toString() << QKeySequence (Qt::CTRL + Qt::Key_Plus).toString() << QKeySequence (Qt::CTRL + Qt::Key_Minus).toString() << QKeySequence (Qt::CTRL + Qt::Key_0).toString()
+    /* text tabulation */
+    << QKeySequence (Qt::SHIFT + Qt::Key_Enter).toString() << QKeySequence (Qt::SHIFT + Qt::Key_Return).toString() << QKeySequence (Qt::CTRL + Qt::Key_Tab).toString() << QKeySequence (Qt::CTRL + Qt::META + Qt::Key_Tab).toString()
+    /* used by LineEdit as well as QTextEdit */
+    << QKeySequence (Qt::CTRL + Qt::Key_K).toString();
+    readShortcuts();
+
+    QHash<QString, QString>::const_iterator it = customActions_.constBegin();
+    while (it != customActions_.constEnd())
+    { // NOTE: Custom shortcuts are saved in the PortableText format.
+        if (QAction *action = findChild<QAction*>(it.key()))
+            action->setShortcut (QKeySequence (it.value(), QKeySequence::PortableText));
+        ++it;
+    }
+
     shownBefore_ = false;
     splitterSizes_ = QByteArray::fromBase64 ("AAAA/wAAAAEAAAACAAAAqgAAAhIB/////wEAAAABAA==");
     remSize_ = true;
@@ -1486,7 +1528,7 @@ TextEdit *FN::newWidget()
     /* I don't know why, under KDE, when a text is selected for the first time,
        it may not be copied to the selection clipboard. Perhaps it has something
        to do with Klipper. I neither know why the following line is a workaround
-       but it can cause a long delay when FeatherPad is started. */
+       but it can cause a long delay when FeatherNotes is started. */
     //QApplication::clipboard()->text (QClipboard::Selection);
 
     return textEdit;
@@ -4091,6 +4133,59 @@ void FN::enableScrollJumpWorkaround (bool enable)
     }
 }
 /*************************/
+void FN::updateCustomizableShortcuts()
+{
+    QHash<QAction*, QKeySequence>::const_iterator iter = defaultShortcuts_.constBegin();
+    QList<QString> cn = customActions_.keys();
+
+    while (iter != defaultShortcuts_.constEnd())
+    {
+        const QString name = iter.key()->objectName();
+        iter.key()->setShortcut (cn.contains (name)
+                                 ? QKeySequence (customActions_.value (name), QKeySequence::PortableText)
+                                 : iter.value());
+        ++ iter;
+    }
+}
+/*************************/
+void FN::readShortcuts()
+{
+    Settings settings ("feathernotes", "fn");
+    settings.beginGroup ("shortcuts");
+    QStringList actions = settings.childKeys();
+
+    for (int i = 0; i < actions.size(); ++i)
+    {
+        QVariant v = settings.value (actions.at (i));
+        QString vs = validatedShortcut (v);
+        if (!vs.isEmpty())
+            customActions_.insert (actions.at (i), vs);
+        else // remove the key on writing config
+            uncustomizedActions_ << actions.at (i);
+    }
+    settings.endGroup();
+}
+/*************************/
+QString FN::validatedShortcut (const QVariant v)
+{
+    static QStringList added;
+    if (v.isValid())
+    {
+        QString str = v.toString();
+        if (!QKeySequence (str, QKeySequence::PortableText).toString().isEmpty())
+        {
+            if (!reservedShortcuts_.contains (str)
+                // prevent ambiguous shortcuts at startup as far as possible
+                && !added.contains (str))
+            {
+                added << str;
+                return str;
+            }
+        }
+    }
+    return QString();
+}
+/*************************/
 void FN::readAndApplyConfig (bool startup)
 {
     QSettings settings ("feathernotes", "fn");
@@ -4137,6 +4232,8 @@ void FN::readAndApplyConfig (bool startup)
         remPosition_ = true;
         position_ = settings.value ("position", QPoint (0, 0)).toPoint();
     }
+
+    prefSize_ = settings.value ("prefSize").toSize();
 
     hasTray_ = settings.value ("hasTray").toBool(); // false by default
 
@@ -4354,6 +4451,8 @@ void FN::writeGeometryConfig()
     else
         settings.setValue ("position", "none");
 
+    settings.setValue ("prefSize", prefSize_);
+
     settings.endGroup();
 }
 /*************************/
@@ -4396,6 +4495,24 @@ void FN::writeConfig()
         timer_->stop();
 
     settings.setValue ("scrollJumpWorkaround", scrollJumpWorkaround_);
+
+    settings.endGroup();
+
+    /*****************
+     *** Shortcuts ***
+     *****************/
+
+    settings.beginGroup ("shortcuts");
+
+    for (int i = 0; i < uncustomizedActions_.size(); ++i)
+        settings.remove (uncustomizedActions_.at (i));
+
+    QHash<QString, QString>::const_iterator it = customActions_.constBegin();
+    while (it != customActions_.constEnd())
+    {
+        settings.setValue (it.key(), it.value());
+        ++it;
+    }
 
     settings.endGroup();
 }

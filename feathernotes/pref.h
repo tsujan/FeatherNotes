@@ -19,8 +19,24 @@
 #define PREF_H
 
 #include <QDialog>
+#include <QStyledItemDelegate>
+#include <QTableWidgetItem>
+#include <QTimer>
 
 namespace FeatherNotes {
+
+class Delegate : public QStyledItemDelegate
+{
+    Q_OBJECT
+
+public:
+    Delegate (QObject *parent = nullptr);
+
+    virtual QWidget* createEditor (QWidget *parent,
+                                   const QStyleOptionViewItem&,
+                                   const QModelIndex&) const;
+    virtual bool eventFilter (QObject *object, QEvent *event);
+};
 
 namespace Ui {
 class PrefDialog;
@@ -35,14 +51,21 @@ public:
     ~PrefDialog();
 
 private slots:
+    void onClosing();
     void prefSize (int value);
-
+    void onShortcutChange (QTableWidgetItem *item);
+    void restoreDefaultShortcuts();
 
 private:
     void closeEvent (QCloseEvent *event);
+    void showPrompt (const QString& str = QString(), bool temporary = false);
 
     Ui::PrefDialog *ui;
     QWidget * parent_;
+    QHash<QString, QString> shortcuts_, newShortcuts_;
+    QString prevtMsg_;
+    bool hasTray_, autoBracket_;
+    QTimer *promptTimer_;
 };
 
 }

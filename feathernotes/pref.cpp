@@ -23,23 +23,65 @@
 #include <QWindow>
 #include <QScreen>
 #include <QPushButton>
+#include <QKeySequenceEdit>
+#include <QAction>
 #include <QWhatsThis>
 
 namespace FeatherNotes {
 
+static QHash<QString, QString> OBJECT_NAMES;
+static QHash<QString, QString> DEFAULT_SHORTCUTS;
+
+Delegate::Delegate (QObject *parent)
+    : QStyledItemDelegate (parent)
+{
+}
+
+QWidget* Delegate::createEditor (QWidget *parent,
+                                 const QStyleOptionViewItem& /*option*/,
+                                 const QModelIndex& /*index*/) const
+{
+    return new QKeySequenceEdit (parent);
+}
+/*************************/
+bool Delegate::eventFilter (QObject *object, QEvent *event)
+{
+    QWidget *editor = qobject_cast<QWidget*>(object);
+    if (editor && event->type() == QEvent::KeyPress)
+    {
+        int k = static_cast<QKeyEvent *>(event)->key();
+        if (k == Qt::Key_Return || k == Qt::Key_Enter)
+        {
+            emit QAbstractItemDelegate::commitData (editor);
+            emit QAbstractItemDelegate::closeEditor (editor);
+            return true;
+        }
+    }
+    return QStyledItemDelegate::eventFilter (object, event);
+}
+/*************************/
 PrefDialog::PrefDialog (QWidget *parent)
     : QDialog (parent), ui (new Ui::PrefDialog)
 {
     ui->setupUi (this);
     parent_ = parent;
+    ui->promptLabel->hide();
+    promptTimer_ = nullptr;
 
-    if (FN *win = static_cast<FN *>(parent_))
+    Delegate *del = new Delegate (ui->tableWidget);
+    ui->tableWidget->setItemDelegate (del);
+    ui->tableWidget->horizontalHeader()->setSectionResizeMode (QHeaderView::Stretch);
+    ui->tableWidget->horizontalHeader()->setSectionsClickable (false);
+    ui->tableWidget->sortByColumn (0, Qt::AscendingOrder);
+
+    QSize ag;
+    FN *win = static_cast<FN *>(parent_);
+    if (win)
     {
         /**************
          *** Window ***
          **************/
 
-        QSize ag;
         if (QWindow *window = parent->windowHandle())
         {
             if (QScreen *sc = window->screen())
@@ -111,8 +153,10 @@ PrefDialog::PrefDialog (QWidget *parent)
 
         /* use tray */
         ui->hasTrayBox->setChecked (win->hasTray());
-        connect (ui->hasTrayBox, &QCheckBox::stateChanged, win, [win] (int checked) {
+        hasTray_ = win->hasTray();
+        connect (ui->hasTrayBox, &QCheckBox::stateChanged, win, [this, win] (int checked) {
             win->useTray (checked == Qt::Checked);
+            showPrompt();
         });
         connect (ui->hasTrayBox, &QAbstractButton::toggled, ui->minTrayBox, &QWidget::setEnabled);
 
@@ -204,8 +248,10 @@ PrefDialog::PrefDialog (QWidget *parent)
 
         /* auto-bracket */
         ui->autoBracketBox->setChecked (win->hasAutoBracket());
-        connect (ui->autoBracketBox, &QCheckBox::stateChanged, win, [win] (int checked) {
+        autoBracket_ = win->hasAutoBracket();
+        connect (ui->autoBracketBox, &QCheckBox::stateChanged, win, [this, win] (int checked) {
             win->autoBracket (checked == Qt::Checked);
+            showPrompt();
         });
 
         /* auto-saving */
@@ -241,6 +287,65 @@ PrefDialog::PrefDialog (QWidget *parent)
         connect (ui->workaroundBox, &QCheckBox::stateChanged, win, [win] (int checked) {
             win->enableScrollJumpWorkaround (checked == Qt::Checked);
         });
+
+        /*****************
+         *** Shortcuts ***
+         *****************/
+
+        if (DEFAULT_SHORTCUTS.isEmpty())
+        { // NOTE: Shortcut strings hould be in the PortableText format.
+            const auto defaultShortcuts = win->defaultShortcuts();
+            QHash<QAction*, QKeySequence>::const_iterator iter = defaultShortcuts.constBegin();
+            while (iter != defaultShortcuts.constEnd())
+            {
+                const QString name = iter.key()->objectName();
+                DEFAULT_SHORTCUTS.insert (name, iter.value().toString());
+                OBJECT_NAMES.insert (iter.key()->text().remove ("&"), name);
+                ++ iter;
+            }
+        }
+        QHash<QString, QString> ca = win->customShortcutActions();
+
+        QList<QString> keys = ca.keys();
+        QHash<QString, QString>::const_iterator iter = OBJECT_NAMES.constBegin();
+        while (iter != OBJECT_NAMES.constEnd())
+        {
+            shortcuts_.insert (iter.key(),
+                               keys.contains (iter.value()) ? ca.value (iter.value())
+                                                            : DEFAULT_SHORTCUTS.value (iter.value()));
+            ++ iter;
+        }
+
+        QList<QString> val = shortcuts_.values();
+        for (int i = 0; i < val.size(); ++i)
+        {
+            if (!val.at (i).isEmpty() && val.indexOf (val.at (i), i + 1) > -1)
+            {
+                showPrompt (tr ("Warning: Ambiguous shortcut detected!"), false);
+                break;
+            }
+        }
+
+        ui->tableWidget->setRowCount (shortcuts_.size());
+        ui->tableWidget->setSortingEnabled (false);
+        int index = 0;
+        QHash<QString, QString>::const_iterator it = shortcuts_.constBegin();
+        while (it != shortcuts_.constEnd())
+        {
+            QTableWidgetItem *item = new QTableWidgetItem (it.key());
+            item->setFlags (item->flags() & ~Qt::ItemIsEditable & ~Qt::ItemIsSelectable);
+            ui->tableWidget->setItem (index, 0, item);
+            /* shortcut texts should added in the NativeText format */
+            ui->tableWidget->setItem (index, 1, new QTableWidgetItem (QKeySequence (it.value(), QKeySequence::PortableText)
+                                                                      .toString (QKeySequence::NativeText)));
+            ++ it;
+            ++ index;
+        }
+        ui->tableWidget->setSortingEnabled (true);
+        ui->tableWidget->setCurrentCell (0, 1);
+        connect (ui->tableWidget, &QTableWidget::itemChanged, this, &PrefDialog::onShortcutChange);
+        connect (ui->defaultButton, &QAbstractButton::clicked, this, &PrefDialog::restoreDefaultShortcuts);
+        ui->defaultButton->setDisabled (ca.isEmpty());
     }
 
     if (QPushButton *closeBtn = ui->buttonBox->button (QDialogButtonBox::Close))
@@ -249,6 +354,7 @@ PrefDialog::PrefDialog (QWidget *parent)
         closeBtn->setDefault (true);
         connect (closeBtn, &QAbstractButton::clicked, this, &QDialog::close);
     }
+    connect (this, &QDialog::rejected, this, &PrefDialog::onClosing);
     if (QPushButton *helpBtn = ui->buttonBox->button (QDialogButtonBox::Help))
     {
         connect (helpBtn, &QAbstractButton::clicked, [] () {
@@ -274,28 +380,60 @@ PrefDialog::PrefDialog (QWidget *parent)
         }
     }
 
-    resize (sizeHint()); // make it compact
+    if (win)
+    {
+        ag -= win->window()->frameGeometry().size() - win->window()->geometry().size();
+        if (win->getPrefSize().isEmpty())
+            resize (sizeHint().boundedTo(ag));
+        else
+            resize (win->getPrefSize().boundedTo(ag));
+    }
+    else resize (sizeHint().boundedTo(ag)); // impossible
 }
 /*************************/
 PrefDialog::~PrefDialog()
 {
+    if (promptTimer_)
+    {
+        promptTimer_->stop();
+        delete promptTimer_;
+    }
     delete ui; ui = nullptr;
 }
 /*************************/
 void PrefDialog::closeEvent (QCloseEvent *event)
 {
+    onClosing();
+    event->accept();
+}
+/*************************/
+void PrefDialog::onClosing()
+{
     if (FN *win = static_cast<FN *>(parent_))
     {
+        QHash<QString, QString>::const_iterator it = newShortcuts_.constBegin();
+        while (it != newShortcuts_.constEnd())
+        {
+            if (DEFAULT_SHORTCUTS.value (it.key()) == it.value())
+                win->removeShortcut (it.key());
+            else
+                win->setActionShortcut (it.key(), it.value());
+            ++it;
+        }
+        win->updateCustomizableShortcuts();
+
+        win->setPrefSize (size());
+
         win->writeConfig();
         win->writeGeometryConfig();
     }
-    event->accept();
 }
 /*************************/
 void PrefDialog::prefSize (int value)
 {
     FN *win = static_cast<FN *>(parent_);
     if (win == nullptr) return;
+
     if (qobject_cast<QCheckBox *>(QObject::sender()))
     {
         if (value == Qt::Checked)
@@ -321,6 +459,167 @@ void PrefDialog::prefSize (int value)
         win->setStartSize (QSize (ui->winSpinX->value(), win->getStartSize().height()));
     else if (ui->winSpinY == qobject_cast<QSpinBox *>(QObject::sender()))
         win->setStartSize (QSize (win->getStartSize().width(), ui->winSpinY->value()));
+}
+/*************************/
+// NOTE: Custom shortcuts will be saved in the PortableText format.
+void PrefDialog::onShortcutChange (QTableWidgetItem *item)
+{
+    FN *win = static_cast<FN *>(parent_);
+    if (win == nullptr) return;
+
+    QString txt = item->text();
+    bool invalid (txt.isEmpty());
+    if (!invalid)
+    {
+        /* the QKeySequenceEdit text is in the NativeText format but it should be
+           converted into the PortableText format, both for saving and checking for "+" */
+        QKeySequence keySeq (txt);
+        txt = keySeq.toString();
+        if (!txt.contains ("+"))
+        {
+            invalid = true;
+            /* make and exception for Fx keys */
+            for (int i = Qt::Key_F1; i <= Qt::Key_F35; ++i)
+            {
+                if (QKeySequence::ExactMatch == keySeq.matches (QKeySequence (i)))
+                {
+                    invalid = false;
+                    break;
+                }
+            }
+        }
+    }
+
+    QString desc = ui->tableWidget->item (ui->tableWidget->currentRow(), 0)->text();
+    if (invalid
+        || (win->reservedShortcuts().contains (txt)
+            /* unless its (hard-coded) default shortcut is typed */
+            && DEFAULT_SHORTCUTS.value (OBJECT_NAMES.value (desc)) != txt))
+    {
+        if (invalid)
+            showPrompt (tr ("The typed shortcut was not valid."), true);
+        else
+            showPrompt (tr ("The typed shortcut was reserved."), true);
+        disconnect (ui->tableWidget, &QTableWidget::itemChanged, this, &PrefDialog::onShortcutChange);
+        item->setText (shortcuts_.value (desc));
+        connect (ui->tableWidget, &QTableWidget::itemChanged, this, &PrefDialog::onShortcutChange);
+    }
+    else
+    {
+        if (!shortcuts_.keys (txt).isEmpty())
+            showPrompt (tr ("Warning: Ambiguous shortcut detected!"), false);
+        else if (ui->promptLabel->isVisible())
+        {
+            prevtMsg_ = QString();
+            showPrompt();
+        }
+        shortcuts_.insert (desc, txt);
+        newShortcuts_.insert (OBJECT_NAMES.value (desc), txt);
+        /* also set the state of the Default button */
+        QHash<QString, QString>::const_iterator it = shortcuts_.constBegin();
+        while (it != shortcuts_.constEnd())
+        {
+            if (DEFAULT_SHORTCUTS.value (OBJECT_NAMES.value (it.key())) != it.value())
+            {
+                ui->defaultButton->setEnabled (true);
+                return;
+            }
+            ++it;
+        }
+        ui->defaultButton->setEnabled (false);
+    }
+}
+/*************************/
+void PrefDialog::restoreDefaultShortcuts()
+{
+    FN *win = static_cast<FN *>(parent_);
+    if (win == nullptr) return;
+
+    if (newShortcuts_.isEmpty()
+        && win->customShortcutActions().isEmpty())
+    { // do nothing if there's no custom shortcut
+        return;
+    }
+
+    disconnect (ui->tableWidget, &QTableWidget::itemChanged, this, &PrefDialog::onShortcutChange);
+    int cur = ui->tableWidget->currentColumn() == 0
+                  ? 0
+                  : ui->tableWidget->currentRow();
+    ui->tableWidget->setSortingEnabled (false);
+    newShortcuts_ = DEFAULT_SHORTCUTS;
+    int index = 0;
+    QMutableHashIterator<QString, QString> it (shortcuts_);
+    while (it.hasNext())
+    {
+        it.next();
+        ui->tableWidget->item (index, 0)->setText (it.key());
+        QString s = DEFAULT_SHORTCUTS.value (OBJECT_NAMES.value (it.key()));
+        ui->tableWidget->item (index, 1)->setText (s);
+        it.setValue (s);
+        ++ index;
+    }
+    ui->tableWidget->setSortingEnabled (true);
+    ui->tableWidget->setCurrentCell (cur, 1);
+    connect (ui->tableWidget, &QTableWidget::itemChanged, this, &PrefDialog::onShortcutChange);
+
+    ui->defaultButton->setEnabled (false);
+    if (ui->promptLabel->isVisible())
+    {
+        prevtMsg_ = QString();
+        showPrompt();
+    }
+}
+/*************************/
+void PrefDialog::showPrompt (const QString& str, bool temporary)
+{
+    FN *win = static_cast<FN *>(parent_);
+    if (win == nullptr) return;
+
+    static const QString style ("QLabel {background-color: #7d0000; color: white; border-radius: 3px; margin: 2px; padding: 5px;}");
+    if (!str.isEmpty())
+    { // show the provided message
+        ui->promptLabel->setText ("<b>" + str + "</b>");
+        ui->promptLabel->setStyleSheet (style);
+        if (temporary) // show it temporarily
+        {
+            if (promptTimer_ == nullptr)
+            {
+                promptTimer_ = new QTimer();
+                promptTimer_->setSingleShot (true);
+                connect (promptTimer_, &QTimer::timeout, [this] {
+                    if (!prevtMsg_.isEmpty()
+                        && ui->tabWidget->currentIndex() == 3) // Shortcuts page
+                    { // show the previous message if it exists
+                        ui->promptLabel->setText (prevtMsg_);
+                        ui->promptLabel->setStyleSheet (style);
+                    }
+                    else showPrompt();
+                });
+            }
+            promptTimer_->start (3300);
+        }
+        else
+            prevtMsg_ = "<b>" + str + "</b>";
+    }
+    else if (hasTray_ != win->hasTray() || autoBracket_ != win->hasAutoBracket())
+    {
+        ui->promptLabel->setText ("<b>" + tr ("Application restart is needed for changes to take effect.") + "</b>");
+        ui->promptLabel->setStyleSheet (style);
+    }
+    else
+    {
+        if (prevtMsg_.isEmpty()) // clear prompt
+        {
+            ui->promptLabel->clear();
+            ui->promptLabel->setStyleSheet ("QLabel {margin: 2px; padding: 5px;}");
+        }
+        else // show the previous message
+        {
+            ui->promptLabel->setText (prevtMsg_);
+            ui->promptLabel->setStyleSheet (style);
+        }
+    }
+    ui->promptLabel->show();
 }
 
 }

@@ -4,7 +4,7 @@
 <context>
     <name>FeatherNotes::AboutDialog</name>
     <message>
-        <location filename="../../about.ui" line="125"/>
+        <location filename="../../about.ui" line="131"/>
         <source>License</source>
         <translation>Licencija</translation>
     </message>
@@ -13,8 +13,8 @@
     <name>FeatherNotes::FN</name>
     <message>
         <location filename="../../fn.ui" line="14"/>
-        <location filename="../../fn.cpp" line="1166"/>
-        <location filename="../../fn.cpp" line="4638"/>
+        <location filename="../../fn.cpp" line="1208"/>
+        <location filename="../../fn.cpp" line="4755"/>
         <source>FeatherNotes</source>
         <translation></translation>
     </message>
@@ -196,7 +196,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="522"/>
-        <location filename="../../fn.cpp" line="761"/>
+        <location filename="../../fn.cpp" line="803"/>
         <source>Save</source>
         <translation>Įrašyti</translation>
     </message>
@@ -207,7 +207,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="530"/>
-        <location filename="../../fn.cpp" line="518"/>
+        <location filename="../../fn.cpp" line="560"/>
         <source>&amp;Open</source>
         <translation>A&amp;tverti</translation>
     </message>
@@ -378,7 +378,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="698"/>
-        <location filename="../../fn.cpp" line="517"/>
+        <location filename="../../fn.cpp" line="559"/>
         <source>&amp;New Note</source>
         <translation>&amp;Nauji užrašai</translation>
     </message>
@@ -419,7 +419,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="744"/>
-        <location filename="../../fn.cpp" line="520"/>
+        <location filename="../../fn.cpp" line="562"/>
         <source>&amp;Quit</source>
         <translation>&amp;Išeiti</translation>
     </message>
@@ -480,7 +480,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="810"/>
-        <location filename="../../fn.cpp" line="3343"/>
+        <location filename="../../fn.cpp" line="3385"/>
         <source>Embed Image</source>
         <translation>Įtaisyti paveikslą</translation>
     </message>
@@ -946,457 +946,457 @@
         <translation>Ctrl(Vald)+Shift(Lyg2)+C</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2184"/>
+        <location filename="../../fn.cpp" line="2226"/>
         <source>Node Icon</source>
         <translation>Mazgo piktograma</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="301"/>
+        <location filename="../../fn.cpp" line="343"/>
         <source>F11</source>
         <comment>Fullscreen</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="304"/>
+        <location filename="../../fn.cpp" line="346"/>
         <source>Ctrl+Shift+W</source>
         <comment>Default size</comment>
         <translation>Ctrl(Vald)+Shift(Lyg2)+W</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="307"/>
+        <location filename="../../fn.cpp" line="349"/>
         <source>Ctrl+=</source>
         <comment>Zoom in</comment>
         <translation>Ctrl(Vald)+=</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="308"/>
+        <location filename="../../fn.cpp" line="350"/>
         <source>Ctrl++</source>
         <comment>Zoom in</comment>
         <translation>Ctrl(Vald)++</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="309"/>
+        <location filename="../../fn.cpp" line="351"/>
         <source>Ctrl+-</source>
         <comment>Zoom out</comment>
         <translation>Ctrl(Vald)+-</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="310"/>
+        <location filename="../../fn.cpp" line="352"/>
         <source>Ctrl+0</source>
         <comment>Unzoom</comment>
         <translation>Ctrl(Vald)+0</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="512"/>
-        <location filename="../../fn.cpp" line="4066"/>
+        <location filename="../../fn.cpp" line="554"/>
+        <location filename="../../fn.cpp" line="4108"/>
         <source>&amp;Raise/Hide</source>
         <translation>&amp;Iškelti/Slėpti</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="677"/>
+        <location filename="../../fn.cpp" line="719"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;New note?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Nauji užrašai?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="678"/>
+        <location filename="../../fn.cpp" line="720"/>
         <source>&lt;center&gt;&lt;i&gt;Do you really want to leave this document&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;and create an empty one?&lt;/i&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;i&gt;Ar tikrai norite užverti šį dokumentą&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;ir sukurti tuščią?&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="681"/>
-        <location filename="../../fn.cpp" line="2019"/>
-        <location filename="../../fn.cpp" line="3710"/>
+        <location filename="../../fn.cpp" line="723"/>
+        <location filename="../../fn.cpp" line="2061"/>
+        <location filename="../../fn.cpp" line="3752"/>
         <source>Yes</source>
         <translation>Taip</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="682"/>
-        <location filename="../../fn.cpp" line="2020"/>
-        <location filename="../../fn.cpp" line="3711"/>
+        <location filename="../../fn.cpp" line="724"/>
+        <location filename="../../fn.cpp" line="2062"/>
+        <location filename="../../fn.cpp" line="3753"/>
         <source>No</source>
         <translation>Ne</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="753"/>
+        <location filename="../../fn.cpp" line="795"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Save changes?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Įrašyti pakeitimus?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="755"/>
+        <location filename="../../fn.cpp" line="797"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been modified.&lt;/i&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;i&gt;Dokumentas buvo modifikuotas.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="757"/>
+        <location filename="../../fn.cpp" line="799"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been removed.&lt;/i&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;i&gt;Dokumentas pašalintas.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="762"/>
+        <location filename="../../fn.cpp" line="804"/>
         <source>Discard changes</source>
         <translation>Atmesti pakeitimus</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="763"/>
-        <location filename="../../fn.cpp" line="2132"/>
-        <location filename="../../fn.cpp" line="2227"/>
-        <location filename="../../fn.cpp" line="3286"/>
-        <location filename="../../fn.cpp" line="3367"/>
-        <location filename="../../fn.cpp" line="3528"/>
-        <location filename="../../fn.cpp" line="3804"/>
-        <location filename="../../fn.cpp" line="4542"/>
-        <location filename="../../fn.cpp" line="4767"/>
-        <location filename="../../fn.cpp" line="4882"/>
+        <location filename="../../fn.cpp" line="805"/>
+        <location filename="../../fn.cpp" line="2174"/>
+        <location filename="../../fn.cpp" line="2269"/>
+        <location filename="../../fn.cpp" line="3328"/>
+        <location filename="../../fn.cpp" line="3409"/>
+        <location filename="../../fn.cpp" line="3570"/>
+        <location filename="../../fn.cpp" line="3846"/>
+        <location filename="../../fn.cpp" line="4659"/>
+        <location filename="../../fn.cpp" line="4884"/>
+        <location filename="../../fn.cpp" line="4999"/>
         <source>Cancel</source>
         <translation>Atsisakyti</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1027"/>
+        <location filename="../../fn.cpp" line="1069"/>
         <source>Open file...</source>
         <translation>Atverti failą...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1167"/>
-        <location filename="../../fn.cpp" line="4639"/>
+        <location filename="../../fn.cpp" line="1209"/>
+        <location filename="../../fn.cpp" line="4756"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be saved!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Nepavyksta įrašyti!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1170"/>
-        <location filename="../../fn.cpp" line="2693"/>
-        <location filename="../../fn.cpp" line="4642"/>
+        <location filename="../../fn.cpp" line="1212"/>
+        <location filename="../../fn.cpp" line="2735"/>
+        <location filename="../../fn.cpp" line="4759"/>
         <source>Close</source>
         <translation>Užverti</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1258"/>
-        <location filename="../../fn.cpp" line="1279"/>
+        <location filename="../../fn.cpp" line="1300"/>
+        <location filename="../../fn.cpp" line="1321"/>
         <source>Save As...</source>
         <translation>Įrašyti kaip...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2016"/>
+        <location filename="../../fn.cpp" line="2058"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Delete this node?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Ištrinti šį mazgą?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2017"/>
+        <location filename="../../fn.cpp" line="2059"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;i&gt;Warning!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
 &lt;center&gt;This action cannot be undone.&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;i&gt;Įspėjimas!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
 &lt;center&gt;Šio veiksmo neįmanoma bus atšaukti.&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2118"/>
+        <location filename="../../fn.cpp" line="2160"/>
         <source>Tags</source>
         <translation>Žymės</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2133"/>
-        <location filename="../../fn.cpp" line="2228"/>
-        <location filename="../../fn.cpp" line="3288"/>
-        <location filename="../../fn.cpp" line="3368"/>
-        <location filename="../../fn.cpp" line="3529"/>
-        <location filename="../../fn.cpp" line="3805"/>
-        <location filename="../../fn.cpp" line="4544"/>
-        <location filename="../../fn.cpp" line="4768"/>
-        <location filename="../../fn.cpp" line="4883"/>
+        <location filename="../../fn.cpp" line="2175"/>
+        <location filename="../../fn.cpp" line="2270"/>
+        <location filename="../../fn.cpp" line="3330"/>
+        <location filename="../../fn.cpp" line="3410"/>
+        <location filename="../../fn.cpp" line="3571"/>
+        <location filename="../../fn.cpp" line="3847"/>
+        <location filename="../../fn.cpp" line="4661"/>
+        <location filename="../../fn.cpp" line="4885"/>
+        <location filename="../../fn.cpp" line="5000"/>
         <source>OK</source>
         <translation>Gerai</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2321"/>
-        <location filename="../../fn.cpp" line="2354"/>
+        <location filename="../../fn.cpp" line="2363"/>
+        <location filename="../../fn.cpp" line="2396"/>
         <source>&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</source>
         <translation>&lt;b&gt;Pagrindinių mazgų:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Viso mazgų:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2327"/>
-        <location filename="../../fn.cpp" line="2360"/>
+        <location filename="../../fn.cpp" line="2369"/>
+        <location filename="../../fn.cpp" line="2402"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</source>
         <translation>&lt;b&gt;Užrašai:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Pagrindinių mazgų:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Viso mazgų:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2680"/>
+        <location filename="../../fn.cpp" line="2722"/>
         <source>%1 Matches</source>
         <translation>%1 atitikmenys(-ų)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2682"/>
+        <location filename="../../fn.cpp" line="2724"/>
         <source>One Match</source>
         <translation>Vienas atitikmuo</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2684"/>
-        <location filename="../../fn.cpp" line="2997"/>
+        <location filename="../../fn.cpp" line="2726"/>
+        <location filename="../../fn.cpp" line="3039"/>
         <source>No Match</source>
         <translation>Atitikmenų nėra</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2799"/>
-        <location filename="../../fn.cpp" line="2851"/>
+        <location filename="../../fn.cpp" line="2841"/>
+        <location filename="../../fn.cpp" line="2893"/>
         <source>Replacement</source>
         <translation>Pakeitimas</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3106"/>
+        <location filename="../../fn.cpp" line="3148"/>
         <source>No Replacement</source>
         <translation>Jokių pakeitimų</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3108"/>
+        <location filename="../../fn.cpp" line="3150"/>
         <source>One Replacement</source>
         <translation>Vienas pakeitimas</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3110"/>
+        <location filename="../../fn.cpp" line="3152"/>
         <source>%1 Replacements</source>
         <translation>%1 pakeitimų(-ai)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3274"/>
+        <location filename="../../fn.cpp" line="3316"/>
         <source>Insert Link</source>
         <translation>Įterpti nuorodą</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2192"/>
-        <location filename="../../fn.cpp" line="3352"/>
+        <location filename="../../fn.cpp" line="2234"/>
+        <location filename="../../fn.cpp" line="3394"/>
         <source>Image path</source>
         <translation>Paveikslo kelias</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2196"/>
-        <location filename="../../fn.cpp" line="3356"/>
+        <location filename="../../fn.cpp" line="2238"/>
+        <location filename="../../fn.cpp" line="3398"/>
         <source>Open image</source>
         <translation>Atverti paveikslą</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3364"/>
-        <location filename="../../fn.cpp" line="3525"/>
+        <location filename="../../fn.cpp" line="3406"/>
+        <location filename="../../fn.cpp" line="3567"/>
         <source>Scaling percentage</source>
         <translation>Mastelio keitimo procentinė dalis</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2214"/>
-        <location filename="../../fn.cpp" line="3473"/>
+        <location filename="../../fn.cpp" line="2256"/>
+        <location filename="../../fn.cpp" line="3515"/>
         <source>Open Image...</source>
         <translation>Atverti paveikslą...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="514"/>
-        <location filename="../../fn.cpp" line="4054"/>
+        <location filename="../../fn.cpp" line="556"/>
+        <location filename="../../fn.cpp" line="4096"/>
         <source>&amp;Raise</source>
         <translation>&amp;Iškelti</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="709"/>
+        <location filename="../../fn.cpp" line="751"/>
         <source>New Node</source>
         <translation>Naujas mazgas</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1029"/>
-        <location filename="../../fn.cpp" line="1260"/>
-        <location filename="../../fn.cpp" line="1281"/>
+        <location filename="../../fn.cpp" line="1071"/>
+        <location filename="../../fn.cpp" line="1302"/>
+        <location filename="../../fn.cpp" line="1323"/>
         <source>FeatherNotes documents (*.fnx);;All Files (*)</source>
         <translation>FeatherNotes dokumentai (*.fnx);;Visi failai (*)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1242"/>
-        <location filename="../../fn.cpp" line="4416"/>
-        <location filename="../../fn.cpp" line="4425"/>
-        <location filename="../../fn.cpp" line="4531"/>
-        <location filename="../../fn.cpp" line="4687"/>
-        <location filename="../../fn.cpp" line="4696"/>
-        <location filename="../../fn.cpp" line="4722"/>
+        <location filename="../../fn.cpp" line="1284"/>
+        <location filename="../../fn.cpp" line="4533"/>
+        <location filename="../../fn.cpp" line="4542"/>
+        <location filename="../../fn.cpp" line="4648"/>
+        <location filename="../../fn.cpp" line="4804"/>
+        <location filename="../../fn.cpp" line="4813"/>
+        <location filename="../../fn.cpp" line="4839"/>
         <source>Untitled</source>
         <translation>Be pavadinimo</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2015"/>
+        <location filename="../../fn.cpp" line="2057"/>
         <source>Deletion</source>
         <translation>Ištrynimas</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2128"/>
+        <location filename="../../fn.cpp" line="2170"/>
         <source>Tag(s) for this node</source>
         <translation>Šio mazgo žymė(-s)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2216"/>
-        <location filename="../../fn.cpp" line="3475"/>
+        <location filename="../../fn.cpp" line="2258"/>
+        <location filename="../../fn.cpp" line="3517"/>
         <source>Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)</source>
         <translation>Paveikslo failai (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;Visi failai (*)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3359"/>
-        <location filename="../../fn.cpp" line="3521"/>
+        <location filename="../../fn.cpp" line="3401"/>
+        <location filename="../../fn.cpp" line="3563"/>
         <source>Scale to</source>
         <translation>Keisti mastelį į</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3363"/>
-        <location filename="../../fn.cpp" line="3524"/>
+        <location filename="../../fn.cpp" line="3405"/>
+        <location filename="../../fn.cpp" line="3566"/>
         <source>%</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3515"/>
+        <location filename="../../fn.cpp" line="3557"/>
         <source>Scale Image(s)</source>
         <translation>Keisti paveikslo(-ų) mastelį</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3674"/>
+        <location filename="../../fn.cpp" line="3716"/>
         <source>untitled</source>
         <translation>be pavadinimo</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3706"/>
+        <location filename="../../fn.cpp" line="3748"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Image cannot be saved! Retry?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Nepavyksta įrašyti paveikslo! Bandyti dar kartą?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3707"/>
+        <location filename="../../fn.cpp" line="3749"/>
         <source>&lt;center&gt;Maybe you did not choose a proper extension&lt;/center&gt;
 &lt;center&gt;or do not have write permission.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</source>
         <translation>&lt;center&gt;Galbūt, nepasirinkote tinkamo prievardžio&lt;/center&gt;
 &lt;center&gt;arba neturite leidimų rašyti.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3734"/>
+        <location filename="../../fn.cpp" line="3776"/>
         <source>Save Image As...</source>
         <translation>Įrašyti paveikslą kaip...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3736"/>
+        <location filename="../../fn.cpp" line="3778"/>
         <source>Image Files (*.png *.jpg *.jpeg *.bmp);;All Files (*)</source>
         <translation>Paveikslo failai (*.png *.jpg *.jpeg *.bmp);;Visi failai (*)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3786"/>
+        <location filename="../../fn.cpp" line="3828"/>
         <source>Insert Table</source>
         <translation>Įterpti lentelę</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3792"/>
+        <location filename="../../fn.cpp" line="3834"/>
         <source>Rows:</source>
         <translation>Eilučių:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3798"/>
+        <location filename="../../fn.cpp" line="3840"/>
         <source>Columns:</source>
         <translation>Stulpelių:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4435"/>
+        <location filename="../../fn.cpp" line="4552"/>
         <source>Print Document</source>
         <translation>Spausdinti dokumentą</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4499"/>
+        <location filename="../../fn.cpp" line="4616"/>
         <source>Export HTML</source>
         <translation>Eksportuoti HTML</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4504"/>
+        <location filename="../../fn.cpp" line="4621"/>
         <source>Export:</source>
         <translation>Eksportuoti:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4505"/>
+        <location filename="../../fn.cpp" line="4622"/>
         <source>&amp;Current node</source>
         <translation>&amp;Esamą mazgą</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4507"/>
+        <location filename="../../fn.cpp" line="4624"/>
         <source>With all &amp;sub-nodes</source>
         <translation>Su visais &amp;pomazgiais</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4508"/>
+        <location filename="../../fn.cpp" line="4625"/>
         <source>&amp;All nodes</source>
         <translation>&amp;Visus mazgus</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4520"/>
+        <location filename="../../fn.cpp" line="4637"/>
         <source>Output file:</source>
         <translation>Išvesties failas:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4539"/>
+        <location filename="../../fn.cpp" line="4656"/>
         <source>Select path</source>
         <translation>Pasirinkti kelią</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4727"/>
+        <location filename="../../fn.cpp" line="4844"/>
         <source>Save HTML As...</source>
         <translation>Įrašyti HTML kaip...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4729"/>
+        <location filename="../../fn.cpp" line="4846"/>
         <source>HTML Files (*.html *.htm)</source>
         <translation>HTML failai (*.html *.htm)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4750"/>
+        <location filename="../../fn.cpp" line="4867"/>
         <source>Set Password</source>
         <translation>Nustatyti slaptažodį</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4758"/>
+        <location filename="../../fn.cpp" line="4875"/>
         <source>Type password</source>
         <translation>Įrašykite slaptažodį</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4763"/>
+        <location filename="../../fn.cpp" line="4880"/>
         <source>Retype password</source>
         <translation>Pakartokite slaptažodį</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4838"/>
+        <location filename="../../fn.cpp" line="4955"/>
         <source>&lt;center&gt;Passwords were different. Retry!&lt;/center&gt;</source>
         <translation>&lt;center&gt;Slaptažodžiai buvo skirtingi. Bandykite dar kartą!&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4870"/>
-        <location filename="../../fn.cpp" line="4878"/>
+        <location filename="../../fn.cpp" line="4987"/>
+        <location filename="../../fn.cpp" line="4995"/>
         <source>Enter Password</source>
         <translation>Įveskite slaptažodį</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4944"/>
+        <location filename="../../fn.cpp" line="5061"/>
         <source>&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</source>
         <translation>&lt;center&gt;Neteisingas slaptažodis. Bandykite dar kartą!&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4983"/>
+        <location filename="../../fn.cpp" line="5100"/>
         <source>A lightweight notes manager</source>
         <translation>Supaprastinta užrašų tvarkytuvė</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4984"/>
+        <location filename="../../fn.cpp" line="5101"/>
         <source>based on Qt5</source>
         <translation>pagrįsta Qt5</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4985"/>
+        <location filename="../../fn.cpp" line="5102"/>
         <source>Author</source>
         <translation>Autorius</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4987"/>
-        <location filename="../../fn.cpp" line="4988"/>
+        <location filename="../../fn.cpp" line="5104"/>
+        <location filename="../../fn.cpp" line="5105"/>
         <source>About FeatherNotes</source>
         <translation>Apie FeatherNotes</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4987"/>
+        <location filename="../../fn.cpp" line="5104"/>
         <source>Translators</source>
         <translation>Vertėjai</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4986"/>
+        <location filename="../../fn.cpp" line="5103"/>
         <source>aka.</source>
         <translation>dar žinomas kaip</translation>
     </message>
@@ -1445,26 +1445,26 @@ fiksuotą dydį!</translation>
         <translation>Prisiminti lango &amp;dydį</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="49"/>
+        <location filename="../../predDialog.ui" line="51"/>
         <source>Start with this size: </source>
         <translation>Pradėti šiuo dydžiu: </translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="56"/>
-        <location filename="../../predDialog.ui" line="70"/>
-        <location filename="../../predDialog.ui" line="245"/>
-        <location filename="../../predDialog.ui" line="259"/>
+        <location filename="../../predDialog.ui" line="58"/>
+        <location filename="../../predDialog.ui" line="72"/>
+        <location filename="../../predDialog.ui" line="255"/>
+        <location filename="../../predDialog.ui" line="269"/>
         <source> px</source>
         <translation> piks.</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="63"/>
-        <location filename="../../predDialog.ui" line="252"/>
+        <location filename="../../predDialog.ui" line="65"/>
+        <location filename="../../predDialog.ui" line="262"/>
         <source> × </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="93"/>
+        <location filename="../../predDialog.ui" line="97"/>
         <source>Saves tree width after closing
 this dialog and also on exit.
 
@@ -1476,12 +1476,12 @@ Nuimkite žymėjimą, norėdami palikti
 pločio santykį 170/530.</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="99"/>
+        <location filename="../../predDialog.ui" line="103"/>
         <source>Remember &amp;tree width</source>
         <translation>Prisiminti &amp;medžio plotį</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="106"/>
+        <location filename="../../predDialog.ui" line="110"/>
         <source>Saves position after closing
 this dialog and also on exit.
 
@@ -1496,12 +1496,12 @@ darbalaukio aplinkose, tokiose kaip
 Unity ir Cinnamon.)</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="114"/>
+        <location filename="../../predDialog.ui" line="118"/>
         <source>Save &amp;position</source>
         <translation>Įrašyti &amp;poziciją</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="121"/>
+        <location filename="../../predDialog.ui" line="125"/>
         <source>Decides whether a systray icon should be used.
 If checked, the titlebar close button iconifies
 the window to the systray instead of quitting.
@@ -1515,63 +1515,63 @@ užvėrimo mygtuką, iš jos nebus išeita, o jos langas bus suskleistas
 Tam, kad įsigaliotų, reikalauja paleisti FeatherNotes iš naujo.</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="128"/>
+        <location filename="../../predDialog.ui" line="132"/>
         <source>Add to s&amp;ystray</source>
         <translation>Pridėti į sis&amp;temos dėklą</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="151"/>
+        <location filename="../../predDialog.ui" line="157"/>
         <source>The command line option --tray
 can be used instead of this.</source>
         <translation>Vietoj to, gali būti naudojama
 komandų eilutės parinktis --tray.</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="155"/>
+        <location filename="../../predDialog.ui" line="161"/>
         <source>Start i&amp;conified to tray</source>
         <translation>Paleisti &amp;suskleistą į dėklą</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="162"/>
+        <location filename="../../predDialog.ui" line="170"/>
         <source>Merge the tree view with its surroundings?</source>
         <translation>Sulieti medžių rodinį su jo aplinka?</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="165"/>
+        <location filename="../../predDialog.ui" line="173"/>
         <source>Transparent t&amp;ree view</source>
         <translation>Permatomas me&amp;džių rodinys</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="172"/>
+        <location filename="../../predDialog.ui" line="180"/>
         <source>By default, the active widget style determines
 the size of toolbar icons.</source>
         <translation>Pagal numatymą, aktyvus valdiklių stilius nustato
 įrankių juostos piktogramų dydį.</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="176"/>
+        <location filename="../../predDialog.ui" line="184"/>
         <source>Small toolbar icons</source>
         <translation>Mažos įrankių juostos piktogramos</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="183"/>
+        <location filename="../../predDialog.ui" line="191"/>
         <source>Do not show t&amp;oolbar</source>
         <translation>Nerodyti į&amp;rankių juostos</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="190"/>
+        <location filename="../../predDialog.ui" line="198"/>
         <source>If the menubar is hidden,
 a menu button appears on the toolbar.</source>
         <translation>Jei meniu juosta yra paslėpta,
 įrankių juostoje atsiranda meniu mygtukas.</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="194"/>
+        <location filename="../../predDialog.ui" line="202"/>
         <source>Do not show &amp;menubar</source>
         <translation>Nerodyti &amp;meniu juostos</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="201"/>
+        <location filename="../../predDialog.ui" line="209"/>
         <source>Check this under Enlightenment (or, probably, another DE)
 to use the systray icon more easily!</source>
         <translation>Pažymėkite tai, jei naudojate programą Enlightenment aplinkoje
@@ -1579,12 +1579,12 @@ to use the systray icon more easily!</source>
 galėtumėte naudoti sistemos dėklo piktogramą!</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="205"/>
+        <location filename="../../predDialog.ui" line="213"/>
         <source>Running &amp;under Enlightenment?</source>
         <translation>Programa paleista E&amp;nlightenment aplinkoje?</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="228"/>
+        <location filename="../../predDialog.ui" line="238"/>
         <source>Some DE&apos;s (like Enlightenment) may not report the window position
 correctly. If that is the case, you could try to fix the problem here.
 
@@ -1604,27 +1604,27 @@ Pasirinkę koordinačių poslinkius, padėkite langą į tinkamą poziciją ir p
 FeatherNotes iš naujo!</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="238"/>
+        <location filename="../../predDialog.ui" line="248"/>
         <source>Shifts (X × Y): </source>
         <translation>Poslinkiai (X × Y): </translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="270"/>
+        <location filename="../../predDialog.ui" line="314"/>
         <source>Text</source>
         <translation>Tekstas</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="279"/>
+        <location filename="../../predDialog.ui" line="323"/>
         <source>&amp;Wrap lines by default</source>
         <translation>Pagal numatymą, s&amp;kaidyti eilutes</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="286"/>
+        <location filename="../../predDialog.ui" line="330"/>
         <source>Auto-&amp;indent by default</source>
         <translation>Pagal numatymą, daryti automatinę į&amp;trauką</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="293"/>
+        <location filename="../../predDialog.ui" line="337"/>
         <source>This covers parentheses, braces, brackets and quotes.
 
 Needs restarting of FeatherNotes to take effect.</source>
@@ -1633,33 +1633,74 @@ Needs restarting of FeatherNotes to take effect.</source>
 Tam, kad įsigaliotų, reikalauja paleisti FeatherNotes iš naujo.</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="298"/>
+        <location filename="../../predDialog.ui" line="342"/>
         <source>Auto-&amp;bracket
 (Requires application restart)</source>
         <translation>Automatiniai skl&amp;iaustai
 (Reikalauja programos paleidimo iš naujo)</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="306"/>
+        <location filename="../../predDialog.ui" line="352"/>
         <source>&amp;Auto-save every</source>
         <translation>&amp;Automatiškai įrašyti kas</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="313"/>
+        <location filename="../../predDialog.ui" line="359"/>
         <source> minute(s)</source>
         <translation> minutes(-ių)</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="345"/>
+        <location filename="../../predDialog.ui" line="393"/>
         <source>This is not a complete fix but
 prevents annoying scroll jumps.</source>
         <translation>Tai nėra pilnas pataisymas, tačiau
 neleidžia erzinančių slinkimo peršokimų.</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="349"/>
+        <location filename="../../predDialog.ui" line="397"/>
         <source>Workaround for &amp;Qt5&apos;s scroll jump bug</source>
         <translation>&amp;Qt5 slinkimo peršokimų problemos apėjimas</translation>
+    </message>
+    <message>
+        <location filename="../../predDialog.ui" line="424"/>
+        <source>Shortcuts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../predDialog.ui" line="443"/>
+        <source>Action</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../predDialog.ui" line="448"/>
+        <source>Shortcut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../predDialog.ui" line="456"/>
+        <source>Default</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../pref.cpp" line="324"/>
+        <location filename="../../pref.cpp" line="510"/>
+        <source>Warning: Ambiguous shortcut detected!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../pref.cpp" line="500"/>
+        <source>The typed shortcut was not valid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../pref.cpp" line="502"/>
+        <source>The typed shortcut was reserved.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../pref.cpp" line="606"/>
+        <source>Application restart is needed for changes to take effect.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

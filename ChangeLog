@@ -1,6 +1,9 @@
-V0.4.7
+V0.5.0
 ---------
  * No need to elide the systray tooltip.
+ * Added a shortcut editor to Preferences for customizing some shortcuts.
+ * Added an info bar to Preferences. It shows up only when needed.
+ * Always remember the Preferences dialog size.
 
 V0.4.6
 ---------
@@ -29,7 +32,7 @@ V0.4.5
  * Translation support.
  * Added SVG symbolic icons (that change color to have high contrast with their backgrounds) and removed system icon support because some important icons may not be found in system themes.
  * Support node icons.
- * First try "gio" for openeing hyperlinks because Qt may resort to "xdg-open", which isn't a good choice sometimes.
+ * First try "gio" for opening hyperlinks because Qt may resort to "xdg-open", which isn't a good choice sometimes.
  * Polish translation and a fix by Marcin Mikołajczak (m4sk1n at GitHub).
  * Added a workaround for a new bug in KDE's file dialog, which doesn't change directory with selectFile().
  * Wayland support.
@@ -93,7 +96,7 @@ V0.4
 V0.3.1
 ---------
  * Made the systray icon optional and added a command line option for starting minimized.
- * Give the main window an ID when starting minimized to tray for tranlucency to work with Kvnatum.
+ * Give the main window an ID when starting minimized to tray for translucency to work with Kvantum.
 
 V0.3
 ---------
@@ -197,11 +200,11 @@ V0.1.3
 
 V0.1.2
 ---------
- * Consider returnPressed() in line-edits and spin-boxes as confirmation im most dialogs.
+ * Consider returnPressed() in line-edits and spin-boxes as confirmation in most dialogs.
  * When FeatherNotes is started minimized to tray, bring it to the current desktop on clicking its tray icon.
  * Always expand the current node after adding a child to it.
  * Added a context menu to the tree-view.
- * Added a keyboard shortcut for toggling minimizaion to tray (useful when in fullscreen).
+ * Added a keyboard shortcut for toggling minimization to tray (useful when in fullscreen).
  * Care for window states when showing the window from the tray.
  * Added icons for GTK+ based environments.
 
