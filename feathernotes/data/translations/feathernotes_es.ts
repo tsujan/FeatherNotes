@@ -1121,7 +1121,7 @@
     <message>
         <location filename="../../fn.cpp" line="2771"/>
         <source>%1 Matches</source>
-        <translation>%1 coincidencias</translation>
+        <translation>%1 Coincidencia</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2773"/>
