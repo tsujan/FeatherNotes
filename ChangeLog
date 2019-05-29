@@ -1,9 +1,11 @@
 V0.5.0
 ---------
  * No need to elide the systray tooltip.
- * Added a shortcut editor to Preferences for customizing some shortcuts.
+ * Added a shortcut editor to Preferences for customizing shortcuts.
  * Added an info bar to Preferences. It shows up only when needed.
  * Always remember the Preferences dialog size.
+ * Set the selected text and highlight colors if those of the app style aren't suitable.
+ * Better placement of text context menu actions.
 
 V0.4.6
 ---------

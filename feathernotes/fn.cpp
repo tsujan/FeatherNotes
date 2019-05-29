@@ -1485,18 +1485,37 @@ TextEdit *FN::newWidget()
     textEdit->setScrollJumpWorkaround (scrollJumpWorkaround_);
     //textEdit->autoIndentation = true; // auto-indentation is enabled by default
     textEdit->autoBracket = autoBracket_;
-    textEdit->setStyleSheet ("QTextEdit {"
-                             "color: black;}");
-    QPalette palette = QApplication::palette();
-    QBrush brush = palette.window();
+    QPalette p = QApplication::palette();
+    QColor hCol = p.color(QPalette::Active, QPalette::Highlight);
+    QBrush brush = p.window();
     if (brush.color().value() <= 120)
+    {
+        if (236 - qGray (hCol.rgb()) < 30)
+            textEdit->setStyleSheet ("QTextEdit {"
+                                     "color: black;"
+                                     "selection-color: black;"
+                                     "selection-background-color: rgb(200, 200, 200);}");
+        else
+            textEdit->setStyleSheet ("QTextEdit {"
+                                     "color: black;}");
         textEdit->viewport()->setStyleSheet (".QWidget {"
                                              "color: black;"
                                              "background-color: rgb(236, 236, 236);}");
+    }
     else
+    {
+        if (255 - qGray (hCol.rgb()) < 30)
+            textEdit->setStyleSheet ("QTextEdit {"
+                                     "color: black;"
+                                     "selection-color: black;"
+                                     "selection-background-color: rgb(200, 200, 200);}");
+        else
+            textEdit->setStyleSheet ("QTextEdit {"
+                                     "color: black;}");
         textEdit->viewport()->setStyleSheet (".QWidget {"
                                              "color: black;"
                                              "background-color: rgb(255, 255, 255);}");
+    }
     textEdit->setAcceptRichText (false);
     textEdit->viewport()->setMouseTracking (true);
     textEdit->setContextMenuPolicy (Qt::CustomContextMenu);
@@ -1571,22 +1590,51 @@ void FN::txtContextMenu (const QPoint &p)
     }
     linkAtPos_ = textEdit->anchorAt (p);
     QMenu *menu = textEdit->createStandardContextMenu (p);
-    QList<QAction *> list = menu->actions();
-    if (!list.isEmpty() && list.count() == 11)
+    bool sepAdded (false);
+
+    const QList<QAction*> list = menu->actions();
+    int copyIndx = -1, pasteIndx = -1;
+    for (int i = 0; i < list.count(); ++i)
     {
-        if (!linkAtPos_.isEmpty())
-            menu->insertAction (list.at (5), ui->actionCopyLink);
-        menu->insertAction (list.at (6), ui->actionPasteHTML);
+        const auto thisAction = list.at (i);
+        /* remove the shortcut strings because shortcuts may change */
+        QString txt = thisAction->text();
+        if (!txt.isEmpty())
+            txt = txt.split ('\t').first();
+        if (!txt.isEmpty())
+            thisAction->setText (txt);
+        /* find appropriate places for actionCopyLink and actionPasteHTML */
+        if (thisAction->objectName() == "edit-copy")
+            copyIndx = i;
+        else if (thisAction->objectName() == "edit-paste")
+            pasteIndx = i;
     }
+    if (!linkAtPos_.isEmpty())
+    {
+        if (copyIndx > -1 && copyIndx + 1 < list.count())
+            menu->insertAction (list.at (copyIndx + 1), ui->actionCopyLink);
+        else
+        {
+            menu->addSeparator();
+            menu->addAction (ui->actionCopyLink);
+        }
+    }
+    if (pasteIndx > -1 && pasteIndx + 1 < list.count())
+        menu->insertAction (list.at (pasteIndx + 1), ui->actionPasteHTML);
     else
     {
-        if (!linkAtPos_.isEmpty())
-            menu->addAction (ui->actionCopyLink);
         menu->addAction (ui->actionPasteHTML);
+        menu->addSeparator();
+        sepAdded = true;
     }
-    menu->addSeparator();
+
     if (hasSel)
     {
+        if (!sepAdded)
+        {
+            menu->addSeparator();
+            sepAdded = true;
+        }
         menu->addAction (ui->actionLink);
         if (isImageSelected())
         {
@@ -1596,6 +1644,7 @@ void FN::txtContextMenu (const QPoint &p)
         }
         menu->addSeparator();
     }
+    if (!sepAdded) menu->addSeparator();
     menu->addAction (ui->actionEmbedImage);
     menu->addAction (ui->actionTable);
     txtTable_ = cur.currentTable();
