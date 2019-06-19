@@ -6,7 +6,7 @@
     <message>
         <location filename="../../about.ui" line="131"/>
         <source>License</source>
-        <translation></translation>
+        <translation>許可證</translation>
     </message>
 </context>
 <context>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../../fn.ui" line="65"/>
         <source>Next (F3)</source>
-        <translation></translation>
+        <translation>下一個 (F3)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="68"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../../fn.ui" line="81"/>
         <source>Previous (F4)</source>
-        <translation></translation>
+        <translation>上一個 (F4)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="84"/>
@@ -41,12 +41,12 @@
     <message>
         <location filename="../../fn.ui" line="100"/>
         <source>Search...</source>
-        <translation></translation>
+        <translation>搜尋...</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="115"/>
         <source>Search only in names (Ctrl+Shift+F7)</source>
-        <translation></translation>
+        <translation>僅憑名稱搜尋 (Ctrl+Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="118"/>
@@ -56,7 +56,7 @@
     <message>
         <location filename="../../fn.ui" line="128"/>
         <source>Search only in tags (Shift+F7)</source>
-        <translation></translation>
+        <translation>僅憑標籤搜尋 (Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="131"/>
@@ -66,7 +66,7 @@
     <message>
         <location filename="../../fn.ui" line="144"/>
         <source>Search in all nodes (F7)</source>
-        <translation></translation>
+        <translation>在全部節點搜尋 (F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="147"/>
@@ -76,12 +76,12 @@
     <message>
         <location filename="../../fn.ui" line="186"/>
         <source>Whole Word (F6)</source>
-        <translation></translation>
+        <translation>整字 (F6)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="189"/>
         <source>Whole Word</source>
-        <translation></translation>
+        <translation>整字</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="192"/>
@@ -1626,43 +1626,43 @@ prevents annoying scroll jumps.</source>
     <message>
         <location filename="../../predDialog.ui" line="424"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>快捷鍵</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="443"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>行為</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="448"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>快捷鍵</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="456"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>默認</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="324"/>
         <location filename="../../pref.cpp" line="510"/>
         <source>Warning: Ambiguous shortcut detected!</source>
-        <translation type="unfinished"></translation>
+        <translation>警告：檢測到不明確的快捷方式！</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="500"/>
         <source>The typed shortcut was not valid.</source>
-        <translation type="unfinished"></translation>
+        <translation>輸入的快捷方式無效。</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="502"/>
         <source>The typed shortcut was reserved.</source>
-        <translation type="unfinished"></translation>
+        <translation>輸入的快捷方式已保留。</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="606"/>
         <source>Application restart is needed for changes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>變更生效需要程式重新啓動。</translation>
     </message>
 </context>
 <context>

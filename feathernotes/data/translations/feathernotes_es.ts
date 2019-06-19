@@ -1660,43 +1660,43 @@ los molestos saltos de desplazamiento.</translation>
     <message>
         <location filename="../../predDialog.ui" line="424"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Atajos</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="443"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Acción</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="448"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>Atajo</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="456"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Por omisión</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="324"/>
         <location filename="../../pref.cpp" line="510"/>
         <source>Warning: Ambiguous shortcut detected!</source>
-        <translation type="unfinished"></translation>
+        <translation>Aviso: ¡Atajo ambiguo detectado!</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="500"/>
         <source>The typed shortcut was not valid.</source>
-        <translation type="unfinished"></translation>
+        <translation>El atajo pulsado no es válido.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="502"/>
         <source>The typed shortcut was reserved.</source>
-        <translation type="unfinished"></translation>
+        <translation>El atajo pulsado está reservado.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="606"/>
         <source>Application restart is needed for changes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Es necesario reiniciar la aplicación para que los cambios tengan efecto.</translation>
     </message>
 </context>
 <context>

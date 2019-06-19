@@ -6,7 +6,7 @@
     <message>
         <location filename="../../about.ui" line="131"/>
         <source>License</source>
-        <translation></translation>
+        <translation>ライセンス</translation>
     </message>
 </context>
 <context>
@@ -632,7 +632,7 @@
     <message>
         <location filename="../../fn.ui" line="983"/>
         <source>&amp;About</source>
-        <translation></translation>
+        <translation>このアプリケーションについて(&amp;A)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="991"/>
@@ -1385,7 +1385,7 @@
         <location filename="../../fn.cpp" line="5153"/>
         <location filename="../../fn.cpp" line="5154"/>
         <source>About FeatherNotes</source>
-        <translation></translation>
+        <translation>FeatherNotes について</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5153"/>
