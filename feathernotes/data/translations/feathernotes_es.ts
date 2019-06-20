@@ -81,7 +81,7 @@
     <message>
         <location filename="../../fn.ui" line="189"/>
         <source>Whole Word</source>
-        <translation>Palabras completas</translation>
+        <translation>Palabra completa</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="192"/>
@@ -995,13 +995,13 @@
     <message>
         <location filename="../../fn.cpp" line="719"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;New note?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;¿Quiere crear una nueva nota?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;¿Desea crear una nueva nota?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="720"/>
         <source>&lt;center&gt;&lt;i&gt;Do you really want to leave this document&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;and create an empty one?&lt;/i&gt;&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;i&gt;¿Seguro que quiere dejar el documento&lt;/i&gt;&lt;/center&gt;
+        <translation>&lt;center&gt;&lt;i&gt;¿Seguro que quiere descartar este documento&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;y crear uno vacío?&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
@@ -1021,7 +1021,7 @@
     <message>
         <location filename="../../fn.cpp" line="795"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Save changes?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;¿Quiere guardar los cambios?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;¿Desea guardar los cambios?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="797"/>
@@ -1085,8 +1085,8 @@
         <location filename="../../fn.cpp" line="2108"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;i&gt;Warning!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
 &lt;center&gt;This action cannot be undone.&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;b&gt;&lt;i&gt;¡Aviso!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
-&lt;center&gt;Esta acción no se puede deshacer.&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;i&gt;¡Advertencia!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
+&lt;center&gt;Esta acción no se podrá deshacer.&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2209"/>
@@ -1254,7 +1254,7 @@
     <message>
         <location filename="../../fn.cpp" line="3797"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Image cannot be saved! Retry?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;¡No se puede guradar la imagen! ¿Quiere reintentarlo?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;¡No se pudo guradar la imagen! ¿Quiere volver a intentarlo?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3798"/>
@@ -1356,7 +1356,7 @@
     <message>
         <location filename="../../fn.cpp" line="5004"/>
         <source>&lt;center&gt;Passwords were different. Retry!&lt;/center&gt;</source>
-        <translation>&lt;center&gt;Las contraseñas son distintas. ¡Reinténtalo!&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;Las contraseñas no coinciden. ¡Reinténtalo!&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5036"/>
@@ -1675,23 +1675,23 @@ los molestos saltos de desplazamiento.</translation>
     <message>
         <location filename="../../predDialog.ui" line="456"/>
         <source>Default</source>
-        <translation>Por omisión</translation>
+        <translation>Predeterminado</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="324"/>
         <location filename="../../pref.cpp" line="510"/>
         <source>Warning: Ambiguous shortcut detected!</source>
-        <translation>Aviso: ¡Atajo ambiguo detectado!</translation>
+        <translation>Advertencia: ¡Se ha encontrado un atajo equivocado!</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="500"/>
         <source>The typed shortcut was not valid.</source>
-        <translation>El atajo pulsado no es válido.</translation>
+        <translation>El atajo que intenta utilizar no es válido.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="502"/>
         <source>The typed shortcut was reserved.</source>
-        <translation>El atajo pulsado está reservado.</translation>
+        <translation>El atajo que intenta utilizar se encuentra reservado.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="606"/>
