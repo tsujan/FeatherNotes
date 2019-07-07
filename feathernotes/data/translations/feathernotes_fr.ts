@@ -1659,43 +1659,43 @@ il empêche les sauts de défilement énervants.</translation>
     <message>
         <location filename="../../predDialog.ui" line="424"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Raccourcis</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="443"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Action</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="448"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>Raccourci</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="456"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Par défaut</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="324"/>
         <location filename="../../pref.cpp" line="510"/>
         <source>Warning: Ambiguous shortcut detected!</source>
-        <translation type="unfinished"></translation>
+        <translation>Attention : raccourci ambigu détecté !</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="500"/>
         <source>The typed shortcut was not valid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Le raccourci saisi n’est pas valide.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="502"/>
         <source>The typed shortcut was reserved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Le raccourci saisi est réservé.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="606"/>
         <source>Application restart is needed for changes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Un redémarrage de l’application est nécessaire pour que les changements prennent effet.</translation>
     </message>
 </context>
 <context>
