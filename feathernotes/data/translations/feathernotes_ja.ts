@@ -106,38 +106,38 @@
     <message>
         <location filename="../../fn.ui" line="219"/>
         <source>&amp;File</source>
-        <translation></translation>
+        <translation>ファイル(&amp;F)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="238"/>
         <source>&amp;Edit</source>
-        <translation></translation>
+        <translation>編集(&amp;E)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="253"/>
         <source>For&amp;mat</source>
-        <translation></translation>
+        <translation>書式(&amp;M)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="285"/>
         <source>&amp;Tree</source>
-        <translation></translation>
+        <translation>ツリー(&amp;T)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="308"/>
         <source>&amp;Options</source>
-        <translation></translation>
+        <translation>オプション(&amp;O)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="320"/>
         <source>&amp;Search</source>
-        <translation></translation>
+        <translation>検索(&amp;S)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="327"/>
         <location filename="../../fn.ui" line="975"/>
         <source>&amp;Help</source>
-        <translation></translation>
+        <translation>ヘルプ(&amp;H)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="424"/>
@@ -1390,7 +1390,7 @@
     <message>
         <location filename="../../fn.cpp" line="5153"/>
         <source>Translators</source>
-        <translation></translation>
+        <translation>翻訳者</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5152"/>
