@@ -142,7 +142,7 @@
     <message>
         <location filename="../../fn.ui" line="424"/>
         <source>Find:</source>
-        <translation></translation>
+        <translation>検索:</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="431"/>
@@ -254,7 +254,7 @@
     <message>
         <location filename="../../fn.ui" line="572"/>
         <source>&amp;Find</source>
-        <translation></translation>
+        <translation>検索(&amp;F)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="575"/>
@@ -380,7 +380,7 @@
         <location filename="../../fn.ui" line="698"/>
         <location filename="../../fn.cpp" line="559"/>
         <source>&amp;New Note</source>
-        <translation></translation>
+        <translation>新しいノート(&amp;N)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="701"/>
@@ -390,7 +390,7 @@
     <message>
         <location filename="../../fn.ui" line="709"/>
         <source>Save &amp;As</source>
-        <translation></translation>
+        <translation>名前を付けて保存(&amp;A)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="712"/>
@@ -400,7 +400,7 @@
     <message>
         <location filename="../../fn.ui" line="720"/>
         <source>&amp;Print</source>
-        <translation></translation>
+        <translation>印刷(&amp;P)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="723"/>
@@ -421,7 +421,7 @@
         <location filename="../../fn.ui" line="744"/>
         <location filename="../../fn.cpp" line="562"/>
         <source>&amp;Quit</source>
-        <translation></translation>
+        <translation>終了(&amp;Q)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="747"/>
@@ -512,7 +512,7 @@
     <message>
         <location filename="../../fn.ui" line="843"/>
         <source>&amp;Append Sibling</source>
-        <translation></translation>
+        <translation>下にノードを追加(&amp;A)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="846"/>
@@ -522,7 +522,7 @@
     <message>
         <location filename="../../fn.ui" line="854"/>
         <source>Append &amp;Child</source>
-        <translation></translation>
+        <translation>子ノードを追加(&amp;C)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="857"/>
@@ -532,7 +532,7 @@
     <message>
         <location filename="../../fn.ui" line="865"/>
         <source>&amp;Delete Node</source>
-        <translation></translation>
+        <translation>ノードの削除(&amp;D)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="868"/>
@@ -617,7 +617,7 @@
     <message>
         <location filename="../../fn.ui" line="967"/>
         <source>Find and &amp;Replace</source>
-        <translation></translation>
+        <translation>検索と置換(&amp;R)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="970"/>
@@ -732,7 +732,7 @@
     <message>
         <location filename="../../fn.ui" line="1101"/>
         <source>&amp;Prepend Sibling</source>
-        <translation></translation>
+        <translation>上にノードを追加(&amp;P)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1104"/>
@@ -807,12 +807,12 @@
     <message>
         <location filename="../../fn.ui" line="1176"/>
         <source>&amp;Node Font</source>
-        <translation></translation>
+        <translation>ノードのフォント(&amp;N)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1179"/>
         <source>Node Font</source>
-        <translation></translation>
+        <translation>ノードのフォント</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1184"/>
@@ -822,7 +822,7 @@
     <message>
         <location filename="../../fn.ui" line="1192"/>
         <source>Paste &amp;HTML</source>
-        <translation></translation>
+        <translation>HTML で貼り付け(&amp;H)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1195"/>
@@ -867,22 +867,22 @@
     <message>
         <location filename="../../fn.ui" line="1238"/>
         <source>Append Row</source>
-        <translation></translation>
+        <translation>下に行を追加</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1243"/>
         <source>Delete Row</source>
-        <translation></translation>
+        <translation>行の削除</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1248"/>
         <source>Append Column</source>
-        <translation></translation>
+        <translation>右に列を追加</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1253"/>
         <source>Delete Column</source>
-        <translation></translation>
+        <translation>列の削除</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1258"/>
@@ -892,12 +892,12 @@
     <message>
         <location filename="../../fn.ui" line="1263"/>
         <source>Prepend Row</source>
-        <translation></translation>
+        <translation>上に行を追加</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1268"/>
         <source>Prepend Column</source>
-        <translation></translation>
+        <translation>左に列を追加</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1276"/>
@@ -938,7 +938,7 @@
     <message>
         <location filename="../../fn.ui" line="1325"/>
         <source>Node &amp;Icon</source>
-        <translation></translation>
+        <translation>ノードのアイコン(&amp;I)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1328"/>
@@ -948,7 +948,7 @@
     <message>
         <location filename="../../fn.cpp" line="2275"/>
         <source>Node Icon</source>
-        <translation></translation>
+        <translation>ノードのアイコン</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="343"/>
@@ -1078,7 +1078,7 @@
     <message>
         <location filename="../../fn.cpp" line="2107"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Delete this node?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;このノードを削除しますか？&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2108"/>
