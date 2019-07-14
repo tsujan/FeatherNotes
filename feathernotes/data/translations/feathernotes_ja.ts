@@ -31,7 +31,7 @@
     <message>
         <location filename="../../fn.ui" line="81"/>
         <source>Previous (F4)</source>
-        <translation type="unfinished">Previous (F4)</translation>
+        <translation>Previous (F4)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="84"/>
@@ -41,7 +41,7 @@
     <message>
         <location filename="../../fn.ui" line="100"/>
         <source>Search...</source>
-        <translation type="unfinished">Search...</translation>
+        <translation>Search...</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="115"/>
