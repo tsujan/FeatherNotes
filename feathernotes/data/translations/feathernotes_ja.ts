@@ -21,7 +21,7 @@
     <message>
         <location filename="../../fn.ui" line="65"/>
         <source>Next (F3)</source>
-        <translation></translation>
+        <translation type="unfinished">Next (F3)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="68"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../../fn.ui" line="81"/>
         <source>Previous (F4)</source>
-        <translation></translation>
+        <translation type="unfinished">Previous (F4)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="84"/>
@@ -41,7 +41,7 @@
     <message>
         <location filename="../../fn.ui" line="100"/>
         <source>Search...</source>
-        <translation></translation>
+        <translation type="unfinished">Search...</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="115"/>
@@ -147,22 +147,22 @@
     <message>
         <location filename="../../fn.ui" line="431"/>
         <source>Replace with:</source>
-        <translation></translation>
+        <translation>置換:</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="444"/>
         <source>To be replaced</source>
-        <translation></translation>
+        <translation>置換される文字</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="457"/>
         <source>Replacing text</source>
-        <translation></translation>
+        <translation>置換する文字</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="467"/>
         <source>Previous (F9)</source>
-        <translation></translation>
+        <translation>前へ (F9)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="470"/>
@@ -172,7 +172,7 @@
     <message>
         <location filename="../../fn.ui" line="483"/>
         <source>Next (F8)</source>
-        <translation></translation>
+        <translation>次へ (F8)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="486"/>
@@ -182,7 +182,7 @@
     <message>
         <location filename="../../fn.ui" line="499"/>
         <source>Replace all (F10)</source>
-        <translation></translation>
+        <translation>すべて置換 (F10)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="502"/>
@@ -192,13 +192,13 @@
     <message>
         <location filename="../../fn.ui" line="519"/>
         <source>&amp;Save</source>
-        <translation></translation>
+        <translation>保存(&amp;S)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="522"/>
         <location filename="../../fn.cpp" line="803"/>
         <source>Save</source>
-        <translation></translation>
+        <translation>保存</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="525"/>
@@ -209,12 +209,12 @@
         <location filename="../../fn.ui" line="530"/>
         <location filename="../../fn.cpp" line="560"/>
         <source>&amp;Open</source>
-        <translation></translation>
+        <translation>開く(&amp;O)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="533"/>
         <source>Open a file</source>
-        <translation></translation>
+        <translation>ファイルを開く</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="536"/>
@@ -224,12 +224,12 @@
     <message>
         <location filename="../../fn.ui" line="544"/>
         <source>&amp;Undo</source>
-        <translation></translation>
+        <translation>元に戻す(&amp;U)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="547"/>
         <source>Undo</source>
-        <translation></translation>
+        <translation>元に戻す</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="550"/>
@@ -239,12 +239,12 @@
     <message>
         <location filename="../../fn.ui" line="558"/>
         <source>&amp;Redo</source>
-        <translation></translation>
+        <translation>やり直す(&amp;R)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="561"/>
         <source>Redo</source>
-        <translation></translation>
+        <translation>やり直し</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="564"/>
@@ -259,7 +259,7 @@
     <message>
         <location filename="../../fn.ui" line="575"/>
         <source>Show/hide searchbar</source>
-        <translation></translation>
+        <translation>検索バーの表示/非表示</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="578"/>
@@ -269,12 +269,12 @@
     <message>
         <location filename="../../fn.ui" line="586"/>
         <source>&amp;Clear All Formats</source>
-        <translation></translation>
+        <translation>すべての書式をクリア(&amp;C)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="589"/>
         <source>Clear all formats</source>
-        <translation></translation>
+        <translation>すべての書式をクリアします</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="592"/>
@@ -284,12 +284,12 @@
     <message>
         <location filename="../../fn.ui" line="603"/>
         <source>&amp;Bold</source>
-        <translation></translation>
+        <translation>太字(&amp;B)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="606"/>
         <source>Bold</source>
-        <translation></translation>
+        <translation>太字</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="609"/>
@@ -299,12 +299,12 @@
     <message>
         <location filename="../../fn.ui" line="620"/>
         <source>&amp;Italic</source>
-        <translation></translation>
+        <translation>斜体(&amp;I)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="623"/>
         <source>Italic</source>
-        <translation></translation>
+        <translation>斜体</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="626"/>
@@ -314,12 +314,12 @@
     <message>
         <location filename="../../fn.ui" line="637"/>
         <source>&amp;Underline</source>
-        <translation></translation>
+        <translation>下線(&amp;U)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="640"/>
         <source>Underline</source>
-        <translation></translation>
+        <translation>下線</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="643"/>
@@ -329,12 +329,12 @@
     <message>
         <location filename="../../fn.ui" line="654"/>
         <source>&amp;Strike Through</source>
-        <translation></translation>
+        <translation>取り消し線(&amp;S)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="657"/>
         <source>Strike through</source>
-        <translation></translation>
+        <translation>取り消し線</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="660"/>
@@ -344,12 +344,12 @@
     <message>
         <location filename="../../fn.ui" line="668"/>
         <source>Te&amp;xt Color</source>
-        <translation></translation>
+        <translation>文字の色(&amp;X)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="671"/>
         <source>Text color</source>
-        <translation></translation>
+        <translation>文字の色</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="674"/>
@@ -374,7 +374,7 @@
     <message>
         <location filename="../../fn.ui" line="693"/>
         <source>Options</source>
-        <translation></translation>
+        <translation>オプション</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="698"/>
@@ -410,12 +410,12 @@
     <message>
         <location filename="../../fn.ui" line="731"/>
         <source>P&amp;rint with Sub-Nodes</source>
-        <translation></translation>
+        <translation>サブノードの印刷(&amp;R)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="739"/>
         <source>Set Pass&amp;word</source>
-        <translation></translation>
+        <translation>パスワードの設定(&amp;W)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="744"/>
@@ -431,7 +431,7 @@
     <message>
         <location filename="../../fn.ui" line="755"/>
         <source>&amp;Cut</source>
-        <translation></translation>
+        <translation>切り取り(&amp;C)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="758"/>
@@ -441,7 +441,7 @@
     <message>
         <location filename="../../fn.ui" line="766"/>
         <source>C&amp;opy</source>
-        <translation></translation>
+        <translation>コピー(&amp;O)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="769"/>
@@ -451,7 +451,7 @@
     <message>
         <location filename="../../fn.ui" line="777"/>
         <source>&amp;Paste</source>
-        <translation></translation>
+        <translation>貼り付け(&amp;P)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="780"/>
@@ -461,12 +461,12 @@
     <message>
         <location filename="../../fn.ui" line="788"/>
         <source>&amp;Delete</source>
-        <translation></translation>
+        <translation>削除(&amp;D)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="796"/>
         <source>&amp;Select All</source>
-        <translation></translation>
+        <translation>すべて選択(&amp;S)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="799"/>
@@ -476,13 +476,13 @@
     <message>
         <location filename="../../fn.ui" line="807"/>
         <source>E&amp;mbed Image</source>
-        <translation></translation>
+        <translation>画像の埋め込み(&amp;M)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="810"/>
         <location filename="../../fn.cpp" line="3434"/>
         <source>Embed Image</source>
-        <translation></translation>
+        <translation>画像の埋め込み</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="813"/>
@@ -492,7 +492,7 @@
     <message>
         <location filename="../../fn.ui" line="821"/>
         <source>E&amp;xpand All</source>
-        <translation></translation>
+        <translation>すべて展開</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="824"/>
@@ -502,7 +502,7 @@
     <message>
         <location filename="../../fn.ui" line="832"/>
         <source>Collap&amp;se All</source>
-        <translation></translation>
+        <translation>すべて折りたたむ(&amp;S)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="835"/>
@@ -542,7 +542,7 @@
     <message>
         <location filename="../../fn.ui" line="876"/>
         <source>Move &amp;Up</source>
-        <translation></translation>
+        <translation>上へ移動(&amp;U)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="879"/>
@@ -552,7 +552,7 @@
     <message>
         <location filename="../../fn.ui" line="887"/>
         <source>Move Do&amp;wn</source>
-        <translation></translation>
+        <translation>下へ移動(&amp;W)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="890"/>
@@ -562,7 +562,7 @@
     <message>
         <location filename="../../fn.ui" line="898"/>
         <source>Re&amp;name Node</source>
-        <translation></translation>
+        <translation>ノード名の変更</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="901"/>
@@ -637,7 +637,7 @@
     <message>
         <location filename="../../fn.ui" line="991"/>
         <source>Pr&amp;int All Nodes</source>
-        <translation></translation>
+        <translation>すべてのノードの印刷(&amp;I)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1002"/>
@@ -1136,22 +1136,22 @@
         <location filename="../../fn.cpp" line="2890"/>
         <location filename="../../fn.cpp" line="2942"/>
         <source>Replacement</source>
-        <translation></translation>
+        <translation>置換します</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3197"/>
         <source>No Replacement</source>
-        <translation></translation>
+        <translation>置換されません</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3199"/>
         <source>One Replacement</source>
-        <translation></translation>
+        <translation>置換 1 個</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3201"/>
         <source>%1 Replacements</source>
-        <translation></translation>
+        <translation>置換 %1 個</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3365"/>
@@ -1288,7 +1288,7 @@
     <message>
         <location filename="../../fn.cpp" line="4601"/>
         <source>Print Document</source>
-        <translation></translation>
+        <translation>文書の印刷</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4665"/>
@@ -1313,12 +1313,12 @@
     <message>
         <location filename="../../fn.cpp" line="4674"/>
         <source>&amp;All nodes</source>
-        <translation></translation>
+        <translation>すべてのノード(&amp;A)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4686"/>
         <source>Output file:</source>
-        <translation></translation>
+        <translation>出力ファイル:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4705"/>
