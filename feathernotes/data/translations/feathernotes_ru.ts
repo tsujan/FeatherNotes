@@ -269,12 +269,12 @@
     <message>
         <location filename="../../fn.ui" line="586"/>
         <source>&amp;Clear All Formats</source>
-        <translation></translation>
+        <translation>&amp;Очистить все форматы</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="589"/>
         <source>Clear all formats</source>
-        <translation></translation>
+        <translation>Очистить все форматы</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="592"/>
@@ -329,12 +329,12 @@
     <message>
         <location filename="../../fn.ui" line="654"/>
         <source>&amp;Strike Through</source>
-        <translation></translation>
+        <translation>&amp;Зачеркнуть</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="657"/>
         <source>Strike through</source>
-        <translation></translation>
+        <translation>Зачеркнуть</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="660"/>
@@ -607,7 +607,7 @@
     <message>
         <location filename="../../fn.ui" line="956"/>
         <source>&amp;Preferences</source>
-        <translation></translation>
+        <translation>&amp;Настройки</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="959"/>
@@ -617,7 +617,7 @@
     <message>
         <location filename="../../fn.ui" line="967"/>
         <source>Find and &amp;Replace</source>
-        <translation></translation>
+        <translation>Найти и &amp;заменить</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="970"/>
@@ -632,7 +632,7 @@
     <message>
         <location filename="../../fn.ui" line="983"/>
         <source>&amp;About</source>
-        <translation></translation>
+        <translation>&amp;О программе</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="991"/>
@@ -677,7 +677,7 @@
     <message>
         <location filename="../../fn.ui" line="1039"/>
         <source>Align center</source>
-        <translation></translation>
+        <translation>Выровнять по центру</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1042"/>
@@ -692,7 +692,7 @@
     <message>
         <location filename="../../fn.ui" line="1056"/>
         <source>Align right</source>
-        <translation></translation>
+        <translation>Выровнять справа</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1059"/>
@@ -707,7 +707,7 @@
     <message>
         <location filename="../../fn.ui" line="1073"/>
         <source>Align left</source>
-        <translation></translation>
+        <translation>Выровнять слева</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1076"/>
@@ -767,7 +767,7 @@
     <message>
         <location filename="../../fn.ui" line="1137"/>
         <source>Header 2</source>
-        <translation></translation>
+        <translation>Заголовок 2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1140"/>
@@ -782,7 +782,7 @@
     <message>
         <location filename="../../fn.ui" line="1151"/>
         <source>Header 1</source>
-        <translation></translation>
+        <translation>Заголовок 1</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1154"/>
@@ -797,7 +797,7 @@
     <message>
         <location filename="../../fn.ui" line="1165"/>
         <source>Header 3</source>
-        <translation></translation>
+        <translation>Заголовок 3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1168"/>
@@ -822,7 +822,7 @@
     <message>
         <location filename="../../fn.ui" line="1192"/>
         <source>Paste &amp;HTML</source>
-        <translation></translation>
+        <translation>Вставить &amp;HTML</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1195"/>
@@ -832,7 +832,7 @@
     <message>
         <location filename="../../fn.ui" line="1203"/>
         <source>&amp;Tags</source>
-        <translation></translation>
+        <translation>&amp;Теги</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1206"/>
@@ -842,7 +842,7 @@
     <message>
         <location filename="../../fn.ui" line="1214"/>
         <source>Insert Lin&amp;k</source>
-        <translation></translation>
+        <translation>Вставить ссылку</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1217"/>
@@ -852,7 +852,7 @@
     <message>
         <location filename="../../fn.ui" line="1222"/>
         <source>C&amp;opy Link</source>
-        <translation></translation>
+        <translation>Копировать ссылку</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1230"/>
@@ -1198,7 +1198,7 @@
         <location filename="../../fn.cpp" line="1302"/>
         <location filename="../../fn.cpp" line="1323"/>
         <source>FeatherNotes documents (*.fnx);;All Files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Документы FeatherNotes (*.fnx);;Все файлы (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1284"/>
@@ -1268,7 +1268,7 @@
     <message>
         <location filename="../../fn.cpp" line="3827"/>
         <source>Image Files (*.png *.jpg *.jpeg *.bmp);;All Files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Файлы изображений (*.png *.jpg *.jpeg *.bmp);;Все файлы (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3877"/>
@@ -1385,7 +1385,7 @@
         <location filename="../../fn.cpp" line="5153"/>
         <location filename="../../fn.cpp" line="5154"/>
         <source>About FeatherNotes</source>
-        <translation></translation>
+        <translation>О FeatherNotes</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5153"/>
@@ -1417,12 +1417,12 @@
     <message>
         <location filename="../../predDialog.ui" line="14"/>
         <source>Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройки</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="27"/>
         <source>Window</source>
-        <translation type="unfinished"></translation>
+        <translation>Окно</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="36"/>
@@ -1430,17 +1430,20 @@
 this dialog and also on exit.
 
 Uncheck to set a fixed size!</source>
-        <translation type="unfinished"></translation>
+        <translation>Сохраняет размер окна после закрытия
+этого диалога, а также после выхода.
+
+Снимите галочку, чтобы установить фиксированный размер!</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="42"/>
         <source>Remember window &amp;size</source>
-        <translation type="unfinished"></translation>
+        <translation>Запомнить размер &amp;окна</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="51"/>
         <source>Start with this size: </source>
-        <translation type="unfinished"></translation>
+        <translation>Начать с данного размера: </translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="58"/>
@@ -1448,7 +1451,7 @@ Uncheck to set a fixed size!</source>
         <location filename="../../predDialog.ui" line="255"/>
         <location filename="../../predDialog.ui" line="269"/>
         <source> px</source>
-        <translation type="unfinished"></translation>
+        <translation>пикс</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="65"/>
@@ -1467,7 +1470,7 @@ Uncheck for a width ratio of 170/530.</source>
     <message>
         <location filename="../../predDialog.ui" line="103"/>
         <source>Remember &amp;tree width</source>
-        <translation type="unfinished"></translation>
+        <translation>Запомнить ширину дерева</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="110"/>
@@ -1477,12 +1480,18 @@ this dialog and also on exit.
 (This may not work correctly
 under GTK+ DE&apos;s like Unity
 and Cinnamon.)</source>
-        <translation type="unfinished"></translation>
+        <translation>Сохраняет позицию после закрытия
+этого диалога, а также после выхода.
+
+(Может работать некорректно
+в окружениях рабочего стола, 
+основанных на GTK+, таких как 
+Unity или Cinnamon.)</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="118"/>
         <source>Save &amp;position</source>
-        <translation type="unfinished"></translation>
+        <translation>Сохранить &amp;позицию</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="125"/>
@@ -1496,18 +1505,19 @@ Needs restarting of FeatherNotes to take effect.</source>
     <message>
         <location filename="../../predDialog.ui" line="132"/>
         <source>Add to s&amp;ystray</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавить в &amp;трей</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="157"/>
         <source>The command line option --tray
 can be used instead of this.</source>
-        <translation type="unfinished"></translation>
+        <translation>Вместо этого можно использовать
+опцию командной строки --tray.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="161"/>
         <source>Start i&amp;conified to tray</source>
-        <translation type="unfinished"></translation>
+        <translation>Запускать свёрнутым в трей</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="170"/>
@@ -1523,28 +1533,30 @@ can be used instead of this.</source>
         <location filename="../../predDialog.ui" line="180"/>
         <source>By default, the active widget style determines
 the size of toolbar icons.</source>
-        <translation type="unfinished"></translation>
+        <translation>По умолчанию, активный стиль виджетов
+определяет размер иконок панели инструментов.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="184"/>
         <source>Small toolbar icons</source>
-        <translation type="unfinished"></translation>
+        <translation>Маленькие иконки панели инструментов</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="191"/>
         <source>Do not show t&amp;oolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Не показывать панель инструментов</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="198"/>
         <source>If the menubar is hidden,
 a menu button appears on the toolbar.</source>
-        <translation type="unfinished"></translation>
+        <translation>Если панель меню скрыта,
+кнопка меню находится на панели инструментов.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="202"/>
         <source>Do not show &amp;menubar</source>
-        <translation type="unfinished"></translation>
+        <translation>Не показывать панель меню</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="209"/>
@@ -1555,7 +1567,7 @@ to use the systray icon more easily!</source>
     <message>
         <location filename="../../predDialog.ui" line="213"/>
         <source>Running &amp;under Enlightenment?</source>
-        <translation type="unfinished"></translation>
+        <translation>Вы в среде Enlightenment?</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="238"/>
@@ -1577,71 +1589,75 @@ position and then restart FeatherNotes!</source>
     <message>
         <location filename="../../predDialog.ui" line="314"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Текст</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="323"/>
         <source>&amp;Wrap lines by default</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Выделение линий по умолчанию</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="330"/>
         <source>Auto-&amp;indent by default</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Автоотступ по умолчанию</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="337"/>
         <source>This covers parentheses, braces, brackets and quotes.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Это касается круглых, фигурных, квадратных скобок и кавычек.
+
+Потребуется перезапуск FeatherNotes.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="342"/>
         <source>Auto-&amp;bracket
 (Requires application restart)</source>
-        <translation type="unfinished"></translation>
+        <translation>Автозакрытие скобок
+(Потребуется перезапуск приложения)</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="352"/>
         <source>&amp;Auto-save every</source>
-        <translation type="unfinished"></translation>
+        <translation>Сохранять каждые</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="359"/>
         <source> minute(s)</source>
-        <translation type="unfinished"></translation>
+        <translation> минут(-ы)</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="393"/>
         <source>This is not a complete fix but
 prevents annoying scroll jumps.</source>
-        <translation type="unfinished"></translation>
+        <translation>Это не полное исправление,
+но предотвращает раздражающие скачки прокрутки.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="397"/>
         <source>Workaround for &amp;Qt5&apos;s scroll jump bug</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Устранение дёрганья при прокрутке на Qt5</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="424"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Сочетания клавиш</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="443"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Действие</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="448"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>Сочетание клавиш</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="456"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>По умолчанию</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="324"/>
@@ -1652,17 +1668,17 @@ prevents annoying scroll jumps.</source>
     <message>
         <location filename="../../pref.cpp" line="500"/>
         <source>The typed shortcut was not valid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Введённое сочетание клавиш некорректно.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="502"/>
         <source>The typed shortcut was reserved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Введённое сочетание клавиш занято.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="606"/>
         <source>Application restart is needed for changes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Чтобы изменения вступили в силу, необходим перезапуск приложения.</translation>
     </message>
 </context>
 <context>
