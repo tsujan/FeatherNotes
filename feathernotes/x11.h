@@ -18,13 +18,13 @@
 #ifndef X11_H
 #define X11_H
 
-#if defined Q_WS_X11 || defined Q_OS_LINUX || defined Q_OS_OPENBSD
+#if defined Q_WS_X11 || defined Q_OS_LINUX || defined Q_OS_OPENBSD || defined Q_OS_HURD
 #include <X11/Xlib.h>
 #endif
 
 namespace FeatherNotes {
 
-#if defined Q_WS_X11 || defined Q_OS_LINUX || defined Q_OS_OPENBSD
+#if defined Q_WS_X11 || defined Q_OS_LINUX || defined Q_OS_OPENBSD || defined Q_OS_HURD
 long fromDesktop();
 #endif
 

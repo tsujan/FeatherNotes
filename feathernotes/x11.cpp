@@ -18,7 +18,7 @@
 #include <QString>
 #include "x11.h"
 
-#if defined Q_WS_X11 || defined Q_OS_LINUX || defined Q_OS_OPENBSD
+#if defined Q_WS_X11 || defined Q_OS_LINUX || defined Q_OS_OPENBSD || defined Q_OS_HURD
 #include <X11/Xatom.h>
 #include <QX11Info>
 #endif
@@ -35,7 +35,7 @@ long fromDesktop()
 {
     long res = -1;
 
-#if defined Q_WS_X11 || defined Q_OS_LINUX || defined Q_OS_OPENBSD
+#if defined Q_WS_X11 || defined Q_OS_LINUX || defined Q_OS_OPENBSD || defined Q_OS_HURD
     Display  *disp = QX11Info::display();
     if (!disp) return res;
 
@@ -70,7 +70,7 @@ long onWhichDesktop (Window w)
 {
     long res = -1;
 
-#if defined Q_WS_X11 || defined Q_OS_LINUX || defined Q_OS_OPENBSD
+#if defined Q_WS_X11 || defined Q_OS_LINUX || defined Q_OS_OPENBSD || defined Q_OS_HURD
     Display *disp = QX11Info::display();
     if (!disp) return res;
 
@@ -102,7 +102,7 @@ long onWhichDesktop (Window w)
 // which was defined in gdkwindow-x11.c.
 void moveToCurrentDesktop (Window w)
 {
-#if defined Q_WS_X11 || defined Q_OS_LINUX || defined Q_OS_OPENBSD
+#if defined Q_WS_X11 || defined Q_OS_LINUX || defined Q_OS_OPENBSD || defined Q_OS_HURD
     Display *disp = QX11Info::display();
     if (!disp) return;
 
