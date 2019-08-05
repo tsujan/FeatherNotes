@@ -1454,7 +1454,7 @@ Uncheck to set a fixed size!</translation>
         <location filename="../../predDialog.ui" line="255"/>
         <location filename="../../predDialog.ui" line="269"/>
         <source> px</source>
-        <translation></translation>
+        <translation> ピクセル</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="65"/>
@@ -1526,7 +1526,7 @@ can be used instead of this.</translation>
     <message>
         <location filename="../../predDialog.ui" line="161"/>
         <source>Start i&amp;conified to tray</source>
-        <translation type="unfinished">Start i&amp;conified to tray</translation>
+        <translation>起動時にトレイに入れる(&amp;C)</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="170"/>
@@ -1548,19 +1548,19 @@ the size of toolbar icons.</translation>
     <message>
         <location filename="../../predDialog.ui" line="184"/>
         <source>Small toolbar icons</source>
-        <translation type="unfinished">Small toolbar icons</translation>
+        <translation>ツールバーのアイコンを小さくする</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="191"/>
         <source>Do not show t&amp;oolbar</source>
-        <translation type="unfinished">Do not show t&amp;oolbar</translation>
+        <translation>ツールバーを表示しない(&amp;T)</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="198"/>
         <source>If the menubar is hidden,
 a menu button appears on the toolbar.</source>
-        <translation type="unfinished">If the menubar is hidden,
-a menu button appears on the toolbar.</translation>
+        <translation>メニューバーを表示しない場合は、
+ツールバーにメニューボタンが表示されます。</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="202"/>
@@ -1577,7 +1577,7 @@ to use the systray icon more easily!</translation>
     <message>
         <location filename="../../predDialog.ui" line="213"/>
         <source>Running &amp;under Enlightenment?</source>
-        <translation type="unfinished">Running &amp;under Enlightenment?</translation>
+        <translation>Enlightenment 環境で実行していますか？</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="238"/>
@@ -1606,7 +1606,7 @@ position and then restart FeatherNotes!</translation>
     <message>
         <location filename="../../predDialog.ui" line="314"/>
         <source>Text</source>
-        <translation></translation>
+        <translation>テキスト</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="323"/>
