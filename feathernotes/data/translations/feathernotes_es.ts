@@ -1678,23 +1678,23 @@ los molestos saltos de desplazamiento.</translation>
         <translation>Predeterminado</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="338"/>
-        <location filename="../../pref.cpp" line="510"/>
+        <location filename="../../pref.cpp" line="337"/>
+        <location filename="../../pref.cpp" line="509"/>
         <source>Warning: Ambiguous shortcut detected!</source>
         <translation>Advertencia: ¡Se ha encontrado un atajo equivocado!</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="500"/>
+        <location filename="../../pref.cpp" line="499"/>
         <source>The typed shortcut was not valid.</source>
         <translation>El atajo que intenta utilizar no es válido.</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="502"/>
+        <location filename="../../pref.cpp" line="501"/>
         <source>The typed shortcut was reserved.</source>
         <translation>El atajo que intenta utilizar se encuentra reservado.</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="606"/>
+        <location filename="../../pref.cpp" line="605"/>
         <source>Application restart is needed for changes to take effect.</source>
         <translation>Es necesario reiniciar la aplicación para que los cambios tengan efecto.</translation>
     </message>

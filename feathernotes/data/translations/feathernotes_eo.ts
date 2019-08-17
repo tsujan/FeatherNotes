@@ -1672,23 +1672,23 @@ prevents annoying scroll jumps.</source>
         <translation>Defaŭlto</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="338"/>
-        <location filename="../../pref.cpp" line="510"/>
+        <location filename="../../pref.cpp" line="337"/>
+        <location filename="../../pref.cpp" line="509"/>
         <source>Warning: Ambiguous shortcut detected!</source>
         <translation>Averto: Ambigua fulmoklavo estas detektita!</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="500"/>
+        <location filename="../../pref.cpp" line="499"/>
         <source>The typed shortcut was not valid.</source>
         <translation>La fulmoklavo tajpita ne estis valida.</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="502"/>
+        <location filename="../../pref.cpp" line="501"/>
         <source>The typed shortcut was reserved.</source>
         <translation>La fulmoklavo tajpita estis rezervita.</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="606"/>
+        <location filename="../../pref.cpp" line="605"/>
         <source>Application restart is needed for changes to take effect.</source>
         <translation>Restartigo de la aplikaĵo necesas por ke la ŝanĝoj efektiviĝu.</translation>
     </message>

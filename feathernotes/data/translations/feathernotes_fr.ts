@@ -1677,23 +1677,23 @@ il empêche les sauts de défilement énervants.</translation>
         <translation>Par défaut</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="338"/>
-        <location filename="../../pref.cpp" line="510"/>
+        <location filename="../../pref.cpp" line="337"/>
+        <location filename="../../pref.cpp" line="509"/>
         <source>Warning: Ambiguous shortcut detected!</source>
         <translation>Attention&#xa0;: raccourci ambigu détecté&#xa0;!</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="500"/>
+        <location filename="../../pref.cpp" line="499"/>
         <source>The typed shortcut was not valid.</source>
         <translation>Le raccourci saisi n’est pas valide.</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="502"/>
+        <location filename="../../pref.cpp" line="501"/>
         <source>The typed shortcut was reserved.</source>
         <translation>Le raccourci saisi est réservé.</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="606"/>
+        <location filename="../../pref.cpp" line="605"/>
         <source>Application restart is needed for changes to take effect.</source>
         <translation>Un redémarrage de l’application est nécessaire pour que les changements prennent effet.</translation>
     </message>

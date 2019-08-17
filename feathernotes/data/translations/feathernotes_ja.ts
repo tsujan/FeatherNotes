@@ -1677,23 +1677,23 @@ prevents annoying scroll jumps.</translation>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="338"/>
-        <location filename="../../pref.cpp" line="510"/>
+        <location filename="../../pref.cpp" line="337"/>
+        <location filename="../../pref.cpp" line="509"/>
         <source>Warning: Ambiguous shortcut detected!</source>
         <translation type="unfinished">Warning: Ambiguous shortcut detected!</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="500"/>
+        <location filename="../../pref.cpp" line="499"/>
         <source>The typed shortcut was not valid.</source>
         <translation type="unfinished">The typed shortcut was not valid.</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="502"/>
+        <location filename="../../pref.cpp" line="501"/>
         <source>The typed shortcut was reserved.</source>
         <translation type="unfinished">The typed shortcut was reserved.</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="606"/>
+        <location filename="../../pref.cpp" line="605"/>
         <source>Application restart is needed for changes to take effect.</source>
         <translation type="unfinished">Application restart is needed for changes to take effect.</translation>
     </message>

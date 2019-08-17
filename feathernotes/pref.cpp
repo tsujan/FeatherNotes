@@ -23,7 +23,6 @@
 #include <QWindow>
 #include <QScreen>
 #include <QPushButton>
-#include <QKeySequenceEdit>
 #include <QAction>
 #include <QWhatsThis>
 

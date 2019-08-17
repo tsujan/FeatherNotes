@@ -1677,23 +1677,23 @@ mas evita saltos de rolagem irritantes.</translation>
         <translation>Padrão</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="338"/>
-        <location filename="../../pref.cpp" line="510"/>
+        <location filename="../../pref.cpp" line="337"/>
+        <location filename="../../pref.cpp" line="509"/>
         <source>Warning: Ambiguous shortcut detected!</source>
         <translation>Atenção: Atalho ambíguo detectado!</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="500"/>
+        <location filename="../../pref.cpp" line="499"/>
         <source>The typed shortcut was not valid.</source>
         <translation>O atalho digitado não era válido.</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="502"/>
+        <location filename="../../pref.cpp" line="501"/>
         <source>The typed shortcut was reserved.</source>
         <translation>O atalho digitado foi reservado.</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="606"/>
+        <location filename="../../pref.cpp" line="605"/>
         <source>Application restart is needed for changes to take effect.</source>
         <translation>A reinicialização do aplicativo é necessária para que as alterações entrem em vigor.</translation>
     </message>
