@@ -64,7 +64,7 @@ signals:
 
 private:
     DomItem *rootItem_;
-    /* DVD variables: */
+    /* DND variables: */
     QModelIndex dropIndex_;
     int dropRow_;
     DomItem *dragged_;
