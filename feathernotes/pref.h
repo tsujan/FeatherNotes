@@ -21,9 +21,22 @@
 #include <QDialog>
 #include <QStyledItemDelegate>
 #include <QTableWidgetItem>
+#include <QKeySequenceEdit>
 #include <QTimer>
 
 namespace FeatherNotes {
+
+class FNKeySequenceEdit : public QKeySequenceEdit
+{
+    Q_OBJECT
+
+public:
+    FNKeySequenceEdit (QWidget *parent = nullptr);
+
+protected:
+    virtual void keyPressEvent (QKeyEvent *event);
+};
+
 
 class Delegate : public QStyledItemDelegate
 {
@@ -35,6 +48,8 @@ public:
     virtual QWidget* createEditor (QWidget *parent,
                                    const QStyleOptionViewItem&,
                                    const QModelIndex&) const;
+
+protected:
     virtual bool eventFilter (QObject *object, QEvent *event);
 };
 

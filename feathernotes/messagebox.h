@@ -56,7 +56,11 @@ public:
                 t.replace ("<br>", "\n");
                 QStringList l = t.split ('\n'); // deal with newlines
                 for (int i = 0; i < l.size(); i++)
+#if (QT_VERSION >= QT_VERSION_CHECK(5,11,0))
+                    tw = qMax (tw, QFontMetrics (font()).horizontalAdvance (l[i]));
+#else
                     tw = qMax (tw, QFontMetrics (font()).width (l[i]));
+#endif
 
                 lo->setColumnMinimumWidth (lo->columnCount() - 1, tw + 10);
             }

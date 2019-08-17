@@ -66,11 +66,7 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
 #ifdef HAS_X11
     // For now, the lack of x11 is seen as wayland.
 #if defined Q_WS_X11 || defined Q_OS_LINUX || defined Q_OS_FREEBSD || defined Q_OS_OPENBSD || defined Q_OS_HURD
-#if QT_VERSION < 0x050200
-    isX11_ = true;
-#else
     isX11_ = QX11Info::isPlatformX11();
-#endif
 #else
     isX11_ = false;
 #endif // defined Q_WS_X11
@@ -122,7 +118,7 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
     ui->treeView->setModel (model_);
 
     /* get the default (customizable) shortcuts before any change */
-    static const QStringList exxcluded = {"actionCut", "actionCopy", "actionPaste", "actionSelectAll"};
+    static const QStringList excluded = {"actionCut", "actionCopy", "actionPaste", "actionSelectAll"};
     const auto allMenus = ui->menuBar->findChildren<QMenu*>();
     for (auto thisMenu : allMenus)
     {
@@ -130,7 +126,7 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
         for (auto menuAction : menuActions)
         {
             QKeySequence seq = menuAction->shortcut();
-            if (!seq.isEmpty() && !exxcluded.contains (menuAction->objectName()))
+            if (!seq.isEmpty() && !excluded.contains (menuAction->objectName()))
                 defaultShortcuts_.insert (menuAction, seq);
         }
     }
@@ -408,8 +404,8 @@ bool FN::close()
     QObject *sender = QObject::sender();
     if (sender != nullptr && sender->objectName() == "trayQuit" && findChildren<QDialog *>().count() > 0)
     { // don't respond to the tray icon when there's a dialog
-        activateWindow();
         raise();
+        activateWindow();
         return false;
     }
 
@@ -452,8 +448,8 @@ void FN::closeEvent (QCloseEvent *event)
                     }
                     else
                     {
-                        activateWindow();
                         raise();
+                        activateWindow();
                     }
                 }
                 else if (!underE_ && (!isVisible() || !isActiveWindow()))
@@ -478,8 +474,8 @@ void FN::closeEvent (QCloseEvent *event)
                     }
                     else
                     {
-                        activateWindow();
                         raise();
+                        activateWindow();
                     }
                 }
                 else if (!underE_ && (!isVisible() || !isActiveWindow()))
@@ -642,8 +638,16 @@ void FN::unZooming()
 
     TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
     textEdit->setFont (defaultFont_);
+#if (QT_VERSION >= QT_VERSION_CHECK(5,11,0))
+    QFontMetricsF metrics (defaultFont_);
+    textEdit->setTabStopDistance (4 * metrics.horizontalAdvance (' '));
+#elif (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+    QFontMetricsF metrics (defaultFont_);
+    textEdit->setTabStopDistance (4 * metrics.width (' '));
+#else
     QFontMetrics metrics (defaultFont_);
     textEdit->setTabStopWidth (4 * metrics.width (' '));
+#endif
 
     /* this may be a zoom-out */
     rehighlight (textEdit);
@@ -661,8 +665,8 @@ void FN::newNote()
     QObject *sender = QObject::sender();
     if (sender != nullptr && sender->objectName() == "trayNew" && findChildren<QDialog *>().count() > 0)
     { // don't respond to the tray icon when there's a dialog
-        activateWindow();
         raise();
+        activateWindow();
         return;
     }
     closeTagsDialog();
@@ -680,8 +684,8 @@ void FN::newNote()
             }
             else
             {
-                activateWindow();
                 raise();
+                activateWindow();
             }
         }
         else if (!underE_ && (!isVisible() || !isActiveWindow()))
@@ -995,8 +999,8 @@ void FN::openFile()
     QObject *sender = QObject::sender();
     if (sender != nullptr && sender->objectName() == "trayOpen" && findChildren<QDialog *>().count() > 0)
     { // don't respond to the tray icon when there's a dialog
-        activateWindow();
         raise();
+        activateWindow();
         return;
     }
     closeTagsDialog();
@@ -1014,8 +1018,8 @@ void FN::openFile()
             }
             else
             {
-                activateWindow();
                 raise();
+                activateWindow();
             }
         }
         else if (!underE_ && (!isVisible() || !isActiveWindow()))
@@ -1114,8 +1118,8 @@ void FN::openFNDoc (const QString &filePath)
     /* TextEdit::insertFromMimeData() should first return */
     QTimer::singleShot (0, this, [this, filePath] () {
         fileOpen (filePath);
-        activateWindow();
         raise();
+        activateWindow();
     });
 }
 /*************************/
@@ -1521,8 +1525,16 @@ TextEdit *FN::newWidget()
     textEdit->setContextMenuPolicy (Qt::CustomContextMenu);
     /* we want consistent widgets */
     textEdit->document()->setDefaultFont (defaultFont_);
+#if (QT_VERSION >= QT_VERSION_CHECK(5,11,0))
+    QFontMetricsF metrics (defaultFont_);
+    textEdit->setTabStopDistance (4 * metrics.horizontalAdvance (' '));
+#elif (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+    QFontMetricsF metrics (defaultFont_);
+    textEdit->setTabStopDistance (4 * metrics.width (' '));
+#else
     QFontMetrics metrics (defaultFont_);
     textEdit->setTabStopWidth (4 * metrics.width (' '));
+#endif
 
     int index = ui->stackedWidget->currentIndex();
     ui->stackedWidget->insertWidget (index + 1, textEdit);
@@ -2501,8 +2513,16 @@ void FN::textFontDialog()
         for (it = widgets_.begin(); it != widgets_.end(); ++it)
         {
             it.value()->document()->setDefaultFont (defaultFont_);
+#if (QT_VERSION >= QT_VERSION_CHECK(5,11,0))
+            QFontMetricsF metrics (defaultFont_);
+            it.value()->setTabStopDistance (4 * metrics.horizontalAdvance (' '));
+#elif (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+            QFontMetricsF metrics (defaultFont_);
+            it.value()->setTabStopDistance (4 * metrics.width (' '));
+#else
             QFontMetrics metrics (defaultFont_);
             it.value()->setTabStopWidth (4 * metrics.width (' '));
+#endif
         }
 
         /* also change the font for all nodes,
@@ -2798,8 +2818,8 @@ void FN::findInTags()
     /*TagsDialog->move (x() + width()/2 - TagsDialog->width(),
                       y() + height()/2 - TagsDialog->height());*/
     TagsDialog->raise();
-    TagsDialog->activateWindow();
     TagsDialog->raise();
+    TagsDialog->activateWindow();
 }
 /*************************/
 // Closes tag matches dialog.
@@ -2891,8 +2911,8 @@ void FN::replaceDock()
         ui->dockReplace->setVisible (true);
         ui->dockReplace->setTabOrder (ui->lineEditFind, ui->lineEditReplace);
         ui->dockReplace->setTabOrder (ui->lineEditReplace, ui->rplNextButton);
-        ui->dockReplace->activateWindow();
         ui->dockReplace->raise();
+        ui->dockReplace->activateWindow();
         if (!ui->lineEditFind->hasFocus())
             ui->lineEditFind->setFocus();
         return;
@@ -3223,8 +3243,8 @@ void FN::showEvent (QShowEvent *event)
 void FN::showAndFocus()
 {
     show();
-    activateWindow();
     raise();
+    activateWindow();
     if (ui->stackedWidget->count() > 0)
         qobject_cast< TextEdit *>(ui->stackedWidget->currentWidget())->setFocus();
     // to bypass focus stealing prevention
@@ -3244,8 +3264,8 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
 
     if (QObject::sender() == tray_ && findChildren<QDialog *>().count() > 0)
     { // don't respond to the tray icon when there's a dialog
-        activateWindow();
         raise();
+        activateWindow();
         return;
     }
 
@@ -3333,8 +3353,8 @@ void FN::activateTray()
     QObject *sender = QObject::sender();
     if (sender != nullptr && sender->objectName() == "raiseHide" && findChildren<QDialog *>().count() > 0)
     { // don't respond to the tray icon when there's a dialog
-        activateWindow();
         raise();
+        activateWindow();
         return;
     }
 
@@ -3536,8 +3556,8 @@ void FN::imageEmbed (const QString &path)
                           .arg (w)
                           .arg (h));
 
-    activateWindow();
     raise();
+    activateWindow();
 }
 /*************************/
 void FN::setImagePath (bool)
@@ -5021,8 +5041,8 @@ bool FN::isPswrdCorrect()
             }
             else // not needed really
             {
-                activateWindow();
                 raise();
+                activateWindow();
             }
         }
         else if (!underE_&& (!isVisible() || !isActiveWindow()))

@@ -382,14 +382,20 @@ void TextEdit::keyPressEvent (QKeyEvent *event)
     }
     else if (event->key() == Qt::Key_Insert)
     {
-        setOverwriteMode (!overwriteMode());
-        if (!overwriteMode())
+        if (event->modifiers() == Qt::NoModifier || event->modifiers() == Qt::KeypadModifier)
         {
-            setCursorWidth (1);
-            update(); // otherwise, a part of the thick cursor might remain
+            setOverwriteMode (!overwriteMode());
+            if (!overwriteMode())
+            {
+                setCursorWidth (1);
+                update(); // otherwise, a part of the thick cursor might remain
+            }
+            else
+                setCursorWidth (QFontMetrics(font()).averageCharWidth());
+            event->accept();
+            return;
         }
-        else
-            setCursorWidth (QFontMetrics(font()).averageCharWidth());
+
     }
     /* because of a bug in Qt5, the non-breaking space (ZWNJ) isn't inserted with SHIFT+SPACE */
     else if (event->key() == 0x200c)
@@ -583,8 +589,16 @@ void TextEdit::zooming (float range)
     if (newSize <= 0) return;
     f.setPointSizeF (static_cast<qreal>(newSize));
     setFont (f);
+#if (QT_VERSION >= QT_VERSION_CHECK(5,11,0))
+    QFontMetricsF metrics (f);
+    setTabStopDistance (4 * metrics.horizontalAdvance (' '));
+#elif (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+    QFontMetricsF metrics (f);
+    setTabStopDistance (4 * metrics.width (' '));
+#else
     QFontMetrics metrics (f);
     setTabStopWidth (4 * metrics.width (' '));
+#endif
 
     /* if this is a zoom-out, the text will need
        to be formatted and/or highlighted again */

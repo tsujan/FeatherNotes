@@ -40,22 +40,22 @@ int DomModel::columnCount (const QModelIndex &/*parent*/) const
     return 1;
 }
 /*************************/
-QVariant DomModel::data (const QModelIndex &index, int role) const
+QVariant DomModel::data (const QModelIndex &indx, int role) const
 {
-    if (!index.isValid())
+    if (!indx.isValid())
         return QVariant();
 
     if (role != Qt::DisplayRole && role != Qt::EditRole && role != Qt::DecorationRole)
         return QVariant();
 
-    DomItem *item = static_cast<DomItem*>(index.internalPointer());
+    DomItem *item = static_cast<DomItem*>(indx.internalPointer());
 
     QDomNode node = item->node();
     /*QTextStream out (stdout);
     out << node.nodeType() << "\n";*/
     QDomNamedNodeMap attributeMap = node.attributes();
 
-    if (index.column() == 0)
+    if (indx.column() == 0)
     {
         if (role == Qt::DecorationRole)
         {
@@ -72,30 +72,30 @@ QVariant DomModel::data (const QModelIndex &index, int role) const
         return QVariant();
 }
 /*************************/
-bool DomModel::setData (const QModelIndex &index, const QVariant &value, int role)
+bool DomModel::setData (const QModelIndex &indx, const QVariant &value, int role)
 {
-    if (index.isValid() && role == Qt::EditRole)
+    if (indx.isValid() && role == Qt::EditRole)
     {
-        DomItem *item = static_cast<DomItem*>(index.internalPointer());
+        DomItem *item = static_cast<DomItem*>(indx.internalPointer());
         QDomNode node = item->node();
         QDomNamedNodeMap attributeMap = node.attributes();
         QString str = value.toString();
         if (attributeMap.namedItem ("name").nodeValue() != str)
         {
             attributeMap.namedItem ("name").setNodeValue (str);
-            emit dataChanged (index, index);
+            emit dataChanged (indx, indx);
             return true;
         }
     }
     return false;
 }
 /*************************/
-Qt::ItemFlags DomModel::flags (const QModelIndex &index) const
+Qt::ItemFlags DomModel::flags (const QModelIndex &indx) const
 {
-    if (!index.isValid())
+    if (!indx.isValid())
         return Qt::ItemIsEnabled | Qt::ItemIsDropEnabled;
 
-    return QAbstractItemModel::flags (index) | Qt::ItemIsEditable | Qt::ItemIsDragEnabled | Qt::ItemIsDropEnabled;
+    return QAbstractItemModel::flags (indx) | Qt::ItemIsEditable | Qt::ItemIsDragEnabled | Qt::ItemIsDropEnabled;
 }
 /*************************/
 QModelIndex DomModel::index (int row, int column, const QModelIndex &parent) const
@@ -341,7 +341,7 @@ QModelIndexList DomModel::allDescendants (const QModelIndex &ancestor) const
     if (!ancestor.isValid()) return descendants; // empty
 
     for (int i = 0; i < rowCount (ancestor) ; ++i)
-        descendants << ancestor.child (i, 0);
+        descendants << index (i, 0, ancestor);
     for (int i = 0; i < descendants.count(); ++i)
         descendants << allDescendants (descendants[i]);
 
@@ -349,22 +349,22 @@ QModelIndexList DomModel::allDescendants (const QModelIndex &ancestor) const
 }
 /*************************/
 // Find the visually "adjacent" node of this node in the tree.
-QModelIndex DomModel::adjacentIndex (const QModelIndex &index, bool down) const
+QModelIndex DomModel::adjacentIndex (const QModelIndex &indx, bool down) const
 {
     QModelIndex rslt;
     if (down)
     {
         /* if this index has a child, return it... */
-        if (hasChildren (index))
-            return index.child (0, 0);
+        if (hasChildren (indx))
+            return index (0, 0, indx);
         else // ... otherwise, see if it has a lower sibling...
         {
-            if (!(rslt = sibling (index.row() + 1, 0, index)).isValid())
+            if (!(rslt = sibling (indx.row() + 1, 0, indx)).isValid())
             {
                 /* ... and if it doesn't have any, go to its
                    parent and search for its next sibling */
                 QModelIndex p;
-                if (!(p = parent (index)).isValid())
+                if (!(p = parent (indx)).isValid())
                     return QModelIndex();
                 while (!(rslt = sibling (p.row() + 1, 0, p)).isValid())
                 {
@@ -377,8 +377,8 @@ QModelIndex DomModel::adjacentIndex (const QModelIndex &index, bool down) const
     else
     {
         /* see if this index has an upper sibling... */
-        if (!(rslt = sibling (index.row() - 1, 0, index)).isValid())
-            rslt = parent (index);
+        if (!(rslt = sibling (indx.row() - 1, 0, indx)).isValid())
+            rslt = parent (indx);
         else // .. and if it does, return its farthest descendant
         {
             QModelIndexList list = allDescendants (rslt);

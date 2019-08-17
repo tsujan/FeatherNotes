@@ -35,9 +35,9 @@ public:
     DomModel (QDomDocument document, QObject *parent = nullptr);
     ~DomModel();
 
-    QVariant data (const QModelIndex &index, int role) const;
-    bool setData (const QModelIndex &index, const QVariant &value, int role = Qt::EditRole);
-    Qt::ItemFlags flags (const QModelIndex &index) const;
+    QVariant data (const QModelIndex &indx, int role) const;
+    bool setData (const QModelIndex &indx, const QVariant &value, int role = Qt::EditRole);
+    Qt::ItemFlags flags (const QModelIndex &indx) const;
     QModelIndex index (int row, int column,
                        const QModelIndex &parent = QModelIndex()) const;
     QModelIndex parent (const QModelIndex &child) const;
@@ -53,7 +53,7 @@ public:
     bool dropMimeData (const QMimeData*, Qt::DropAction action,
                        int row, int column, const QModelIndex &parent);
     QModelIndexList allDescendants (const QModelIndex &ancestor) const;
-    QModelIndex adjacentIndex (const QModelIndex &index, bool down) const;
+    QModelIndex adjacentIndex (const QModelIndex &indx, bool down) const;
 
     QDomDocument domDocument;
 
