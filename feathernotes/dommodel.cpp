@@ -25,14 +25,14 @@ namespace FeatherNotes {
 
 DomModel::DomModel (QDomDocument document, QObject *parent) :
     QAbstractItemModel (parent), domDocument (document),
-    dropIndex (QModelIndex()), dropRow (-1), dragged (nullptr)
+    dropIndex_ (QModelIndex()), dropRow_ (-1), dragged_ (nullptr)
 {
-    rootItem = new DomItem (domDocument, 0);
+    rootItem_ = new DomItem (domDocument, 0);
 }
 /*************************/
 DomModel::~DomModel()
 {
-    delete rootItem;
+    delete rootItem_;
 }
 /*************************/
 int DomModel::columnCount (const QModelIndex &/*parent*/) const
@@ -105,7 +105,7 @@ QModelIndex DomModel::index (int row, int column, const QModelIndex &parent) con
 
     DomItem *parentItem;
     if (!parent.isValid())
-        parentItem = rootItem;
+        parentItem = rootItem_;
     else
         parentItem = static_cast<DomItem*>(parent.internalPointer());
 
@@ -123,7 +123,7 @@ QModelIndex DomModel::parent (const QModelIndex &child) const
     DomItem *childItem = static_cast<DomItem*>(child.internalPointer());
     DomItem *parentItem = childItem->parent();
 
-    if (parentItem == rootItem)
+    if (parentItem == rootItem_)
         return QModelIndex();
 
     return createIndex (parentItem->row(), 0, parentItem);
@@ -136,7 +136,7 @@ int DomModel::rowCount (const QModelIndex &parent) const
 
     DomItem *parentItem;
     if (!parent.isValid())
-        parentItem = rootItem;
+        parentItem = rootItem_;
     else
         parentItem = static_cast<DomItem*>(parent.internalPointer());
 
@@ -152,19 +152,19 @@ bool DomModel::insertRows (int row, int count, const QModelIndex &parent)
 
     DomItem *parentItem;
     if (!parent.isValid())
-        parentItem = rootItem;
+        parentItem = rootItem_;
     else
         parentItem = static_cast<DomItem*>(parent.internalPointer());
 
     if (rowCount (parent) == 0 || row >= rowCount (parent))
     {
         for (int i = 0; i < count; ++i)
-            parentItem->addChild (dragged);
+            parentItem->addChild (dragged_);
     }
     else// if (row < rowCount (parent))
     {
         for (int i = 0; i < count; ++i)
-            parentItem->insertAt (row, dragged);
+            parentItem->insertAt (row, dragged_);
     }
 
     endInsertRows();
@@ -172,12 +172,13 @@ bool DomModel::insertRows (int row, int count, const QModelIndex &parent)
     emit layoutChanged();
     emit treeChanged();
 
-    if (dropRow > -1)
+    if (dropRow_ > -1)
     {
+        emit droppedAtIndex (index (dropRow_, 0, parent)); // announce the DND end
         /* DND is finished; reset its variables */
-        dropRow = -1;
-        dropIndex = QModelIndex();
-        dragged = nullptr;
+        dropRow_ = -1;
+        dropIndex_ = QModelIndex();
+        dragged_ = nullptr;
     }
 
     return true;
@@ -190,37 +191,40 @@ bool DomModel::removeRows (int row, int count, const QModelIndex &parent)
 
     /* workaround for Qt's drop indicator
        pointing to an incorrect position */
-    if (dropRow > row && dropIndex ==  parent)
-        --dropRow;
+    if (dropRow_ > row && dropIndex_ ==  parent)
+        --dropRow_;
     /* no redundant operation */
-    if (dropRow == row && dropIndex ==  parent)
+    if (dropRow_ == row && dropIndex_ ==  parent)
         return true;
+
+    if (dropRow_ > -1)
+        emit dragStarted (index (dropRow_, 0, parent)); // announce the DND start
 
     beginRemoveRows (parent, row, row + count - 1);
 
     DomItem *parentItem;
     if (!parent.isValid())
-        parentItem = rootItem;
+        parentItem = rootItem_;
     else
         parentItem = static_cast<DomItem*>(parent.internalPointer());
 
     for (int k = 0; k < count; ++k)
     {
         /* maybe it's about DND */
-        dragged = parentItem->takeChild (row + (count - 1 - k));
-        if (dropRow == -1)
+        dragged_ = parentItem->takeChild (row + (count - 1 - k));
+        if (dropRow_ == -1)
         {
             /* no DND but deletion */
-            delete dragged;
-            dragged = nullptr;
+            delete dragged_;
+            dragged_ = nullptr;
         }
     }
 
     endRemoveRows();
     emit treeChanged();
 
-    if (dropRow > -1)
-        insertRows (dropRow, 1, dropIndex);
+    if (dropRow_ > -1)
+        insertRows (dropRow_, 1, dropIndex_);
 
     return true;
 }
@@ -235,7 +239,7 @@ bool DomModel::moveUpRow (int row, const QModelIndex &parent)
 
     DomItem *parentItem;
     if (!parent.isValid())
-        parentItem = rootItem;
+        parentItem = rootItem_;
     else
         parentItem = static_cast<DomItem*>(parent.internalPointer());
     parentItem->moveUp (row);
@@ -256,7 +260,7 @@ bool DomModel::moveLeftRow (int row, const QModelIndex &parent)
 
     DomItem *parentItem;
     if (!parent.isValid())
-        parentItem = rootItem;
+        parentItem = rootItem_;
     else
         parentItem = static_cast<DomItem*>(parent.internalPointer());
     parentItem->moveLeft (row);
@@ -276,7 +280,7 @@ bool DomModel::moveDownRow (int row, const QModelIndex &parent)
 
     DomItem *parentItem;
     if (!parent.isValid())
-        parentItem = rootItem;
+        parentItem = rootItem_;
     else
         parentItem = static_cast<DomItem*>(parent.internalPointer());
     parentItem->moveDown (row);
@@ -299,7 +303,7 @@ bool DomModel::moveRightRow (int row, const QModelIndex &parent)
 
     DomItem *parentItem;
     if (!parent.isValid())
-        parentItem = rootItem;
+        parentItem = rootItem_;
     else
         parentItem = static_cast<DomItem*>(parent.internalPointer());
     parentItem->moveRight (row);
@@ -325,10 +329,10 @@ bool DomModel::dropMimeData (const QMimeData*, Qt::DropAction action,
     /* here we just set DND variables because we want
        removeRows() to be called before insertRows() */
     if (row == -1)
-        dropRow = 0;
+        dropRow_ = 0;
     else
-        dropRow = row;
-    dropIndex = parent;
+        dropRow_ = row;
+    dropIndex_ = parent;
 
     return true;
 }

@@ -8,7 +8,9 @@ V0.5.0
  * Better placement of text context menu actions.
  * Replaced the Qt methods that were deprecated by Qt 5.13.
  * Don't allow multiple custom shortcuts for one action. This is also a workaround for Qt's Meta key bug, that treats Meta like a non-modifier.
- * Basic Hurd support
+ * Basic Hurd support.
+ * Don't let the current item change during a tree DND.
+ * Drag a tree node only if there is a real mouse movement (and not when the view is scrolled by the wheel of a motionless mouse).
 
 V0.4.6
 ---------

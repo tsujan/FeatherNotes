@@ -132,6 +132,30 @@ protected:
         }
         QTreeView::dropEvent (event);
     }
+
+    virtual void mousePressEvent (QMouseEvent *event) {
+        /* get the global press position if it's inside an item to know
+           whether there will be a real mouse movement at mouseMoveEvent() */
+        if (event->buttons() == Qt::LeftButton
+            && qApp->keyboardModifiers() == Qt::NoModifier)
+        {
+            if (indexAt (event->pos()).isValid())
+                itemPressPoint_ = event->globalPos();
+            else itemPressPoint_ = QPoint();
+        }
+        else itemPressPoint_ = QPoint();
+        QTreeView::mousePressEvent (event);
+    }
+
+    virtual void mouseMoveEvent (QMouseEvent *event) {
+        /* prevent dragging if there is no real mouse movement */
+        if (event->buttons() == Qt::LeftButton && event->globalPos() == itemPressPoint_)
+            return;
+        QTreeView::mouseMoveEvent (event);
+    }
+
+private:
+    QPoint itemPressPoint_;
 };
 
 }

@@ -59,13 +59,15 @@ public:
 
 signals:
     void treeChanged(); // For informing the user.
+    void dragStarted (const QModelIndex &draggedIndex); // The index isn't needed but is used as a safeguard.
+    void droppedAtIndex (const QModelIndex &droppedIndex);
 
 private:
-    DomItem *rootItem;
+    DomItem *rootItem_;
     /* DVD variables: */
-    QModelIndex dropIndex;
-    int dropRow;
-    DomItem *dragged;
+    QModelIndex dropIndex_;
+    int dropRow_;
+    DomItem *dragged_;
 };
 
 }

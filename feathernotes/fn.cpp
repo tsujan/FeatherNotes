@@ -171,6 +171,7 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
     noToolbar_ = false;
     noMenubar_ = false;
     autoBracket_ = false;
+    treeViewDND_ = false;
     readAndApplyConfig();
 
     QWidget* spacer = new QWidget();
@@ -950,6 +951,19 @@ void FN::showDoc (QDomDocument &doc)
     connect (model_, &DomModel::treeChanged, this, &FN::docProp);
     connect (model_, &DomModel::treeChanged, this, &FN::closeTagsDialog);
 
+    connect (model_, &DomModel::dragStarted, [this] (const QModelIndex &draggedIndex) {
+        if (draggedIndex == ui->treeView->currentIndex())
+        {
+            treeViewDND_ = true;
+            ui->treeView->setAutoScroll (false);
+        }
+    });
+    connect (model_, &DomModel::droppedAtIndex, [this] (const QModelIndex &droppedIndex) {
+        ui->treeView->setAutoScroll (true);
+        ui->treeView->setCurrentIndex (droppedIndex);
+        treeViewDND_ = false;
+    });
+
     /* enable widgets */
     if (!ui->actionSaveAs->isEnabled())
         enableActions (true);
@@ -1706,6 +1720,8 @@ void FN::selChanged (const QItemSelection &selected, const QItemSelection& /*des
             widget->setVisible (true);
         enableActions (true);
     }*/
+
+    if (treeViewDND_) return;
 
     /* if a widget is paired with this DOM item, show it;
        otherwise create a widget and pair it with the item */

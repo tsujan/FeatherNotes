@@ -370,7 +370,8 @@ private:
          smallToolbarIcons_,
          noToolbar_,
          noMenubar_,
-         autoBracket_;
+         autoBracket_,
+         treeViewDND_;
     int autoSave_;
     QPoint position_; // Excluding the window frame.
     QSize winSize_, startSize_, prefSize_;
