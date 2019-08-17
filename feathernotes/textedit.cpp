@@ -24,6 +24,7 @@
 #include <QRegularExpression>
 #include <QBuffer>
 #include <QMimeDatabase>
+#include <QLocale>
 
 namespace FeatherNotes {
 
@@ -141,6 +142,61 @@ void TextEdit::keyPressEvent (QKeyEvent *event)
                     ++i;
                 }
                 else break;
+            }
+            /* still check if a letter or number follows */
+            if (i < curBlockPos)
+            {
+                if (blockText.at (i).isLetter())
+                {
+                    if (i + 1 < curBlockPos
+                        && !prefix.isEmpty() && !prefix.at (prefix.size() - 1).isSpace()
+                        && blockText.at (i + 1).isSpace())
+                    { // non-letter and non-space character -> singlle letter -> space
+                        prefix = blockText.left (i + 2);
+                    }
+                    else if (i + 2 < curBlockPos
+                             && !blockText.at (i + 1).isLetterOrNumber() && !blockText.at (i + 1).isSpace()
+                             && blockText.at (i + 2).isSpace())
+                    { // singlle letter -> non-letter and non-space character -> space
+                        prefix = blockText.left (i + 3);
+                    }
+                }
+                else if (blockText.at (i).isNumber())
+                { // making lists with numbers
+                    QString num;
+                    while (i < curBlockPos)
+                    {
+                        QChar ch = blockText.at (i);
+                        if (ch.isNumber())
+                        {
+                            num += ch;
+                            ++i;
+                        }
+                        else
+                        {
+                            if (!num.isEmpty())
+                            {
+                                QChar ch = blockText.at (i);
+                                if (ch.isSpace())
+                                { // non-letter and non-space character -> number -> space
+                                    if (!prefix.isEmpty() && !prefix.at (prefix.size() - 1).isSpace())
+                                        num = locale().toString (locale().toInt (num) + 1) + ch;
+                                    else num = QString();
+                                }
+                                else if (i + 1 < curBlockPos
+                                         && !ch.isLetterOrNumber() && !ch.isSpace()
+                                         && blockText.at (i + 1).isSpace())
+                                { // number -> non-letter and non-space character -> space
+                                    num = locale().toString (locale().toInt (num) + 1) + ch + blockText.at (i + 1);
+                                }
+                                else num = QString();
+                            }
+                            break;
+                        }
+                    }
+                    if (i < curBlockPos) // otherwise, it'll be just a number
+                        prefix += num;
+                }
             }
         }
         else

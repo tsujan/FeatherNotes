@@ -11,6 +11,7 @@ V0.5.0
  * Basic Hurd support.
  * Don't let the current item change during a tree DND.
  * Drag a tree node only if there is a real mouse movement (and not when the view is scrolled by the wheel of a motionless mouse).
+ * Smarter Shift+Enter, especially with numbered lists.
 
 V0.4.6
 ---------
