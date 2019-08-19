@@ -61,9 +61,9 @@ int main(int argc, char *argv[])
     QApplication app (argc, argv);
     app.setApplicationName (name);
     app.setApplicationVersion (version);
-
+#if not defined (Q_OS_WIN)
     handleQuitSignals ({SIGQUIT, SIGINT, SIGTERM, SIGHUP}); // -> https://en.wikipedia.org/wiki/Unix_signal
-
+#endif
     app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
     QStringList langs (QLocale::system().uiLanguages());

@@ -138,3 +138,8 @@ else:haiku {
 
   INSTALLS += target trans
 }
+else:win32{
+  DATADIR = "$$BINDIR/$$TARGET".app
+
+  DEFINES += DATADIR=\\\"$$DATADIR\\\" PKGDATADIR=\\\"$$PKGDATADIR\\\"
+}
