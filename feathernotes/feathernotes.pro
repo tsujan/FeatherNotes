@@ -71,6 +71,17 @@ unix {
     QMAKE_EXTRA_COMPILERS += updateqm
   }
 }
+else:win32{
+  #TRANSLATIONS
+  exists($$[QT_INSTALL_BINS]/lrelease.exe) {
+    TRANSLATIONS = $$system("dir /b /S feathernotes_*.ts")
+    updateqm.input = TRANSLATIONS
+    updateqm.output = data\\translations\\translations\\${QMAKE_FILE_BASE}.qm
+    updateqm.commands = $$[QT_INSTALL_BINS]/lrelease ${QMAKE_FILE_IN} -qm data\\translations\\translations\\${QMAKE_FILE_BASE}.qm
+    updateqm.CONFIG += no_link target_predeps
+    QMAKE_EXTRA_COMPILERS += updateqm
+  }
+}
 
 unix:!macx:!haiku {
   #VARIABLES
@@ -137,9 +148,4 @@ else:haiku {
   trans.files += data/translations/translations
 
   INSTALLS += target trans
-}
-else:win32{
-  DATADIR = "$$BINDIR/$$TARGET".app
-
-  DEFINES += DATADIR=\\\"$$DATADIR\\\" PKGDATADIR=\\\"$$PKGDATADIR\\\"
 }
