@@ -832,7 +832,7 @@
     <message>
         <location filename="../../fn.ui" line="1203"/>
         <source>&amp;Tags</source>
-        <translation></translation>
+        <translation>タグ(&amp;T)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1206"/>
@@ -1091,7 +1091,7 @@
     <message>
         <location filename="../../fn.cpp" line="2237"/>
         <source>Tags</source>
-        <translation></translation>
+        <translation>タグ</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2252"/>
@@ -1211,29 +1211,29 @@
         <location filename="../../fn.cpp" line="4898"/>
         <location filename="../../fn.cpp" line="4924"/>
         <source>Untitled</source>
-        <translation type="unfinished">Untitled</translation>
+        <translation>無題</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2134"/>
         <source>Deletion</source>
-        <translation type="unfinished">Deletion</translation>
+        <translation>削除</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2247"/>
         <source>Tag(s) for this node</source>
-        <translation type="unfinished">Tag(s) for this node</translation>
+        <translation>ノードのタグ</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2335"/>
         <location filename="../../fn.cpp" line="3602"/>
         <source>Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)</source>
-        <translation type="unfinished">Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)</translation>
+        <translation>画像ファイル (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;すべてのファイル (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3486"/>
         <location filename="../../fn.cpp" line="3648"/>
         <source>Scale to</source>
-        <translation type="unfinished">Scale to</translation>
+        <translation>拡大率</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3490"/>
@@ -1244,34 +1244,34 @@
     <message>
         <location filename="../../fn.cpp" line="3642"/>
         <source>Scale Image(s)</source>
-        <translation type="unfinished">Scale Image(s)</translation>
+        <translation>画像の拡大縮小</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3801"/>
         <source>untitled</source>
-        <translation type="unfinished">untitled</translation>
+        <translation>無題</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3833"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Image cannot be saved! Retry?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished">&lt;center&gt;&lt;b&gt;&lt;big&gt;Image cannot be saved! Retry?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;画像を保存できません！ 再試行しますか？&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3834"/>
         <source>&lt;center&gt;Maybe you did not choose a proper extension&lt;/center&gt;
 &lt;center&gt;or do not have write permission.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;center&gt;Maybe you did not choose a proper extension&lt;/center&gt;
-&lt;center&gt;or do not have write permission.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</translation>
+        <translation>&lt;center&gt;たぶん適切な拡張子を選択していないか、&lt;/center&gt;
+&lt;center&gt;書き込み権限がありません。&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3861"/>
         <source>Save Image As...</source>
-        <translation type="unfinished">Save Image As...</translation>
+        <translation>名前を付けて画像を保存...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3863"/>
         <source>Image Files (*.png *.jpg *.jpeg *.bmp);;All Files (*)</source>
-        <translation type="unfinished">Image Files (*.png *.jpg *.jpeg *.bmp);;All Files (*)</translation>
+        <translation>画像ファイル (*.png *.jpg *.jpeg *.bmp);;すべてのファイル (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3913"/>
@@ -1281,12 +1281,12 @@
     <message>
         <location filename="../../fn.cpp" line="3919"/>
         <source>Rows:</source>
-        <translation type="unfinished">Rows:</translation>
+        <translation>行:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3925"/>
         <source>Columns:</source>
-        <translation type="unfinished">Columns:</translation>
+        <translation>列:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4637"/>
@@ -1306,12 +1306,12 @@
     <message>
         <location filename="../../fn.cpp" line="4707"/>
         <source>&amp;Current node</source>
-        <translation type="unfinished">&amp;Current node</translation>
+        <translation>現在のノード(&amp;C)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4709"/>
         <source>With all &amp;sub-nodes</source>
-        <translation type="unfinished">With all &amp;sub-nodes</translation>
+        <translation>現在のノードとすべてのサブノード(&amp;S)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4710"/>
@@ -1326,17 +1326,17 @@
     <message>
         <location filename="../../fn.cpp" line="4741"/>
         <source>Select path</source>
-        <translation type="unfinished">Select path</translation>
+        <translation>パスの選択</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4929"/>
         <source>Save HTML As...</source>
-        <translation type="unfinished">Save HTML As...</translation>
+        <translation>HTMLで名前を付けて保存...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4931"/>
         <source>HTML Files (*.html *.htm)</source>
-        <translation type="unfinished">HTML Files (*.html *.htm)</translation>
+        <translation>HTML ファイル (*.html *.htm)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4952"/>
@@ -1351,12 +1351,12 @@
     <message>
         <location filename="../../fn.cpp" line="4965"/>
         <source>Retype password</source>
-        <translation type="unfinished">Retype password</translation>
+        <translation>パスワードの再入力</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5040"/>
         <source>&lt;center&gt;Passwords were different. Retry!&lt;/center&gt;</source>
-        <translation type="unfinished">&lt;center&gt;Passwords were different. Retry!&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;パスワードが違います。再入力して下さい！&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5072"/>
@@ -1367,7 +1367,7 @@
     <message>
         <location filename="../../fn.cpp" line="5146"/>
         <source>&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</source>
-        <translation type="unfinished">&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;間違ったパスワードです。再入力して下さい！&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5185"/>
@@ -1377,7 +1377,7 @@
     <message>
         <location filename="../../fn.cpp" line="5186"/>
         <source>based on Qt5</source>
-        <translation type="unfinished">based on Qt5</translation>
+        <translation>Qt5 ベース</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5187"/>
@@ -1406,7 +1406,7 @@
     <message>
         <location filename="../../lineedit.cpp" line="35"/>
         <source>Clear text (Ctrl+K)</source>
-        <translation type="unfinished">Clear text (Ctrl+K)</translation>
+        <translation>テキストの消去 (Ctrl+K)</translation>
     </message>
     <message>
         <location filename="../../lineedit.cpp" line="81"/>
@@ -1420,12 +1420,12 @@
     <message>
         <location filename="../../predDialog.ui" line="14"/>
         <source>Preferences</source>
-        <translation type="unfinished">Preferences</translation>
+        <translation>設定</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="27"/>
         <source>Window</source>
-        <translation type="unfinished">Window</translation>
+        <translation>ウィンドウ</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="36"/>
@@ -1433,20 +1433,20 @@
 this dialog and also on exit.
 
 Uncheck to set a fixed size!</source>
-        <translation type="unfinished">Saves window size after closing
-this dialog and also on exit.
+        <translation>このダイアログを閉じて終了した後に
+ウィンドウのサイズを保存します。
 
-Uncheck to set a fixed size!</translation>
+サイズを固定するにはチェックを外して下さい！</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="42"/>
         <source>Remember window &amp;size</source>
-        <translation type="unfinished">Remember window &amp;size</translation>
+        <translation>ウィンドウサイズを記憶する(&amp;S)</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="51"/>
         <source>Start with this size: </source>
-        <translation type="unfinished">Start with this size: </translation>
+        <translation>起動時のサイズ: </translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="58"/>
