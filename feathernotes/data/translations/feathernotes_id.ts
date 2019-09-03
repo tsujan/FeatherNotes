@@ -1200,7 +1200,7 @@
         <location filename="../../fn.cpp" line="1320"/>
         <location filename="../../fn.cpp" line="1341"/>
         <source>FeatherNotes documents (*.fnx);;All Files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Dokumen FeatherNotes (* .fnx);;Semua Berkas (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1302"/>
@@ -1271,7 +1271,7 @@
     <message>
         <location filename="../../fn.cpp" line="3863"/>
         <source>Image Files (*.png *.jpg *.jpeg *.bmp);;All Files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Berkas Gambar (*.png *.jpg *.jpeg *.bmp);;Semua Berkas (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3913"/>
@@ -1454,13 +1454,13 @@ Hapus centang untuk mengatur ukuran tetap!</translation>
         <location filename="../../predDialog.ui" line="255"/>
         <location filename="../../predDialog.ui" line="269"/>
         <source> px</source>
-        <translation type="unfinished"></translation>
+        <translation> px</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="65"/>
         <location filename="../../predDialog.ui" line="262"/>
         <source> × </source>
-        <translation type="unfinished"></translation>
+        <translation> × </translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="97"/>
@@ -1505,7 +1505,10 @@ If checked, the titlebar close button iconifies
 the window to the systray instead of quitting.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Memutuskan apakah ikon systray harus digunakan.
+Jika dicentang, tombol tutup batang judul 
+melambangkan jendela ke systray alih-alih berhenti.
+Perlu memulai ulang FeatherNotes agar dapat berfungsi.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="132"/>
@@ -1516,7 +1519,8 @@ Needs restarting of FeatherNotes to take effect.</source>
         <location filename="../../predDialog.ui" line="157"/>
         <source>The command line option --tray
 can be used instead of this.</source>
-        <translation type="unfinished"></translation>
+        <translation>Opsi baris perintah --tray
+dapat digunakan sebagai ganti dari ini.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="161"/>
