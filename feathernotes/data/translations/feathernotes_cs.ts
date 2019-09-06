@@ -6,7 +6,7 @@
     <message>
         <location filename="../../about.ui" line="131"/>
         <source>License</source>
-        <translation></translation>
+        <translation>Licence</translation>
     </message>
 </context>
 <context>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../../fn.ui" line="65"/>
         <source>Next (F3)</source>
-        <translation></translation>
+        <translation>Další (F3)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="68"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../../fn.ui" line="81"/>
         <source>Previous (F4)</source>
-        <translation></translation>
+        <translation>Předchozí (F4)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="84"/>
@@ -41,12 +41,12 @@
     <message>
         <location filename="../../fn.ui" line="100"/>
         <source>Search...</source>
-        <translation></translation>
+        <translation>Hledat…</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="115"/>
         <source>Search only in names (Ctrl+Shift+F7)</source>
-        <translation></translation>
+        <translation>Hledat pouze v názvech (Ctrl+Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="118"/>
@@ -56,7 +56,7 @@
     <message>
         <location filename="../../fn.ui" line="128"/>
         <source>Search only in tags (Shift+F7)</source>
-        <translation></translation>
+        <translation>Hledat pouze ve štítcích (Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="131"/>
@@ -66,7 +66,7 @@
     <message>
         <location filename="../../fn.ui" line="144"/>
         <source>Search in all nodes (F7)</source>
-        <translation></translation>
+        <translation>Hledat ve všech uzlech (F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="147"/>
@@ -76,12 +76,12 @@
     <message>
         <location filename="../../fn.ui" line="186"/>
         <source>Whole Word (F6)</source>
-        <translation></translation>
+        <translation>Celé slovo (F6)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="189"/>
         <source>Whole Word</source>
-        <translation></translation>
+        <translation>Celé slovo</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="192"/>
@@ -91,12 +91,12 @@
     <message>
         <location filename="../../fn.ui" line="167"/>
         <source>Match Case (F5)</source>
-        <translation></translation>
+        <translation>Rozlišovat malá/VELKÁ písmena (F5)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="170"/>
         <source>Match Case</source>
-        <translation></translation>
+        <translation>Rozlišovat malá/VELKÁ písmena</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="173"/>
@@ -106,63 +106,63 @@
     <message>
         <location filename="../../fn.ui" line="219"/>
         <source>&amp;File</source>
-        <translation></translation>
+        <translation>&amp;Soubor</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="238"/>
         <source>&amp;Edit</source>
-        <translation></translation>
+        <translation>&amp;Upravit</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="253"/>
         <source>For&amp;mat</source>
-        <translation></translation>
+        <translation>For&amp;mát</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="285"/>
         <source>&amp;Tree</source>
-        <translation></translation>
+        <translation>S&amp;trom</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="308"/>
         <source>&amp;Options</source>
-        <translation></translation>
+        <translation>M&amp;ožnosti</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="320"/>
         <source>&amp;Search</source>
-        <translation></translation>
+        <translation>&amp;Hledat</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="327"/>
         <location filename="../../fn.ui" line="975"/>
         <source>&amp;Help</source>
-        <translation></translation>
+        <translation>&amp;Nápověda</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="424"/>
         <source>Find:</source>
-        <translation></translation>
+        <translation>Najít:</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="431"/>
         <source>Replace with:</source>
-        <translation></translation>
+        <translation>Nahradit čím:</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="444"/>
         <source>To be replaced</source>
-        <translation></translation>
+        <translation>Má být nahrazeno</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="457"/>
         <source>Replacing text</source>
-        <translation></translation>
+        <translation>Nahrazující text</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="467"/>
         <source>Previous (F9)</source>
-        <translation></translation>
+        <translation>Předchozí (F9)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="470"/>
@@ -172,7 +172,7 @@
     <message>
         <location filename="../../fn.ui" line="483"/>
         <source>Next (F8)</source>
-        <translation></translation>
+        <translation>Další (F8)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="486"/>
@@ -182,7 +182,7 @@
     <message>
         <location filename="../../fn.ui" line="499"/>
         <source>Replace all (F10)</source>
-        <translation></translation>
+        <translation>Nahradit vše (F10)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="502"/>
@@ -192,13 +192,13 @@
     <message>
         <location filename="../../fn.ui" line="519"/>
         <source>&amp;Save</source>
-        <translation></translation>
+        <translation>&amp;Uložit</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="522"/>
         <location filename="../../fn.cpp" line="808"/>
         <source>Save</source>
-        <translation></translation>
+        <translation>Uložit</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="525"/>
@@ -209,12 +209,12 @@
         <location filename="../../fn.ui" line="530"/>
         <location filename="../../fn.cpp" line="557"/>
         <source>&amp;Open</source>
-        <translation></translation>
+        <translation>&amp;Otevřít</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="533"/>
         <source>Open a file</source>
-        <translation></translation>
+        <translation>Otevřít soubor</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="536"/>
@@ -224,12 +224,12 @@
     <message>
         <location filename="../../fn.ui" line="544"/>
         <source>&amp;Undo</source>
-        <translation></translation>
+        <translation>&amp;Zpět</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="547"/>
         <source>Undo</source>
-        <translation></translation>
+        <translation>Zpět</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="550"/>
@@ -239,12 +239,12 @@
     <message>
         <location filename="../../fn.ui" line="558"/>
         <source>&amp;Redo</source>
-        <translation></translation>
+        <translation>&amp;Zopakovat</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="561"/>
         <source>Redo</source>
-        <translation></translation>
+        <translation>Zopakovat</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="564"/>
@@ -254,12 +254,12 @@
     <message>
         <location filename="../../fn.ui" line="572"/>
         <source>&amp;Find</source>
-        <translation></translation>
+        <translation>&amp;Najít</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="575"/>
         <source>Show/hide searchbar</source>
-        <translation></translation>
+        <translation>Zobrazit/skrýt lištu hledání</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="578"/>
@@ -269,12 +269,12 @@
     <message>
         <location filename="../../fn.ui" line="586"/>
         <source>&amp;Clear All Formats</source>
-        <translation></translation>
+        <translation>&amp;Odebrat veškeré formátování</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="589"/>
         <source>Clear all formats</source>
-        <translation></translation>
+        <translation>Odebrat veškeré formátování</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="592"/>
@@ -284,12 +284,12 @@
     <message>
         <location filename="../../fn.ui" line="603"/>
         <source>&amp;Bold</source>
-        <translation></translation>
+        <translation>&amp;Tučné</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="606"/>
         <source>Bold</source>
-        <translation></translation>
+        <translation>Tučné</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="609"/>
@@ -299,12 +299,12 @@
     <message>
         <location filename="../../fn.ui" line="620"/>
         <source>&amp;Italic</source>
-        <translation></translation>
+        <translation>&amp;Kurzíva</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="623"/>
         <source>Italic</source>
-        <translation></translation>
+        <translation>Kurzíva</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="626"/>
@@ -314,12 +314,12 @@
     <message>
         <location filename="../../fn.ui" line="637"/>
         <source>&amp;Underline</source>
-        <translation></translation>
+        <translation>&amp;Podtržení</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="640"/>
         <source>Underline</source>
-        <translation></translation>
+        <translation>Podtržení</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="643"/>
@@ -329,12 +329,12 @@
     <message>
         <location filename="../../fn.ui" line="654"/>
         <source>&amp;Strike Through</source>
-        <translation></translation>
+        <translation>&amp;Přeškrtnuté</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="657"/>
         <source>Strike through</source>
-        <translation></translation>
+        <translation>Přeškrtnuté</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="660"/>
@@ -344,12 +344,12 @@
     <message>
         <location filename="../../fn.ui" line="668"/>
         <source>Te&amp;xt Color</source>
-        <translation></translation>
+        <translation>Barva te&amp;xtu</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="671"/>
         <source>Text color</source>
-        <translation></translation>
+        <translation>Barva textu</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="674"/>
@@ -359,12 +359,12 @@
     <message>
         <location filename="../../fn.ui" line="682"/>
         <source>Back&amp;ground Color</source>
-        <translation></translation>
+        <translation>&amp;Barva pozadí</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="685"/>
         <source>Background color</source>
-        <translation></translation>
+        <translation>Barva pozadí</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="688"/>
@@ -374,13 +374,13 @@
     <message>
         <location filename="../../fn.ui" line="693"/>
         <source>Options</source>
-        <translation></translation>
+        <translation>Možnosti</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="698"/>
         <location filename="../../fn.cpp" line="556"/>
         <source>&amp;New Note</source>
-        <translation></translation>
+        <translation>&amp;Nová poznámka</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="701"/>
@@ -390,7 +390,7 @@
     <message>
         <location filename="../../fn.ui" line="709"/>
         <source>Save &amp;As</source>
-        <translation></translation>
+        <translation>Uložit j&amp;ako</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="712"/>
@@ -400,7 +400,7 @@
     <message>
         <location filename="../../fn.ui" line="720"/>
         <source>&amp;Print</source>
-        <translation></translation>
+        <translation>&amp;Tisk</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="723"/>
@@ -410,18 +410,18 @@
     <message>
         <location filename="../../fn.ui" line="731"/>
         <source>P&amp;rint with Sub-Nodes</source>
-        <translation></translation>
+        <translation>&amp;Vytisknout s dílčími uzly</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="739"/>
         <source>Set Pass&amp;word</source>
-        <translation></translation>
+        <translation>&amp;Nastavit heslo</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="744"/>
         <location filename="../../fn.cpp" line="559"/>
         <source>&amp;Quit</source>
-        <translation></translation>
+        <translation>&amp;Ukončit</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="747"/>
@@ -431,7 +431,7 @@
     <message>
         <location filename="../../fn.ui" line="755"/>
         <source>&amp;Cut</source>
-        <translation></translation>
+        <translation>&amp;Vyjmout</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="758"/>
@@ -441,7 +441,7 @@
     <message>
         <location filename="../../fn.ui" line="766"/>
         <source>C&amp;opy</source>
-        <translation></translation>
+        <translation>Zk&amp;opírovat</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="769"/>
@@ -451,7 +451,7 @@
     <message>
         <location filename="../../fn.ui" line="777"/>
         <source>&amp;Paste</source>
-        <translation></translation>
+        <translation>&amp;Vložit</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="780"/>
@@ -461,12 +461,12 @@
     <message>
         <location filename="../../fn.ui" line="788"/>
         <source>&amp;Delete</source>
-        <translation></translation>
+        <translation>&amp;Smazat</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="796"/>
         <source>&amp;Select All</source>
-        <translation></translation>
+        <translation>&amp;Vybrat vše</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="799"/>
@@ -476,13 +476,13 @@
     <message>
         <location filename="../../fn.ui" line="807"/>
         <source>E&amp;mbed Image</source>
-        <translation></translation>
+        <translation>&amp;Zapouzdřit obrázek</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="810"/>
         <location filename="../../fn.cpp" line="3470"/>
         <source>Embed Image</source>
-        <translation></translation>
+        <translation>Zapouzdřit obrázek</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="813"/>
@@ -492,7 +492,7 @@
     <message>
         <location filename="../../fn.ui" line="821"/>
         <source>E&amp;xpand All</source>
-        <translation></translation>
+        <translation>&amp;Rozbalit vše</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="824"/>
@@ -502,17 +502,17 @@
     <message>
         <location filename="../../fn.ui" line="832"/>
         <source>Collap&amp;se All</source>
-        <translation></translation>
+        <translation>&amp;Sbalit vše</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="835"/>
         <source>Ctrl+Shift+Up</source>
-        <translation></translation>
+        <translation>Ctrl+Shift+Šipka nahoru</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="843"/>
         <source>&amp;Append Sibling</source>
-        <translation></translation>
+        <translation>&amp;Připojit příbuzné</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="846"/>
@@ -522,7 +522,7 @@
     <message>
         <location filename="../../fn.ui" line="854"/>
         <source>Append &amp;Child</source>
-        <translation></translation>
+        <translation>&amp;Připojit podřízené</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="857"/>
@@ -532,7 +532,7 @@
     <message>
         <location filename="../../fn.ui" line="865"/>
         <source>&amp;Delete Node</source>
-        <translation></translation>
+        <translation>&amp;Smazat uzel</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="868"/>
@@ -542,27 +542,27 @@
     <message>
         <location filename="../../fn.ui" line="876"/>
         <source>Move &amp;Up</source>
-        <translation></translation>
+        <translation>Přesunout nahor&amp;u</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="879"/>
         <source>Alt+Up</source>
-        <translation></translation>
+        <translation>Alt+Šipka nahoru</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="887"/>
         <source>Move Do&amp;wn</source>
-        <translation></translation>
+        <translation>&amp;Přesunout dolů</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="890"/>
         <source>Alt+Down</source>
-        <translation></translation>
+        <translation>Alt+Šipka dolů</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="898"/>
         <source>Re&amp;name Node</source>
-        <translation></translation>
+        <translation>Přejme&amp;novat uzel</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="901"/>
@@ -572,7 +572,7 @@
     <message>
         <location filename="../../fn.ui" line="906"/>
         <source>Tree Pr&amp;operties</source>
-        <translation></translation>
+        <translation>Vlastn&amp;osti stromu</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="909"/>
@@ -582,12 +582,12 @@
     <message>
         <location filename="../../fn.ui" line="917"/>
         <source>Document &amp;Font</source>
-        <translation></translation>
+        <translation>&amp;Písmo dokumentu</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="931"/>
         <source>&amp;Wrap Lines</source>
-        <translation></translation>
+        <translation>&amp;Zalomit řádky</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="934"/>
@@ -597,7 +597,7 @@
     <message>
         <location filename="../../fn.ui" line="948"/>
         <source>&amp;Auto-Indentation</source>
-        <translation></translation>
+        <translation>&amp;Automatické odsazování</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="951"/>
@@ -607,7 +607,7 @@
     <message>
         <location filename="../../fn.ui" line="956"/>
         <source>&amp;Preferences</source>
-        <translation></translation>
+        <translation>&amp;Předvolby</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="959"/>
@@ -617,7 +617,7 @@
     <message>
         <location filename="../../fn.ui" line="967"/>
         <source>Find and &amp;Replace</source>
-        <translation></translation>
+        <translation>Najít a nah&amp;radit</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="970"/>
@@ -632,22 +632,22 @@
     <message>
         <location filename="../../fn.ui" line="983"/>
         <source>&amp;About</source>
-        <translation></translation>
+        <translation>O &amp;aplikaci</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="991"/>
         <source>Pr&amp;int All Nodes</source>
-        <translation></translation>
+        <translation>Vyt&amp;isknout všechny uzly</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1002"/>
         <source>Superscrip&amp;t</source>
-        <translation></translation>
+        <translation>&amp;Horní index</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1005"/>
         <source>Superscript</source>
-        <translation></translation>
+        <translation>Horní index</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1008"/>
@@ -657,12 +657,12 @@
     <message>
         <location filename="../../fn.ui" line="1019"/>
         <source>Subscri&amp;pt</source>
-        <translation></translation>
+        <translation>&amp;Horní index</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1022"/>
         <source>Subscript</source>
-        <translation></translation>
+        <translation>Dolní index</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1025"/>
@@ -672,67 +672,67 @@
     <message>
         <location filename="../../fn.ui" line="1036"/>
         <source>C&amp;enter</source>
-        <translation></translation>
+        <translation>Vystř&amp;edit</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1039"/>
         <source>Align center</source>
-        <translation></translation>
+        <translation>Zarovnat na střed</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1042"/>
         <source>Alt+Shift+Down</source>
-        <translation></translation>
+        <translation>Alt+Shift+Šipka dolů</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1053"/>
         <source>&amp;Right</source>
-        <translation></translation>
+        <translation>Vp&amp;ravo</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1056"/>
         <source>Align right</source>
-        <translation></translation>
+        <translation>Zarovnat vpravo</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1059"/>
         <source>Alt+Shift+Right</source>
-        <translation></translation>
+        <translation>Alt+Shift+Šipka doprava</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1070"/>
         <source>&amp;Left</source>
-        <translation></translation>
+        <translation>V&amp;levo</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1073"/>
         <source>Align left</source>
-        <translation></translation>
+        <translation>Zarovnat doleva</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1076"/>
         <source>Alt+Shift+Left</source>
-        <translation></translation>
+        <translation>Alt+Shift+Šipka doleva</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1087"/>
         <source>&amp;Justify</source>
-        <translation></translation>
+        <translation>&amp;Vyrovnat</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1090"/>
         <source>Justify</source>
-        <translation></translation>
+        <translation>Vyrovnat</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1093"/>
         <source>Alt+Shift+Up</source>
-        <translation></translation>
+        <translation>Alt+Shift+Šipka nahoru</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1101"/>
         <source>&amp;Prepend Sibling</source>
-        <translation></translation>
+        <translation>&amp;Předřadit příbuzné</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1104"/>
@@ -742,32 +742,32 @@
     <message>
         <location filename="../../fn.ui" line="1112"/>
         <source>Move &amp;Left</source>
-        <translation></translation>
+        <translation>Přesunout do&amp;leva</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1115"/>
         <source>Alt+Left</source>
-        <translation></translation>
+        <translation>Alt+Šipka doleva</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1123"/>
         <source>Move &amp;Right</source>
-        <translation></translation>
+        <translation>Přesunout dop&amp;rava</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1126"/>
         <source>Alt+Right</source>
-        <translation></translation>
+        <translation>Alt+Šipka doprava</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1134"/>
         <source>h&amp;2</source>
-        <translation></translation>
+        <translation>n&amp;2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1137"/>
         <source>Header 2</source>
-        <translation></translation>
+        <translation>Nadpis 2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1140"/>
@@ -777,12 +777,12 @@
     <message>
         <location filename="../../fn.ui" line="1148"/>
         <source>h&amp;1</source>
-        <translation></translation>
+        <translation>n&amp;1</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1151"/>
         <source>Header 1</source>
-        <translation></translation>
+        <translation>Nadpis 1</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1154"/>
@@ -792,12 +792,12 @@
     <message>
         <location filename="../../fn.ui" line="1162"/>
         <source>h&amp;3</source>
-        <translation></translation>
+        <translation>n&amp;3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1165"/>
         <source>Header 3</source>
-        <translation></translation>
+        <translation>Nadpis 3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1168"/>
@@ -807,22 +807,22 @@
     <message>
         <location filename="../../fn.ui" line="1176"/>
         <source>&amp;Node Font</source>
-        <translation></translation>
+        <translation>&amp;Písmo uzlu</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1179"/>
         <source>Node Font</source>
-        <translation></translation>
+        <translation>Písmo uzlu</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1184"/>
         <source>Scale I&amp;mage(s)</source>
-        <translation></translation>
+        <translation>Změn&amp;it měřítko obrázků</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1192"/>
         <source>Paste &amp;HTML</source>
-        <translation></translation>
+        <translation>Vložit &amp;HTML</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1195"/>
@@ -832,7 +832,7 @@
     <message>
         <location filename="../../fn.ui" line="1203"/>
         <source>&amp;Tags</source>
-        <translation></translation>
+        <translation>Š&amp;títky</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1206"/>
@@ -842,7 +842,7 @@
     <message>
         <location filename="../../fn.ui" line="1214"/>
         <source>Insert Lin&amp;k</source>
-        <translation></translation>
+        <translation>Vložit od&amp;kaz</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1217"/>
@@ -852,12 +852,12 @@
     <message>
         <location filename="../../fn.ui" line="1222"/>
         <source>C&amp;opy Link</source>
-        <translation></translation>
+        <translation>Zk&amp;opírovat odkaz</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1230"/>
         <source>I&amp;nsert Table</source>
-        <translation></translation>
+        <translation>&amp;Vložit tabulku</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1233"/>
@@ -867,78 +867,78 @@
     <message>
         <location filename="../../fn.ui" line="1238"/>
         <source>Append Row</source>
-        <translation></translation>
+        <translation>Přidat řádek za</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1243"/>
         <source>Delete Row</source>
-        <translation></translation>
+        <translation>Smazat řádek</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1248"/>
         <source>Append Column</source>
-        <translation></translation>
+        <translation>Přidat sloupec za</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1253"/>
         <source>Delete Column</source>
-        <translation></translation>
+        <translation>Smazat sloupec</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1258"/>
         <source>Merge Cells</source>
-        <translation></translation>
+        <translation>Sloučit buňky</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1263"/>
         <source>Prepend Row</source>
-        <translation></translation>
+        <translation>Vložit řádek před</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1268"/>
         <source>Prepend Column</source>
-        <translation></translation>
+        <translation>Vložit sloupec před</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1276"/>
         <source>Export &amp;HTML</source>
-        <translation></translation>
+        <translation>Exportovat &amp;HTML</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1281"/>
         <source>Save Ima&amp;ge(s)</source>
-        <translation></translation>
+        <translation>&amp;Uložit obrázky</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1292"/>
         <source>RTL</source>
-        <translation></translation>
+        <translation>Zprava doleva</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1295"/>
         <source>Ctrl+Alt+Shift+Left</source>
-        <translation></translation>
+        <translation>Ctrl+Alt+Shift+Šipka doprava</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1306"/>
         <source>LTR</source>
-        <translation></translation>
+        <translation>Zleva doprava</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1309"/>
         <source>Ctrl+Alt+Shift+Right</source>
-        <translation></translation>
+        <translation>Ctrl+Alt+Shift+Šipka doprava</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1314"/>
         <location filename="../../fn.ui" line="1317"/>
         <source>Menu</source>
-        <translation></translation>
+        <translation>Nabídka</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1325"/>
         <source>Node &amp;Icon</source>
-        <translation></translation>
+        <translation>&amp;Ikona uzlu</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1328"/>
@@ -948,7 +948,7 @@
     <message>
         <location filename="../../fn.cpp" line="2303"/>
         <source>Node Icon</source>
-        <translation></translation>
+        <translation>Ikona uzlu</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="340"/>
@@ -990,52 +990,53 @@
         <location filename="../../fn.cpp" line="551"/>
         <location filename="../../fn.cpp" line="4193"/>
         <source>&amp;Raise/Hide</source>
-        <translation></translation>
+        <translation>&amp;Vyzdvihnout/skrýt</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="724"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;New note?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Nová poznámka?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="725"/>
         <source>&lt;center&gt;&lt;i&gt;Do you really want to leave this document&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;and create an empty one?&lt;/i&gt;&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;&lt;i&gt;Opravdu chcete tento dokument opustit&lt;/i&gt;&lt;/center&gt;
+&lt;center&gt;&lt;i&gt;a vytvořit nový prázdný?&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="728"/>
         <location filename="../../fn.cpp" line="2138"/>
         <location filename="../../fn.cpp" line="3837"/>
         <source>Yes</source>
-        <translation></translation>
+        <translation>Ano</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="729"/>
         <location filename="../../fn.cpp" line="2139"/>
         <location filename="../../fn.cpp" line="3838"/>
         <source>No</source>
-        <translation></translation>
+        <translation>Ne</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="800"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Save changes?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Uložit změny?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="802"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been modified.&lt;/i&gt;&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;&lt;i&gt;Dokument byl změněn.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="804"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been removed.&lt;/i&gt;&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;&lt;i&gt;Dokument byl odebrán.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="809"/>
         <source>Discard changes</source>
-        <translation></translation>
+        <translation>Zahodit změny</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="810"/>
@@ -1049,47 +1050,48 @@
         <location filename="../../fn.cpp" line="4969"/>
         <location filename="../../fn.cpp" line="5084"/>
         <source>Cancel</source>
-        <translation></translation>
+        <translation>Storno</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1087"/>
         <source>Open file...</source>
-        <translation></translation>
+        <translation>Otevřít soubor…</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1227"/>
         <location filename="../../fn.cpp" line="4841"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be saved!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Není možné uložit!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1230"/>
         <location filename="../../fn.cpp" line="2820"/>
         <location filename="../../fn.cpp" line="4844"/>
         <source>Close</source>
-        <translation></translation>
+        <translation>Zavřít</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1318"/>
         <location filename="../../fn.cpp" line="1339"/>
         <source>Save As...</source>
-        <translation></translation>
+        <translation>Uložit jako…</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2135"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Delete this node?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Smazat tento uzel?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2136"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;i&gt;Warning!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
 &lt;center&gt;This action cannot be undone.&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;i&gt;Varování!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
+&lt;center&gt;Tuto akci nelze vzít zpět.&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2237"/>
         <source>Tags</source>
-        <translation></translation>
+        <translation>Štítky</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2252"/>
@@ -1108,97 +1110,97 @@
         <location filename="../../fn.cpp" line="2440"/>
         <location filename="../../fn.cpp" line="2473"/>
         <source>&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</source>
-        <translation></translation>
+        <translation>&lt;b&gt;Hlavní uzly:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Všechny uzly:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2446"/>
         <location filename="../../fn.cpp" line="2479"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</source>
-        <translation></translation>
+        <translation>&lt;b&gt;Poznámka:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Hlavní uzly:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Všechny uzly:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2807"/>
         <source>%1 Matches</source>
-        <translation></translation>
+        <translation>%1shod</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2809"/>
         <source>One Match</source>
-        <translation></translation>
+        <translation>Jedna shoda</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2811"/>
         <location filename="../../fn.cpp" line="3124"/>
         <source>No Match</source>
-        <translation></translation>
+        <translation>Žádná shoda</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2926"/>
         <location filename="../../fn.cpp" line="2978"/>
         <source>Replacement</source>
-        <translation></translation>
+        <translation>Nahrazení</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3233"/>
         <source>No Replacement</source>
-        <translation></translation>
+        <translation>Žádné nahrazení</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3235"/>
         <source>One Replacement</source>
-        <translation></translation>
+        <translation>Jedno nahrazení</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3237"/>
         <source>%1 Replacements</source>
-        <translation></translation>
+        <translation>%1 nahrazení</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3401"/>
         <source>Insert Link</source>
-        <translation></translation>
+        <translation>Vložit odkaz</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2311"/>
         <location filename="../../fn.cpp" line="3479"/>
         <source>Image path</source>
-        <translation></translation>
+        <translation>Umístění obrázku</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2315"/>
         <location filename="../../fn.cpp" line="3483"/>
         <source>Open image</source>
-        <translation></translation>
+        <translation>Otevřít obrázek</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3491"/>
         <location filename="../../fn.cpp" line="3652"/>
         <source>Scaling percentage</source>
-        <translation></translation>
+        <translation>Procento měřítka</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2333"/>
         <location filename="../../fn.cpp" line="3600"/>
         <source>Open Image...</source>
-        <translation></translation>
+        <translation>Otevřít obrázek…</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="553"/>
         <location filename="../../fn.cpp" line="4181"/>
         <source>&amp;Raise</source>
-        <translation></translation>
+        <translation>&amp;Vyzdvihnout</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="756"/>
         <source>New Node</source>
-        <translation></translation>
+        <translation>Nový uzel</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1089"/>
         <location filename="../../fn.cpp" line="1320"/>
         <location filename="../../fn.cpp" line="1341"/>
         <source>FeatherNotes documents (*.fnx);;All Files (*)</source>
-        <translation></translation>
+        <translation>Dokumenty FeatherNotes (*.fnx);;Všechny soubory (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1302"/>
@@ -1209,29 +1211,29 @@
         <location filename="../../fn.cpp" line="4898"/>
         <location filename="../../fn.cpp" line="4924"/>
         <source>Untitled</source>
-        <translation></translation>
+        <translation>Bez názvu</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2134"/>
         <source>Deletion</source>
-        <translation></translation>
+        <translation>Smazání</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2247"/>
         <source>Tag(s) for this node</source>
-        <translation></translation>
+        <translation>Štítky pro tento uzel</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2335"/>
         <location filename="../../fn.cpp" line="3602"/>
         <source>Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)</source>
-        <translation></translation>
+        <translation>Soubory s obrázky (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;Všechny soubory (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3486"/>
         <location filename="../../fn.cpp" line="3648"/>
         <source>Scale to</source>
-        <translation></translation>
+        <translation>Změnit měřítko na</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3490"/>
@@ -1242,160 +1244,161 @@
     <message>
         <location filename="../../fn.cpp" line="3642"/>
         <source>Scale Image(s)</source>
-        <translation></translation>
+        <translation>Změnit měřítko obrázků</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3801"/>
         <source>untitled</source>
-        <translation></translation>
+        <translation>bez názvu</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3833"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Image cannot be saved! Retry?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Obrázek se nepodařilo uložit! Zkusit znovu?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3834"/>
         <source>&lt;center&gt;Maybe you did not choose a proper extension&lt;/center&gt;
 &lt;center&gt;or do not have write permission.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;Nejspíš jste nezvolili správnou příponu&lt;/center&gt;
+&lt;center&gt;nebo nemáte oprávnění zapisovat do daného umístění.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3861"/>
         <source>Save Image As...</source>
-        <translation></translation>
+        <translation>Uložit obrázek jako…</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3863"/>
         <source>Image Files (*.png *.jpg *.jpeg *.bmp);;All Files (*)</source>
-        <translation></translation>
+        <translation>Soubory s obrázky (*.png *.jpg *.jpeg *.bmp);;Všechny soubory (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3913"/>
         <source>Insert Table</source>
-        <translation></translation>
+        <translation>Vložit tabulku</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3919"/>
         <source>Rows:</source>
-        <translation></translation>
+        <translation>Řádky:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3925"/>
         <source>Columns:</source>
-        <translation></translation>
+        <translation>Sloupce:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4637"/>
         <source>Print Document</source>
-        <translation></translation>
+        <translation>Vytisknout dokument</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4701"/>
         <source>Export HTML</source>
-        <translation></translation>
+        <translation>Exportovat HTML</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4706"/>
         <source>Export:</source>
-        <translation></translation>
+        <translation>Exportovat:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4707"/>
         <source>&amp;Current node</source>
-        <translation></translation>
+        <translation>&amp;Stávající uzel</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4709"/>
         <source>With all &amp;sub-nodes</source>
-        <translation></translation>
+        <translation>&amp;Se všemi dílčími uzly</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4710"/>
         <source>&amp;All nodes</source>
-        <translation></translation>
+        <translation>&amp;Všechny uzly</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4722"/>
         <source>Output file:</source>
-        <translation></translation>
+        <translation>Výstupní soubor:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4741"/>
         <source>Select path</source>
-        <translation></translation>
+        <translation>Vyberte umístění</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4929"/>
         <source>Save HTML As...</source>
-        <translation></translation>
+        <translation>Uložit HTML jako…</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4931"/>
         <source>HTML Files (*.html *.htm)</source>
-        <translation></translation>
+        <translation>HTML soubory (*.html *.htm)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4952"/>
         <source>Set Password</source>
-        <translation></translation>
+        <translation>Nastavit heslo</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4960"/>
         <source>Type password</source>
-        <translation></translation>
+        <translation>Zadejte heslo</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4965"/>
         <source>Retype password</source>
-        <translation></translation>
+        <translation>Zopakujte zadání hesla</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5040"/>
         <source>&lt;center&gt;Passwords were different. Retry!&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;Zadání hesla se neshodují. Zkuste to znovu!&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5072"/>
         <location filename="../../fn.cpp" line="5080"/>
         <source>Enter Password</source>
-        <translation></translation>
+        <translation>Zadejte heslo</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5146"/>
         <source>&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;Nesprávné heslo. Zkuste to znovu!&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5185"/>
         <source>A lightweight notes manager</source>
-        <translation></translation>
+        <translation>Nenáročný správce poznámek</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5186"/>
         <source>based on Qt5</source>
-        <translation></translation>
+        <translation>založeno na Qt5</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5187"/>
         <source>Author</source>
-        <translation></translation>
+        <translation>Autor</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5189"/>
         <location filename="../../fn.cpp" line="5190"/>
         <source>About FeatherNotes</source>
-        <translation></translation>
+        <translation>O aplikaci FeatherNotes</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5189"/>
         <source>Translators</source>
-        <translation></translation>
+        <translation>Překladatelé</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5188"/>
         <source>aka.</source>
-        <translation></translation>
+        <translation>alias</translation>
     </message>
 </context>
 <context>
@@ -1403,7 +1406,7 @@
     <message>
         <location filename="../../lineedit.cpp" line="35"/>
         <source>Clear text (Ctrl+K)</source>
-        <translation></translation>
+        <translation>Text bez formátování (Ctrl+K)</translation>
     </message>
     <message>
         <location filename="../../lineedit.cpp" line="81"/>
@@ -1417,12 +1420,12 @@
     <message>
         <location filename="../../predDialog.ui" line="14"/>
         <source>Preferences</source>
-        <translation></translation>
+        <translation>Předvolby</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="27"/>
         <source>Window</source>
-        <translation></translation>
+        <translation>Okno</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="36"/>
@@ -1430,17 +1433,22 @@
 this dialog and also on exit.
 
 Uncheck to set a fixed size!</source>
-        <translation></translation>
+        <translation>Po zavření tohoto dialogu a také
+při ukončení aplikace uloží velikost
+okna.
+
+Pro nastavení pevné velikosti zrušte
+zaškrnutí!</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="42"/>
         <source>Remember window &amp;size</source>
-        <translation></translation>
+        <translation>Zapamatovat si veliko&amp;st okna</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="51"/>
         <source>Start with this size: </source>
-        <translation></translation>
+        <translation>Začít s touto velikostí: </translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="58"/>
@@ -1448,7 +1456,7 @@ Uncheck to set a fixed size!</source>
         <location filename="../../predDialog.ui" line="255"/>
         <location filename="../../predDialog.ui" line="269"/>
         <source> px</source>
-        <translation></translation>
+        <translation> obr. bodů</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="65"/>
@@ -1462,12 +1470,17 @@ Uncheck to set a fixed size!</source>
 this dialog and also on exit.
 
 Uncheck for a width ratio of 170/530.</source>
-        <translation></translation>
+        <translation>Po zavření tohoto dialogu a také
+při ukončení aplikace uloží šířku
+stromu.
+
+Pro výchozí poměr šířky 170/530
+zrušte zaškrtnutí.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="103"/>
         <source>Remember &amp;tree width</source>
-        <translation></translation>
+        <translation>Zapamatovat si šířku s&amp;tromu</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="110"/>
@@ -1477,12 +1490,18 @@ this dialog and also on exit.
 (This may not work correctly
 under GTK+ DE&apos;s like Unity
 and Cinnamon.)</source>
-        <translation></translation>
+        <translation>Při zavření tohoto dialogu a také
+při ukončení aplikace uloží pozici.
+
+(Toto nemusí správně fungovat
+pod desktopovými prostředími,
+založenými na knihovnách GTK+
+jako je Unity a Cinnamon.)</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="118"/>
         <source>Save &amp;position</source>
-        <translation></translation>
+        <translation>Uložit &amp;pozici</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="125"/>
@@ -1491,71 +1510,84 @@ If checked, the titlebar close button iconifies
 the window to the systray instead of quitting.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation></translation>
+        <translation>Rozhoduje zda má být použita ikona v oznamovací
+oblasti systémového panelu. Pokud je zaškrtnuto,
+tlačítko zavřít na titulní liště okna ho namísto
+ukončení aplikace zminimalizuje do právě do
+oznamovací oblasti..
+
+Aby se změna projevila, je třeba FeatherNotes
+zavřít a spustit znovu.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="132"/>
         <source>Add to s&amp;ystray</source>
-        <translation></translation>
+        <translation>Přidat do oznamovací oblasti s&amp;ystém. panelu</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="157"/>
         <source>The command line option --tray
 can be used instead of this.</source>
-        <translation></translation>
+        <translation>Namísto tohoto je možné použít
+volbu příkazového řádku --tray</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="161"/>
         <source>Start i&amp;conified to tray</source>
-        <translation></translation>
+        <translation>Spouštět zminimalizované do oznamovací oblasti</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="170"/>
         <source>Merge the tree view with its surroundings?</source>
-        <translation></translation>
+        <translation>Sloučit stromový pohled s jeho okolím?</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="173"/>
         <source>Transparent t&amp;ree view</source>
-        <translation></translation>
+        <translation>Průhledný st&amp;romový pohled</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="180"/>
         <source>By default, the active widget style determines
 the size of toolbar icons.</source>
-        <translation></translation>
+        <translation>Ve výchozím stavu je velikost ikon na liště
+nástrojů určována právě používaným stylem
+widgetů.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="184"/>
         <source>Small toolbar icons</source>
-        <translation></translation>
+        <translation>Malé ikony na liště nástrojů</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="191"/>
         <source>Do not show t&amp;oolbar</source>
-        <translation></translation>
+        <translation>Nezobrazovat lištu nástr&amp;ojů</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="198"/>
         <source>If the menubar is hidden,
 a menu button appears on the toolbar.</source>
-        <translation></translation>
+        <translation>Pokud je lišta nástrojů skryta, na liště
+nástrojů se objeví tlačítko nabídky.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="202"/>
         <source>Do not show &amp;menubar</source>
-        <translation></translation>
+        <translation>Nezobrazovat lištu &amp;nabídky</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="209"/>
         <source>Check this under Enlightenment (or, probably, another DE)
 to use the systray icon more easily!</source>
-        <translation></translation>
+        <translation>Toto zaškrtněte pod Enlightenment (nebo, nejspíš jiným
+desktop. prostředím), aby ikona v oznamovací oblasti
+byla snáze použitelná!</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="213"/>
         <source>Running &amp;under Enlightenment?</source>
-        <translation></translation>
+        <translation>Provoz&amp;ujete v Enlightenment?</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="238"/>
@@ -1567,12 +1599,20 @@ if it is on the left or right, the X-coordinate should be set.
 
 After choosing the coordinate shifts, put the window in a proper
 position and then restart FeatherNotes!</source>
-        <translation></translation>
+        <translation>Některá desktopová prostředí (jako např. Enlightenment) nehlásí
+správnou pozici okna. Pokud je tomu tak, je možné se pokusit to
+napravit zde.
+
+Pokud je panel dole nebo nahoře, měla by být nastavena souřadnice
+Y. Pokud vlevo nebo vpravo, pak souřadnice X.
+
+Po zvolení posunu souřadnice, umístěte okno do správné pozice,
+FeatherNotes ukončete a spusťte znovu!</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="248"/>
         <source>Shifts (X × Y): </source>
-        <translation></translation>
+        <translation>Posuny (X × Y): </translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="314"/>
@@ -1582,87 +1622,92 @@ position and then restart FeatherNotes!</source>
     <message>
         <location filename="../../predDialog.ui" line="323"/>
         <source>&amp;Wrap lines by default</source>
-        <translation></translation>
+        <translation>&amp;Zalamovat řádky už ve výchozím stavu</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="330"/>
         <source>Auto-&amp;indent by default</source>
-        <translation></translation>
+        <translation>Automaticky odsazovat už ve výchozím stavu</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="337"/>
         <source>This covers parentheses, braces, brackets and quotes.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation></translation>
+        <translation>Toto zahrnuje kulaté, složené a hranaté závorky a také uvozovky.
+
+Aby se změna projevila, je třeba FeatherNotes ukončit a spustit znovu.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="342"/>
         <source>Auto-&amp;bracket
 (Requires application restart)</source>
-        <translation></translation>
+        <translation>Automatické uzavírání závorek
+(Vyžaduje restart aplikace)</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="352"/>
         <source>&amp;Auto-save every</source>
-        <translation></translation>
+        <translation>&amp;Automaticky uložit každých</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="359"/>
         <source> minute(s)</source>
-        <translation></translation>
+        <translation> minut</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="393"/>
         <source>This is not a complete fix but
 prevents annoying scroll jumps.</source>
-        <translation></translation>
+        <translation>Toto není úplná oprava, ale
+zabraňuje otravným poskočením
+při posouvání.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="397"/>
         <source>Workaround for &amp;Qt5&apos;s scroll jump bug</source>
-        <translation></translation>
+        <translation>Obejití problému s poskakujícím posouváním v &amp;Qt5</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="424"/>
         <source>Shortcuts</source>
-        <translation></translation>
+        <translation>Zkratky</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="443"/>
         <source>Action</source>
-        <translation></translation>
+        <translation>Akce</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="448"/>
         <source>Shortcut</source>
-        <translation></translation>
+        <translation>Zkratka</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="456"/>
         <source>Default</source>
-        <translation></translation>
+        <translation>Výchozí</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="337"/>
         <location filename="../../pref.cpp" line="509"/>
         <source>Warning: Ambiguous shortcut detected!</source>
-        <translation></translation>
+        <translation>Varování: zjištěna opakující se zkratka!</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="499"/>
         <source>The typed shortcut was not valid.</source>
-        <translation></translation>
+        <translation>Zadaná klávesová zkratka není platná.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="501"/>
         <source>The typed shortcut was reserved.</source>
-        <translation></translation>
+        <translation>Zadaná klávesová zkratka je vyhrazena pro něco jiného.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="605"/>
         <source>Application restart is needed for changes to take effect.</source>
-        <translation></translation>
+        <translation>Aby se změny projevily, je třeba aplikaci restartovat.</translation>
     </message>
 </context>
 <context>
@@ -1670,7 +1715,7 @@ prevents annoying scroll jumps.</source>
     <message>
         <location filename="../../helpDialog.ui" line="14"/>
         <source>Help</source>
-        <translation></translation>
+        <translation>Nápověda</translation>
     </message>
 </context>
 <context>
@@ -1679,7 +1724,7 @@ prevents annoying scroll jumps.</source>
         <location filename="../../domitem.cpp" line="100"/>
         <location filename="../../domitem.cpp" line="137"/>
         <source>New Node</source>
-        <translation></translation>
+        <translation>Nový uzel</translation>
     </message>
 </context>
 </TS>
