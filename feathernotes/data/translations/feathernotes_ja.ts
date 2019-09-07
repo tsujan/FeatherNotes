@@ -91,12 +91,12 @@
     <message>
         <location filename="../../fn.ui" line="167"/>
         <source>Match Case (F5)</source>
-        <translation>大文字・小文字を区別 (F5)</translation>
+        <translation>大文字と小文字の区別 (F5)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="170"/>
         <source>Match Case</source>
-        <translation>大文字・小文字を区別</translation>
+        <translation>大文字と小文字の区別</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="173"/>
