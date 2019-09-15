@@ -269,12 +269,12 @@
     <message>
         <location filename="../../fn.ui" line="586"/>
         <source>&amp;Clear All Formats</source>
-        <translation>Alle opmaken &amp;wissen</translation>
+        <translation>Alle opmaak &amp;wissen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="589"/>
         <source>Clear all formats</source>
-        <translation>Alle opmaken wissen</translation>
+        <translation>Alle opmaak wissen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="592"/>
@@ -410,7 +410,7 @@
     <message>
         <location filename="../../fn.ui" line="731"/>
         <source>P&amp;rint with Sub-Nodes</source>
-        <translation>Afd&amp;rukken met subnotities</translation>
+        <translation>Onderliggende notities ook afd&amp;rukken</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="739"/>
@@ -1002,7 +1002,7 @@
         <source>&lt;center&gt;&lt;i&gt;Do you really want to leave this document&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;and create an empty one?&lt;/i&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;i&gt;Weet je zeker dat je dit document wilt sluiten&lt;/i&gt;&lt;/center&gt;
-&lt;center&gt;&lt;i&gt;en een nieuw, leeg document wilt creëren?&lt;/i&gt;&lt;/center&gt;</translation>
+&lt;center&gt;&lt;i&gt;en een nieuw, leeg document wilt maken?&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="728"/>
@@ -1132,7 +1132,7 @@
         <location filename="../../fn.cpp" line="2811"/>
         <location filename="../../fn.cpp" line="3124"/>
         <source>No Match</source>
-        <translation>Geen overeenkomst</translation>
+        <translation>Geen overeenkomst(en)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2926"/>
@@ -1143,7 +1143,7 @@
     <message>
         <location filename="../../fn.cpp" line="3233"/>
         <source>No Replacement</source>
-        <translation>Geen vervanging</translation>
+        <translation>Geen vervanging(en)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3235"/>
@@ -1254,7 +1254,7 @@
     <message>
         <location filename="../../fn.cpp" line="3833"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Image cannot be saved! Retry?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Afbeelding kan niet worden opgeslagen! Opnieuw proberen?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;De afbeelding kan niet worden opgeslagen! Wil je het opnieuw proberen?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3834"/>
@@ -1311,7 +1311,7 @@
     <message>
         <location filename="../../fn.cpp" line="4709"/>
         <source>With all &amp;sub-nodes</source>
-        <translation>Inclusief alle &amp;subnodes</translation>
+        <translation>Inclu&amp;sief alle onderliggende nodes</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4710"/>
@@ -1346,7 +1346,7 @@
     <message>
         <location filename="../../fn.cpp" line="4960"/>
         <source>Type password</source>
-        <translation>Typ een wachtwoord</translation>
+        <translation>Typ het gewenste wachtwoord</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4965"/>
@@ -1434,7 +1434,7 @@ this dialog and also on exit.
 
 Uncheck to set a fixed size!</source>
         <translation>Slaat de vensterafmetingen op, zowel na het sluiten
-van dit venster als bij het afsluiten van de applicatie.
+van dit venster als bij het afsluiten van het programma.
 
 Vink dit uit om vaste afmetingen in te stellen!</translation>
     </message>
@@ -1469,7 +1469,7 @@ this dialog and also on exit.
 
 Uncheck for a width ratio of 170/530.</source>
         <translation>Slaat de breedte van de boomweergave op, zowel na het sluiten
-van dit venster als bij het afsluiten van de applicatie.
+van dit venster als bij het afsluiten van het programma.
 
 Vink dit uit voor een breedteverhouding van 170/530.</translation>
     </message>
@@ -1487,7 +1487,7 @@ this dialog and also on exit.
 under GTK+ DE&apos;s like Unity
 and Cinnamon.)</source>
         <translation>Onthoudt de positie, zowel na het sluiten van
-dit venster als bij het afsluiten van de applicatie.
+dit venster als bij het afsluiten van het programma.
 
 (Dit werkt mogelijk niet goed
 in GTK+-werkomgevingen als Unity
@@ -1509,7 +1509,7 @@ Needs restarting of FeatherNotes to take effect.</source>
 Als dit wordt aangevinkt, dan wordt het venster, bij afsluiten, geminimaliseerd
 naar het systeemvak in plaats van afgesloten.
 
-FeatherNotes moet worden herstart om de wijziging toe te passen.</translation>
+Herstart FeatherNotes om de wijziging toe te passen.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="132"/>
@@ -1542,12 +1542,13 @@ kan eveneens worden gebruikt.</translation>
         <location filename="../../predDialog.ui" line="180"/>
         <source>By default, the active widget style determines
 the size of toolbar icons.</source>
-        <translation type="unfinished"></translation>
+        <translation>Standaard bepaalt de actieve widgetstijl de
+grootte van de werkbalkpictogrammen.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="184"/>
         <source>Small toolbar icons</source>
-        <translation type="unfinished"></translation>
+        <translation>Kleine werkbalkpictogrammen</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="191"/>
@@ -1570,7 +1571,7 @@ dan verschijnt er een menuknop op de werkbalk.</translation>
         <location filename="../../predDialog.ui" line="209"/>
         <source>Check this under Enlightenment (or, probably, another DE)
 to use the systray icon more easily!</source>
-        <translation>Vink dit dan aan (kan ook op andere werkomgevingen)
+        <translation>Vink dit aan op Enlightenment (kan ook op andere werkomgevingen)
 om gebruik van het systeemvakpictogram eenvoudiger te maken!</translation>
     </message>
     <message>
@@ -1591,10 +1592,10 @@ position and then restart FeatherNotes!</source>
         <translation>Sommige werkomgevingen (zoals Enlightenment) geven de vensterpositie niet altijd
 goed door. Als dat het geval is, dan kun je hier proberen om het probleem op te lossen.
 
-Als het paneel zich onder of boven bevindt, dan moet het Y-coördinaat worden ingesteld;
-als het zich links of rechts bevindt, dan moet het X-coördinaat worden ingesteld.
+Als het paneel onder- of bovenaan staat, dan moet het Y-coördinaat worden ingesteld;
+als het links of rechts staat, dan moet het X-coördinaat worden ingesteld.
 
-Plaats, na het kiezen van de coördinaten, het venster op een goede positie en
+Plaats, na het kiezen van de coördinaten, het venster op de juiste positie en
 herstart FeatherNotes!</translation>
     </message>
     <message>
@@ -1610,12 +1611,12 @@ herstart FeatherNotes!</translation>
     <message>
         <location filename="../../predDialog.ui" line="323"/>
         <source>&amp;Wrap lines by default</source>
-        <translation>Regels standaard om&amp;slaan</translation>
+        <translation>Regels altijd om&amp;slaan</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="330"/>
         <source>Auto-&amp;indent by default</source>
-        <translation>Standaard automatisch &amp;inspringen</translation>
+        <translation>Altijd automatisch &amp;inspringen</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="337"/>
@@ -1624,7 +1625,7 @@ herstart FeatherNotes!</translation>
 Needs restarting of FeatherNotes to take effect.</source>
         <translation>Dit beslaat enkele/dubbele aanhalingstekens en ronde/vierkante haakjes.
 
-FeatherNotes moet worden herstart om de instelling toe te passen.</translation>
+Herstart FeatherNotes om de instelling toe te passen.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="342"/>
@@ -1658,43 +1659,43 @@ maar voorkomt vervelende scroll-verspringingen.</translation>
     <message>
         <location filename="../../predDialog.ui" line="424"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Sneltoetsen</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="443"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Actie</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="448"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>Sneltoets</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="456"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Standaard</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="337"/>
         <location filename="../../pref.cpp" line="509"/>
         <source>Warning: Ambiguous shortcut detected!</source>
-        <translation type="unfinished"></translation>
+        <translation>Waarschuwing: dubbelzinnige sneltoets gedetecteerd!</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="499"/>
         <source>The typed shortcut was not valid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Deze sneltoets is ongeldig.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="501"/>
         <source>The typed shortcut was reserved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Deze sneltoets is gereserveerd.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="605"/>
         <source>Application restart is needed for changes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Herstart het programma om de wijzigingen toe te passen.</translation>
     </message>
 </context>
 <context>
