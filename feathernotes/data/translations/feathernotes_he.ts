@@ -106,7 +106,7 @@
     <message>
         <location filename="../../fn.ui" line="219"/>
         <source>&amp;File</source>
-        <translation></translation>
+        <translation>&amp;קובץ</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="238"/>
@@ -116,7 +116,7 @@
     <message>
         <location filename="../../fn.ui" line="253"/>
         <source>For&amp;mat</source>
-        <translation></translation>
+        <translation>&amp;עיצוב</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="285"/>
@@ -126,7 +126,7 @@
     <message>
         <location filename="../../fn.ui" line="308"/>
         <source>&amp;Options</source>
-        <translation></translation>
+        <translation>&amp;אפשרויות</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="320"/>
@@ -137,7 +137,7 @@
         <location filename="../../fn.ui" line="327"/>
         <location filename="../../fn.ui" line="975"/>
         <source>&amp;Help</source>
-        <translation></translation>
+        <translation>ע&amp;זרה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="424"/>
@@ -147,22 +147,22 @@
     <message>
         <location filename="../../fn.ui" line="431"/>
         <source>Replace with:</source>
-        <translation></translation>
+        <translation>החלפה ב־:</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="444"/>
         <source>To be replaced</source>
-        <translation></translation>
+        <translation>להחלפה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="457"/>
         <source>Replacing text</source>
-        <translation></translation>
+        <translation>טקסט מוחלף</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="467"/>
         <source>Previous (F9)</source>
-        <translation></translation>
+        <translation>הקודם (F9)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="470"/>
@@ -172,7 +172,7 @@
     <message>
         <location filename="../../fn.ui" line="483"/>
         <source>Next (F8)</source>
-        <translation></translation>
+        <translation>הבא (F8)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="486"/>
@@ -182,7 +182,7 @@
     <message>
         <location filename="../../fn.ui" line="499"/>
         <source>Replace all (F10)</source>
-        <translation></translation>
+        <translation>להחליף הכול (F10)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="502"/>
@@ -192,13 +192,13 @@
     <message>
         <location filename="../../fn.ui" line="519"/>
         <source>&amp;Save</source>
-        <translation></translation>
+        <translation>&amp;שמירה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="522"/>
         <location filename="../../fn.cpp" line="809"/>
         <source>Save</source>
-        <translation></translation>
+        <translation>שמירה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="525"/>
@@ -209,12 +209,12 @@
         <location filename="../../fn.ui" line="530"/>
         <location filename="../../fn.cpp" line="558"/>
         <source>&amp;Open</source>
-        <translation></translation>
+        <translation>&amp;פתיחה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="533"/>
         <source>Open a file</source>
-        <translation></translation>
+        <translation>פתיחת קובץ</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="536"/>
@@ -224,7 +224,7 @@
     <message>
         <location filename="../../fn.ui" line="544"/>
         <source>&amp;Undo</source>
-        <translation></translation>
+        <translation>&amp;ביטול</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="547"/>
@@ -1637,43 +1637,43 @@ prevents annoying scroll jumps.</source>
     <message>
         <location filename="../../predDialog.ui" line="435"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>קיצורי דרך</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="454"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>פעולה</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="459"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>קיצור דרך</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="467"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>בררת מחדל</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="345"/>
         <location filename="../../pref.cpp" line="517"/>
         <source>Warning: Ambiguous shortcut detected!</source>
-        <translation type="unfinished"></translation>
+        <translation>אזהרה: התגלה קיצור דרך שאינו ייחודי!</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="507"/>
         <source>The typed shortcut was not valid.</source>
-        <translation type="unfinished"></translation>
+        <translation>קיצור הדרך שהוקלד שגוי.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="509"/>
         <source>The typed shortcut was reserved.</source>
-        <translation type="unfinished"></translation>
+        <translation>קיצור הדרך שהוקלד נשמר מראש.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="615"/>
         <source>Application restart is needed for changes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>יש להפעיל את היישום מחדש כדי שהשינויים יחולו.</translation>
     </message>
 </context>
 <context>
