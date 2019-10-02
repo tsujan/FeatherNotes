@@ -159,6 +159,13 @@ public:
         autoBracket_ = yes;
     }
 
+    bool hasAutoReplace() const {
+        return autoReplace_;
+    }
+    void autoReplace (bool yes) {
+        autoReplace_ = yes;
+    }
+
     int getAutoSave() const {
         return autoSave_;
     }
@@ -371,6 +378,7 @@ private:
          noToolbar_,
          noMenubar_,
          autoBracket_,
+         autoReplace_,
          treeViewDND_;
     int autoSave_;
     QPoint position_; // Excluding the window frame.

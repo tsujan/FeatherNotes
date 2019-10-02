@@ -267,6 +267,14 @@ PrefDialog::PrefDialog (QWidget *parent)
             showPrompt();
         });
 
+        /* auto-replace */
+        ui->autoReplaceBox->setChecked (win->hasAutoReplace());
+        autoReplace_ = win->hasAutoReplace();
+        connect (ui->autoReplaceBox, &QCheckBox::stateChanged, win, [this, win] (int checked) {
+            win->autoReplace (checked == Qt::Checked);
+            showPrompt();
+        });
+
         /* auto-saving */
         ui->autoSaveSpinBox->setRange (1, 60); // not needed
         if (win->getAutoSave() > -1)
@@ -600,7 +608,9 @@ void PrefDialog::showPrompt (const QString& str, bool temporary)
         else
             prevtMsg_ = "<b>" + str + "</b>";
     }
-    else if (hasTray_ != win->hasTray() || autoBracket_ != win->hasAutoBracket())
+    else if (hasTray_ != win->hasTray()
+             || autoBracket_ != win->hasAutoBracket()
+             || autoReplace_ != win->hasAutoReplace())
     {
         ui->promptLabel->setText ("<b>" + tr ("Application restart is needed for changes to take effect.") + "</b>");
         ui->promptLabel->setStyleSheet (style);

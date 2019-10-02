@@ -71,7 +71,7 @@ unix {
     QMAKE_EXTRA_COMPILERS += updateqm
   }
 }
-else:win32{
+else:win32 {
   #TRANSLATIONS
   exists($$[QT_INSTALL_BINS]/lrelease.exe) {
     TRANSLATIONS = $$system("dir /b /S feathernotes_*.ts")

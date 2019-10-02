@@ -12,6 +12,7 @@ V0.5.0
  * Don't let the current item change during a tree DND.
  * Drag a tree node only if there is a real mouse movement (and not when the view is scrolled by the wheel of a motionless mouse).
  * Smarter Shift+Enter, especially with numbered lists.
+ * Added an option for auto-replacing (triple periods, double hyphens, etc.).
 
 V0.4.6
 ---------

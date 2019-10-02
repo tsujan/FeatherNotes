@@ -79,7 +79,7 @@ private:
     QWidget * parent_;
     QHash<QString, QString> shortcuts_, newShortcuts_;
     QString prevtMsg_;
-    bool hasTray_, autoBracket_;
+    bool hasTray_, autoBracket_, autoReplace_;
     QTimer *promptTimer_;
 };
 

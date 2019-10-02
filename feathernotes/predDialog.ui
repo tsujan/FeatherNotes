@@ -339,8 +339,19 @@ position and then restart FeatherNotes!</string>
 Needs restarting of FeatherNotes to take effect.</string>
             </property>
             <property name="text">
-             <string>Auto-&amp;bracket
-(Requires application restart)</string>
+             <string>Auto-&amp;bracket</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="autoReplaceBox">
+            <property name="toolTip">
+             <string>A triple period is replaced with an ellipsis,
+a double hyphen with a long dash, etc. while
+typing and under proper circumstances.</string>
+            </property>
+            <property name="text">
+             <string>&amp;Replace some characters while typing</string>
             </property>
            </widget>
           </item>

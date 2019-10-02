@@ -41,6 +41,7 @@ public:
     {
         autoIndentation = true;
         autoBracket = false;
+        autoReplace = false;
         textTab_ = "    "; // the default text tab is four spaces
         pressPoint = QPoint();
         scrollJumpWorkaround = false;
@@ -56,6 +57,7 @@ public:
 
     bool autoIndentation;
     bool autoBracket;
+    bool autoReplace;
 
 signals:
     void resized();

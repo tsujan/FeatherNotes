@@ -171,6 +171,7 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
     noToolbar_ = false;
     noMenubar_ = false;
     autoBracket_ = false;
+    autoReplace_ = false;
     treeViewDND_ = false;
     readAndApplyConfig();
 
@@ -1503,6 +1504,7 @@ TextEdit *FN::newWidget()
     textEdit->setScrollJumpWorkaround (scrollJumpWorkaround_);
     //textEdit->autoIndentation = true; // auto-indentation is enabled by default
     textEdit->autoBracket = autoBracket_;
+    textEdit->autoReplace = autoReplace_;
     QPalette p = QApplication::palette();
     QColor hCol = p.color(QPalette::Active, QPalette::Highlight);
     QBrush brush = p.window();
@@ -4486,6 +4488,8 @@ void FN::readAndApplyConfig (bool startup)
 
     autoBracket_ = settings.value ("autoBracket").toBool(); // false by default
 
+    autoReplace_ = settings.value ("autoReplace").toBool(); // false by default
+
     int as = settings.value ("autoSave", -1).toInt();
     if (startup)
         autoSave_ = as;
@@ -4572,6 +4576,7 @@ void FN::writeConfig()
     settings.setValue ("noWrap", !wrapByDefault_);
     settings.setValue ("noIndent", !indentByDefault_);
     settings.setValue ("autoBracket", autoBracket_);
+    settings.setValue ("autoReplace", autoReplace_);
 
     settings.setValue ("autoSave", autoSave_);
     if (autoSave_ >= 1)
