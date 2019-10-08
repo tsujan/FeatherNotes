@@ -1441,7 +1441,7 @@ Hapus centang untuk mengatur ukuran tetap!</translation>
     <message>
         <location filename="../../predDialog.ui" line="42"/>
         <source>Remember window &amp;size</source>
-        <translation type="unfinished">Ingat ukuran jendela</translation>
+        <translation type="unfinished">Simpan ukuran jendela</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="51"/>
