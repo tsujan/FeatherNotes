@@ -1637,7 +1637,7 @@ Es necesario reiniciar FeatherNotes para que tenga effecto.</translation>
         <location filename="../../predDialog.ui" line="349"/>
         <source>A triple period is replaced with an ellipsis,
 a double hyphen with a long dash, etc. while
-typing and under proper circumstances.</source>
+the user is typing and under proper circumstances.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

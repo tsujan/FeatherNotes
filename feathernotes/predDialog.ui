@@ -348,7 +348,7 @@ Needs restarting of FeatherNotes to take effect.</string>
             <property name="toolTip">
              <string>A triple period is replaced with an ellipsis,
 a double hyphen with a long dash, etc. while
-typing and under proper circumstances.</string>
+the user is typing and under proper circumstances.</string>
             </property>
             <property name="text">
              <string>&amp;Replace some characters while typing</string>

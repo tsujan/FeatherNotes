@@ -1631,7 +1631,7 @@ Restartigo de la aplikaĵo necesas.</translation>
         <location filename="../../predDialog.ui" line="349"/>
         <source>A triple period is replaced with an ellipsis,
 a double hyphen with a long dash, etc. while
-typing and under proper circumstances.</source>
+the user is typing and under proper circumstances.</source>
         <translation>La triobla punkto, duobla streketo ktp estas respektive
 anstataŭigitaj de la tripunkto, longa streketo ktp, dum
 tajpado kaj ĉe konvenaj cirkonstancoj.</translation>
