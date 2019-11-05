@@ -1642,12 +1642,14 @@ Tam, kad įsigaliotų, reikalauja paleisti FeatherNotes iš naujo.</translation>
         <source>A triple period is replaced with an ellipsis,
 a double hyphen with a long dash, etc. while
 the user is typing and under proper circumstances.</source>
-        <translation type="unfinished"></translation>
+        <translation>Naudotojui rašant, esant tinkamoms aplinkybėms,
+trys taškai yra pakeičiami daugtaškiu, o dvigubas brūkšnelis
+ilguoju brūkšniu ir t.t.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="354"/>
         <source>&amp;Replace some characters while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Rašant, pakeisti kai kuriuos simbolius</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="363"/>
