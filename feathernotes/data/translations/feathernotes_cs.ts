@@ -1648,12 +1648,14 @@ Aby se změna projevila, je třeba FeatherNotes ukončit a spustit znovu.</trans
         <source>A triple period is replaced with an ellipsis,
 a double hyphen with a long dash, etc. while
 the user is typing and under proper circumstances.</source>
-        <translation type="unfinished"></translation>
+        <translation>Za správných podmínek, jsou tři tečky jsou
+nahrazeny výpustkou, dva spojovníky
+pomlčkou, atd – zatímco uživatel píše.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="354"/>
         <source>&amp;Replace some characters while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>Nah&amp;razovat některé znaky v průběhu psaní</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="363"/>
