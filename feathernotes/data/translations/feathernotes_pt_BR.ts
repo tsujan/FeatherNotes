@@ -1637,12 +1637,14 @@ Necessário reiniciar o FeatherNotes para entrar em vigor.</translation>
         <source>A triple period is replaced with an ellipsis,
 a double hyphen with a long dash, etc. while
 the user is typing and under proper circumstances.</source>
-        <translation type="unfinished"></translation>
+        <translation>Um período triplo é substituído por uma elipse,
+um hífen duplo com um traço longo, etc. Enquanto
+o usuário está digitando e em circunstâncias adequadas.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="354"/>
         <source>&amp;Replace some characters while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Substitua alguns caracteres enquanto digita</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="363"/>
