@@ -25,6 +25,9 @@
 #include <QBuffer>
 #include <QMimeDatabase>
 #include <QLocale>
+#include <QTextDocumentFragment>
+#include <QApplication>
+#include <QClipboard>
 
 namespace FeatherNotes {
 
@@ -709,6 +712,37 @@ void TextEdit::mouseMoveEvent (QMouseEvent *e)
 /*************************/
 void TextEdit::mousePressEvent (QMouseEvent *e)
 {
+    /* On triple clicking, select the current block without
+       selecting its newline and start and end whitespaces, if any. */
+    if (tripleClickTimer_.isValid())
+    {
+        if (!tripleClickTimer_.hasExpired (qApp->doubleClickInterval())
+            && e->buttons() == Qt::LeftButton)
+        {
+            tripleClickTimer_.invalidate();
+            QTextCursor txtCur = textCursor();
+            const QString blockText = txtCur.block().text();
+            const int l = blockText.length();
+            txtCur.movePosition (QTextCursor::StartOfBlock);
+            int i = 0;
+            while (i < l && blockText.at (i).isSpace())
+            {
+                txtCur.movePosition (QTextCursor::NextCharacter);
+                ++i;
+            }
+            if (i < l)
+            {
+                int j = l;
+                while (j > i && blockText.at (j -  1).isSpace())
+                    --j;
+                txtCur.movePosition (QTextCursor::NextCharacter, QTextCursor::KeepAnchor, j - i);
+                setTextCursor (txtCur);
+            }
+            return;
+        }
+        tripleClickTimer_.invalidate();
+    }
+
     QTextEdit::mousePressEvent (e);
     pressPoint = e->pos();
 }
@@ -717,6 +751,15 @@ void TextEdit::mousePressEvent (QMouseEvent *e)
 void TextEdit::mouseReleaseEvent (QMouseEvent *e)
 {
     QTextEdit::mouseReleaseEvent (e);
+
+    /* give only a plain text to the selection clipboard */
+    QTextCursor cursor = textCursor();
+    if (cursor.hasSelection())
+    {
+        QClipboard *cl = QApplication::clipboard();
+        if (cl->supportsSelection())
+            cl->setText (cursor.selection().toPlainText(), QClipboard::Selection);
+    }
 
     QString str = anchorAt (e->pos());
     if (!str.isEmpty()
@@ -731,6 +774,12 @@ void TextEdit::mouseReleaseEvent (QMouseEvent *e)
             QDesktopServices::openUrl (url);
     }
     pressPoint = QPoint();
+}
+/*************************/
+void TextEdit::mouseDoubleClickEvent (QMouseEvent *e)
+{
+    tripleClickTimer_.start();
+    QTextEdit::mouseDoubleClickEvent (e);
 }
 /*************************/
 void TextEdit::wheelEvent (QWheelEvent *e)

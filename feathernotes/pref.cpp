@@ -488,6 +488,8 @@ void PrefDialog::onShortcutChange (QTableWidgetItem *item)
     FN *win = static_cast<FN *>(parent_);
     if (win == nullptr) return;
 
+    QString desc = ui->tableWidget->item (ui->tableWidget->currentRow(), 0)->text();
+
     QString txt = item->text();
     if (!txt.isEmpty())
     {
@@ -497,31 +499,38 @@ void PrefDialog::onShortcutChange (QTableWidgetItem *item)
         txt = keySeq.toString();
     }
 
-    QString desc = ui->tableWidget->item (ui->tableWidget->currentRow(), 0)->text();
-    if (txt.isEmpty()
-        || (win->reservedShortcuts().contains (txt)
-            /* unless its (hard-coded) default shortcut is typed */
-            && DEFAULT_SHORTCUTS.value (OBJECT_NAMES.value (desc)) != txt))
+    if (!txt.isEmpty() && win->reservedShortcuts().contains (txt)
+        && DEFAULT_SHORTCUTS.value (OBJECT_NAMES.value (desc)) != txt) // always true
+
     {
-        if (txt.isEmpty())
-            showPrompt (tr ("The typed shortcut was not valid."), true);
-        else
-            showPrompt (tr ("The typed shortcut was reserved."), true);
+        showPrompt (tr ("The typed shortcut was reserved."), true);
         disconnect (ui->tableWidget, &QTableWidget::itemChanged, this, &PrefDialog::onShortcutChange);
         item->setText (shortcuts_.value (desc));
         connect (ui->tableWidget, &QTableWidget::itemChanged, this, &PrefDialog::onShortcutChange);
     }
     else
     {
-        if (!shortcuts_.keys (txt).isEmpty())
-            showPrompt (tr ("Warning: Ambiguous shortcut detected!"), false);
-        else if (ui->promptLabel->isVisible())
+        shortcuts_.insert (desc, txt);
+        newShortcuts_.insert (OBJECT_NAMES.value (desc), txt);
+
+        /* check for ambiguous shortcuts */
+        bool ambiguous = false;
+        QList<QString> val = shortcuts_.values();
+        for (int i = 0; i < val.size(); ++i)
+        {
+            if (!val.at (i).isEmpty() && val.indexOf (val.at (i), i + 1) > -1)
+            {
+                showPrompt (tr ("Warning: Ambiguous shortcut detected!"), false);
+                ambiguous = true;
+                break;
+            }
+        }
+        if (!ambiguous && ui->promptLabel->isVisible())
         {
             prevtMsg_ = QString();
             showPrompt();
         }
-        shortcuts_.insert (desc, txt);
-        newShortcuts_.insert (OBJECT_NAMES.value (desc), txt);
+
         /* also set the state of the Default button */
         QHash<QString, QString>::const_iterator it = shortcuts_.constBegin();
         while (it != shortcuts_.constEnd())

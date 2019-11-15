@@ -2,17 +2,18 @@ V0.5.0
 ---------
  * No need to elide the systray tooltip.
  * Added a shortcut editor to Preferences for customizing shortcuts.
+ * Don't allow multiple custom shortcuts for one action. This is also a workaround for Qt's Meta key bug, that treats Meta like a non-modifier.
  * Added an info bar to Preferences. It shows up only when needed.
  * Always remember the Preferences dialog size.
  * Set the selected text and highlight colors if those of the app style aren't suitable.
  * Better placement of text context menu actions.
  * Replaced the Qt methods that were deprecated by Qt 5.13.
- * Don't allow multiple custom shortcuts for one action. This is also a workaround for Qt's Meta key bug, that treats Meta like a non-modifier.
  * Basic Hurd support.
  * Don't let the current item change during a tree DND.
  * Drag a tree node only if there is a real mouse movement (and not when the view is scrolled by the wheel of a motionless mouse).
  * Smarter Shift+Enter, especially with numbered lists.
  * Added an option for auto-replacing (triple periods, double hyphens, etc.).
+ * On triple clicking, select the current block without selecting its newline and start and end whitespaces.
 
 V0.4.6
 ---------

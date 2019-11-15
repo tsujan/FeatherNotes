@@ -332,7 +332,7 @@ private:
     void findInNames();
     bool isImageSelected();
     void readShortcuts();
-    QString validatedShortcut (const QVariant v);
+    QString validatedShortcut (const QVariant v, bool *isValid);
     void readAndApplyConfig (bool startup = true);
     QString nodeAddress (QModelIndex index);
     bool isPswrdCorrect();

@@ -24,6 +24,7 @@
 #include <QFileInfo>
 #include <QImageReader>
 #include <QMimeData>
+#include <QElapsedTimer>
 #include "vscrollbar.h"
 
 namespace FeatherNotes {
@@ -72,6 +73,7 @@ protected:
     void mouseMoveEvent (QMouseEvent *e);
     void mousePressEvent (QMouseEvent *e);
     void mouseReleaseEvent (QMouseEvent *e);
+    void mouseDoubleClickEvent (QMouseEvent *e);
     void resizeEvent (QResizeEvent *e);
     bool event (QEvent *e);
     virtual void wheelEvent (QWheelEvent *e);
@@ -84,6 +86,7 @@ private:
     QString textTab_; // text tab in terms of spaces
     QPoint pressPoint;
     bool scrollJumpWorkaround; // for working around Qt5's scroll jump bug
+    QElapsedTimer tripleClickTimer_;
 };
 
 }

@@ -130,6 +130,13 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
                 defaultShortcuts_.insert (menuAction, seq);
         }
     }
+    /* exceptions */
+    defaultShortcuts_.insert (ui->actionPrintNodes, QKeySequence());
+    defaultShortcuts_.insert (ui->actionPrintAll, QKeySequence());
+    defaultShortcuts_.insert (ui->actionExportHTML, QKeySequence());
+    defaultShortcuts_.insert (ui->actionPassword, QKeySequence());
+    defaultShortcuts_.insert (ui->actionDocFont, QKeySequence());
+    defaultShortcuts_.insert (ui->actionNodeFont, QKeySequence());
 
     reservedShortcuts_
     /* QTextEdit */
@@ -4244,8 +4251,9 @@ void FN::readShortcuts()
     for (int i = 0; i < actions.size(); ++i)
     {
         QVariant v = settings.value (actions.at (i));
-        QString vs = validatedShortcut (v);
-        if (!vs.isEmpty())
+        bool isValid;
+        QString vs = validatedShortcut (v, &isValid);
+        if (isValid)
             customActions_.insert (actions.at (i), vs);
         else // remove the key on writing config
             uncustomizedActions_ << actions.at (i);
@@ -4253,23 +4261,31 @@ void FN::readShortcuts()
     settings.endGroup();
 }
 /*************************/
-QString FN::validatedShortcut (const QVariant v)
+QString FN::validatedShortcut (const QVariant v, bool *isValid)
 {
     static QStringList added;
     if (v.isValid())
     {
         QString str = v.toString();
+        if (str.isEmpty())
+        { // it means the removal of a shortcut
+            *isValid = true;
+            return QString();
+        }
+
         if (!QKeySequence (str, QKeySequence::PortableText).toString().isEmpty())
         {
             if (!reservedShortcuts_.contains (str)
                 // prevent ambiguous shortcuts at startup as far as possible
                 && !added.contains (str))
             {
+                *isValid = true;
                 added << str;
                 return str;
             }
         }
     }
+    *isValid = false;
     return QString();
 }
 /*************************/
