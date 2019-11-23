@@ -29,8 +29,36 @@
 #include <QApplication>
 #include <QClipboard>
 
+#define SCROLL_FRAMES_PER_SEC 50
+#define SCROLL_DURATION 200 // in ms
+static const int scrollAnimFrames = SCROLL_FRAMES_PER_SEC * SCROLL_DURATION / 1000;
+
 namespace FeatherNotes {
 
+TextEdit::TextEdit (QWidget *parent) : QTextEdit (parent)
+{
+    autoIndentation = true;
+    autoBracket = false;
+    autoReplace = false;
+    textTab_ = "    "; // the default text tab is four spaces
+    pressPoint = QPoint();
+    scrollJumpWorkaround = false;
+    scrollTimer_ = nullptr;
+
+    VScrollBar *vScrollBar = new VScrollBar;
+    setVerticalScrollBar (vScrollBar);
+}
+/*************************/
+TextEdit::~TextEdit()
+{
+    if (scrollTimer_)
+    {
+        disconnect (scrollTimer_, &QTimer::timeout, this, &TextEdit::scrollSmoothly);
+        scrollTimer_->stop();
+        delete scrollTimer_;
+    }
+}
+/*************************/
 // Finds the (remaining) spaces that should be inserted with Ctrl+Tab.
 QString TextEdit::remainingSpaces (const QString& spaceTab, const QTextCursor& cursor) const
 {
@@ -61,7 +89,8 @@ QString TextEdit::remainingSpaces (const QString& spaceTab, const QTextCursor& c
 }
 /*************************/
 // Returns a cursor that selects the spaces to be removed by a backtab.
-QTextCursor TextEdit::backTabCursor (const QTextCursor& cursor) const
+// If "twoSpace" is true, a 2-space backtab will be applied as far as possible.
+QTextCursor TextEdit::backTabCursor (const QTextCursor& cursor, bool twoSpace) const
 {
     QTextCursor tmp = cursor;
     tmp.movePosition (QTextCursor::StartOfBlock);
@@ -96,17 +125,19 @@ QTextCursor TextEdit::backTabCursor (const QTextCursor& cursor) const
     n = n % textTab_.count();
     if (n == 0) n = textTab_.count();
 
+    if (twoSpace) n = qMin (n, 2);
+
     tmp.setPosition (txtStart);
     QChar ch = blockText.at (indx - 1);
     if (ch == QChar (QChar::Space))
-        tmp.setPosition(txtStart - n, QTextCursor::KeepAnchor);
+        tmp.setPosition (txtStart - n, QTextCursor::KeepAnchor);
     else // the previous character is a tab
     {
         qreal x = static_cast<qreal>(cursorRect (tmp).right());
-        tmp.setPosition(txtStart - 1, QTextCursor::KeepAnchor);
+        tmp.setPosition (txtStart - 1, QTextCursor::KeepAnchor);
         x -= static_cast<qreal>(cursorRect (tmp).right());
         n -= qRound (x / spaceL);
-        if (n < 0) n = 0; // impossible
+        if (n < 0) n = 0; // impossible without "twoSpace"
         tmp.setPosition (tmp.position() - n, QTextCursor::KeepAnchor);
     }
 
@@ -487,7 +518,8 @@ void TextEdit::keyPressEvent (QKeyEvent *event)
                     break; // not needed
                 continue;
             }
-            cursor = backTabCursor (cursor);
+            cursor = backTabCursor (cursor, event->modifiers() & Qt::MetaModifier
+                                            ? true : false);
             cursor.removeSelectedText();
             if (!cursor.movePosition (QTextCursor::NextBlock))
                 break; // not needed
@@ -794,10 +826,112 @@ void TextEdit::wheelEvent (QWheelEvent *e)
             zooming (delta);
             return;
         }
+
+        /* smooth scrolling */
+        if (e->spontaneous() && e->source() == Qt::MouseEventNotSynthesized)
+        {
+            QScrollBar* sbar = e->modifiers() & Qt::AltModifier
+                                   ? horizontalScrollBar() : verticalScrollBar();
+            if (sbar)
+            {
+                int delta = e->modifiers() & Qt::AltModifier
+                                ? e->angleDelta().x() : e->angleDelta().y();
+                if (e->modifiers() & Qt::ShiftModifier) // scrolling with minimum speed
+                    delta /= QApplication::wheelScrollLines();
+                if ((delta > 0 && sbar->value() == sbar->minimum())
+                    || (delta < 0 && sbar->value() == sbar->maximum()))
+                {
+                    return; // the scrollbar can't move
+                }
+
+                if (!scrollTimer_)
+                {
+                    scrollTimer_ = new QTimer();
+                    scrollTimer_->setTimerType (Qt::PreciseTimer);
+                    connect (scrollTimer_, &QTimer::timeout, this, &TextEdit::scrollSmoothly);
+                }
+
+                /* set the data for inertial scrolling */
+                scrollData data;
+                data.delta = delta;
+                data.leftFrames = scrollAnimFrames;
+                data.vertical = !(e->modifiers() & Qt::AltModifier);
+                queuedScrollSteps_.append (data);
+                scrollTimer_->start (1000 / SCROLL_FRAMES_PER_SEC);
+                return;
+            }
+        }
+
         /* as in QTextEdit::wheelEvent() */
         QAbstractScrollArea::wheelEvent (e);
         updateMicroFocus();
     }
+}
+/*************************/
+void TextEdit::scrollSmoothly()
+{
+    int totalDeltaH = 0, totalDeltaV = 0;
+    QList<scrollData>::iterator it = queuedScrollSteps_.begin();
+    while (it != queuedScrollSteps_.end())
+    {
+        int delta = qRound (static_cast<qreal>(it->delta) / static_cast<qreal>(scrollAnimFrames));
+        int remainingDelta = it->delta - (scrollAnimFrames - it->leftFrames) * delta;
+        if (qAbs (delta) >= qAbs (remainingDelta))
+        { // this is the last frame or, due to rounding, there can be no more frame
+            if (it->vertical)
+                totalDeltaV += remainingDelta;
+            else
+                totalDeltaH += remainingDelta;
+            it = queuedScrollSteps_.erase (it);
+        }
+        else
+        {
+            if (it->vertical)
+                totalDeltaV += delta;
+            else
+                totalDeltaH += delta;
+            -- it->leftFrames;
+            ++it;
+        }
+    }
+
+    if (totalDeltaH != 0 && horizontalScrollBar())
+    {
+        QWheelEvent eventH (QPointF(),
+                            QPointF(),
+                            QPoint(),
+                            QPoint (0, totalDeltaH),
+                            Qt::NoButton,
+                            Qt::NoModifier,
+                            Qt::NoScrollPhase,
+                            false);
+        QCoreApplication::sendEvent (horizontalScrollBar(), &eventH);
+    }
+    if (totalDeltaV != 0 && verticalScrollBar())
+    {
+        QWheelEvent eventV (QPointF(),
+                            QPointF(),
+                            QPoint(),
+                            QPoint (0, totalDeltaV),
+                            Qt::NoButton,
+                            Qt::NoModifier,
+                            Qt::NoScrollPhase,
+                            false);
+        QCoreApplication::sendEvent (verticalScrollBar(), &eventV);
+    }
+
+    /* update text selection if the left mouse button is pressed (-> QPlainTextEdit::timerEvent) */
+    if (QApplication::mouseButtons() & Qt::LeftButton)
+    {
+        const QPoint globalPos = QCursor::pos();
+        QPoint pos = viewport()->mapFromGlobal (globalPos);
+        QMouseEvent ev (QEvent::MouseMove, pos, viewport()->mapTo (viewport()->topLevelWidget(), pos), globalPos,
+                        Qt::LeftButton, Qt::LeftButton, Qt::NoModifier);
+        mouseMoveEvent (&ev);
+    }
+
+    if (queuedScrollSteps_.empty())
+        scrollTimer_->stop();
 }
 /*************************/
 void TextEdit::zooming (float range)

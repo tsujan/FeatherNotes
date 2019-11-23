@@ -38,17 +38,9 @@ class TextEdit : public QTextEdit
     Q_OBJECT
 
 public:
-    TextEdit (QWidget *parent = nullptr) : QTextEdit (parent)
-    {
-        autoIndentation = true;
-        autoBracket = false;
-        autoReplace = false;
-        textTab_ = "    "; // the default text tab is four spaces
-        pressPoint = QPoint();
-        scrollJumpWorkaround = false;
-        VScrollBar *vScrollBar = new VScrollBar;
-        setVerticalScrollBar (vScrollBar);
-    }
+    TextEdit (QWidget *parent = nullptr);
+    ~TextEdit();
+
     void setScrollJumpWorkaround (bool apply)
     {
         scrollJumpWorkaround = apply;
@@ -78,15 +70,28 @@ protected:
     bool event (QEvent *e);
     virtual void wheelEvent (QWheelEvent *e);
 
+private slots:
+    void scrollSmoothly();
+
 private:
     QString computeIndentation (const QTextCursor& cur) const;
     QString remainingSpaces (const QString& spaceTab, const QTextCursor& cursor) const;
-    QTextCursor backTabCursor(const QTextCursor& cursor) const;
+    QTextCursor backTabCursor(const QTextCursor& cursor, bool twoSpace) const;
 
     QString textTab_; // text tab in terms of spaces
     QPoint pressPoint;
     bool scrollJumpWorkaround; // for working around Qt5's scroll jump bug
     QElapsedTimer tripleClickTimer_;
+    /****************************
+     ***** Smooth scrolling *****
+     ****************************/
+    struct scrollData {
+        int delta;
+        int leftFrames;
+        bool vertical;
+    };
+    QList<scrollData> queuedScrollSteps_;
+    QTimer *scrollTimer_;
 };
 
 }

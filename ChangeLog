@@ -14,6 +14,7 @@ V0.5.0
  * Smarter Shift+Enter, especially with numbered lists.
  * Added an option for auto-replacing (triple periods, double hyphens, etc.).
  * On triple clicking, select the current block without selecting its newline and start and end whitespaces.
+ * Smooth wheel scrolling (touchpad scrolling is already smooth);
 
 V0.4.6
 ---------
