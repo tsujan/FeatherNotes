@@ -36,6 +36,12 @@ static bool findBackwardInBlock (const QTextBlock &block, const QString &str, in
     QString text = block.text();
     text.replace (QChar::Nbsp, QLatin1Char (' '));
 
+    /* WARNING: QString::lastIndexOf() returns -1 if the position, from which the
+                backward search is done, is the position of the block's last cursor.
+                The following workaround compensates for this illogical behavior. */
+    if (offset > 0 && offset == text.length())
+        -- offset;
+
     int idx = -1;
     while (offset >= 0 && offset <= text.length())
     {
@@ -61,7 +67,7 @@ static bool findBackwardInBlock (const QTextBlock &block, const QString &str, in
     return false;
 }
 
-static bool findBackward (const QTextDocument *txtdoc, const QString str,
+static bool findBackward (const QTextDocument *txtdoc, const QString &str,
                           QTextCursor &cursor, QTextDocument::FindFlags flags)
 {
     if (!str.isEmpty() && !cursor.isNull())
@@ -77,7 +83,7 @@ static bool findBackward (const QTextDocument *txtdoc, const QString str,
                 if (findBackwardInBlock (block, str, blockOffset, cursor, flags))
                     return true;
                 block = block.previous();
-                blockOffset = block.length() - 2; // newline is included in length()
+                blockOffset = block.length() - 1; // newline is included in QTextBlock::length()
             }
         }
     }

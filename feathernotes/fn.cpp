@@ -3079,7 +3079,7 @@ void FN::replace()
             rplOtherNode_ = false;
         }
 
-        start = textEdit->textCursor();
+        start = textEdit->textCursor(); // at the end of txtReplace_
         tmp.setPosition (pos);
         tmp.setPosition (start.position(), QTextCursor::KeepAnchor);
         QTextEdit::ExtraSelection extra;
@@ -3089,6 +3089,16 @@ void FN::replace()
         extra.cursor = tmp;
         extraSelections.prepend (extra);
         gsel.append (extra);
+
+        if (QObject::sender() != ui->rplNextButton)
+        {
+            /* With the cursor at the end of the replacing text, if the backward replacement
+               is repeated and the text is matched again (which is possible when the replacing
+               and replaced texts are the same, case-insensitively), the replacement won't proceed.
+               So, the cursor should be moved. */
+            start.setPosition (start.position() - txtReplace_.length());
+            textEdit->setTextCursor (start);
+        }
     }
 
     greenSels_[textEdit] = gsel;
