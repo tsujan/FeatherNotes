@@ -897,6 +897,7 @@ void TextEdit::scrollSmoothly()
 
     if (totalDeltaH != 0 && horizontalScrollBar())
     {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
         QWheelEvent eventH (QPointF(),
                             QPointF(),
                             QPoint(),
@@ -905,10 +906,19 @@ void TextEdit::scrollSmoothly()
                             Qt::NoModifier,
                             Qt::NoScrollPhase,
                             false);
+#else
+        QWheelEvent eventH (QPointF(),
+                            QPointF(),
+                            totalDeltaH,
+                            Qt::NoButton,
+                            Qt::NoModifier,
+                            Qt::Vertical);
+#endif
         QCoreApplication::sendEvent (horizontalScrollBar(), &eventH);
     }
     if (totalDeltaV != 0 && verticalScrollBar())
     {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
         QWheelEvent eventV (QPointF(),
                             QPointF(),
                             QPoint(),
@@ -917,6 +927,14 @@ void TextEdit::scrollSmoothly()
                             Qt::NoModifier,
                             Qt::NoScrollPhase,
                             false);
+#else
+        QWheelEvent eventV (QPointF(),
+                            QPointF(),
+                            totalDeltaV,
+                            Qt::NoButton,
+                            Qt::NoModifier,
+                            Qt::Vertical);
+#endif
         QCoreApplication::sendEvent (verticalScrollBar(), &eventV);
     }
 
