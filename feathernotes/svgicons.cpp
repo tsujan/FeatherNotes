@@ -47,14 +47,7 @@ public:
 
         QColor col;
         if (mode == QIcon::Disabled)
-        {
-            int g = qGray (QApplication::palette().windowText().color().rgb());
-            if (g < 130)
-                g += 120;
-            else
-                g -= 110;
-            col = QColor (g, g, g);
-        }
+            col = QApplication::palette().color (QPalette::Disabled, QPalette::WindowText);
         else if (mode == QIcon::Selected)
             col = QApplication::palette().highlightedText().color();
         else
@@ -74,7 +67,7 @@ public:
                 QFile f (fileName);
                 QByteArray bytes;
                 if (f.open (QIODevice::ReadOnly))
-                    bytes=  f.readAll();
+                    bytes = f.readAll();
                 if (!bytes.isEmpty())
                     bytes.replace ("#000", col.name().toLatin1());
                 renderer.load (bytes);
