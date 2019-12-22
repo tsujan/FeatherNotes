@@ -16,6 +16,7 @@ V0.5.0
  * On triple clicking, select the current block without selecting its newline and start and end whitespaces.
  * Smooth wheel scrolling (touchpad scrolling is already smooth).
  * Fixed a problem in backward search and replacement.
+ * Fixes for RTL, including a workaround for a Qt bug.
 
 V0.4.6
 ---------
