@@ -1,3 +1,8 @@
+V0.5.1
+---------
+ * Considered the new behavior of horizontal wheel scrolling in Qt 5.14.0.
+ * Added a workaround for the bug in horizontal scrollbars of Qt 5.14.0.
+
 V0.5.0
 ---------
  * No need to elide the systray tooltip.

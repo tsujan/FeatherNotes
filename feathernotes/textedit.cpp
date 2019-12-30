@@ -47,6 +47,12 @@ TextEdit::TextEdit (QWidget *parent) : QTextEdit (parent)
 
     VScrollBar *vScrollBar = new VScrollBar;
     setVerticalScrollBar (vScrollBar);
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
+    /* workaround */
+    HScrollBar *hScrollBar = new HScrollBar;
+    setHorizontalScrollBar (hScrollBar);
+#endif
 }
 /*************************/
 TextEdit::~TextEdit()
@@ -831,11 +837,16 @@ void TextEdit::wheelEvent (QWheelEvent *e)
         /* smooth scrolling */
         if (e->spontaneous() && e->source() == Qt::MouseEventNotSynthesized)
         {
-            QScrollBar* sbar = e->modifiers() & Qt::AltModifier
+#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
+            bool horizontal (e->angleDelta().x() != 0);
+#else
+            bool horizontal (e->orientation() == Qt::Horizontal);
+#endif
+            QScrollBar* sbar = horizontal
                                    ? horizontalScrollBar() : verticalScrollBar();
             if (sbar)
             {
-                int delta = e->modifiers() & Qt::AltModifier
+                int delta = horizontal
                                 ? e->angleDelta().x() : e->angleDelta().y();
                 if (e->modifiers() & Qt::ShiftModifier) // scrolling with minimum speed
                     delta /= QApplication::wheelScrollLines();
@@ -856,7 +867,7 @@ void TextEdit::wheelEvent (QWheelEvent *e)
                 scrollData data;
                 data.delta = delta;
                 data.leftFrames = scrollAnimFrames;
-                data.vertical = !(e->modifiers() & Qt::AltModifier);
+                data.vertical = !horizontal;
                 queuedScrollSteps_.append (data);
                 scrollTimer_->start (1000 / SCROLL_FRAMES_PER_SEC);
                 return;
@@ -902,7 +913,11 @@ void TextEdit::scrollSmoothly()
         QWheelEvent eventH (QPointF(),
                             QPointF(),
                             QPoint(),
+#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
+                            QPoint (totalDeltaH, 0),
+#else
                             QPoint (0, totalDeltaH),
+#endif
                             Qt::NoButton,
                             Qt::NoModifier,
                             Qt::NoScrollPhase,
