@@ -84,7 +84,7 @@ PrefDialog::PrefDialog (QWidget *parent)
     Delegate *del = new Delegate (ui->tableWidget);
     ui->tableWidget->setItemDelegate (del);
     ui->tableWidget->horizontalHeader()->setSectionResizeMode (QHeaderView::Stretch);
-    ui->tableWidget->horizontalHeader()->setSectionsClickable (false);
+    ui->tableWidget->horizontalHeader()->setSectionsClickable (true);
     ui->tableWidget->sortByColumn (0, Qt::AscendingOrder);
 
     QSize ag;
@@ -98,7 +98,7 @@ PrefDialog::PrefDialog (QWidget *parent)
         if (QWindow *window = parent->windowHandle())
         {
             if (QScreen *sc = window->screen())
-                ag = sc->availableVirtualGeometry().size();
+                ag = sc->availableGeometry().size();
         }
         if (!ag.isValid()) ag = QSize (0, 0);
 
