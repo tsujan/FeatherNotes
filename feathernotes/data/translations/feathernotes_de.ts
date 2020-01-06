@@ -1542,7 +1542,8 @@ kann stattdessen verwendet werden.</translation>
         <location filename="../../predDialog.ui" line="180"/>
         <source>By default, the active widget style determines
 the size of toolbar icons.</source>
-        <translation type="unfinished"></translation>
+        <translation>Standardmäßig bestimmt der aktive Bedienelementestil
+die Größe der Werkzeugleistensymbole.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="184"/>
@@ -1642,7 +1643,7 @@ the user is typing and under proper circumstances.</source>
     <message>
         <location filename="../../predDialog.ui" line="354"/>
         <source>&amp;Replace some characters while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>Manche Zeichen während der Eingabe e&amp;rsetzen</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="363"/>
@@ -1674,7 +1675,7 @@ es verhindert störende Sprünge beim Scrollen.</translation>
     <message>
         <location filename="../../predDialog.ui" line="454"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktion</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="459"/>
@@ -1684,7 +1685,7 @@ es verhindert störende Sprünge beim Scrollen.</translation>
     <message>
         <location filename="../../predDialog.ui" line="467"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Standard</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="345"/>
@@ -1700,7 +1701,7 @@ es verhindert störende Sprünge beim Scrollen.</translation>
     <message>
         <location filename="../../pref.cpp" line="624"/>
         <source>Application restart is needed for changes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Damit die Änderungen wirksam werden, ist ein Neustart der Anwendung erforderlich.</translation>
     </message>
 </context>
 <context>
