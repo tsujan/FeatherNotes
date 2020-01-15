@@ -6,7 +6,7 @@
     <message>
         <location filename="../../about.ui" line="139"/>
         <source>License</source>
-        <translation type="unfinished"></translation>
+        <translation>许可证</translation>
     </message>
 </context>
 <context>
@@ -16,12 +16,12 @@
         <location filename="../../fn.cpp" line="1234"/>
         <location filename="../../fn.cpp" line="4871"/>
         <source>FeatherNotes</source>
-        <translation type="unfinished"></translation>
+        <translation>羽毛笔笔记</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="65"/>
         <source>Next (F3)</source>
-        <translation type="unfinished"></translation>
+        <translation>下一项(F3)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="68"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../../fn.ui" line="81"/>
         <source>Previous (F4)</source>
-        <translation type="unfinished"></translation>
+        <translation>上一项 (F4)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="84"/>
@@ -41,12 +41,12 @@
     <message>
         <location filename="../../fn.ui" line="100"/>
         <source>Search...</source>
-        <translation type="unfinished"></translation>
+        <translation>搜索...</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="115"/>
         <source>Search only in names (Ctrl+Shift+F7)</source>
-        <translation type="unfinished"></translation>
+        <translation>仅在名称中搜索  (Ctrl+Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="118"/>
@@ -56,7 +56,7 @@
     <message>
         <location filename="../../fn.ui" line="128"/>
         <source>Search only in tags (Shift+F7)</source>
-        <translation type="unfinished"></translation>
+        <translation>仅在Tags中搜索  (Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="131"/>
@@ -66,7 +66,7 @@
     <message>
         <location filename="../../fn.ui" line="144"/>
         <source>Search in all nodes (F7)</source>
-        <translation type="unfinished"></translation>
+        <translation>在所有笔记中查找  (F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="147"/>
@@ -76,12 +76,12 @@
     <message>
         <location filename="../../fn.ui" line="186"/>
         <source>Whole Word (F6)</source>
-        <translation type="unfinished"></translation>
+        <translation>精确模式  (F6)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="189"/>
         <source>Whole Word</source>
-        <translation type="unfinished"></translation>
+        <translation>精确模式</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="192"/>
@@ -91,12 +91,12 @@
     <message>
         <location filename="../../fn.ui" line="167"/>
         <source>Match Case (F5)</source>
-        <translation type="unfinished"></translation>
+        <translation>区分大小写 (F5)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="170"/>
         <source>Match Case</source>
-        <translation type="unfinished"></translation>
+        <translation>区分大小写</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="173"/>
@@ -106,63 +106,63 @@
     <message>
         <location filename="../../fn.ui" line="219"/>
         <source>&amp;File</source>
-        <translation type="unfinished"></translation>
+        <translation>文件</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="238"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>编辑</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="253"/>
         <source>For&amp;mat</source>
-        <translation type="unfinished"></translation>
+        <translation>格式</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="285"/>
         <source>&amp;Tree</source>
-        <translation type="unfinished"></translation>
+        <translation>目录</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="308"/>
         <source>&amp;Options</source>
-        <translation type="unfinished"></translation>
+        <translation>选项</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="320"/>
         <source>&amp;Search</source>
-        <translation type="unfinished"></translation>
+        <translation>搜索</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="327"/>
         <location filename="../../fn.ui" line="975"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>帮助</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="424"/>
         <source>Find:</source>
-        <translation type="unfinished"></translation>
+        <translation>查找:</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="431"/>
         <source>Replace with:</source>
-        <translation type="unfinished"></translation>
+        <translation>替换为:</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="444"/>
         <source>To be replaced</source>
-        <translation type="unfinished"></translation>
+        <translation>替换</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="457"/>
         <source>Replacing text</source>
-        <translation type="unfinished"></translation>
+        <translation>替换文本</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="467"/>
         <source>Previous (F9)</source>
-        <translation type="unfinished"></translation>
+        <translation>上一项  (F9)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="470"/>
@@ -172,7 +172,7 @@
     <message>
         <location filename="../../fn.ui" line="483"/>
         <source>Next (F8)</source>
-        <translation type="unfinished"></translation>
+        <translation>下一项 (F8)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="486"/>
@@ -182,7 +182,7 @@
     <message>
         <location filename="../../fn.ui" line="499"/>
         <source>Replace all (F10)</source>
-        <translation type="unfinished"></translation>
+        <translation>全部替换 (F10)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="502"/>
@@ -192,13 +192,13 @@
     <message>
         <location filename="../../fn.ui" line="519"/>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation>保存</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="522"/>
         <location filename="../../fn.cpp" line="816"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>保存</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="525"/>
@@ -209,12 +209,12 @@
         <location filename="../../fn.ui" line="530"/>
         <location filename="../../fn.cpp" line="565"/>
         <source>&amp;Open</source>
-        <translation type="unfinished"></translation>
+        <translation>打开</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="533"/>
         <source>Open a file</source>
-        <translation type="unfinished"></translation>
+        <translation>打开文件</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="536"/>
@@ -224,12 +224,12 @@
     <message>
         <location filename="../../fn.ui" line="544"/>
         <source>&amp;Undo</source>
-        <translation type="unfinished"></translation>
+        <translation>撤销</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="547"/>
         <source>Undo</source>
-        <translation type="unfinished"></translation>
+        <translation>撤销</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="550"/>
@@ -239,12 +239,12 @@
     <message>
         <location filename="../../fn.ui" line="558"/>
         <source>&amp;Redo</source>
-        <translation type="unfinished"></translation>
+        <translation>重做</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="561"/>
         <source>Redo</source>
-        <translation type="unfinished"></translation>
+        <translation>重做</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="564"/>
@@ -254,12 +254,12 @@
     <message>
         <location filename="../../fn.ui" line="572"/>
         <source>&amp;Find</source>
-        <translation type="unfinished"></translation>
+        <translation>查找</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="575"/>
         <source>Show/hide searchbar</source>
-        <translation type="unfinished"></translation>
+        <translation>显示/隐藏 搜索条</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="578"/>
@@ -269,12 +269,12 @@
     <message>
         <location filename="../../fn.ui" line="586"/>
         <source>&amp;Clear All Formats</source>
-        <translation type="unfinished"></translation>
+        <translation>清除所有格式</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="589"/>
         <source>Clear all formats</source>
-        <translation type="unfinished"></translation>
+        <translation>清除所有格式</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="592"/>
@@ -284,12 +284,12 @@
     <message>
         <location filename="../../fn.ui" line="603"/>
         <source>&amp;Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>加粗</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="606"/>
         <source>Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>加粗</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="609"/>
@@ -299,12 +299,12 @@
     <message>
         <location filename="../../fn.ui" line="620"/>
         <source>&amp;Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>斜体</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="623"/>
         <source>Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>斜体</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="626"/>
@@ -314,12 +314,12 @@
     <message>
         <location filename="../../fn.ui" line="637"/>
         <source>&amp;Underline</source>
-        <translation type="unfinished"></translation>
+        <translation>下划线</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="640"/>
         <source>Underline</source>
-        <translation type="unfinished"></translation>
+        <translation>下划线</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="643"/>
@@ -329,12 +329,12 @@
     <message>
         <location filename="../../fn.ui" line="654"/>
         <source>&amp;Strike Through</source>
-        <translation type="unfinished"></translation>
+        <translation>删除线</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="657"/>
         <source>Strike through</source>
-        <translation type="unfinished"></translation>
+        <translation>删除线</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="660"/>
@@ -344,12 +344,12 @@
     <message>
         <location filename="../../fn.ui" line="668"/>
         <source>Te&amp;xt Color</source>
-        <translation type="unfinished"></translation>
+        <translation>文本颜色</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="671"/>
         <source>Text color</source>
-        <translation type="unfinished"></translation>
+        <translation>文本颜色</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="674"/>
@@ -359,12 +359,12 @@
     <message>
         <location filename="../../fn.ui" line="682"/>
         <source>Back&amp;ground Color</source>
-        <translation type="unfinished"></translation>
+        <translation>背景颜色</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="685"/>
         <source>Background color</source>
-        <translation type="unfinished"></translation>
+        <translation>背景颜色</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="688"/>
@@ -374,13 +374,13 @@
     <message>
         <location filename="../../fn.ui" line="693"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>选项</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="698"/>
         <location filename="../../fn.cpp" line="564"/>
         <source>&amp;New Note</source>
-        <translation type="unfinished"></translation>
+        <translation>新笔记</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="701"/>
@@ -390,7 +390,7 @@
     <message>
         <location filename="../../fn.ui" line="709"/>
         <source>Save &amp;As</source>
-        <translation type="unfinished"></translation>
+        <translation>另存为</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="712"/>
@@ -400,7 +400,7 @@
     <message>
         <location filename="../../fn.ui" line="720"/>
         <source>&amp;Print</source>
-        <translation type="unfinished"></translation>
+        <translation>打印</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="723"/>
@@ -410,18 +410,18 @@
     <message>
         <location filename="../../fn.ui" line="731"/>
         <source>P&amp;rint with Sub-Nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>打印目录下所有笔记</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="739"/>
         <source>Set Pass&amp;word</source>
-        <translation type="unfinished"></translation>
+        <translation>设置密码</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="744"/>
         <location filename="../../fn.cpp" line="567"/>
         <source>&amp;Quit</source>
-        <translation type="unfinished"></translation>
+        <translation>退出</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="747"/>
@@ -431,7 +431,7 @@
     <message>
         <location filename="../../fn.ui" line="755"/>
         <source>&amp;Cut</source>
-        <translation type="unfinished"></translation>
+        <translation>剪切</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="758"/>
@@ -441,7 +441,7 @@
     <message>
         <location filename="../../fn.ui" line="766"/>
         <source>C&amp;opy</source>
-        <translation type="unfinished"></translation>
+        <translation>复制</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="769"/>
@@ -451,7 +451,7 @@
     <message>
         <location filename="../../fn.ui" line="777"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>粘贴</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="780"/>
@@ -461,12 +461,12 @@
     <message>
         <location filename="../../fn.ui" line="788"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>删除</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="796"/>
         <source>&amp;Select All</source>
-        <translation type="unfinished"></translation>
+        <translation>全选</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="799"/>
@@ -476,13 +476,13 @@
     <message>
         <location filename="../../fn.ui" line="807"/>
         <source>E&amp;mbed Image</source>
-        <translation type="unfinished"></translation>
+        <translation>插入图片</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="810"/>
         <location filename="../../fn.cpp" line="3489"/>
         <source>Embed Image</source>
-        <translation type="unfinished"></translation>
+        <translation>插入图片</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="813"/>
@@ -492,7 +492,7 @@
     <message>
         <location filename="../../fn.ui" line="821"/>
         <source>E&amp;xpand All</source>
-        <translation type="unfinished"></translation>
+        <translation>全部展开</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="824"/>
@@ -502,7 +502,7 @@
     <message>
         <location filename="../../fn.ui" line="832"/>
         <source>Collap&amp;se All</source>
-        <translation type="unfinished"></translation>
+        <translation>全部收起</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="835"/>
@@ -512,7 +512,7 @@
     <message>
         <location filename="../../fn.ui" line="843"/>
         <source>&amp;Append Sibling</source>
-        <translation type="unfinished"></translation>
+        <translation>在下方添加</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="846"/>
@@ -522,7 +522,7 @@
     <message>
         <location filename="../../fn.ui" line="854"/>
         <source>Append &amp;Child</source>
-        <translation type="unfinished"></translation>
+        <translation>添加子目录</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="857"/>
@@ -532,7 +532,7 @@
     <message>
         <location filename="../../fn.ui" line="865"/>
         <source>&amp;Delete Node</source>
-        <translation type="unfinished"></translation>
+        <translation>删除笔记</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="868"/>
@@ -542,7 +542,7 @@
     <message>
         <location filename="../../fn.ui" line="876"/>
         <source>Move &amp;Up</source>
-        <translation type="unfinished"></translation>
+        <translation>上移</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="879"/>
@@ -552,7 +552,7 @@
     <message>
         <location filename="../../fn.ui" line="887"/>
         <source>Move Do&amp;wn</source>
-        <translation type="unfinished"></translation>
+        <translation>下移</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="890"/>
@@ -562,7 +562,7 @@
     <message>
         <location filename="../../fn.ui" line="898"/>
         <source>Re&amp;name Node</source>
-        <translation type="unfinished"></translation>
+        <translation>修改名称</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="901"/>
@@ -572,7 +572,7 @@
     <message>
         <location filename="../../fn.ui" line="906"/>
         <source>Tree Pr&amp;operties</source>
-        <translation type="unfinished"></translation>
+        <translation>目录属性</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="909"/>
@@ -582,12 +582,12 @@
     <message>
         <location filename="../../fn.ui" line="917"/>
         <source>Document &amp;Font</source>
-        <translation type="unfinished"></translation>
+        <translation>设置字体</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="931"/>
         <source>&amp;Wrap Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>自动换行</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="934"/>
@@ -597,7 +597,7 @@
     <message>
         <location filename="../../fn.ui" line="948"/>
         <source>&amp;Auto-Indentation</source>
-        <translation type="unfinished"></translation>
+        <translation>自动缩进</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="951"/>
@@ -607,7 +607,7 @@
     <message>
         <location filename="../../fn.ui" line="956"/>
         <source>&amp;Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>偏好设置</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="959"/>
@@ -617,7 +617,7 @@
     <message>
         <location filename="../../fn.ui" line="967"/>
         <source>Find and &amp;Replace</source>
-        <translation type="unfinished"></translation>
+        <translation>查找并替换</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="970"/>
@@ -632,22 +632,22 @@
     <message>
         <location filename="../../fn.ui" line="983"/>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation>关于</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="991"/>
         <source>Pr&amp;int All Nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>打印所有笔记</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1002"/>
         <source>Superscrip&amp;t</source>
-        <translation type="unfinished"></translation>
+        <translation>上标字</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1005"/>
         <source>Superscript</source>
-        <translation type="unfinished"></translation>
+        <translation>上标字</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1008"/>
@@ -657,12 +657,12 @@
     <message>
         <location filename="../../fn.ui" line="1019"/>
         <source>Subscri&amp;pt</source>
-        <translation type="unfinished"></translation>
+        <translation>下标字</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1022"/>
         <source>Subscript</source>
-        <translation type="unfinished"></translation>
+        <translation>下标字</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1025"/>
@@ -672,12 +672,12 @@
     <message>
         <location filename="../../fn.ui" line="1036"/>
         <source>C&amp;enter</source>
-        <translation type="unfinished"></translation>
+        <translation>居中对齐</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1039"/>
         <source>Align center</source>
-        <translation type="unfinished"></translation>
+        <translation>居中对齐</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1042"/>
@@ -687,12 +687,12 @@
     <message>
         <location filename="../../fn.ui" line="1053"/>
         <source>&amp;Right</source>
-        <translation type="unfinished"></translation>
+        <translation>右对齐</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1056"/>
         <source>Align right</source>
-        <translation type="unfinished"></translation>
+        <translation>右对齐</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1059"/>
@@ -702,12 +702,12 @@
     <message>
         <location filename="../../fn.ui" line="1070"/>
         <source>&amp;Left</source>
-        <translation type="unfinished"></translation>
+        <translation>左对齐</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1073"/>
         <source>Align left</source>
-        <translation type="unfinished"></translation>
+        <translation>左对齐</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1076"/>
@@ -717,12 +717,12 @@
     <message>
         <location filename="../../fn.ui" line="1087"/>
         <source>&amp;Justify</source>
-        <translation type="unfinished"></translation>
+        <translation>两端对齐</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1090"/>
         <source>Justify</source>
-        <translation type="unfinished"></translation>
+        <translation>两端对齐</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1093"/>
@@ -732,7 +732,7 @@
     <message>
         <location filename="../../fn.ui" line="1101"/>
         <source>&amp;Prepend Sibling</source>
-        <translation type="unfinished"></translation>
+        <translation>在上方新建笔记</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1104"/>
@@ -742,7 +742,7 @@
     <message>
         <location filename="../../fn.ui" line="1112"/>
         <source>Move &amp;Left</source>
-        <translation type="unfinished"></translation>
+        <translation>向左移动</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1115"/>
@@ -752,7 +752,7 @@
     <message>
         <location filename="../../fn.ui" line="1123"/>
         <source>Move &amp;Right</source>
-        <translation type="unfinished"></translation>
+        <translation>向右移动</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1126"/>
@@ -762,12 +762,12 @@
     <message>
         <location filename="../../fn.ui" line="1134"/>
         <source>h&amp;2</source>
-        <translation type="unfinished"></translation>
+        <translation>标题2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1137"/>
         <source>Header 2</source>
-        <translation type="unfinished"></translation>
+        <translation>标题2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1140"/>
@@ -777,12 +777,12 @@
     <message>
         <location filename="../../fn.ui" line="1148"/>
         <source>h&amp;1</source>
-        <translation type="unfinished"></translation>
+        <translation>标题1</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1151"/>
         <source>Header 1</source>
-        <translation type="unfinished"></translation>
+        <translation>标题1</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1154"/>
@@ -792,12 +792,12 @@
     <message>
         <location filename="../../fn.ui" line="1162"/>
         <source>h&amp;3</source>
-        <translation type="unfinished"></translation>
+        <translation>标题3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1165"/>
         <source>Header 3</source>
-        <translation type="unfinished"></translation>
+        <translation>标题3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1168"/>
@@ -807,22 +807,22 @@
     <message>
         <location filename="../../fn.ui" line="1176"/>
         <source>&amp;Node Font</source>
-        <translation type="unfinished"></translation>
+        <translation>目录字体</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1179"/>
         <source>Node Font</source>
-        <translation type="unfinished"></translation>
+        <translation>目录字体</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1184"/>
         <source>Scale I&amp;mage(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>缩放图片</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1192"/>
         <source>Paste &amp;HTML</source>
-        <translation type="unfinished"></translation>
+        <translation>粘贴HTML</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1195"/>
@@ -842,7 +842,7 @@
     <message>
         <location filename="../../fn.ui" line="1214"/>
         <source>Insert Lin&amp;k</source>
-        <translation type="unfinished"></translation>
+        <translation>插入链接</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1217"/>
@@ -852,12 +852,12 @@
     <message>
         <location filename="../../fn.ui" line="1222"/>
         <source>C&amp;opy Link</source>
-        <translation type="unfinished"></translation>
+        <translation>复制链接</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1230"/>
         <source>I&amp;nsert Table</source>
-        <translation type="unfinished"></translation>
+        <translation>插入表格</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1233"/>
@@ -867,52 +867,52 @@
     <message>
         <location filename="../../fn.ui" line="1238"/>
         <source>Append Row</source>
-        <translation type="unfinished"></translation>
+        <translation>添加行</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1243"/>
         <source>Delete Row</source>
-        <translation type="unfinished"></translation>
+        <translation>删除行</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1248"/>
         <source>Append Column</source>
-        <translation type="unfinished"></translation>
+        <translation>添加列</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1253"/>
         <source>Delete Column</source>
-        <translation type="unfinished"></translation>
+        <translation>删除列</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1258"/>
         <source>Merge Cells</source>
-        <translation type="unfinished"></translation>
+        <translation>合并单元格</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1263"/>
         <source>Prepend Row</source>
-        <translation type="unfinished"></translation>
+        <translation>在上方插入行</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1268"/>
         <source>Prepend Column</source>
-        <translation type="unfinished"></translation>
+        <translation>在前方插入列</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1276"/>
         <source>Export &amp;HTML</source>
-        <translation type="unfinished"></translation>
+        <translation>导出HTML</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1281"/>
         <source>Save Ima&amp;ge(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>保存图片</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1292"/>
         <source>RTL</source>
-        <translation type="unfinished"></translation>
+        <translation>右对齐</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1295"/>
@@ -922,7 +922,7 @@
     <message>
         <location filename="../../fn.ui" line="1306"/>
         <source>LTR</source>
-        <translation type="unfinished"></translation>
+        <translation>左对齐</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1309"/>
@@ -933,12 +933,12 @@
         <location filename="../../fn.ui" line="1314"/>
         <location filename="../../fn.ui" line="1317"/>
         <source>Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>菜单栏</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1325"/>
         <source>Node &amp;Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>目录图标</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1328"/>
@@ -948,7 +948,7 @@
     <message>
         <location filename="../../fn.cpp" line="2312"/>
         <source>Node Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>目录图标</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="348"/>
@@ -990,52 +990,53 @@
         <location filename="../../fn.cpp" line="559"/>
         <location filename="../../fn.cpp" line="4212"/>
         <source>&amp;Raise/Hide</source>
-        <translation type="unfinished"></translation>
+        <translation>升起/隐藏</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="732"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;New note?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;新建笔记?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="733"/>
         <source>&lt;center&gt;&lt;i&gt;Do you really want to leave this document&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;and create an empty one?&lt;/i&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;i&gt;你真的想离开这个文档吗&lt;/i&gt;&lt;/center&gt;
+&lt;center&gt;&lt;i&gt;并创建一个空文档?&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="736"/>
         <location filename="../../fn.cpp" line="2147"/>
         <location filename="../../fn.cpp" line="3856"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>是</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="737"/>
         <location filename="../../fn.cpp" line="2148"/>
         <location filename="../../fn.cpp" line="3857"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>否</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="808"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Save changes?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;保存更改?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="810"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been modified.&lt;/i&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;i&gt;文档已经被修改.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="812"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been removed.&lt;/i&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;i&gt;文档已被删除.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="817"/>
         <source>Discard changes</source>
-        <translation type="unfinished"></translation>
+        <translation>放弃更改</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="818"/>
@@ -1049,42 +1050,43 @@
         <location filename="../../fn.cpp" line="5000"/>
         <location filename="../../fn.cpp" line="5115"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>取消</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1095"/>
         <source>Open file...</source>
-        <translation type="unfinished"></translation>
+        <translation>打开文件...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1235"/>
         <location filename="../../fn.cpp" line="4872"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be saved!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;无法保存!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1238"/>
         <location filename="../../fn.cpp" line="2829"/>
         <location filename="../../fn.cpp" line="4875"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>关闭</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1326"/>
         <location filename="../../fn.cpp" line="1347"/>
         <source>Save As...</source>
-        <translation type="unfinished"></translation>
+        <translation>另存为...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2144"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Delete this node?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;删除这个节点?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2145"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;i&gt;Warning!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
 &lt;center&gt;This action cannot be undone.&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;i&gt;警告!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
+&lt;center&gt;此操作无法撤消.&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2246"/>
@@ -1102,19 +1104,19 @@
         <location filename="../../fn.cpp" line="5001"/>
         <location filename="../../fn.cpp" line="5116"/>
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation>确定</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2449"/>
         <location filename="../../fn.cpp" line="2482"/>
         <source>&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;主节点:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;全部节点:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2455"/>
         <location filename="../../fn.cpp" line="2488"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;注意:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;主节点:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;全部节点:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2816"/>
@@ -1136,69 +1138,69 @@
         <location filename="../../fn.cpp" line="2935"/>
         <location filename="../../fn.cpp" line="2987"/>
         <source>Replacement</source>
-        <translation type="unfinished"></translation>
+        <translation>替换</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3252"/>
         <source>No Replacement</source>
-        <translation type="unfinished"></translation>
+        <translation>没有替换</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3254"/>
         <source>One Replacement</source>
-        <translation type="unfinished"></translation>
+        <translation>1处替换</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3256"/>
         <source>%1 Replacements</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 替换</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3420"/>
         <source>Insert Link</source>
-        <translation type="unfinished"></translation>
+        <translation>插入链接</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2320"/>
         <location filename="../../fn.cpp" line="3498"/>
         <source>Image path</source>
-        <translation type="unfinished"></translation>
+        <translation>图片地址</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2324"/>
         <location filename="../../fn.cpp" line="3502"/>
         <source>Open image</source>
-        <translation type="unfinished"></translation>
+        <translation>打开图片</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3510"/>
         <location filename="../../fn.cpp" line="3671"/>
         <source>Scaling percentage</source>
-        <translation type="unfinished"></translation>
+        <translation>百分比</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2342"/>
         <location filename="../../fn.cpp" line="3619"/>
         <source>Open Image...</source>
-        <translation type="unfinished"></translation>
+        <translation>打开图片...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="561"/>
         <location filename="../../fn.cpp" line="4200"/>
         <source>&amp;Raise</source>
-        <translation type="unfinished"></translation>
+        <translation>升起</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="764"/>
         <source>New Node</source>
-        <translation type="unfinished"></translation>
+        <translation>新笔记</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1097"/>
         <location filename="../../fn.cpp" line="1328"/>
         <location filename="../../fn.cpp" line="1349"/>
         <source>FeatherNotes documents (*.fnx);;All Files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>羽毛笔笔记 文档 (*.fnx);;所有文件 (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1310"/>
@@ -1209,17 +1211,17 @@
         <location filename="../../fn.cpp" line="4929"/>
         <location filename="../../fn.cpp" line="4955"/>
         <source>Untitled</source>
-        <translation type="unfinished"></translation>
+        <translation>无标题</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2143"/>
         <source>Deletion</source>
-        <translation type="unfinished"></translation>
+        <translation>删除</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2256"/>
         <source>Tag(s) for this node</source>
-        <translation type="unfinished"></translation>
+        <translation>此节点的Tags(s)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2344"/>
@@ -1231,7 +1233,7 @@
         <location filename="../../fn.cpp" line="3505"/>
         <location filename="../../fn.cpp" line="3667"/>
         <source>Scale to</source>
-        <translation type="unfinished"></translation>
+        <translation>缩放至</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3509"/>
@@ -1242,28 +1244,29 @@
     <message>
         <location filename="../../fn.cpp" line="3661"/>
         <source>Scale Image(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>缩放图片(s)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3820"/>
         <source>untitled</source>
-        <translation type="unfinished"></translation>
+        <translation>无标题</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3852"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Image cannot be saved! Retry?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;图片无法保存! 重试?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3853"/>
         <source>&lt;center&gt;Maybe you did not choose a proper extension&lt;/center&gt;
 &lt;center&gt;or do not have write permission.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;可能您没有选择适当的扩展名&lt;/center&gt;
+&lt;center&gt;或没有写入权限.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3880"/>
         <source>Save Image As...</source>
-        <translation type="unfinished"></translation>
+        <translation>图片另存为...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3882"/>
@@ -1273,62 +1276,62 @@
     <message>
         <location filename="../../fn.cpp" line="3932"/>
         <source>Insert Table</source>
-        <translation type="unfinished"></translation>
+        <translation>插入表格</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3938"/>
         <source>Rows:</source>
-        <translation type="unfinished"></translation>
+        <translation>行:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3944"/>
         <source>Columns:</source>
-        <translation type="unfinished"></translation>
+        <translation>列:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4668"/>
         <source>Print Document</source>
-        <translation type="unfinished"></translation>
+        <translation>打印文档</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4732"/>
         <source>Export HTML</source>
-        <translation type="unfinished"></translation>
+        <translation>导出HTML</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4737"/>
         <source>Export:</source>
-        <translation type="unfinished"></translation>
+        <translation>导出:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4738"/>
         <source>&amp;Current node</source>
-        <translation type="unfinished"></translation>
+        <translation>当前节点</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4740"/>
         <source>With all &amp;sub-nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>包含所有子节点</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4741"/>
         <source>&amp;All nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>所有节点</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4753"/>
         <source>Output file:</source>
-        <translation type="unfinished"></translation>
+        <translation>导入文件:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4772"/>
         <source>Select path</source>
-        <translation type="unfinished"></translation>
+        <translation>选择目录:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4960"/>
         <source>Save HTML As...</source>
-        <translation type="unfinished"></translation>
+        <translation>HTML另存为...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4962"/>
@@ -1338,64 +1341,64 @@
     <message>
         <location filename="../../fn.cpp" line="4983"/>
         <source>Set Password</source>
-        <translation type="unfinished"></translation>
+        <translation>设置密码</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4991"/>
         <source>Type password</source>
-        <translation type="unfinished"></translation>
+        <translation>输入密码</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4996"/>
         <source>Retype password</source>
-        <translation type="unfinished"></translation>
+        <translation>再次输入密码</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5071"/>
         <source>&lt;center&gt;Passwords were different. Retry!&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;两次密码不同. 请重试!&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5103"/>
         <location filename="../../fn.cpp" line="5111"/>
         <source>Enter Password</source>
-        <translation type="unfinished"></translation>
+        <translation>输入密码</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5177"/>
         <source>&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;密码错误. 请重试!&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5216"/>
         <source>A lightweight notes manager</source>
-        <translation type="unfinished"></translation>
+        <translation>轻量级笔记管理器</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5217"/>
         <source>based on Qt5</source>
-        <translation type="unfinished"></translation>
+        <translation>基于QT5</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5218"/>
         <source>Author</source>
-        <translation type="unfinished"></translation>
+        <translation>作者</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5220"/>
         <location filename="../../fn.cpp" line="5221"/>
         <source>About FeatherNotes</source>
-        <translation type="unfinished"></translation>
+        <translation>关于羽毛笔笔记</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5220"/>
         <source>Translators</source>
-        <translation type="unfinished"></translation>
+        <translation>翻译</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5219"/>
         <source>aka.</source>
-        <translation type="unfinished"></translation>
+        <translation>混号</translation>
     </message>
 </context>
 <context>
@@ -1403,7 +1406,7 @@
     <message>
         <location filename="../../lineedit.cpp" line="35"/>
         <source>Clear text (Ctrl+K)</source>
-        <translation type="unfinished"></translation>
+        <translation>清除文本 (Ctrl+K)</translation>
     </message>
     <message>
         <location filename="../../lineedit.cpp" line="81"/>
@@ -1417,12 +1420,12 @@
     <message>
         <location filename="../../predDialog.ui" line="14"/>
         <source>Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>首选项</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="27"/>
         <source>Window</source>
-        <translation type="unfinished"></translation>
+        <translation>窗口</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="36"/>
@@ -1430,17 +1433,20 @@
 this dialog and also on exit.
 
 Uncheck to set a fixed size!</source>
-        <translation type="unfinished"></translation>
+        <translation>关闭后保存窗口大小
+这个对话框也会退出。
+
+取消选中可设置固定大小！</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="42"/>
         <source>Remember window &amp;size</source>
-        <translation type="unfinished"></translation>
+        <translation>记住窗口尺寸</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="51"/>
         <source>Start with this size: </source>
-        <translation type="unfinished"></translation>
+        <translation>用这个尺寸启动: </translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="58"/>
@@ -1462,12 +1468,15 @@ Uncheck to set a fixed size!</source>
 this dialog and also on exit.
 
 Uncheck for a width ratio of 170/530.</source>
-        <translation type="unfinished"></translation>
+        <translation>关闭后保存目录宽度
+这个对话框也会退出。
+
+取消选中宽度比为170/530。</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="103"/>
         <source>Remember &amp;tree width</source>
-        <translation type="unfinished"></translation>
+        <translation>记住目录宽度</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="110"/>
@@ -1477,12 +1486,15 @@ this dialog and also on exit.
 (This may not work correctly
 under GTK+ DE&apos;s like Unity
 and Cinnamon.)</source>
-        <translation type="unfinished"></translation>
+        <translation>关闭后保存位置
+这个对话框也会退出。
+
+(在GTK+ DE&apos;s Unity 和 Cinnamon桌面环境下可能无法正常工作)</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="118"/>
         <source>Save &amp;position</source>
-        <translation type="unfinished"></translation>
+        <translation>保存位置</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="125"/>
@@ -1491,71 +1503,79 @@ If checked, the titlebar close button iconifies
 the window to the systray instead of quitting.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>是否应使用托盘图标。
+如果选中，点击关闭按钮将最小化到
+系统托盘而不是退出。
+
+需要重新启动羽毛笔笔记才能生效。</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="132"/>
         <source>Add to s&amp;ystray</source>
-        <translation type="unfinished"></translation>
+        <translation>添加到系统托盘</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="157"/>
         <source>The command line option --tray
 can be used instead of this.</source>
-        <translation type="unfinished"></translation>
+        <translation>命令行选项--tray
+可以用来代替这个。</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="161"/>
         <source>Start i&amp;conified to tray</source>
-        <translation type="unfinished"></translation>
+        <translation>开始图标化到托盘</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="170"/>
         <source>Merge the tree view with its surroundings?</source>
-        <translation type="unfinished"></translation>
+        <translation>将树视图与其周围环境合并？</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="173"/>
         <source>Transparent t&amp;ree view</source>
-        <translation type="unfinished"></translation>
+        <translation>透明目录</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="180"/>
         <source>By default, the active widget style determines
 the size of toolbar icons.</source>
-        <translation type="unfinished"></translation>
+        <translation>默认情况下，活动小部件样式确定
+工具栏图标的大小。</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="184"/>
         <source>Small toolbar icons</source>
-        <translation type="unfinished"></translation>
+        <translation>工具栏小图标</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="191"/>
         <source>Do not show t&amp;oolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>不显示工具栏</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="198"/>
         <source>If the menubar is hidden,
 a menu button appears on the toolbar.</source>
-        <translation type="unfinished"></translation>
+        <translation>如果菜单栏是隐藏的，
+工具栏上会出现一个菜单按钮。</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="202"/>
         <source>Do not show &amp;menubar</source>
-        <translation type="unfinished"></translation>
+        <translation>不显示菜单栏</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="209"/>
         <source>Check this under Enlightenment (or, probably, another DE)
 to use the systray icon more easily!</source>
-        <translation type="unfinished"></translation>
+        <translation>检查在Enlightenment下运行时（或者，可能是另一个DE）
+可以更容易地使用托盘图标！</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="213"/>
         <source>Running &amp;under Enlightenment?</source>
-        <translation type="unfinished"></translation>
+        <translation>在Enlightenment下运行？</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="238"/>
@@ -1567,7 +1587,14 @@ if it is on the left or right, the X-coordinate should be set.
 
 After choosing the coordinate shifts, put the window in a proper
 position and then restart FeatherNotes!</source>
-        <translation type="unfinished"></translation>
+        <translation>一些DE（如 Enlightenment）可能不会报告窗口位置
+正确地。如果是这样的话，你可以试着在这里解决这个问题。
+
+如果面板位于底部或顶部，则应设置Y坐标；
+如果在左侧或右侧，则应设置X坐标。
+
+选择坐标变换后，将窗口放在适当的位置
+定位然后重新启动羽毛笔记！</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="248"/>
@@ -1577,98 +1604,103 @@ position and then restart FeatherNotes!</source>
     <message>
         <location filename="../../predDialog.ui" line="314"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>文本</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="323"/>
         <source>&amp;Wrap lines by default</source>
-        <translation type="unfinished"></translation>
+        <translation>默认情况下换行</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="330"/>
         <source>Auto-&amp;indent by default</source>
-        <translation type="unfinished"></translation>
+        <translation>默认情况下自动缩进</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="337"/>
         <source>This covers parentheses, braces, brackets and quotes.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>这包括括号、大括号、括号和引号。
+
+需要重新启动羽毛笔记才能生效。</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="342"/>
         <source>Auto-&amp;bracket</source>
-        <translation type="unfinished"></translation>
+        <translation>自动引号</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="349"/>
         <source>A triple period is replaced with an ellipsis,
 a double hyphen with a long dash, etc. while
 the user is typing and under proper circumstances.</source>
-        <translation type="unfinished"></translation>
+        <translation>三个句点替换为省略号，
+当用户在适当的情况下打字时，
+带有长破折号等的双连字符。</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="354"/>
         <source>&amp;Replace some characters while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>键入时替换某些字符</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="363"/>
         <source>&amp;Auto-save every</source>
-        <translation type="unfinished"></translation>
+        <translation>自动保存间隔</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="370"/>
         <source> minute(s)</source>
-        <translation type="unfinished"></translation>
+        <translation> 分钟(s)</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="404"/>
         <source>This is not a complete fix but
 prevents annoying scroll jumps.</source>
-        <translation type="unfinished"></translation>
+        <translation>这不是一个完整的修复，
+但防止烦人的滚动跳跃。</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="408"/>
         <source>Workaround for &amp;Qt5&apos;s scroll jump bug</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt5滚动跳跃错误的解决方法</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="435"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>快捷方式</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="454"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>功能</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="459"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>快捷方式</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="467"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>默认</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="345"/>
         <location filename="../../pref.cpp" line="523"/>
         <source>Warning: Ambiguous shortcut detected!</source>
-        <translation type="unfinished"></translation>
+        <translation>警告：检测到不明确的快捷方式！</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="506"/>
         <source>The typed shortcut was reserved.</source>
-        <translation type="unfinished"></translation>
+        <translation>已保留键入的快捷方式。</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="624"/>
         <source>Application restart is needed for changes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>要使更改生效，需要重新启动应用程序。</translation>
     </message>
 </context>
 <context>
@@ -1676,7 +1708,7 @@ prevents annoying scroll jumps.</source>
     <message>
         <location filename="../../helpDialog.ui" line="14"/>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>帮助</translation>
     </message>
 </context>
 <context>
@@ -1685,7 +1717,7 @@ prevents annoying scroll jumps.</source>
         <location filename="../../domitem.cpp" line="100"/>
         <location filename="../../domitem.cpp" line="137"/>
         <source>New Node</source>
-        <translation type="unfinished"></translation>
+        <translation>新笔记</translation>
     </message>
 </context>
 </TS>
