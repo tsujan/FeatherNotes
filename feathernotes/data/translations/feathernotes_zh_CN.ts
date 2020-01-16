@@ -1326,7 +1326,7 @@
     <message>
         <location filename="../../fn.cpp" line="4772"/>
         <source>Select path</source>
-        <translation>选择目录:</translation>
+        <translation>选择目录</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4960"/>
@@ -1669,7 +1669,7 @@ prevents annoying scroll jumps.</source>
     <message>
         <location filename="../../predDialog.ui" line="435"/>
         <source>Shortcuts</source>
-        <translation>快捷方式</translation>
+        <translation>快捷键</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="454"/>
@@ -1679,7 +1679,7 @@ prevents annoying scroll jumps.</source>
     <message>
         <location filename="../../predDialog.ui" line="459"/>
         <source>Shortcut</source>
-        <translation>快捷方式</translation>
+        <translation>快捷键</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="467"/>
@@ -1690,12 +1690,12 @@ prevents annoying scroll jumps.</source>
         <location filename="../../pref.cpp" line="345"/>
         <location filename="../../pref.cpp" line="523"/>
         <source>Warning: Ambiguous shortcut detected!</source>
-        <translation>警告：检测到不明确的快捷方式！</translation>
+        <translation>警告：检测到不明确的快捷键！</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="506"/>
         <source>The typed shortcut was reserved.</source>
-        <translation>已保留键入的快捷方式。</translation>
+        <translation>已保留键入的快捷键。</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="624"/>
