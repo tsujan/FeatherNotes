@@ -561,17 +561,17 @@ void FN::createTrayIcon()
         actionshowMainWindow->setText (tr ("&Raise"));
     connect (actionshowMainWindow, &QAction::triggered, this, &FN::activateTray);
     /* use system icons with the tray menu because it gets its style from the panel */
-    QAction *actionNewTray = trayMenu->addAction (QIcon::fromTheme ("document-new"), tr("&New Note"));
-    QAction *actionOpenTray = trayMenu->addAction (QIcon::fromTheme ("document-open"), tr("&Open"));
+    QAction *actionNewTray = trayMenu->addAction (QIcon::fromTheme ("document-new"), tr ("&New Note"));
+    QAction *actionOpenTray = trayMenu->addAction (QIcon::fromTheme ("document-open"), tr ("&Open"));
     trayMenu->addSeparator();
-    QAction *antionQuitTray = trayMenu->addAction (QIcon::fromTheme ("application-exit"), tr("&Quit"));
+    QAction *antionQuitTray = trayMenu->addAction (QIcon::fromTheme ("application-exit"), tr ("&Quit"));
     connect (actionNewTray, &QAction::triggered, this, &FN::newNote);
     connect (actionOpenTray, &QAction::triggered, this, &FN::openFile);
     connect (antionQuitTray, &QAction::triggered, this, &FN::close);
     actionshowMainWindow->setObjectName ("raiseHide");
-    actionNewTray->setObjectName("trayNew");
-    actionOpenTray->setObjectName("trayOpen");
-    antionQuitTray->setObjectName("trayQuit");
+    actionNewTray->setObjectName ("trayNew");
+    actionOpenTray->setObjectName ("trayOpen");
+    antionQuitTray->setObjectName ("trayQuit");
     tray_->setContextMenu (trayMenu);
     tray_->setVisible (true);
     connect (tray_, &QSystemTrayIcon::activated, this, &FN::trayActivated );
@@ -2011,7 +2011,7 @@ void FN::textColor()
     }
     color = QColorDialog::getColor (color,
                                     this,
-                                    "Select Text Color");
+                                    tr ("Select Text Color"));
     if (!color.isValid()) return;
     lastTxtColor_ = color;
     QTextCharFormat fmt;
@@ -2033,7 +2033,7 @@ void FN::bgColor()
     }
     color = QColorDialog::getColor (color,
                                     this,
-                                    "Select Background Color");
+                                    tr ("Select Background Color"));
     if (!color.isValid()) return;
     lastBgColor_ = color;
     QTextCharFormat fmt;
@@ -2521,7 +2521,7 @@ void FN::textFontDialog()
 {
     bool ok;
     QFont newFont = QFontDialog::getFont (&ok, defaultFont_, this,
-                                          "Select Document Font");
+                                          tr ("Select Document Font"));
     if (ok)
     {
         QFont font (newFont.family(), newFont.pointSize());
@@ -2581,7 +2581,7 @@ void FN::nodeFontDialog()
 {
     bool ok;
     QFont newFont = QFontDialog::getFont (&ok, nodeFont_, this,
-                                          "Select Node Font");
+                                          tr ("Select Node Font"));
     if (ok)
     {
         nodeFont_ = newFont;
@@ -3848,7 +3848,7 @@ void FN::saveImage()
             {
                 MessageBox msgBox;
                 msgBox.setIcon (QMessageBox::Question);
-                msgBox.setWindowTitle ("Error");
+                msgBox.setWindowTitle (tr ("Error"));
                 msgBox.setText (tr ("<center><b><big>Image cannot be saved! Retry?</big></b></center>"));
                 msgBox.setInformativeText (tr ("<center>Maybe you did not choose a proper extension</center>\n"\
                                                "<center>or do not have write permission.</center><p></p>"));

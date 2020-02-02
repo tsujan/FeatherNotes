@@ -1,3 +1,7 @@
+V0.5.2
+---------
+ * Made some strings translatable.
+
 V0.5.1
 ---------
  * Considered the new behavior of horizontal wheel scrolling in Qt 5.14.0.

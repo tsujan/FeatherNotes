@@ -1214,6 +1214,16 @@
         <translation>Sentitola</translation>
     </message>
     <message>
+        <location filename="../../fn.cpp" line="2014"/>
+        <source>Select Text Color</source>
+        <translation>Elekti Tekstan Koloron</translation>
+    </message>
+    <message>
+        <location filename="../../fn.cpp" line="2036"/>
+        <source>Select Background Color</source>
+        <translation>Elekti Fonan Koloron</translation>
+    </message>
+    <message>
         <location filename="../../fn.cpp" line="2143"/>
         <source>Deletion</source>
         <translation>Forviŝado</translation>
@@ -1228,6 +1238,16 @@
         <location filename="../../fn.cpp" line="3621"/>
         <source>Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)</source>
         <translation>Bild-Dosieroj (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;Ĉiuj Dosieroj (*)</translation>
+    </message>
+    <message>
+        <location filename="../../fn.cpp" line="2524"/>
+        <source>Select Document Font</source>
+        <translation>Elekti Dokumentan Tiparon</translation>
+    </message>
+    <message>
+        <location filename="../../fn.cpp" line="2584"/>
+        <source>Select Node Font</source>
+        <translation>Elekti Nodan Tiparon</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3505"/>
@@ -1250,6 +1270,11 @@
         <location filename="../../fn.cpp" line="3820"/>
         <source>untitled</source>
         <translation>sentitola</translation>
+    </message>
+    <message>
+        <location filename="../../fn.cpp" line="3851"/>
+        <source>Error</source>
+        <translation>Eraro</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3852"/>

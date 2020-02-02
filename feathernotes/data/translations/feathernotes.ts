@@ -1212,6 +1212,16 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../fn.cpp" line="2014"/>
+        <source>Select Text Color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../fn.cpp" line="2036"/>
+        <source>Select Background Color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../fn.cpp" line="2143"/>
         <source>Deletion</source>
         <translation type="unfinished"></translation>
@@ -1225,6 +1235,16 @@
         <location filename="../../fn.cpp" line="2344"/>
         <location filename="../../fn.cpp" line="3621"/>
         <source>Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../fn.cpp" line="2524"/>
+        <source>Select Document Font</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../fn.cpp" line="2584"/>
+        <source>Select Node Font</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1247,6 +1267,11 @@
     <message>
         <location filename="../../fn.cpp" line="3820"/>
         <source>untitled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../fn.cpp" line="3851"/>
+        <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
