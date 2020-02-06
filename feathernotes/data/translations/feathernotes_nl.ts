@@ -192,13 +192,13 @@
     <message>
         <location filename="../../fn.ui" line="519"/>
         <source>&amp;Save</source>
-        <translation>Op&amp;slaan</translation>
+        <translation>&amp;Sla op</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="522"/>
         <location filename="../../fn.cpp" line="816"/>
         <source>Save</source>
-        <translation>Opslaan</translation>
+        <translation>Sla op</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="525"/>
@@ -209,7 +209,7 @@
         <location filename="../../fn.ui" line="530"/>
         <location filename="../../fn.cpp" line="565"/>
         <source>&amp;Open</source>
-        <translation>&amp;Openen</translation>
+        <translation>&amp;Open</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="533"/>
@@ -224,12 +224,12 @@
     <message>
         <location filename="../../fn.ui" line="544"/>
         <source>&amp;Undo</source>
-        <translation>&amp;Ongedaan maken</translation>
+        <translation>Maak &amp;ongedaan</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="547"/>
         <source>Undo</source>
-        <translation>Ongedaan maken</translation>
+        <translation>Maak ongedaan</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="550"/>
@@ -466,7 +466,7 @@
     <message>
         <location filename="../../fn.ui" line="796"/>
         <source>&amp;Select All</source>
-        <translation>Alles &amp;selecteren</translation>
+        <translation>&amp;Selecteer alles</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="799"/>
@@ -1216,12 +1216,12 @@
     <message>
         <location filename="../../fn.cpp" line="2014"/>
         <source>Select Text Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Kies tekstkleur</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2036"/>
         <source>Select Background Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Kies achtergrondkleur</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2143"/>
@@ -1242,12 +1242,12 @@
     <message>
         <location filename="../../fn.cpp" line="2524"/>
         <source>Select Document Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Kies documentsformaat</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2584"/>
         <source>Select Node Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Kies lettertype voor node</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3505"/>
@@ -1274,7 +1274,7 @@
     <message>
         <location filename="../../fn.cpp" line="3851"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Fout</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3852"/>
@@ -1351,7 +1351,7 @@
     <message>
         <location filename="../../fn.cpp" line="4772"/>
         <source>Select path</source>
-        <translation>Pad kiezen</translation>
+        <translation>Kies pad</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4960"/>
