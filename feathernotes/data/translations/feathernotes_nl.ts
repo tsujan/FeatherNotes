@@ -1662,12 +1662,14 @@ Herstart FeatherNotes om de instelling toe te passen.</translation>
         <source>A triple period is replaced with an ellipsis,
 a double hyphen with a long dash, etc. while
 the user is typing and under proper circumstances.</source>
-        <translation type="unfinished"></translation>
+        <translation>Drie puntjes wordt vervangen door een beletselteken,
+twee liggende streepjes worden vervangen door een kastlijntje, etc. wanneer
+de gebruiker onder bepaalde omstandigheden aan het typen is.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="354"/>
         <source>&amp;Replace some characters while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vervang bepaalde karakters tijdens het typen</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="363"/>
