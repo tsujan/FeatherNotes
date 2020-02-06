@@ -1,6 +1,7 @@
 V0.5.2
 ---------
  * Made some strings translatable.
+ * Fixed a potential issue in translations.
 
 V0.5.1
 ---------
