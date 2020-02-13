@@ -1216,12 +1216,12 @@
     <message>
         <location filename="../../fn.cpp" line="2014"/>
         <source>Select Text Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecionar Cor do Texto</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2036"/>
         <source>Select Background Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecionar Cor de Fundo</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2143"/>
@@ -1242,12 +1242,12 @@
     <message>
         <location filename="../../fn.cpp" line="2524"/>
         <source>Select Document Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecionar Fonte do Documento</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2584"/>
         <source>Select Node Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecionar Fonte do Nó</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3505"/>
@@ -1274,7 +1274,7 @@
     <message>
         <location filename="../../fn.cpp" line="3851"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erro</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3852"/>
