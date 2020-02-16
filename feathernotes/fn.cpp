@@ -86,6 +86,8 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
     /* NOTE: The auto-saving timer starts only when a new note is created,
        a file is opened, or it is enabled in Preferences. It saves the doc
        only if it belongs to an existing file that needs saving. */
+    autoSave_ = -1;
+    saveNeeded_ = 0;
     timer_ = new QTimer (this);
     connect (timer_, &QTimer::timeout, this, &FN::autoSaving);
 
@@ -93,7 +95,6 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
     setAttribute (Qt::WA_AlwaysShowToolTips);
     ui->statusBar->setVisible (false);
 
-    saveNeeded_ = 0;
     defaultFont_ = QFont ("Monospace");
     defaultFont_.setPointSize (qMax (font().pointSize(), 9));
     nodeFont_ = font();
@@ -612,9 +613,9 @@ void FN::defaultSize()
         showNormal();*/
     if (size() != startSize_)
     {
-        setVisible (false);
+        //setVisible (false);
         resize (startSize_);
-        QTimer::singleShot (250, this, &QWidget::showNormal);
+        //QTimer::singleShot (250, this, &QWidget::showNormal);
     }
     QList<int> sizes; sizes << 170 << 530;
     ui->splitter->setSizes (sizes);
@@ -1106,8 +1107,8 @@ void FN::openFile()
     if (dialog.exec())
         filePath = dialog.selectedFiles().at (0);
 
-    if (!filePath.isEmpty())
-        fileOpen (filePath);
+    /* fileOpen() restarts auto-saving even when opening is canceled */
+    fileOpen (filePath);
 }
 /*************************/
 void FN::openFNDoc (const QString &filePath)
@@ -5233,6 +5234,22 @@ void FN::showHelpDialog()
         delete dlg;
         break;
     }
+}
+/*************************/
+bool FN::event (QEvent *event)
+{
+    /* NOTE: This is a workaround for an old Qt bug, because of which,
+             QTimer may not work after resuming from suspend or hibernation. */
+    if (event->type() == QEvent::WindowActivate
+        && timer_->isActive() && timer_->remainingTime() <= 0)
+    {
+        if (autoSave_ >= 1)
+        {
+            autoSaving();
+            timer_->start (autoSave_ * 1000 * 60);
+        }
+    }
+    return QMainWindow::event (event);
 }
 
 }

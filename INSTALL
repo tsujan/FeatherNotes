@@ -1,4 +1,4 @@
-First install build dependencies. In Debian-based systems, they are:
+To compile FeatherNotes from its source, first install build dependencies. In Debian-based systems, they are:
 
  * g++ >= 5
  * libx11-dev and libxext-dev (for X11)

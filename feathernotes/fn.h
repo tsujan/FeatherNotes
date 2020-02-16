@@ -339,6 +339,7 @@ private:
     void dragMoveEvent (QDragMoveEvent *event);
     void dragEnterEvent (QDragEnterEvent *event);
     void dropEvent (QDropEvent *event);
+    bool event (QEvent *event);
 
     Ui::FN *ui;
     bool isX11_;
