@@ -1216,12 +1216,12 @@
     <message>
         <location filename="../../fn.cpp" line="2015"/>
         <source>Select Text Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Pasirinkti teksto spalvą</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2037"/>
         <source>Select Background Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Pasirinkti fono spalvą</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2144"/>
@@ -1242,12 +1242,12 @@
     <message>
         <location filename="../../fn.cpp" line="2525"/>
         <source>Select Document Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Pasirinkti dokumento šriftą</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2585"/>
         <source>Select Node Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Pasirinkti mazgo šriftą</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3506"/>
@@ -1274,7 +1274,7 @@
     <message>
         <location filename="../../fn.cpp" line="3852"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Klaida</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3853"/>
