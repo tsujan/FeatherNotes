@@ -1214,12 +1214,12 @@
     <message>
         <location filename="../../fn.cpp" line="2015"/>
         <source>Select Text Color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Выберите цвет текста</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2037"/>
         <source>Select Background Color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Выберите цвет фона</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2144"/>
@@ -1240,7 +1240,7 @@
     <message>
         <location filename="../../fn.cpp" line="2525"/>
         <source>Select Document Font</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Выберите шрифт документа</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2585"/>
@@ -1272,7 +1272,7 @@
     <message>
         <location filename="../../fn.cpp" line="3852"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Ошибка</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3853"/>
