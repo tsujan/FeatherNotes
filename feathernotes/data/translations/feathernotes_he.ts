@@ -229,7 +229,7 @@
     <message>
         <location filename="../../fn.ui" line="547"/>
         <source>Undo</source>
-        <translation></translation>
+        <translation>ביטול</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="550"/>
@@ -239,12 +239,12 @@
     <message>
         <location filename="../../fn.ui" line="558"/>
         <source>&amp;Redo</source>
-        <translation></translation>
+        <translation>ביצוע &amp;חוזר</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="561"/>
         <source>Redo</source>
-        <translation></translation>
+        <translation>ביצוע חוזר</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="564"/>
@@ -254,12 +254,12 @@
     <message>
         <location filename="../../fn.ui" line="572"/>
         <source>&amp;Find</source>
-        <translation></translation>
+        <translation>&amp;חיפוש</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="575"/>
         <source>Show/hide searchbar</source>
-        <translation></translation>
+        <translation>הצגה/הסתרה של סרגל החיפוש</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="578"/>
@@ -269,12 +269,12 @@
     <message>
         <location filename="../../fn.ui" line="586"/>
         <source>&amp;Clear All Formats</source>
-        <translation></translation>
+        <translation>&amp;ניקוי כל העיצובים</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="589"/>
         <source>Clear all formats</source>
-        <translation></translation>
+        <translation>ניקוי כל העיצובים</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="592"/>
@@ -284,12 +284,12 @@
     <message>
         <location filename="../../fn.ui" line="603"/>
         <source>&amp;Bold</source>
-        <translation></translation>
+        <translation>מו&amp;דגש</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="606"/>
         <source>Bold</source>
-        <translation></translation>
+        <translation>מודגש</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="609"/>
@@ -299,12 +299,12 @@
     <message>
         <location filename="../../fn.ui" line="620"/>
         <source>&amp;Italic</source>
-        <translation></translation>
+        <translation>&amp;נטוי</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="623"/>
         <source>Italic</source>
-        <translation></translation>
+        <translation>נטוי</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="626"/>
@@ -314,12 +314,12 @@
     <message>
         <location filename="../../fn.ui" line="637"/>
         <source>&amp;Underline</source>
-        <translation></translation>
+        <translation>&amp;קו תחתי</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="640"/>
         <source>Underline</source>
-        <translation></translation>
+        <translation>קו תחתי</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="643"/>
@@ -329,12 +329,12 @@
     <message>
         <location filename="../../fn.ui" line="654"/>
         <source>&amp;Strike Through</source>
-        <translation></translation>
+        <translation>קו &amp;חוצה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="657"/>
         <source>Strike through</source>
-        <translation></translation>
+        <translation>קו חוצה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="660"/>
@@ -344,12 +344,12 @@
     <message>
         <location filename="../../fn.ui" line="668"/>
         <source>Te&amp;xt Color</source>
-        <translation></translation>
+        <translation>צבע ה&amp;טקסט</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="671"/>
         <source>Text color</source>
-        <translation></translation>
+        <translation>צבע הטקסט</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="674"/>
@@ -359,12 +359,12 @@
     <message>
         <location filename="../../fn.ui" line="682"/>
         <source>Back&amp;ground Color</source>
-        <translation></translation>
+        <translation>צבע ה&amp;רקע</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="685"/>
         <source>Background color</source>
-        <translation></translation>
+        <translation>צבע הרקע</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="688"/>
@@ -374,13 +374,13 @@
     <message>
         <location filename="../../fn.ui" line="693"/>
         <source>Options</source>
-        <translation></translation>
+        <translation>אפשרויות</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="698"/>
         <location filename="../../fn.cpp" line="565"/>
         <source>&amp;New Note</source>
-        <translation></translation>
+        <translation>&amp;פתק חדש</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="701"/>
@@ -390,7 +390,7 @@
     <message>
         <location filename="../../fn.ui" line="709"/>
         <source>Save &amp;As</source>
-        <translation></translation>
+        <translation>שמירה &amp;בשם</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="712"/>
@@ -400,7 +400,7 @@
     <message>
         <location filename="../../fn.ui" line="720"/>
         <source>&amp;Print</source>
-        <translation></translation>
+        <translation>ה&amp;דפסה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="723"/>
@@ -410,18 +410,18 @@
     <message>
         <location filename="../../fn.ui" line="731"/>
         <source>P&amp;rint with Sub-Nodes</source>
-        <translation></translation>
+        <translation>הדפסה עם תת־&amp;צמתים</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="739"/>
         <source>Set Pass&amp;word</source>
-        <translation></translation>
+        <translation>הגדרת &amp;ססמה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="744"/>
         <location filename="../../fn.cpp" line="568"/>
         <source>&amp;Quit</source>
-        <translation></translation>
+        <translation>&amp;יציאה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="747"/>
@@ -431,7 +431,7 @@
     <message>
         <location filename="../../fn.ui" line="755"/>
         <source>&amp;Cut</source>
-        <translation></translation>
+        <translation>&amp;גזירה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="758"/>
@@ -441,7 +441,7 @@
     <message>
         <location filename="../../fn.ui" line="766"/>
         <source>C&amp;opy</source>
-        <translation></translation>
+        <translation>ה&amp;עתקה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="769"/>
@@ -451,7 +451,7 @@
     <message>
         <location filename="../../fn.ui" line="777"/>
         <source>&amp;Paste</source>
-        <translation></translation>
+        <translation>ה&amp;דבקה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="780"/>
@@ -461,12 +461,12 @@
     <message>
         <location filename="../../fn.ui" line="788"/>
         <source>&amp;Delete</source>
-        <translation></translation>
+        <translation>מ&amp;חיקה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="796"/>
         <source>&amp;Select All</source>
-        <translation></translation>
+        <translation>לבחור ה&amp;כול</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="799"/>
@@ -476,13 +476,13 @@
     <message>
         <location filename="../../fn.ui" line="807"/>
         <source>E&amp;mbed Image</source>
-        <translation></translation>
+        <translation>ה&amp;טמעת תמונה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="810"/>
         <location filename="../../fn.cpp" line="3490"/>
         <source>Embed Image</source>
-        <translation></translation>
+        <translation>הטמעת תמונה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="813"/>
@@ -1214,12 +1214,12 @@
     <message>
         <location filename="../../fn.cpp" line="2015"/>
         <source>Select Text Color</source>
-        <translation type="unfinished"></translation>
+        <translation>בחירת צבע טקסט</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2037"/>
         <source>Select Background Color</source>
-        <translation type="unfinished"></translation>
+        <translation>בחירת צבע רקע</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2144"/>
@@ -1240,12 +1240,12 @@
     <message>
         <location filename="../../fn.cpp" line="2525"/>
         <source>Select Document Font</source>
-        <translation type="unfinished"></translation>
+        <translation>בחירת גופן מסמך</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2585"/>
         <source>Select Node Font</source>
-        <translation type="unfinished"></translation>
+        <translation>בחירת גופן מפרק</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3506"/>
@@ -1272,7 +1272,7 @@
     <message>
         <location filename="../../fn.cpp" line="3852"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>שגיאה</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3853"/>
@@ -1631,12 +1631,14 @@ Needs restarting of FeatherNotes to take effect.</source>
         <source>A triple period is replaced with an ellipsis,
 a double hyphen with a long dash, etc. while
 the user is typing and under proper circumstances.</source>
-        <translation type="unfinished"></translation>
+        <translation>שלוש נקודות מוחלפות באליפסיס (סימן השמטה),
+שני מינוסים יוחלפו בקו ארוך וכו׳ תוך כדי הקלדה
+ותחת תנאים מתאימים.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="354"/>
         <source>&amp;Replace some characters while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>ה&amp;חלפת חלק מהתווים בזמן ההקלדה</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="363"/>
