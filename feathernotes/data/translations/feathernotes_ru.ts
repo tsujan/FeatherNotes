@@ -1180,7 +1180,7 @@
         <location filename="../../fn.cpp" line="2343"/>
         <location filename="../../fn.cpp" line="3620"/>
         <source>Open Image...</source>
-        <translation></translation>
+        <translation type="unfinished">Открыть изображение...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="562"/>
@@ -1191,7 +1191,7 @@
     <message>
         <location filename="../../fn.cpp" line="765"/>
         <source>New Node</source>
-        <translation></translation>
+        <translation type="unfinished">Новая заметка</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1098"/>
@@ -1209,7 +1209,7 @@
         <location filename="../../fn.cpp" line="4930"/>
         <location filename="../../fn.cpp" line="4956"/>
         <source>Untitled</source>
-        <translation></translation>
+        <translation type="unfinished">Безымянный</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2015"/>
