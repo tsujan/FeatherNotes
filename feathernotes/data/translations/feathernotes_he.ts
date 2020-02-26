@@ -66,7 +66,7 @@
     <message>
         <location filename="../../fn.ui" line="144"/>
         <source>Search in all nodes (F7)</source>
-        <translation>חיפוש בכל הצמתים (F7)</translation>
+        <translation>חיפוש בכל המפרקים (F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="147"/>
@@ -157,7 +157,7 @@
     <message>
         <location filename="../../fn.ui" line="457"/>
         <source>Replacing text</source>
-        <translation>טקסט מוחלף</translation>
+        <translation>טקסט מחליף</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="467"/>
@@ -492,27 +492,27 @@
     <message>
         <location filename="../../fn.ui" line="821"/>
         <source>E&amp;xpand All</source>
-        <translation></translation>
+        <translation>לה&amp;רחיב הכול</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="824"/>
         <source>Ctrl+Shift+Down</source>
-        <translation></translation>
+        <translation>‪Ctrl+Shift+למטה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="832"/>
         <source>Collap&amp;se All</source>
-        <translation></translation>
+        <translation>ל&amp;צמצם הכול</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="835"/>
         <source>Ctrl+Shift+Up</source>
-        <translation></translation>
+        <translation>‪Ctrl+Shift+למעלה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="843"/>
         <source>&amp;Append Sibling</source>
-        <translation></translation>
+        <translation>הוספת &amp;אח בהתחלה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="846"/>
@@ -522,7 +522,7 @@
     <message>
         <location filename="../../fn.ui" line="854"/>
         <source>Append &amp;Child</source>
-        <translation></translation>
+        <translation>הוספת &amp;צאצא בהתחלה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="857"/>
@@ -532,7 +532,7 @@
     <message>
         <location filename="../../fn.ui" line="865"/>
         <source>&amp;Delete Node</source>
-        <translation></translation>
+        <translation>מחיקת צו&amp;מת</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="868"/>
@@ -542,27 +542,27 @@
     <message>
         <location filename="../../fn.ui" line="876"/>
         <source>Move &amp;Up</source>
-        <translation></translation>
+        <translation>ה&amp;גבהה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="879"/>
         <source>Alt+Up</source>
-        <translation></translation>
+        <translation>‪Alt+למעלה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="887"/>
         <source>Move Do&amp;wn</source>
-        <translation></translation>
+        <translation>ה&amp;נמכה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="890"/>
         <source>Alt+Down</source>
-        <translation></translation>
+        <translation>‪Alt+למטה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="898"/>
         <source>Re&amp;name Node</source>
-        <translation></translation>
+        <translation>שינוי &amp;שם מפרק</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="901"/>
@@ -572,7 +572,7 @@
     <message>
         <location filename="../../fn.ui" line="906"/>
         <source>Tree Pr&amp;operties</source>
-        <translation></translation>
+        <translation>מאפייני &amp;עץ</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="909"/>
@@ -582,12 +582,12 @@
     <message>
         <location filename="../../fn.ui" line="917"/>
         <source>Document &amp;Font</source>
-        <translation></translation>
+        <translation>&amp;גופן מסמך</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="931"/>
         <source>&amp;Wrap Lines</source>
-        <translation></translation>
+        <translation>ג&amp;לישת שורות</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="934"/>
@@ -597,7 +597,7 @@
     <message>
         <location filename="../../fn.ui" line="948"/>
         <source>&amp;Auto-Indentation</source>
-        <translation></translation>
+        <translation>ה&amp;זחה אוטומטית</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="951"/>
@@ -607,7 +607,7 @@
     <message>
         <location filename="../../fn.ui" line="956"/>
         <source>&amp;Preferences</source>
-        <translation></translation>
+        <translation>ה&amp;עדפות</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="959"/>
@@ -617,7 +617,7 @@
     <message>
         <location filename="../../fn.ui" line="967"/>
         <source>Find and &amp;Replace</source>
-        <translation></translation>
+        <translation>&amp;חיפוש והחלפה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="970"/>
@@ -632,22 +632,22 @@
     <message>
         <location filename="../../fn.ui" line="983"/>
         <source>&amp;About</source>
-        <translation></translation>
+        <translation>על &amp;אודות</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="991"/>
         <source>Pr&amp;int All Nodes</source>
-        <translation></translation>
+        <translation>הדפסת &amp;כל המפרקים</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1002"/>
         <source>Superscrip&amp;t</source>
-        <translation></translation>
+        <translation>כתב &amp;עלי</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1005"/>
         <source>Superscript</source>
-        <translation></translation>
+        <translation>כתב עלי</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1008"/>
@@ -657,12 +657,12 @@
     <message>
         <location filename="../../fn.ui" line="1019"/>
         <source>Subscri&amp;pt</source>
-        <translation></translation>
+        <translation>כתב ת&amp;חתי</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1022"/>
         <source>Subscript</source>
-        <translation></translation>
+        <translation>כתב תחתי</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1025"/>
@@ -672,67 +672,67 @@
     <message>
         <location filename="../../fn.ui" line="1036"/>
         <source>C&amp;enter</source>
-        <translation></translation>
+        <translation>מ&amp;רכז</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1039"/>
         <source>Align center</source>
-        <translation></translation>
+        <translation>למרכז</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1042"/>
         <source>Alt+Shift+Down</source>
-        <translation></translation>
+        <translation>‪Alt+Shift+למטה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1053"/>
         <source>&amp;Right</source>
-        <translation></translation>
+        <translation>י&amp;מין</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1056"/>
         <source>Align right</source>
-        <translation></translation>
+        <translation>יישור לימין</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1059"/>
         <source>Alt+Shift+Right</source>
-        <translation></translation>
+        <translation>‪Alt+Shift+ימינה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1070"/>
         <source>&amp;Left</source>
-        <translation></translation>
+        <translation>&amp;שמאל</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1073"/>
         <source>Align left</source>
-        <translation></translation>
+        <translation>יישור לשמאל</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1076"/>
         <source>Alt+Shift+Left</source>
-        <translation></translation>
+        <translation>‪Alt+Shift+שמאלה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1087"/>
         <source>&amp;Justify</source>
-        <translation></translation>
+        <translation>יישור &amp;דו־צדדי</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1090"/>
         <source>Justify</source>
-        <translation></translation>
+        <translation>יישור דו־צדדי</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1093"/>
         <source>Alt+Shift+Up</source>
-        <translation></translation>
+        <translation>‪Alt+Shift+למעלה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1101"/>
         <source>&amp;Prepend Sibling</source>
-        <translation></translation>
+        <translation>הוספת אח ב&amp;סוף</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1104"/>
@@ -742,32 +742,32 @@
     <message>
         <location filename="../../fn.ui" line="1112"/>
         <source>Move &amp;Left</source>
-        <translation></translation>
+        <translation>הזזה &amp;שמאלה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1115"/>
         <source>Alt+Left</source>
-        <translation></translation>
+        <translation>‪Alt+שמאלה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1123"/>
         <source>Move &amp;Right</source>
-        <translation></translation>
+        <translation>הזזה ימי&amp;נה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1126"/>
         <source>Alt+Right</source>
-        <translation></translation>
+        <translation>‪Alt+ימינה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1134"/>
         <source>h&amp;2</source>
-        <translation></translation>
+        <translation>כ&amp;2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1137"/>
         <source>Header 2</source>
-        <translation></translation>
+        <translation>כותרת 2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1140"/>
@@ -777,12 +777,12 @@
     <message>
         <location filename="../../fn.ui" line="1148"/>
         <source>h&amp;1</source>
-        <translation></translation>
+        <translation>כ&amp;1</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1151"/>
         <source>Header 1</source>
-        <translation></translation>
+        <translation>כותרת 1</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1154"/>
@@ -792,12 +792,12 @@
     <message>
         <location filename="../../fn.ui" line="1162"/>
         <source>h&amp;3</source>
-        <translation></translation>
+        <translation>כ&amp;3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1165"/>
         <source>Header 3</source>
-        <translation></translation>
+        <translation>כותרת 3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1168"/>
@@ -807,22 +807,22 @@
     <message>
         <location filename="../../fn.ui" line="1176"/>
         <source>&amp;Node Font</source>
-        <translation></translation>
+        <translation>&amp;גופן המפרק</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1179"/>
         <source>Node Font</source>
-        <translation></translation>
+        <translation>גופן המפרק</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1184"/>
         <source>Scale I&amp;mage(s)</source>
-        <translation></translation>
+        <translation>שינוי &amp;גודל תמונות</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1192"/>
         <source>Paste &amp;HTML</source>
-        <translation></translation>
+        <translation>ה&amp;דבקת HTML</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1195"/>
@@ -832,7 +832,7 @@
     <message>
         <location filename="../../fn.ui" line="1203"/>
         <source>&amp;Tags</source>
-        <translation></translation>
+        <translation>&amp;תגיות</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1206"/>
@@ -842,7 +842,7 @@
     <message>
         <location filename="../../fn.ui" line="1214"/>
         <source>Insert Lin&amp;k</source>
-        <translation></translation>
+        <translation>הוספת &amp;קישור</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1217"/>
@@ -852,12 +852,12 @@
     <message>
         <location filename="../../fn.ui" line="1222"/>
         <source>C&amp;opy Link</source>
-        <translation></translation>
+        <translation>ה&amp;עתקת קישור</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1230"/>
         <source>I&amp;nsert Table</source>
-        <translation></translation>
+        <translation>הוספת &amp;טבלה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1233"/>
@@ -867,47 +867,47 @@
     <message>
         <location filename="../../fn.ui" line="1238"/>
         <source>Append Row</source>
-        <translation></translation>
+        <translation>הוספת שורה בהתחלה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1243"/>
         <source>Delete Row</source>
-        <translation></translation>
+        <translation>מחיקת שורה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1248"/>
         <source>Append Column</source>
-        <translation></translation>
+        <translation>הוספת עמודה בהתחלה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1253"/>
         <source>Delete Column</source>
-        <translation></translation>
+        <translation>מחיקת עמודה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1258"/>
         <source>Merge Cells</source>
-        <translation></translation>
+        <translation>מיזוג תאים</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1263"/>
         <source>Prepend Row</source>
-        <translation></translation>
+        <translation>הוספת שורה בסוף</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1268"/>
         <source>Prepend Column</source>
-        <translation></translation>
+        <translation>הוספת עמודה בסוף</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1276"/>
         <source>Export &amp;HTML</source>
-        <translation></translation>
+        <translation>יי&amp;צוא HTML</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1281"/>
         <source>Save Ima&amp;ge(s)</source>
-        <translation></translation>
+        <translation>&amp;שמירת תמונות</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1292"/>
@@ -917,7 +917,7 @@
     <message>
         <location filename="../../fn.ui" line="1295"/>
         <source>Ctrl+Alt+Shift+Left</source>
-        <translation></translation>
+        <translation>‪Ctrl+Alt+Shift+שמאלה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1306"/>
@@ -927,18 +927,18 @@
     <message>
         <location filename="../../fn.ui" line="1309"/>
         <source>Ctrl+Alt+Shift+Right</source>
-        <translation></translation>
+        <translation>‪Ctrl+Alt+Shift+ימינה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1314"/>
         <location filename="../../fn.ui" line="1317"/>
         <source>Menu</source>
-        <translation></translation>
+        <translation>תפריט</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1325"/>
         <source>Node &amp;Icon</source>
-        <translation></translation>
+        <translation>&amp;סמל מפרק</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1328"/>
@@ -948,7 +948,7 @@
     <message>
         <location filename="../../fn.cpp" line="2313"/>
         <source>Node Icon</source>
-        <translation></translation>
+        <translation>סמל מפרק</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="349"/>
@@ -966,19 +966,19 @@
         <location filename="../../fn.cpp" line="355"/>
         <source>Ctrl+=</source>
         <comment>Zoom in</comment>
-        <translation></translation>
+        <translation>‪Ctrl+=</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="356"/>
         <source>Ctrl++</source>
         <comment>Zoom in</comment>
-        <translation></translation>
+        <translation>‪Ctrl++</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="357"/>
         <source>Ctrl+-</source>
         <comment>Zoom out</comment>
-        <translation></translation>
+        <translation>‪Ctrl+-</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="358"/>
@@ -990,52 +990,53 @@
         <location filename="../../fn.cpp" line="560"/>
         <location filename="../../fn.cpp" line="4213"/>
         <source>&amp;Raise/Hide</source>
-        <translation></translation>
+        <translation>ה&amp;רמה/הסתרה</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="733"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;New note?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;פתקית חדשה?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="734"/>
         <source>&lt;center&gt;&lt;i&gt;Do you really want to leave this document&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;and create an empty one?&lt;/i&gt;&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;לצאת מהמסמך הזה&lt;/center&gt;
+&lt;center&gt;וליצור אחד ריק?&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="737"/>
         <location filename="../../fn.cpp" line="2148"/>
         <location filename="../../fn.cpp" line="3857"/>
         <source>Yes</source>
-        <translation></translation>
+        <translation>כן</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="738"/>
         <location filename="../../fn.cpp" line="2149"/>
         <location filename="../../fn.cpp" line="3858"/>
         <source>No</source>
-        <translation></translation>
+        <translation>לא</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="809"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Save changes?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;לשמור את השינויים?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="811"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been modified.&lt;/i&gt;&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;המסמך נערך.&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="813"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been removed.&lt;/i&gt;&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;המסמך הוסר.&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="818"/>
         <source>Discard changes</source>
-        <translation></translation>
+        <translation>התעלמות מהשינויים</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="819"/>
@@ -1049,47 +1050,48 @@
         <location filename="../../fn.cpp" line="5001"/>
         <location filename="../../fn.cpp" line="5116"/>
         <source>Cancel</source>
-        <translation></translation>
+        <translation>ביטול</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1096"/>
         <source>Open file...</source>
-        <translation></translation>
+        <translation>פתיחת קובץ…</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1236"/>
         <location filename="../../fn.cpp" line="4873"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be saved!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;לא ניתן לשמור!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1239"/>
         <location filename="../../fn.cpp" line="2830"/>
         <location filename="../../fn.cpp" line="4876"/>
         <source>Close</source>
-        <translation></translation>
+        <translation>סגירה</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1327"/>
         <location filename="../../fn.cpp" line="1348"/>
         <source>Save As...</source>
-        <translation></translation>
+        <translation>שמירה בשם…</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2145"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Delete this node?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;למחוק את המפרק הזה?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2146"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;i&gt;Warning!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
 &lt;center&gt;This action cannot be undone.&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;&lt;b&gt;אזהרה!&lt;/b&gt;&lt;/center&gt;
+&lt;center&gt;פעולה זו אינה הפיכה.&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2247"/>
         <source>Tags</source>
-        <translation></translation>
+        <translation>תגיות</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2262"/>
@@ -1102,103 +1104,103 @@
         <location filename="../../fn.cpp" line="5002"/>
         <location filename="../../fn.cpp" line="5117"/>
         <source>OK</source>
-        <translation></translation>
+        <translation>אישור</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2450"/>
         <location filename="../../fn.cpp" line="2483"/>
         <source>&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</source>
-        <translation></translation>
+        <translation>&lt;b&gt;מפרקים ראשיים:&lt;/b&gt;%1&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;כל המפרקים:&lt;/b&gt;%2</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2456"/>
         <location filename="../../fn.cpp" line="2489"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</source>
-        <translation></translation>
+        <translation>&lt;b&gt;הערה:&lt;/b&gt; %1&lt;br&gt;&lt;b&gt;מפרקים ראשיים:&lt;/b&gt; %2&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;כל המפרקים:&lt;/b&gt; %3</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2817"/>
         <source>%1 Matches</source>
-        <translation></translation>
+        <translation>%1 תוצאות</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2819"/>
         <source>One Match</source>
-        <translation></translation>
+        <translation>תוצאה אחת</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2821"/>
         <location filename="../../fn.cpp" line="3144"/>
         <source>No Match</source>
-        <translation></translation>
+        <translation>אין תוצאות</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2936"/>
         <location filename="../../fn.cpp" line="2988"/>
         <source>Replacement</source>
-        <translation></translation>
+        <translation>החלפה</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3253"/>
         <source>No Replacement</source>
-        <translation></translation>
+        <translation>אין החלפה</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3255"/>
         <source>One Replacement</source>
-        <translation></translation>
+        <translation>החלפה אחת</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3257"/>
         <source>%1 Replacements</source>
-        <translation></translation>
+        <translation>%1 החלפות</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3421"/>
         <source>Insert Link</source>
-        <translation></translation>
+        <translation>הוספת קישור</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2321"/>
         <location filename="../../fn.cpp" line="3499"/>
         <source>Image path</source>
-        <translation></translation>
+        <translation>נתיב לתמונה</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2325"/>
         <location filename="../../fn.cpp" line="3503"/>
         <source>Open image</source>
-        <translation></translation>
+        <translation>פתיחת תמונה</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3511"/>
         <location filename="../../fn.cpp" line="3672"/>
         <source>Scaling percentage</source>
-        <translation></translation>
+        <translation>אחוז שינוי גודל</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2343"/>
         <location filename="../../fn.cpp" line="3620"/>
         <source>Open Image...</source>
-        <translation></translation>
+        <translation>פתיחת תמונה…</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="562"/>
         <location filename="../../fn.cpp" line="4201"/>
         <source>&amp;Raise</source>
-        <translation></translation>
+        <translation>ה&amp;רמה</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="765"/>
         <source>New Node</source>
-        <translation></translation>
+        <translation>מפרק חדש</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1098"/>
         <location filename="../../fn.cpp" line="1329"/>
         <location filename="../../fn.cpp" line="1350"/>
         <source>FeatherNotes documents (*.fnx);;All Files (*)</source>
-        <translation></translation>
+        <translation>מסמכי FeatherNotes‏ (‎*.fnx);;כל הקבצים (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1311"/>
@@ -1209,7 +1211,7 @@
         <location filename="../../fn.cpp" line="4930"/>
         <location filename="../../fn.cpp" line="4956"/>
         <source>Untitled</source>
-        <translation></translation>
+        <translation>ללא כותרת</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2015"/>
@@ -1224,18 +1226,18 @@
     <message>
         <location filename="../../fn.cpp" line="2144"/>
         <source>Deletion</source>
-        <translation></translation>
+        <translation>מחיקה</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2257"/>
         <source>Tag(s) for this node</source>
-        <translation></translation>
+        <translation>תגיות למפרק זה</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2345"/>
         <location filename="../../fn.cpp" line="3622"/>
         <source>Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)</source>
-        <translation></translation>
+        <translation>קובצי תמונות (‎*.svg *.png *.jpg *.jpeg *.bmp *.gif);;כל הקבצים (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2525"/>
@@ -1251,7 +1253,7 @@
         <location filename="../../fn.cpp" line="3506"/>
         <location filename="../../fn.cpp" line="3668"/>
         <source>Scale to</source>
-        <translation></translation>
+        <translation>שינוי גודל לכדי</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3510"/>
@@ -1262,12 +1264,12 @@
     <message>
         <location filename="../../fn.cpp" line="3662"/>
         <source>Scale Image(s)</source>
-        <translation></translation>
+        <translation>שינוי גודל תמונות</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3821"/>
         <source>untitled</source>
-        <translation></translation>
+        <translation>ללא כותרת</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3852"/>
@@ -1277,150 +1279,151 @@
     <message>
         <location filename="../../fn.cpp" line="3853"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Image cannot be saved! Retry?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;לא ניתן לשמור את התמונה! לנסות שוב?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3854"/>
         <source>&lt;center&gt;Maybe you did not choose a proper extension&lt;/center&gt;
 &lt;center&gt;or do not have write permission.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;אולי לא בחרת את הסיומת הנכונה&lt;/center&gt;
+&lt;center&gt;או שיש בעיית הרשאות.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3881"/>
         <source>Save Image As...</source>
-        <translation></translation>
+        <translation>שמירת תמונה בשם…</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3883"/>
         <source>Image Files (*.png *.jpg *.jpeg *.bmp);;All Files (*)</source>
-        <translation></translation>
+        <translation>קובצי תמונות (‎*.png *.jpg *.jpeg *.bmp);;כל הקבצים (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3933"/>
         <source>Insert Table</source>
-        <translation></translation>
+        <translation>הוספת טבלה</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3939"/>
         <source>Rows:</source>
-        <translation></translation>
+        <translation>שורות:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3945"/>
         <source>Columns:</source>
-        <translation></translation>
+        <translation>עמודות:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4669"/>
         <source>Print Document</source>
-        <translation></translation>
+        <translation>הדפסת מסמך</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4733"/>
         <source>Export HTML</source>
-        <translation></translation>
+        <translation>ייצוא HTML</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4738"/>
         <source>Export:</source>
-        <translation></translation>
+        <translation>ייצוא:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4739"/>
         <source>&amp;Current node</source>
-        <translation></translation>
+        <translation>מפרק &amp;נוכחי</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4741"/>
         <source>With all &amp;sub-nodes</source>
-        <translation></translation>
+        <translation>&amp;עם כל תת־המפרקים</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4742"/>
         <source>&amp;All nodes</source>
-        <translation></translation>
+        <translation>&amp;כל המפרקים</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4754"/>
         <source>Output file:</source>
-        <translation></translation>
+        <translation>קובץ פלט:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4773"/>
         <source>Select path</source>
-        <translation></translation>
+        <translation>בחירת נתיב</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4961"/>
         <source>Save HTML As...</source>
-        <translation></translation>
+        <translation>לשמור HTML בשם…</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4963"/>
         <source>HTML Files (*.html *.htm)</source>
-        <translation></translation>
+        <translation>קובצי HTML‏ (‎*.html *.htm)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4984"/>
         <source>Set Password</source>
-        <translation></translation>
+        <translation>הגדרת ססמה</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4992"/>
         <source>Type password</source>
-        <translation></translation>
+        <translation>נא להקליד ססמה</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4997"/>
         <source>Retype password</source>
-        <translation></translation>
+        <translation>להקליד את הססמה שוב</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5072"/>
         <source>&lt;center&gt;Passwords were different. Retry!&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;הססמאות אינן זהות. נא לנסות שוב!&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5104"/>
         <location filename="../../fn.cpp" line="5112"/>
         <source>Enter Password</source>
-        <translation></translation>
+        <translation>נא להקליד ססמה</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5178"/>
         <source>&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;ססמה שגויה. נא לנסות שוב!&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5217"/>
         <source>A lightweight notes manager</source>
-        <translation></translation>
+        <translation>מנהל פתקיות קליל</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5218"/>
         <source>based on Qt5</source>
-        <translation></translation>
+        <translation>מבוסס על Qt5</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5219"/>
         <source>Author</source>
-        <translation></translation>
+        <translation>יוצר</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5221"/>
         <location filename="../../fn.cpp" line="5222"/>
         <source>About FeatherNotes</source>
-        <translation></translation>
+        <translation>על אודות FeatherNotes</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5221"/>
         <source>Translators</source>
-        <translation></translation>
+        <translation>מתרגמים</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5220"/>
         <source>aka.</source>
-        <translation></translation>
+        <translation>גם בשם</translation>
     </message>
 </context>
 <context>
@@ -1428,7 +1431,7 @@
     <message>
         <location filename="../../lineedit.cpp" line="35"/>
         <source>Clear text (Ctrl+K)</source>
-        <translation></translation>
+        <translation>טקסט פשוט (Ctrl+K)</translation>
     </message>
     <message>
         <location filename="../../lineedit.cpp" line="81"/>
@@ -1442,12 +1445,12 @@
     <message>
         <location filename="../../predDialog.ui" line="14"/>
         <source>Preferences</source>
-        <translation></translation>
+        <translation>העדפות</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="27"/>
         <source>Window</source>
-        <translation></translation>
+        <translation>חלון</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="36"/>
@@ -1455,17 +1458,20 @@
 this dialog and also on exit.
 
 Uncheck to set a fixed size!</source>
-        <translation></translation>
+        <translation>שמירת גודל החלון לאחר סגירת
+תיבת דו־שיח זו וגם ביציאה.
+
+ניתן לבטל את הסימן כדי לקבוע גודל קבוע!</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="42"/>
         <source>Remember window &amp;size</source>
-        <translation></translation>
+        <translation>לזכור את &amp;גודל החלון</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="51"/>
         <source>Start with this size: </source>
-        <translation></translation>
+        <translation>להתחיל בגודל הזה: </translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="58"/>
@@ -1473,7 +1479,7 @@ Uncheck to set a fixed size!</source>
         <location filename="../../predDialog.ui" line="255"/>
         <location filename="../../predDialog.ui" line="269"/>
         <source> px</source>
-        <translation></translation>
+        <translation> פיקסלים</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="65"/>
@@ -1487,12 +1493,15 @@ Uncheck to set a fixed size!</source>
 this dialog and also on exit.
 
 Uncheck for a width ratio of 170/530.</source>
-        <translation></translation>
+        <translation>שמירת רוחב העץ לאחר סגירת
+דו־שיח זה וגם ביציאה.
+
+ניתן לבטל את הסימון לקבלת יחס רוחב של 170/530.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="103"/>
         <source>Remember &amp;tree width</source>
-        <translation></translation>
+        <translation>לזכור את &amp;רוחב העץ</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="110"/>
@@ -1502,12 +1511,17 @@ this dialog and also on exit.
 (This may not work correctly
 under GTK+ DE&apos;s like Unity
 and Cinnamon.)</source>
-        <translation></translation>
+        <translation>שמירת המיקום לאחר סגירת
+דו־שיח זה וגם ביציאה.
+
+(עשוי לא לפעול כראוי בסביבות
+שולחן עבודה מסוג GTK+‎ כגון Unity
+ו־Cinnamon.)</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="118"/>
         <source>Save &amp;position</source>
-        <translation></translation>
+        <translation>&amp;שמירת המיקום</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="125"/>
@@ -1516,71 +1530,79 @@ If checked, the titlebar close button iconifies
 the window to the systray instead of quitting.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation></translation>
+        <translation>ההחלטה האם יש להשתמש בסמל במגש המערכת.
+אם האפשרות מסומנת, כפתור הסגירה בשורת הכותרת
+יצמצם את החלון לתוך הסמל במקום לסגור את התכנית.
+
+נדרשת הפעלה מחדש של FeatherNotes כדי שהגדרה זו תיכנס לתוקף.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="132"/>
         <source>Add to s&amp;ystray</source>
-        <translation></translation>
+        <translation>הוספה למגש המ&amp;ערכת</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="157"/>
         <source>The command line option --tray
 can be used instead of this.</source>
-        <translation></translation>
+        <translation>ניתן להשתמש באפשרות ‎--tray
+בשורת הפקודה במקום הגדרה זו.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="161"/>
         <source>Start i&amp;conified to tray</source>
-        <translation></translation>
+        <translation>להתחיל ממוזער כ&amp;סמל במגש המערכת</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="170"/>
         <source>Merge the tree view with its surroundings?</source>
-        <translation></translation>
+        <translation>למזג את העץ עם סביבתו?</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="173"/>
         <source>Transparent t&amp;ree view</source>
-        <translation></translation>
+        <translation>תצוגת עץ &amp;שקופה</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="180"/>
         <source>By default, the active widget style determines
 the size of toolbar icons.</source>
-        <translation></translation>
+        <translation>כבררת מחדל, סגנון הווידג׳ט הפעיל
+מגדיר את גודל הסמלים בסרגל הכלים.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="184"/>
         <source>Small toolbar icons</source>
-        <translation></translation>
+        <translation>סמלים קטנים בסרגל הכלים</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="191"/>
         <source>Do not show t&amp;oolbar</source>
-        <translation></translation>
+        <translation>לא לה&amp;ציג סרגל כלים</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="198"/>
         <source>If the menubar is hidden,
 a menu button appears on the toolbar.</source>
-        <translation></translation>
+        <translation>אם סרגל התפריטים מוסתר,
+מופיע כפתור תפריט בסרגל הכלים.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="202"/>
         <source>Do not show &amp;menubar</source>
-        <translation></translation>
+        <translation>לא להציג את סרגל ה&amp;תפריטים</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="209"/>
         <source>Check this under Enlightenment (or, probably, another DE)
 to use the systray icon more easily!</source>
-        <translation></translation>
+        <translation>ניתן לבדוק זאת תחת Enlightenment (או אולי תחת סביבת שולחן
+עבודה אחרת) כדי להשתמש בסמל מגש המערכת ביתר קלות!</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="213"/>
         <source>Running &amp;under Enlightenment?</source>
-        <translation></translation>
+        <translation>מופעל ת&amp;חת Enlightenment?</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="238"/>
@@ -1592,39 +1614,48 @@ if it is on the left or right, the X-coordinate should be set.
 
 After choosing the coordinate shifts, put the window in a proper
 position and then restart FeatherNotes!</source>
-        <translation></translation>
+        <translation>חלק מסביבות שולחן העבודה (כגון Enlightenment) עשויים לשגות בדיווח
+על מיקום החלון. אם המצב, ניתן לשנות לתקן את התקלה מפה.
+
+אם הלוח הוא למטה או למעלה, ציר ה־Y אמור להיות מוגדר;
+אם הוא משמאל או מימין, ציר ה־X אמור להיות מוגדר.
+
+לאחר בחירת הזחת נקודות הציון, יש להציב את החלון במיקום
+ראוי ולאחר מכן להפעיל את FeatherNotes מחדש!</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="248"/>
         <source>Shifts (X × Y): </source>
-        <translation></translation>
+        <translation>הזחות (X × Y): </translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="314"/>
         <source>Text</source>
-        <translation></translation>
+        <translation>טקסט</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="323"/>
         <source>&amp;Wrap lines by default</source>
-        <translation></translation>
+        <translation>גלישת שורות כ&amp;בררת מחדל</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="330"/>
         <source>Auto-&amp;indent by default</source>
-        <translation></translation>
+        <translation>הזחה &amp;אוטומטית כבררת מחדל</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="337"/>
         <source>This covers parentheses, braces, brackets and quotes.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation></translation>
+        <translation>זה כולל סוגריים, סוגריים מסולסלים, סוגריים מרובעים ומירכאות.
+
+נדרשת הפעלה מחדש של FeatherNotes כדי שהשינוי ייכנס לתוקף.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="342"/>
         <source>Auto-&amp;bracket</source>
-        <translation></translation>
+        <translation>&amp;סוגריים אוטומטיים</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="349"/>
@@ -1643,23 +1674,24 @@ the user is typing and under proper circumstances.</source>
     <message>
         <location filename="../../predDialog.ui" line="363"/>
         <source>&amp;Auto-save every</source>
-        <translation></translation>
+        <translation>ל&amp;שמור אוטומטית בכל</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="370"/>
         <source> minute(s)</source>
-        <translation></translation>
+        <translation> דקות</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="404"/>
         <source>This is not a complete fix but
 prevents annoying scroll jumps.</source>
-        <translation></translation>
+        <translation>זה לא תיקון מושלם אבל זה מונע
+קפיצות מעצבנות בגלילה.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="408"/>
         <source>Workaround for &amp;Qt5&apos;s scroll jump bug</source>
-        <translation></translation>
+        <translation>מ&amp;עקף לתקלת הקפיצה בגלילה של Qt5</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="435"/>
@@ -1695,7 +1727,7 @@ prevents annoying scroll jumps.</source>
     <message>
         <location filename="../../pref.cpp" line="624"/>
         <source>Application restart is needed for changes to take effect.</source>
-        <translation>יש להפעיל את היישום מחדש כדי שהשינויים יחולו.</translation>
+        <translation>יש להפעיל את היישום מחדש כדי שהשינויים ייכנסו לתוקף.</translation>
     </message>
 </context>
 <context>
@@ -1703,7 +1735,7 @@ prevents annoying scroll jumps.</source>
     <message>
         <location filename="../../helpDialog.ui" line="14"/>
         <source>Help</source>
-        <translation></translation>
+        <translation>עזרה</translation>
     </message>
 </context>
 <context>
@@ -1712,7 +1744,7 @@ prevents annoying scroll jumps.</source>
         <location filename="../../domitem.cpp" line="100"/>
         <location filename="../../domitem.cpp" line="137"/>
         <source>New Node</source>
-        <translation></translation>
+        <translation>מפרק חדש</translation>
     </message>
 </context>
 </TS>
