@@ -5,6 +5,7 @@ Comment=Lightweight notes manager
 Comment[cs]=Nenáročný správce poznámek
 Comment[lt]=Supaprastinta užrašų tvarkytuvė
 Comment[pl]=Lekki menedżer notatek
+Comment[ru]=Лёгкий менеджер заметок
 Exec=feathernotes %f
 Icon=feathernotes
 Terminal=false
