@@ -106,17 +106,17 @@
     <message>
         <location filename="../../fn.ui" line="219"/>
         <source>&amp;File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Fájl</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="238"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Sz&amp;erkesztés</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="253"/>
         <source>For&amp;mat</source>
-        <translation type="unfinished"></translation>
+        <translation>For&amp;mátum</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="285"/>
@@ -126,23 +126,23 @@
     <message>
         <location filename="../../fn.ui" line="308"/>
         <source>&amp;Options</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Beállítások</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="320"/>
         <source>&amp;Search</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Keresés</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="327"/>
         <location filename="../../fn.ui" line="975"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Súgó</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="424"/>
         <source>Find:</source>
-        <translation type="unfinished"></translation>
+        <translation>Keresés:</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="431"/>
@@ -187,84 +187,84 @@
     <message>
         <location filename="../../fn.ui" line="502"/>
         <source>F10</source>
-        <translation type="unfinished">F10</translation>
+        <translation>F10</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="519"/>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Mentés</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="522"/>
         <location filename="../../fn.cpp" line="817"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Mentés</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="525"/>
         <source>Ctrl+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+S</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="530"/>
         <location filename="../../fn.cpp" line="566"/>
         <source>&amp;Open</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Megnyitás</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="533"/>
         <source>Open a file</source>
-        <translation type="unfinished"></translation>
+        <translation>Fájl megnyitása</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="536"/>
         <source>Ctrl+O</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+O</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="544"/>
         <source>&amp;Undo</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;visszavonás</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="547"/>
         <source>Undo</source>
-        <translation type="unfinished"></translation>
+        <translation>Visszavonás</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="550"/>
         <source>Ctrl+Z</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Z</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="558"/>
         <source>&amp;Redo</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Mégis</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="561"/>
         <source>Redo</source>
-        <translation type="unfinished"></translation>
+        <translation>Mégis</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="564"/>
         <source>Ctrl+Shift+Z</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+Z</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="572"/>
         <source>&amp;Find</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Keresés</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="575"/>
         <source>Show/hide searchbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Keresősáv megjelenítése/elrejtése</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="578"/>
         <source>Ctrl+F</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+F</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="586"/>
@@ -279,52 +279,52 @@
     <message>
         <location filename="../../fn.ui" line="592"/>
         <source>Ctrl+E</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+E</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="603"/>
         <source>&amp;Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Félkövér</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="606"/>
         <source>Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>Félkövér</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="609"/>
         <source>Ctrl+B</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+B</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="620"/>
         <source>&amp;Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Dőlt</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="623"/>
         <source>Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>Dőlt</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="626"/>
         <source>Ctrl+I</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+I</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="637"/>
         <source>&amp;Underline</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Aláhúzott</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="640"/>
         <source>Underline</source>
-        <translation type="unfinished"></translation>
+        <translation>Aláhúzott</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="643"/>
         <source>Ctrl+U</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+U</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="654"/>
@@ -339,42 +339,42 @@
     <message>
         <location filename="../../fn.ui" line="660"/>
         <source>Ctrl+T</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="668"/>
         <source>Te&amp;xt Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Szö&amp;vegszín</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="671"/>
         <source>Text color</source>
-        <translation type="unfinished"></translation>
+        <translation>Szövegszín</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="674"/>
         <source>Alt+Shift+T</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="682"/>
         <source>Back&amp;ground Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Há&amp;ttérszín</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="685"/>
         <source>Background color</source>
-        <translation type="unfinished"></translation>
+        <translation>Háttérszín</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="688"/>
         <source>Alt+Shift+B</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+B</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="693"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Beállítások</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="698"/>
@@ -385,27 +385,27 @@
     <message>
         <location filename="../../fn.ui" line="701"/>
         <source>Ctrl+Alt+Shift+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Alt+Shift+N</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="709"/>
         <source>Save &amp;As</source>
-        <translation type="unfinished"></translation>
+        <translation>Mentés máské&amp;nt</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="712"/>
         <source>Ctrl+Shift+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+S</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="720"/>
         <source>&amp;Print</source>
-        <translation type="unfinished"></translation>
+        <translation>N&amp;yomtatás</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="723"/>
         <source>Ctrl+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+P</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="731"/>
@@ -415,63 +415,63 @@
     <message>
         <location filename="../../fn.ui" line="739"/>
         <source>Set Pass&amp;word</source>
-        <translation type="unfinished"></translation>
+        <translation>Jelszó b&amp;eállítása</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="744"/>
         <location filename="../../fn.cpp" line="568"/>
         <source>&amp;Quit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kilépés</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="747"/>
         <source>Ctrl+Q</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Q</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="755"/>
         <source>&amp;Cut</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kivágás</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="758"/>
         <source>Ctrl+X</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+X</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="766"/>
         <source>C&amp;opy</source>
-        <translation type="unfinished"></translation>
+        <translation>Má&amp;solás</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="769"/>
         <source>Ctrl+C</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+C</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="777"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Beillesztés</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="780"/>
         <source>Ctrl+V</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+V</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="788"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Törlés</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="796"/>
         <source>&amp;Select All</source>
-        <translation type="unfinished"></translation>
+        <translation>Ö&amp;sszes kijelölése</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="799"/>
         <source>Ctrl+A</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+A</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="807"/>
@@ -487,7 +487,7 @@
     <message>
         <location filename="../../fn.ui" line="813"/>
         <source>Ctrl+Alt+Shift+I</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Alt+Shift+I</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="821"/>
@@ -497,7 +497,7 @@
     <message>
         <location filename="../../fn.ui" line="824"/>
         <source>Ctrl+Shift+Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+Le</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="832"/>
@@ -507,7 +507,7 @@
     <message>
         <location filename="../../fn.ui" line="835"/>
         <source>Ctrl+Shift+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+Fel</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="843"/>
@@ -517,7 +517,7 @@
     <message>
         <location filename="../../fn.ui" line="846"/>
         <source>Ctrl+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="854"/>
@@ -527,7 +527,7 @@
     <message>
         <location filename="../../fn.ui" line="857"/>
         <source>Ctrl+Shift+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+N</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="865"/>
@@ -537,7 +537,7 @@
     <message>
         <location filename="../../fn.ui" line="868"/>
         <source>Ctrl+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+D</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="876"/>
@@ -547,7 +547,7 @@
     <message>
         <location filename="../../fn.ui" line="879"/>
         <source>Alt+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Fel</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="887"/>
@@ -557,7 +557,7 @@
     <message>
         <location filename="../../fn.ui" line="890"/>
         <source>Alt+Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Le</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="898"/>
@@ -567,7 +567,7 @@
     <message>
         <location filename="../../fn.ui" line="901"/>
         <source>Ctrl+Shift+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+R</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="906"/>
@@ -577,7 +577,7 @@
     <message>
         <location filename="../../fn.ui" line="909"/>
         <source>Ctrl+Shift+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+D</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="917"/>
@@ -592,7 +592,7 @@
     <message>
         <location filename="../../fn.ui" line="934"/>
         <source>Ctrl+W</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+W</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="948"/>
@@ -602,7 +602,7 @@
     <message>
         <location filename="../../fn.ui" line="951"/>
         <source>Ctrl+Shift+I</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+I</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="956"/>
@@ -612,27 +612,27 @@
     <message>
         <location filename="../../fn.ui" line="959"/>
         <source>Ctrl+Shift+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+P</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="967"/>
         <source>Find and &amp;Replace</source>
-        <translation type="unfinished"></translation>
+        <translation>Keresés és &amp;csere</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="970"/>
         <source>Ctrl+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+R</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="978"/>
         <source>Ctrl+H</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+H</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="983"/>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Névjegy</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="991"/>
@@ -642,32 +642,32 @@
     <message>
         <location filename="../../fn.ui" line="1002"/>
         <source>Superscrip&amp;t</source>
-        <translation type="unfinished"></translation>
+        <translation>Fel&amp;ső index</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1005"/>
         <source>Superscript</source>
-        <translation type="unfinished"></translation>
+        <translation>Felső index</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1008"/>
         <source>Alt+Shift+U</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+U</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1019"/>
         <source>Subscri&amp;pt</source>
-        <translation type="unfinished"></translation>
+        <translation>A&amp;lsó index</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1022"/>
         <source>Subscript</source>
-        <translation type="unfinished"></translation>
+        <translation>Alsó index</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1025"/>
         <source>Alt+Shift+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+S</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1036"/>
@@ -677,12 +677,12 @@
     <message>
         <location filename="../../fn.ui" line="1039"/>
         <source>Align center</source>
-        <translation type="unfinished"></translation>
+        <translation>Középre igazítás</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1042"/>
         <source>Alt+Shift+Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+Le</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1053"/>
@@ -692,12 +692,12 @@
     <message>
         <location filename="../../fn.ui" line="1056"/>
         <source>Align right</source>
-        <translation type="unfinished"></translation>
+        <translation>Jobbra igazítás</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1059"/>
         <source>Alt+Shift+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+Bal</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1070"/>
@@ -707,27 +707,27 @@
     <message>
         <location filename="../../fn.ui" line="1073"/>
         <source>Align left</source>
-        <translation type="unfinished"></translation>
+        <translation>Balra igazítás</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1076"/>
         <source>Alt+Shift+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+Bal</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1087"/>
         <source>&amp;Justify</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Sorkizárt</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1090"/>
         <source>Justify</source>
-        <translation type="unfinished"></translation>
+        <translation>Sorkizárt</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1093"/>
         <source>Alt+Shift+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+Fel</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1101"/>
@@ -737,7 +737,7 @@
     <message>
         <location filename="../../fn.ui" line="1104"/>
         <source>Ctrl+M</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+M</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1112"/>
@@ -747,7 +747,7 @@
     <message>
         <location filename="../../fn.ui" line="1115"/>
         <source>Alt+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Balra</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1123"/>
@@ -757,7 +757,7 @@
     <message>
         <location filename="../../fn.ui" line="1126"/>
         <source>Alt+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Jobb</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1134"/>
@@ -772,7 +772,7 @@
     <message>
         <location filename="../../fn.ui" line="1140"/>
         <source>Ctrl+2</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1148"/>
@@ -787,7 +787,7 @@
     <message>
         <location filename="../../fn.ui" line="1154"/>
         <source>Ctrl+1</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+1</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1162"/>
@@ -802,7 +802,7 @@
     <message>
         <location filename="../../fn.ui" line="1168"/>
         <source>Ctrl+3</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1176"/>
@@ -827,7 +827,7 @@
     <message>
         <location filename="../../fn.ui" line="1195"/>
         <source>Ctrl+Shift+V</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+V</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1203"/>
@@ -837,7 +837,7 @@
     <message>
         <location filename="../../fn.ui" line="1206"/>
         <source>Ctrl+Shift+T</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1214"/>
@@ -847,7 +847,7 @@
     <message>
         <location filename="../../fn.ui" line="1217"/>
         <source>Ctrl+L</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+L</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1222"/>
@@ -862,7 +862,7 @@
     <message>
         <location filename="../../fn.ui" line="1233"/>
         <source>Ctrl+Alt+Shift+T</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Alt+Shift+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1238"/>
@@ -917,7 +917,7 @@
     <message>
         <location filename="../../fn.ui" line="1295"/>
         <source>Ctrl+Alt+Shift+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Alt+Shift+Bal</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1306"/>
@@ -927,13 +927,13 @@
     <message>
         <location filename="../../fn.ui" line="1309"/>
         <source>Ctrl+Alt+Shift+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Alt+Shift+Jobb</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1314"/>
         <location filename="../../fn.ui" line="1317"/>
         <source>Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Menü</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1325"/>
@@ -943,7 +943,7 @@
     <message>
         <location filename="../../fn.ui" line="1328"/>
         <source>Ctrl+Shift+C</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+C</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2313"/>
@@ -954,37 +954,37 @@
         <location filename="../../fn.cpp" line="349"/>
         <source>F11</source>
         <comment>Fullscreen</comment>
-        <translation type="unfinished">F11</translation>
+        <translation>F11</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="352"/>
         <source>Ctrl+Shift+W</source>
         <comment>Default size</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+W</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="355"/>
         <source>Ctrl+=</source>
         <comment>Zoom in</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+=</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="356"/>
         <source>Ctrl++</source>
         <comment>Zoom in</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl++</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="357"/>
         <source>Ctrl+-</source>
         <comment>Zoom out</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+-</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="358"/>
         <source>Ctrl+0</source>
         <comment>Unzoom</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+0</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="560"/>
@@ -1008,14 +1008,14 @@
         <location filename="../../fn.cpp" line="2148"/>
         <location filename="../../fn.cpp" line="3857"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Igen</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="738"/>
         <location filename="../../fn.cpp" line="2149"/>
         <location filename="../../fn.cpp" line="3858"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Nem</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="809"/>
@@ -1049,7 +1049,7 @@
         <location filename="../../fn.cpp" line="5001"/>
         <location filename="../../fn.cpp" line="5116"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Mégse</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1096"/>
@@ -1067,7 +1067,7 @@
         <location filename="../../fn.cpp" line="2830"/>
         <location filename="../../fn.cpp" line="4876"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Bezárás</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1327"/>
@@ -1102,7 +1102,7 @@
         <location filename="../../fn.cpp" line="5002"/>
         <location filename="../../fn.cpp" line="5117"/>
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation>OK</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2450"/>
@@ -1124,13 +1124,13 @@
     <message>
         <location filename="../../fn.cpp" line="2819"/>
         <source>One Match</source>
-        <translation type="unfinished"></translation>
+        <translation>Egy egyezés</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2821"/>
         <location filename="../../fn.cpp" line="3144"/>
         <source>No Match</source>
-        <translation type="unfinished"></translation>
+        <translation>Nincs egyezés</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2936"/>
@@ -1162,13 +1162,13 @@
         <location filename="../../fn.cpp" line="2321"/>
         <location filename="../../fn.cpp" line="3499"/>
         <source>Image path</source>
-        <translation type="unfinished"></translation>
+        <translation>Kép útvonala</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2325"/>
         <location filename="../../fn.cpp" line="3503"/>
         <source>Open image</source>
-        <translation type="unfinished"></translation>
+        <translation>Kép megnyitása...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3511"/>
@@ -1180,7 +1180,7 @@
         <location filename="../../fn.cpp" line="2343"/>
         <location filename="../../fn.cpp" line="3620"/>
         <source>Open Image...</source>
-        <translation type="unfinished"></translation>
+        <translation>Kép megnyitása...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="562"/>
@@ -1209,7 +1209,7 @@
         <location filename="../../fn.cpp" line="4930"/>
         <location filename="../../fn.cpp" line="4956"/>
         <source>Untitled</source>
-        <translation type="unfinished"></translation>
+        <translation>Névtelen</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2015"/>
@@ -1257,7 +1257,7 @@
         <location filename="../../fn.cpp" line="3510"/>
         <location filename="../../fn.cpp" line="3671"/>
         <source>%</source>
-        <translation type="unfinished"></translation>
+        <translation>%</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3662"/>
@@ -1267,12 +1267,12 @@
     <message>
         <location filename="../../fn.cpp" line="3821"/>
         <source>untitled</source>
-        <translation type="unfinished"></translation>
+        <translation>névtelen</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3852"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiba</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3853"/>
@@ -1348,7 +1348,7 @@
     <message>
         <location filename="../../fn.cpp" line="4773"/>
         <source>Select path</source>
-        <translation type="unfinished"></translation>
+        <translation>Útvonal kiválasztása</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4961"/>
@@ -1358,12 +1358,12 @@
     <message>
         <location filename="../../fn.cpp" line="4963"/>
         <source>HTML Files (*.html *.htm)</source>
-        <translation type="unfinished"></translation>
+        <translation>HTML fájlok (*.html *.htm)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4984"/>
         <source>Set Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Jelszó beállítása</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4992"/>
@@ -1373,54 +1373,54 @@
     <message>
         <location filename="../../fn.cpp" line="4997"/>
         <source>Retype password</source>
-        <translation type="unfinished"></translation>
+        <translation>Jelszó újra</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5072"/>
         <source>&lt;center&gt;Passwords were different. Retry!&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;A jelszavak nem egyeznek. Próbálja újra!&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5104"/>
         <location filename="../../fn.cpp" line="5112"/>
         <source>Enter Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Jelszó</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5178"/>
         <source>&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;Hibás jelszó. Próbálja újra!&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5217"/>
         <source>A lightweight notes manager</source>
-        <translation type="unfinished"></translation>
+        <translation>Egy könnyed jegyzetkezelő</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5218"/>
         <source>based on Qt5</source>
-        <translation type="unfinished"></translation>
+        <translation>amely a Qt5-ön alapul</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5219"/>
         <source>Author</source>
-        <translation type="unfinished"></translation>
+        <translation>Szerző</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5221"/>
         <location filename="../../fn.cpp" line="5222"/>
         <source>About FeatherNotes</source>
-        <translation type="unfinished"></translation>
+        <translation>FeatherNotes névjegye</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5221"/>
         <source>Translators</source>
-        <translation type="unfinished"></translation>
+        <translation>Fordítók</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5220"/>
         <source>aka.</source>
-        <translation type="unfinished"></translation>
+        <translation>vagyis</translation>
     </message>
 </context>
 <context>
@@ -1434,7 +1434,7 @@
         <location filename="../../lineedit.cpp" line="81"/>
         <source>Ctrl+K</source>
         <comment>Clear text</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+K</translation>
     </message>
 </context>
 <context>
@@ -1442,12 +1442,12 @@
     <message>
         <location filename="../../predDialog.ui" line="14"/>
         <source>Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Beállítások</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="27"/>
         <source>Window</source>
-        <translation type="unfinished"></translation>
+        <translation>Ablak</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="36"/>
@@ -1460,12 +1460,12 @@ Uncheck to set a fixed size!</source>
     <message>
         <location filename="../../predDialog.ui" line="42"/>
         <source>Remember window &amp;size</source>
-        <translation type="unfinished"></translation>
+        <translation>Ablakméret megjegyzé&amp;se</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="51"/>
         <source>Start with this size: </source>
-        <translation type="unfinished"></translation>
+        <translation>Indulás ezzel a mérettel: </translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="58"/>
@@ -1473,13 +1473,13 @@ Uncheck to set a fixed size!</source>
         <location filename="../../predDialog.ui" line="255"/>
         <location filename="../../predDialog.ui" line="269"/>
         <source> px</source>
-        <translation type="unfinished"></translation>
+        <translation> px</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="65"/>
         <location filename="../../predDialog.ui" line="262"/>
         <source> × </source>
-        <translation type="unfinished"></translation>
+        <translation> × </translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="97"/>
@@ -1602,7 +1602,7 @@ position and then restart FeatherNotes!</source>
     <message>
         <location filename="../../predDialog.ui" line="314"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Szöveg</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="323"/>
@@ -1641,12 +1641,12 @@ the user is typing and under proper circumstances.</source>
     <message>
         <location filename="../../predDialog.ui" line="363"/>
         <source>&amp;Auto-save every</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Automatikus mentés minden</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="370"/>
         <source> minute(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>percben</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="404"/>
@@ -1662,22 +1662,22 @@ prevents annoying scroll jumps.</source>
     <message>
         <location filename="../../predDialog.ui" line="435"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Gyorsbillentyűk</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="454"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Művelet</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="459"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>Kombináció</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="467"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Alapértelmezett</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="345"/>
@@ -1693,7 +1693,7 @@ prevents annoying scroll jumps.</source>
     <message>
         <location filename="../../pref.cpp" line="624"/>
         <source>Application restart is needed for changes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Az érvényesítéshez újra meg kell nyitni az ablakot.</translation>
     </message>
 </context>
 <context>
@@ -1701,7 +1701,7 @@ prevents annoying scroll jumps.</source>
     <message>
         <location filename="../../helpDialog.ui" line="14"/>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Segítség</translation>
     </message>
 </context>
 <context>
