@@ -56,7 +56,7 @@
     <message>
         <location filename="../../fn.ui" line="128"/>
         <source>Search only in tags (Shift+F7)</source>
-        <translation type="unfinished"></translation>
+        <translation>Keresés a címkékben (Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="131"/>
@@ -66,7 +66,7 @@
     <message>
         <location filename="../../fn.ui" line="144"/>
         <source>Search in all nodes (F7)</source>
-        <translation type="unfinished"></translation>
+        <translation>Keresés a bejegyzésekben (F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="147"/>
@@ -76,12 +76,12 @@
     <message>
         <location filename="../../fn.ui" line="186"/>
         <source>Whole Word (F6)</source>
-        <translation type="unfinished"></translation>
+        <translation>Teljes szó (F6)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="189"/>
         <source>Whole Word</source>
-        <translation type="unfinished"></translation>
+        <translation>Teljes szó</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="192"/>
@@ -91,17 +91,17 @@
     <message>
         <location filename="../../fn.ui" line="167"/>
         <source>Match Case (F5)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nagybetűérzékeny (F5)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="170"/>
         <source>Match Case</source>
-        <translation type="unfinished"></translation>
+        <translation>Nagybetűérzékeny</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="173"/>
         <source>F5</source>
-        <translation type="unfinished">F5</translation>
+        <translation>F5</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="219"/>
@@ -121,7 +121,7 @@
     <message>
         <location filename="../../fn.ui" line="285"/>
         <source>&amp;Tree</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Rendezés</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="308"/>
@@ -142,27 +142,27 @@
     <message>
         <location filename="../../fn.ui" line="424"/>
         <source>Find:</source>
-        <translation>Keresés:</translation>
+        <translation>Ezt:</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="431"/>
         <source>Replace with:</source>
-        <translation type="unfinished"></translation>
+        <translation>Erre:</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="444"/>
         <source>To be replaced</source>
-        <translation type="unfinished"></translation>
+        <translation>lecserélni</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="457"/>
         <source>Replacing text</source>
-        <translation type="unfinished"></translation>
+        <translation>a szövegre</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="467"/>
         <source>Previous (F9)</source>
-        <translation type="unfinished">Előző (F4) {9)?}</translation>
+        <translation>Előző (F9)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="470"/>
@@ -172,17 +172,17 @@
     <message>
         <location filename="../../fn.ui" line="483"/>
         <source>Next (F8)</source>
-        <translation type="unfinished">Következő (F3) {8)?}</translation>
+        <translation>Következő (F8)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="486"/>
         <source>F8</source>
-        <translation type="unfinished">F8</translation>
+        <translation>F8</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="499"/>
         <source>Replace all (F10)</source>
-        <translation type="unfinished"></translation>
+        <translation>Összes cseréje (F10)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="502"/>
@@ -269,12 +269,12 @@
     <message>
         <location filename="../../fn.ui" line="586"/>
         <source>&amp;Clear All Formats</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Formátumok törlése</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="589"/>
         <source>Clear all formats</source>
-        <translation type="unfinished"></translation>
+        <translation>Formátumok törlése</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="592"/>
@@ -329,12 +329,12 @@
     <message>
         <location filename="../../fn.ui" line="654"/>
         <source>&amp;Strike Through</source>
-        <translation type="unfinished"></translation>
+        <translation>Át&amp;húzott</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="657"/>
         <source>Strike through</source>
-        <translation type="unfinished"></translation>
+        <translation>Áthúzott</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="660"/>
@@ -380,7 +380,7 @@
         <location filename="../../fn.ui" line="698"/>
         <location filename="../../fn.cpp" line="565"/>
         <source>&amp;New Note</source>
-        <translation type="unfinished"></translation>
+        <translation>Ú&amp;j jegyzet</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="701"/>
@@ -476,13 +476,13 @@
     <message>
         <location filename="../../fn.ui" line="807"/>
         <source>E&amp;mbed Image</source>
-        <translation type="unfinished"></translation>
+        <translation>K&amp;ép beágyazása</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="810"/>
         <location filename="../../fn.cpp" line="3490"/>
         <source>Embed Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Kép beágyazása</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="813"/>
@@ -532,7 +532,7 @@
     <message>
         <location filename="../../fn.ui" line="865"/>
         <source>&amp;Delete Node</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bejegyzés törlése</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="868"/>
@@ -542,7 +542,7 @@
     <message>
         <location filename="../../fn.ui" line="876"/>
         <source>Move &amp;Up</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Fel</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="879"/>
@@ -552,7 +552,7 @@
     <message>
         <location filename="../../fn.ui" line="887"/>
         <source>Move Do&amp;wn</source>
-        <translation type="unfinished"></translation>
+        <translation>L&amp;e</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="890"/>
@@ -562,7 +562,7 @@
     <message>
         <location filename="../../fn.ui" line="898"/>
         <source>Re&amp;name Node</source>
-        <translation type="unfinished"></translation>
+        <translation>Bejegyzés át&amp;nevezése</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="901"/>
@@ -582,12 +582,12 @@
     <message>
         <location filename="../../fn.ui" line="917"/>
         <source>Document &amp;Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Doku&amp;mentum betűtípusa</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="931"/>
         <source>&amp;Wrap Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Sortörés</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="934"/>
@@ -597,7 +597,7 @@
     <message>
         <location filename="../../fn.ui" line="948"/>
         <source>&amp;Auto-Indentation</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Automatikus behúzás</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="951"/>
@@ -607,7 +607,7 @@
     <message>
         <location filename="../../fn.ui" line="956"/>
         <source>&amp;Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Beállítások</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="959"/>
@@ -672,7 +672,7 @@
     <message>
         <location filename="../../fn.ui" line="1036"/>
         <source>C&amp;enter</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Középre igazítás</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1039"/>
@@ -687,7 +687,7 @@
     <message>
         <location filename="../../fn.ui" line="1053"/>
         <source>&amp;Right</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Jobbra igazítás</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1056"/>
@@ -702,7 +702,7 @@
     <message>
         <location filename="../../fn.ui" line="1070"/>
         <source>&amp;Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Balra igazítás</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1073"/>
@@ -747,7 +747,7 @@
     <message>
         <location filename="../../fn.ui" line="1115"/>
         <source>Alt+Left</source>
-        <translation>Alt+Balra</translation>
+        <translation>Alt+Bal</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1123"/>
@@ -762,12 +762,12 @@
     <message>
         <location filename="../../fn.ui" line="1134"/>
         <source>h&amp;2</source>
-        <translation type="unfinished"></translation>
+        <translation>Címsor &amp;2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1137"/>
         <source>Header 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Címsor 2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1140"/>
@@ -777,12 +777,12 @@
     <message>
         <location filename="../../fn.ui" line="1148"/>
         <source>h&amp;1</source>
-        <translation type="unfinished"></translation>
+        <translation>Címsor &amp;1</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1151"/>
         <source>Header 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Címsor 1</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1154"/>
@@ -792,12 +792,12 @@
     <message>
         <location filename="../../fn.ui" line="1162"/>
         <source>h&amp;3</source>
-        <translation type="unfinished"></translation>
+        <translation>Címsor &amp;3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1165"/>
         <source>Header 3</source>
-        <translation type="unfinished"></translation>
+        <translation>Címsor 3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1168"/>
@@ -807,22 +807,22 @@
     <message>
         <location filename="../../fn.ui" line="1176"/>
         <source>&amp;Node Font</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bejegyzés betűtípusa</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1179"/>
         <source>Node Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Bejegyzés betűtípusa</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1184"/>
         <source>Scale I&amp;mage(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Kép(ek) át&amp;méretezése</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1192"/>
         <source>Paste &amp;HTML</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;HTML beillesztése</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1195"/>
@@ -832,7 +832,7 @@
     <message>
         <location filename="../../fn.ui" line="1203"/>
         <source>&amp;Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Címkék</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1206"/>
@@ -852,12 +852,12 @@
     <message>
         <location filename="../../fn.ui" line="1222"/>
         <source>C&amp;opy Link</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Link másolása</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1230"/>
         <source>I&amp;nsert Table</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Táblázat beszúrása</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1233"/>
@@ -867,42 +867,42 @@
     <message>
         <location filename="../../fn.ui" line="1238"/>
         <source>Append Row</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Új sor alá</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1243"/>
         <source>Delete Row</source>
-        <translation type="unfinished"></translation>
+        <translation>Sor törlése</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1248"/>
         <source>Append Column</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Új oszlop mögé</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1253"/>
         <source>Delete Column</source>
-        <translation type="unfinished"></translation>
+        <translation>Oszlop törlése</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1258"/>
         <source>Merge Cells</source>
-        <translation type="unfinished"></translation>
+        <translation>Cellák egyesítése</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1263"/>
         <source>Prepend Row</source>
-        <translation type="unfinished"></translation>
+        <translation>Új sor fölé</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1268"/>
         <source>Prepend Column</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Új oszlop elé</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1276"/>
         <source>Export &amp;HTML</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;HTML exportálása</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1281"/>
@@ -938,7 +938,7 @@
     <message>
         <location filename="../../fn.ui" line="1325"/>
         <source>Node &amp;Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Bejegyzés &amp;ikonja</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1328"/>
@@ -948,7 +948,7 @@
     <message>
         <location filename="../../fn.cpp" line="2313"/>
         <source>Node Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Bejegyzés ikonja</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="349"/>
@@ -1020,22 +1020,22 @@
     <message>
         <location filename="../../fn.cpp" line="809"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Save changes?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Menti a változtatásokat?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="811"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been modified.&lt;/i&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;i&gt;A dokumentum módosult.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="813"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been removed.&lt;/i&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;i&gt;A dokumentum törölve lett.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="818"/>
         <source>Discard changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Elvetés</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="819"/>
@@ -1054,7 +1054,7 @@
     <message>
         <location filename="../../fn.cpp" line="1096"/>
         <source>Open file...</source>
-        <translation type="unfinished"></translation>
+        <translation>Fájl megnyitása...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1236"/>
@@ -1073,7 +1073,7 @@
         <location filename="../../fn.cpp" line="1327"/>
         <location filename="../../fn.cpp" line="1348"/>
         <source>Save As...</source>
-        <translation type="unfinished"></translation>
+        <translation>Mentés másként...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2145"/>
@@ -1084,12 +1084,13 @@
         <location filename="../../fn.cpp" line="2146"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;i&gt;Warning!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
 &lt;center&gt;This action cannot be undone.&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;i&gt;Figyelmeztetés!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
+&lt;center&gt;Ezt a műveletet nem lehet visszavonni.&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2247"/>
         <source>Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Címkék</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2262"/>
@@ -1136,27 +1137,27 @@
         <location filename="../../fn.cpp" line="2936"/>
         <location filename="../../fn.cpp" line="2988"/>
         <source>Replacement</source>
-        <translation type="unfinished"></translation>
+        <translation>Csere</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3253"/>
         <source>No Replacement</source>
-        <translation type="unfinished"></translation>
+        <translation>Nincs csere</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3255"/>
         <source>One Replacement</source>
-        <translation type="unfinished"></translation>
+        <translation>Egy csere</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3257"/>
         <source>%1 Replacements</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 csere</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3421"/>
         <source>Insert Link</source>
-        <translation type="unfinished"></translation>
+        <translation>Link beszúrása</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2321"/>
@@ -1174,7 +1175,7 @@
         <location filename="../../fn.cpp" line="3511"/>
         <location filename="../../fn.cpp" line="3672"/>
         <source>Scaling percentage</source>
-        <translation type="unfinished"></translation>
+        <translation>Átméretezés százalékban</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2343"/>
@@ -1191,14 +1192,14 @@
     <message>
         <location filename="../../fn.cpp" line="765"/>
         <source>New Node</source>
-        <translation type="unfinished"></translation>
+        <translation>Új bejegyzés</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1098"/>
         <location filename="../../fn.cpp" line="1329"/>
         <location filename="../../fn.cpp" line="1350"/>
         <source>FeatherNotes documents (*.fnx);;All Files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>FeatherNotes dokumentumok (*.fnx);;Mindern fájl (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1311"/>
@@ -1214,12 +1215,12 @@
     <message>
         <location filename="../../fn.cpp" line="2015"/>
         <source>Select Text Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Szövegszín kiválasztása</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2037"/>
         <source>Select Background Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Háttérszín kiválasztása</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2144"/>
@@ -1229,29 +1230,29 @@
     <message>
         <location filename="../../fn.cpp" line="2257"/>
         <source>Tag(s) for this node</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Címkék a bejegyzéshez</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2345"/>
         <location filename="../../fn.cpp" line="3622"/>
         <source>Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Képfájlok (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;Minden fájl (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2525"/>
         <source>Select Document Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Dokumentum betűtípusának kiválasztása</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2585"/>
         <source>Select Node Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Bejegyzés betűtípusának kiválasztása</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3506"/>
         <location filename="../../fn.cpp" line="3668"/>
         <source>Scale to</source>
-        <translation type="unfinished"></translation>
+        <translation>Átméretezés</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3510"/>
@@ -1262,7 +1263,7 @@
     <message>
         <location filename="../../fn.cpp" line="3662"/>
         <source>Scale Image(s)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kép(ek) ártméretezése</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3821"/>
@@ -1288,47 +1289,47 @@
     <message>
         <location filename="../../fn.cpp" line="3881"/>
         <source>Save Image As...</source>
-        <translation type="unfinished"></translation>
+        <translation>Kép mentése másként...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3883"/>
         <source>Image Files (*.png *.jpg *.jpeg *.bmp);;All Files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Képfájlok (*.png *.jpg *.jpeg *.bmp);;Minden fájl (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3933"/>
         <source>Insert Table</source>
-        <translation type="unfinished"></translation>
+        <translation>Táblázat beszúrása</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3939"/>
         <source>Rows:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sorok:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3945"/>
         <source>Columns:</source>
-        <translation type="unfinished"></translation>
+        <translation>Oszlopok:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4669"/>
         <source>Print Document</source>
-        <translation type="unfinished"></translation>
+        <translation>Dokumentum nyomtatása</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4733"/>
         <source>Export HTML</source>
-        <translation type="unfinished"></translation>
+        <translation>HTML exportálása</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4738"/>
         <source>Export:</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportálás:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4739"/>
         <source>&amp;Current node</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Legutóbbi bejegyzés</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4741"/>
@@ -1338,12 +1339,12 @@
     <message>
         <location filename="../../fn.cpp" line="4742"/>
         <source>&amp;All nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Összes bejegyzés</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4754"/>
         <source>Output file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kimeneti fájl:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4773"/>
@@ -1353,7 +1354,7 @@
     <message>
         <location filename="../../fn.cpp" line="4961"/>
         <source>Save HTML As...</source>
-        <translation type="unfinished"></translation>
+        <translation>HTML mentése másként...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4963"/>
@@ -1368,7 +1369,7 @@
     <message>
         <location filename="../../fn.cpp" line="4992"/>
         <source>Type password</source>
-        <translation type="unfinished"></translation>
+        <translation>Jelszó</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4997"/>
@@ -1428,7 +1429,7 @@
     <message>
         <location filename="../../lineedit.cpp" line="35"/>
         <source>Clear text (Ctrl+K)</source>
-        <translation type="unfinished"></translation>
+        <translation>Szöveg törlése (Ctrl+K)</translation>
     </message>
     <message>
         <location filename="../../lineedit.cpp" line="81"/>
@@ -1548,28 +1549,30 @@ can be used instead of this.</source>
         <location filename="../../predDialog.ui" line="180"/>
         <source>By default, the active widget style determines
 the size of toolbar icons.</source>
-        <translation type="unfinished"></translation>
+        <translation>Alapértelmezetten az aktuális elemstílus határozza meg
+az eszköztár ikonméretét.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="184"/>
         <source>Small toolbar icons</source>
-        <translation type="unfinished"></translation>
+        <translation>Kis eszköztárikonok</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="191"/>
         <source>Do not show t&amp;oolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Esz&amp;köztár elrejtése</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="198"/>
         <source>If the menubar is hidden,
 a menu button appears on the toolbar.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ha a menüsor rejtett,
+a menü gomb megjelenik az eszköztáron.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="202"/>
         <source>Do not show &amp;menubar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Menüsor elrejtése</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="209"/>
@@ -1607,24 +1610,24 @@ position and then restart FeatherNotes!</source>
     <message>
         <location filename="../../predDialog.ui" line="323"/>
         <source>&amp;Wrap lines by default</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Sortörés alapértelmezetten</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="330"/>
         <source>Auto-&amp;indent by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Automat&amp;ikus behúzás alapértelmezetten</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="337"/>
         <source>This covers parentheses, braces, brackets and quotes.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ez bezárja a zárójeleket, és az idézőjeleket. A beállítás érvényesítéséhez újra kell indítania a FeatherNotes-t.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="342"/>
         <source>Auto-&amp;bracket</source>
-        <translation type="unfinished"></translation>
+        <translation>A&amp;utomatikus zárójelkiegészítés</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="349"/>
@@ -1652,12 +1655,13 @@ the user is typing and under proper circumstances.</source>
         <location filename="../../predDialog.ui" line="404"/>
         <source>This is not a complete fix but
 prevents annoying scroll jumps.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ez nem egy teljes javítás, de
+megakadályozza a bosszantó ugrásokat görgetésnél.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="408"/>
         <source>Workaround for &amp;Qt5&apos;s scroll jump bug</source>
-        <translation type="unfinished"></translation>
+        <translation>A &amp;Qt5 görgetés ugrálásának javítása</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="435"/>
@@ -1683,7 +1687,7 @@ prevents annoying scroll jumps.</source>
         <location filename="../../pref.cpp" line="345"/>
         <location filename="../../pref.cpp" line="523"/>
         <source>Warning: Ambiguous shortcut detected!</source>
-        <translation type="unfinished"></translation>
+        <translation>Figyelmeztetés: Többször használt kombináció észlelve!</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="506"/>
@@ -1710,7 +1714,7 @@ prevents annoying scroll jumps.</source>
         <location filename="../../domitem.cpp" line="100"/>
         <location filename="../../domitem.cpp" line="137"/>
         <source>New Node</source>
-        <translation type="unfinished"></translation>
+        <translation>Új bejegyzés</translation>
     </message>
 </context>
 </TS>
