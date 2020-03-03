@@ -66,7 +66,7 @@
     <message>
         <location filename="../../fn.ui" line="144"/>
         <source>Search in all nodes (F7)</source>
-        <translation>Keresés a bejegyzésekben (F7)</translation>
+        <translation>Keresés az elemekben (F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="147"/>
@@ -512,7 +512,7 @@
     <message>
         <location filename="../../fn.ui" line="843"/>
         <source>&amp;Append Sibling</source>
-        <translation type="unfinished"></translation>
+        <translation>Új e&amp;lem alá</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="846"/>
@@ -522,7 +522,7 @@
     <message>
         <location filename="../../fn.ui" line="854"/>
         <source>Append &amp;Child</source>
-        <translation type="unfinished"></translation>
+        <translation>Új a&amp;l-elem</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="857"/>
@@ -532,7 +532,7 @@
     <message>
         <location filename="../../fn.ui" line="865"/>
         <source>&amp;Delete Node</source>
-        <translation>&amp;Bejegyzés törlése</translation>
+        <translation>&amp;Elem törlése</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="868"/>
@@ -562,7 +562,7 @@
     <message>
         <location filename="../../fn.ui" line="898"/>
         <source>Re&amp;name Node</source>
-        <translation>Bejegyzés át&amp;nevezése</translation>
+        <translation>Elem át&amp;nevezése</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="901"/>
@@ -732,7 +732,7 @@
     <message>
         <location filename="../../fn.ui" line="1101"/>
         <source>&amp;Prepend Sibling</source>
-        <translation type="unfinished"></translation>
+        <translation>Ú&amp;j elem fölé</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1104"/>
@@ -742,7 +742,7 @@
     <message>
         <location filename="../../fn.ui" line="1112"/>
         <source>Move &amp;Left</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kintebb</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1115"/>
@@ -752,7 +752,7 @@
     <message>
         <location filename="../../fn.ui" line="1123"/>
         <source>Move &amp;Right</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bentebb</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1126"/>
@@ -807,12 +807,12 @@
     <message>
         <location filename="../../fn.ui" line="1176"/>
         <source>&amp;Node Font</source>
-        <translation>&amp;Bejegyzés betűtípusa</translation>
+        <translation>&amp;Elem betűtípusa</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1179"/>
         <source>Node Font</source>
-        <translation>Bejegyzés betűtípusa</translation>
+        <translation>Elem betűtípusa</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1184"/>
@@ -938,7 +938,7 @@
     <message>
         <location filename="../../fn.ui" line="1325"/>
         <source>Node &amp;Icon</source>
-        <translation>Bejegyzés &amp;ikonja</translation>
+        <translation>Elem &amp;ikonja</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1328"/>
@@ -948,7 +948,7 @@
     <message>
         <location filename="../../fn.cpp" line="2313"/>
         <source>Node Icon</source>
-        <translation>Bejegyzés ikonja</translation>
+        <translation>Elem ikonja</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="349"/>
@@ -1192,7 +1192,7 @@
     <message>
         <location filename="../../fn.cpp" line="765"/>
         <source>New Node</source>
-        <translation>Új bejegyzés</translation>
+        <translation>Új elem</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1098"/>
@@ -1230,7 +1230,7 @@
     <message>
         <location filename="../../fn.cpp" line="2257"/>
         <source>Tag(s) for this node</source>
-        <translation type="unfinished">Címkék a bejegyzéshez</translation>
+        <translation type="unfinished">Címkék az elemhez</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2345"/>
@@ -1246,7 +1246,7 @@
     <message>
         <location filename="../../fn.cpp" line="2585"/>
         <source>Select Node Font</source>
-        <translation>Bejegyzés betűtípusának kiválasztása</translation>
+        <translation>Elem betűtípusának kiválasztása</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3506"/>
@@ -1329,7 +1329,7 @@
     <message>
         <location filename="../../fn.cpp" line="4739"/>
         <source>&amp;Current node</source>
-        <translation>&amp;Legutóbbi bejegyzés</translation>
+        <translation>&amp;Legutóbbi elem</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4741"/>
@@ -1339,7 +1339,7 @@
     <message>
         <location filename="../../fn.cpp" line="4742"/>
         <source>&amp;All nodes</source>
-        <translation>&amp;Összes bejegyzés</translation>
+        <translation>&amp;Összes elem</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4754"/>
@@ -1714,7 +1714,7 @@ megakadályozza a bosszantó ugrásokat görgetésnél.</translation>
         <location filename="../../domitem.cpp" line="100"/>
         <location filename="../../domitem.cpp" line="137"/>
         <source>New Node</source>
-        <translation>Új bejegyzés</translation>
+        <translation>Új elem</translation>
     </message>
 </context>
 </TS>
