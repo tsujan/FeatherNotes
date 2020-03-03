@@ -121,7 +121,7 @@
     <message>
         <location filename="../../fn.ui" line="285"/>
         <source>&amp;Tree</source>
-        <translation>&amp;Rendezés</translation>
+        <translation>E&amp;lemek</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="308"/>
@@ -410,7 +410,7 @@
     <message>
         <location filename="../../fn.ui" line="731"/>
         <source>P&amp;rint with Sub-Nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Ny&amp;omtatás al-elemekkel</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="739"/>
@@ -492,7 +492,7 @@
     <message>
         <location filename="../../fn.ui" line="821"/>
         <source>E&amp;xpand All</source>
-        <translation type="unfinished"></translation>
+        <translation>Összes &amp;kinyitása</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="824"/>
@@ -502,7 +502,7 @@
     <message>
         <location filename="../../fn.ui" line="832"/>
         <source>Collap&amp;se All</source>
-        <translation type="unfinished"></translation>
+        <translation>Összes &amp;becsukása</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="835"/>
@@ -572,7 +572,7 @@
     <message>
         <location filename="../../fn.ui" line="906"/>
         <source>Tree Pr&amp;operties</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Elemek száma</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="909"/>
@@ -637,7 +637,7 @@
     <message>
         <location filename="../../fn.ui" line="991"/>
         <source>Pr&amp;int All Nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Ö&amp;sszes elem nyomtatása</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1002"/>
@@ -807,12 +807,12 @@
     <message>
         <location filename="../../fn.ui" line="1176"/>
         <source>&amp;Node Font</source>
-        <translation>&amp;Elem betűtípusa</translation>
+        <translation>&amp;Elemek betűtípusa</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1179"/>
         <source>Node Font</source>
-        <translation>Elem betűtípusa</translation>
+        <translation>Elemek betűtípusa</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1184"/>
@@ -842,7 +842,7 @@
     <message>
         <location filename="../../fn.ui" line="1214"/>
         <source>Insert Lin&amp;k</source>
-        <translation type="unfinished"></translation>
+        <translation>Link be&amp;szúrása</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1217"/>
@@ -907,7 +907,7 @@
     <message>
         <location filename="../../fn.ui" line="1281"/>
         <source>Save Ima&amp;ge(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Képek m&amp;entése</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1292"/>
@@ -922,7 +922,7 @@
     <message>
         <location filename="../../fn.ui" line="1306"/>
         <source>LTR</source>
-        <translation type="unfinished"></translation>
+        <translation>Balról jobbra</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1309"/>
@@ -995,13 +995,14 @@
     <message>
         <location filename="../../fn.cpp" line="733"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;New note?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Új jegyzet?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="734"/>
         <source>&lt;center&gt;&lt;i&gt;Do you really want to leave this document&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;and create an empty one?&lt;/i&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;i&gt;Biztosan bezárja a dokumentumot&lt;/i&gt;&lt;/center&gt;
+&lt;center&gt;&lt;i&gt;és létrehoz egy újat?&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="737"/>
@@ -1060,7 +1061,7 @@
         <location filename="../../fn.cpp" line="1236"/>
         <location filename="../../fn.cpp" line="4873"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be saved!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Nem menthető!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1239"/>
@@ -1078,7 +1079,7 @@
     <message>
         <location filename="../../fn.cpp" line="2145"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Delete this node?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Törli ezt az elemet?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2146"/>
@@ -1109,7 +1110,7 @@
         <location filename="../../fn.cpp" line="2450"/>
         <location filename="../../fn.cpp" line="2483"/>
         <source>&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Főelemek:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Összes elem:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2456"/>
@@ -1120,7 +1121,7 @@
     <message>
         <location filename="../../fn.cpp" line="2817"/>
         <source>%1 Matches</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 egyezés</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2819"/>
@@ -1169,7 +1170,7 @@
         <location filename="../../fn.cpp" line="2325"/>
         <location filename="../../fn.cpp" line="3503"/>
         <source>Open image</source>
-        <translation>Kép megnyitása...</translation>
+        <translation>Kép megnyitása</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3511"/>
@@ -1246,7 +1247,7 @@
     <message>
         <location filename="../../fn.cpp" line="2585"/>
         <source>Select Node Font</source>
-        <translation>Elem betűtípusának kiválasztása</translation>
+        <translation>Elemek betűtípusának kiválasztása</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3506"/>
@@ -1278,7 +1279,7 @@
     <message>
         <location filename="../../fn.cpp" line="3853"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Image cannot be saved! Retry?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;A kép nem menthető! Újrapróbálja?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3854"/>
@@ -1493,7 +1494,7 @@ Uncheck for a width ratio of 170/530.</source>
     <message>
         <location filename="../../predDialog.ui" line="103"/>
         <source>Remember &amp;tree width</source>
-        <translation type="unfinished"></translation>
+        <translation>O&amp;ldalsáv szélességének megjegyzése</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="110"/>
@@ -1522,18 +1523,19 @@ Needs restarting of FeatherNotes to take effect.</source>
     <message>
         <location filename="../../predDialog.ui" line="132"/>
         <source>Add to s&amp;ystray</source>
-        <translation type="unfinished"></translation>
+        <translation>H&amp;ozzáadás rendszertálcához</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="157"/>
         <source>The command line option --tray
 can be used instead of this.</source>
-        <translation type="unfinished"></translation>
+        <translation>A --tray parancssori opció
+használható ehelyett.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="161"/>
         <source>Start i&amp;conified to tray</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Indítás tál&amp;caikonként</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="170"/>
@@ -1543,7 +1545,7 @@ can be used instead of this.</source>
     <message>
         <location filename="../../predDialog.ui" line="173"/>
         <source>Transparent t&amp;ree view</source>
-        <translation type="unfinished"></translation>
+        <translation>Áttetsző &amp;oldalsáv</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="180"/>
@@ -1649,7 +1651,7 @@ the user is typing and under proper circumstances.</source>
     <message>
         <location filename="../../predDialog.ui" line="370"/>
         <source> minute(s)</source>
-        <translation>percben</translation>
+        <translation> percben</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="404"/>
@@ -1687,7 +1689,7 @@ megakadályozza a bosszantó ugrásokat görgetésnél.</translation>
         <location filename="../../pref.cpp" line="345"/>
         <location filename="../../pref.cpp" line="523"/>
         <source>Warning: Ambiguous shortcut detected!</source>
-        <translation>Figyelmeztetés: Többször használt kombináció észlelve!</translation>
+        <translation>Figyelmeztetés: Többször használt gyorsbillentyű észlelve!</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="506"/>
