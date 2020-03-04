@@ -1200,7 +1200,7 @@
         <location filename="../../fn.cpp" line="1329"/>
         <location filename="../../fn.cpp" line="1350"/>
         <source>FeatherNotes documents (*.fnx);;All Files (*)</source>
-        <translation>FeatherNotes dokumentumok (*.fnx);;Mindern fájl (*)</translation>
+        <translation>FeatherNotes dokumentumok (*.fnx);;Minden fájl (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1311"/>
