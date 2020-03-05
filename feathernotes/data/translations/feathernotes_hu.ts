@@ -46,7 +46,7 @@
     <message>
         <location filename="../../fn.ui" line="115"/>
         <source>Search only in names (Ctrl+Shift+F7)</source>
-        <translation type="unfinished">Keresés csak a nevekben (Ctrl+Shift+F7)</translation>
+        <translation type="unfinished">Keresés az elemek nevében (Ctrl+Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="118"/>
@@ -66,7 +66,7 @@
     <message>
         <location filename="../../fn.ui" line="144"/>
         <source>Search in all nodes (F7)</source>
-        <translation>Keresés az elemekben (F7)</translation>
+        <translation>Keresés az összes elemben (F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="147"/>
@@ -912,7 +912,7 @@
     <message>
         <location filename="../../fn.ui" line="1292"/>
         <source>RTL</source>
-        <translation type="unfinished"></translation>
+        <translation>Jobbról balra</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1295"/>
@@ -938,7 +938,7 @@
     <message>
         <location filename="../../fn.ui" line="1325"/>
         <source>Node &amp;Icon</source>
-        <translation>Elem &amp;ikonja</translation>
+        <translation>Elem&amp;ikon</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1328"/>
@@ -948,7 +948,7 @@
     <message>
         <location filename="../../fn.cpp" line="2313"/>
         <source>Node Icon</source>
-        <translation>Elem ikonja</translation>
+        <translation>Elemikon</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="349"/>
@@ -1335,7 +1335,7 @@
     <message>
         <location filename="../../fn.cpp" line="4741"/>
         <source>With all &amp;sub-nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>A&amp;l-elemekkel</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4742"/>
