@@ -224,7 +224,7 @@
     <message>
         <location filename="../../fn.ui" line="544"/>
         <source>&amp;Undo</source>
-        <translation>&amp;visszavonás</translation>
+        <translation>&amp;Visszavonás</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="547"/>
@@ -1190,7 +1190,7 @@
     <message>
         <location filename="../../fn.cpp" line="2155"/>
         <source>Deletion</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Törlés</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2268"/>
@@ -1421,7 +1421,10 @@
 this dialog and also on exit.
 
 Uncheck to set a fixed size!</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ablakméret megjegyzése a
+párbeszédpanel bezárása után.
+
+Ne jelölje be, ha fix méretet szeretne!</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="42"/>
