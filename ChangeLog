@@ -1,9 +1,11 @@
-V0.5.2
+V0.6.0
 ---------
  * Made some strings translatable.
  * Fixed a potential issue in translations.
  * Fixed a rare case of halted auto-saving.
  * Added a workaround for an old Qt bug, because of which, QTimer may not work after resuming from suspend or hibernation.
+ * Give focus to text-edit/side-pane with Escape.
+ * Don't let custom shortcuts be read from global config files.
 
 V0.5.1
 ---------

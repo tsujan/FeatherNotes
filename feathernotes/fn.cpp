@@ -346,16 +346,27 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
         }
     }
 
-    QShortcut *fullscreen = new QShortcut (QKeySequence (tr ("F11", "Fullscreen")), this);
+    QShortcut *focusSwitcher = new QShortcut (QKeySequence (Qt::Key_Escape), this);
+    connect (focusSwitcher, &QShortcut::activated, [this] {
+        if (QWidget *cw = ui->stackedWidget->currentWidget())
+        {
+            if (cw->hasFocus())
+                ui->treeView->viewport()->setFocus();
+            else
+                cw->setFocus();
+        }
+    });
+
+    QShortcut *fullscreen = new QShortcut (QKeySequence (Qt::Key_F11), this);
     connect (fullscreen, &QShortcut::activated, this, &FN::fullScreening);
 
-    QShortcut *defaultsize = new QShortcut (QKeySequence (tr ("Ctrl+Shift+W", "Default size")), this);
+    QShortcut *defaultsize = new QShortcut (QKeySequence (Qt::CTRL + Qt::SHIFT + Qt::Key_W), this);
     connect (defaultsize, &QShortcut::activated, this, &FN::defaultSize);
 
-    QShortcut *zoomin = new QShortcut (QKeySequence (tr ("Ctrl+=", "Zoom in")), this);
-    QShortcut *zoominPlus = new QShortcut (QKeySequence (tr ("Ctrl++", "Zoom in")), this);
-    QShortcut *zoomout = new QShortcut (QKeySequence (tr ("Ctrl+-", "Zoom out")), this);
-    QShortcut *unzoom = new QShortcut (QKeySequence (tr ("Ctrl+0", "Unzoom")), this);
+    QShortcut *zoomin = new QShortcut (QKeySequence (Qt::CTRL + Qt::Key_Equal), this);
+    QShortcut *zoominPlus = new QShortcut (QKeySequence (Qt::CTRL + Qt::Key_Plus), this);
+    QShortcut *zoomout = new QShortcut (QKeySequence (Qt::CTRL + Qt::Key_Minus), this);
+    QShortcut *unzoom = new QShortcut (QKeySequence (Qt::CTRL + Qt::Key_0), this);
     connect (zoomin, &QShortcut::activated, this, &FN::zoomingIn);
     connect (zoominPlus, &QShortcut::activated, this, &FN::zoomingIn);
     connect (zoomout, &QShortcut::activated, this, &FN::zoomingOut);
@@ -4255,10 +4266,13 @@ void FN::updateCustomizableShortcuts()
 /*************************/
 void FN::readShortcuts()
 {
-    Settings settings ("feathernotes", "fn");
+    /* NOTE: We don't read the custom shortcuts from global config files
+             because we want the user to be able to restore their default values. */
+    Settings tmp ("feathernotes", "fn");
+    Settings settings (tmp.fileName(), QSettings::NativeFormat);
+
     settings.beginGroup ("shortcuts");
     QStringList actions = settings.childKeys();
-
     for (int i = 0; i < actions.size(); ++i)
     {
         QVariant v = settings.value (actions.at (i));
