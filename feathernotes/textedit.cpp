@@ -244,22 +244,27 @@ void TextEdit::keyPressEvent (QKeyEvent *event)
             /* still check if a letter or number follows */
             if (i < curBlockPos)
             {
-                if (blockText.at (i).isLetter())
+                QChar c = blockText.at (i);
+                if (c.isLetter())
                 {
                     if (i + 1 < curBlockPos
                         && !prefix.isEmpty() && !prefix.at (prefix.size() - 1).isSpace()
                         && blockText.at (i + 1).isSpace())
                     { // non-letter and non-space character -> singlle letter -> space
                         prefix = blockText.left (i + 2);
+                        QChar cc = QChar (c.unicode() + 1);
+                        if (cc.isLetter()) prefix.replace (c, cc);
                     }
                     else if (i + 2 < curBlockPos
                              && !blockText.at (i + 1).isLetterOrNumber() && !blockText.at (i + 1).isSpace()
                              && blockText.at (i + 2).isSpace())
                     { // singlle letter -> non-letter and non-space character -> space
                         prefix = blockText.left (i + 3);
+                        QChar cc = QChar (c.unicode() + 1);
+                        if (cc.isLetter()) prefix.replace (c, cc);
                     }
                 }
-                else if (blockText.at (i).isNumber())
+                else if (c.isNumber())
                 { // making lists with numbers
                     QString num;
                     while (i < curBlockPos)

@@ -6,6 +6,7 @@ V0.6.0
  * Added a workaround for an old Qt bug, because of which, QTimer may not work after resuming from suspend or hibernation.
  * Give focus to text-edit/side-pane with Escape.
  * Don't let custom shortcuts be read from global config files.
+ * Yet smarter Shift+Enter with alphabetical lists.
 
 V0.5.1
 ---------
