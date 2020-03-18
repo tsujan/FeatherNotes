@@ -209,7 +209,7 @@
         <location filename="../../fn.ui" line="530"/>
         <location filename="../../fn.cpp" line="577"/>
         <source>&amp;Open</source>
-        <translation>&amp;Megnyitás</translation>
+        <translation>Me&amp;gnyitás</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="533"/>
@@ -284,7 +284,7 @@
     <message>
         <location filename="../../fn.ui" line="603"/>
         <source>&amp;Bold</source>
-        <translation>&amp;Félkövér</translation>
+        <translation>Fé&amp;lkövér</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="606"/>
@@ -359,7 +359,7 @@
     <message>
         <location filename="../../fn.ui" line="682"/>
         <source>Back&amp;ground Color</source>
-        <translation>Há&amp;ttérszín</translation>
+        <translation>Hátté&amp;rszín</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="685"/>
@@ -390,7 +390,7 @@
     <message>
         <location filename="../../fn.ui" line="709"/>
         <source>Save &amp;As</source>
-        <translation>Mentés máské&amp;nt</translation>
+        <translation>Me&amp;ntés másként</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="712"/>
@@ -466,7 +466,7 @@
     <message>
         <location filename="../../fn.ui" line="796"/>
         <source>&amp;Select All</source>
-        <translation>Ö&amp;sszes kijelölése</translation>
+        <translation>Öss&amp;zes kijelölése</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="799"/>
@@ -476,7 +476,7 @@
     <message>
         <location filename="../../fn.ui" line="807"/>
         <source>E&amp;mbed Image</source>
-        <translation>K&amp;ép beágyazása</translation>
+        <translation>Ké&amp;p beágyazása</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="810"/>
@@ -492,7 +492,7 @@
     <message>
         <location filename="../../fn.ui" line="821"/>
         <source>E&amp;xpand All</source>
-        <translation>Összes &amp;kinyitása</translation>
+        <translation>Ö&amp;sszes kinyitása</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="824"/>
@@ -502,7 +502,7 @@
     <message>
         <location filename="../../fn.ui" line="832"/>
         <source>Collap&amp;se All</source>
-        <translation>Összes &amp;becsukása</translation>
+        <translation>Öss&amp;zes becsukása</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="835"/>
@@ -522,7 +522,7 @@
     <message>
         <location filename="../../fn.ui" line="854"/>
         <source>Append &amp;Child</source>
-        <translation>Új a&amp;l-elem</translation>
+        <translation>Új &amp;al-elem</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="857"/>
@@ -532,7 +532,7 @@
     <message>
         <location filename="../../fn.ui" line="865"/>
         <source>&amp;Delete Node</source>
-        <translation>&amp;Elem törlése</translation>
+        <translation>Elem &amp;törlése</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="868"/>
@@ -572,7 +572,7 @@
     <message>
         <location filename="../../fn.ui" line="906"/>
         <source>Tree Pr&amp;operties</source>
-        <translation>&amp;Elemek száma</translation>
+        <translation>Ele&amp;mek száma</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="909"/>
@@ -642,7 +642,7 @@
     <message>
         <location filename="../../fn.ui" line="1002"/>
         <source>Superscrip&amp;t</source>
-        <translation>Fel&amp;ső index</translation>
+        <translation>F&amp;első index</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1005"/>
@@ -1512,7 +1512,7 @@ használható ehelyett.</translation>
     <message>
         <location filename="../../predDialog.ui" line="173"/>
         <source>Transparent t&amp;ree view</source>
-        <translation>Áttetsző &amp;oldalsáv</translation>
+        <translation>Áttetsző ol&amp;dalsáv</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="180"/>
