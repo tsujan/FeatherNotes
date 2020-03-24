@@ -2629,6 +2629,14 @@ void FN::showHideSearch()
 {
     bool visibility = ui->lineEdit->isVisible();
 
+    if (QObject::sender() == ui->actionFind
+        && visibility && !ui->lineEdit->hasFocus())
+    {
+        ui->lineEdit->setFocus();
+        ui->lineEdit->selectAll();
+        return;
+    }
+
     ui->lineEdit->setVisible (!visibility);
     ui->nextButton->setVisible (!visibility);
     ui->prevButton->setVisible (!visibility);

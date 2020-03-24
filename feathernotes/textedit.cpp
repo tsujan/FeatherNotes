@@ -48,7 +48,7 @@ TextEdit::TextEdit (QWidget *parent) : QTextEdit (parent)
     VScrollBar *vScrollBar = new VScrollBar;
     setVerticalScrollBar (vScrollBar);
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
+#if (QT_VERSION == QT_VERSION_CHECK(5,14,0))
     /* workaround */
     HScrollBar *hScrollBar = new HScrollBar;
     setHorizontalScrollBar (hScrollBar);
@@ -918,7 +918,7 @@ void TextEdit::scrollSmoothly()
         QWheelEvent eventH (QPointF(),
                             QPointF(),
                             QPoint(),
-#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
+#if (QT_VERSION == QT_VERSION_CHECK(5,14,0))
                             QPoint (totalDeltaH, 0),
 #else
                             QPoint (0, totalDeltaH),

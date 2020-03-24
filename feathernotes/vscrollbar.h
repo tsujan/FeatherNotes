@@ -19,7 +19,7 @@
 #define VSCROLLBAR_H
 
 #include <QScrollBar>
-#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
+#if (QT_VERSION == QT_VERSION_CHECK(5,14,0))
 #include <QWheelEvent>
 #endif
 
@@ -40,7 +40,7 @@ private:
     int defaultWheelSpeed;
 };
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
+#if (QT_VERSION == QT_VERSION_CHECK(5,14,0))
 /* Workaround. */
 class HScrollBar : public QScrollBar
 {

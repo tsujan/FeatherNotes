@@ -1,3 +1,7 @@
+V0.6.1
+---------
+ * Focus the visible unfocused search bar on activating its action.
+
 V0.6.0
 ---------
  * Made some strings translatable.
