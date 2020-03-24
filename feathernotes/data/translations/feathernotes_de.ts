@@ -1180,12 +1180,12 @@
     <message>
         <location filename="../../fn.cpp" line="2026"/>
         <source>Select Text Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Wählen Sie Textfarbe aus</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2048"/>
         <source>Select Background Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Wählen Sie die Hintergrundfarbe aus</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2155"/>
@@ -1206,12 +1206,12 @@
     <message>
         <location filename="../../fn.cpp" line="2536"/>
         <source>Select Document Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Wählen Sie Dokumentschriftart</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2596"/>
         <source>Select Node Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Wählen Sie Knotenschriftart</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3525"/>
@@ -1659,7 +1659,7 @@ es verhindert störende Sprünge beim Scrollen.</translation>
     <message>
         <location filename="../../predDialog.ui" line="435"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tastenkombinationen</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="454"/>
@@ -1680,12 +1680,12 @@ es verhindert störende Sprünge beim Scrollen.</translation>
         <location filename="../../pref.cpp" line="345"/>
         <location filename="../../pref.cpp" line="523"/>
         <source>Warning: Ambiguous shortcut detected!</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Warnung: Mehrdeutiger Tastatur-Kurzbefehl erkannt!</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="506"/>
         <source>The typed shortcut was reserved.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Die eingegebene Verknüpfung wurde reserviert.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="624"/>
