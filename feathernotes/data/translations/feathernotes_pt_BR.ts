@@ -46,7 +46,7 @@
     <message>
         <location filename="../../fn.ui" line="115"/>
         <source>Search only in names (Ctrl+Shift+F7)</source>
-        <translation>Pesquisar apenas em nomes (Ctrl+Shift+F7)</translation>
+        <translation>Pesquisar somente em nomes (Ctrl+Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="118"/>
@@ -56,7 +56,7 @@
     <message>
         <location filename="../../fn.ui" line="128"/>
         <source>Search only in tags (Shift+F7)</source>
-        <translation>Pesquisar apenas em tags (Shift+F7)</translation>
+        <translation>Pesquisar somente em tags (Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="131"/>
@@ -66,7 +66,7 @@
     <message>
         <location filename="../../fn.ui" line="144"/>
         <source>Search in all nodes (F7)</source>
-        <translation>Pesquisar em todos os nodos (F7)</translation>
+        <translation>Pesquisar em todos os nós (F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="147"/>
@@ -410,7 +410,7 @@
     <message>
         <location filename="../../fn.ui" line="731"/>
         <source>P&amp;rint with Sub-Nodes</source>
-        <translation>Imp&amp;rimir com Sub-nós</translation>
+        <translation>Imp&amp;rimir com Sub-Nós</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="739"/>
@@ -482,7 +482,7 @@
         <location filename="../../fn.ui" line="810"/>
         <location filename="../../fn.cpp" line="3501"/>
         <source>Embed Image</source>
-        <translation>Incorporar Imagem</translation>
+        <translation>Inserir Imagem</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="813"/>
@@ -1300,12 +1300,12 @@
     <message>
         <location filename="../../fn.cpp" line="4755"/>
         <source>With all &amp;sub-nodes</source>
-        <translation>Com todos &amp;sub-nós</translation>
+        <translation>Com todos os &amp;sub-nós</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4756"/>
         <source>&amp;All nodes</source>
-        <translation>&amp;Todos nós</translation>
+        <translation>&amp;Todos os nós</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4768"/>
