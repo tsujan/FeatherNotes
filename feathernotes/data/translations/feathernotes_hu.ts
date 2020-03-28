@@ -46,7 +46,7 @@
     <message>
         <location filename="../../fn.ui" line="115"/>
         <source>Search only in names (Ctrl+Shift+F7)</source>
-        <translation type="unfinished">Keresés az elemek nevében (Ctrl+Shift+F7)</translation>
+        <translation>Keresés az elemek nevében (Ctrl+Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="118"/>
@@ -167,7 +167,7 @@
     <message>
         <location filename="../../fn.ui" line="470"/>
         <source>F9</source>
-        <translation type="unfinished">F9</translation>
+        <translation>F9</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="483"/>
@@ -542,7 +542,7 @@
     <message>
         <location filename="../../fn.ui" line="876"/>
         <source>Move &amp;Up</source>
-        <translation type="unfinished">&amp;Fel</translation>
+        <translation>&amp;Fel</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="879"/>
@@ -672,7 +672,7 @@
     <message>
         <location filename="../../fn.ui" line="1036"/>
         <source>C&amp;enter</source>
-        <translation type="unfinished">&amp;Középre igazítás</translation>
+        <translation>&amp;Középre igazítás</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1039"/>
@@ -687,7 +687,7 @@
     <message>
         <location filename="../../fn.ui" line="1053"/>
         <source>&amp;Right</source>
-        <translation type="unfinished">&amp;Jobbra igazítás</translation>
+        <translation>&amp;Jobbra igazítás</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1056"/>
@@ -702,7 +702,7 @@
     <message>
         <location filename="../../fn.ui" line="1070"/>
         <source>&amp;Left</source>
-        <translation type="unfinished">&amp;Balra igazítás</translation>
+        <translation>&amp;Balra igazítás</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1073"/>
@@ -867,7 +867,7 @@
     <message>
         <location filename="../../fn.ui" line="1238"/>
         <source>Append Row</source>
-        <translation type="unfinished">Új sor alá</translation>
+        <translation>Új sor alá</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1243"/>
@@ -877,7 +877,7 @@
     <message>
         <location filename="../../fn.ui" line="1248"/>
         <source>Append Column</source>
-        <translation type="unfinished">Új oszlop mögé</translation>
+        <translation>Új oszlop mögé</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1253"/>
@@ -897,7 +897,7 @@
     <message>
         <location filename="../../fn.ui" line="1268"/>
         <source>Prepend Column</source>
-        <translation type="unfinished">Új oszlop elé</translation>
+        <translation>Új oszlop elé</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1276"/>
@@ -1228,7 +1228,7 @@
     <message>
         <location filename="../../fn.cpp" line="3681"/>
         <source>Scale Image(s)</source>
-        <translation type="unfinished">Kép(ek) ártméretezése</translation>
+        <translation>Kép(ek) átméretezése</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3840"/>
@@ -1456,7 +1456,11 @@ Ne jelölje be, ha fix méretet szeretne!</translation>
 this dialog and also on exit.
 
 Uncheck for a width ratio of 170/530.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Oldalsáv szélességének mentése bezárás után.
+A párbeszédablak bezárása után lép érvénybe.
+
+Ha nincs bejelölve akkor 
+az alapértelmezett arány 170/530 lesz.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="103"/>
@@ -1471,12 +1475,17 @@ this dialog and also on exit.
 (This may not work correctly
 under GTK+ DE&apos;s like Unity
 and Cinnamon.)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ablakhelyzet mentése bezáráskor.
+A párbeszédpanel bezárása után lép érvénybe.
+
+(Ez lehet, hogy nem működik megfelelően
+a GTK+ asztali környezetek alatt, mint az Unity
+vagy a Cinnamon.)</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="118"/>
         <source>Save &amp;position</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ablakhelyzet mentése</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="125"/>
@@ -1552,7 +1561,7 @@ to use the systray icon more easily!</source>
     <message>
         <location filename="../../predDialog.ui" line="213"/>
         <source>Running &amp;under Enlightenment?</source>
-        <translation type="unfinished"></translation>
+        <translation>Enlightenment alatt f&amp;uttatja?</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="238"/>
@@ -1603,12 +1612,14 @@ Needs restarting of FeatherNotes to take effect.</source>
         <source>A triple period is replaced with an ellipsis,
 a double hyphen with a long dash, etc. while
 the user is typing and under proper circumstances.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Amíg a felhasználó gépel, megfelelő körülmények között 
+a három pont le lesz cserélve hármasponttal,
+a kettő kötőjel hosszú kötőjellel, stb.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="354"/>
         <source>&amp;Replace some characters while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Néhány karakter cseréje gépelés közben</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="363"/>
@@ -1674,7 +1685,7 @@ megakadályozza a bosszantó ugrásokat görgetésnél.</translation>
     <message>
         <location filename="../../helpDialog.ui" line="14"/>
         <source>Help</source>
-        <translation>Segítség</translation>
+        <translation>Súgó</translation>
     </message>
 </context>
 <context>
