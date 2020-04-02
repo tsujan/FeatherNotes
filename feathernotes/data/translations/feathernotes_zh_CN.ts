@@ -1180,12 +1180,12 @@
     <message>
         <location filename="../../fn.cpp" line="2026"/>
         <source>Select Text Color</source>
-        <translation type="unfinished"></translation>
+        <translation>选择文本颜色</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2048"/>
         <source>Select Background Color</source>
-        <translation type="unfinished"></translation>
+        <translation>选择背景颜色</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2155"/>
@@ -1206,12 +1206,12 @@
     <message>
         <location filename="../../fn.cpp" line="2536"/>
         <source>Select Document Font</source>
-        <translation type="unfinished"></translation>
+        <translation>选择文档字体</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2596"/>
         <source>Select Node Font</source>
-        <translation type="unfinished"></translation>
+        <translation>选择节点字体</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3525"/>
@@ -1238,7 +1238,7 @@
     <message>
         <location filename="../../fn.cpp" line="3871"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>错误</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3872"/>
@@ -1260,7 +1260,7 @@
     <message>
         <location filename="../../fn.cpp" line="3902"/>
         <source>Image Files (*.png *.jpg *.jpeg *.bmp);;All Files (*)</source>
-        <translation>Image Files (*.png *.jpg *.jpeg *.bmp);;All Files (*)</translation>
+        <translation>图像文件 (*.png *.jpg *.jpeg *.bmp);;所有文件(*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3952"/>
