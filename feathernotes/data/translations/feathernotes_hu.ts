@@ -66,7 +66,7 @@
     <message>
         <location filename="../../fn.ui" line="144"/>
         <source>Search in all nodes (F7)</source>
-        <translation>Keresés az összes elemben (F7)</translation>
+        <translation>Keresés az elemek tartalmában (F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="147"/>
@@ -126,7 +126,7 @@
     <message>
         <location filename="../../fn.ui" line="308"/>
         <source>&amp;Options</source>
-        <translation>&amp;Beállítások</translation>
+        <translation>&amp;Opciók</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="320"/>
@@ -374,7 +374,7 @@
     <message>
         <location filename="../../fn.ui" line="693"/>
         <source>Options</source>
-        <translation>Beállítások</translation>
+        <translation>Opciók</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="698"/>
@@ -717,12 +717,12 @@
     <message>
         <location filename="../../fn.ui" line="1087"/>
         <source>&amp;Justify</source>
-        <translation>&amp;Sorkizárt</translation>
+        <translation>&amp;Sorkizárás</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1090"/>
         <source>Justify</source>
-        <translation>Sorkizárt</translation>
+        <translation>Sorkizárás</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1093"/>
@@ -995,7 +995,7 @@
     <message>
         <location filename="../../fn.cpp" line="824"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been removed.&lt;/i&gt;&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;i&gt;A dokumentum törölve lett.&lt;/i&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;i&gt;A dokumentumot törölték.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="829"/>
@@ -1249,7 +1249,8 @@
         <location filename="../../fn.cpp" line="3873"/>
         <source>&lt;center&gt;Maybe you did not choose a proper extension&lt;/center&gt;
 &lt;center&gt;or do not have write permission.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;Lehet hogy nem jó a fájl kiterjesztése,&lt;/center&gt;
+&lt;center&gt;vagy nincs írási engedélye.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3900"/>
@@ -1386,7 +1387,7 @@
     <message>
         <location filename="../../fn.cpp" line="5242"/>
         <source>aka.</source>
-        <translation>vagyis</translation>
+        <translation>más néven</translation>
     </message>
 </context>
 <context>
@@ -1556,12 +1557,13 @@ a menü gomb megjelenik az eszköztáron.</translation>
         <location filename="../../predDialog.ui" line="209"/>
         <source>Check this under Enlightenment (or, probably, another DE)
 to use the systray icon more easily!</source>
-        <translation type="unfinished"></translation>
+        <translation>Jelölje be Enlightenment (vagy esetleg másik asztali környezet)
+alatt, hogy a tálcaikon helyesen működjön!</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="213"/>
         <source>Running &amp;under Enlightenment?</source>
-        <translation>Enlightenment alatt f&amp;uttatja?</translation>
+        <translation>Enlightenment alatt &amp;használja?</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="238"/>
@@ -1573,12 +1575,19 @@ if it is on the left or right, the X-coordinate should be set.
 
 After choosing the coordinate shifts, put the window in a proper
 position and then restart FeatherNotes!</source>
-        <translation type="unfinished"></translation>
+        <translation>Néhány asztali környezet (mint az Enlightenment) nem jelenti helyesen az
+ablakok helyzetét. Ebben az esetben megpróbálhatja kijavítani a problémát.
+
+Ha a panel a képernyő tetején vagy az alján helyezkedik el, az Y-koordinátát
+kell beállítani; Ha pedig jobb-, vagy baloldalt, akkor az X-et.
+
+Miután beállította az eltolást, húzza az ablakot a megfelelő helyzetbe,
+majd indítsa újra a FeatherNotes-t!</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="248"/>
         <source>Shifts (X × Y): </source>
-        <translation type="unfinished"></translation>
+        <translation>Eltolás (X × Y): </translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="314"/>
@@ -1612,7 +1621,7 @@ Needs restarting of FeatherNotes to take effect.</source>
         <source>A triple period is replaced with an ellipsis,
 a double hyphen with a long dash, etc. while
 the user is typing and under proper circumstances.</source>
-        <translation type="unfinished">Amíg a felhasználó gépel, megfelelő körülmények között 
+        <translation>Gépeléskor, megfelelő körülmények között 
 a három pont le lesz cserélve hármasponttal,
 a kettő kötőjel hosszú kötőjellel, stb.</translation>
     </message>
