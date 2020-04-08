@@ -28,6 +28,7 @@
 #include "svgicons.h"
 #include "pref.h"
 
+#include <QDir>
 #include <QTextStream>
 #include <QToolButton>
 #include <QPrinter>
@@ -399,6 +400,16 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
                 filePath = sl.at (1);
         }
     }
+
+    /* always an absolute path */
+    if (!filePath.isEmpty())
+    {
+        if (filePath.startsWith ("file://"))
+            filePath = QUrl (filePath).toLocalFile();
+        filePath = QDir::current().absoluteFilePath (filePath);
+        filePath = QDir::cleanPath (filePath);
+    }
+
     fileOpen (filePath);
 
     /*dummyWidget = nullptr;
@@ -993,10 +1004,7 @@ void FN::fileOpen (const QString &filePath)
 {
     if (!filePath.isEmpty())
     {
-        QString fPath = filePath;
-        fPath.remove ("file://");
-        QFile file (fPath);
-
+        QFile file (filePath);
         if (file.open (QIODevice::ReadOnly))
         {
             QTextStream in (&file);
@@ -1015,7 +1023,7 @@ void FN::fileOpen (const QString &filePath)
                 if (!pswrd_.isEmpty() && !isPswrdCorrect())
                     return;
                 showDoc (document);
-                xmlPath_ = fPath;
+                xmlPath_ = filePath;
                 setTitle (xmlPath_);
                 docProp();
             }

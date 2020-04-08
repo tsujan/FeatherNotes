@@ -96,11 +96,13 @@ int main(int argc, char *argv[])
 
     QString message;
     if (argc > 1)
-        message += QString::fromUtf8 (argv[1]);
-    if (argc > 2)
     {
-        message += "\n\r"; // a string that can't be used in file names
-        message += QString::fromUtf8 (argv[2]);
+        message += QString::fromUtf8 (argv[1]);
+        if (argc > 2)
+        {
+            message += "\n\r"; // a string that can't be used in file names
+            message += QString::fromUtf8 (argv[2]);
+        }
     }
 
     FeatherNotes::FN w (message);

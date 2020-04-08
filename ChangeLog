@@ -1,6 +1,7 @@
 V0.6.1
 ---------
  * Focus the visible unfocused search bar on activating its action.
+ * Handle relative file paths correctly.
 
 V0.6.0
 ---------
