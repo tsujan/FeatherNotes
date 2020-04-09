@@ -16,6 +16,7 @@
  */
 
 #include <csignal> // signal.h in C
+#include <QStringList>
 #include <QApplication>
 #include <QLibraryInfo>
 #include <QTranslator>
@@ -94,15 +95,12 @@ int main(int argc, char *argv[])
 #endif
     app.installTranslator (&FPTranslator);
 
-    QString message;
+    QStringList message;
     if (argc > 1)
     {
-        message += QString::fromUtf8 (argv[1]);
+        message << QString::fromUtf8 (argv[1]);
         if (argc > 2)
-        {
-            message += "\n\r"; // a string that can't be used in file names
-            message += QString::fromUtf8 (argv[2]);
-        }
+            message << QString::fromUtf8 (argv[2]);
     }
 
     FeatherNotes::FN w (message);

@@ -62,7 +62,7 @@ static QSize TOOLBAR_ICON_SIZE;
 // Regex of an embedded image (should be checked for the image):
 static const QRegularExpression EMBEDDED_IMG (R"(<\s*img(?=\s)[^<>]*(?<=\s)src\s*=\s*"data:[^<>]*;base64\s*,[a-zA-Z0-9+=/\s]+"[^<>]*/*>)");
 
-FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new Ui::FN)
+FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui (new Ui::FN)
 {
 #ifdef HAS_X11
     // For now, the lack of x11 is seen as wayland.
@@ -382,22 +382,21 @@ FN::FN (const QString& message, QWidget *parent) : QMainWindow (parent), ui (new
     }
     else
     {
-        QStringList sl = message.split ("\n\r");
-        if (sl.at (0) != "--min" && sl.at (0) != "-m"
-            && sl.at (0) != "--tray" && sl.at (0) != "-t")
+        if (message.at (0) != "--min" && message.at (0) != "-m"
+            && message.at (0) != "--tray" && message.at (0) != "-t")
         {
             if (!hasTray_ || !minToTray_)
                 show();
-            filePath = sl.at (0);
+            filePath = message.at (0);
         }
         else
         {
-            if (sl.at (0) == "--min" || sl.at (0) == "-m")
+            if (message.at (0) == "--min" || message.at (0) == "-m")
                 showMinimized();
             else if (!hasTray_)
                 show();
-            if (sl.count() > 1)
-                filePath = sl.at (1);
+            if (message.count() > 1)
+                filePath = message.at (1);
         }
     }
 

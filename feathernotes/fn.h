@@ -39,7 +39,7 @@ class FN : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit FN (const QString& message, QWidget *parent = nullptr);
+    explicit FN (const QStringList& message, QWidget *parent = nullptr);
     ~FN();
 
     void writeGeometryConfig();
