@@ -46,7 +46,7 @@
     <message>
         <location filename="../../fn.ui" line="115"/>
         <source>Search only in names (Ctrl+Shift+F7)</source>
-        <translation>仅在名称中搜索  (Ctrl+Shift+F7)</translation>
+        <translation>仅在名称中搜索 (Ctrl+Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="118"/>
@@ -56,7 +56,7 @@
     <message>
         <location filename="../../fn.ui" line="128"/>
         <source>Search only in tags (Shift+F7)</source>
-        <translation>仅在Tags中搜索  (Shift+F7)</translation>
+        <translation>仅在Tags中搜索 (Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="131"/>
@@ -66,7 +66,7 @@
     <message>
         <location filename="../../fn.ui" line="144"/>
         <source>Search in all nodes (F7)</source>
-        <translation>在所有笔记中查找  (F7)</translation>
+        <translation>在所有笔记中查找 (F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="147"/>
@@ -76,7 +76,7 @@
     <message>
         <location filename="../../fn.ui" line="186"/>
         <source>Whole Word (F6)</source>
-        <translation>精确模式  (F6)</translation>
+        <translation>精确模式 (F6)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="189"/>
@@ -162,7 +162,7 @@
     <message>
         <location filename="../../fn.ui" line="467"/>
         <source>Previous (F9)</source>
-        <translation>上一项  (F9)</translation>
+        <translation>上一项 (F9)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="470"/>
@@ -1085,18 +1085,18 @@
     <message>
         <location filename="../../fn.cpp" line="2844"/>
         <source>%1 Matches</source>
-        <translation>%1 Matches</translation>
+        <translation>%1 项匹配</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2846"/>
         <source>One Match</source>
-        <translation>One Match</translation>
+        <translation>一项匹配</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2848"/>
         <location filename="../../fn.cpp" line="3171"/>
         <source>No Match</source>
-        <translation>No Match</translation>
+        <translation>无匹配</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2963"/>
@@ -1201,7 +1201,7 @@
         <location filename="../../fn.cpp" line="2364"/>
         <location filename="../../fn.cpp" line="3649"/>
         <source>Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)</source>
-        <translation>Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)</translation>
+        <translation>图片文件 (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;所有文件 (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2544"/>
@@ -1325,7 +1325,7 @@
     <message>
         <location filename="../../fn.cpp" line="4993"/>
         <source>HTML Files (*.html *.htm)</source>
-        <translation>HTML Files (*.html *.htm)</translation>
+        <translation>HTML 文件 (*.html *.htm)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5014"/>
@@ -1588,7 +1588,7 @@ position and then restart FeatherNotes!</source>
     <message>
         <location filename="../../predDialog.ui" line="248"/>
         <source>Shifts (X × Y): </source>
-        <translation>Shifts (X × Y): </translation>
+        <translation type="unfinished">移位（X×Y）： </translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="314"/>
