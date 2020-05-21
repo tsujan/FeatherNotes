@@ -619,6 +619,31 @@ void TextEdit::keyPressEvent (QKeyEvent *event)
             }
         }
     }
+    else if (event->key() == Qt::Key_Home)
+    {
+        if (!(event->modifiers() & Qt::ControlModifier))
+        { // Qt's default behavior isn't acceptable
+            QTextCursor cur = textCursor();
+            int p = cur.positionInBlock();
+            int indx = 0;
+            QRegularExpressionMatch match;
+            if (cur.block().text().indexOf (QRegularExpression ("^\\s+"), 0, &match) > -1)
+                indx = match.capturedLength();
+            if (p > 0)
+            {
+                if (p <= indx) p = 0;
+                else p = indx;
+            }
+            else p = indx;
+            cur.setPosition (p + cur.block().position(),
+                             event->modifiers() & Qt::ShiftModifier ? QTextCursor::KeepAnchor
+                                                                    : QTextCursor::MoveAnchor);
+            setTextCursor (cur);
+            ensureCursorVisible();
+            event->accept();
+            return;
+        }
+    }
 
     QTextEdit::keyPressEvent (event);
 }

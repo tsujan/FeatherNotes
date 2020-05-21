@@ -20,6 +20,10 @@
 
 #include "fn.h"
 
+#ifdef HAS_HUNSPELL
+#include "filedialog.h"
+#endif
+
 #include <QWindow>
 #include <QScreen>
 #include <QPushButton>
@@ -308,6 +312,15 @@ PrefDialog::PrefDialog (QWidget *parent)
         connect (ui->workaroundBox, &QCheckBox::stateChanged, win, [win] (int checked) {
             win->enableScrollJumpWorkaround (checked == Qt::Checked);
         });
+
+        /* spell checking */
+#ifdef HAS_HUNSPELL
+        ui->dictEdit->setText (win->getDictPath());
+        connect (ui->dictButton, &QAbstractButton::clicked, this, &PrefDialog::addDict);
+        connect (ui->dictEdit, &QLineEdit::editingFinished, this, &PrefDialog::addDict);
+#else
+        ui->dictGroupBox->setVisible (false);
+#endif
 
         /*****************
          *** Shortcuts ***
@@ -639,6 +652,51 @@ void PrefDialog::showPrompt (const QString& str, bool temporary)
     }
     ui->promptLabel->show();
 }
+/*************************/
+#ifdef HAS_HUNSPELL
+void PrefDialog::addDict()
+{
+    FN *win = static_cast<FN *>(parent_);
+    if (win == nullptr) return;
+
+    if (QObject::sender() == ui->dictEdit)
+    {
+        win->setDictPath (ui->dictEdit->text());
+        return;
+    }
+    FileDialog dialog (this);
+    dialog.setAcceptMode (QFileDialog::AcceptOpen);
+    dialog.setWindowTitle (tr ("Add dictionary..."));
+    dialog.setFileMode (QFileDialog::ExistingFile);
+    dialog.setNameFilter (tr ("Hunspell Dictionary Files (*.dic)"));
+    QString path = ui->dictEdit->text();
+    if (path.isEmpty())
+    {
+        path = "/usr/share/hunspell";
+        if (!QFileInfo (path).isDir())
+            path = "/usr/local/share/hunspell";
+    }
+
+    if (QFileInfo (path).isDir())
+        dialog.setDirectory (path);
+    else if (QFile::exists (path))
+    {
+        dialog.setDirectory (path.section ("/", 0, -2));
+        dialog.selectFile (path);
+        dialog.autoScroll();
+    }
+
+    if (dialog.exec())
+    {
+        const QStringList files = dialog.selectedFiles();
+        if (!files.isEmpty())
+        {
+            ui->dictEdit->setText (files.at (0));
+            win->setDictPath (files.at (0));
+        }
+    }
+}
+#endif
 
 }
 

@@ -71,6 +71,10 @@ private slots:
     void onShortcutChange (QTableWidgetItem *item);
     void restoreDefaultShortcuts();
 
+#ifdef HAS_HUNSPELL
+    void addDict();
+#endif
+
 private:
     void closeEvent (QCloseEvent *event);
     void showPrompt (const QString& str = QString(), bool temporary = false);

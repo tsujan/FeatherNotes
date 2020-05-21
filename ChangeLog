@@ -1,7 +1,9 @@
-V0.6.1
+V0.7.0
 ---------
  * Focus the visible unfocused search bar on activating its action.
  * Handle relative file paths correctly.
+ * Overrode Qt's default behavior with the Home key.
+ * Added optional spell checking with Hunspell, that can be enabled at compilation time.
 
 V0.6.0
 ---------

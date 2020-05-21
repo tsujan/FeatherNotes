@@ -5,6 +5,7 @@ To compile FeatherNotes from its source, first install build dependencies. In De
  * qtbase5-dev and libqt5x11extras5-dev (for Qt5)
  * libqt5svg5-dev (for hard-coded SVG icons)
  * qttools5-dev-tools (for localization)
+ * libhunspell-dev (optional, for spell checking)
 
 In Arch-based systems, the required package are:
 
@@ -13,6 +14,7 @@ In Arch-based systems, the required package are:
  * qt5-base and qt5-x11extras (for Qt5)
  * qt5-svg (for hard-coded SVG icons)
  * qt5-tools (for localization)
+ * hunspell (optional, for spell checking)
 
 In Red Hat based systems like Fedora:
 
@@ -23,6 +25,7 @@ In Red Hat based systems like Fedora:
  * qt5-qtbase-devel
  * qt5-qtsvg-devel
  * qt5-qttools-devel
+ * hunspell-devel (optional, for spell checking)
 
 And, finally, in OpenSUSE:
 
@@ -33,6 +36,7 @@ And, finally, in OpenSUSE:
  * libqt5-qtbase-devel
  * libqt5-qtsvg-devel
  * libqt5-qttools-devel
+ * hunspell-devel (optional, for spell checking)
 
 Then, open a terminal inside this folder and issue the following commands:
 
@@ -44,6 +48,17 @@ If your default Qt installation is not Qt5, put the full path of Qt5 qmake in th
 Afterward, you could use this command for cleaning the source directory:
 
 	make distclean
+
+*********************************
+*   Compilation with Hunspell   *
+*********************************
+
+Under Linux and Unix, FeatherNotes supports spell checking with Hunspell if it is compiled with:
+
+	qmake WITH_HUNSPELL=YES
+	make
+
+See above for the build dependency.
 
 *******************************
 *   Compilation without X11   *

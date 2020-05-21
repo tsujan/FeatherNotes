@@ -28,6 +28,12 @@
 #include "svgicons.h"
 #include "pref.h"
 
+#ifdef HAS_HUNSPELL
+#include "spellChecker.h"
+#include "spellDialog.h"
+#include <QStandardPaths>
+#endif
+
 #include <QDir>
 #include <QTextStream>
 #include <QToolButton>
@@ -326,6 +332,12 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
 
     connect (ui->actionAbout, &QAction::triggered, this, &FN::aboutDialog);
     connect (ui->actionHelp, &QAction::triggered, this, &FN::showHelpDialog);
+
+#ifdef HAS_HUNSPELL
+    connect (ui->actionCheckSpelling, &QAction::triggered, this, &FN::checkSpelling);
+#else
+    ui->actionCheckSpelling->setVisible (false);
+#endif
 
     /* Once the tray icon is created, it'll persist even if the systray
        disappears temporarily. But for the tray icon to be created, the
@@ -4562,6 +4574,10 @@ void FN::readAndApplyConfig (bool startup)
     if (!startup)
         enableScrollJumpWorkaround (scrollJumpWorkaround_);
 
+#ifdef HAS_HUNSPELL
+    dictPath_ = settings.value ("dictionaryPath").toString();
+#endif
+
     settings.endGroup();
 }
 /*************************/
@@ -4641,6 +4657,10 @@ void FN::writeConfig()
         timer_->stop();
 
     settings.setValue ("scrollJumpWorkaround", scrollJumpWorkaround_);
+
+#ifdef HAS_HUNSPELL
+    settings.setValue ("dictionaryPath", dictPath_);
+#endif
 
     settings.endGroup();
 
@@ -5264,6 +5284,276 @@ void FN::showHelpDialog()
         break;
     }
 }
+/*************************/
+#ifdef HAS_HUNSPELL
+static inline void moveToWordStart (QTextCursor& cur, bool forward)
+{
+    const QString blockText = cur.block().text();
+    const int l = blockText.length();
+    int indx = cur.positionInBlock();
+    if (indx < l)
+    {
+        QChar ch = blockText.at (indx);
+        while (!ch.isLetterOrNumber() && ch != '\'' && ch != '-'
+               && ch != QChar (QChar::Nbsp) && ch != QChar (0x200C))
+        {
+            cur.movePosition (QTextCursor::NextCharacter);
+            ++indx;
+            if (indx == l)
+            {
+                if (cur.movePosition (QTextCursor::NextBlock))
+                    moveToWordStart (cur, forward);
+                return;
+            }
+            ch = blockText.at (indx);
+        }
+    }
+    if (!forward && indx > 0)
+    {
+        QChar ch = blockText.at (indx - 1);
+        while (ch.isLetterOrNumber() || ch == '\'' || ch == '-'
+               || ch == QChar (QChar::Nbsp) || ch == QChar (0x200C))
+        {
+            cur.movePosition (QTextCursor::PreviousCharacter);
+            --indx;
+            ch = blockText.at (indx);
+            if (indx == 0) break;
+        }
+    }
+}
+
+static inline void selectWord (QTextCursor& cur)
+{
+    moveToWordStart (cur, true);
+    const QString blockText = cur.block().text();
+    const int l = blockText.length();
+    int indx = cur.positionInBlock();
+    if (indx < l)
+    {
+        QChar ch = blockText.at (indx);
+        while (ch.isLetterOrNumber() || ch == '\'' || ch == '-'
+               || ch == QChar (QChar::Nbsp) || ch == QChar (0x200C))
+        {
+            cur.movePosition (QTextCursor::NextCharacter, QTextCursor::KeepAnchor);
+            ++indx;
+            if (indx == l) break;
+            ch = blockText.at (indx);
+        }
+    }
+
+    /* no dash, single quote mark or number at the start */
+    while (!cur.selectedText().isEmpty()
+           && (cur.selectedText().at (0) == '-' || cur.selectedText().at (0) == '\''
+               || cur.selectedText().at (0).isNumber()))
+    {
+        int p = cur.position();
+        cur.setPosition (cur.anchor() + 1);
+        cur.setPosition (p, QTextCursor::KeepAnchor);
+    }
+    /* no dash or single quote mark at the end */
+    while (!cur.selectedText().isEmpty()
+           && (cur.selectedText().endsWith ("-") || cur.selectedText().endsWith ("\'")))
+    {
+        cur.setPosition (cur.position() - 1, QTextCursor::KeepAnchor);
+    }
+}
+
+void FN::spellingCheckingMsg (const QString &msg, bool hasInfo)
+{
+    MessageBox msgBox;
+    if (hasInfo)
+    {
+        msgBox.setIcon (QMessageBox::Warning);
+        msgBox.setText ("<center><b><big>" + msg + "</big></b></center>");
+        msgBox.setInformativeText ("<center><i>" + tr ("See Preferences → Text → Spell Checking!") + "</i></center>");
+    }
+    else
+    {
+        msgBox.setIcon (QMessageBox::Information);
+        msgBox.setText ("<center>" + msg + "</center>");
+    }
+    msgBox.setStandardButtons (QMessageBox::Close);
+    msgBox.changeButtonText (QMessageBox::Close, tr ("Close"));
+    msgBox.setParent (this, Qt::Dialog);
+    msgBox.setWindowModality (Qt::WindowModal);
+    msgBox.exec();
+}
+
+void FN::checkSpelling()
+{
+    QWidget *cw = ui->stackedWidget->currentWidget();
+    if (!cw) return;
+
+    auto dictPath = dictPath_;
+    if (dictPath.isEmpty())
+    {
+        spellingCheckingMsg (tr ("You need to add a Hunspell dictionary."), true);
+        return;
+    }
+    if (!QFile::exists (dictPath))
+    {
+        spellingCheckingMsg (tr ("The Hunspell dictionary does not exist."), true);
+        return;
+    }
+    if (dictPath.endsWith (".dic"))
+        dictPath = dictPath.left (dictPath.size() - 4);
+    const QString affixFile = dictPath + ".aff";
+    if (!QFile::exists (affixFile))
+    {
+        spellingCheckingMsg (tr ("The Hunspell dictionary is not accompanied by an affix file."), true);
+        return;
+    }
+    QString confPath = QStandardPaths::writableLocation (QStandardPaths::ConfigLocation);
+    if (!QFile (confPath + "/feathernotes").exists()) // create config dir if needed
+        QDir (confPath).mkpath (confPath + "/feathernotes");
+    QString userDict = confPath + "/feathernotes/userDict-" + dictPath.section ("/", -1);
+
+    TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
+    QTextCursor cur = textEdit->textCursor();
+    cur.setPosition (cur.anchor());
+    moveToWordStart (cur, false);
+    selectWord (cur);
+    QString word = cur.selectedText();
+    while (word.isEmpty())
+    {
+        if (!cur.movePosition (QTextCursor::NextCharacter))
+        {
+            spellingCheckingMsg (tr ("No misspelling from text cursor."), false);
+            return;
+        }
+        selectWord (cur);
+        word = cur.selectedText();
+    }
+
+    SpellChecker *spellChecker = new SpellChecker (dictPath, userDict);
+
+    while (spellChecker->spell (word))
+    {
+        cur.setPosition (cur.position());
+        if (cur.atEnd())
+        {
+            delete spellChecker;
+            spellingCheckingMsg (tr ("No misspelling from text cursor."), false);
+            return;
+        }
+        if (cur.movePosition (QTextCursor::NextCharacter))
+            selectWord (cur);
+        word = cur.selectedText();
+        while (word.isEmpty())
+        {
+            cur.setPosition (cur.anchor());
+            if (!cur.movePosition (QTextCursor::NextCharacter))
+            {
+                delete spellChecker;
+                spellingCheckingMsg (tr ("No misspelling from text cursor."), false);
+                return;
+            }
+            selectWord (cur);
+            word = cur.selectedText();
+        }
+    }
+    textEdit->setTextCursor (cur);
+    textEdit->ensureCursorVisible();
+
+    SpellDialog dlg (spellChecker, word, this);
+    dlg.setWindowTitle (tr ("Spell Checking"));
+
+    connect (&dlg, &SpellDialog::spellChecked, [&dlg, textEdit] (int res) {
+        QTextCursor cur = textEdit->textCursor();
+        if (!cur.hasSelection()) return; // impossible
+        QString word = cur.selectedText();
+        QString corrected;
+        switch (res) {
+        case SpellDialog::CorrectOnce:
+            cur.insertText (dlg.replacement());
+            break;
+        case SpellDialog::IgnoreOnce:
+            break;
+        case SpellDialog::CorrectAll:
+            /* remember this corretion */
+            dlg.spellChecker()->addToCorrections (word, dlg.replacement());
+            cur.insertText (dlg.replacement());
+            break;
+        case SpellDialog::IgnoreAll:
+            /* always ignore the selected word */
+            dlg.spellChecker()->ignoreWord (word);
+            break;
+        case SpellDialog::AddToDict:
+            /* not only ignore it but also add it to user dictionary */
+            dlg.spellChecker()->addToUserWordlist (word);
+            break;
+        }
+
+        /* check the next word */
+        cur.setPosition (cur.position());
+        if (cur.atEnd())
+        {
+            textEdit->setTextCursor (cur);
+            textEdit->ensureCursorVisible();
+            dlg.close();
+            return;
+        }
+        if (cur.movePosition (QTextCursor::NextCharacter))
+            selectWord (cur);
+        word = cur.selectedText();
+
+        while (word.isEmpty())
+        {
+            cur.setPosition (cur.anchor());
+            if (!cur.movePosition (QTextCursor::NextCharacter))
+            {
+                textEdit->setTextCursor (cur);
+                textEdit->ensureCursorVisible();
+                dlg.close();
+                return;
+            }
+            selectWord (cur);
+            word = cur.selectedText();
+        }
+        while (dlg.spellChecker()->spell (word)
+               || !(corrected = dlg.spellChecker()->correct (word)).isEmpty())
+        {
+            if (!corrected.isEmpty())
+            {
+                cur.insertText (corrected);
+                corrected = QString();
+            }
+            else
+                cur.setPosition (cur.position());
+            if (cur.atEnd())
+            {
+                textEdit->setTextCursor (cur);
+                textEdit->ensureCursorVisible();
+                dlg.close();
+                return;
+            }
+            if (cur.movePosition (QTextCursor::NextCharacter))
+                selectWord (cur);
+            word = cur.selectedText();
+            while (word.isEmpty())
+            {
+                cur.setPosition (cur.anchor());
+                if (!cur.movePosition (QTextCursor::NextCharacter))
+                {
+                    textEdit->setTextCursor (cur);
+                    textEdit->ensureCursorVisible();
+                    dlg.close();
+                    return;
+                }
+                selectWord (cur);
+                word = cur.selectedText();
+            }
+        }
+        textEdit->setTextCursor (cur);
+        textEdit->ensureCursorVisible();
+        dlg.checkWord (word);
+    });
+
+    dlg.exec();
+
+    delete spellChecker;
+}
+#endif
 /*************************/
 bool FN::event (QEvent *event)
 {

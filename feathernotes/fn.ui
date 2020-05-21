@@ -247,6 +247,8 @@
     <addaction name="actionDelete"/>
     <addaction name="separator"/>
     <addaction name="actionSelectAll"/>
+    <addaction name="separator"/>
+    <addaction name="actionCheckSpelling"/>
    </widget>
    <widget class="QMenu" name="menuFormat">
     <property name="title">
@@ -1326,6 +1328,17 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+Shift+C</string>
+   </property>
+  </action>
+  <action name="actionCheckSpelling">
+   <property name="text">
+    <string>Check Spelling</string>
+   </property>
+   <property name="toolTip">
+    <string>Check Spelling</string>
+   </property>
+   <property name="shortcut">
+    <string>F2</string>
    </property>
   </action>
  </widget>

@@ -60,6 +60,14 @@ else:unix:!macx:!haiku {
   DEFINES += HAS_X11
 }
 
+contains(WITH_HUNSPELL, YES) {
+  LIBS += -lhunspell
+  SOURCES += spellDialog.cpp spellChecker.cpp
+  HEADERS += spellDialog.h spellChecker.h
+  FORMS += spellDialog.ui
+  DEFINES += HAS_HUNSPELL
+}
+
 unix {
   #TRANSLATIONS
   exists($$[QT_INSTALL_BINS]/lrelease) {

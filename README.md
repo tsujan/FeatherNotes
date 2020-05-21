@@ -16,10 +16,11 @@ FeatherNotes (by Pedram Pourang, a.k.a. Tsu Jan <tsujan2000@gmail.com>) is a lig
   * Printing and exporting to HTML and PDF;
   * Password protection;
   * Auto-saving;
+  * Optional spell checking with Hunspell (if enabled at compilation time);
   * macOS support (by [Pavel Shlyak](https://github.com/shlyakpavel)); and
   * Other features that can be found in its settings, on its menus or when it is actually used.
 
-Please see [INSTALL](INSTALL) for instructions on compilation, installation and translation! (For translations, also see below.)
+Please see [INSTALL](INSTALL) for instructions on compilation, installation and translation!
 
 FeatherNotes' homepage is <https://github.com/tsujan/FeatherNotes>.
 
@@ -28,11 +29,3 @@ FeatherNotes' homepage is <https://github.com/tsujan/FeatherNotes>.
 The active Qt widget style determines the look and feel of every Qt application. The following screenshot is taken with a Kvantum theme:
 
 ![FeatherNotes](screenshots/FeatherNotes.png?raw=true "FeatherNotes")
-
-## Translations
-FeatherNotes is being translated using Weblate, a web tool designed to ease translating for both developers and translators.
-If you would like to contribute to translation of FeatherNotes, you need to register on this server.
-
-<a href="https://weblate.lxqt.org/engage/tsujan/?utm_source=widget">
-<img src="https://weblate.lxqt.org/widgets/tsujan/-/feathernotes/multi-auto.svg" alt="Translation status" />
-</a>

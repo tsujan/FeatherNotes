@@ -199,6 +199,15 @@ public:
         return reservedShortcuts_;
     }
 
+#ifdef HAS_HUNSPELL
+    QString getDictPath() const {
+        return dictPath_;
+    }
+    void setDictPath (const QString& dictPath) {
+        dictPath_ = dictPath;
+    }
+#endif
+
 private slots:
     bool close();
     void checkTray();
@@ -308,6 +317,10 @@ private slots:
     void showHelpDialog();
     void closeTagsDialog();
 
+#ifdef HAS_HUNSPELL
+    void checkSpelling();
+#endif
+
 private:
     void enableActions (bool enable);
     void fileOpen (const QString &filePath);
@@ -340,6 +353,10 @@ private:
     void dragEnterEvent (QDragEnterEvent *event);
     void dropEvent (QDropEvent *event);
     bool event (QEvent *event);
+
+#ifdef HAS_HUNSPELL
+    void spellingCheckingMsg (const QString &msg, bool hasInfo);
+#endif
 
     Ui::FN *ui;
     bool isX11_;
@@ -394,6 +411,10 @@ private:
     QHash<QString, QString> customActions_;
     QHash<QAction*, QKeySequence> defaultShortcuts_;
     QStringList uncustomizedActions_, reservedShortcuts_;
+
+#ifdef HAS_HUNSPELL
+    QString dictPath_;
+#endif
 };
 
 }

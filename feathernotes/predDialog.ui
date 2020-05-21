@@ -62,7 +62,7 @@ Uncheck to set a fixed size!</string>
             <item>
              <widget class="QLabel" name="winXLabel">
               <property name="text">
-               <string> × </string>
+               <string notr="true"> × </string>
               </property>
              </widget>
             </item>
@@ -259,7 +259,7 @@ position and then restart FeatherNotes!</string>
             <item>
              <widget class="QLabel" name="XLabel">
               <property name="text">
-               <string> × </string>
+               <string notr="true"> × </string>
               </property>
              </widget>
             </item>
@@ -407,6 +407,53 @@ prevents annoying scroll jumps.</string>
             <property name="text">
              <string>Workaround for &amp;Qt5's scroll jump bug</string>
             </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="dictGroupBox">
+            <property name="title">
+             <string>Spell Checking</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_5">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_5">
+               <item>
+                <widget class="QLabel" name="dictLabel">
+                 <property name="toolTip">
+                  <string>A Hunspell dictionary has a name that ends with &quot;.dic&quot;
+and should be alongside an affix file with the same
+name but ending with &quot;.aff&quot;.</string>
+                 </property>
+                 <property name="text">
+                  <string>Hunspell dictionary path:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="dictEdit">
+                 <property name="toolTip">
+                  <string>A Hunspell dictionary has a name that ends with &quot;.dic&quot;
+and should be alongside an affix file with the same
+name but ending with &quot;.aff&quot;.</string>
+                 </property>
+                 <property name="clearButtonEnabled">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="dictButton">
+                 <property name="toolTip">
+                  <string>Add dictionary...</string>
+                 </property>
+                 <property name="text">
+                  <string notr="true">...</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
            </widget>
           </item>
           <item>
