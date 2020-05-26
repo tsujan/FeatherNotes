@@ -126,7 +126,7 @@
     <message>
         <location filename="../../fn.ui" line="310"/>
         <source>&amp;Options</source>
-        <translation>&amp;Opciók</translation>
+        <translation>&amp;Beállítások</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="322"/>
@@ -374,7 +374,7 @@
     <message>
         <location filename="../../fn.ui" line="695"/>
         <source>Options</source>
-        <translation>Opciók</translation>
+        <translation>Beállítások</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="700"/>
@@ -949,12 +949,12 @@
         <location filename="../../fn.ui" line="1335"/>
         <location filename="../../fn.ui" line="1338"/>
         <source>Check Spelling</source>
-        <translation type="unfinished"></translation>
+        <translation>Helyesírás-ellenőrzés</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1341"/>
         <source>F2</source>
-        <translation type="unfinished">F2</translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2343"/>
@@ -965,7 +965,7 @@
         <location filename="../../fn.cpp" line="593"/>
         <location filename="../../fn.cpp" line="4251"/>
         <source>&amp;Raise/Hide</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Megjelenítés/Elrejtés</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="766"/>
@@ -1092,7 +1092,7 @@
         <location filename="../../fn.cpp" line="2486"/>
         <location filename="../../fn.cpp" line="2519"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Jegyzet:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Fő elemek:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Összes elem:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2855"/>
@@ -1164,7 +1164,7 @@
         <location filename="../../fn.cpp" line="595"/>
         <location filename="../../fn.cpp" line="4239"/>
         <source>&amp;Raise</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Megjelenítés</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="798"/>
@@ -1202,12 +1202,12 @@
     <message>
         <location filename="../../fn.cpp" line="2174"/>
         <source>Deletion</source>
-        <translation type="unfinished">Törlés</translation>
+        <translation>Törlés</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2287"/>
         <source>Tag(s) for this node</source>
-        <translation type="unfinished">Címkék az elemhez</translation>
+        <translation>Címkék az elemhez</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2375"/>
@@ -1399,34 +1399,34 @@
     <message>
         <location filename="../../fn.cpp" line="5368"/>
         <source>See Preferences → Text → Spell Checking!</source>
-        <translation type="unfinished"></translation>
+        <translation>Lásd: Beállítások → Szöveg → Helyesírás-ellenőrzés!</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5390"/>
         <source>You need to add a Hunspell dictionary.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hozzá kell adnia egy Hunspell szótárat.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5395"/>
         <source>The Hunspell dictionary does not exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>A Hunspell szótár nem létezik.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5403"/>
         <source>The Hunspell dictionary is not accompanied by an affix file.</source>
-        <translation type="unfinished"></translation>
+        <translation>A Hunspell szótárhoz nem kapcsolódik affix fájl.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5421"/>
         <location filename="../../fn.cpp" line="5436"/>
         <location filename="../../fn.cpp" line="5448"/>
         <source>No misspelling from text cursor.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nincs elírás a szövegkurzortól.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5459"/>
         <source>Spell Checking</source>
-        <translation type="unfinished"></translation>
+        <translation>Helyesírás ellenőrzés</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5269"/>
@@ -1466,7 +1466,7 @@
 this dialog and also on exit.
 
 Uncheck to set a fixed size!</source>
-        <translation type="unfinished">Ablakméret megjegyzése a
+        <translation>Ablakméret megjegyzése a
 párbeszédpanel bezárása után.
 
 Ne jelölje be, ha fix méretet szeretne!</translation>
@@ -1495,7 +1495,7 @@ Ne jelölje be, ha fix méretet szeretne!</translation>
 this dialog and also on exit.
 
 Uncheck for a width ratio of 170/530.</source>
-        <translation type="unfinished">Oldalsáv szélességének mentése bezárás után.
+        <translation>Oldalsáv szélességének mentése bezárás után.
 A párbeszédablak bezárása után lép érvénybe.
 
 Ha nincs bejelölve akkor 
@@ -1533,7 +1533,11 @@ If checked, the titlebar close button iconifies
 the window to the systray instead of quitting.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Meghatározza, hogy kell-e használni a tálcaikont.
+Ha be van jelölve, a címsor bezárás gombja csak
+lerakja az ablakot a rendszertálcára, bezárás helyett.
+
+Az érvényesítéshez újra kell indítani az alkalmazást.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="132"/>
@@ -1550,12 +1554,12 @@ használható ehelyett.</translation>
     <message>
         <location filename="../../predDialog.ui" line="161"/>
         <source>Start i&amp;conified to tray</source>
-        <translation type="unfinished">Indítás tál&amp;caikonként</translation>
+        <translation>Indítás tál&amp;caikonként</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="170"/>
         <source>Merge the tree view with its surroundings?</source>
-        <translation type="unfinished"></translation>
+        <translation>Az oldalsáv a környezete háttérszínét kapja meg?</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="173"/>
@@ -1693,7 +1697,7 @@ megakadályozza a bosszantó ugrásokat görgetésnél.</translation>
     <message>
         <location filename="../../predDialog.ui" line="415"/>
         <source>Spell Checking</source>
-        <translation type="unfinished"></translation>
+        <translation>Helyesírás-ellenőrzés</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="423"/>
@@ -1701,18 +1705,20 @@ megakadályozza a bosszantó ugrásokat görgetésnél.</translation>
         <source>A Hunspell dictionary has a name that ends with &quot;.dic&quot;
 and should be alongside an affix file with the same
 name but ending with &quot;.aff&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>A Hunspell szótárfájlnak &quot;.dic&quot;-re kell végződnie
+és kell mellette lennie egy affix fájlnak aminek ugyanaz a neve
+csak &quot;.aff&quot;-ra végződik.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="428"/>
         <source>Hunspell dictionary path:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hunspell szótár útvonala:</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="447"/>
         <location filename="../../pref.cpp" line="669"/>
         <source>Add dictionary...</source>
-        <translation type="unfinished"></translation>
+        <translation>Szótár hozzáadása...</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="482"/>
@@ -1743,7 +1749,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../pref.cpp" line="519"/>
         <source>The typed shortcut was reserved.</source>
-        <translation type="unfinished"></translation>
+        <translation>A beírt gyorsbillentyű foglalt.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="637"/>
@@ -1753,7 +1759,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../pref.cpp" line="671"/>
         <source>Hunspell Dictionary Files (*.dic)</source>
-        <translation type="unfinished"></translation>
+        <translation>Hunspell szótárfájlok (*.dic)</translation>
     </message>
 </context>
 <context>
@@ -1761,37 +1767,37 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../spellDialog.ui" line="25"/>
         <source>Unknown word:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ismeretlen szó:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="51"/>
         <source>Add To Dictionary</source>
-        <translation type="unfinished"></translation>
+        <translation>Hozzáadás szótárhoz</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="62"/>
         <source>Replace with:</source>
-        <translation type="unfinished">Erre:</translation>
+        <translation>Csere erre:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="87"/>
         <source>Ignore Once</source>
-        <translation type="unfinished"></translation>
+        <translation>Mellőzés egyszer</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="100"/>
         <source>Ignore All</source>
-        <translation type="unfinished"></translation>
+        <translation>Összes mellőzése</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="129"/>
         <source>Correct Once</source>
-        <translation type="unfinished"></translation>
+        <translation>Javítás egyszer</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="142"/>
         <source>Correct All</source>
-        <translation type="unfinished"></translation>
+        <translation>Összes javítása</translation>
     </message>
 </context>
 <context>
