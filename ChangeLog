@@ -4,6 +4,7 @@ V0.7.0
  * Handle relative file paths correctly.
  * Overrode Qt's default behavior with the Home key.
  * Added optional spell checking with Hunspell, that can be enabled at compilation time.
+ * Update the transparent side-pane's palette if the style changes in runtime.
 
 V0.6.0
 ---------

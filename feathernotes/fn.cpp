@@ -4168,6 +4168,7 @@ void FN::makeTreeTransparent (bool trans)
             {
                 QPalette p = ui->treeView->palette();
                 p.setColor (QPalette::Base, QColor (Qt::transparent));
+                p.setColor (QPalette::Text, p.color (QPalette::WindowText));
                 ui->treeView->setPalette (p);
                 ui->treeView->viewport()->setAutoFillBackground (false);
             }
@@ -4181,12 +4182,7 @@ void FN::makeTreeTransparent (bool trans)
             ui->treeView->setFrameShape (QFrame::StyledPanel);
             if (ui->treeView->viewport())
             {
-                QPalette p = ui->treeView->palette();
-                p.setColor (QPalette::Active, QPalette::Base,
-                            QApplication::palette().color (QPalette::Active, QPalette::Base));
-                p.setColor (QPalette::Inactive, QPalette::Base,
-                            QApplication::palette().color (QPalette::Inactive, QPalette::Base));
-                ui->treeView->setPalette (p);
+                ui->treeView->setPalette (QPalette());
                 ui->treeView->viewport()->setAutoFillBackground (true);
             }
         }
@@ -5557,10 +5553,21 @@ void FN::checkSpelling()
 /*************************/
 bool FN::event (QEvent *event)
 {
+    if (event->type() == QEvent::StyleChange)
+    {
+        /* when the style changes in runtime, the text color of a transparent side pane
+           should be set to its window text color again because the latter may have changed */
+        if (transparentTree_ && ui->treeView->viewport())
+        {
+            QPalette p = ui->treeView->palette();
+            p.setColor (QPalette::Text, p.color (QPalette::WindowText));
+            ui->treeView->setPalette (p);
+        }
+    }
     /* NOTE: This is a workaround for an old Qt bug, because of which,
              QTimer may not work after resuming from suspend or hibernation. */
-    if (event->type() == QEvent::WindowActivate
-        && timer_->isActive() && timer_->remainingTime() <= 0)
+    else if (event->type() == QEvent::WindowActivate
+             && timer_->isActive() && timer_->remainingTime() <= 0)
     {
         if (autoSave_ >= 1)
         {
