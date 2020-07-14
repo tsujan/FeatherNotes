@@ -35,6 +35,7 @@
 #include <QStandardPaths>
 #endif
 
+#include <QDateTime>
 #include <QDir>
 #include <QTextStream>
 #include <QToolButton>
