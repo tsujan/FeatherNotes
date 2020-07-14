@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2020 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -38,7 +38,7 @@ void handleQuitSignals (const std::vector<int>& quitSignals)
 int main(int argc, char *argv[])
 {
     const QString name = "FeatherNotes";
-    const QString version = "0.7.0";
+    const QString version = "0.8.0";
     const QString option = QString::fromUtf8 (argv[1]);
     if (option == "--help" || option == "-h")
     {
@@ -55,7 +55,12 @@ int main(int argc, char *argv[])
     else if (option == "--version" || option == "-v")
     {
         QTextStream out (stdout);
-        out << name << " " << version <<  endl;
+        out << name << " " << version
+#if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
+            << Qt::endl;
+#else
+            << endl;
+#endif
         return 0;
     }
 

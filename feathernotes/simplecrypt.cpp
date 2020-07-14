@@ -25,6 +25,7 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
+#include <stdlib.h>
 #include "simplecrypt.h"
 #include <QByteArray>
 #include <QtDebug>
@@ -41,7 +42,7 @@ SimpleCrypt::SimpleCrypt():
     m_protectionMode(ProtectionChecksum),
     m_lastError(ErrorNoError)
 {
-    qsrand(uint(QDateTime::currentMSecsSinceEpoch() & 0xFFFF));
+    srand(static_cast<unsigned int>(QDateTime::currentMSecsSinceEpoch() & 0xFFFF));
 }
 
 SimpleCrypt::SimpleCrypt(quint64 key):
@@ -50,7 +51,7 @@ SimpleCrypt::SimpleCrypt(quint64 key):
     m_protectionMode(ProtectionChecksum),
     m_lastError(ErrorNoError)
 {
-    qsrand(uint(QDateTime::currentMSecsSinceEpoch() & 0xFFFF));
+    srand(static_cast<unsigned int>(QDateTime::currentMSecsSinceEpoch() & 0xFFFF));
     splitKey();
 }
 
@@ -116,7 +117,7 @@ QByteArray SimpleCrypt::encryptToByteArray(QByteArray plaintext)
     }
 
     //prepend a random char to the string
-    char randomChar = char(qrand() & 0xFF);
+    char randomChar = char(rand() & 0xFF);
     ba = randomChar + integrityProtection + ba;
 
     int pos(0);

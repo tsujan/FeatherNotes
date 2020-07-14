@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2019 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2020 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -166,6 +166,13 @@ public:
         autoReplace_ = yes;
     }
 
+    QString getDateFormat() const {
+        return dateFormat_;
+    }
+    void setDateFormat (const QString &format) {
+        dateFormat_ = format;
+    }
+
     int getAutoSave() const {
         return autoSave_;
     }
@@ -231,6 +238,7 @@ private slots:
     void pasteHTML();
     void deleteText();
     void selectAllText();
+    void insertDate();
     void setCursorInsideSelection (bool sel);
     void txtContextMenu (const QPoint &p);
     void copyLink();
@@ -281,6 +289,7 @@ private slots:
     void toggleStatusBar();
     void textFontDialog();
     void nodeFontDialog();
+    void docColorDialog();
     void toggleWrapping();
     void toggleIndent();
     void prefDialog();
@@ -366,6 +375,7 @@ private:
     int trayCounter_; // Used when waiting for the system tray to be created at startup.
     int saveNeeded_;
     QFont defaultFont_, nodeFont_;
+    QColor bgColor_, fgColor_;
     QColor lastTxtColor_, lastBgColor_;
     DomModel *model_;
     QString xmlPath_;
@@ -398,6 +408,7 @@ private:
          autoBracket_,
          autoReplace_,
          treeViewDND_;
+    QString dateFormat_;
     int autoSave_;
     QPoint position_; // Excluding the window frame.
     QSize winSize_, startSize_, prefSize_;

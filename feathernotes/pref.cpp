@@ -279,6 +279,9 @@ PrefDialog::PrefDialog (QWidget *parent)
             showPrompt();
         });
 
+        ui->dateEdit->setPlaceholderText (locale().dateTimeFormat());
+        ui->dateEdit->setText (win->getDateFormat());
+
         /* auto-saving */
         ui->autoSaveSpinBox->setRange (1, 60); // not needed
         if (win->getAutoSave() > -1)
@@ -455,6 +458,13 @@ void PrefDialog::onClosing()
             ++it;
         }
         win->updateCustomizableShortcuts();
+
+        QString format = ui->dateEdit->text();
+        /* if "\n" is typed in the line-edit, interpret
+           it as a newline because we're on Linux */
+        if (!format.isEmpty())
+            format.replace ("\\n", "\n");
+        win->setDateFormat (format);
 
         win->setPrefSize (size());
 

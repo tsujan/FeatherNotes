@@ -1,3 +1,10 @@
+V0.8.0
+---------
+ * Added support for customized background/foreground colors.
+ * Updated the code for Qt 5.15.
+ * Added overwrite prompt for HTML exporting.
+ * Added a configurable date and time pasting.
+
 V0.7.0
 ---------
  * Focus the visible unfocused search bar on activating its action.

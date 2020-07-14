@@ -356,6 +356,36 @@ the user is typing and under proper circumstances.</string>
            </widget>
           </item>
           <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <item>
+             <widget class="QLabel" name="dateLabel">
+              <property name="toolTip">
+               <string>Used for pasting the date and time.
+Leave empty for the system default.
+
+Takes effect after closing this dialog.</string>
+              </property>
+              <property name="text">
+               <string>Date and time format:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="dateEdit">
+              <property name="toolTip">
+               <string>Used for pasting the date and time.
+Leave empty for the system default.
+
+Takes effect after closing this dialog.</string>
+              </property>
+              <property name="clearButtonEnabled">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
            <layout class="QHBoxLayout" name="horizontalLayout_4">
             <item>
              <widget class="QCheckBox" name="autoSaveBox">

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2019 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2020 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -164,6 +164,14 @@ static inline bool isOnlySpaces (const QString &str)
 
 void TextEdit::keyPressEvent (QKeyEvent *event)
 {
+    if (event->modifiers() == Qt::ControlModifier && !isReadOnly() && event->key() == Qt::Key_Z)
+    { // only for a workaround (see TextEdit::undo)
+        if (document()->isUndoAvailable())
+            undo();
+        event->accept();
+        return;
+    }
+
     if (event->key() == Qt::Key_Return || event->key() == Qt::Key_Enter)
     {
         QTextCursor cur = textCursor();
@@ -1020,6 +1028,24 @@ void TextEdit::zooming (float range)
     /* if this is a zoom-out, the text will need
        to be formatted and/or highlighted again */
     if (range < 0) emit zoomedOut (this);
+}
+/*************************/
+void TextEdit::undo()
+{
+    QTextEdit::undo();
+    /* This is a workaround for a weird Qt bug: If some text is pasted at the document start,
+       the pasting is undone and then, some text is pasted at the document start again, the
+       text color of the document stylesheet will be ignored. */
+    if (CSSTextColor.isValid())
+    {
+        QTextCursor cur = textCursor();
+        if (cur.atStart() && cur.atEnd())
+        {
+            QTextCharFormat fmt;
+            fmt.setForeground (CSSTextColor);
+            cur.setBlockCharFormat(fmt);
+        }
+    }
 }
 
 }

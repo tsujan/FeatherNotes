@@ -14,7 +14,8 @@ else {
 TEMPLATE = app
 CONFIG += c++11
 
-SOURCES += main.cpp\
+SOURCES += main.cpp \
+           colorLabel.cpp \
            fn.cpp \
            find.cpp \
            domitem.cpp \
@@ -27,6 +28,7 @@ SOURCES += main.cpp\
            svgicons.cpp
 
 HEADERS += fn.h \
+           colorLabel.h \
            domitem.h \
            dommodel.h \
            textedit.h \

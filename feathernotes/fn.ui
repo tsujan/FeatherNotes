@@ -248,6 +248,8 @@
     <addaction name="separator"/>
     <addaction name="actionSelectAll"/>
     <addaction name="separator"/>
+    <addaction name="actionDate"/>
+    <addaction name="separator"/>
     <addaction name="actionCheckSpelling"/>
    </widget>
    <widget class="QMenu" name="menuFormat">
@@ -311,6 +313,8 @@
     </property>
     <addaction name="actionDocFont"/>
     <addaction name="actionNodeFont"/>
+    <addaction name="separator"/>
+    <addaction name="actionDocColors"/>
     <addaction name="separator"/>
     <addaction name="actionWrap"/>
     <addaction name="actionIndent"/>
@@ -1339,6 +1343,22 @@
    </property>
    <property name="shortcut">
     <string>F2</string>
+   </property>
+  </action>
+  <action name="actionDocColors">
+   <property name="text">
+    <string>Document &amp;Colors</string>
+   </property>
+  </action>
+  <action name="actionDate">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Paste Date and Time</string>
+   </property>
+   <property name="toolTip">
+    <string>Paste Date and Time</string>
    </property>
   </action>
  </widget>

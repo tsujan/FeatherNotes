@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2019 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2020 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -27,6 +27,7 @@
 #include "messagebox.h"
 #include "svgicons.h"
 #include "pref.h"
+#include "colorLabel.h"
 
 #ifdef HAS_HUNSPELL
 #include "spellChecker.h"
@@ -68,6 +69,9 @@ static QSize TOOLBAR_ICON_SIZE;
 // Regex of an embedded image (should be checked for the image):
 static const QRegularExpression EMBEDDED_IMG (R"(<\s*img(?=\s)[^<>]*(?<=\s)src\s*=\s*"data:[^<>]*;base64\s*,[a-zA-Z0-9+=/\s]+"[^<>]*/*>)");
 
+// Stylesheet of a customized document:
+static const QString DOC_STYLESHEET ("body{background-color: %1; color: %2;}");
+
 FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui (new Ui::FN)
 {
 #ifdef HAS_X11
@@ -105,6 +109,9 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     defaultFont_ = QFont ("Monospace");
     defaultFont_.setPointSize (qMax (font().pointSize(), 9));
     nodeFont_ = font();
+
+    bgColor_ = QColor (Qt::white);
+    fgColor_ = QColor (Qt::black);
 
     /* search bar */
     ui->lineEdit->setVisible (false);
@@ -145,6 +152,8 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     defaultShortcuts_.insert (ui->actionPassword, QKeySequence());
     defaultShortcuts_.insert (ui->actionDocFont, QKeySequence());
     defaultShortcuts_.insert (ui->actionNodeFont, QKeySequence());
+    defaultShortcuts_.insert (ui->actionDocColors, QKeySequence());
+    defaultShortcuts_.insert (ui->actionDate, QKeySequence());
 
     reservedShortcuts_
     /* QTextEdit */
@@ -248,6 +257,8 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     connect (ui->actionDelete, &QAction::triggered, this, &FN::deleteText);
     connect (ui->actionSelectAll, &QAction::triggered, this, &FN::selectAllText);
 
+    connect (ui->actionDate, &QAction::triggered, this, &FN::insertDate);
+
     connect (ui->actionBold, &QAction::triggered, this, &FN::makeBold);
     connect (ui->actionItalic, &QAction::triggered, this, &FN::makeItalic);
     connect (ui->actionUnderline, &QAction::triggered, this, &FN::makeUnderlined);
@@ -308,6 +319,8 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
 
     connect (ui->actionDocFont, &QAction::triggered, this, &FN::textFontDialog);
     connect (ui->actionNodeFont, &QAction::triggered, this, &FN::nodeFontDialog);
+
+    connect (ui->actionDocColors, &QAction::triggered, this, &FN::docColorDialog);
 
     connect (ui->actionWrap, &QAction::triggered, this, &FN::toggleWrapping);
     connect (ui->actionIndent, &QAction::triggered, this, &FN::toggleIndent);
@@ -793,6 +806,14 @@ void FN::newNote()
     QDomElement root = doc.createElement ("feathernotes");
     root.setAttribute ("txtfont", defaultFont_.toString());
     root.setAttribute ("nodefont", nodeFont_.toString());
+    if (bgColor_ != QColor (Qt::white))
+        root.setAttribute ("bgcolor", bgColor_.name());
+    else
+        root.removeAttribute ("bgcolor");
+    if (fgColor_ != QColor (Qt::black))
+        root.setAttribute ("fgcolor", fgColor_.name());
+    else
+        root.removeAttribute ("fgcolor");
     doc.appendChild (root);
     QDomElement e = doc.createElement ("node");
     e.setAttribute ("name", tr ("New Node"));
@@ -887,6 +908,8 @@ void FN::enableActions (bool enable)
     ui->actionPasteHTML->setEnabled (enable);
     ui->actionSelectAll->setEnabled (enable);
 
+    ui->actionDate->setEnabled (enable);
+
     ui->actionClear->setEnabled (enable);
     ui->actionBold->setEnabled (enable);
     ui->actionItalic->setEnabled (enable);
@@ -975,6 +998,24 @@ void FN::showDoc (QDomDocument &doc)
         nodeFont_.fromString (fontStr);
     else // nodeFont_ may have changed by the user
         nodeFont_ = font();
+
+    QColor bgColor;
+    QString docColor = root.attribute ("bgcolor");
+    if (!docColor.isEmpty())
+        bgColor = QColor (docColor);
+    if (bgColor.isValid())
+        bgColor_ = bgColor;
+    else
+        bgColor_ = QColor (Qt::white);
+
+    QColor fgColor;
+    docColor = root.attribute ("fgcolor");
+    if (!docColor.isEmpty())
+        fgColor = QColor (docColor);
+    if (fgColor.isValid())
+        fgColor_ = fgColor;
+    else
+        fgColor_ = QColor (Qt::black);
 
     DomModel *newModel = new DomModel (doc, this);
     QItemSelectionModel *m = ui->treeView->selectionModel();
@@ -1276,6 +1317,14 @@ void FN::setNodesTexts()
     QDomElement root = model_->domDocument.firstChildElement ("feathernotes");
     root.setAttribute ("txtfont", defaultFont_.toString());
     root.setAttribute ("nodefont", nodeFont_.toString());
+    if (bgColor_ != QColor (Qt::white))
+        root.setAttribute ("bgcolor", bgColor_.name());
+    else
+        root.removeAttribute ("bgcolor");
+    if (fgColor_ != QColor (Qt::black))
+        root.setAttribute ("fgcolor", fgColor_.name());
+    else
+        root.removeAttribute ("fgcolor");
     if (!pswrd_.isEmpty())
         root.setAttribute ("pswrd", pswrd_);
     else
@@ -1536,6 +1585,16 @@ void FN::selectAllText()
         qobject_cast< TextEdit *>(cw)->selectAll();
 }
 /*************************/
+void FN::insertDate()
+{
+    if (QWidget *cw = ui->stackedWidget->currentWidget())
+    {
+        qobject_cast< TextEdit *>(cw)->insertPlainText (QDateTime::currentDateTime().toString (dateFormat_.isEmpty()
+                                                            ? locale().dateTimeFormat()
+                                                            : dateFormat_));
+    }
+}
+/*************************/
 TextEdit *FN::newWidget()
 {
     TextEdit *textEdit = new TextEdit;
@@ -1543,36 +1602,45 @@ TextEdit *FN::newWidget()
     //textEdit->autoIndentation = true; // auto-indentation is enabled by default
     textEdit->autoBracket = autoBracket_;
     textEdit->autoReplace = autoReplace_;
-    QPalette p = QApplication::palette();
-    QColor hCol = p.color(QPalette::Active, QPalette::Highlight);
-    QBrush brush = p.window();
-    if (brush.color().value() <= 120)
+    if (bgColor_ == QColor (Qt::white) && fgColor_ == QColor (Qt::black))
     {
-        if (236 - qGray (hCol.rgb()) < 30)
-            textEdit->setStyleSheet ("QTextEdit {"
-                                     "color: black;"
-                                     "selection-color: black;"
-                                     "selection-background-color: rgb(200, 200, 200);}");
+        QPalette p = QApplication::palette();
+        QColor hCol = p.color(QPalette::Active, QPalette::Highlight);
+        QBrush brush = p.window();
+        if (brush.color().value() <= 120)
+        {
+            if (236 - qGray (hCol.rgb()) < 30)
+                textEdit->setStyleSheet ("QTextEdit {"
+                                         "color: black;"
+                                         "selection-color: black;"
+                                         "selection-background-color: rgb(200, 200, 200);}");
+            else
+                textEdit->setStyleSheet ("QTextEdit {"
+                                         "color: black;}");
+            textEdit->viewport()->setStyleSheet (".QWidget {"
+                                                 "color: black;"
+                                                 "background-color: rgb(236, 236, 236);}");
+        }
         else
-            textEdit->setStyleSheet ("QTextEdit {"
-                                     "color: black;}");
-        textEdit->viewport()->setStyleSheet (".QWidget {"
-                                             "color: black;"
-                                             "background-color: rgb(236, 236, 236);}");
+        {
+            if (255 - qGray (hCol.rgb()) < 30)
+                textEdit->setStyleSheet ("QTextEdit {"
+                                         "color: black;"
+                                         "selection-color: black;"
+                                         "selection-background-color: rgb(200, 200, 200);}");
+            else
+                textEdit->setStyleSheet ("QTextEdit {"
+                                         "color: black;}");
+            textEdit->viewport()->setStyleSheet (".QWidget {"
+                                                 "color: black;"
+                                                 "background-color: rgb(255, 255, 255);}");
+        }
     }
     else
     {
-        if (255 - qGray (hCol.rgb()) < 30)
-            textEdit->setStyleSheet ("QTextEdit {"
-                                     "color: black;"
-                                     "selection-color: black;"
-                                     "selection-background-color: rgb(200, 200, 200);}");
-        else
-            textEdit->setStyleSheet ("QTextEdit {"
-                                     "color: black;}");
-        textEdit->viewport()->setStyleSheet (".QWidget {"
-                                             "color: black;"
-                                             "background-color: rgb(255, 255, 255);}");
+        textEdit->document()->setDefaultStyleSheet (DOC_STYLESHEET.arg (bgColor_.name(), fgColor_.name()));
+        if (fgColor_ != QColor (Qt::black))
+            textEdit->CSSTextColor = fgColor_; // only for a workaround (see TextEdit::undo)
     }
     textEdit->setAcceptRichText (false);
     textEdit->viewport()->setMouseTracking (true);
@@ -1730,6 +1798,11 @@ void FN::txtContextMenu (const QPoint &p)
         }
     }
 
+    menu->addSeparator();
+    menu->addAction (ui->actionCheckSpelling);
+    menu->addSeparator();
+    menu->addAction (ui->actionDate);
+
     menu->exec (textEdit->viewport()->mapToGlobal (p));
     delete menu;
     txtTable_ = nullptr;
@@ -1798,18 +1871,29 @@ void FN::selChanged (const QItemSelection &selected, const QItemSelection& /*des
         QDomNodeList list = item->node().childNodes();
         text = list.item (0).nodeValue();
         /* this is needed for text zooming */
+        static const QString htmlStr ("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+                                      "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+                                      "p, li { white-space: pre-wrap; }\n"
+                                      "</style></head><body>");
         QRegularExpressionMatch match;
-        QRegularExpression regex (R"(^<!DOCTYPE[A-Za-z0-9/<>,;.:\-={}\s"]+</style></head><body\sstyle=[A-Za-z0-9/<>;:\-\s"']+>)");
-        if (text.indexOf (regex, 0, &match) > -1)
+        bool defaulrDocColor (bgColor_ == QColor (Qt::white) && fgColor_ == QColor (Qt::black));
+        if (defaulrDocColor)
         {
-            QString str = "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-                          "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-                          "p, li { white-space: pre-wrap; }\n"
-                          "</style></head><body>";
-            text.replace (0, match.capturedLength(), str);
+            static const QRegularExpression htmlRegex (R"(^<!DOCTYPE[A-Za-z0-9/<>,;.:\-={}\s"]+</style></head><body\sstyle=[A-Za-z0-9/<>;:\-\s"']+>)");
+            if (text.indexOf (htmlRegex, 0, &match) > -1)
+                text.replace (0, match.capturedLength(), htmlStr);
         }
         textEdit = newWidget();
         textEdit->setHtml (text);
+        if (!defaulrDocColor)
+        {
+            QString str = textEdit->document()->toHtml();
+            static const QRegularExpression htmlRegex1 (R"(^<!DOCTYPE[A-Za-z0-9/<>,;.:\-={}\s"]+</style></head><body\sstyle=[A-Za-z0-9/;:\-\s"'#=]+>(<br\s*/>(</p>)?)?)");
+            if (str.indexOf (htmlRegex1, 0, &match) > -1)
+                str.replace (0, match.capturedLength(), htmlStr);
+            textEdit->document()->setHtml (str);
+            textEdit->document()->setModified (false);
+        }
 
         connect (textEdit->document(), &QTextDocument::modificationChanged, this, &FN::setSaveEnabled);
         connect (textEdit->document(), &QTextDocument::undoAvailable, this, &FN::setUndoEnabled);
@@ -2080,7 +2164,10 @@ void FN::clearFormat()
     QTextCursor cur = qobject_cast< TextEdit *>(cw)->textCursor();
     if (!cur.hasSelection())
         cur.select (QTextCursor::WordUnderCursor);
-    cur.setCharFormat (QTextCharFormat());
+    QTextCharFormat fmt;
+    if (fgColor_ != QColor (Qt::black))
+        fmt.setForeground (fgColor_);
+    cur.setCharFormat (fmt);
 }
 /*************************/
 void FN::textAlign (QAction *a)
@@ -2618,6 +2705,72 @@ void FN::nodeFontDialog()
         nodeFont_ = newFont;
         noteModified();
         ui->treeView->setFont (nodeFont_);
+    }
+}
+/*************************/
+void FN::docColorDialog()
+{
+    QColor oldBgColor = bgColor_;
+    QColor oldFgColor = fgColor_;
+
+    QDialog *dialog = new QDialog (this);
+    dialog->setWindowTitle (tr ("Set Document Colors"));
+    QGridLayout *grid = new QGridLayout;
+    grid->setSpacing (5);
+    grid->setContentsMargins (5, 10, 5, 5);
+
+    QGridLayout *colorLayout = new QGridLayout;
+    colorLayout->setSpacing (5);
+    colorLayout->setContentsMargins (0, 10, 0, 0);
+
+    QLabel *label = new QLabel ("<center><i>"
+                                + tr ("These colors will be applied to new nodes.<br>They may or may not affect existing nodes,<br>depending on the document structure.")
+                                + "</i></center>");
+
+    QLabel *bgLabel = new QLabel (tr ("Background color:"));
+    ColorLabel *bgColorLabel = new ColorLabel();
+    bgColorLabel->setColor (bgColor_);
+    colorLayout->addWidget (bgLabel, 0, 0);
+    colorLayout->addWidget (bgColorLabel, 0, 1);
+
+    QLabel *fgLabel = new QLabel (tr ("Text color:"));
+    ColorLabel *fgColorLabel = new ColorLabel();
+    fgColorLabel->setColor (fgColor_);
+    colorLayout->addWidget (fgLabel, 1, 0);
+    colorLayout->addWidget (fgColorLabel, 1, 1);
+
+    colorLayout->setColumnStretch (1, 1);
+
+    QSpacerItem *spacer = new QSpacerItem (1, 10);
+    QPushButton *cancelButton = new QPushButton (symbolicIcon::icon (":icons/dialog-cancel.svg"), tr ("Cancel"));
+    QPushButton *okButton = new QPushButton (symbolicIcon::icon (":icons/dialog-ok.svg"), tr ("OK"));
+    connect (cancelButton, &QAbstractButton::clicked, dialog, &QDialog::reject);
+    connect (okButton, &QAbstractButton::clicked, dialog, &QDialog::accept);
+    okButton->setDefault (true);
+
+    grid->addWidget (label, 0, 0, 1, 2);
+    grid->addLayout (colorLayout, 1, 0, 1, 2);
+    grid->addItem (spacer, 2, 0);
+    grid->addWidget (cancelButton, 3, 0, Qt::AlignRight);
+    grid->addWidget (okButton, 3, 1, Qt::AlignCenter);
+    grid->setColumnStretch (0, 1);
+    grid->setRowStretch (2, 1);
+
+    dialog->setLayout (grid);
+
+    QHash<DomItem*, TextEdit*>::iterator it;
+    switch (dialog->exec()) {
+    case QDialog::Accepted:
+        bgColor_ = bgColorLabel->getColor();
+        fgColor_ = fgColorLabel->getColor();
+        if (bgColor_ != oldBgColor || fgColor_ != oldFgColor)
+            noteModified();
+        delete dialog;
+        break;
+    case QDialog::Rejected:
+    default:
+        delete dialog;
+        break;
     }
 }
 /*************************/
@@ -4447,7 +4600,9 @@ void FN::readAndApplyConfig (bool startup)
         ui->actionUnderline->setIcon (symbolicIcon::icon (":icons/format-text-underline.svg"));
         ui->actionStrike->setIcon (symbolicIcon::icon (":icons/format-text-strikethrough.svg"));
         ui->actionTextColor->setIcon (symbolicIcon::icon (":icons/format-text-color.svg"));
-        ui->actionBgColor->setIcon (symbolicIcon::icon (":icons/format-fill-color.svg"));
+        icn = symbolicIcon::icon (":icons/format-fill-color.svg");
+        ui->actionBgColor->setIcon (icn);
+        ui->actionDocColors->setIcon (icn);
         ui->actionNew->setIcon (symbolicIcon::icon (":icons/document-new.svg"));
         ui->actionSaveAs->setIcon (symbolicIcon::icon (":icons/document-save-as.svg"));
         icn = symbolicIcon::icon (":icons/document-print.svg");
@@ -4463,6 +4618,7 @@ void FN::readAndApplyConfig (bool startup)
         ui->actionPasteHTML->setIcon (icn);
         ui->actionDelete->setIcon (symbolicIcon::icon (":icons/edit-delete.svg"));
         ui->actionSelectAll->setIcon (symbolicIcon::icon (":icons/edit-select-all.svg"));
+        ui->actionDate->setIcon (symbolicIcon::icon (":icons/document-open-recent.svg"));
         icn = symbolicIcon::icon (":icons/image-x-generic.svg");
         ui->actionEmbedImage->setIcon (icn);
         ui->actionImageScale->setIcon (icn);
@@ -4553,6 +4709,8 @@ void FN::readAndApplyConfig (bool startup)
     autoBracket_ = settings.value ("autoBracket").toBool(); // false by default
 
     autoReplace_ = settings.value ("autoReplace").toBool(); // false by default
+
+    dateFormat_ = settings.value ("dateFormat").toString();
 
     int as = settings.value ("autoSave", -1).toInt();
     if (startup)
@@ -4645,6 +4803,8 @@ void FN::writeConfig()
     settings.setValue ("noIndent", !indentByDefault_);
     settings.setValue ("autoBracket", autoBracket_);
     settings.setValue ("autoReplace", autoReplace_);
+
+    settings.setValue ("dateFormat", dateFormat_);
 
     settings.setValue ("autoSave", autoSave_);
     if (autoSave_ >= 1)
@@ -4759,14 +4919,22 @@ void FN::txtPrint()
             }
         }
         doc = new QTextDocument();
+        if (bgColor_ != QColor (Qt::white) || fgColor_ != QColor (Qt::black))
+            doc->setDefaultStyleSheet (DOC_STYLESHEET.arg (bgColor_.name(), fgColor_.name()));
         newDocCreated = true;
         doc->setHtml (text);
     }
 
     if (dlg->exec() == QDialog::Accepted)
+    {
+        QApplication::setOverrideCursor (QCursor(Qt::WaitCursor));
         doc->print (&printer);
+    }
     delete dlg;
     if (newDocCreated) delete doc;
+
+    if (QGuiApplication::overrideCursor() != nullptr)
+        QApplication::restoreOverrideCursor();
 }
 /*************************/
 void FN::exportHTML()
@@ -4842,21 +5010,40 @@ void FN::exportHTML()
                   y() + height()/2 - dialog->height());*/
 
     int sel = 0;
-    switch (dialog->exec()) {
-    case QDialog::Accepted:
-        if (radio2->isChecked())
-            sel = 1;
-        else if (radio3->isChecked())
-            sel = 2;
-        fname = htmlPahEntry_->text();
-        delete dialog;
-        htmlPahEntry_ = nullptr;
-        break;
-    case QDialog::Rejected:
-    default:
-        delete dialog;
-        htmlPahEntry_ = nullptr;
-        return;
+    bool prompt = true;
+    while (prompt)
+    {
+        switch (dialog->exec()) {
+        case QDialog::Accepted:
+            if (radio2->isChecked())
+                sel = 1;
+            else if (radio3->isChecked())
+                sel = 2;
+            else
+                sel = 0;
+            fname = htmlPahEntry_->text();
+            if (QFile::exists (fname))
+            {
+                prompt = QMessageBox::No == QMessageBox::question (this,
+                                                                   tr ("Question"),
+                                                                   tr ("The file already exists.\nDo you want to replace it?\n"));
+                if (prompt) continue;
+            }
+            prompt = false;
+
+            QApplication::setOverrideCursor (QCursor(Qt::WaitCursor));
+            delete dialog;
+            htmlPahEntry_ = nullptr;
+            break;
+        case QDialog::Rejected:
+        default:
+            if (QGuiApplication::overrideCursor() != nullptr)
+                QApplication::restoreOverrideCursor();
+            prompt = false;
+            delete dialog;
+            htmlPahEntry_ = nullptr;
+            return;
+        }
     }
 
     QTextDocument *doc = nullptr;
@@ -4902,6 +5089,8 @@ void FN::exportHTML()
             }
         }
         doc = new QTextDocument();
+        if (bgColor_ != QColor (Qt::white) || fgColor_ != QColor (Qt::black))
+            doc->setDefaultStyleSheet (DOC_STYLESHEET.arg (bgColor_.name(), fgColor_.name()));
         newDocCreated = true;
         doc->setHtml (text);
     }
@@ -4910,6 +5099,10 @@ void FN::exportHTML()
     bool success = false;
     success = writer.write (doc);
     if (newDocCreated) delete doc;
+
+    if (QGuiApplication::overrideCursor() != nullptr)
+        QApplication::restoreOverrideCursor();
+
     if (!success)
     {
         QString str = writer.device()->errorString ();
@@ -4938,7 +5131,10 @@ QString FN::nodeAddress (QModelIndex index)
         res.prepend (QString ("%1 > ").arg (model_->data (indx, Qt::DisplayRole).toString()));
         indx = model_->parent (indx);
     }
-    res = QString ("<br><center><h2>%1</h2></center><br>").arg (res);
+    if (fgColor_ != QColor (Qt::black))
+        res = QString ("<br><center><h2><font color=%1>%2</font></h2></center><br>").arg (fgColor_.name(), res);
+    else
+        res = QString ("<br><center><h2>%1</h2></center><br>").arg (res);
 
     return res;
 }
@@ -5231,7 +5427,11 @@ void FN::aboutDialog()
 {
     class AboutDialog : public QDialog {
     public:
+#if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
+        explicit AboutDialog (QWidget* parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags()) : QDialog (parent, f) {
+#else
         explicit AboutDialog (QWidget* parent = nullptr, Qt::WindowFlags f = nullptr) : QDialog (parent, f) {
+#endif
             aboutUi.setupUi (this);
             aboutUi.textLabel->setOpenExternalLinks (true);
         }

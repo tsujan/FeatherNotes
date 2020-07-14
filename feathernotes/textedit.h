@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2019 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2020 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -51,12 +51,16 @@ public:
     bool autoIndentation;
     bool autoBracket;
     bool autoReplace;
+    QColor CSSTextColor; // used internally for a workaround
 
 signals:
     void resized();
     void imageDropped (const QString &path);
     void FNDocDropped (const QString &path);
     void zoomedOut (TextEdit *textEdit); // needed for reformatting text
+
+public slots:
+    void undo();
 
 protected:
     void keyPressEvent (QKeyEvent *event);
