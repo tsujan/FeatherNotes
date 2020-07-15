@@ -248,9 +248,9 @@
     <addaction name="separator"/>
     <addaction name="actionSelectAll"/>
     <addaction name="separator"/>
-    <addaction name="actionDate"/>
-    <addaction name="separator"/>
     <addaction name="actionCheckSpelling"/>
+    <addaction name="separator"/>
+    <addaction name="actionDate"/>
    </widget>
    <widget class="QMenu" name="menuFormat">
     <property name="title">
