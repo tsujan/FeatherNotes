@@ -1888,11 +1888,16 @@ void FN::selChanged (const QItemSelection &selected, const QItemSelection& /*des
         textEdit->setHtml (text);
         if (!defaulrDocColor)
         {
+            /* To enable the default stylesheet, we should set the HTML text of the document.
+               Setting the HTML text of the editor above is needed for empty nodes. */
             QString str = textEdit->document()->toHtml();
             static const QRegularExpression htmlRegex1 (R"(^<!DOCTYPE[A-Za-z0-9/<>,;.:\-={}\s"]+</style></head><body\sstyle=[A-Za-z0-9/;:\-\s"'#=]+>(<br\s*/>(</p>)?)?)");
             if (str.indexOf (htmlRegex1, 0, &match) > -1)
                 str.replace (0, match.capturedLength(), htmlStr);
             textEdit->document()->setHtml (str);
+            QTextCursor cur = textEdit->textCursor();
+            cur.setPosition (0);
+            textEdit->setTextCursor (cur);
             textEdit->document()->setModified (false);
         }
 
@@ -2611,7 +2616,7 @@ void FN::docProp()
     }
 }
 /*************************/
-void FN::setNewFont (DomItem *item, QTextCharFormat &fmt)
+void FN::setNewFont (DomItem *item, const QTextCharFormat &fmt)
 {
     QString text;
     QDomNodeList list = item->node().childNodes();
@@ -2649,14 +2654,17 @@ void FN::textFontDialog()
         noteModified();
 
         QTextCharFormat fmt;
-        fmt.setFontFamily (defaultFont_.family());
-        fmt.setFontPointSize (defaultFont_.pointSize());
+        fmt.setFont (defaultFont_);
 
-        /* change the font for all shown nodes */
+        /* change the font for all shown nodes
+           FIXME: Text zooming won't work until the document is reloaded. */
         QHash<DomItem*, TextEdit*>::iterator it;
         for (it = widgets_.begin(); it != widgets_.end(); ++it)
         {
             it.value()->document()->setDefaultFont (defaultFont_);
+            QTextCursor cursor = it.value()->textCursor();
+            cursor.select (QTextCursor::Document);
+            cursor.mergeCharFormat (fmt);
 #if (QT_VERSION >= QT_VERSION_CHECK(5,11,0))
             QFontMetricsF metrics (defaultFont_);
             it.value()->setTabStopDistance (4 * metrics.horizontalAdvance (' '));
@@ -2669,8 +2677,7 @@ void FN::textFontDialog()
 #endif
         }
 
-        /* also change the font for all nodes,
-           that aren't shown yet */
+        /* also, change the font for all nodes that aren't shown yet */
         for (int i = 0; i < model_->rowCount (QModelIndex()); ++i)
         {
             QModelIndex index = model_->index (i, 0, QModelIndex());
@@ -2725,7 +2732,7 @@ void FN::docColorDialog()
     colorLayout->setContentsMargins (0, 10, 0, 0);
 
     QLabel *label = new QLabel ("<center><i>"
-                                + tr ("These colors will be applied to new nodes.<br>They may or may not affect existing nodes,<br>depending on the document structure.")
+                                + tr ("These colors will be applied to new nodes.<br>They may or may not affect existing nodes<br>but document reopening is recommended.")
                                 + "</i></center>");
 
     QLabel *bgLabel = new QLabel (tr ("Background color:"));
@@ -4845,6 +4852,8 @@ void FN::txtPrint()
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
 
+    QApplication::setOverrideCursor (QCursor(Qt::WaitCursor));
+
     /* choose an appropriate name and directory */
     QDir dir = QDir::home();
     if (!xmlPath_.isEmpty())
@@ -4925,6 +4934,11 @@ void FN::txtPrint()
         newDocCreated = true;
         doc->setHtml (text);
     }
+
+    QTimer::singleShot (0, this, []() { // wait for the dialog
+        if (QGuiApplication::overrideCursor() != nullptr)
+            QApplication::restoreOverrideCursor();
+    });
 
     if (dlg->exec() == QDialog::Accepted)
     {

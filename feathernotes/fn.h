@@ -345,7 +345,7 @@ private:
     bool unSaved (bool modified);
     TextEdit *newWidget();
     void mergeFormatOnWordOrSelection (const QTextCharFormat &format);
-    void setNewFont (DomItem *item, QTextCharFormat &fmt);
+    void setNewFont (DomItem *item, const QTextCharFormat &fmt);
     QTextCursor finding (const QString& str,
                          const QTextCursor& start,
                          QTextDocument::FindFlags flags) const;

@@ -1043,7 +1043,7 @@ void TextEdit::undo()
         {
             QTextCharFormat fmt;
             fmt.setForeground (CSSTextColor);
-            cur.setBlockCharFormat(fmt);
+            cur.setBlockCharFormat (fmt);
         }
     }
 }

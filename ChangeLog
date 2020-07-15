@@ -4,6 +4,7 @@ V0.8.0
  * Updated the code for Qt 5.15.
  * Added overwrite prompt for HTML exporting.
  * Added a configurable date and time pasting.
+ * Fixed an issue in changing the font of visited nodes.
 
 V0.7.0
 ---------
