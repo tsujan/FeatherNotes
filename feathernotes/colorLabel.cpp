@@ -17,15 +17,19 @@
 
 #include "colorLabel.h"
 #include <QColorDialog>
+#include <QStyleOptionFrame>
+#include <QPainter>
 
 namespace FeatherNotes {
 
 ColorLabel::ColorLabel (QWidget *parent, Qt::WindowFlags f)
-    : QLabel(parent, f)
+    : QLabel (parent, f)
 {
     setFrameStyle (QFrame::Panel | QFrame::Sunken);
+    setLineWidth (1);
     setMinimumWidth (100);
     setToolTip (tr ("Click to change color."));
+    color_ = palette().color (QPalette::Window);
 }
 
 ColorLabel::~ColorLabel() {}
@@ -34,25 +38,30 @@ void ColorLabel::setColor (const QColor &color)
 {
     if (!color.isValid())
         return;
-    stylesheetColor_ = color;
-    stylesheetColor_.setAlpha (255);
-    QString borderColor = qGray (stylesheetColor_.rgb()) < 255 / 2 ? "white" : "black";
-    setStyleSheet (QString ("QLabel{background-color: rgb(%1, %2, %3); border: 1px solid %4;}")
-                   .arg (color.red()).arg (color.green()).arg (color.blue()).arg (borderColor));
+    color_ = color;
+    color_.setAlpha (255);
 }
 
 QColor ColorLabel::getColor() const
 {
-    if (stylesheetColor_.isValid())
-        return stylesheetColor_;
-    return palette().color (QPalette::Window);
+    return color_;
 }
 
-void ColorLabel::mousePressEvent (QMouseEvent* /*event*/) {
+void ColorLabel::mousePressEvent (QMouseEvent* /*event*/)
+{
     QColor prevColor = getColor();
     QColor color = QColorDialog::getColor (prevColor, window(), tr ("Select Color"));
     if (color.isValid() && color != prevColor)
         setColor (color);
+}
+
+void ColorLabel::paintEvent (QPaintEvent* /*event*/)
+{
+    QPainter p (this);
+    p.fillRect (contentsRect(), color_);
+    QStyleOptionFrame opt;
+    initStyleOption (&opt);
+    style()->drawControl (QStyle::CE_ShapedFrame, &opt, &p, this);
 }
 
 }

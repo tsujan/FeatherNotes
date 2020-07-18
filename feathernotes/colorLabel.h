@@ -36,10 +36,11 @@ public:
     QColor getColor() const;
 
 protected:
-    void mousePressEvent (QMouseEvent *event);
+    void mousePressEvent (QMouseEvent *event) override;
+    void paintEvent (QPaintEvent *event) override;
 
 private:
-    QColor stylesheetColor_;
+    QColor color_;
 };
 
 }

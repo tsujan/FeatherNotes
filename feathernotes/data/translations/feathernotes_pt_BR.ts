@@ -12,7 +12,7 @@
 <context>
     <name>FeatherNotes::ColorLabel</name>
     <message>
-        <location filename="../../colorLabel.cpp" line="28"/>
+        <location filename="../../colorLabel.cpp" line="31"/>
         <source>Click to change color.</source>
         <translation type="unfinished"></translation>
     </message>
