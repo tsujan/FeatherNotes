@@ -14,12 +14,12 @@
     <message>
         <location filename="../../colorLabel.cpp" line="31"/>
         <source>Click to change color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kattintás a szín kiválasztásához.</translation>
     </message>
     <message>
         <location filename="../../colorLabel.cpp" line="53"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Szín kiválasztása</translation>
     </message>
 </context>
 <context>
@@ -670,7 +670,7 @@
     <message>
         <location filename="../../fn.ui" line="1025"/>
         <source>Subscri&amp;pt</source>
-        <translation>A&amp;lsó index</translation>
+        <translation>Alsó inde&amp;x</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1028"/>
@@ -855,7 +855,7 @@
     <message>
         <location filename="../../fn.ui" line="1220"/>
         <source>Insert Lin&amp;k</source>
-        <translation>Link be&amp;szúrása</translation>
+        <translation>L&amp;ink beszúrása</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1223"/>
@@ -972,13 +972,13 @@
     <message>
         <location filename="../../fn.ui" line="1350"/>
         <source>Document &amp;Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Dokumentumszínek</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1358"/>
         <location filename="../../fn.ui" line="1361"/>
         <source>Paste Date and Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Dátum és idő beillesztése</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2436"/>
@@ -1254,22 +1254,22 @@
     <message>
         <location filename="../../fn.cpp" line="2725"/>
         <source>Set Document Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Dokumentumszínek beállítása</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2735"/>
         <source>These colors will be applied to new nodes.&lt;br&gt;They may or may not affect existing nodes&lt;br&gt;but document reopening is recommended.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ezek a színek lesznek alkalmazva az új elemekre.&lt;br&gt;Ezek vagy érintik, vagy nem érintik a meglévő elmeket,&lt;br&gt;de a dokumentum újbóli megnyitása javasolt.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2738"/>
         <source>Background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Háttérszín:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2744"/>
         <source>Text color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Szövegszín:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3705"/>
@@ -1378,14 +1378,16 @@
     <message>
         <location filename="../../fn.cpp" line="5043"/>
         <source>Question</source>
-        <translation type="unfinished"></translation>
+        <translation>Kérdés</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5044"/>
         <source>The file already exists.
 Do you want to replace it?
 </source>
-        <translation type="unfinished"></translation>
+        <translation>A fájl már létezik.
+Szeretné cserélni?
+</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5217"/>
@@ -1595,7 +1597,7 @@ Needs restarting of FeatherNotes to take effect.</source>
 Ha be van jelölve, a címsor bezárás gombja csak
 lerakja az ablakot a rendszertálcára, bezárás helyett.
 
-Az érvényesítéshez újra kell indítani az alkalmazást.</translation>
+ Az érvényesítéséhez újra kell indítania a FeatherNotes-t.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="132"/>
@@ -1709,7 +1711,9 @@ majd indítsa újra a FeatherNotes-t!</translation>
         <source>This covers parentheses, braces, brackets and quotes.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation>Ez bezárja a zárójeleket, és az idézőjeleket. A beállítás érvényesítéséhez újra kell indítania a FeatherNotes-t.</translation>
+        <translation>Ez bezárja a zárójeleket, és az idézőjeleket.
+
+ Az érvényesítéséhez újra kell indítania a FeatherNotes-t.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="342"/>
@@ -1737,12 +1741,15 @@ a kettő kötőjel hosszú kötőjellel, stb.</translation>
 Leave empty for the system default.
 
 Takes effect after closing this dialog.</source>
-        <translation type="unfinished"></translation>
+        <translation>A dátum és idő beillesztésére használatos.
+Hagyja üresen az alapértelmezetthez.
+
+A párbeszédpanel bezárása után lép érvénybe.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="369"/>
         <source>Date and time format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dátum és idő fermátuma:</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="393"/>
@@ -1826,7 +1833,7 @@ csak &quot;.aff&quot;-ra végződik.</translation>
     <message>
         <location filename="../../pref.cpp" line="647"/>
         <source>Application restart is needed for changes to take effect.</source>
-        <translation>Az érvényesítéshez újra meg kell nyitni az ablakot.</translation>
+        <translation>Az érvényesítéséhez újra kell indítania az alkalmazást.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="681"/>
