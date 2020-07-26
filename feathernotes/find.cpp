@@ -458,8 +458,7 @@ void FN::hlight() const
     QList<QTextEdit::ExtraSelection> extraSelections;
     /* prepend green highlights */
     extraSelections.append (greenSels_[textEdit]);
-    QColor yellow = QColor (Qt::yellow);
-    QColor black = QColor (Qt::black);
+    QColor yellow = qGray(bgColor_.rgb()) < 127 ? QColor (Qt::darkYellow) : QColor (Qt::yellow);
     QTextCursor found;
     /* first put a start cursor at the top left edge... */
     QPoint Point (0, 0);
@@ -492,7 +491,7 @@ void FN::hlight() const
             extra.format.setBackground (yellow);
             extra.format.setFontUnderline (true);
             extra.format.setUnderlineStyle (QTextCharFormat::WaveUnderline);
-            extra.format.setUnderlineColor (black);
+            extra.format.setUnderlineColor (fgColor_);
             extra.cursor = found;
             extraSelections.append (extra);
             start.setPosition (found.position());

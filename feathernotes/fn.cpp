@@ -2125,7 +2125,7 @@ void FN::textColor()
 
     QColor color;
     if ((color = qobject_cast< TextEdit *>(cw)->textColor())
-        == QColor (Qt::black))
+        == fgColor_)
     {
         if (lastTxtColor_.isValid())
             color = lastTxtColor_;
@@ -2147,7 +2147,7 @@ void FN::bgColor()
 
     QColor color;
     if ((color = qobject_cast< TextEdit *>(cw)->textBackgroundColor())
-        == QColor (Qt::black))
+        == QColor (Qt::black)) // this is a Qt bug
     {
         if (lastBgColor_.isValid())
             color = lastBgColor_;
@@ -3256,8 +3256,7 @@ void FN::replace()
     }
     else
     {
-        QColor green = QColor (Qt::green);
-        QColor black = QColor (Qt::black);
+        QColor green = qGray(bgColor_.rgb()) < 127 ? QColor (Qt::darkGreen) : QColor (Qt::green);
         int pos;
         QTextCursor tmp = start;
 
@@ -3285,7 +3284,7 @@ void FN::replace()
         QTextEdit::ExtraSelection extra;
         extra.format.setBackground (green);
         extra.format.setUnderlineStyle (QTextCharFormat::WaveUnderline);
-        extra.format.setUnderlineColor (black);
+        extra.format.setUnderlineColor (fgColor_);
         extra.cursor = tmp;
         extraSelections.prepend (extra);
         gsel.append (extra);
@@ -3376,8 +3375,7 @@ void FN::replaceAll()
 
     QTextCursor orig = textEdit->textCursor();
     QTextCursor start = orig;
-    QColor green = QColor (Qt::green);
-    QColor black = QColor (Qt::black);
+    QColor green = qGray(bgColor_.rgb()) < 127 ? QColor (Qt::darkGreen) : QColor (Qt::green);
     int pos; QTextCursor found;
     start.beginEditBlock();
     start.setPosition (0);
@@ -3406,7 +3404,7 @@ void FN::replaceAll()
         QTextEdit::ExtraSelection extra;
         extra.format.setBackground (green);
         extra.format.setUnderlineStyle (QTextCharFormat::WaveUnderline);
-        extra.format.setUnderlineColor (black);
+        extra.format.setUnderlineColor (fgColor_);
         extra.cursor = tmp;
         extraSelections.prepend (extra);
         gsel.append (extra);
