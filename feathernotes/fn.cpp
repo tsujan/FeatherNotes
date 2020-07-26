@@ -3151,7 +3151,7 @@ void FN::replaceDock()
 // clear the replacing text and remove green highlights.
 void FN::closeReplaceDock (bool visible)
 {
-    if (visible) return;
+    if (visible || !isVisible() || isMinimized()) return;
 
     txtReplace_.clear();
     /* remove green highlights */
@@ -3256,7 +3256,7 @@ void FN::replace()
     }
     else
     {
-        QColor green = qGray(bgColor_.rgb()) < 127 ? QColor (Qt::darkGreen) : QColor (Qt::green);
+        QColor green = qGray(fgColor_.rgb()) > 127 ? QColor (Qt::darkGreen) : QColor (Qt::green);
         int pos;
         QTextCursor tmp = start;
 
@@ -3375,7 +3375,7 @@ void FN::replaceAll()
 
     QTextCursor orig = textEdit->textCursor();
     QTextCursor start = orig;
-    QColor green = qGray(bgColor_.rgb()) < 127 ? QColor (Qt::darkGreen) : QColor (Qt::green);
+    QColor green = qGray(fgColor_.rgb()) > 127 ? QColor (Qt::darkGreen) : QColor (Qt::green);
     int pos; QTextCursor found;
     start.beginEditBlock();
     start.setPosition (0);

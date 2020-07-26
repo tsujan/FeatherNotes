@@ -388,7 +388,7 @@ private:
     bool searchingOtherNode_; // Needed when jumping to another node during search.
     bool rplOtherNode_; // Like above but for replacement.
     int replCount_; // Needed for counting replacements in all nodes.
-    QHash<TextEdit*,QList<QTextEdit::ExtraSelection> > greenSels_; // For replaced matches.
+    QHash<TextEdit*, QList<QTextEdit::ExtraSelection> > greenSels_; // For replaced matches.
     QString txtReplace_; // The replacing text.
     QModelIndexList tagsList_;
     QString linkAtPos_; // Text hyperlink at the right-click position.

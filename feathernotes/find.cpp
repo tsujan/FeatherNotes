@@ -458,7 +458,7 @@ void FN::hlight() const
     QList<QTextEdit::ExtraSelection> extraSelections;
     /* prepend green highlights */
     extraSelections.append (greenSels_[textEdit]);
-    QColor yellow = qGray(bgColor_.rgb()) < 127 ? QColor (Qt::darkYellow) : QColor (Qt::yellow);
+    QColor yellow = qGray(fgColor_.rgb()) > 127 ? QColor (Qt::darkYellow) : QColor (Qt::yellow);
     QTextCursor found;
     /* first put a start cursor at the top left edge... */
     QPoint Point (0, 0);

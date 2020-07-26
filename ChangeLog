@@ -5,6 +5,7 @@ V0.8.0
  * Added overwrite prompt for HTML exporting.
  * Added a configurable date and time pasting.
  * Fixed an issue in changing the font of visited nodes.
+ * Don't clear replacement highlights when the window is minimized or hidden.
 
 V0.7.0
 ---------
