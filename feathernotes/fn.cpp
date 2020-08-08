@@ -3192,8 +3192,7 @@ void FN::replace()
     if (txtReplace_ != ui->lineEditReplace->text())
     {
         txtReplace_ = ui->lineEditReplace->text();
-        /* remove previous green highlights
-           if the replacing text is changed */
+        /* remove previous green highlights if the replacing text is changed */
         QHash<TextEdit*,QList<QTextEdit::ExtraSelection> >::iterator it;
         for (it = greenSels_.begin(); it != greenSels_.end(); ++it)
         {
@@ -3201,12 +3200,7 @@ void FN::replace()
             greenSels_[it.key()] = extraSelectionsIth;
             it.key()->setExtraSelections (QList<QTextEdit::ExtraSelection>());
         }
-        hlight();
     }
-
-    /* remember all previous (yellow and) green highlights */
-    QList<QTextEdit::ExtraSelection> extraSelections;
-    extraSelections.append (textEdit->extraSelections());
 
     bool backwardSearch = false;
     QTextCursor start = textEdit->textCursor();
@@ -3228,7 +3222,7 @@ void FN::replace()
     else
         found = finding (txtFind, start, searchFlags_ | QTextDocument::FindBackward);
 
-    QList<QTextEdit::ExtraSelection> gsel = greenSels_[textEdit];
+    QList<QTextEdit::ExtraSelection> extraSelections = greenSels_[textEdit];
     QModelIndex nxtIndx;
     if (found.isNull())
     {
@@ -3286,8 +3280,7 @@ void FN::replace()
         extra.format.setUnderlineStyle (QTextCharFormat::WaveUnderline);
         extra.format.setUnderlineColor (fgColor_);
         extra.cursor = tmp;
-        extraSelections.prepend (extra);
-        gsel.append (extra);
+        extraSelections.append (extra);
 
         if (QObject::sender() != ui->rplNextButton)
         {
@@ -3300,7 +3293,7 @@ void FN::replace()
         }
     }
 
-    greenSels_[textEdit] = gsel;
+    greenSels_[textEdit] = extraSelections;
     textEdit->setExtraSelections (extraSelections);
     hlight();
 
@@ -3370,18 +3363,22 @@ void FN::replaceAll()
             greenSels_[it.key()] = extraSelectionsIth;
             it.key()->setExtraSelections (QList<QTextEdit::ExtraSelection>());
         }
-        hlight();
     }
 
     QTextCursor orig = textEdit->textCursor();
-    QTextCursor start = orig;
+    orig.setPosition (orig.anchor());
+    textEdit->setTextCursor (orig);
     QColor green = qGray(fgColor_.rgb()) > 127 ? QColor (Qt::darkGreen) : QColor (Qt::green);
     int pos; QTextCursor found;
+    QTextCursor start = orig;
     start.beginEditBlock();
     start.setPosition (0);
     QTextCursor tmp = start;
-    QList<QTextEdit::ExtraSelection> gsel = greenSels_[textEdit];
-    QList<QTextEdit::ExtraSelection> extraSelections;
+    QTextEdit::ExtraSelection extra;
+    extra.format.setBackground (green);
+    extra.format.setUnderlineStyle (QTextCharFormat::WaveUnderline);
+    extra.format.setUnderlineColor (fgColor_);
+    QList<QTextEdit::ExtraSelection> extraSelections = greenSels_[textEdit];
     while (!(found = finding (txtFind, start, searchFlags_)).isNull())
     {
         start.setPosition (found.anchor());
@@ -3398,26 +3395,21 @@ void FN::replaceAll()
             rplOtherNode_ = false;
         }
 
-        tmp.setPosition (pos);
-        tmp.setPosition (start.position(), QTextCursor::KeepAnchor);
+        if (replCount_ < 1000)
+        {
+            tmp.setPosition (pos);
+            tmp.setPosition (start.position(), QTextCursor::KeepAnchor);
+            extra.cursor = tmp;
+            extraSelections.append (extra);
+        }
         start.setPosition (start.position());
-        QTextEdit::ExtraSelection extra;
-        extra.format.setBackground (green);
-        extra.format.setUnderlineStyle (QTextCharFormat::WaveUnderline);
-        extra.format.setUnderlineColor (fgColor_);
-        extra.cursor = tmp;
-        extraSelections.prepend (extra);
-        gsel.append (extra);
         ++replCount_;
     }
     rplOtherNode_ = false;
-    greenSels_[textEdit] = gsel;
+    greenSels_[textEdit] = extraSelections;
     start.endEditBlock();
     textEdit->setExtraSelections (extraSelections);
     hlight();
-    /* restore the original cursor without selection */
-    orig.setPosition (orig.anchor());
-    textEdit->setTextCursor (orig);
 
     if (ui->everywhereButton->isChecked() && model_->rowCount() > 1)
     {
@@ -3452,6 +3444,18 @@ void FN::replaceAll()
             ui->dockReplace->setWindowTitle (tr ("One Replacement"));
         else
             ui->dockReplace->setWindowTitle (tr ("%1 Replacements").arg (replCount_));
+        if (replCount_ > 1000)
+        {
+            MessageBox msgBox (QMessageBox::Information,
+                               tr ("FeatherNotes"),
+                               "<center>" + tr ("The first 1000 replacements are highlighted.") + "</center>",
+                               QMessageBox::Close,
+                               this);
+            msgBox.changeButtonText (QMessageBox::Close, tr ("Close"));
+            msgBox.setParent (this, Qt::Dialog);
+            msgBox.setWindowModality (Qt::WindowModal);
+            msgBox.exec();
+        }
         replCount_ = 0;
     }
 }

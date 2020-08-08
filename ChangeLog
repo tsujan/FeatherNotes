@@ -6,6 +6,7 @@ V0.8.0
  * Added a configurable date and time pasting.
  * Fixed an issue in changing the font of visited nodes.
  * Don't clear replacement highlights when the window is minimized or hidden.
+ * Highlight only the first 1000 replacements if there are more.
 
 V0.7.0
 ---------
