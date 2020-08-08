@@ -3443,18 +3443,20 @@ void FN::replaceAll()
         else if (replCount_ == 1)
             ui->dockReplace->setWindowTitle (tr ("One Replacement"));
         else
-            ui->dockReplace->setWindowTitle (tr ("%1 Replacements").arg (replCount_));
-        if (replCount_ > 1000)
         {
-            MessageBox msgBox (QMessageBox::Information,
-                               tr ("FeatherNotes"),
-                               "<center>" + tr ("The first 1000 replacements are highlighted.") + "</center>",
-                               QMessageBox::Close,
-                               this);
-            msgBox.changeButtonText (QMessageBox::Close, tr ("Close"));
-            msgBox.setParent (this, Qt::Dialog);
-            msgBox.setWindowModality (Qt::WindowModal);
-            msgBox.exec();
+            ui->dockReplace->setWindowTitle (tr ("%1 Replacements").arg (replCount_));
+            if (replCount_ > 1000 && !txtReplace_.isEmpty())
+            {
+                MessageBox msgBox (QMessageBox::Information,
+                                   tr ("FeatherNotes"),
+                                   "<center>" + tr ("The first 1000 replacements are highlighted.") + "</center>",
+                                   QMessageBox::Close,
+                                   this);
+                msgBox.changeButtonText (QMessageBox::Close, tr ("Close"));
+                msgBox.setParent (this, Qt::Dialog);
+                msgBox.setWindowModality (Qt::WindowModal);
+                msgBox.exec();
+            }
         }
         replCount_ = 0;
     }
