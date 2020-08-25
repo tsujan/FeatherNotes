@@ -1276,7 +1276,7 @@
     <message>
         <location filename="../../fn.cpp" line="3478"/>
         <source>The first 1000 replacements are highlighted.</source>
-        <translation type="unfinished"></translation>
+        <translation>Az első 1000 csere van kiemelve.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3735"/>
@@ -1565,8 +1565,7 @@ Uncheck for a width ratio of 170/530.</source>
         <translation>Oldalsáv szélességének mentése bezárás után.
 A párbeszédablak bezárása után lép érvénybe.
 
-Ha nincs bejelölve akkor
-az alapértelmezett arány 170/530 lesz.</translation>
+Ha nincs bejelölve akkor az alapértelmezett arány 170/530 lesz.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="103"/>
