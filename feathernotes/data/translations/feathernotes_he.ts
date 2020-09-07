@@ -963,12 +963,12 @@
         <location filename="../../fn.ui" line="1339"/>
         <location filename="../../fn.ui" line="1342"/>
         <source>Check Spelling</source>
-        <translation type="unfinished"></translation>
+        <translation>בדיקת איות</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1345"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1350"/>
@@ -979,7 +979,7 @@
         <location filename="../../fn.ui" line="1358"/>
         <location filename="../../fn.ui" line="1361"/>
         <source>Paste Date and Time</source>
-        <translation type="unfinished"></translation>
+        <translation>הדבקת התאריך והשעה</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2462"/>
@@ -1266,12 +1266,12 @@
     <message>
         <location filename="../../fn.cpp" line="2764"/>
         <source>Background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>צבע הרקע:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2770"/>
         <source>Text color:</source>
-        <translation type="unfinished"></translation>
+        <translation>צבע הטקסט:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3478"/>
@@ -1385,14 +1385,16 @@
     <message>
         <location filename="../../fn.cpp" line="5063"/>
         <source>Question</source>
-        <translation type="unfinished"></translation>
+        <translation>שאלה</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5064"/>
         <source>The file already exists.
 Do you want to replace it?
 </source>
-        <translation type="unfinished"></translation>
+        <translation>קובץ זה כבר קיים.
+האם ברצונך להחליפו?
+</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5237"/>
@@ -1469,12 +1471,12 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="5621"/>
         <source>You need to add a Hunspell dictionary.</source>
-        <translation type="unfinished"></translation>
+        <translation>יש להוסיף מילון Hunspell.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5626"/>
         <source>The Hunspell dictionary does not exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>מילון Hunspell לא קיים.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5634"/>
@@ -1491,7 +1493,7 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="5690"/>
         <source>Spell Checking</source>
-        <translation type="unfinished"></translation>
+        <translation>בדיקת איות</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5500"/>
@@ -1745,12 +1747,15 @@ the user is typing and under proper circumstances.</source>
 Leave empty for the system default.
 
 Takes effect after closing this dialog.</source>
-        <translation type="unfinished"></translation>
+        <translation>בשימוש להדבקת התאריך והשעה.
+יש להשאיר ריק עבור ברירת המחדל של המערכת.
+
+השינויים ייכנסו לתוקף לאחר סגירת דו־שיח זה.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="369"/>
         <source>Date and time format:</source>
-        <translation type="unfinished"></translation>
+        <translation>תבנית תאריך ושעה:</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="393"/>
@@ -1765,7 +1770,7 @@ Takes effect after closing this dialog.</source>
     <message>
         <location filename="../../predDialog.ui" line="434"/>
         <source>Spell Checking</source>
-        <translation type="unfinished"></translation>
+        <translation>בדיקת איות</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="442"/>
@@ -1784,7 +1789,7 @@ name but ending with &quot;.aff&quot;.</source>
         <location filename="../../predDialog.ui" line="466"/>
         <location filename="../../pref.cpp" line="680"/>
         <source>Add dictionary...</source>
-        <translation type="unfinished"></translation>
+        <translation>הוספת מילון...</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="501"/>
@@ -1843,17 +1848,17 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../spellDialog.ui" line="25"/>
         <source>Unknown word:</source>
-        <translation type="unfinished"></translation>
+        <translation>מילה לא ידועה:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="51"/>
         <source>Add To Dictionary</source>
-        <translation type="unfinished"></translation>
+        <translation>הוספה למילון</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="62"/>
         <source>Replace with:</source>
-        <translation type="unfinished">החלפה ב־:</translation>
+        <translation>להחליף עם:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="87"/>
