@@ -14,12 +14,12 @@
     <message>
         <location filename="../../colorLabel.cpp" line="31"/>
         <source>Click to change color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Clique para alterar a cor.</translation>
     </message>
     <message>
         <location filename="../../colorLabel.cpp" line="53"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecione a cor</translation>
     </message>
 </context>
 <context>
@@ -30,7 +30,7 @@
         <location filename="../../fn.cpp" line="3451"/>
         <location filename="../../fn.cpp" line="5129"/>
         <source>FeatherNotes</source>
-        <translation></translation>
+        <translation>FeatherNotes</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="65"/>
@@ -40,7 +40,7 @@
     <message>
         <location filename="../../fn.ui" line="68"/>
         <source>F3</source>
-        <translation></translation>
+        <translation>F3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="81"/>
@@ -50,7 +50,7 @@
     <message>
         <location filename="../../fn.ui" line="84"/>
         <source>F4</source>
-        <translation></translation>
+        <translation>F4</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="100"/>
@@ -65,7 +65,7 @@
     <message>
         <location filename="../../fn.ui" line="118"/>
         <source>Ctrl+Shift+F7</source>
-        <translation></translation>
+        <translation>Ctrl+Shift+F7</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="128"/>
@@ -75,7 +75,7 @@
     <message>
         <location filename="../../fn.ui" line="131"/>
         <source>Shift+F7</source>
-        <translation></translation>
+        <translation>Shift+F7</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="144"/>
@@ -85,7 +85,7 @@
     <message>
         <location filename="../../fn.ui" line="147"/>
         <source>F7</source>
-        <translation></translation>
+        <translation>F7</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="186"/>
@@ -100,22 +100,22 @@
     <message>
         <location filename="../../fn.ui" line="192"/>
         <source>F6</source>
-        <translation></translation>
+        <translation>F6</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="167"/>
         <source>Match Case (F5)</source>
-        <translation>Caso de compatibilidade (F5)</translation>
+        <translation>Caso de Compatibilidade (F5)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="170"/>
         <source>Match Case</source>
-        <translation>Caso de compatibilidade</translation>
+        <translation>Caso de Compatibilidade</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="173"/>
         <source>F5</source>
-        <translation></translation>
+        <translation>F5</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="219"/>
@@ -145,7 +145,7 @@
     <message>
         <location filename="../../fn.ui" line="326"/>
         <source>&amp;Search</source>
-        <translation>&amp;Pesquisar</translation>
+        <translation>&amp;Pesquisa</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="333"/>
@@ -181,7 +181,7 @@
     <message>
         <location filename="../../fn.ui" line="476"/>
         <source>F9</source>
-        <translation></translation>
+        <translation>F9</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="489"/>
@@ -191,7 +191,7 @@
     <message>
         <location filename="../../fn.ui" line="492"/>
         <source>F8</source>
-        <translation></translation>
+        <translation>F8</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="505"/>
@@ -201,7 +201,7 @@
     <message>
         <location filename="../../fn.ui" line="508"/>
         <source>F10</source>
-        <translation></translation>
+        <translation>F10</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="525"/>
@@ -217,7 +217,7 @@
     <message>
         <location filename="../../fn.ui" line="531"/>
         <source>Ctrl+S</source>
-        <translation></translation>
+        <translation>Ctrl+S</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="536"/>
@@ -233,7 +233,7 @@
     <message>
         <location filename="../../fn.ui" line="542"/>
         <source>Ctrl+O</source>
-        <translation></translation>
+        <translation>Ctrl+O</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="550"/>
@@ -248,7 +248,7 @@
     <message>
         <location filename="../../fn.ui" line="556"/>
         <source>Ctrl+Z</source>
-        <translation></translation>
+        <translation>Ctrl+Z</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="564"/>
@@ -686,7 +686,7 @@
     <message>
         <location filename="../../fn.ui" line="1042"/>
         <source>C&amp;enter</source>
-        <translation>C&amp;entro</translation>
+        <translation>C&amp;entralizado</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1045"/>
@@ -701,7 +701,7 @@
     <message>
         <location filename="../../fn.ui" line="1059"/>
         <source>&amp;Right</source>
-        <translation>&amp;Direita</translation>
+        <translation>À &amp;Direita</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1062"/>
@@ -716,7 +716,7 @@
     <message>
         <location filename="../../fn.ui" line="1076"/>
         <source>&amp;Left</source>
-        <translation>&amp;Esquerda</translation>
+        <translation>À &amp;Esquerda</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1079"/>
@@ -926,7 +926,7 @@
     <message>
         <location filename="../../fn.ui" line="1298"/>
         <source>RTL</source>
-        <translation></translation>
+        <translation>Direita para Esquerda</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1301"/>
@@ -936,7 +936,7 @@
     <message>
         <location filename="../../fn.ui" line="1312"/>
         <source>LTR</source>
-        <translation></translation>
+        <translation>Esquerda para Direita</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1315"/>
@@ -963,23 +963,23 @@
         <location filename="../../fn.ui" line="1339"/>
         <location filename="../../fn.ui" line="1342"/>
         <source>Check Spelling</source>
-        <translation type="unfinished"></translation>
+        <translation>Verificar Ortografia</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1345"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1350"/>
         <source>Document &amp;Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Cores do Documento</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1358"/>
         <location filename="../../fn.ui" line="1361"/>
         <source>Paste Date and Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Colar Data e Hora</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2436"/>
@@ -1256,27 +1256,27 @@
     <message>
         <location filename="../../fn.cpp" line="2725"/>
         <source>Set Document Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Definir Cores do Documento</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2735"/>
         <source>These colors will be applied to new nodes.&lt;br&gt;They may or may not affect existing nodes&lt;br&gt;but document reopening is recommended.</source>
-        <translation type="unfinished"></translation>
+        <translation>Essas cores serão aplicadas a novos nós.&lt;br&gt;Eles podem ou não afetar os nós existentes,&lt;br&gt;mas a reabertura do documento é recomendada.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2738"/>
         <source>Background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cor de fundo:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2744"/>
         <source>Text color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cor do texto:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3452"/>
         <source>The first 1000 replacements are highlighted.</source>
-        <translation type="unfinished"></translation>
+        <translation>As primeiras 1000 substituições são destacadas.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3709"/>
@@ -1385,14 +1385,16 @@
     <message>
         <location filename="../../fn.cpp" line="5047"/>
         <source>Question</source>
-        <translation type="unfinished"></translation>
+        <translation>Questão</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5048"/>
         <source>The file already exists.
 Do you want to replace it?
 </source>
-        <translation type="unfinished"></translation>
+        <translation>O arquivo já existe.
+Você deseja substituir?
+</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5221"/>
@@ -1443,7 +1445,7 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="5482"/>
         <source>based on Qt5</source>
-        <translation>Baseado em Qt5</translation>
+        <translation>baseado no Qt5</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5483"/>
@@ -1464,34 +1466,34 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="5583"/>
         <source>See Preferences → Text → Spell Checking!</source>
-        <translation type="unfinished"></translation>
+        <translation>Veja em Preferências → Texto → Verificação Ortográfica!</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5605"/>
         <source>You need to add a Hunspell dictionary.</source>
-        <translation type="unfinished"></translation>
+        <translation>Você precisa adicionar um dicionário Hunspell.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5610"/>
         <source>The Hunspell dictionary does not exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>O dicionário Hunspell não existe.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5618"/>
         <source>The Hunspell dictionary is not accompanied by an affix file.</source>
-        <translation type="unfinished"></translation>
+        <translation>O dicionário Hunspell não é acompanhado por um arquivo afixo.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5636"/>
         <location filename="../../fn.cpp" line="5651"/>
         <location filename="../../fn.cpp" line="5663"/>
         <source>No misspelling from text cursor.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sem erros ortográficos do cursor de texto.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5674"/>
         <source>Spell Checking</source>
-        <translation type="unfinished"></translation>
+        <translation>Verificando Ortografia</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5484"/>
@@ -1618,7 +1620,7 @@ pode ser usado em vez disso.</translation>
     <message>
         <location filename="../../predDialog.ui" line="161"/>
         <source>Start i&amp;conified to tray</source>
-        <translation>Iniciar i&amp;conificado para bandeja</translation>
+        <translation>Iniciar mi&amp;nimizado para bandeja</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="170"/>
@@ -1640,7 +1642,7 @@ tamanho dos ícones da barra de ferramentas.</translation>
     <message>
         <location filename="../../predDialog.ui" line="184"/>
         <source>Small toolbar icons</source>
-        <translation>Ícones pequenos da barra de ferramenta</translation>
+        <translation>Ícones pequenos na barra de ferramenta</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="191"/>
@@ -1745,12 +1747,15 @@ o usuário está digitando e em circunstâncias adequadas.</translation>
 Leave empty for the system default.
 
 Takes effect after closing this dialog.</source>
-        <translation type="unfinished"></translation>
+        <translation>Usado para colar a data e a hora.
+Deixe em branco para o padrão do sistema.
+
+Entra em vigor após fechar esta caixa de diálogo.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="369"/>
         <source>Date and time format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Formato de data e hora:</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="393"/>
@@ -1777,7 +1782,7 @@ mas evita saltos de rolagem irritantes.</translation>
     <message>
         <location filename="../../predDialog.ui" line="445"/>
         <source>Spell Checking</source>
-        <translation type="unfinished"></translation>
+        <translation>Verificação Ortográfica</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="453"/>
@@ -1785,18 +1790,20 @@ mas evita saltos de rolagem irritantes.</translation>
         <source>A Hunspell dictionary has a name that ends with &quot;.dic&quot;
 and should be alongside an affix file with the same
 name but ending with &quot;.aff&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Um dicionário Hunspell tem um nome que termina com &quot;.dic&quot;
+e deve estar ao lado de um arquivo afixo com o mesmo
+nome, mas terminando com &quot;.aff&quot;.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="458"/>
         <source>Hunspell dictionary path:</source>
-        <translation type="unfinished"></translation>
+        <translation>Endereço do dicionário Hunspell:</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="477"/>
         <location filename="../../pref.cpp" line="679"/>
         <source>Add dictionary...</source>
-        <translation type="unfinished"></translation>
+        <translation>Adicionar dicionário...</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="512"/>
@@ -1837,7 +1844,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../pref.cpp" line="681"/>
         <source>Hunspell Dictionary Files (*.dic)</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivos de Dicionário Hunspell (*.dic)</translation>
     </message>
 </context>
 <context>
@@ -1845,37 +1852,37 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../spellDialog.ui" line="25"/>
         <source>Unknown word:</source>
-        <translation type="unfinished"></translation>
+        <translation>Palavra desconhecida:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="51"/>
         <source>Add To Dictionary</source>
-        <translation type="unfinished"></translation>
+        <translation>Adicionar ao Dicionário</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="62"/>
         <source>Replace with:</source>
-        <translation type="unfinished">Substituir com:</translation>
+        <translation>Substituir com:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="87"/>
         <source>Ignore Once</source>
-        <translation type="unfinished"></translation>
+        <translation>Ignorar Uma Vez</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="100"/>
         <source>Ignore All</source>
-        <translation type="unfinished"></translation>
+        <translation>Ignorar Tudo</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="129"/>
         <source>Correct Once</source>
-        <translation type="unfinished"></translation>
+        <translation>Corrigir Uma Vez</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="142"/>
         <source>Correct All</source>
-        <translation type="unfinished"></translation>
+        <translation>Corrigir Tudo</translation>
     </message>
 </context>
 <context>
