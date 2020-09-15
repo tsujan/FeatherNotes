@@ -168,6 +168,12 @@ PrefDialog::PrefDialog (QWidget *parent)
             }
         });
 
+        /* start where left off */
+        ui->startWhereLeftOff->setChecked(win->isStartWhereLeftOff());
+        connect (ui->startWhereLeftOff, &QCheckBox::stateChanged, win, [this, win] (int checked) {
+            win->startWhereLeftOff(checked == Qt::Checked);
+        });
+
         /* use tray */
         ui->hasTrayBox->setChecked (win->hasTray());
         hasTray_ = win->hasTray();

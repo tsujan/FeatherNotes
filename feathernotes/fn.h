@@ -94,6 +94,13 @@ public:
         position_ = pos;
     }
 
+    bool startWhereLeftOff(bool startWhereLeftOff) {
+        startWhereLeftOff_ = startWhereLeftOff;
+    }
+    bool isStartWhereLeftOff() {
+        return startWhereLeftOff_;
+    }
+
     bool isUnderE() const {
         return underE_;
     }
@@ -342,6 +349,7 @@ private:
     void setTitle (const QString& fname);
     void notSaved();
     void setNodesTexts();
+    void setStartWhereLeftOffFile(const QString &leftOffFile = "");
     bool unSaved (bool modified);
     TextEdit *newWidget();
     void mergeFormatOnWordOrSelection (const QTextCharFormat &format);
@@ -397,6 +405,7 @@ private:
     bool shownBefore_,
          remSize_, remSplitter_,
          remPosition_,
+         startWhereLeftOff_,
          hasTray_,
          minToTray_,
          wrapByDefault_,

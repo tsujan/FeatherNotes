@@ -433,6 +433,16 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
             filePath = QUrl (filePath).toLocalFile();
         filePath = QDir::current().absoluteFilePath (filePath);
         filePath = QDir::cleanPath (filePath);
+    } else {
+        Settings settings("feathernotes", "fn");
+        settings.beginGroup("window");
+        bool startWhereLeftOffOpt = settings.value("startWhereLeftOff").toBool();
+        if (startWhereLeftOffOpt == true) {
+            QString startWhereLeftOffFileOpt = settings.value("startWhereLeftOffFile").toString();
+            if (!startWhereLeftOffFileOpt.isEmpty())
+                filePath = startWhereLeftOffFileOpt;
+        }
+        settings.endGroup();
     }
 
     fileOpen (filePath);
@@ -1179,6 +1189,9 @@ void FN::openFile()
     if (dialog.exec())
         filePath = dialog.selectedFiles().at (0);
 
+    if (!filePath.isEmpty())
+        this->setStartWhereLeftOffFile(filePath);
+
     /* fileOpen() restarts auto-saving even when opening is canceled */
     fileOpen (filePath);
 }
@@ -1376,6 +1389,23 @@ void FN::setNodesTexts()
     }
 }
 /*************************/
+void FN::setStartWhereLeftOffFile(const QString &leftOffFile) {
+    bool leftOffFileEmpty = leftOffFile.isEmpty();
+    bool xmlPathEmpty = this->xmlPath_.isEmpty();
+
+    if (startWhereLeftOff_ == true && (!leftOffFileEmpty || !xmlPathEmpty)) {
+        QFileInfo fi = QFileInfo (!leftOffFileEmpty ? leftOffFile : this->xmlPath_);
+        Settings settings ("feathernotes", "fn");
+        settings.beginGroup("window");
+        QString filepath = fi.absoluteFilePath();
+        if (fi.exists())
+            settings.setValue ("startWhereLeftOffFile", filepath);
+        else
+            settings.setValue ("startWhereLeftOffFile", "");
+        settings.endGroup();
+    }
+}
+/*************************/
 bool FN::saveFile()
 {
     int index = ui->stackedWidget->currentIndex();
@@ -1445,6 +1475,8 @@ bool FN::saveFile()
     {
         notSaved();
         return false;
+    } else {
+        this->setStartWhereLeftOffFile(fname);
     }
 
     return true;
@@ -4555,6 +4587,8 @@ void FN::readAndApplyConfig (bool startup)
 
     minToTray_ = settings.value ("minToTray").toBool(); // false by default
 
+    startWhereLeftOff_ = settings.value("startWhereLeftOff").toBool();
+
     bool bv = settings.value ("underE").toBool(); // false by default
     if (startup)
         underE_ = bv;
@@ -4802,6 +4836,9 @@ void FN::writeConfig()
     settings.setValue ("smallToolbarIcons", smallToolbarIcons_);
     settings.setValue ("noToolbar", noToolbar_);
     settings.setValue ("noMenubar", noMenubar_);
+    settings.setValue ("startWhereLeftOff", startWhereLeftOff_);
+
+    this->setStartWhereLeftOffFile();
 
     settings.endGroup();
 
