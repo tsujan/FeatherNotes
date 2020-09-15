@@ -1,4 +1,5 @@
 <svg width="48" version="1.1" xmlns="http://www.w3.org/2000/svg" height="48">
+<path style="opacity:.2" d="M 4,4 V 46 H 46 V 4 Z"/>
 <path style="fill:#edf0f1;fill-rule:evenodd" id="rect815" d="M 3,3 H 45 V 45 H 3 Z"/>
 <g id="folderLayer" transform="matrix(1.0553836,0,0,1.0553836,-3.3021298,-4.1779984)">
 <g id="layer1-2" transform="matrix(1.1736265,0,0,1.1736265,-3.2329091,-4.3458355)">

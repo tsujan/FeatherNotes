@@ -316,6 +316,12 @@ PrefDialog::PrefDialog (QWidget *parent)
             win->enableScrollJumpWorkaround (checked == Qt::Checked);
         });
 
+        /* starting with the last opened file */
+        ui->lastFileBox->setChecked (win->openLastFile());
+        connect (ui->lastFileBox, &QCheckBox::stateChanged, win, [win] (int checked) {
+            win->setOpenLastFile (checked == Qt::Checked);
+        });
+
         /* spell checking */
 #ifdef HAS_HUNSPELL
         ui->dictEdit->setText (win->getDictPath());
@@ -470,6 +476,7 @@ void PrefDialog::onClosing()
 
         win->writeConfig();
         win->writeGeometryConfig();
+        win->rememberLastOpenedFile();
     }
 }
 /*************************/

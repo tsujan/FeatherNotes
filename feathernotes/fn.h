@@ -43,6 +43,7 @@ public:
     ~FN();
 
     void writeGeometryConfig();
+    void rememberLastOpenedFile();
     void writeConfig();
 
     bool isSizeRem() const {
@@ -206,6 +207,13 @@ public:
         return reservedShortcuts_;
     }
 
+    bool openLastFile() const {
+        return openLastFile_;
+    }
+    void setOpenLastFile (bool openLastFile) {
+        openLastFile_ = openLastFile;
+    }
+
 #ifdef HAS_HUNSPELL
     QString getDictPath() const {
         return dictPath_;
@@ -332,7 +340,7 @@ private slots:
 
 private:
     void enableActions (bool enable);
-    void fileOpen (const QString &filePath);
+    void fileOpen (const QString &filePath, bool startup = false);
     bool fileSave (const QString &filePath);
     void createTrayIcon();
     void closeEvent (QCloseEvent *event);
@@ -407,6 +415,7 @@ private:
          noMenubar_,
          autoBracket_,
          autoReplace_,
+         openLastFile_,
          treeViewDND_;
     QString dateFormat_;
     int autoSave_;

@@ -7,6 +7,7 @@ V0.8.0
  * Fixed an issue in changing the font of visited nodes.
  * Don't clear replacement highlights when the window is minimized or hidden.
  * Highlight only the first 1000 replacements if there are more.
+ * Added an option for starting with the last opened file.
 
 V0.7.0
 ---------

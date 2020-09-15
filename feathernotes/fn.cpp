@@ -197,6 +197,7 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     noMenubar_ = false;
     autoBracket_ = false;
     autoReplace_ = false;
+    openLastFile_ = false;
     treeViewDND_ = false;
     readAndApplyConfig();
 
@@ -434,8 +435,10 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
         filePath = QDir::current().absoluteFilePath (filePath);
         filePath = QDir::cleanPath (filePath);
     }
+    else
+        filePath = xmlPath_;
 
-    fileOpen (filePath);
+    fileOpen (filePath, true);
 
     /*dummyWidget = nullptr;
     if (hasTray_)
@@ -1053,7 +1056,7 @@ void FN::showDoc (QDomDocument &doc)
         enableActions (true);
 }
 /*************************/
-void FN::fileOpen (const QString &filePath)
+void FN::fileOpen (const QString &filePath, bool startup)
 {
     if (!filePath.isEmpty())
     {
@@ -1071,16 +1074,31 @@ void FN::fileOpen (const QString &filePath)
             if (document.setContent (decrypted))
             {
                 QDomElement root = document.firstChildElement ("feathernotes");
-                if (root.isNull()) return;
+                if (root.isNull())
+                {
+                    if (startup) xmlPath_.clear();
+                    return;
+                }
                 pswrd_ = root.attribute ("pswrd");
                 if (!pswrd_.isEmpty() && !isPswrdCorrect())
+                {
+                    if (startup) xmlPath_.clear();
                     return;
+                }
                 showDoc (document);
-                xmlPath_ = filePath;
+                if (xmlPath_ != filePath)
+                {
+                    xmlPath_ = filePath;
+                    QTimer::singleShot (0, this, [this] () {
+                        rememberLastOpenedFile();
+                    });
+                }
                 setTitle (xmlPath_);
                 docProp();
             }
+            else if (startup) xmlPath_.clear();
         }
+        else if (startup) xmlPath_.clear();
     }
 
     /* start the timer (again) if file
@@ -1441,11 +1459,14 @@ bool FN::saveFile()
             return false;
     }
 
+    bool overwrite (fname == xmlPath_);
     if (!fileSave (fname))
     {
         notSaved();
         return false;
     }
+    else if (!overwrite)
+        rememberLastOpenedFile();
 
     return true;
 }
@@ -1464,8 +1485,11 @@ bool FN::fileSave (const QString &filePath)
             model_->domDocument.save (outStream, 1);
             outputFile.close();
 
-            xmlPath_ = filePath;
-            setTitle (xmlPath_);
+            if (xmlPath_ != filePath)
+            {
+                xmlPath_ = filePath;
+                setTitle (xmlPath_);
+            }
             QHash<DomItem*, TextEdit*>::iterator it;
             for (it = widgets_.begin(); it != widgets_.end(); ++it)
                 it.value()->document()->setModified (false);
@@ -1491,8 +1515,11 @@ bool FN::fileSave (const QString &filePath)
             out << encrypted;
             outputFile.close();
 
-            xmlPath_ = filePath;
-            setTitle (xmlPath_);
+            if (xmlPath_ != filePath)
+            {
+                xmlPath_ = filePath;
+                setTitle (xmlPath_);
+            }
             QHash<DomItem*, TextEdit*>::iterator it;
             for (it = widgets_.begin(); it != widgets_.end(); ++it)
                 it.value()->document()->setModified (false);
@@ -4740,6 +4767,10 @@ void FN::readAndApplyConfig (bool startup)
     if (!startup)
         enableScrollJumpWorkaround (scrollJumpWorkaround_);
 
+    openLastFile_ = settings.value ("openLastFile").toBool(); // false by default
+    if (openLastFile_)
+        xmlPath_ = settings.value ("lastOpenedFile").toString();
+
 #ifdef HAS_HUNSPELL
     dictPath_ = settings.value ("dictionaryPath").toString();
 #endif
@@ -4781,6 +4812,18 @@ void FN::writeGeometryConfig()
     settings.setValue ("prefSize", prefSize_);
 
     settings.endGroup();
+}
+/*************************/
+void FN::rememberLastOpenedFile()
+{
+    if (openLastFile_
+        && !xmlPath_.isEmpty()) // a file has been opened
+    {
+        Settings settings ("feathernotes", "fn");
+        settings.beginGroup ("text");
+        settings.setValue ("lastOpenedFile", xmlPath_);
+        settings.endGroup();
+    }
 }
 /*************************/
 void FN::writeConfig()
@@ -4825,6 +4868,8 @@ void FN::writeConfig()
         timer_->stop();
 
     settings.setValue ("scrollJumpWorkaround", scrollJumpWorkaround_);
+
+    settings.setValue ("openLastFile", openLastFile_);
 
 #ifdef HAS_HUNSPELL
     settings.setValue ("dictionaryPath", dictPath_);
