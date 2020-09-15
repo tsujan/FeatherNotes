@@ -94,7 +94,7 @@ public:
         position_ = pos;
     }
 
-    bool startWhereLeftOff(bool startWhereLeftOff) {
+    void startWhereLeftOff(bool startWhereLeftOff) {
         startWhereLeftOff_ = startWhereLeftOff;
     }
     bool isStartWhereLeftOff() {
