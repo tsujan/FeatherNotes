@@ -181,11 +181,6 @@ public:
         autoSave_ = interval;
     }
 
-    bool isScrollJumpWorkaroundEnabled() const {
-        return scrollJumpWorkaround_;
-    }
-    void enableScrollJumpWorkaround (bool enable);
-
     void updateCustomizableShortcuts();
 
     QHash<QString, QString> customShortcutActions() const {
@@ -425,7 +420,6 @@ private:
     QByteArray splitterSizes_;
     QTimer *timer_;
     QString pswrd_;
-    bool scrollJumpWorkaround_; // Should a workaround for Qt5's "scroll jump" bug be applied?
     bool underE_; // Is FeatherNotes running under Enlightenment?
     QSize EShift_; // The shift Enlightenment's panel creates (a bug?).
     QHash<QString, QString> customActions_;

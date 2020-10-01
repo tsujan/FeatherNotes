@@ -310,12 +310,6 @@ PrefDialog::PrefDialog (QWidget *parent)
             }
         });
 
-        /* scroll jump workaround */
-        ui->workaroundBox->setChecked (win->isScrollJumpWorkaroundEnabled());
-        connect (ui->workaroundBox, &QCheckBox::stateChanged, win, [win] (int checked) {
-            win->enableScrollJumpWorkaround (checked == Qt::Checked);
-        });
-
         /* starting with the last opened file */
         ui->lastFileBox->setChecked (win->openLastFile());
         connect (ui->lastFileBox, &QCheckBox::stateChanged, win, [win] (int checked) {

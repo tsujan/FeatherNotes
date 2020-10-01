@@ -42,7 +42,6 @@ TextEdit::TextEdit (QWidget *parent) : QTextEdit (parent)
     autoReplace = false;
     textTab_ = "    "; // the default text tab is four spaces
     pressPoint = QPoint();
-    scrollJumpWorkaround = false;
     scrollTimer_ = nullptr;
 
     VScrollBar *vScrollBar = new VScrollBar;
@@ -753,8 +752,7 @@ void TextEdit::insertFromMimeData (const QMimeData *source)
         {
             QMimeDatabase mimeDatabase;
             QMimeType mimeType = mimeDatabase.mimeTypeForFile (QFileInfo (url.toLocalFile()));
-            QByteArray ba;
-            ba.append (mimeType.name());
+            QByteArray ba = mimeType.name().toUtf8();
             if (QImageReader::supportedMimeTypes().contains (ba))
                 emit imageDropped (url.path());
             else
@@ -861,61 +859,56 @@ void TextEdit::mouseDoubleClickEvent (QMouseEvent *e)
 /*************************/
 void TextEdit::wheelEvent (QWheelEvent *e)
 {
-    if (scrollJumpWorkaround && e->angleDelta().manhattanLength() > 240)
-        e->ignore();
-    else
+    if (e->modifiers() & Qt::ControlModifier)
     {
-        if (e->modifiers() & Qt::ControlModifier)
+        float delta = e->angleDelta().y() / 120.f;
+        zooming (delta);
+        return;
+    }
+
+    /* smooth scrolling */
+    if (e->spontaneous() && e->source() == Qt::MouseEventNotSynthesized)
+    {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
+        bool horizontal (e->angleDelta().x() != 0);
+#else
+        bool horizontal (e->orientation() == Qt::Horizontal);
+#endif
+        QScrollBar* sbar = horizontal
+                               ? horizontalScrollBar() : verticalScrollBar();
+        if (sbar)
         {
-            float delta = e->angleDelta().y() / 120.f;
-            zooming (delta);
+            int delta = horizontal
+                            ? e->angleDelta().x() : e->angleDelta().y();
+            if (e->modifiers() & Qt::ShiftModifier) // scrolling with minimum speed
+                delta /= QApplication::wheelScrollLines();
+            if ((delta > 0 && sbar->value() == sbar->minimum())
+                || (delta < 0 && sbar->value() == sbar->maximum()))
+            {
+                return; // the scrollbar can't move
+            }
+
+            if (!scrollTimer_)
+            {
+                scrollTimer_ = new QTimer();
+                scrollTimer_->setTimerType (Qt::PreciseTimer);
+                connect (scrollTimer_, &QTimer::timeout, this, &TextEdit::scrollSmoothly);
+            }
+
+            /* set the data for inertial scrolling */
+            scrollData data;
+            data.delta = delta;
+            data.leftFrames = scrollAnimFrames;
+            data.vertical = !horizontal;
+            queuedScrollSteps_.append (data);
+            scrollTimer_->start (1000 / SCROLL_FRAMES_PER_SEC);
             return;
         }
-
-        /* smooth scrolling */
-        if (e->spontaneous() && e->source() == Qt::MouseEventNotSynthesized)
-        {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
-            bool horizontal (e->angleDelta().x() != 0);
-#else
-            bool horizontal (e->orientation() == Qt::Horizontal);
-#endif
-            QScrollBar* sbar = horizontal
-                                   ? horizontalScrollBar() : verticalScrollBar();
-            if (sbar)
-            {
-                int delta = horizontal
-                                ? e->angleDelta().x() : e->angleDelta().y();
-                if (e->modifiers() & Qt::ShiftModifier) // scrolling with minimum speed
-                    delta /= QApplication::wheelScrollLines();
-                if ((delta > 0 && sbar->value() == sbar->minimum())
-                    || (delta < 0 && sbar->value() == sbar->maximum()))
-                {
-                    return; // the scrollbar can't move
-                }
-
-                if (!scrollTimer_)
-                {
-                    scrollTimer_ = new QTimer();
-                    scrollTimer_->setTimerType (Qt::PreciseTimer);
-                    connect (scrollTimer_, &QTimer::timeout, this, &TextEdit::scrollSmoothly);
-                }
-
-                /* set the data for inertial scrolling */
-                scrollData data;
-                data.delta = delta;
-                data.leftFrames = scrollAnimFrames;
-                data.vertical = !horizontal;
-                queuedScrollSteps_.append (data);
-                scrollTimer_->start (1000 / SCROLL_FRAMES_PER_SEC);
-                return;
-            }
-        }
-
-        /* as in QTextEdit::wheelEvent() */
-        QAbstractScrollArea::wheelEvent (e);
-        updateMicroFocus();
     }
+
+    /* as in QTextEdit::wheelEvent() */
+    QAbstractScrollArea::wheelEvent (e);
+    updateMicroFocus();
 }
 /*************************/
 void TextEdit::scrollSmoothly()

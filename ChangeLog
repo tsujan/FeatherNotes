@@ -8,6 +8,7 @@ V0.8.0
  * Don't clear replacement highlights when the window is minimized or hidden.
  * Highlight only the first 1000 replacements if there are more.
  * Added an option for starting with the last opened file.
+ * Removed the option for scroll jump workaround (because it wasn't FeatherNotes' job).
 
 V0.7.0
 ---------

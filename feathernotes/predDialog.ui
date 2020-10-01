@@ -429,17 +429,6 @@ Takes effect after closing this dialog.</string>
            </layout>
           </item>
           <item>
-           <widget class="QCheckBox" name="workaroundBox">
-            <property name="toolTip">
-             <string>This is not a complete fix but
-prevents annoying scroll jumps.</string>
-            </property>
-            <property name="text">
-             <string>Workaround for &amp;Qt5's scroll jump bug</string>
-            </property>
-           </widget>
-          </item>
-          <item>
            <widget class="QGroupBox" name="dictGroupBox">
             <property name="title">
              <string>Spell Checking</string>

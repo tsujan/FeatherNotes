@@ -41,11 +41,6 @@ public:
     TextEdit (QWidget *parent = nullptr);
     ~TextEdit();
 
-    void setScrollJumpWorkaround (bool apply)
-    {
-        scrollJumpWorkaround = apply;
-    }
-
     void zooming (float range);
 
     bool autoIndentation;
@@ -84,7 +79,6 @@ private:
 
     QString textTab_; // text tab in terms of spaces
     QPoint pressPoint;
-    bool scrollJumpWorkaround; // for working around Qt5's scroll jump bug
     QElapsedTimer tripleClickTimer_;
     /****************************
      ***** Smooth scrolling *****

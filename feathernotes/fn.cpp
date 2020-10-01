@@ -1626,7 +1626,6 @@ void FN::insertDate()
 TextEdit *FN::newWidget()
 {
     TextEdit *textEdit = new TextEdit;
-    textEdit->setScrollJumpWorkaround (scrollJumpWorkaround_);
     //textEdit->autoIndentation = true; // auto-indentation is enabled by default
     textEdit->autoBracket = autoBracket_;
     textEdit->autoReplace = autoReplace_;
@@ -4442,28 +4441,6 @@ void FN::setUnderE (bool yes)
     }
 }
 /*************************/
-void FN::enableScrollJumpWorkaround (bool enable)
-{
-    if (enable)
-    {
-        if (!scrollJumpWorkaround_)
-        {
-            scrollJumpWorkaround_ = true;
-            for (int i = 0; i < ui->stackedWidget->count(); ++i)
-                qobject_cast< TextEdit *>(ui->stackedWidget->widget (i))->setScrollJumpWorkaround (true);
-        }
-    }
-    else
-    {
-        if (scrollJumpWorkaround_)
-        {
-            scrollJumpWorkaround_ = false;
-            for (int i = 0; i < ui->stackedWidget->count(); ++i)
-                qobject_cast< TextEdit *>(ui->stackedWidget->widget (i))->setScrollJumpWorkaround (false);
-        }
-    }
-}
-/*************************/
 void FN::updateCustomizableShortcuts()
 {
     QHash<QAction*, QKeySequence>::const_iterator iter = defaultShortcuts_.constBegin();
@@ -4763,10 +4740,6 @@ void FN::readAndApplyConfig (bool startup)
             timer_->stop();
     }
 
-    scrollJumpWorkaround_ = settings.value ("scrollJumpWorkaround").toBool(); // false by default
-    if (!startup)
-        enableScrollJumpWorkaround (scrollJumpWorkaround_);
-
     openLastFile_ = settings.value ("openLastFile").toBool(); // false by default
     if (openLastFile_)
         xmlPath_ = settings.value ("lastOpenedFile").toString();
@@ -4866,8 +4839,6 @@ void FN::writeConfig()
         timer_->start (autoSave_ * 1000 * 60);
     else if (timer_->isActive())
         timer_->stop();
-
-    settings.setValue ("scrollJumpWorkaround", scrollJumpWorkaround_);
 
     settings.setValue ("openLastFile", openLastFile_);
 
