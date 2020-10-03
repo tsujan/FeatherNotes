@@ -1051,7 +1051,7 @@
         <location filename="../../fn.cpp" line="5277"/>
         <location filename="../../fn.cpp" line="5392"/>
         <source>Cancel</source>
-        <translation>Storno</translation>
+        <translation>Zrušit</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1186"/>
