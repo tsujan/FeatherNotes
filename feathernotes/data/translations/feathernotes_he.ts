@@ -14,12 +14,12 @@
     <message>
         <location filename="../../colorLabel.cpp" line="31"/>
         <source>Click to change color.</source>
-        <translation type="unfinished"></translation>
+        <translation>לחיצה לשינוי צבע.</translation>
     </message>
     <message>
         <location filename="../../colorLabel.cpp" line="53"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>בחירת צבע</translation>
     </message>
 </context>
 <context>
@@ -973,7 +973,7 @@
     <message>
         <location filename="../../fn.ui" line="1350"/>
         <source>Document &amp;Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;צבעי המסמך</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1358"/>
@@ -1256,12 +1256,12 @@
     <message>
         <location filename="../../fn.cpp" line="2751"/>
         <source>Set Document Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>הגדרת צבעי המסמך</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2761"/>
         <source>These colors will be applied to new nodes.&lt;br&gt;They may or may not affect existing nodes&lt;br&gt;but document reopening is recommended.</source>
-        <translation type="unfinished"></translation>
+        <translation>הצבעים האלו יחולו על מפרקים חדשים.&lt;br&gt;הם עשויים להשפיע על מפרקים קיימים&lt;br&gt;מומלץ לפתוח את המסמך מחדש בכל מקרה.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2764"/>
@@ -1276,7 +1276,7 @@
     <message>
         <location filename="../../fn.cpp" line="3478"/>
         <source>The first 1000 replacements are highlighted.</source>
-        <translation type="unfinished"></translation>
+        <translation>1000 ההחלפות הראשונות מודגשות.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3735"/>
@@ -1393,7 +1393,7 @@
 Do you want to replace it?
 </source>
         <translation>קובץ זה כבר קיים.
-האם ברצונך להחליפו?
+להחליף אותו?
 </translation>
     </message>
     <message>
@@ -1466,7 +1466,7 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="5599"/>
         <source>See Preferences → Text → Spell Checking!</source>
-        <translation type="unfinished"></translation>
+        <translation>יש לפנות אל העדפות ← טקסט ← בדיקת איות!</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5621"/>
@@ -1481,14 +1481,14 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="5634"/>
         <source>The Hunspell dictionary is not accompanied by an affix file.</source>
-        <translation type="unfinished"></translation>
+        <translation>מילון ה־Hunspell אינו מלווה בקובץ מוספית.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5652"/>
         <location filename="../../fn.cpp" line="5667"/>
         <location filename="../../fn.cpp" line="5679"/>
         <source>No misspelling from text cursor.</source>
-        <translation type="unfinished"></translation>
+        <translation>אין שגיאות איות מסמן הטקסט.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5690"/>
@@ -1778,12 +1778,14 @@ Takes effect after closing this dialog.</source>
         <source>A Hunspell dictionary has a name that ends with &quot;.dic&quot;
 and should be alongside an affix file with the same
 name but ending with &quot;.aff&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>למילון Hunspell יש שם שמסתיים ב־„‎.dic”
+ואמור להיות לצד קובץ מוספית באותו
+השם רק עם הסיומת „‎.aff”.</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="447"/>
         <source>Hunspell dictionary path:</source>
-        <translation type="unfinished"></translation>
+        <translation>נתיב מילון Hunspell:</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="466"/>
@@ -1794,12 +1796,12 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../predDialog.ui" line="501"/>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>קבצים</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="510"/>
         <source>Start with the last opened file</source>
-        <translation type="unfinished"></translation>
+        <translation>להתחיל עם הקובץ האחרון שנפתח</translation>
     </message>
     <message>
         <location filename="../../predDialog.ui" line="534"/>
@@ -1840,7 +1842,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../pref.cpp" line="682"/>
         <source>Hunspell Dictionary Files (*.dic)</source>
-        <translation type="unfinished"></translation>
+        <translation>קובצי מילון Hunspell‏ (‎*.dic)</translation>
     </message>
 </context>
 <context>
@@ -1863,22 +1865,22 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../spellDialog.ui" line="87"/>
         <source>Ignore Once</source>
-        <translation type="unfinished"></translation>
+        <translation>להתעלם מאחד</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="100"/>
         <source>Ignore All</source>
-        <translation type="unfinished"></translation>
+        <translation>להתעלם מהכול</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="129"/>
         <source>Correct Once</source>
-        <translation type="unfinished"></translation>
+        <translation>לתקן אחד</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="142"/>
         <source>Correct All</source>
-        <translation type="unfinished"></translation>
+        <translation>לתקן הכול</translation>
     </message>
 </context>
 <context>
