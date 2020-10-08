@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
     if (option == "--help" || option == "-h")
     {
         QTextStream out (stdout);
-        out << "FeatherNotes - Lightweight Qt5 hierarchical notes-manager\n"\
+        out << "FeatherNotes - Lightweight Qt hierarchical notes-manager\n"\
                "\nUsage:\n	feathernotes [options] [file] "\
                "Open the specified file\nOptions:\n"\
                "--version or -v   Show version information and exit.\n"\

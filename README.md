@@ -2,7 +2,7 @@
 
 ## Overview
 
-FeatherNotes (by Pedram Pourang, a.k.a. Tsu Jan <tsujan2000@gmail.com>) is a lightweight Qt5 hierarchical notes-manager for Linux. It is independent of any desktop environment and has:
+FeatherNotes (by Pedram Pourang, a.k.a. Tsu Jan <tsujan2000@gmail.com>) is a lightweight Qt hierarchical notes-manager for Linux. It is independent of any desktop environment and has:
 
   * Support for rich text formatting, image embedding and inserting editable tables;
   * Drag-and-drop capability for moving nodes and also for embedding images;

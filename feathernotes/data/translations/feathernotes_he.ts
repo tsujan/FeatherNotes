@@ -1444,8 +1444,8 @@ Do you want to replace it?
     </message>
     <message>
         <location filename="../../fn.cpp" line="5498"/>
-        <source>based on Qt5</source>
-        <translation>מבוסס על Qt5</translation>
+        <source>based on Qt</source>
+        <translation>מבוסס על Qt</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5499"/>

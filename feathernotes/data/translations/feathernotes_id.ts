@@ -1442,7 +1442,7 @@ Do you want to replace it?
     </message>
     <message>
         <location filename="../../fn.cpp" line="5498"/>
-        <source>based on Qt5</source>
+        <source>based on Qt</source>
         <translation></translation>
     </message>
     <message>

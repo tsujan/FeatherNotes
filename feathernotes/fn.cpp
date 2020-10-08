@@ -5495,7 +5495,7 @@ void FN::aboutDialog()
     dialog.setMainIcon (FPIcon);
     dialog.settMainTitle (QString ("<center><b><big>%1 %2</big></b></center><br>").arg (qApp->applicationName()).arg (qApp->applicationVersion()));
     dialog.setMainText ("<center> " + tr ("A lightweight notes manager") + " </center>\n<center> "
-                        + tr ("based on Qt5") + " </center><br><center> "
+                        + tr ("based on Qt") + " </center><br><center> "
                         + tr ("Author")+": <a href='mailto:tsujan2000@gmail.com?Subject=My%20Subject'>Pedram Pourang ("
                         + tr ("aka.") + " Tsu Jan)</a> </center><p></p>");
     dialog.setTabTexts (tr ("About FeatherNotes"), tr ("Translators"));
