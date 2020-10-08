@@ -1516,17 +1516,17 @@ Do you want to replace it?
 <context>
     <name>FeatherNotes::PrefDialog</name>
     <message>
-        <location filename="../../predDialog.ui" line="14"/>
+        <location filename="../../prefDialog.ui" line="14"/>
         <source>Preferences</source>
         <translation>Preferencias</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="27"/>
+        <location filename="../../prefDialog.ui" line="27"/>
         <source>Window</source>
         <translation>Ventana</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="36"/>
+        <location filename="../../prefDialog.ui" line="36"/>
         <source>Saves window size after closing
 this dialog and also on exit.
 
@@ -1537,25 +1537,25 @@ este diálogo y también al salir
 ¡Desmárquelo para hacer el tamaño fijo!</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="42"/>
+        <location filename="../../prefDialog.ui" line="42"/>
         <source>Remember window &amp;size</source>
         <translation>Recordar el tamaño de la &amp;ventana</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="51"/>
+        <location filename="../../prefDialog.ui" line="51"/>
         <source>Start with this size: </source>
         <translation>Empezar con este tamaño: </translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="58"/>
-        <location filename="../../predDialog.ui" line="72"/>
-        <location filename="../../predDialog.ui" line="255"/>
-        <location filename="../../predDialog.ui" line="269"/>
+        <location filename="../../prefDialog.ui" line="58"/>
+        <location filename="../../prefDialog.ui" line="72"/>
+        <location filename="../../prefDialog.ui" line="255"/>
+        <location filename="../../prefDialog.ui" line="269"/>
         <source> px</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="97"/>
+        <location filename="../../prefDialog.ui" line="97"/>
         <source>Saves tree width after closing
 this dialog and also on exit.
 
@@ -1565,12 +1565,12 @@ también al salir.
 Desmárquelo para un ratio de anchura de 170/530.</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="103"/>
+        <location filename="../../prefDialog.ui" line="103"/>
         <source>Remember &amp;tree width</source>
         <translation>Recordar el &amp;ancho del árbol</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="110"/>
+        <location filename="../../prefDialog.ui" line="110"/>
         <source>Saves position after closing
 this dialog and also on exit.
 
@@ -1585,12 +1585,12 @@ en escritorios GTK+ como Unity
 y Cinnamon.)</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="118"/>
+        <location filename="../../prefDialog.ui" line="118"/>
         <source>Save &amp;position</source>
         <translation>Guardar la &amp;posición</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="125"/>
+        <location filename="../../prefDialog.ui" line="125"/>
         <source>Decides whether a systray icon should be used.
 If checked, the titlebar close button iconifies
 the window to the systray instead of quitting.
@@ -1603,51 +1603,51 @@ la ventana a la bandeja del sistema en vez de salir.
 Es necesario reiniciar FeatherNotes para que tenga efecto.</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="132"/>
+        <location filename="../../prefDialog.ui" line="132"/>
         <source>Add to s&amp;ystray</source>
         <translation>Añadir a la bande&amp;ja del sistema</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="157"/>
+        <location filename="../../prefDialog.ui" line="157"/>
         <source>The command line option --tray
 can be used instead of this.</source>
         <translation>Se puede usar la opción de la línea
 de comandos --tray en vez de esto.</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="161"/>
+        <location filename="../../prefDialog.ui" line="161"/>
         <source>Start i&amp;conified to tray</source>
         <translation>Ini&amp;ciar minimizado en la bandeja</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="170"/>
+        <location filename="../../prefDialog.ui" line="170"/>
         <source>Merge the tree view with its surroundings?</source>
         <translation>¿Quiere fusionar la vista de árbol con lo que la rodea?</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="173"/>
+        <location filename="../../prefDialog.ui" line="173"/>
         <source>Transparent t&amp;ree view</source>
         <translation>Vista de árbol t&amp;ransparente</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="180"/>
+        <location filename="../../prefDialog.ui" line="180"/>
         <source>By default, the active widget style determines
 the size of toolbar icons.</source>
         <translation>Por defecto, el estilo del control activo determina el
 tamaño de los iconos de la barra de herramientas.</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="184"/>
+        <location filename="../../prefDialog.ui" line="184"/>
         <source>Small toolbar icons</source>
         <translation>Iconos pequeños de la barra de herramientas</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="191"/>
+        <location filename="../../prefDialog.ui" line="191"/>
         <source>Do not show t&amp;oolbar</source>
         <translation>N&amp;o mostrar la barra de herramientas</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="198"/>
+        <location filename="../../prefDialog.ui" line="198"/>
         <source>If the menubar is hidden,
 a menu button appears on the toolbar.</source>
         <translation>Si la barra de menu está oculta,
@@ -1655,24 +1655,24 @@ aparece un botón de menú en la barra
 de herramientas.</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="202"/>
+        <location filename="../../prefDialog.ui" line="202"/>
         <source>Do not show &amp;menubar</source>
         <translation>No mostrar la barra de &amp;menús</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="209"/>
+        <location filename="../../prefDialog.ui" line="209"/>
         <source>Check this under Enlightenment (or, probably, another DE)
 to use the systray icon more easily!</source>
         <translation>¡Marque esto en Enlightenment (o, quizás, otro entorno de escritorio)
 para usar la bandeja del sistema con más facilidad!</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="213"/>
+        <location filename="../../prefDialog.ui" line="213"/>
         <source>Running &amp;under Enlightenment?</source>
         <translation>¿Está &amp;usando Enlightenment?</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="238"/>
+        <location filename="../../prefDialog.ui" line="238"/>
         <source>Some DE&apos;s (like Enlightenment) may not report the window position
 correctly. If that is the case, you could try to fix the problem here.
 
@@ -1692,27 +1692,27 @@ si está a la izquierda o a la derecha, se lo debe asignar a la coordenada X.
 una posición adecuada y reinicie FeatherNotes!</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="248"/>
+        <location filename="../../prefDialog.ui" line="248"/>
         <source>Shifts (X × Y): </source>
         <translation>Desplazamientos (X × Y): </translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="314"/>
+        <location filename="../../prefDialog.ui" line="314"/>
         <source>Text</source>
         <translation>Texto</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="323"/>
+        <location filename="../../prefDialog.ui" line="323"/>
         <source>&amp;Wrap lines by default</source>
         <translation>&amp;Dividir las líneas por omisión</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="330"/>
+        <location filename="../../prefDialog.ui" line="330"/>
         <source>Auto-&amp;indent by default</source>
         <translation>Sangría automát&amp;ica por omisón</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="337"/>
+        <location filename="../../prefDialog.ui" line="337"/>
         <source>This covers parentheses, braces, brackets and quotes.
 
 Needs restarting of FeatherNotes to take effect.</source>
@@ -1721,12 +1721,12 @@ Needs restarting of FeatherNotes to take effect.</source>
 Es necesario reiniciar FeatherNotes para que tenga effecto.</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="342"/>
+        <location filename="../../prefDialog.ui" line="342"/>
         <source>Auto-&amp;bracket</source>
         <translation>&amp;Paréntesis automáticos</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="349"/>
+        <location filename="../../prefDialog.ui" line="349"/>
         <source>A triple period is replaced with an ellipsis,
 a double hyphen with a long dash, etc. while
 the user is typing and under proper circumstances.</source>
@@ -1735,13 +1735,13 @@ apropiadas, tres puntos seguidos se sustituyen por
 puntos suspensivos, dos guiones por un guión largo, etc.</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="354"/>
+        <location filename="../../prefDialog.ui" line="354"/>
         <source>&amp;Replace some characters while typing</source>
         <translation>&amp;Reemplazar algunos caracteres mientras se escribe</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="363"/>
-        <location filename="../../predDialog.ui" line="376"/>
+        <location filename="../../prefDialog.ui" line="363"/>
+        <location filename="../../prefDialog.ui" line="376"/>
         <source>Used for pasting the date and time.
 Leave empty for the system default.
 
@@ -1749,92 +1749,92 @@ Takes effect after closing this dialog.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="369"/>
+        <location filename="../../prefDialog.ui" line="369"/>
         <source>Date and time format:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="393"/>
+        <location filename="../../prefDialog.ui" line="393"/>
         <source>&amp;Auto-save every</source>
         <translation>&amp;Autoguardar cada</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="400"/>
+        <location filename="../../prefDialog.ui" line="400"/>
         <source> minute(s)</source>
         <translation> minuto(s)</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="434"/>
+        <location filename="../../prefDialog.ui" line="434"/>
         <source>Spell Checking</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="442"/>
-        <location filename="../../predDialog.ui" line="454"/>
+        <location filename="../../prefDialog.ui" line="442"/>
+        <location filename="../../prefDialog.ui" line="454"/>
         <source>A Hunspell dictionary has a name that ends with &quot;.dic&quot;
 and should be alongside an affix file with the same
 name but ending with &quot;.aff&quot;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="447"/>
+        <location filename="../../prefDialog.ui" line="447"/>
         <source>Hunspell dictionary path:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="466"/>
-        <location filename="../../pref.cpp" line="680"/>
+        <location filename="../../prefDialog.ui" line="466"/>
+        <location filename="../../pref.cpp" line="675"/>
         <source>Add dictionary...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="501"/>
+        <location filename="../../prefDialog.ui" line="501"/>
         <source>Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="510"/>
+        <location filename="../../prefDialog.ui" line="510"/>
         <source>Start with the last opened file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="534"/>
+        <location filename="../../prefDialog.ui" line="534"/>
         <source>Shortcuts</source>
         <translation>Atajos</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="553"/>
+        <location filename="../../prefDialog.ui" line="553"/>
         <source>Action</source>
         <translation>Acción</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="558"/>
+        <location filename="../../prefDialog.ui" line="558"/>
         <source>Shortcut</source>
         <translation>Atajo</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="566"/>
+        <location filename="../../prefDialog.ui" line="566"/>
         <source>Default</source>
         <translation>Predeterminado</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="361"/>
-        <location filename="../../pref.cpp" line="547"/>
+        <location filename="../../pref.cpp" line="362"/>
+        <location filename="../../pref.cpp" line="548"/>
         <source>Warning: Ambiguous shortcut detected!</source>
         <translation>Advertencia: ¡Se ha encontrado un atajo equivocado!</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="530"/>
+        <location filename="../../pref.cpp" line="531"/>
         <source>The typed shortcut was reserved.</source>
         <translation>El atajo que intenta utilizar se encuentra reservado.</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="648"/>
+        <location filename="../../pref.cpp" line="646"/>
         <source>Application restart is needed for changes to take effect.</source>
         <translation>Es necesario reiniciar la aplicación para que los cambios tengan efecto.</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="682"/>
+        <location filename="../../pref.cpp" line="677"/>
         <source>Hunspell Dictionary Files (*.dic)</source>
         <translation type="unfinished"></translation>
     </message>

@@ -16,7 +16,7 @@
  */
 
 #include "pref.h"
-#include "ui_predDialog.h"
+#include "ui_prefDialog.h"
 
 #include "fn.h"
 
@@ -82,6 +82,7 @@ PrefDialog::PrefDialog (QWidget *parent)
 {
     ui->setupUi (this);
     parent_ = parent;
+    ui->promptLabel->setStyleSheet ("QLabel {background-color: #7d0000; color: white; border-radius: 3px; margin: 2px; padding: 5px;}");
     ui->promptLabel->hide();
     promptTimer_ = nullptr;
 
@@ -615,11 +616,9 @@ void PrefDialog::showPrompt (const QString& str, bool temporary)
     FN *win = static_cast<FN *>(parent_);
     if (win == nullptr) return;
 
-    static const QString style ("QLabel {background-color: #7d0000; color: white; border-radius: 3px; margin: 2px; padding: 5px;}");
     if (!str.isEmpty())
     { // show the provided message
         ui->promptLabel->setText ("<b>" + str + "</b>");
-        ui->promptLabel->setStyleSheet (style);
         if (temporary) // show it temporarily
         {
             if (promptTimer_ == nullptr)
@@ -631,7 +630,6 @@ void PrefDialog::showPrompt (const QString& str, bool temporary)
                         && ui->tabWidget->currentIndex() == 3) // Shortcuts page
                     { // show the previous message if it exists
                         ui->promptLabel->setText (prevtMsg_);
-                        ui->promptLabel->setStyleSheet (style);
                     }
                     else showPrompt();
                 });
@@ -646,20 +644,17 @@ void PrefDialog::showPrompt (const QString& str, bool temporary)
              || autoReplace_ != win->hasAutoReplace())
     {
         ui->promptLabel->setText ("<b>" + tr ("Application restart is needed for changes to take effect.") + "</b>");
-        ui->promptLabel->setStyleSheet (style);
     }
     else
     {
         if (prevtMsg_.isEmpty()) // clear prompt
         {
             ui->promptLabel->clear();
-            ui->promptLabel->setStyleSheet ("QLabel {margin: 2px; padding: 5px;}");
+            ui->promptLabel->hide();
+            return;
         }
         else // show the previous message
-        {
             ui->promptLabel->setText (prevtMsg_);
-            ui->promptLabel->setStyleSheet (style);
-        }
     }
     ui->promptLabel->show();
 }

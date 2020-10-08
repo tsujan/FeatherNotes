@@ -1516,17 +1516,17 @@ Do you want to replace it?
 <context>
     <name>FeatherNotes::PrefDialog</name>
     <message>
-        <location filename="../../predDialog.ui" line="14"/>
+        <location filename="../../prefDialog.ui" line="14"/>
         <source>Preferences</source>
         <translation>Předvolby</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="27"/>
+        <location filename="../../prefDialog.ui" line="27"/>
         <source>Window</source>
         <translation>Okno</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="36"/>
+        <location filename="../../prefDialog.ui" line="36"/>
         <source>Saves window size after closing
 this dialog and also on exit.
 
@@ -1539,25 +1539,25 @@ Pro nastavení pevné velikosti zrušte
 zaškrnutí!</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="42"/>
+        <location filename="../../prefDialog.ui" line="42"/>
         <source>Remember window &amp;size</source>
         <translation>Zapamatovat si veliko&amp;st okna</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="51"/>
+        <location filename="../../prefDialog.ui" line="51"/>
         <source>Start with this size: </source>
         <translation>Začít s touto velikostí: </translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="58"/>
-        <location filename="../../predDialog.ui" line="72"/>
-        <location filename="../../predDialog.ui" line="255"/>
-        <location filename="../../predDialog.ui" line="269"/>
+        <location filename="../../prefDialog.ui" line="58"/>
+        <location filename="../../prefDialog.ui" line="72"/>
+        <location filename="../../prefDialog.ui" line="255"/>
+        <location filename="../../prefDialog.ui" line="269"/>
         <source> px</source>
         <translation> obr. bodů</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="97"/>
+        <location filename="../../prefDialog.ui" line="97"/>
         <source>Saves tree width after closing
 this dialog and also on exit.
 
@@ -1570,12 +1570,12 @@ Pro výchozí poměr šířky 170/530
 zrušte zaškrtnutí.</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="103"/>
+        <location filename="../../prefDialog.ui" line="103"/>
         <source>Remember &amp;tree width</source>
         <translation>Zapamatovat si šířku s&amp;tromu</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="110"/>
+        <location filename="../../prefDialog.ui" line="110"/>
         <source>Saves position after closing
 this dialog and also on exit.
 
@@ -1591,12 +1591,12 @@ založenými na knihovnách GTK+
 jako je Unity a Cinnamon.)</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="118"/>
+        <location filename="../../prefDialog.ui" line="118"/>
         <source>Save &amp;position</source>
         <translation>Uložit &amp;pozici</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="125"/>
+        <location filename="../../prefDialog.ui" line="125"/>
         <source>Decides whether a systray icon should be used.
 If checked, the titlebar close button iconifies
 the window to the systray instead of quitting.
@@ -1612,34 +1612,34 @@ Aby se změna projevila, je třeba FeatherNotes
 zavřít a spustit znovu.</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="132"/>
+        <location filename="../../prefDialog.ui" line="132"/>
         <source>Add to s&amp;ystray</source>
         <translation>Přidat do oznamovací oblasti s&amp;ystém. panelu</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="157"/>
+        <location filename="../../prefDialog.ui" line="157"/>
         <source>The command line option --tray
 can be used instead of this.</source>
         <translation>Namísto tohoto je možné použít
 volbu příkazového řádku --tray</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="161"/>
+        <location filename="../../prefDialog.ui" line="161"/>
         <source>Start i&amp;conified to tray</source>
         <translation>Spouštět zminimalizované do oznamovací oblasti</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="170"/>
+        <location filename="../../prefDialog.ui" line="170"/>
         <source>Merge the tree view with its surroundings?</source>
         <translation>Sloučit stromový pohled s jeho okolím?</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="173"/>
+        <location filename="../../prefDialog.ui" line="173"/>
         <source>Transparent t&amp;ree view</source>
         <translation>Průhledný st&amp;romový pohled</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="180"/>
+        <location filename="../../prefDialog.ui" line="180"/>
         <source>By default, the active widget style determines
 the size of toolbar icons.</source>
         <translation>Ve výchozím stavu je velikost ikon na liště
@@ -1647,29 +1647,29 @@ nástrojů určována právě používaným stylem
 widgetů.</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="184"/>
+        <location filename="../../prefDialog.ui" line="184"/>
         <source>Small toolbar icons</source>
         <translation>Malé ikony na liště nástrojů</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="191"/>
+        <location filename="../../prefDialog.ui" line="191"/>
         <source>Do not show t&amp;oolbar</source>
         <translation>Nezobrazovat lištu nástr&amp;ojů</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="198"/>
+        <location filename="../../prefDialog.ui" line="198"/>
         <source>If the menubar is hidden,
 a menu button appears on the toolbar.</source>
         <translation>Pokud je lišta nástrojů skryta, na liště
 nástrojů se objeví tlačítko nabídky.</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="202"/>
+        <location filename="../../prefDialog.ui" line="202"/>
         <source>Do not show &amp;menubar</source>
         <translation>Nezobrazovat lištu &amp;nabídky</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="209"/>
+        <location filename="../../prefDialog.ui" line="209"/>
         <source>Check this under Enlightenment (or, probably, another DE)
 to use the systray icon more easily!</source>
         <translation>Toto zaškrtněte pod Enlightenment (nebo, nejspíš jiným
@@ -1677,12 +1677,12 @@ desktop. prostředím), aby ikona v oznamovací oblasti
 byla snáze použitelná!</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="213"/>
+        <location filename="../../prefDialog.ui" line="213"/>
         <source>Running &amp;under Enlightenment?</source>
         <translation>Provoz&amp;ujete v Enlightenment?</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="238"/>
+        <location filename="../../prefDialog.ui" line="238"/>
         <source>Some DE&apos;s (like Enlightenment) may not report the window position
 correctly. If that is the case, you could try to fix the problem here.
 
@@ -1702,27 +1702,27 @@ Po zvolení posunu souřadnice, umístěte okno do správné pozice,
 FeatherNotes ukončete a spusťte znovu!</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="248"/>
+        <location filename="../../prefDialog.ui" line="248"/>
         <source>Shifts (X × Y): </source>
         <translation>Posuny (X × Y): </translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="314"/>
+        <location filename="../../prefDialog.ui" line="314"/>
         <source>Text</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="323"/>
+        <location filename="../../prefDialog.ui" line="323"/>
         <source>&amp;Wrap lines by default</source>
         <translation>&amp;Zalamovat řádky už ve výchozím stavu</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="330"/>
+        <location filename="../../prefDialog.ui" line="330"/>
         <source>Auto-&amp;indent by default</source>
         <translation>Automaticky odsazovat už ve výchozím stavu</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="337"/>
+        <location filename="../../prefDialog.ui" line="337"/>
         <source>This covers parentheses, braces, brackets and quotes.
 
 Needs restarting of FeatherNotes to take effect.</source>
@@ -1731,12 +1731,12 @@ Needs restarting of FeatherNotes to take effect.</source>
 Aby se změna projevila, je třeba FeatherNotes ukončit a spustit znovu.</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="342"/>
+        <location filename="../../prefDialog.ui" line="342"/>
         <source>Auto-&amp;bracket</source>
         <translation>Automatické uzavírání závorek</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="349"/>
+        <location filename="../../prefDialog.ui" line="349"/>
         <source>A triple period is replaced with an ellipsis,
 a double hyphen with a long dash, etc. while
 the user is typing and under proper circumstances.</source>
@@ -1745,13 +1745,13 @@ nahrazeny výpustkou, dva spojovníky
 pomlčkou, atd – zatímco uživatel píše.</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="354"/>
+        <location filename="../../prefDialog.ui" line="354"/>
         <source>&amp;Replace some characters while typing</source>
         <translation>Nah&amp;razovat některé znaky v průběhu psaní</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="363"/>
-        <location filename="../../predDialog.ui" line="376"/>
+        <location filename="../../prefDialog.ui" line="363"/>
+        <location filename="../../prefDialog.ui" line="376"/>
         <source>Used for pasting the date and time.
 Leave empty for the system default.
 
@@ -1759,92 +1759,92 @@ Takes effect after closing this dialog.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="369"/>
+        <location filename="../../prefDialog.ui" line="369"/>
         <source>Date and time format:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="393"/>
+        <location filename="../../prefDialog.ui" line="393"/>
         <source>&amp;Auto-save every</source>
         <translation>&amp;Automaticky uložit každých</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="400"/>
+        <location filename="../../prefDialog.ui" line="400"/>
         <source> minute(s)</source>
         <translation> minut</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="434"/>
+        <location filename="../../prefDialog.ui" line="434"/>
         <source>Spell Checking</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="442"/>
-        <location filename="../../predDialog.ui" line="454"/>
+        <location filename="../../prefDialog.ui" line="442"/>
+        <location filename="../../prefDialog.ui" line="454"/>
         <source>A Hunspell dictionary has a name that ends with &quot;.dic&quot;
 and should be alongside an affix file with the same
 name but ending with &quot;.aff&quot;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="447"/>
+        <location filename="../../prefDialog.ui" line="447"/>
         <source>Hunspell dictionary path:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="466"/>
-        <location filename="../../pref.cpp" line="680"/>
+        <location filename="../../prefDialog.ui" line="466"/>
+        <location filename="../../pref.cpp" line="675"/>
         <source>Add dictionary...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="501"/>
+        <location filename="../../prefDialog.ui" line="501"/>
         <source>Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="510"/>
+        <location filename="../../prefDialog.ui" line="510"/>
         <source>Start with the last opened file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="534"/>
+        <location filename="../../prefDialog.ui" line="534"/>
         <source>Shortcuts</source>
         <translation>Zkratky</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="553"/>
+        <location filename="../../prefDialog.ui" line="553"/>
         <source>Action</source>
         <translation>Akce</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="558"/>
+        <location filename="../../prefDialog.ui" line="558"/>
         <source>Shortcut</source>
         <translation>Zkratka</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="566"/>
+        <location filename="../../prefDialog.ui" line="566"/>
         <source>Default</source>
         <translation>Výchozí</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="361"/>
-        <location filename="../../pref.cpp" line="547"/>
+        <location filename="../../pref.cpp" line="362"/>
+        <location filename="../../pref.cpp" line="548"/>
         <source>Warning: Ambiguous shortcut detected!</source>
         <translation>Varování: zjištěna opakující se zkratka!</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="530"/>
+        <location filename="../../pref.cpp" line="531"/>
         <source>The typed shortcut was reserved.</source>
         <translation>Zadaná klávesová zkratka je vyhrazena pro něco jiného.</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="648"/>
+        <location filename="../../pref.cpp" line="646"/>
         <source>Application restart is needed for changes to take effect.</source>
         <translation>Aby se změny projevily, je třeba aplikaci restartovat.</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="682"/>
+        <location filename="../../pref.cpp" line="677"/>
         <source>Hunspell Dictionary Files (*.dic)</source>
         <translation type="unfinished"></translation>
     </message>

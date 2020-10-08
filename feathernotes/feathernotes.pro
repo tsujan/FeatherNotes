@@ -45,7 +45,7 @@ HEADERS += fn.h \
            svgicons.h
 
 FORMS += fn.ui \
-         predDialog.ui \
+         prefDialog.ui \
          helpDialog.ui \
          about.ui
 

@@ -1518,17 +1518,17 @@ Do you want to replace it?
 <context>
     <name>FeatherNotes::PrefDialog</name>
     <message>
-        <location filename="../../predDialog.ui" line="14"/>
+        <location filename="../../prefDialog.ui" line="14"/>
         <source>Preferences</source>
         <translation>העדפות</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="27"/>
+        <location filename="../../prefDialog.ui" line="27"/>
         <source>Window</source>
         <translation>חלון</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="36"/>
+        <location filename="../../prefDialog.ui" line="36"/>
         <source>Saves window size after closing
 this dialog and also on exit.
 
@@ -1539,25 +1539,25 @@ Uncheck to set a fixed size!</source>
 ניתן לבטל את הסימן כדי לקבוע גודל קבוע!</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="42"/>
+        <location filename="../../prefDialog.ui" line="42"/>
         <source>Remember window &amp;size</source>
         <translation>לזכור את &amp;גודל החלון</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="51"/>
+        <location filename="../../prefDialog.ui" line="51"/>
         <source>Start with this size: </source>
         <translation>להתחיל בגודל הזה: </translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="58"/>
-        <location filename="../../predDialog.ui" line="72"/>
-        <location filename="../../predDialog.ui" line="255"/>
-        <location filename="../../predDialog.ui" line="269"/>
+        <location filename="../../prefDialog.ui" line="58"/>
+        <location filename="../../prefDialog.ui" line="72"/>
+        <location filename="../../prefDialog.ui" line="255"/>
+        <location filename="../../prefDialog.ui" line="269"/>
         <source> px</source>
         <translation> פיקסלים</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="97"/>
+        <location filename="../../prefDialog.ui" line="97"/>
         <source>Saves tree width after closing
 this dialog and also on exit.
 
@@ -1568,12 +1568,12 @@ Uncheck for a width ratio of 170/530.</source>
 ניתן לבטל את הסימון לקבלת יחס רוחב של 170/530.</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="103"/>
+        <location filename="../../prefDialog.ui" line="103"/>
         <source>Remember &amp;tree width</source>
         <translation>לזכור את &amp;רוחב העץ</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="110"/>
+        <location filename="../../prefDialog.ui" line="110"/>
         <source>Saves position after closing
 this dialog and also on exit.
 
@@ -1588,12 +1588,12 @@ and Cinnamon.)</source>
 ו־Cinnamon.)</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="118"/>
+        <location filename="../../prefDialog.ui" line="118"/>
         <source>Save &amp;position</source>
         <translation>&amp;שמירת המיקום</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="125"/>
+        <location filename="../../prefDialog.ui" line="125"/>
         <source>Decides whether a systray icon should be used.
 If checked, the titlebar close button iconifies
 the window to the systray instead of quitting.
@@ -1606,75 +1606,75 @@ Needs restarting of FeatherNotes to take effect.</source>
 נדרשת הפעלה מחדש של FeatherNotes כדי שהגדרה זו תיכנס לתוקף.</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="132"/>
+        <location filename="../../prefDialog.ui" line="132"/>
         <source>Add to s&amp;ystray</source>
         <translation>הוספה למגש המ&amp;ערכת</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="157"/>
+        <location filename="../../prefDialog.ui" line="157"/>
         <source>The command line option --tray
 can be used instead of this.</source>
         <translation>ניתן להשתמש באפשרות ‎--tray
 בשורת הפקודה במקום הגדרה זו.</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="161"/>
+        <location filename="../../prefDialog.ui" line="161"/>
         <source>Start i&amp;conified to tray</source>
         <translation>להתחיל ממוזער כ&amp;סמל במגש המערכת</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="170"/>
+        <location filename="../../prefDialog.ui" line="170"/>
         <source>Merge the tree view with its surroundings?</source>
         <translation>למזג את העץ עם סביבתו?</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="173"/>
+        <location filename="../../prefDialog.ui" line="173"/>
         <source>Transparent t&amp;ree view</source>
         <translation>תצוגת עץ &amp;שקופה</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="180"/>
+        <location filename="../../prefDialog.ui" line="180"/>
         <source>By default, the active widget style determines
 the size of toolbar icons.</source>
         <translation>כבררת מחדל, סגנון הווידג׳ט הפעיל
 מגדיר את גודל הסמלים בסרגל הכלים.</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="184"/>
+        <location filename="../../prefDialog.ui" line="184"/>
         <source>Small toolbar icons</source>
         <translation>סמלים קטנים בסרגל הכלים</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="191"/>
+        <location filename="../../prefDialog.ui" line="191"/>
         <source>Do not show t&amp;oolbar</source>
         <translation>לא לה&amp;ציג סרגל כלים</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="198"/>
+        <location filename="../../prefDialog.ui" line="198"/>
         <source>If the menubar is hidden,
 a menu button appears on the toolbar.</source>
         <translation>אם סרגל התפריטים מוסתר,
 מופיע כפתור תפריט בסרגל הכלים.</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="202"/>
+        <location filename="../../prefDialog.ui" line="202"/>
         <source>Do not show &amp;menubar</source>
         <translation>לא להציג את סרגל ה&amp;תפריטים</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="209"/>
+        <location filename="../../prefDialog.ui" line="209"/>
         <source>Check this under Enlightenment (or, probably, another DE)
 to use the systray icon more easily!</source>
         <translation>ניתן לבדוק זאת תחת Enlightenment (או אולי תחת סביבת שולחן
 עבודה אחרת) כדי להשתמש בסמל מגש המערכת ביתר קלות!</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="213"/>
+        <location filename="../../prefDialog.ui" line="213"/>
         <source>Running &amp;under Enlightenment?</source>
         <translation>מופעל ת&amp;חת Enlightenment?</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="238"/>
+        <location filename="../../prefDialog.ui" line="238"/>
         <source>Some DE&apos;s (like Enlightenment) may not report the window position
 correctly. If that is the case, you could try to fix the problem here.
 
@@ -1693,27 +1693,27 @@ position and then restart FeatherNotes!</source>
 ראוי ולאחר מכן להפעיל את FeatherNotes מחדש!</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="248"/>
+        <location filename="../../prefDialog.ui" line="248"/>
         <source>Shifts (X × Y): </source>
         <translation>הזחות (X × Y): </translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="314"/>
+        <location filename="../../prefDialog.ui" line="314"/>
         <source>Text</source>
         <translation>טקסט</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="323"/>
+        <location filename="../../prefDialog.ui" line="323"/>
         <source>&amp;Wrap lines by default</source>
         <translation>גלישת שורות כ&amp;בררת מחדל</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="330"/>
+        <location filename="../../prefDialog.ui" line="330"/>
         <source>Auto-&amp;indent by default</source>
         <translation>הזחה &amp;אוטומטית כבררת מחדל</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="337"/>
+        <location filename="../../prefDialog.ui" line="337"/>
         <source>This covers parentheses, braces, brackets and quotes.
 
 Needs restarting of FeatherNotes to take effect.</source>
@@ -1722,12 +1722,12 @@ Needs restarting of FeatherNotes to take effect.</source>
 נדרשת הפעלה מחדש של FeatherNotes כדי שהשינוי ייכנס לתוקף.</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="342"/>
+        <location filename="../../prefDialog.ui" line="342"/>
         <source>Auto-&amp;bracket</source>
         <translation>&amp;סוגריים אוטומטיים</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="349"/>
+        <location filename="../../prefDialog.ui" line="349"/>
         <source>A triple period is replaced with an ellipsis,
 a double hyphen with a long dash, etc. while
 the user is typing and under proper circumstances.</source>
@@ -1736,13 +1736,13 @@ the user is typing and under proper circumstances.</source>
 ותחת תנאים מתאימים.</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="354"/>
+        <location filename="../../prefDialog.ui" line="354"/>
         <source>&amp;Replace some characters while typing</source>
         <translation>ה&amp;חלפת חלק מהתווים בזמן ההקלדה</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="363"/>
-        <location filename="../../predDialog.ui" line="376"/>
+        <location filename="../../prefDialog.ui" line="363"/>
+        <location filename="../../prefDialog.ui" line="376"/>
         <source>Used for pasting the date and time.
 Leave empty for the system default.
 
@@ -1753,28 +1753,28 @@ Takes effect after closing this dialog.</source>
 השינויים ייכנסו לתוקף לאחר סגירת דו־שיח זה.</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="369"/>
+        <location filename="../../prefDialog.ui" line="369"/>
         <source>Date and time format:</source>
         <translation>תבנית תאריך ושעה:</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="393"/>
+        <location filename="../../prefDialog.ui" line="393"/>
         <source>&amp;Auto-save every</source>
         <translation>ל&amp;שמור אוטומטית בכל</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="400"/>
+        <location filename="../../prefDialog.ui" line="400"/>
         <source> minute(s)</source>
         <translation> דקות</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="434"/>
+        <location filename="../../prefDialog.ui" line="434"/>
         <source>Spell Checking</source>
         <translation>בדיקת איות</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="442"/>
-        <location filename="../../predDialog.ui" line="454"/>
+        <location filename="../../prefDialog.ui" line="442"/>
+        <location filename="../../prefDialog.ui" line="454"/>
         <source>A Hunspell dictionary has a name that ends with &quot;.dic&quot;
 and should be alongside an affix file with the same
 name but ending with &quot;.aff&quot;.</source>
@@ -1783,64 +1783,64 @@ name but ending with &quot;.aff&quot;.</source>
 השם רק עם הסיומת „‎.aff”.</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="447"/>
+        <location filename="../../prefDialog.ui" line="447"/>
         <source>Hunspell dictionary path:</source>
         <translation>נתיב מילון Hunspell:</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="466"/>
-        <location filename="../../pref.cpp" line="680"/>
+        <location filename="../../prefDialog.ui" line="466"/>
+        <location filename="../../pref.cpp" line="675"/>
         <source>Add dictionary...</source>
         <translation>הוספת מילון...</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="501"/>
+        <location filename="../../prefDialog.ui" line="501"/>
         <source>Files</source>
         <translation>קבצים</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="510"/>
+        <location filename="../../prefDialog.ui" line="510"/>
         <source>Start with the last opened file</source>
         <translation>להתחיל עם הקובץ האחרון שנפתח</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="534"/>
+        <location filename="../../prefDialog.ui" line="534"/>
         <source>Shortcuts</source>
         <translation>קיצורי דרך</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="553"/>
+        <location filename="../../prefDialog.ui" line="553"/>
         <source>Action</source>
         <translation>פעולה</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="558"/>
+        <location filename="../../prefDialog.ui" line="558"/>
         <source>Shortcut</source>
         <translation>קיצור דרך</translation>
     </message>
     <message>
-        <location filename="../../predDialog.ui" line="566"/>
+        <location filename="../../prefDialog.ui" line="566"/>
         <source>Default</source>
         <translation>בררת מחדל</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="361"/>
-        <location filename="../../pref.cpp" line="547"/>
+        <location filename="../../pref.cpp" line="362"/>
+        <location filename="../../pref.cpp" line="548"/>
         <source>Warning: Ambiguous shortcut detected!</source>
         <translation>אזהרה: התגלה קיצור דרך שאינו ייחודי!</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="530"/>
+        <location filename="../../pref.cpp" line="531"/>
         <source>The typed shortcut was reserved.</source>
         <translation>קיצור הדרך שהוקלד נשמר מראש.</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="648"/>
+        <location filename="../../pref.cpp" line="646"/>
         <source>Application restart is needed for changes to take effect.</source>
         <translation>יש להפעיל את היישום מחדש כדי שהשינויים ייכנסו לתוקף.</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="682"/>
+        <location filename="../../pref.cpp" line="677"/>
         <source>Hunspell Dictionary Files (*.dic)</source>
         <translation>קובצי מילון Hunspell‏ (‎*.dic)</translation>
     </message>
