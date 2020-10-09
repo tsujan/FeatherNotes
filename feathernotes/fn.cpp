@@ -1673,6 +1673,7 @@ TextEdit *FN::newWidget()
     textEdit->viewport()->setMouseTracking (true);
     textEdit->setContextMenuPolicy (Qt::CustomContextMenu);
     /* we want consistent widgets */
+    textEdit->setFont (defaultFont_); // needed when the application font changes
     textEdit->document()->setDefaultFont (defaultFont_);
 #if (QT_VERSION >= QT_VERSION_CHECK(5,11,0))
     QFontMetricsF metrics (defaultFont_);
@@ -2687,6 +2688,7 @@ void FN::textFontDialog()
         QHash<DomItem*, TextEdit*>::iterator it;
         for (it = widgets_.begin(); it != widgets_.end(); ++it)
         {
+            it.value()->setFont (defaultFont_); // needed when the application font changes
             it.value()->document()->setDefaultFont (defaultFont_);
             QTextCursor cursor = it.value()->textCursor();
             cursor.select (QTextCursor::Document);

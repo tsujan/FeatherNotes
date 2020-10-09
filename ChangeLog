@@ -9,6 +9,7 @@ V0.8.0
  * Highlight only the first 1000 replacements if there are more.
  * Added an option for starting with the last opened file.
  * Removed the option for scroll jump workaround (because it wasn't FeatherNotes' job).
+ * Prevent the editor font from changing when the application font changes.
 
 V0.7.0
 ---------
