@@ -1796,12 +1796,12 @@ csak &quot;.aff&quot;-ra végződik.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="501"/>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Fájlok</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="510"/>
         <source>Start with the last opened file</source>
-        <translation type="unfinished"></translation>
+        <translation>Indulás az utolsó megnyitott fájllal</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="534"/>
