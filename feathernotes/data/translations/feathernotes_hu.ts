@@ -125,7 +125,7 @@
     <message>
         <location filename="../../fn.ui" line="238"/>
         <source>&amp;Edit</source>
-        <translation>Sz&amp;erkesztés</translation>
+        <translation>S&amp;zerkesztés</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="257"/>
@@ -135,7 +135,7 @@
     <message>
         <location filename="../../fn.ui" line="289"/>
         <source>&amp;Tree</source>
-        <translation>E&amp;lemek</translation>
+        <translation>&amp;Elemek</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="312"/>
@@ -596,7 +596,7 @@
     <message>
         <location filename="../../fn.ui" line="923"/>
         <source>Document &amp;Font</source>
-        <translation>Doku&amp;mentum betűtípusa</translation>
+        <translation>D&amp;okumentum betűtípusa</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="937"/>
@@ -1026,12 +1026,12 @@
     <message>
         <location filename="../../fn.cpp" line="869"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been modified.&lt;/i&gt;&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;i&gt;A dokumentum módosult.&lt;/i&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;i&gt;A dokumentum módosítva lett.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="871"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been removed.&lt;/i&gt;&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;i&gt;A dokumentumot törölték.&lt;/i&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;i&gt;A dokumentum törölve lett.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="876"/>
@@ -1261,7 +1261,7 @@
     <message>
         <location filename="../../fn.cpp" line="2763"/>
         <source>These colors will be applied to new nodes.&lt;br&gt;They may or may not affect existing nodes&lt;br&gt;but document reopening is recommended.</source>
-        <translation>Ezek a színek lesznek alkalmazva az új elemekre.&lt;br&gt;Ezek vagy érintik, vagy nem érintik a meglévő elmeket,&lt;br&gt;de a dokumentum újbóli megnyitása javasolt.</translation>
+        <translation>Ezek a színek lesznek alkalmazva az új elemekre.&lt;br&gt;Ezek vagy érintik, vagy nem érintik a meglévő elemeket,&lt;br&gt;de javasolt a dokumentum újbóli megnyitása.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2766"/>
