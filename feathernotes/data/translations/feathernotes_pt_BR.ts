@@ -1796,12 +1796,12 @@ nome, mas terminando com &quot;.aff&quot;.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="501"/>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivos</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="510"/>
         <source>Start with the last opened file</source>
-        <translation type="unfinished"></translation>
+        <translation>Iniciar com o último arquivo aberto</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="534"/>
