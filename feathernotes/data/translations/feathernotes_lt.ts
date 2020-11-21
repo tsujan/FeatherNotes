@@ -14,12 +14,12 @@
     <message>
         <location filename="../../colorLabel.cpp" line="31"/>
         <source>Click to change color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Spustelėkite norėdami pakeisti spalvą.</translation>
     </message>
     <message>
         <location filename="../../colorLabel.cpp" line="53"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Pasirinkti spalvą</translation>
     </message>
 </context>
 <context>
@@ -963,23 +963,23 @@
         <location filename="../../fn.ui" line="1339"/>
         <location filename="../../fn.ui" line="1342"/>
         <source>Check Spelling</source>
-        <translation type="unfinished"></translation>
+        <translation>Tikrinti rašybą</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1345"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1350"/>
         <source>Document &amp;Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Dokumentų &amp;spalvos</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1358"/>
         <location filename="../../fn.ui" line="1361"/>
         <source>Paste Date and Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Įdėti datą ir laiką</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2463"/>
@@ -1266,12 +1266,12 @@
     <message>
         <location filename="../../fn.cpp" line="2766"/>
         <source>Background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Fono spalva:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2772"/>
         <source>Text color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Teksto spalva:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3480"/>
@@ -1385,14 +1385,16 @@
     <message>
         <location filename="../../fn.cpp" line="5065"/>
         <source>Question</source>
-        <translation type="unfinished"></translation>
+        <translation>Klausimas</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5066"/>
         <source>The file already exists.
 Do you want to replace it?
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Failas jau yra.
+Ar norite jį pakeisti?
+</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5239"/>
@@ -1469,12 +1471,12 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="5623"/>
         <source>You need to add a Hunspell dictionary.</source>
-        <translation type="unfinished"></translation>
+        <translation>Turite pridėti Hunspell žodyną.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5628"/>
         <source>The Hunspell dictionary does not exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nėra Hunspell žodyno.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5636"/>
@@ -1755,7 +1757,7 @@ Takes effect after closing this dialog.</source>
     <message>
         <location filename="../../prefDialog.ui" line="369"/>
         <source>Date and time format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Datos ir laiko formatas:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="393"/>
@@ -1783,18 +1785,18 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../prefDialog.ui" line="447"/>
         <source>Hunspell dictionary path:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hunspell žodyno kelias:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="466"/>
         <location filename="../../pref.cpp" line="675"/>
         <source>Add dictionary...</source>
-        <translation type="unfinished"></translation>
+        <translation>Pridėti žodyną...</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="501"/>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Failai</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="510"/>
@@ -1840,7 +1842,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../pref.cpp" line="677"/>
         <source>Hunspell Dictionary Files (*.dic)</source>
-        <translation type="unfinished"></translation>
+        <translation>Hunspell žodyno failai (*.dic)</translation>
     </message>
 </context>
 <context>
@@ -1848,37 +1850,37 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../spellDialog.ui" line="25"/>
         <source>Unknown word:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nežinomas žodis:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="51"/>
         <source>Add To Dictionary</source>
-        <translation type="unfinished"></translation>
+        <translation>Pridėti į žodyną</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="62"/>
         <source>Replace with:</source>
-        <translation type="unfinished">Kuo pakeisti:</translation>
+        <translation>Kuo pakeisti:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="87"/>
         <source>Ignore Once</source>
-        <translation type="unfinished"></translation>
+        <translation>Nepaisyti vieną kartą</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="100"/>
         <source>Ignore All</source>
-        <translation type="unfinished"></translation>
+        <translation>Nepaisyti visų</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="129"/>
         <source>Correct Once</source>
-        <translation type="unfinished"></translation>
+        <translation>Ištaisyti vieną kartą</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="142"/>
         <source>Correct All</source>
-        <translation type="unfinished"></translation>
+        <translation>Ištaisyti visus</translation>
     </message>
 </context>
 <context>
