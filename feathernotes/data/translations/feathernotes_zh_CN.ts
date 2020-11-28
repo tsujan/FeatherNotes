@@ -14,12 +14,12 @@
     <message>
         <location filename="../../colorLabel.cpp" line="31"/>
         <source>Click to change color.</source>
-        <translation type="unfinished"></translation>
+        <translation>点击以更改颜色。</translation>
     </message>
     <message>
         <location filename="../../colorLabel.cpp" line="53"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>选择颜色</translation>
     </message>
 </context>
 <context>
@@ -963,23 +963,23 @@
         <location filename="../../fn.ui" line="1339"/>
         <location filename="../../fn.ui" line="1342"/>
         <source>Check Spelling</source>
-        <translation type="unfinished"></translation>
+        <translation>拼写检查</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1345"/>
         <source>F2</source>
-        <translation type="unfinished">F2</translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1350"/>
         <source>Document &amp;Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>文档颜色(&amp;C)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1358"/>
         <location filename="../../fn.ui" line="1361"/>
         <source>Paste Date and Time</source>
-        <translation type="unfinished"></translation>
+        <translation>粘贴日期和时间</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2463"/>
@@ -1256,27 +1256,27 @@
     <message>
         <location filename="../../fn.cpp" line="2753"/>
         <source>Set Document Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>设置文档颜色</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2763"/>
         <source>These colors will be applied to new nodes.&lt;br&gt;They may or may not affect existing nodes&lt;br&gt;but document reopening is recommended.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">这些颜色将会应用于新的节点。&lt;br&gt;它们不一定会影响现有节点&lt;br&gt;建议重新打开文档。</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2766"/>
         <source>Background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>背景色：</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2772"/>
         <source>Text color:</source>
-        <translation type="unfinished"></translation>
+        <translation>文本颜色：</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3480"/>
         <source>The first 1000 replacements are highlighted.</source>
-        <translation type="unfinished"></translation>
+        <translation>前 1000 个替换被高亮出来了。</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3737"/>
@@ -1385,14 +1385,16 @@
     <message>
         <location filename="../../fn.cpp" line="5065"/>
         <source>Question</source>
-        <translation type="unfinished"></translation>
+        <translation>问题</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5066"/>
         <source>The file already exists.
 Do you want to replace it?
 </source>
-        <translation type="unfinished"></translation>
+        <translation>文件已存在。
+您想要替换它吗？
+</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5239"/>
@@ -1464,34 +1466,34 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="5601"/>
         <source>See Preferences → Text → Spell Checking!</source>
-        <translation type="unfinished"></translation>
+        <translation>见 偏好设置 → 文本 → 拼写检查！</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5623"/>
         <source>You need to add a Hunspell dictionary.</source>
-        <translation type="unfinished"></translation>
+        <translation>您需要添加一个 Hunspell 词典。</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5628"/>
         <source>The Hunspell dictionary does not exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hunspell 词典不存在。</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5636"/>
         <source>The Hunspell dictionary is not accompanied by an affix file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hunspell 词典没有附带词缀文件。</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5654"/>
         <location filename="../../fn.cpp" line="5669"/>
         <location filename="../../fn.cpp" line="5681"/>
         <source>No misspelling from text cursor.</source>
-        <translation type="unfinished"></translation>
+        <translation>文本光标处不显示拼写错误。</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5692"/>
         <source>Spell Checking</source>
-        <translation type="unfinished"></translation>
+        <translation>拼写检查</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5502"/>
@@ -1518,7 +1520,7 @@ Do you want to replace it?
     <message>
         <location filename="../../prefDialog.ui" line="14"/>
         <source>Preferences</source>
-        <translation>首选项</translation>
+        <translation>偏好设置</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="27"/>
@@ -1743,12 +1745,15 @@ the user is typing and under proper circumstances.</source>
 Leave empty for the system default.
 
 Takes effect after closing this dialog.</source>
-        <translation type="unfinished"></translation>
+        <translation>用于粘贴日期和时间。
+留空以使用系统默认值。
+
+关闭此对话框后生效。</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="369"/>
         <source>Date and time format:</source>
-        <translation type="unfinished"></translation>
+        <translation>日期和时间格式：</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="393"/>
@@ -1763,7 +1768,7 @@ Takes effect after closing this dialog.</source>
     <message>
         <location filename="../../prefDialog.ui" line="434"/>
         <source>Spell Checking</source>
-        <translation type="unfinished"></translation>
+        <translation>拼写检查</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="442"/>
@@ -1771,28 +1776,29 @@ Takes effect after closing this dialog.</source>
         <source>A Hunspell dictionary has a name that ends with &quot;.dic&quot;
 and should be alongside an affix file with the same
 name but ending with &quot;.aff&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>一个 Hunspell 词典的名称以 &quot;.dic&quot; 结尾
+并且应当伴有一个以 &quot;.aff&quot; 结尾的同名 affix 文件。</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="447"/>
         <source>Hunspell dictionary path:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hunspell 词典路径：</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="466"/>
         <location filename="../../pref.cpp" line="675"/>
         <source>Add dictionary...</source>
-        <translation type="unfinished"></translation>
+        <translation>添加词典...</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="501"/>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>文件</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="510"/>
         <source>Start with the last opened file</source>
-        <translation type="unfinished"></translation>
+        <translation>启动时打开上一个文件</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="534"/>
@@ -1833,7 +1839,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../pref.cpp" line="677"/>
         <source>Hunspell Dictionary Files (*.dic)</source>
-        <translation type="unfinished"></translation>
+        <translation>Hunspell 词典文件 (*.dic)</translation>
     </message>
 </context>
 <context>
@@ -1841,37 +1847,37 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../spellDialog.ui" line="25"/>
         <source>Unknown word:</source>
-        <translation type="unfinished"></translation>
+        <translation>未知词：</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="51"/>
         <source>Add To Dictionary</source>
-        <translation type="unfinished"></translation>
+        <translation>添加到词典</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="62"/>
         <source>Replace with:</source>
-        <translation type="unfinished">替换为:</translation>
+        <translation>替换为:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="87"/>
         <source>Ignore Once</source>
-        <translation type="unfinished"></translation>
+        <translation>忽略一次</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="100"/>
         <source>Ignore All</source>
-        <translation type="unfinished"></translation>
+        <translation>全部忽略</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="129"/>
         <source>Correct Once</source>
-        <translation type="unfinished"></translation>
+        <translation>订正一次</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="142"/>
         <source>Correct All</source>
-        <translation type="unfinished"></translation>
+        <translation>全部订正</translation>
     </message>
 </context>
 <context>
