@@ -14,12 +14,12 @@
     <message>
         <location filename="../../colorLabel.cpp" line="31"/>
         <source>Click to change color.</source>
-        <translation type="unfinished"></translation>
+        <translation>色を変更するにはクリックします。</translation>
     </message>
     <message>
         <location filename="../../colorLabel.cpp" line="53"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>色の選択</translation>
     </message>
 </context>
 <context>
@@ -963,23 +963,23 @@
         <location filename="../../fn.ui" line="1339"/>
         <location filename="../../fn.ui" line="1342"/>
         <source>Check Spelling</source>
-        <translation type="unfinished"></translation>
+        <translation>スペルのチェック</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1345"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1350"/>
         <source>Document &amp;Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>文書の色(&amp;C)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1358"/>
         <location filename="../../fn.ui" line="1361"/>
         <source>Paste Date and Time</source>
-        <translation type="unfinished"></translation>
+        <translation>日付と時刻の貼り付け</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2463"/>
@@ -995,13 +995,13 @@
     <message>
         <location filename="../../fn.cpp" line="783"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;New note?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;新ノート？&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="784"/>
         <source>&lt;center&gt;&lt;i&gt;Do you really want to leave this document&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;and create an empty one?&lt;/i&gt;&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;i&gt;このドキュメントを本当に破棄して、&lt;/i&gt;&lt;/center&gt;
+        <translation>&lt;center&gt;&lt;i&gt;この文書を本当に破棄して、&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;空のものを作成しますか？&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
@@ -1026,12 +1026,12 @@
     <message>
         <location filename="../../fn.cpp" line="869"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been modified.&lt;/i&gt;&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;i&gt;ドキュメントが変更されました。&lt;/i&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;i&gt;文書が変更されました。&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="871"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been removed.&lt;/i&gt;&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;i&gt;ドキュメントは削除されました。&lt;/i&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;i&gt;文書は削除されました。&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="876"/>
@@ -1197,7 +1197,7 @@
     <message>
         <location filename="../../fn.cpp" line="823"/>
         <source>New Node</source>
-        <translation></translation>
+        <translation>新ノード</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1188"/>
@@ -1220,12 +1220,12 @@
     <message>
         <location filename="../../fn.cpp" line="2162"/>
         <source>Select Text Color</source>
-        <translation type="unfinished"></translation>
+        <translation>文字色の選択</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2184"/>
         <source>Select Background Color</source>
-        <translation type="unfinished"></translation>
+        <translation>背景色の選択</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2294"/>
@@ -1246,37 +1246,37 @@
     <message>
         <location filename="../../fn.cpp" line="2675"/>
         <source>Select Document Font</source>
-        <translation type="unfinished"></translation>
+        <translation>文書のフォントを選択</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2738"/>
         <source>Select Node Font</source>
-        <translation type="unfinished"></translation>
+        <translation>ノードのフォントを選択</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2753"/>
         <source>Set Document Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>文書の色を設定</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2763"/>
         <source>These colors will be applied to new nodes.&lt;br&gt;They may or may not affect existing nodes&lt;br&gt;but document reopening is recommended.</source>
-        <translation type="unfinished"></translation>
+        <translation>これらの色は新しいノードに適用されます。&lt;br&gt;既存のノードに影響する場合としない場合があり、&lt;br&gt;文書を再度開くことをお勧めします。</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2766"/>
         <source>Background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>背景の色:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2772"/>
         <source>Text color:</source>
-        <translation type="unfinished"></translation>
+        <translation>文字の色:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3480"/>
         <source>The first 1000 replacements are highlighted.</source>
-        <translation type="unfinished"></translation>
+        <translation>最初の 1000 個の置換が強調表示されます。</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3737"/>
@@ -1303,7 +1303,7 @@
     <message>
         <location filename="../../fn.cpp" line="4083"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>エラー</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4084"/>
@@ -1385,14 +1385,16 @@
     <message>
         <location filename="../../fn.cpp" line="5065"/>
         <source>Question</source>
-        <translation type="unfinished"></translation>
+        <translation>質問</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5066"/>
         <source>The file already exists.
 Do you want to replace it?
 </source>
-        <translation type="unfinished"></translation>
+        <translation>ファイルは既に存在しています。
+置き換えますか？
+</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5239"/>
@@ -1438,7 +1440,7 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="5499"/>
         <source>A lightweight notes manager</source>
-        <translation type="unfinished">A lightweight notes manager</translation>
+        <translation type="unfinished">軽量なメモ管理</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5500"/>
@@ -1464,34 +1466,34 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="5601"/>
         <source>See Preferences → Text → Spell Checking!</source>
-        <translation type="unfinished"></translation>
+        <translation>設定 → テキスト → スペルのチェック を参照！</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5623"/>
         <source>You need to add a Hunspell dictionary.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hunspell 辞書を追加して下さい。</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5628"/>
         <source>The Hunspell dictionary does not exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hunspell 辞書が存在しません。</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5636"/>
         <source>The Hunspell dictionary is not accompanied by an affix file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hunspell 辞書に付属ファイルがありません。</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5654"/>
         <location filename="../../fn.cpp" line="5669"/>
         <location filename="../../fn.cpp" line="5681"/>
         <source>No misspelling from text cursor.</source>
-        <translation type="unfinished"></translation>
+        <translation>テキストのカーソル位置から、スペルミスはありません。</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5692"/>
         <source>Spell Checking</source>
-        <translation type="unfinished"></translation>
+        <translation>スペルチェック</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5502"/>
@@ -1560,15 +1562,15 @@ Uncheck to set a fixed size!</source>
 this dialog and also on exit.
 
 Uncheck for a width ratio of 170/530.</source>
-        <translation type="unfinished">Saves tree width after closing
-this dialog and also on exit.
+        <translation>このダイアログボックスを閉じた後と
+終了時に、ツリーの幅を保存します。
 
-Uncheck for a width ratio of 170/530.</translation>
+チェックしないと幅の比率は 170/530 です。</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="103"/>
         <source>Remember &amp;tree width</source>
-        <translation type="unfinished">Remember &amp;tree width</translation>
+        <translation>ツリーの幅を記憶する(&amp;T)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="110"/>
@@ -1578,17 +1580,17 @@ this dialog and also on exit.
 (This may not work correctly
 under GTK+ DE&apos;s like Unity
 and Cinnamon.)</source>
-        <translation type="unfinished">Saves position after closing
-this dialog and also on exit.
+        <translation>このダイアログを閉じた後、および
+終了時に位置を保存します。
 
-(This may not work correctly
-under GTK+ DE&apos;s like Unity
-and Cinnamon.)</translation>
+(Unity や Cinnamon のような
+GTK+デスクトップ環境 では正しく
+動作しない場合があります。)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="118"/>
         <source>Save &amp;position</source>
-        <translation type="unfinished">Save &amp;position</translation>
+        <translation>位置を保存する(&amp;P)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="125"/>
@@ -1597,23 +1599,23 @@ If checked, the titlebar close button iconifies
 the window to the systray instead of quitting.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation type="unfinished">Decides whether a systray icon should be used.
-If checked, the titlebar close button iconifies
-the window to the systray instead of quitting.
+        <translation>システムトレイアイコンを使用するかどうかを決定します。
+チェックすると、タイトルバーの閉じるボタンは、終了する代わりに
+ウィンドウをシステムトレイにアイコン化します。
 
-Needs restarting of FeatherNotes to take effect.</translation>
+有効にするには FeatherNotes の再起動が必要です。</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="132"/>
         <source>Add to s&amp;ystray</source>
-        <translation type="unfinished">Add to s&amp;ystray</translation>
+        <translation>システムトレイに追加する(&amp;Y)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="157"/>
         <source>The command line option --tray
 can be used instead of this.</source>
-        <translation type="unfinished">The command line option --tray
-can be used instead of this.</translation>
+        <translation>この代わりにコマンドライン
+オプション --tray を使用できます。</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="161"/>
@@ -1623,19 +1625,18 @@ can be used instead of this.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="170"/>
         <source>Merge the tree view with its surroundings?</source>
-        <translation type="unfinished">Merge the tree view with its surroundings?</translation>
+        <translation type="unfinished">ツリー表示を周囲と統合するか？</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="173"/>
         <source>Transparent t&amp;ree view</source>
-        <translation type="unfinished">Transparent t&amp;ree view</translation>
+        <translation>透過的なツリー表示(&amp;R)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="180"/>
         <source>By default, the active widget style determines
 the size of toolbar icons.</source>
-        <translation type="unfinished">By default, the active widget style determines
-the size of toolbar icons.</translation>
+        <translation>既定では、アクティブなウィジェットスタイルによってツールバーアイコンのサイズが決まります。</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="184"/>
@@ -1657,19 +1658,19 @@ a menu button appears on the toolbar.</source>
     <message>
         <location filename="../../prefDialog.ui" line="202"/>
         <source>Do not show &amp;menubar</source>
-        <translation type="unfinished">Do not show &amp;menubar</translation>
+        <translation>メニューバーを表示しない(&amp;M)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="209"/>
         <source>Check this under Enlightenment (or, probably, another DE)
 to use the systray icon more easily!</source>
-        <translation type="unfinished">Check this under Enlightenment (or, probably, another DE)
-to use the systray icon more easily!</translation>
+        <translation>システムトレイのアイコンをより簡単に使用するために、Enlightenment
+(または、おそらく別のデスクトップ環境)ではこれをチェックして下さい！</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="213"/>
         <source>Running &amp;under Enlightenment?</source>
-        <translation>Enlightenment 環境で実行していますか？</translation>
+        <translation>Enlightenment 環境で実行していますか？(&amp;U)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="238"/>
@@ -1681,19 +1682,19 @@ if it is on the left or right, the X-coordinate should be set.
 
 After choosing the coordinate shifts, put the window in a proper
 position and then restart FeatherNotes!</source>
-        <translation type="unfinished">Some DE&apos;s (like Enlightenment) may not report the window position
-correctly. If that is the case, you could try to fix the problem here.
+        <translation>デスクトップ環境の中には(Enlightenment のように)ウィンドウの位置を
+正しく報告しないものがあります。その場合は、ここで問題を修正してみて下さい。
 
-If the panel is on the bottom or top, the Y-coordinate should be set;
-if it is on the left or right, the X-coordinate should be set.
+パネルが下または上にある場合は、Y 座標を設定します。左または右にある場合は、
+X 座標を設定します。
 
-After choosing the coordinate shifts, put the window in a proper
-position and then restart FeatherNotes!</translation>
+座標のシフトを選択したら、ウィンドウを適切な位置に配置してから、
+FeatherNotes を再起動します！</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="248"/>
         <source>Shifts (X × Y): </source>
-        <translation type="unfinished">Shifts (X × Y): </translation>
+        <translation>シフト (X × Y): </translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="314"/>
@@ -1703,38 +1704,40 @@ position and then restart FeatherNotes!</translation>
     <message>
         <location filename="../../prefDialog.ui" line="323"/>
         <source>&amp;Wrap lines by default</source>
-        <translation type="unfinished">&amp;Wrap lines by default</translation>
+        <translation>既定で、行を折り返す(&amp;W)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="330"/>
         <source>Auto-&amp;indent by default</source>
-        <translation type="unfinished">Auto-&amp;indent by default</translation>
+        <translation>既定で、自動的にインデントする(&amp;I)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="337"/>
         <source>This covers parentheses, braces, brackets and quotes.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation type="unfinished">This covers parentheses, braces, brackets and quotes.
+        <translation>これには括弧、中括弧、山括弧、引用符が含まれます。
 
-Needs restarting of FeatherNotes to take effect.</translation>
+有効にするには FeatherNotes の再起動が必要です。</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="342"/>
         <source>Auto-&amp;bracket</source>
-        <translation type="unfinished">Auto-&amp;bracket</translation>
+        <translation>自動でカッコを閉じる(&amp;B)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="349"/>
         <source>A triple period is replaced with an ellipsis,
 a double hyphen with a long dash, etc. while
 the user is typing and under proper circumstances.</source>
-        <translation type="unfinished"></translation>
+        <translation>3 個のピリオドは、ユーザーが入力している間や
+適切な状況で、省略記号や長いダッシュの付いた
+ダブルハイフン等に置換されます。</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="354"/>
         <source>&amp;Replace some characters while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>入力中にいくつかの文字を置換する(&amp;R)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="363"/>
@@ -1743,27 +1746,30 @@ the user is typing and under proper circumstances.</source>
 Leave empty for the system default.
 
 Takes effect after closing this dialog.</source>
-        <translation type="unfinished"></translation>
+        <translation>日付と時刻の貼り付けに使用されます。
+システムの既定値の場合は空のままにします。
+
+このダイアログを閉じると有効になります。</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="369"/>
         <source>Date and time format:</source>
-        <translation type="unfinished"></translation>
+        <translation>日付と時刻の形式:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="393"/>
         <source>&amp;Auto-save every</source>
-        <translation type="unfinished">&amp;Auto-save every</translation>
+        <translation>自動保存(&amp;A) 毎</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="400"/>
         <source> minute(s)</source>
-        <translation></translation>
+        <translation> 分</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="434"/>
         <source>Spell Checking</source>
-        <translation type="unfinished"></translation>
+        <translation>スペルチェック</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="442"/>
@@ -1771,33 +1777,35 @@ Takes effect after closing this dialog.</source>
         <source>A Hunspell dictionary has a name that ends with &quot;.dic&quot;
 and should be alongside an affix file with the same
 name but ending with &quot;.aff&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hunspell 辞書は、&quot;.dic&quot; で終わる名前と
+&quot;.aff&quot; で終わる同じ名前の付属ファイルを
+一緒にする必要があります。</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="447"/>
         <source>Hunspell dictionary path:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hunspell 辞書のパス:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="466"/>
         <location filename="../../pref.cpp" line="675"/>
         <source>Add dictionary...</source>
-        <translation type="unfinished"></translation>
+        <translation>辞書を追加する...</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="501"/>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>ファイル</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="510"/>
         <source>Start with the last opened file</source>
-        <translation type="unfinished"></translation>
+        <translation>最後に開いたファイルで開始する</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="534"/>
         <source>Shortcuts</source>
-        <translation type="unfinished">Shortcuts</translation>
+        <translation>ショートカット</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="553"/>
@@ -1807,7 +1815,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../prefDialog.ui" line="558"/>
         <source>Shortcut</source>
-        <translation type="unfinished">Shortcut</translation>
+        <translation>ショートカット</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="566"/>
@@ -1818,22 +1826,22 @@ name but ending with &quot;.aff&quot;.</source>
         <location filename="../../pref.cpp" line="362"/>
         <location filename="../../pref.cpp" line="548"/>
         <source>Warning: Ambiguous shortcut detected!</source>
-        <translation type="unfinished">Warning: Ambiguous shortcut detected!</translation>
+        <translation>警告: あいまいなショートカットが検出されました！</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="531"/>
         <source>The typed shortcut was reserved.</source>
-        <translation type="unfinished">The typed shortcut was reserved.</translation>
+        <translation>入力されたショートカットは予約されています。</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="646"/>
         <source>Application restart is needed for changes to take effect.</source>
-        <translation type="unfinished">Application restart is needed for changes to take effect.</translation>
+        <translation>変更を有効にするにはアプリケーションの再起動が必要です。</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="677"/>
         <source>Hunspell Dictionary Files (*.dic)</source>
-        <translation type="unfinished"></translation>
+        <translation>Hunspell 辞書ファイル (*.dic)</translation>
     </message>
 </context>
 <context>
@@ -1841,37 +1849,37 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../spellDialog.ui" line="25"/>
         <source>Unknown word:</source>
-        <translation type="unfinished"></translation>
+        <translation>不明な単語:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="51"/>
         <source>Add To Dictionary</source>
-        <translation type="unfinished"></translation>
+        <translation>辞書に追加</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="62"/>
         <source>Replace with:</source>
-        <translation type="unfinished">置換:</translation>
+        <translation>置換後の単語:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="87"/>
         <source>Ignore Once</source>
-        <translation type="unfinished"></translation>
+        <translation>1 回無視</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="100"/>
         <source>Ignore All</source>
-        <translation type="unfinished"></translation>
+        <translation>すべて無視</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="129"/>
         <source>Correct Once</source>
-        <translation type="unfinished"></translation>
+        <translation>1 回置換</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="142"/>
         <source>Correct All</source>
-        <translation type="unfinished"></translation>
+        <translation>すべて置換</translation>
     </message>
 </context>
 <context>
@@ -1888,7 +1896,7 @@ name but ending with &quot;.aff&quot;.</source>
         <location filename="../../domitem.cpp" line="100"/>
         <location filename="../../domitem.cpp" line="137"/>
         <source>New Node</source>
-        <translation></translation>
+        <translation>新しいノード</translation>
     </message>
 </context>
 </TS>
