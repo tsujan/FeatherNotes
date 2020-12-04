@@ -171,7 +171,7 @@
     <message>
         <location filename="../../fn.ui" line="463"/>
         <source>Replacing text</source>
-        <translation>置換する文字</translation>
+        <translation>この文字へ置換</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="473"/>
@@ -596,7 +596,7 @@
     <message>
         <location filename="../../fn.ui" line="923"/>
         <source>Document &amp;Font</source>
-        <translation></translation>
+        <translation>文書のフォント(&amp;F)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="937"/>
@@ -686,7 +686,7 @@
     <message>
         <location filename="../../fn.ui" line="1042"/>
         <source>C&amp;enter</source>
-        <translation></translation>
+        <translation>中央揃え(&amp;C)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1045"/>
@@ -701,7 +701,7 @@
     <message>
         <location filename="../../fn.ui" line="1059"/>
         <source>&amp;Right</source>
-        <translation></translation>
+        <translation>右揃え(&amp;R)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1062"/>
@@ -776,7 +776,7 @@
     <message>
         <location filename="../../fn.ui" line="1140"/>
         <source>h&amp;2</source>
-        <translation></translation>
+        <translation>H&amp;2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1143"/>
@@ -791,7 +791,7 @@
     <message>
         <location filename="../../fn.ui" line="1154"/>
         <source>h&amp;1</source>
-        <translation></translation>
+        <translation>H&amp;1</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1157"/>
@@ -806,7 +806,7 @@
     <message>
         <location filename="../../fn.ui" line="1168"/>
         <source>h&amp;3</source>
-        <translation></translation>
+        <translation>H&amp;3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1171"/>
@@ -916,7 +916,7 @@
     <message>
         <location filename="../../fn.ui" line="1282"/>
         <source>Export &amp;HTML</source>
-        <translation></translation>
+        <translation>&amp;HTML へエクスポート</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1287"/>
@@ -963,7 +963,7 @@
         <location filename="../../fn.ui" line="1339"/>
         <location filename="../../fn.ui" line="1342"/>
         <source>Check Spelling</source>
-        <translation>スペルのチェック</translation>
+        <translation>スペルチェック</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1345"/>
@@ -1016,7 +1016,7 @@
         <location filename="../../fn.cpp" line="2299"/>
         <location filename="../../fn.cpp" line="4089"/>
         <source>No</source>
-        <translation></translation>
+        <translation>いいえ</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="867"/>
@@ -1026,7 +1026,7 @@
     <message>
         <location filename="../../fn.cpp" line="869"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been modified.&lt;/i&gt;&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;i&gt;文書が変更されました。&lt;/i&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;i&gt;文書が変更されています。&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="871"/>
@@ -1056,7 +1056,7 @@
     <message>
         <location filename="../../fn.cpp" line="1186"/>
         <source>Open file...</source>
-        <translation></translation>
+        <translation>ファイルを開く...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1326"/>
@@ -1147,22 +1147,22 @@
     <message>
         <location filename="../../fn.cpp" line="3470"/>
         <source>No Replacement</source>
-        <translation>置換されません</translation>
+        <translation>何も置換されません</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3472"/>
         <source>One Replacement</source>
-        <translation>置換 1 個</translation>
+        <translation>1 個置換しました</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3475"/>
         <source>%1 Replacements</source>
-        <translation>置換 %1 個</translation>
+        <translation>%1 個置換しました</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3652"/>
         <source>Insert Link</source>
-        <translation></translation>
+        <translation>リンクの挿入</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2471"/>
@@ -1174,19 +1174,19 @@
         <location filename="../../fn.cpp" line="2475"/>
         <location filename="../../fn.cpp" line="3734"/>
         <source>Open image</source>
-        <translation></translation>
+        <translation>画像を開く</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3742"/>
         <location filename="../../fn.cpp" line="3903"/>
         <source>Scaling percentage</source>
-        <translation>拡大率</translation>
+        <translation>倍率</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2493"/>
         <location filename="../../fn.cpp" line="3851"/>
         <source>Open Image...</source>
-        <translation></translation>
+        <translation>画像を開く...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="612"/>
@@ -1330,7 +1330,7 @@
     <message>
         <location filename="../../fn.cpp" line="4164"/>
         <source>Insert Table</source>
-        <translation></translation>
+        <translation>表の挿入</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4170"/>
@@ -1350,12 +1350,12 @@
     <message>
         <location filename="../../fn.cpp" line="4983"/>
         <source>Export HTML</source>
-        <translation></translation>
+        <translation>HTML へエクスポート</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4988"/>
         <source>Export:</source>
-        <translation></translation>
+        <translation>エクスポート:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4989"/>
@@ -1409,17 +1409,17 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="5262"/>
         <source>Set Password</source>
-        <translation></translation>
+        <translation>パスワードの設定</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5270"/>
         <source>Type password</source>
-        <translation></translation>
+        <translation>パスワードを入力します</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5275"/>
         <source>Retype password</source>
-        <translation>パスワードの再入力</translation>
+        <translation>パスワードを再入力します</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5350"/>
@@ -1430,7 +1430,7 @@ Do you want to replace it?
         <location filename="../../fn.cpp" line="5382"/>
         <location filename="../../fn.cpp" line="5390"/>
         <source>Enter Password</source>
-        <translation></translation>
+        <translation>パスワードの入力</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5456"/>
@@ -1450,7 +1450,7 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="5501"/>
         <source>Author</source>
-        <translation></translation>
+        <translation>作者</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5503"/>
@@ -1466,7 +1466,7 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="5601"/>
         <source>See Preferences → Text → Spell Checking!</source>
-        <translation>設定 → テキスト → スペルのチェック を参照！</translation>
+        <translation>[設定] → [テキスト] → [スペルチェック] を見て下さい！</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5623"/>
@@ -1498,7 +1498,7 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="5502"/>
         <source>aka.</source>
-        <translation></translation>
+        <translation>別名</translation>
     </message>
 </context>
 <context>
@@ -1810,7 +1810,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../prefDialog.ui" line="553"/>
         <source>Action</source>
-        <translation></translation>
+        <translation>動作</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="558"/>
@@ -1820,7 +1820,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../prefDialog.ui" line="566"/>
         <source>Default</source>
-        <translation></translation>
+        <translation>既定値</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="362"/>
@@ -1887,7 +1887,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../helpDialog.ui" line="14"/>
         <source>Help</source>
-        <translation></translation>
+        <translation>ヘルプ</translation>
     </message>
 </context>
 <context>
@@ -1896,7 +1896,7 @@ name but ending with &quot;.aff&quot;.</source>
         <location filename="../../domitem.cpp" line="100"/>
         <location filename="../../domitem.cpp" line="137"/>
         <source>New Node</source>
-        <translation>新しいノード</translation>
+        <translation>新ノード</translation>
     </message>
 </context>
 </TS>
