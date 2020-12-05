@@ -1664,8 +1664,8 @@ a menu button appears on the toolbar.</source>
         <location filename="../../prefDialog.ui" line="209"/>
         <source>Check this under Enlightenment (or, probably, another DE)
 to use the systray icon more easily!</source>
-        <translation>システムトレイのアイコンをより簡単に使用するために、Enlightenment
-(または、おそらく別のデスクトップ環境)ではこれをチェックして下さい！</translation>
+        <translation>Enlightenment
+(または、おそらく別のデスクトップ環境)では、システムトレイのアイコンを使いやすくするためにこれをチェックして下さい！</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="213"/>
