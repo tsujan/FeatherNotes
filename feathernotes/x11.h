@@ -18,16 +18,19 @@
 #ifndef X11_H
 #define X11_H
 
-#if defined Q_WS_X11 || defined Q_OS_LINUX || defined Q_OS_OPENBSD || defined Q_OS_NETBSD || defined Q_OS_HURD
+/*
+NOTE: This header should be included only if HAS_X11 is true,
+      which means that WITHOUT_X11 isn't used with compilation.
+
+      Moreover, the following functions should be called only if
+      FeatherNotes is running under X11.
+*/
+
 #include <X11/Xlib.h>
-#endif
 
 namespace FeatherNotes {
 
-#if defined Q_WS_X11 || defined Q_OS_LINUX || defined Q_OS_OPENBSD || defined Q_OS_NETBSD || defined Q_OS_HURD
 long fromDesktop();
-#endif
-
 long onWhichDesktop (Window w);
 void moveToCurrentDesktop (Window w);
 

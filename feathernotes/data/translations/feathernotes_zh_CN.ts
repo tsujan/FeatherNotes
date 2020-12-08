@@ -1786,7 +1786,7 @@ name but ending with &quot;.aff&quot;.</source>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="466"/>
-        <location filename="../../pref.cpp" line="675"/>
+        <location filename="../../pref.cpp" line="684"/>
         <source>Add dictionary...</source>
         <translation>添加词典...</translation>
     </message>
@@ -1821,23 +1821,23 @@ name but ending with &quot;.aff&quot;.</source>
         <translation>默认</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="362"/>
-        <location filename="../../pref.cpp" line="548"/>
+        <location filename="../../pref.cpp" line="371"/>
+        <location filename="../../pref.cpp" line="557"/>
         <source>Warning: Ambiguous shortcut detected!</source>
         <translation>警告：检测到不明确的快捷键！</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="531"/>
+        <location filename="../../pref.cpp" line="540"/>
         <source>The typed shortcut was reserved.</source>
         <translation>已保留键入的快捷键。</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="646"/>
+        <location filename="../../pref.cpp" line="655"/>
         <source>Application restart is needed for changes to take effect.</source>
         <translation>要使更改生效，需要重新启动应用程序。</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="677"/>
+        <location filename="../../pref.cpp" line="686"/>
         <source>Hunspell Dictionary Files (*.dic)</source>
         <translation>Hunspell 词典文件 (*.dic)</translation>
     </message>

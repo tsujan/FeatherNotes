@@ -40,14 +40,16 @@ FNKeySequenceEdit::FNKeySequenceEdit (QWidget *parent) : QKeySequenceEdit (paren
 void FNKeySequenceEdit::keyPressEvent (QKeyEvent *event)
 { // also a workaround for a Qt bug that makes Meta a non-modifier
     clear(); // no multiple shortcuts
+    int k = event->key();
+    if ((event->modifiers() != Qt::NoModifier && event->modifiers() != Qt::KeypadModifier))
+    {
+        if (k == Qt::Key_Super_L || k == Qt::Key_Super_R)
+            return;
+    }
     /* don't create a shortcut without modifier because
        this is a text editor but make exceptions for Fx keys */
-    int k = event->key();
-    if ((k < Qt::Key_F1 || k > Qt::Key_F35)
-        && (event->modifiers() == Qt::NoModifier || event->modifiers() == Qt::KeypadModifier))
-    {
+    else if (k < Qt::Key_F1 || k > Qt::Key_F35)
         return;
-    }
     QKeySequenceEdit::keyPressEvent (event);
 }
 /*************************/
@@ -63,14 +65,21 @@ QWidget* Delegate::createEditor (QWidget *parent,
 /*************************/
 bool Delegate::eventFilter (QObject *object, QEvent *event)
 {
-    QWidget *editor = qobject_cast<QWidget*>(object);
+    FNKeySequenceEdit *editor = qobject_cast<FNKeySequenceEdit*>(object);
     if (editor && event->type() == QEvent::KeyPress)
     {
-        int k = static_cast<QKeyEvent *>(event)->key();
+        QKeyEvent *ke = static_cast<QKeyEvent *>(event);
+        int k = ke->key();
         if (k == Qt::Key_Return || k == Qt::Key_Enter)
         {
             emit QAbstractItemDelegate::commitData (editor);
             emit QAbstractItemDelegate::closeEditor (editor);
+            return true;
+        }
+        /* treat Tab and Backtab like other keys */
+        if (k == Qt::Key_Tab || k ==  Qt::Key_Backtab)
+        {
+            editor->pressKey (ke);
             return true;
         }
     }

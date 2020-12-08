@@ -1781,7 +1781,7 @@ name but ending with &quot;.aff&quot;.</source>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="466"/>
-        <location filename="../../pref.cpp" line="675"/>
+        <location filename="../../pref.cpp" line="684"/>
         <source>Add dictionary...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1816,23 +1816,23 @@ name but ending with &quot;.aff&quot;.</source>
         <translation>Standard</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="362"/>
-        <location filename="../../pref.cpp" line="548"/>
+        <location filename="../../pref.cpp" line="371"/>
+        <location filename="../../pref.cpp" line="557"/>
         <source>Warning: Ambiguous shortcut detected!</source>
         <translation type="unfinished">Warnung: Mehrdeutiger Tastatur-Kurzbefehl erkannt!</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="531"/>
+        <location filename="../../pref.cpp" line="540"/>
         <source>The typed shortcut was reserved.</source>
         <translation type="unfinished">Die eingegebene Verknüpfung wurde reserviert.</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="646"/>
+        <location filename="../../pref.cpp" line="655"/>
         <source>Application restart is needed for changes to take effect.</source>
         <translation>Damit die Änderungen wirksam werden, ist ein Neustart der Anwendung erforderlich.</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="677"/>
+        <location filename="../../pref.cpp" line="686"/>
         <source>Hunspell Dictionary Files (*.dic)</source>
         <translation type="unfinished"></translation>
     </message>

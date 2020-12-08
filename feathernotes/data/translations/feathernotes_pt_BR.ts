@@ -1789,7 +1789,7 @@ nome, mas terminando com &quot;.aff&quot;.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="466"/>
-        <location filename="../../pref.cpp" line="675"/>
+        <location filename="../../pref.cpp" line="684"/>
         <source>Add dictionary...</source>
         <translation>Adicionar dicionário...</translation>
     </message>
@@ -1824,23 +1824,23 @@ nome, mas terminando com &quot;.aff&quot;.</translation>
         <translation>Padrão</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="362"/>
-        <location filename="../../pref.cpp" line="548"/>
+        <location filename="../../pref.cpp" line="371"/>
+        <location filename="../../pref.cpp" line="557"/>
         <source>Warning: Ambiguous shortcut detected!</source>
         <translation>Atenção: Atalho ambíguo detectado!</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="531"/>
+        <location filename="../../pref.cpp" line="540"/>
         <source>The typed shortcut was reserved.</source>
         <translation>O atalho digitado foi reservado.</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="646"/>
+        <location filename="../../pref.cpp" line="655"/>
         <source>Application restart is needed for changes to take effect.</source>
         <translation>A reinicialização do aplicativo é necessária para que as alterações entrem em vigor.</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="677"/>
+        <location filename="../../pref.cpp" line="686"/>
         <source>Hunspell Dictionary Files (*.dic)</source>
         <translation>Arquivos de Dicionário Hunspell (*.dic)</translation>
     </message>
