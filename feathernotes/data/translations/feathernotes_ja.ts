@@ -1036,7 +1036,7 @@
     <message>
         <location filename="../../fn.cpp" line="876"/>
         <source>Discard changes</source>
-        <translation>変更の破棄</translation>
+        <translation>変更破棄</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="877"/>
