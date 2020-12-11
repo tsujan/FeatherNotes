@@ -92,7 +92,7 @@ int main(int argc, char *argv[])
 
     QTranslator FPTranslator;
 #if defined (Q_OS_HAIKU)
-    FPTranslator.load ("feathernotes_" + lang, "/translations");
+    FPTranslator.load ("feathernotes_" + lang, qApp->applicationDirPath() + "/translations");
 #elif defined (Q_OS_WIN)
     FPTranslator.load ("feathernotes_" + lang, qApp->applicationDirPath() + "\\..\\data\\translations\\translations");
 #else
