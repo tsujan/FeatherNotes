@@ -1789,7 +1789,7 @@ csak &quot;.aff&quot;-ra végződik.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="466"/>
-        <location filename="../../pref.cpp" line="675"/>
+        <location filename="../../pref.cpp" line="684"/>
         <source>Add dictionary...</source>
         <translation>Szótár hozzáadása...</translation>
     </message>
@@ -1824,23 +1824,23 @@ csak &quot;.aff&quot;-ra végződik.</translation>
         <translation>Alapértelmezett</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="362"/>
-        <location filename="../../pref.cpp" line="548"/>
+        <location filename="../../pref.cpp" line="371"/>
+        <location filename="../../pref.cpp" line="557"/>
         <source>Warning: Ambiguous shortcut detected!</source>
         <translation>Figyelmeztetés: Többször használt gyorsbillentyű észlelve!</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="531"/>
+        <location filename="../../pref.cpp" line="540"/>
         <source>The typed shortcut was reserved.</source>
         <translation>A beírt gyorsbillentyű foglalt.</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="646"/>
+        <location filename="../../pref.cpp" line="655"/>
         <source>Application restart is needed for changes to take effect.</source>
         <translation>Az érvényesítéséhez újra kell indítania az alkalmazást.</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="677"/>
+        <location filename="../../pref.cpp" line="686"/>
         <source>Hunspell Dictionary Files (*.dic)</source>
         <translation>Hunspell szótárfájlok (*.dic)</translation>
     </message>

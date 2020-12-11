@@ -819,13 +819,16 @@ void TextEdit::mousePressEvent (QMouseEvent *e)
     }
 
     QTextEdit::mousePressEvent (e);
-    pressPoint = e->pos();
+    if (e->button() == Qt::LeftButton)
+        pressPoint = e->pos();
 }
 
 /*************************/
 void TextEdit::mouseReleaseEvent (QMouseEvent *e)
 {
     QTextEdit::mouseReleaseEvent (e);
+    if (e->button() != Qt::LeftButton)
+        return;
 
     /* give only a plain text to the selection clipboard */
     QTextCursor cursor = textCursor();
@@ -983,16 +986,6 @@ void TextEdit::scrollSmoothly()
                             Qt::Vertical);
 #endif
         QCoreApplication::sendEvent (verticalScrollBar(), &eventV);
-    }
-
-    /* update text selection if the left mouse button is pressed (-> QPlainTextEdit::timerEvent) */
-    if (QApplication::mouseButtons() & Qt::LeftButton)
-    {
-        const QPoint globalPos = QCursor::pos();
-        QPoint pos = viewport()->mapFromGlobal (globalPos);
-        QMouseEvent ev (QEvent::MouseMove, pos, viewport()->mapTo (viewport()->topLevelWidget(), pos), globalPos,
-                        Qt::LeftButton, Qt::LeftButton, Qt::NoModifier);
-        mouseMoveEvent (&ev);
     }
 
     if (queuedScrollSteps_.empty())
