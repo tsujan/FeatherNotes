@@ -1256,12 +1256,12 @@
     <message>
         <location filename="../../fn.cpp" line="2753"/>
         <source>Set Document Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Nustatyti dokumentų spalvą</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2763"/>
         <source>These colors will be applied to new nodes.&lt;br&gt;They may or may not affect existing nodes&lt;br&gt;but document reopening is recommended.</source>
-        <translation type="unfinished"></translation>
+        <translation>Šios spalvos bus taikomos naujiems mazgams.&lt;br&gt;Jos gali paveikti arba nepaveikti esamų mazgų,&lt;br&gt;tačiau rekomenduojama atverti dokumentus iš naujo.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2766"/>
@@ -1276,7 +1276,7 @@
     <message>
         <location filename="../../fn.cpp" line="3480"/>
         <source>The first 1000 replacements are highlighted.</source>
-        <translation type="unfinished"></translation>
+        <translation>Yra paryškinti pirmieji 1000 pakeitimų.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3737"/>
@@ -1466,7 +1466,7 @@ Ar norite jį pakeisti?
     <message>
         <location filename="../../fn.cpp" line="5601"/>
         <source>See Preferences → Text → Spell Checking!</source>
-        <translation type="unfinished"></translation>
+        <translation>Žiūrėkite Nuostatos → Tekstas → Rašybos tikrinimas!</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5623"/>
@@ -1493,7 +1493,7 @@ Ar norite jį pakeisti?
     <message>
         <location filename="../../fn.cpp" line="5692"/>
         <source>Spell Checking</source>
-        <translation type="unfinished"></translation>
+        <translation>Rašybos tikrinimas</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5502"/>
@@ -1752,7 +1752,11 @@ ilguoju brūkšniu ir t.t.</translation>
 Leave empty for the system default.
 
 Takes effect after closing this dialog.</source>
-        <translation type="unfinished"></translation>
+        <translation>Naudojama datos ir laiko įdėjimui.
+Palikite tuščią norėdami naudoti
+sistemos numatytąsias reikšmes.
+
+Įsigalios, kai užversite šį dialogą.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="369"/>
@@ -1772,7 +1776,7 @@ Takes effect after closing this dialog.</source>
     <message>
         <location filename="../../prefDialog.ui" line="434"/>
         <source>Spell Checking</source>
-        <translation type="unfinished"></translation>
+        <translation>Rašybos tikrinimas</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="442"/>
