@@ -14,12 +14,12 @@
     <message>
         <location filename="../../colorLabel.cpp" line="31"/>
         <source>Click to change color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Barvu změníte kliknutím.</translation>
     </message>
     <message>
         <location filename="../../colorLabel.cpp" line="53"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyberte barvu</translation>
     </message>
 </context>
 <context>
@@ -963,23 +963,23 @@
         <location filename="../../fn.ui" line="1339"/>
         <location filename="../../fn.ui" line="1342"/>
         <source>Check Spelling</source>
-        <translation type="unfinished"></translation>
+        <translation>Zkontrolovat pravopis</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1345"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1350"/>
         <source>Document &amp;Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Barvy dokumentu</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1358"/>
         <location filename="../../fn.ui" line="1361"/>
         <source>Paste Date and Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Vložit datum a čas</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2463"/>
@@ -1256,27 +1256,27 @@
     <message>
         <location filename="../../fn.cpp" line="2753"/>
         <source>Set Document Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Nastavit barvy dokumentu</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2763"/>
         <source>These colors will be applied to new nodes.&lt;br&gt;They may or may not affect existing nodes&lt;br&gt;but document reopening is recommended.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tyto barvy budou uplatněny na nové uzly.&lt;br&gt;Mohou a nemusí postihnout stávající uzly&lt;br&gt;ale je doporučeno znovuotevření dokumentu.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2766"/>
         <source>Background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Barva pozadí:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2772"/>
         <source>Text color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Barva textu:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3480"/>
         <source>The first 1000 replacements are highlighted.</source>
-        <translation type="unfinished"></translation>
+        <translation>Je zvýrazněno prvních 1000 nahrazení.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3737"/>
@@ -1385,14 +1385,16 @@
     <message>
         <location filename="../../fn.cpp" line="5065"/>
         <source>Question</source>
-        <translation type="unfinished"></translation>
+        <translation>Dotaz</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5066"/>
         <source>The file already exists.
 Do you want to replace it?
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Soubor už existuje.
+Chcete ho nahradit?
+</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5239"/>
@@ -1464,34 +1466,34 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="5601"/>
         <source>See Preferences → Text → Spell Checking!</source>
-        <translation type="unfinished"></translation>
+        <translation>Viz předvolby → Text → Kontrola pravopisu!</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5623"/>
         <source>You need to add a Hunspell dictionary.</source>
-        <translation type="unfinished"></translation>
+        <translation>Je třeba přidat Hunspell slovník.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5628"/>
         <source>The Hunspell dictionary does not exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hunspell slovník není k dispozici.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5636"/>
         <source>The Hunspell dictionary is not accompanied by an affix file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hunspell slovník není doprovázen affix souborem.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5654"/>
         <location filename="../../fn.cpp" line="5669"/>
         <location filename="../../fn.cpp" line="5681"/>
         <source>No misspelling from text cursor.</source>
-        <translation type="unfinished"></translation>
+        <translation>Od pozice kurzoru dále nejsou žádné překlepy.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5692"/>
         <source>Spell Checking</source>
-        <translation type="unfinished"></translation>
+        <translation>Kontrola pravopisu</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5502"/>
@@ -1756,12 +1758,15 @@ pomlčkou, atd – zatímco uživatel píše.</translation>
 Leave empty for the system default.
 
 Takes effect after closing this dialog.</source>
-        <translation type="unfinished"></translation>
+        <translation>Slouží pro vkládání data a času.
+Pro použití systémového výchozího nevyplňujte.
+
+Uplatní se po zavření tohoto dialogu.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="369"/>
         <source>Date and time format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Formát data a času:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="393"/>
@@ -1776,7 +1781,7 @@ Takes effect after closing this dialog.</source>
     <message>
         <location filename="../../prefDialog.ui" line="434"/>
         <source>Spell Checking</source>
-        <translation type="unfinished"></translation>
+        <translation>Kontrola pravopisu</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="442"/>
@@ -1784,28 +1789,30 @@ Takes effect after closing this dialog.</source>
         <source>A Hunspell dictionary has a name that ends with &quot;.dic&quot;
 and should be alongside an affix file with the same
 name but ending with &quot;.aff&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hunspell slovník má název, který končí na „.dic“
+a měl by být doprovázen affix souborem se stejným
+názvem ale končící na „.aff“.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="447"/>
         <source>Hunspell dictionary path:</source>
-        <translation type="unfinished"></translation>
+        <translation>Popis umístění Hunspell slovníku:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="466"/>
         <location filename="../../pref.cpp" line="684"/>
         <source>Add dictionary...</source>
-        <translation type="unfinished"></translation>
+        <translation>Přidat slovník…</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="501"/>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Soubory</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="510"/>
         <source>Start with the last opened file</source>
-        <translation type="unfinished"></translation>
+        <translation>Začít naposledy otevřeným souborem</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="534"/>
@@ -1846,7 +1853,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../pref.cpp" line="686"/>
         <source>Hunspell Dictionary Files (*.dic)</source>
-        <translation type="unfinished"></translation>
+        <translation>Soubory s Hunspell slovníky (*.dic)</translation>
     </message>
 </context>
 <context>
@@ -1854,37 +1861,37 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../spellDialog.ui" line="25"/>
         <source>Unknown word:</source>
-        <translation type="unfinished"></translation>
+        <translation>Neznámé slovo:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="51"/>
         <source>Add To Dictionary</source>
-        <translation type="unfinished"></translation>
+        <translation>Přidat do slovníku</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="62"/>
         <source>Replace with:</source>
-        <translation type="unfinished">Nahradit čím:</translation>
+        <translation>Nahradit čím:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="87"/>
         <source>Ignore Once</source>
-        <translation type="unfinished"></translation>
+        <translation>Ignorovat tento výskyt</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="100"/>
         <source>Ignore All</source>
-        <translation type="unfinished"></translation>
+        <translation>Ignorovat vše</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="129"/>
         <source>Correct Once</source>
-        <translation type="unfinished"></translation>
+        <translation>Opravit tento výskyt</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="142"/>
         <source>Correct All</source>
-        <translation type="unfinished"></translation>
+        <translation>Opravit vše</translation>
     </message>
 </context>
 <context>
