@@ -1445,7 +1445,7 @@ Szeretné cserélni?
     <message>
         <location filename="../../fn.cpp" line="5500"/>
         <source>based on Qt</source>
-        <translation>amely a Qt-ön alapul</translation>
+        <translation>amely a Qt-n alapul</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5501"/>
