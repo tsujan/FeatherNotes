@@ -1440,7 +1440,7 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="5499"/>
         <source>A lightweight notes manager</source>
-        <translation type="unfinished">軽量なメモ管理</translation>
+        <translation>軽量なメモ管理</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5500"/>
@@ -1625,7 +1625,7 @@ can be used instead of this.</source>
     <message>
         <location filename="../../prefDialog.ui" line="170"/>
         <source>Merge the tree view with its surroundings?</source>
-        <translation type="unfinished">ツリー表示を周囲と統合するか？</translation>
+        <translation>ツリー表示を周囲と統合するか？</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="173"/>
