@@ -14,12 +14,12 @@
     <message>
         <location filename="../../colorLabel.cpp" line="31"/>
         <source>Click to change color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Zum Ändern der Farbe klicken.</translation>
     </message>
     <message>
         <location filename="../../colorLabel.cpp" line="53"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Farbe auswählen</translation>
     </message>
 </context>
 <context>
@@ -55,7 +55,7 @@
     <message>
         <location filename="../../fn.ui" line="100"/>
         <source>Search...</source>
-        <translation>Suchen…</translation>
+        <translation>Suchen ...</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="115"/>
@@ -963,23 +963,23 @@
         <location filename="../../fn.ui" line="1339"/>
         <location filename="../../fn.ui" line="1342"/>
         <source>Check Spelling</source>
-        <translation type="unfinished"></translation>
+        <translation>Rechtschreibung überprüfen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1345"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1350"/>
         <source>Document &amp;Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Dokument&amp;farben</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1358"/>
         <location filename="../../fn.ui" line="1361"/>
         <source>Paste Date and Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Datum und Zeit einfügen</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2463"/>
@@ -1056,7 +1056,7 @@
     <message>
         <location filename="../../fn.cpp" line="1186"/>
         <source>Open file...</source>
-        <translation>Öffne Datei…</translation>
+        <translation>Datei öffnen ...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1326"/>
@@ -1077,7 +1077,7 @@
         <location filename="../../fn.cpp" line="1425"/>
         <location filename="../../fn.cpp" line="1446"/>
         <source>Save As...</source>
-        <translation>Speichern als…</translation>
+        <translation>Speichern als ...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2295"/>
@@ -1186,7 +1186,7 @@
         <location filename="../../fn.cpp" line="2493"/>
         <location filename="../../fn.cpp" line="3851"/>
         <source>Open Image...</source>
-        <translation>Bild öffnen…</translation>
+        <translation>Bild öffnen ...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="612"/>
@@ -1256,27 +1256,27 @@
     <message>
         <location filename="../../fn.cpp" line="2753"/>
         <source>Set Document Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Dokumentfarben festlegen</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2763"/>
         <source>These colors will be applied to new nodes.&lt;br&gt;They may or may not affect existing nodes&lt;br&gt;but document reopening is recommended.</source>
-        <translation type="unfinished"></translation>
+        <translation>Diese Farben werden auf neue Knoten angewendet.&lt;br&gt;Sie können sich auf bestehende Knoten auswirken oder auch nicht,&lt;br&gt;aber es wird empfohlen, das Dokument neu zu öffnen.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2766"/>
         <source>Background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hintergrundfarbe:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2772"/>
         <source>Text color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Textfarbe:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3480"/>
         <source>The first 1000 replacements are highlighted.</source>
-        <translation type="unfinished"></translation>
+        <translation>Die ersten 1000 Ersetzungen sind hervorgehoben.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3737"/>
@@ -1303,7 +1303,7 @@
     <message>
         <location filename="../../fn.cpp" line="4083"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4084"/>
@@ -1320,7 +1320,7 @@
     <message>
         <location filename="../../fn.cpp" line="4112"/>
         <source>Save Image As...</source>
-        <translation>Bild speichern als…</translation>
+        <translation>Bild speichern als ...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4114"/>
@@ -1385,19 +1385,21 @@
     <message>
         <location filename="../../fn.cpp" line="5065"/>
         <source>Question</source>
-        <translation type="unfinished"></translation>
+        <translation>Frage</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5066"/>
         <source>The file already exists.
 Do you want to replace it?
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Die Datei ist bereits vorhanden.
+Möchten Sie sie ersetzen?
+</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5239"/>
         <source>Save HTML As...</source>
-        <translation>Speichere HTML als…</translation>
+        <translation>HTML speichern als ...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5241"/>
@@ -1412,12 +1414,12 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="5270"/>
         <source>Type password</source>
-        <translation>Kennwort eingeben</translation>
+        <translation>Passwort eingeben</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5275"/>
         <source>Retype password</source>
-        <translation>Kennwort wiederholen</translation>
+        <translation>Passwort wiederholen</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5350"/>
@@ -1433,7 +1435,7 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="5456"/>
         <source>&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</source>
-        <translation>&lt;center&gt;Falsches Kennwort. Noch einmal versuchen!&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;Falsches Passwort. Noch einmal versuchen!&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5499"/>
@@ -1464,22 +1466,22 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="5601"/>
         <source>See Preferences → Text → Spell Checking!</source>
-        <translation type="unfinished"></translation>
+        <translation>Siehe Einstellungen → Text → Rechtschreibprüfung!</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5623"/>
         <source>You need to add a Hunspell dictionary.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sie müssen ein Hunspell-Wörterbuch hinzufügen.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5628"/>
         <source>The Hunspell dictionary does not exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>Das Hunspell-Wörterbuch ist nicht vorhanden.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5636"/>
         <source>The Hunspell dictionary is not accompanied by an affix file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dem Hunspell-Wörterbuch liegt keine Affix-Datei bei.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5654"/>
@@ -1491,7 +1493,7 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="5692"/>
         <source>Spell Checking</source>
-        <translation type="unfinished"></translation>
+        <translation>Rechtschreibprüfung</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5502"/>
@@ -1749,7 +1751,7 @@ Takes effect after closing this dialog.</source>
     <message>
         <location filename="../../prefDialog.ui" line="369"/>
         <source>Date and time format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Datum- und Zeitformat:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="393"/>
@@ -1764,7 +1766,7 @@ Takes effect after closing this dialog.</source>
     <message>
         <location filename="../../prefDialog.ui" line="434"/>
         <source>Spell Checking</source>
-        <translation type="unfinished"></translation>
+        <translation>Rechtschreibprüfung</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="442"/>
@@ -1777,23 +1779,23 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../prefDialog.ui" line="447"/>
         <source>Hunspell dictionary path:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hunspell-Wörterbuchpfad:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="466"/>
         <location filename="../../pref.cpp" line="684"/>
         <source>Add dictionary...</source>
-        <translation type="unfinished"></translation>
+        <translation>Wörterbuch hinzufügen ...</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="501"/>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Dateien</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="510"/>
         <source>Start with the last opened file</source>
-        <translation type="unfinished"></translation>
+        <translation>Start mit der zuletzt geöffneten Datei</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="534"/>
@@ -1834,7 +1836,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../pref.cpp" line="686"/>
         <source>Hunspell Dictionary Files (*.dic)</source>
-        <translation type="unfinished"></translation>
+        <translation>Hunspell-Wörterbuchdateien (*.dic)</translation>
     </message>
 </context>
 <context>
@@ -1842,37 +1844,37 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../spellDialog.ui" line="25"/>
         <source>Unknown word:</source>
-        <translation type="unfinished"></translation>
+        <translation>Unbekanntes Wort:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="51"/>
         <source>Add To Dictionary</source>
-        <translation type="unfinished"></translation>
+        <translation>Zum Wörterbuch hinzufügen</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="62"/>
         <source>Replace with:</source>
-        <translation type="unfinished">Ersetzen mit:</translation>
+        <translation>Ersetzen mit:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="87"/>
         <source>Ignore Once</source>
-        <translation type="unfinished"></translation>
+        <translation>Einmal ignorieren</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="100"/>
         <source>Ignore All</source>
-        <translation type="unfinished"></translation>
+        <translation>Alle ignorieren</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="129"/>
         <source>Correct Once</source>
-        <translation type="unfinished"></translation>
+        <translation>Einmal korrigieren</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="142"/>
         <source>Correct All</source>
-        <translation type="unfinished"></translation>
+        <translation>Alle korrigieren</translation>
     </message>
 </context>
 <context>
