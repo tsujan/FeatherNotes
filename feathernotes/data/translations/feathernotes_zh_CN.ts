@@ -1261,7 +1261,7 @@
     <message>
         <location filename="../../fn.cpp" line="2763"/>
         <source>These colors will be applied to new nodes.&lt;br&gt;They may or may not affect existing nodes&lt;br&gt;but document reopening is recommended.</source>
-        <translation type="unfinished">这些颜色将会应用于新的节点。&lt;br&gt;它们不一定会影响现有节点&lt;br&gt;建议重新打开文档。</translation>
+        <translation>这些颜色将会应用于新的节点。&lt;br&gt;它们不一定会影响现有节点&lt;br&gt;建议重新打开文档。</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2766"/>
