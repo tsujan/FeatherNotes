@@ -60,22 +60,22 @@
     <message>
         <location filename="../../fn.ui" line="115"/>
         <source>Search only in names (Ctrl+Shift+F7)</source>
-        <translation>Ieškoti tik pavadinimuose (Ctrl(Vald)+Shift(Lyg2)+F7)</translation>
+        <translation>Ieškoti tik pavadinimuose (Ctrl+Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="118"/>
         <source>Ctrl+Shift+F7</source>
-        <translation>Ctrl(Vald)+Shift(Lyg2)+F7</translation>
+        <translation>Ctrl+Shift+F7</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="128"/>
         <source>Search only in tags (Shift+F7)</source>
-        <translation>Ieškoti tik žymėse (Shift(Lyg2)+F7)</translation>
+        <translation>Ieškoti tik žymėse (Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="131"/>
         <source>Shift+F7</source>
-        <translation>Shift(Lyg2)+F7</translation>
+        <translation>Shift+F7</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="144"/>
@@ -217,7 +217,7 @@
     <message>
         <location filename="../../fn.ui" line="531"/>
         <source>Ctrl+S</source>
-        <translation>Ctrl(Vald)+S</translation>
+        <translation>Ctrl+S</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="536"/>
@@ -233,7 +233,7 @@
     <message>
         <location filename="../../fn.ui" line="542"/>
         <source>Ctrl+O</source>
-        <translation>Ctrl(Vald)+O</translation>
+        <translation>Ctrl+O</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="550"/>
@@ -248,7 +248,7 @@
     <message>
         <location filename="../../fn.ui" line="556"/>
         <source>Ctrl+Z</source>
-        <translation>Ctrl(Vald)+Z</translation>
+        <translation>Ctrl+Z</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="564"/>
@@ -263,7 +263,7 @@
     <message>
         <location filename="../../fn.ui" line="570"/>
         <source>Ctrl+Shift+Z</source>
-        <translation>Ctrl(Vald)+Shift(Lyg2)+Z</translation>
+        <translation>Ctrl+Shift+Z</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="578"/>
@@ -278,7 +278,7 @@
     <message>
         <location filename="../../fn.ui" line="584"/>
         <source>Ctrl+F</source>
-        <translation>Ctrl(Vald)+F</translation>
+        <translation>Ctrl+F</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="592"/>
@@ -293,7 +293,7 @@
     <message>
         <location filename="../../fn.ui" line="598"/>
         <source>Ctrl+E</source>
-        <translation>Ctrl(Vald)+E</translation>
+        <translation>Ctrl+E</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="609"/>
@@ -308,7 +308,7 @@
     <message>
         <location filename="../../fn.ui" line="615"/>
         <source>Ctrl+B</source>
-        <translation>Ctrl(Vald)+B</translation>
+        <translation>Ctrl+B</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="626"/>
@@ -323,7 +323,7 @@
     <message>
         <location filename="../../fn.ui" line="632"/>
         <source>Ctrl+I</source>
-        <translation>Ctrl(Vald)+I</translation>
+        <translation>Ctrl+I</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="643"/>
@@ -338,7 +338,7 @@
     <message>
         <location filename="../../fn.ui" line="649"/>
         <source>Ctrl+U</source>
-        <translation>Ctrl(Vald)+U</translation>
+        <translation>Ctrl+U</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="660"/>
@@ -353,7 +353,7 @@
     <message>
         <location filename="../../fn.ui" line="666"/>
         <source>Ctrl+T</source>
-        <translation>Ctrl(Vald)+T</translation>
+        <translation>Ctrl+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="674"/>
@@ -368,7 +368,7 @@
     <message>
         <location filename="../../fn.ui" line="680"/>
         <source>Alt+Shift+T</source>
-        <translation>Alt+Shift(Lyg2)+T</translation>
+        <translation>Alt+Shift+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="688"/>
@@ -383,7 +383,7 @@
     <message>
         <location filename="../../fn.ui" line="694"/>
         <source>Alt+Shift+B</source>
-        <translation>Alt+Shift(Lyg2)+B</translation>
+        <translation>Alt+Shift+B</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="699"/>
@@ -399,7 +399,7 @@
     <message>
         <location filename="../../fn.ui" line="707"/>
         <source>Ctrl+Alt+Shift+N</source>
-        <translation>Ctrl(Vald)+Alt+Shift(Lyg2)+N</translation>
+        <translation>Ctrl+Alt+Shift+N</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="715"/>
@@ -409,7 +409,7 @@
     <message>
         <location filename="../../fn.ui" line="718"/>
         <source>Ctrl+Shift+S</source>
-        <translation>Ctrl(Vald)+Shift(Lyg2)+S</translation>
+        <translation>Ctrl+Shift+S</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="726"/>
@@ -419,7 +419,7 @@
     <message>
         <location filename="../../fn.ui" line="729"/>
         <source>Ctrl+P</source>
-        <translation>Ctrl(Vald)+P</translation>
+        <translation>Ctrl+P</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="737"/>
@@ -440,7 +440,7 @@
     <message>
         <location filename="../../fn.ui" line="753"/>
         <source>Ctrl+Q</source>
-        <translation>Ctrl(Vald)+Q</translation>
+        <translation>Ctrl+Q</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="761"/>
@@ -450,7 +450,7 @@
     <message>
         <location filename="../../fn.ui" line="764"/>
         <source>Ctrl+X</source>
-        <translation>Ctrl(Vald)+X</translation>
+        <translation>Ctrl+X</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="772"/>
@@ -460,7 +460,7 @@
     <message>
         <location filename="../../fn.ui" line="775"/>
         <source>Ctrl+C</source>
-        <translation>Ctrl(Vald)+C</translation>
+        <translation>Ctrl+C</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="783"/>
@@ -470,7 +470,7 @@
     <message>
         <location filename="../../fn.ui" line="786"/>
         <source>Ctrl+V</source>
-        <translation>Ctrl(Vald)+V</translation>
+        <translation>Ctrl+V</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="794"/>
@@ -485,7 +485,7 @@
     <message>
         <location filename="../../fn.ui" line="805"/>
         <source>Ctrl+A</source>
-        <translation>Ctrl(Vald)+A</translation>
+        <translation>Ctrl+A</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="813"/>
@@ -501,7 +501,7 @@
     <message>
         <location filename="../../fn.ui" line="819"/>
         <source>Ctrl+Alt+Shift+I</source>
-        <translation>Ctrl(Vald)+Alt+Shift(Lyg2)+I</translation>
+        <translation>Ctrl+Alt+Shift+I</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="827"/>
@@ -511,7 +511,7 @@
     <message>
         <location filename="../../fn.ui" line="830"/>
         <source>Ctrl+Shift+Down</source>
-        <translation>Ctrl(Vald)+Shift(Lyg2)+Žemyn</translation>
+        <translation>Ctrl+Shift+Žemyn</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="838"/>
@@ -521,7 +521,7 @@
     <message>
         <location filename="../../fn.ui" line="841"/>
         <source>Ctrl+Shift+Up</source>
-        <translation>Ctrl(Vald)+Shift(Lyg2)+Aukštyn</translation>
+        <translation>Ctrl+Shift+Aukštyn</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="849"/>
@@ -531,7 +531,7 @@
     <message>
         <location filename="../../fn.ui" line="852"/>
         <source>Ctrl+N</source>
-        <translation>Ctrl(Vald)+N</translation>
+        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="860"/>
@@ -541,7 +541,7 @@
     <message>
         <location filename="../../fn.ui" line="863"/>
         <source>Ctrl+Shift+N</source>
-        <translation>Ctrl(Vald)+Shift(Lyg2)+N</translation>
+        <translation>Ctrl+Shift+N</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="871"/>
@@ -551,7 +551,7 @@
     <message>
         <location filename="../../fn.ui" line="874"/>
         <source>Ctrl+D</source>
-        <translation>Ctrl(Vald)+D</translation>
+        <translation>Ctrl+D</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="882"/>
@@ -581,7 +581,7 @@
     <message>
         <location filename="../../fn.ui" line="907"/>
         <source>Ctrl+Shift+R</source>
-        <translation>Ctrl(Vald)+Shift(Lyg2)+R</translation>
+        <translation>Ctrl+Shift+R</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="912"/>
@@ -591,7 +591,7 @@
     <message>
         <location filename="../../fn.ui" line="915"/>
         <source>Ctrl+Shift+D</source>
-        <translation>Ctrl(Vald)+Shift(Lyg2)+D</translation>
+        <translation>Ctrl+Shift+D</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="923"/>
@@ -606,7 +606,7 @@
     <message>
         <location filename="../../fn.ui" line="940"/>
         <source>Ctrl+W</source>
-        <translation>Ctrl(Vald)+W</translation>
+        <translation>Ctrl+W</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="954"/>
@@ -616,7 +616,7 @@
     <message>
         <location filename="../../fn.ui" line="957"/>
         <source>Ctrl+Shift+I</source>
-        <translation>Ctrl(Vald)+Shift(Lyg2)+I</translation>
+        <translation>Ctrl+Shift+I</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="962"/>
@@ -626,7 +626,7 @@
     <message>
         <location filename="../../fn.ui" line="965"/>
         <source>Ctrl+Shift+P</source>
-        <translation>Ctrl(Vald)+Shift(Lyg2)+P</translation>
+        <translation>Ctrl+Shift+P</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="973"/>
@@ -636,12 +636,12 @@
     <message>
         <location filename="../../fn.ui" line="976"/>
         <source>Ctrl+R</source>
-        <translation>Ctrl(Vald)+R</translation>
+        <translation>Ctrl+R</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="984"/>
         <source>Ctrl+H</source>
-        <translation>Ctrl(Vald)+H</translation>
+        <translation>Ctrl+H</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="989"/>
@@ -666,7 +666,7 @@
     <message>
         <location filename="../../fn.ui" line="1014"/>
         <source>Alt+Shift+U</source>
-        <translation>Alt+Shift(Lyg2)+U</translation>
+        <translation>Alt+Shift+U</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1025"/>
@@ -681,7 +681,7 @@
     <message>
         <location filename="../../fn.ui" line="1031"/>
         <source>Alt+Shift+S</source>
-        <translation>Alt+Shift(Lyg2)+S</translation>
+        <translation>Alt+Shift+S</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1042"/>
@@ -696,7 +696,7 @@
     <message>
         <location filename="../../fn.ui" line="1048"/>
         <source>Alt+Shift+Down</source>
-        <translation>Alt+Shift(Lyg2)+Žemyn</translation>
+        <translation>Alt+Shift+Žemyn</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1059"/>
@@ -711,7 +711,7 @@
     <message>
         <location filename="../../fn.ui" line="1065"/>
         <source>Alt+Shift+Right</source>
-        <translation>Alt+Shift(Lyg2)+Dešinėn</translation>
+        <translation>Alt+Shift+Dešinėn</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1076"/>
@@ -726,7 +726,7 @@
     <message>
         <location filename="../../fn.ui" line="1082"/>
         <source>Alt+Shift+Left</source>
-        <translation>Alt+Shift(Lyg2)+Kairėn</translation>
+        <translation>Alt+Shift+Kairėn</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1093"/>
@@ -741,7 +741,7 @@
     <message>
         <location filename="../../fn.ui" line="1099"/>
         <source>Alt+Shift+Up</source>
-        <translation>Alt+Shift(Lyg2)+Aukštyn</translation>
+        <translation>Alt+Shift+Aukštyn</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1107"/>
@@ -751,7 +751,7 @@
     <message>
         <location filename="../../fn.ui" line="1110"/>
         <source>Ctrl+M</source>
-        <translation>Ctrl(Vald)+M</translation>
+        <translation>Ctrl+M</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1118"/>
@@ -786,7 +786,7 @@
     <message>
         <location filename="../../fn.ui" line="1146"/>
         <source>Ctrl+2</source>
-        <translation>Ctrl(Vald)+2</translation>
+        <translation>Ctrl+2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1154"/>
@@ -801,7 +801,7 @@
     <message>
         <location filename="../../fn.ui" line="1160"/>
         <source>Ctrl+1</source>
-        <translation>Ctrl(Vald)+1</translation>
+        <translation>Ctrl+1</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1168"/>
@@ -816,7 +816,7 @@
     <message>
         <location filename="../../fn.ui" line="1174"/>
         <source>Ctrl+3</source>
-        <translation>Ctrl(Vald)+3</translation>
+        <translation>Ctrl+3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1182"/>
@@ -841,7 +841,7 @@
     <message>
         <location filename="../../fn.ui" line="1201"/>
         <source>Ctrl+Shift+V</source>
-        <translation>Ctrl(Vald)+Shift(Lyg2)+V</translation>
+        <translation>Ctrl+Shift+V</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1209"/>
@@ -851,7 +851,7 @@
     <message>
         <location filename="../../fn.ui" line="1212"/>
         <source>Ctrl+Shift+T</source>
-        <translation>Ctrl(Vald)+Shift(Lyg2)+T</translation>
+        <translation>Ctrl+Shift+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1220"/>
@@ -861,7 +861,7 @@
     <message>
         <location filename="../../fn.ui" line="1223"/>
         <source>Ctrl+L</source>
-        <translation>Ctrl(Vald)+L</translation>
+        <translation>Ctrl+L</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1228"/>
@@ -876,7 +876,7 @@
     <message>
         <location filename="../../fn.ui" line="1239"/>
         <source>Ctrl+Alt+Shift+T</source>
-        <translation>Ctrl(Vald)+Alt+Shift(Lyg2)+T</translation>
+        <translation>Ctrl+Alt+Shift+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1244"/>
@@ -931,7 +931,7 @@
     <message>
         <location filename="../../fn.ui" line="1301"/>
         <source>Ctrl+Alt+Shift+Left</source>
-        <translation>Ctrl(Vald)+Alt+Shift(Lyg2)+Kairėn</translation>
+        <translation>Ctrl+Alt+Shift+Kairėn</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1312"/>
@@ -941,7 +941,7 @@
     <message>
         <location filename="../../fn.ui" line="1315"/>
         <source>Ctrl+Alt+Shift+Right</source>
-        <translation>Ctrl(Vald)+Alt+Shift(Lyg2)+Dešinėn</translation>
+        <translation>Ctrl+Alt+Shift+Dešinėn</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1320"/>
@@ -957,7 +957,7 @@
     <message>
         <location filename="../../fn.ui" line="1334"/>
         <source>Ctrl+Shift+C</source>
-        <translation>Ctrl(Vald)+Shift(Lyg2)+C</translation>
+        <translation>Ctrl+Shift+C</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1339"/>
@@ -1506,13 +1506,13 @@ Ar norite jį pakeisti?
     <message>
         <location filename="../../lineedit.cpp" line="35"/>
         <source>Clear text (Ctrl+K)</source>
-        <translation>Išvalyti tekstą (Ctrl(Vald)+K)</translation>
+        <translation>Išvalyti tekstą (Ctrl+K)</translation>
     </message>
     <message>
         <location filename="../../lineedit.cpp" line="81"/>
         <source>Ctrl+K</source>
         <comment>Clear text</comment>
-        <translation>Ctrl(Vald)+K</translation>
+        <translation>Ctrl+K</translation>
     </message>
 </context>
 <context>
