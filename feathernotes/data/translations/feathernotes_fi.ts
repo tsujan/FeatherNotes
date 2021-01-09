@@ -6,7 +6,7 @@
     <message>
         <location filename="../../about.ui" line="141"/>
         <source>License</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisenssi</translation>
     </message>
 </context>
 <context>
@@ -14,12 +14,12 @@
     <message>
         <location filename="../../colorLabel.cpp" line="31"/>
         <source>Click to change color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Klikkaa vaihtaaksesi väriä.</translation>
     </message>
     <message>
         <location filename="../../colorLabel.cpp" line="53"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitse väri</translation>
     </message>
 </context>
 <context>
@@ -35,7 +35,7 @@
     <message>
         <location filename="../../fn.ui" line="65"/>
         <source>Next (F3)</source>
-        <translation type="unfinished"></translation>
+        <translation>Seuraava (F3)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="68"/>
@@ -45,7 +45,7 @@
     <message>
         <location filename="../../fn.ui" line="81"/>
         <source>Previous (F4)</source>
-        <translation type="unfinished"></translation>
+        <translation>Edellinen (F4)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="84"/>
@@ -55,7 +55,7 @@
     <message>
         <location filename="../../fn.ui" line="100"/>
         <source>Search...</source>
-        <translation type="unfinished"></translation>
+        <translation>Hae...</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="115"/>
@@ -358,12 +358,12 @@
     <message>
         <location filename="../../fn.ui" line="674"/>
         <source>Te&amp;xt Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Te&amp;kstin väri</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="677"/>
         <source>Text color</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekstin väri</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="680"/>
@@ -373,12 +373,12 @@
     <message>
         <location filename="../../fn.ui" line="688"/>
         <source>Back&amp;ground Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Taus&amp;taväri</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="691"/>
         <source>Background color</source>
-        <translation type="unfinished"></translation>
+        <translation>Taustaväri</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="694"/>
@@ -388,7 +388,7 @@
     <message>
         <location filename="../../fn.ui" line="699"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Asetukset</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="704"/>
@@ -404,7 +404,7 @@
     <message>
         <location filename="../../fn.ui" line="715"/>
         <source>Save &amp;As</source>
-        <translation type="unfinished"></translation>
+        <translation>Tallenna &amp;nimellä</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="718"/>
@@ -414,7 +414,7 @@
     <message>
         <location filename="../../fn.ui" line="726"/>
         <source>&amp;Print</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tulosta</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="729"/>
@@ -429,7 +429,7 @@
     <message>
         <location filename="../../fn.ui" line="745"/>
         <source>Set Pass&amp;word</source>
-        <translation type="unfinished"></translation>
+        <translation>Aseta sala&amp;sana</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="750"/>
