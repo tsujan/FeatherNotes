@@ -6,7 +6,7 @@
     <message>
         <location filename="../../about.ui" line="141"/>
         <source>License</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisans</translation>
     </message>
 </context>
 <context>
@@ -14,12 +14,12 @@
     <message>
         <location filename="../../colorLabel.cpp" line="31"/>
         <source>Click to change color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Rengi değiştirmek için tıklayın.</translation>
     </message>
     <message>
         <location filename="../../colorLabel.cpp" line="53"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Renk Seç</translation>
     </message>
 </context>
 <context>
@@ -30,107 +30,107 @@
         <location filename="../../fn.cpp" line="3479"/>
         <location filename="../../fn.cpp" line="5147"/>
         <source>FeatherNotes</source>
-        <translation type="unfinished"></translation>
+        <translation>FeatherNotes</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="65"/>
         <source>Next (F3)</source>
-        <translation type="unfinished"></translation>
+        <translation>İleri (F3)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="68"/>
         <source>F3</source>
-        <translation type="unfinished"></translation>
+        <translation>F3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="81"/>
         <source>Previous (F4)</source>
-        <translation type="unfinished"></translation>
+        <translation>Önceki (F4)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="84"/>
         <source>F4</source>
-        <translation type="unfinished"></translation>
+        <translation>F4</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="100"/>
         <source>Search...</source>
-        <translation type="unfinished"></translation>
+        <translation>Arama...</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="115"/>
         <source>Search only in names (Ctrl+Shift+F7)</source>
-        <translation type="unfinished"></translation>
+        <translation>Yalnızca adlarda arama yapın (Ctrl+Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="118"/>
         <source>Ctrl+Shift+F7</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+F7</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="128"/>
         <source>Search only in tags (Shift+F7)</source>
-        <translation type="unfinished"></translation>
+        <translation>Sadece etiketlerde arama yapın (Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="131"/>
         <source>Shift+F7</source>
-        <translation type="unfinished"></translation>
+        <translation>Shift+F7</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="144"/>
         <source>Search in all nodes (F7)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tüm düğümlerde arama (F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="147"/>
         <source>F7</source>
-        <translation type="unfinished"></translation>
+        <translation>F7</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="186"/>
         <source>Whole Word (F6)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tüm Kelime (F6)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="189"/>
         <source>Whole Word</source>
-        <translation type="unfinished"></translation>
+        <translation>Tüm Kelime</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="192"/>
         <source>F6</source>
-        <translation type="unfinished"></translation>
+        <translation>F6</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="167"/>
         <source>Match Case (F5)</source>
-        <translation type="unfinished"></translation>
+        <translation>Match Durumu (F5)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="170"/>
         <source>Match Case</source>
-        <translation type="unfinished"></translation>
+        <translation>Match Durumu</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="173"/>
         <source>F5</source>
-        <translation type="unfinished"></translation>
+        <translation>F5</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="219"/>
         <source>&amp;File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Dosya</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="238"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Düzenleme</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="257"/>
         <source>For&amp;mat</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Biçim</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="289"/>
@@ -140,388 +140,388 @@
     <message>
         <location filename="../../fn.ui" line="312"/>
         <source>&amp;Options</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Seçenekler</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="326"/>
         <source>&amp;Search</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Arama</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="333"/>
         <location filename="../../fn.ui" line="981"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Yardım</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="430"/>
         <source>Find:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bulmak:</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="437"/>
         <source>Replace with:</source>
-        <translation type="unfinished"></translation>
+        <translation>Şununla değiştir:</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="450"/>
         <source>To be replaced</source>
-        <translation type="unfinished"></translation>
+        <translation>Değiştirilecek</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="463"/>
         <source>Replacing text</source>
-        <translation type="unfinished"></translation>
+        <translation>Metni Değiştirme</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="473"/>
         <source>Previous (F9)</source>
-        <translation type="unfinished"></translation>
+        <translation>Önceki (F9)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="476"/>
         <source>F9</source>
-        <translation type="unfinished"></translation>
+        <translation>F9</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="489"/>
         <source>Next (F8)</source>
-        <translation type="unfinished"></translation>
+        <translation>İleri (F8)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="492"/>
         <source>F8</source>
-        <translation type="unfinished"></translation>
+        <translation>F8</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="505"/>
         <source>Replace all (F10)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tümünü değiştir (F10)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="508"/>
         <source>F10</source>
-        <translation type="unfinished"></translation>
+        <translation>F10</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="525"/>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kaydet</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="528"/>
         <location filename="../../fn.cpp" line="875"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaydet</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="531"/>
         <source>Ctrl+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+S</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="536"/>
         <location filename="../../fn.cpp" line="616"/>
         <source>&amp;Open</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Aç</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="539"/>
         <source>Open a file</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bir dosya aç</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="542"/>
         <source>Ctrl+O</source>
-        <translation type="unfinished"></translation>
+        <translation>Crtl+O</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="550"/>
         <source>&amp;Undo</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Açmak</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="553"/>
         <source>Undo</source>
-        <translation type="unfinished"></translation>
+        <translation>Açmak</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="556"/>
         <source>Ctrl+Z</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Z</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="564"/>
         <source>&amp;Redo</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Yinelemek</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="567"/>
         <source>Redo</source>
-        <translation type="unfinished"></translation>
+        <translation>Yinelemek</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="570"/>
         <source>Ctrl+Shift+Z</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+Z</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="578"/>
         <source>&amp;Find</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bulmak</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="581"/>
         <source>Show/hide searchbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Arama çubuğunu Göster/Gizle</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="584"/>
         <source>Ctrl+F</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+F</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="592"/>
         <source>&amp;Clear All Formats</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp; Tüm Biçimleri Temizle</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="595"/>
         <source>Clear all formats</source>
-        <translation type="unfinished"></translation>
+        <translation>Tüm Biçimleri Temizle</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="598"/>
         <source>Ctrl+E</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+E</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="609"/>
         <source>&amp;Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kalın</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="612"/>
         <source>Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>Kalın</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="615"/>
         <source>Ctrl+B</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+B</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="626"/>
         <source>&amp;Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;İtalik</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="629"/>
         <source>Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>İtalik</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="632"/>
         <source>Ctrl+I</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+İ</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="643"/>
         <source>&amp;Underline</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Altı çizili</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="646"/>
         <source>Underline</source>
-        <translation type="unfinished"></translation>
+        <translation>Altı çizili</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="649"/>
         <source>Ctrl+U</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+U</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="660"/>
         <source>&amp;Strike Through</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Üstü çizili</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="663"/>
         <source>Strike through</source>
-        <translation type="unfinished"></translation>
+        <translation>Üstü çizili</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="666"/>
         <source>Ctrl+T</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="674"/>
         <source>Te&amp;xt Color</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp; Yazı Rengi</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="677"/>
         <source>Text color</source>
-        <translation type="unfinished"></translation>
+        <translation>Yazı Rengi</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="680"/>
         <source>Alt+Shift+T</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="688"/>
         <source>Back&amp;ground Color</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Arkaplan Rengi</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="691"/>
         <source>Background color</source>
-        <translation type="unfinished"></translation>
+        <translation>Arkaplan Rengi</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="694"/>
         <source>Alt+Shift+B</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+B</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="699"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Seçenekler</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="704"/>
         <location filename="../../fn.cpp" line="615"/>
         <source>&amp;New Note</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Yeni Not</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="707"/>
         <source>Ctrl+Alt+Shift+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Alt+Shift+N</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="715"/>
         <source>Save &amp;As</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Farklı Kaydet</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="718"/>
         <source>Ctrl+Shift+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+S</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="726"/>
         <source>&amp;Print</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Yazıcı</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="729"/>
         <source>Ctrl+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+P</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="737"/>
         <source>P&amp;rint with Sub-Nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Alt Düğümlerle Yazdır</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="745"/>
         <source>Set Pass&amp;word</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Şifrelemek</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="750"/>
         <location filename="../../fn.cpp" line="618"/>
         <source>&amp;Quit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Çıkış</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="753"/>
         <source>Ctrl+Q</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Q</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="761"/>
         <source>&amp;Cut</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kes</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="764"/>
         <source>Ctrl+X</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+X</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="772"/>
         <source>C&amp;opy</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Copy</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="775"/>
         <source>Ctrl+C</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+C</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="783"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Yapıştır</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="786"/>
         <source>Ctrl+V</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+V</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="794"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Sil</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="802"/>
         <source>&amp;Select All</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hepsini Seç</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="805"/>
         <source>Ctrl+A</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+A</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="813"/>
         <source>E&amp;mbed Image</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Görüntü Eklemek</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="816"/>
         <location filename="../../fn.cpp" line="3721"/>
         <source>Embed Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Görüntü Eklemek</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="819"/>
         <source>Ctrl+Alt+Shift+I</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Alt+Shift+I</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="827"/>
         <source>E&amp;xpand All</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tümünü Genişlet</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="830"/>
         <source>Ctrl+Shift+Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+Aşağı Yön Tuşu</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="838"/>
         <source>Collap&amp;se All</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tümünü Daralt</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="841"/>
         <source>Ctrl+Shift+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+Up</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="849"/>
@@ -531,57 +531,57 @@
     <message>
         <location filename="../../fn.ui" line="852"/>
         <source>Ctrl+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="860"/>
         <source>Append &amp;Child</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Çocuk Ekle</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="863"/>
         <source>Ctrl+Shift+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+N</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="871"/>
         <source>&amp;Delete Node</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Düğümü Sil</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="874"/>
         <source>Ctrl+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+D</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="882"/>
         <source>Move &amp;Up</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Yukarı Taşı</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="885"/>
         <source>Alt+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Yukarı Yön Tuşu</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="893"/>
         <source>Move Do&amp;wn</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Aşağı Taşı</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="896"/>
         <source>Alt+Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Aşağı Yön Tuşu</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="904"/>
         <source>Re&amp;name Node</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Düğümü Yeniden Adlandır</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="907"/>
         <source>Ctrl+Shift+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+R</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="912"/>
@@ -591,157 +591,157 @@
     <message>
         <location filename="../../fn.ui" line="915"/>
         <source>Ctrl+Shift+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+D</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="923"/>
         <source>Document &amp;Font</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Belge Yazı Tipi</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="937"/>
         <source>&amp;Wrap Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Çizgileri Sarın</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="940"/>
         <source>Ctrl+W</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+W</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="954"/>
         <source>&amp;Auto-Indentation</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Otomatik Girinti</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="957"/>
         <source>Ctrl+Shift+I</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+I</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="962"/>
         <source>&amp;Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tercih</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="965"/>
         <source>Ctrl+Shift+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+P</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="973"/>
         <source>Find and &amp;Replace</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bul ve Değiştir</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="976"/>
         <source>Ctrl+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+R</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="984"/>
         <source>Ctrl+H</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+H</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="989"/>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hakkında</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="997"/>
         <source>Pr&amp;int All Nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tüm Düğümleri Yazdır</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1008"/>
         <source>Superscrip&amp;t</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Üst simge</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1011"/>
         <source>Superscript</source>
-        <translation type="unfinished"></translation>
+        <translation>Üst simge</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1014"/>
         <source>Alt+Shift+U</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+U</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1025"/>
         <source>Subscri&amp;pt</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Alt simge</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1028"/>
         <source>Subscript</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt simge</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1031"/>
         <source>Alt+Shift+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+S</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1042"/>
         <source>C&amp;enter</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Orta</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1045"/>
         <source>Align center</source>
-        <translation type="unfinished"></translation>
+        <translation>Merkezi Hizala</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1048"/>
         <source>Alt+Shift+Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+Down</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1059"/>
         <source>&amp;Right</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Sağ</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1062"/>
         <source>Align right</source>
-        <translation type="unfinished"></translation>
+        <translation>Sağa Hizala</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1065"/>
         <source>Alt+Shift+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+Sağ Yön Tuşu</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1076"/>
         <source>&amp;Left</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Sol</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1079"/>
         <source>Align left</source>
-        <translation type="unfinished"></translation>
+        <translation>Sola Hizala</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1082"/>
         <source>Alt+Shift+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+Sol Yön Tuşu</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1093"/>
         <source>&amp;Justify</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Yasla</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1096"/>
         <source>Justify</source>
-        <translation type="unfinished"></translation>
+        <translation>Yasla</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1099"/>
         <source>Alt+Shift+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+Yukarı Yön Tuşu</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1107"/>
@@ -751,7 +751,7 @@
     <message>
         <location filename="../../fn.ui" line="1110"/>
         <source>Ctrl+M</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+M</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1118"/>
