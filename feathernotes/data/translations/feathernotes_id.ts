@@ -14,12 +14,12 @@
     <message>
         <location filename="../../colorLabel.cpp" line="31"/>
         <source>Click to change color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Klik untuk mengubah warna.</translation>
     </message>
     <message>
         <location filename="../../colorLabel.cpp" line="53"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Pilih Warna</translation>
     </message>
 </context>
 <context>
@@ -963,23 +963,23 @@
         <location filename="../../fn.ui" line="1339"/>
         <location filename="../../fn.ui" line="1342"/>
         <source>Check Spelling</source>
-        <translation type="unfinished"></translation>
+        <translation>Periksa Ejaan</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1345"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1350"/>
         <source>Document &amp;Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Dokumen &amp; Warna</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1358"/>
         <location filename="../../fn.ui" line="1361"/>
         <source>Paste Date and Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Tempel Tanggal dan Waktu</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2463"/>
@@ -1220,12 +1220,12 @@
     <message>
         <location filename="../../fn.cpp" line="2162"/>
         <source>Select Text Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Pilih Warna Teks</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2184"/>
         <source>Select Background Color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pilih Warna Latar Belakang</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2294"/>
@@ -1246,17 +1246,17 @@
     <message>
         <location filename="../../fn.cpp" line="2675"/>
         <source>Select Document Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Pilih Font Dokumen</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2738"/>
         <source>Select Node Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Pilih Font Node</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2753"/>
         <source>Set Document Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Mengatur Warna Dokumen</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2763"/>
