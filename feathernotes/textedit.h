@@ -81,7 +81,7 @@ private:
     QString textTab_; // text tab in terms of spaces
     QPoint pressPoint;
     QElapsedTimer tripleClickTimer_;
-    bool multipleClick_;
+    bool noDataFromSelection_; // used internally for a workaround
     /****************************
      ***** Smooth scrolling *****
      ****************************/

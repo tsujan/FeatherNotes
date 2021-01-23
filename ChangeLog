@@ -1,7 +1,8 @@
 V0.9.0
 ---------
  * Small fixes to smooth scrolling and link opening.
- * Prevent Qt from continuously setting the selection clipboard on selection change with mouse.
+ * Require Qt5.12.
+ * Prevent Qt from continuously setting the selection clipboard on selection change with mouse (after a double/triple click).
 
 V0.8.0
 ---------

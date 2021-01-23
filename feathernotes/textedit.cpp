@@ -42,7 +42,7 @@ TextEdit::TextEdit (QWidget *parent) : QTextEdit (parent)
     autoReplace = false;
     textTab_ = "    "; // the default text tab is four spaces
     pressPoint = QPoint();
-    multipleClick_ = false;
+    noDataFromSelection_ = false;
     scrollTimer_ = nullptr;
 
     VScrollBar *vScrollBar = new VScrollBar;
@@ -713,7 +713,7 @@ QMimeData* TextEdit::createMimeDataFromSelection() const
              the selected text will be sent to the selection clipboard continuously,
              which will result in this warning under X11:
              "QXcbClipboard: SelectionRequest too old" */
-    if (!multipleClick_ && textCursor().hasSelection())
+    if (!noDataFromSelection_ && textCursor().hasSelection())
         return QTextEdit::createMimeDataFromSelection();
     return nullptr;
 }
@@ -791,7 +791,7 @@ void TextEdit::mousePressEvent (QMouseEvent *e)
             && e->buttons() == Qt::LeftButton)
         {
             tripleClickTimer_.invalidate();
-            multipleClick_ = true;
+            noDataFromSelection_ = true;
             if (!(qApp->keyboardModifiers() & Qt::ControlModifier))
             {
                 QTextCursor txtCur = textCursor();
@@ -822,7 +822,16 @@ void TextEdit::mousePressEvent (QMouseEvent *e)
             tripleClickTimer_.invalidate();
     }
 
+    if (e->buttons() == Qt::LeftButton
+        && (qApp->keyboardModifiers() & Qt::ShiftModifier))
+    {
+        /* this is definitely not a drag start but may happen after
+           a double/triple click; see createMimeDataFromSelection() */
+        noDataFromSelection_ = true;
+    }
+
     QTextEdit::mousePressEvent (e);
+
     if (e->button() == Qt::LeftButton)
         pressPoint = e->pos();
 }
@@ -833,9 +842,9 @@ void TextEdit::mouseReleaseEvent (QMouseEvent *e)
     /* NOTE: In createMimeDataFromSelection(), we prevented Qt from giving the selected
              text to the selection clipboard after a double/triple click. Instead, we
              set the selection clipboard here, after the left mouse button is released. */
-    if (multipleClick_)
+    if (noDataFromSelection_)
     {
-        multipleClick_ = false;
+        noDataFromSelection_ = false;
         if (e->button() == Qt::LeftButton)
         {
             QClipboard *cl = QApplication::clipboard();
@@ -870,7 +879,7 @@ void TextEdit::mouseReleaseEvent (QMouseEvent *e)
 /*************************/
 void TextEdit::mouseDoubleClickEvent (QMouseEvent *e)
 {
-    multipleClick_ = true;
+    noDataFromSelection_ = true;
     tripleClickTimer_.start();
     QTextEdit::mouseDoubleClickEvent (e);
 }
