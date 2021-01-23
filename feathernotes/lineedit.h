@@ -38,7 +38,7 @@ signals:
 protected:
     virtual void keyPressEvent (QKeyEvent *event)
     {
-        /* because of a bug in Qt5, the non-breaking space (ZWNJ) isn't inserted with SHIFT+SPACE */
+        /* because of a bug in Qt, the non-breaking space (ZWNJ) may not be inserted with SHIFT+SPACE */
         if (event->key() == 0x200c)
         {
             insert (QChar (0x200C));

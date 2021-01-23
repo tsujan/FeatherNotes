@@ -42,16 +42,11 @@ TextEdit::TextEdit (QWidget *parent) : QTextEdit (parent)
     autoReplace = false;
     textTab_ = "    "; // the default text tab is four spaces
     pressPoint = QPoint();
+    multipleClick_ = false;
     scrollTimer_ = nullptr;
 
     VScrollBar *vScrollBar = new VScrollBar;
     setVerticalScrollBar (vScrollBar);
-
-#if (QT_VERSION == QT_VERSION_CHECK(5,14,0))
-    /* workaround */
-    HScrollBar *hScrollBar = new HScrollBar;
-    setHorizontalScrollBar (hScrollBar);
-#endif
 }
 /*************************/
 TextEdit::~TextEdit()
@@ -70,11 +65,7 @@ QString TextEdit::remainingSpaces (const QString& spaceTab, const QTextCursor& c
     QTextCursor tmp = cursor;
     QString txt = cursor.block().text().left (cursor.positionInBlock());
     QFontMetricsF fm = QFontMetricsF (document()->defaultFont());
-#if (QT_VERSION >= QT_VERSION_CHECK(5,11,0))
     qreal spaceL = fm.horizontalAdvance (" ");
-#else
-    qreal spaceL = fm.width (" ");
-#endif
     int n = 0, i = 0;
     while ((i = txt.indexOf("\t", i)) != -1)
     { // find tab widths in terms of spaces
@@ -111,11 +102,7 @@ QTextCursor TextEdit::backTabCursor (const QTextCursor& cursor, bool twoSpace) c
 
     QString txt = blockText.left (indx);
     QFontMetricsF fm = QFontMetricsF (document()->defaultFont());
-#if (QT_VERSION >= QT_VERSION_CHECK(5,11,0))
     qreal spaceL = fm.horizontalAdvance (" ");
-#else
-    qreal spaceL = fm.width (" ");
-#endif
     int n = 0, i = 0;
     while ((i = txt.indexOf("\t", i)) != -1)
     { // find tab widths in terms of spaces
@@ -564,7 +551,7 @@ void TextEdit::keyPressEvent (QKeyEvent *event)
         }
 
     }
-    /* because of a bug in Qt5, the non-breaking space (ZWNJ) isn't inserted with SHIFT+SPACE */
+    /* because of a bug in Qt, the non-breaking space (ZWNJ) may not be inserted with SHIFT+SPACE */
     else if (event->key() == 0x200c)
     {
         insertPlainText (QChar (0x200C));
@@ -720,6 +707,17 @@ bool TextEdit::event (QEvent *e)
     return QTextEdit::event (e);
 }
 /*************************/
+QMimeData* TextEdit::createMimeDataFromSelection() const
+{
+    /* NOTE: Because of a Qt bug, if the mouse moves after a double/triple click,
+             the selected text will be sent to the selection clipboard continuously,
+             which will result in this warning under X11:
+             "QXcbClipboard: SelectionRequest too old" */
+    if (!multipleClick_ && textCursor().hasSelection())
+        return QTextEdit::createMimeDataFromSelection();
+    return nullptr;
+}
+/*************************/
 bool TextEdit::canInsertFromMimeData (const QMimeData *source) const
 {
     if (source->hasImage() || source->hasUrls())
@@ -793,29 +791,35 @@ void TextEdit::mousePressEvent (QMouseEvent *e)
             && e->buttons() == Qt::LeftButton)
         {
             tripleClickTimer_.invalidate();
-            QTextCursor txtCur = textCursor();
-            const QString blockText = txtCur.block().text();
-            const int l = blockText.length();
-            txtCur.movePosition (QTextCursor::StartOfBlock);
-            int i = 0;
-            while (i < l && blockText.at (i).isSpace())
-                ++i;
-            /* WARNING: QTextCursor::movePosition() can be a mess with RTL
-                        but QTextCursor::setPosition() works fine. */
-            if (i < l)
+            multipleClick_ = true;
+            if (!(qApp->keyboardModifiers() & Qt::ControlModifier))
             {
-                txtCur.setPosition (txtCur.position() + i);
-                int j = l;
-                while (j > i && blockText.at (j -  1).isSpace())
-                    --j;
-                txtCur.setPosition (txtCur.position() + j - i, QTextCursor::KeepAnchor);
+                QTextCursor txtCur = textCursor();
+                const QString blockText = txtCur.block().text();
+                const int l = blockText.length();
+                txtCur.movePosition (QTextCursor::StartOfBlock);
+                int i = 0;
+                while (i < l && blockText.at (i).isSpace())
+                    ++i;
+                /* WARNING: QTextCursor::movePosition() can be a mess with RTL
+                            but QTextCursor::setPosition() works fine. */
+                if (i < l)
+                {
+                    txtCur.setPosition (txtCur.position() + i);
+                    int j = l;
+                    while (j > i && blockText.at (j -  1).isSpace())
+                        --j;
+                    txtCur.setPosition (txtCur.position() + j - i, QTextCursor::KeepAnchor);
+                }
+                else
+                    txtCur.setPosition (txtCur.position() + i, QTextCursor::KeepAnchor);
+                setTextCursor (txtCur);
+                e->accept();
+                return;
             }
-            else
-                txtCur.setPosition (txtCur.position() + i, QTextCursor::KeepAnchor);
-            setTextCursor (txtCur);
-            return;
         }
-        tripleClickTimer_.invalidate();
+        else
+            tripleClickTimer_.invalidate();
     }
 
     QTextEdit::mousePressEvent (e);
@@ -826,18 +830,28 @@ void TextEdit::mousePressEvent (QMouseEvent *e)
 /*************************/
 void TextEdit::mouseReleaseEvent (QMouseEvent *e)
 {
+    /* NOTE: In createMimeDataFromSelection(), we prevented Qt from giving the selected
+             text to the selection clipboard after a double/triple click. Instead, we
+             set the selection clipboard here, after the left mouse button is released. */
+    if (multipleClick_)
+    {
+        multipleClick_ = false;
+        if (e->button() == Qt::LeftButton)
+        {
+            QClipboard *cl = QApplication::clipboard();
+            if (cl->supportsSelection())
+            {
+                if (QMimeData *data = createMimeDataFromSelection())
+                    cl->setMimeData (data, QClipboard::Selection);
+            }
+        }
+        e->accept();
+        return;
+    }
+
     QTextEdit::mouseReleaseEvent (e);
     if (e->button() != Qt::LeftButton)
         return;
-
-    /* give only a plain text to the selection clipboard */
-    QTextCursor cursor = textCursor();
-    if (cursor.hasSelection())
-    {
-        QClipboard *cl = QApplication::clipboard();
-        if (cl->supportsSelection())
-            cl->setText (cursor.selection().toPlainText(), QClipboard::Selection);
-    }
 
     QString str = anchorAt (e->pos());
     if (!str.isEmpty()
@@ -856,6 +870,7 @@ void TextEdit::mouseReleaseEvent (QMouseEvent *e)
 /*************************/
 void TextEdit::mouseDoubleClickEvent (QMouseEvent *e)
 {
+    multipleClick_ = true;
     tripleClickTimer_.start();
     QTextEdit::mouseDoubleClickEvent (e);
 }
@@ -872,11 +887,7 @@ void TextEdit::wheelEvent (QWheelEvent *e)
     /* smooth scrolling */
     if (e->spontaneous() && e->source() == Qt::MouseEventNotSynthesized)
     {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
         bool horizontal (e->angleDelta().x() != 0);
-#else
-        bool horizontal (e->orientation() == Qt::Horizontal);
-#endif
         QScrollBar* sbar = horizontal
                                ? horizontalScrollBar() : verticalScrollBar();
         if (sbar)
@@ -943,32 +954,18 @@ void TextEdit::scrollSmoothly()
 
     if (totalDeltaH != 0 && horizontalScrollBar())
     {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
         QWheelEvent eventH (QPointF(),
                             QPointF(),
                             QPoint(),
-#if (QT_VERSION == QT_VERSION_CHECK(5,14,0))
-                            QPoint (totalDeltaH, 0),
-#else
                             QPoint (0, totalDeltaH),
-#endif
                             Qt::NoButton,
                             Qt::NoModifier,
                             Qt::NoScrollPhase,
                             false);
-#else
-        QWheelEvent eventH (QPointF(),
-                            QPointF(),
-                            totalDeltaH,
-                            Qt::NoButton,
-                            Qt::NoModifier,
-                            Qt::Vertical);
-#endif
         QCoreApplication::sendEvent (horizontalScrollBar(), &eventH);
     }
     if (totalDeltaV != 0 && verticalScrollBar())
     {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
         QWheelEvent eventV (QPointF(),
                             QPointF(),
                             QPoint(),
@@ -977,14 +974,6 @@ void TextEdit::scrollSmoothly()
                             Qt::NoModifier,
                             Qt::NoScrollPhase,
                             false);
-#else
-        QWheelEvent eventV (QPointF(),
-                            QPointF(),
-                            totalDeltaV,
-                            Qt::NoButton,
-                            Qt::NoModifier,
-                            Qt::Vertical);
-#endif
         QCoreApplication::sendEvent (verticalScrollBar(), &eventV);
     }
 
@@ -1000,16 +989,8 @@ void TextEdit::zooming (float range)
     if (newSize <= 0) return;
     f.setPointSizeF (static_cast<qreal>(newSize));
     setFont (f);
-#if (QT_VERSION >= QT_VERSION_CHECK(5,11,0))
     QFontMetricsF metrics (f);
     setTabStopDistance (4 * metrics.horizontalAdvance (' '));
-#elif (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-    QFontMetricsF metrics (f);
-    setTabStopDistance (4 * metrics.width (' '));
-#else
-    QFontMetrics metrics (f);
-    setTabStopWidth (4 * metrics.width (' '));
-#endif
 
     /* if this is a zoom-out, the text will need
        to be formatted and/or highlighted again */

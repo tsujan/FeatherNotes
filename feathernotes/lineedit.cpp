@@ -58,7 +58,7 @@ void LineEdit::Klear()
     /* we'll need this for clearing found matches highlighting
        because the compiler won't know that clearButton is a QObject */
     if (returnOnClear)
-        returnPressed();
+        emit returnPressed();
 }
 /*************************/
 void LineEdit::unfocused()

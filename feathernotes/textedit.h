@@ -59,6 +59,7 @@ public slots:
 
 protected:
     void keyPressEvent (QKeyEvent *event);
+    QMimeData* createMimeDataFromSelection() const;
     bool canInsertFromMimeData (const QMimeData *source) const;
     void insertFromMimeData (const QMimeData *source);
     void mouseMoveEvent (QMouseEvent *e);
@@ -67,7 +68,7 @@ protected:
     void mouseDoubleClickEvent (QMouseEvent *e);
     void resizeEvent (QResizeEvent *e);
     bool event (QEvent *e);
-    virtual void wheelEvent (QWheelEvent *e);
+    void wheelEvent (QWheelEvent *e);
 
 private slots:
     void scrollSmoothly();
@@ -80,6 +81,7 @@ private:
     QString textTab_; // text tab in terms of spaces
     QPoint pressPoint;
     QElapsedTimer tripleClickTimer_;
+    bool multipleClick_;
     /****************************
      ***** Smooth scrolling *****
      ****************************/

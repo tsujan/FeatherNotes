@@ -54,12 +54,10 @@
 #include <QTextDocumentFragment>
 #include <QTextDocumentWriter>
 #include <QClipboard>
+#include <QApplication>
 #include <QMimeDatabase>
 
 #ifdef HAS_X11
-#if defined Q_WS_X11 || defined Q_OS_LINUX || defined Q_OS_OPENBSD || defined Q_OS_NETBSD || defined Q_OS_HURD
-#include <QX11Info>
-#endif
 #include "x11.h"
 #endif
 
@@ -77,8 +75,8 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
 {
 #ifdef HAS_X11
     // For now, the lack of x11 is seen as wayland.
-#if defined Q_WS_X11 || defined Q_OS_LINUX || defined Q_OS_FREEBSD || defined Q_OS_OPENBSD || defined Q_OS_NETBSD || defined Q_OS_HURD
-    isX11_ = QX11Info::isPlatformX11();
+#if defined Q_OS_LINUX || defined Q_OS_FREEBSD || defined Q_OS_OPENBSD || defined Q_OS_NETBSD || defined Q_OS_HURD
+    isX11_ = (QString::compare (QGuiApplication::platformName(), "xcb", Qt::CaseInsensitive) == 0);
 #else
     isX11_ = false;
 #endif // defined Q_WS_X11
@@ -158,22 +156,22 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
 
     reservedShortcuts_
     /* QTextEdit */
-    << QKeySequence (Qt::CTRL + Qt::SHIFT + Qt::Key_Z).toString() << QKeySequence (Qt::CTRL + Qt::Key_Z).toString() << QKeySequence (Qt::CTRL + Qt::Key_X).toString() << QKeySequence (Qt::CTRL + Qt::Key_C).toString() << QKeySequence (Qt::CTRL + Qt::Key_V).toString() << QKeySequence (Qt::CTRL + Qt::Key_A).toString()
-    << QKeySequence (Qt::SHIFT + Qt::Key_Insert).toString() << QKeySequence (Qt::SHIFT + Qt::Key_Delete).toString() << QKeySequence (Qt::CTRL + Qt::Key_Insert).toString()
-    << QKeySequence (Qt::CTRL + Qt::Key_Left).toString() << QKeySequence (Qt::CTRL + Qt::Key_Right).toString() << QKeySequence (Qt::CTRL + Qt::Key_Up).toString() << QKeySequence (Qt::CTRL + Qt::Key_Down).toString()
-    << QKeySequence (Qt::CTRL + Qt::Key_Home).toString() << QKeySequence (Qt::CTRL + Qt::Key_End).toString()
-    << QKeySequence (Qt::CTRL + Qt::SHIFT + Qt::Key_Up).toString() << QKeySequence (Qt::CTRL + Qt::SHIFT + Qt::Key_Down).toString()
-    << QKeySequence (Qt::META + Qt::Key_Up).toString() << QKeySequence (Qt::META + Qt::Key_Down).toString() << QKeySequence (Qt::META + Qt::SHIFT + Qt::Key_Up).toString() << QKeySequence (Qt::META + Qt::SHIFT + Qt::Key_Down).toString()
+    << QKeySequence (Qt::CTRL | Qt::SHIFT | Qt::Key_Z).toString() << QKeySequence (Qt::CTRL | Qt::Key_Z).toString() << QKeySequence (Qt::CTRL | Qt::Key_X).toString() << QKeySequence (Qt::CTRL | Qt::Key_C).toString() << QKeySequence (Qt::CTRL | Qt::Key_V).toString() << QKeySequence (Qt::CTRL | Qt::Key_A).toString()
+    << QKeySequence (Qt::SHIFT | Qt::Key_Insert).toString() << QKeySequence (Qt::SHIFT | Qt::Key_Delete).toString() << QKeySequence (Qt::CTRL | Qt::Key_Insert).toString()
+    << QKeySequence (Qt::CTRL | Qt::Key_Left).toString() << QKeySequence (Qt::CTRL | Qt::Key_Right).toString() << QKeySequence (Qt::CTRL | Qt::Key_Up).toString() << QKeySequence (Qt::CTRL | Qt::Key_Down).toString()
+    << QKeySequence (Qt::CTRL | Qt::Key_Home).toString() << QKeySequence (Qt::CTRL | Qt::Key_End).toString()
+    << QKeySequence (Qt::CTRL | Qt::SHIFT | Qt::Key_Up).toString() << QKeySequence (Qt::CTRL | Qt::SHIFT | Qt::Key_Down).toString()
+    << QKeySequence (Qt::META | Qt::Key_Up).toString() << QKeySequence (Qt::META | Qt::Key_Down).toString() << QKeySequence (Qt::META | Qt::SHIFT | Qt::Key_Up).toString() << QKeySequence (Qt::META | Qt::SHIFT | Qt::Key_Down).toString()
     /* search and replacement */
     << QKeySequence (Qt::Key_F3).toString() << QKeySequence (Qt::Key_F4).toString() << QKeySequence (Qt::Key_F5).toString() << QKeySequence (Qt::Key_F6).toString() << QKeySequence (Qt::Key_F7).toString()
     << QKeySequence (Qt::Key_F8).toString() << QKeySequence (Qt::Key_F9).toString() << QKeySequence (Qt::Key_F10).toString()
-    << QKeySequence (Qt::Key_F11).toString() << QKeySequence (Qt::CTRL + Qt::SHIFT + Qt::Key_W).toString() << QKeySequence (Qt::SHIFT + Qt::Key_F7).toString() << QKeySequence (Qt::CTRL + Qt::SHIFT + Qt::Key_F7).toString()
+    << QKeySequence (Qt::Key_F11).toString() << QKeySequence (Qt::CTRL | Qt::SHIFT | Qt::Key_W).toString() << QKeySequence (Qt::SHIFT | Qt::Key_F7).toString() << QKeySequence (Qt::CTRL | Qt::SHIFT | Qt::Key_F7).toString()
     /* zooming */
-    << QKeySequence (Qt::CTRL + Qt::Key_Equal).toString() << QKeySequence (Qt::CTRL + Qt::Key_Plus).toString() << QKeySequence (Qt::CTRL + Qt::Key_Minus).toString() << QKeySequence (Qt::CTRL + Qt::Key_0).toString()
+    << QKeySequence (Qt::CTRL | Qt::Key_Equal).toString() << QKeySequence (Qt::CTRL | Qt::Key_Plus).toString() << QKeySequence (Qt::CTRL | Qt::Key_Minus).toString() << QKeySequence (Qt::CTRL | Qt::Key_0).toString()
     /* text tabulation */
-    << QKeySequence (Qt::SHIFT + Qt::Key_Enter).toString() << QKeySequence (Qt::SHIFT + Qt::Key_Return).toString() << QKeySequence (Qt::CTRL + Qt::Key_Tab).toString() << QKeySequence (Qt::CTRL + Qt::META + Qt::Key_Tab).toString()
+    << QKeySequence (Qt::SHIFT | Qt::Key_Enter).toString() << QKeySequence (Qt::SHIFT | Qt::Key_Return).toString() << QKeySequence (Qt::CTRL | Qt::Key_Tab).toString() << QKeySequence (Qt::CTRL | Qt::META | Qt::Key_Tab).toString()
     /* used by LineEdit as well as QTextEdit */
-    << QKeySequence (Qt::CTRL + Qt::Key_K).toString();
+    << QKeySequence (Qt::CTRL | Qt::Key_K).toString();
     readShortcuts();
 
     QHash<QString, QString>::const_iterator it = customActions_.constBegin();
@@ -388,13 +386,13 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     QShortcut *fullscreen = new QShortcut (QKeySequence (Qt::Key_F11), this);
     connect (fullscreen, &QShortcut::activated, this, &FN::fullScreening);
 
-    QShortcut *defaultsize = new QShortcut (QKeySequence (Qt::CTRL + Qt::SHIFT + Qt::Key_W), this);
+    QShortcut *defaultsize = new QShortcut (QKeySequence (Qt::CTRL | Qt::SHIFT | Qt::Key_W), this);
     connect (defaultsize, &QShortcut::activated, this, &FN::defaultSize);
 
-    QShortcut *zoomin = new QShortcut (QKeySequence (Qt::CTRL + Qt::Key_Equal), this);
-    QShortcut *zoominPlus = new QShortcut (QKeySequence (Qt::CTRL + Qt::Key_Plus), this);
-    QShortcut *zoomout = new QShortcut (QKeySequence (Qt::CTRL + Qt::Key_Minus), this);
-    QShortcut *unzoom = new QShortcut (QKeySequence (Qt::CTRL + Qt::Key_0), this);
+    QShortcut *zoomin = new QShortcut (QKeySequence (Qt::CTRL | Qt::Key_Equal), this);
+    QShortcut *zoominPlus = new QShortcut (QKeySequence (Qt::CTRL | Qt::Key_Plus), this);
+    QShortcut *zoomout = new QShortcut (QKeySequence (Qt::CTRL | Qt::Key_Minus), this);
+    QShortcut *unzoom = new QShortcut (QKeySequence (Qt::CTRL | Qt::Key_0), this);
     connect (zoomin, &QShortcut::activated, this, &FN::zoomingIn);
     connect (zoominPlus, &QShortcut::activated, this, &FN::zoomingIn);
     connect (zoomout, &QShortcut::activated, this, &FN::zoomingOut);
@@ -698,16 +696,8 @@ void FN::unZooming()
 
     TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
     textEdit->setFont (defaultFont_);
-#if (QT_VERSION >= QT_VERSION_CHECK(5,11,0))
     QFontMetricsF metrics (defaultFont_);
     textEdit->setTabStopDistance (4 * metrics.horizontalAdvance (' '));
-#elif (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-    QFontMetricsF metrics (defaultFont_);
-    textEdit->setTabStopDistance (4 * metrics.width (' '));
-#else
-    QFontMetrics metrics (defaultFont_);
-    textEdit->setTabStopWidth (4 * metrics.width (' '));
-#endif
 
     /* this may be a zoom-out */
     rehighlight (textEdit);
@@ -1675,16 +1665,8 @@ TextEdit *FN::newWidget()
     /* we want consistent widgets */
     textEdit->setFont (defaultFont_); // needed when the application font changes
     textEdit->document()->setDefaultFont (defaultFont_);
-#if (QT_VERSION >= QT_VERSION_CHECK(5,11,0))
     QFontMetricsF metrics (defaultFont_);
     textEdit->setTabStopDistance (4 * metrics.horizontalAdvance (' '));
-#elif (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-    QFontMetricsF metrics (defaultFont_);
-    textEdit->setTabStopDistance (4 * metrics.width (' '));
-#else
-    QFontMetrics metrics (defaultFont_);
-    textEdit->setTabStopWidth (4 * metrics.width (' '));
-#endif
 
     int index = ui->stackedWidget->currentIndex();
     ui->stackedWidget->insertWidget (index + 1, textEdit);
@@ -2693,16 +2675,8 @@ void FN::textFontDialog()
             QTextCursor cursor = it.value()->textCursor();
             cursor.select (QTextCursor::Document);
             cursor.mergeCharFormat (fmt);
-#if (QT_VERSION >= QT_VERSION_CHECK(5,11,0))
             QFontMetricsF metrics (defaultFont_);
             it.value()->setTabStopDistance (4 * metrics.horizontalAdvance (' '));
-#elif (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-            QFontMetricsF metrics (defaultFont_);
-            it.value()->setTabStopDistance (4 * metrics.width (' '));
-#else
-            QFontMetrics metrics (defaultFont_);
-            it.value()->setTabStopWidth (4 * metrics.width (' '));
-#endif
         }
 
         /* also, change the font for all nodes that aren't shown yet */

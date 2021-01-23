@@ -19,7 +19,6 @@
 
 #include <QFile>
 #include <QTextStream>
-#include <QTextCodec>
 #include <QStringList>
 #include <QRegularExpression>
 
@@ -83,7 +82,7 @@ QStringList SpellChecker::suggest (const QString& word)
 {
     const std::vector<std::string> strSuggestions = hunspell_->suggest (word.toStdString());
     QStringList suggestions;
-    for (auto str : strSuggestions)
+    for (const auto &str : strSuggestions)
         suggestions << QString::fromStdString (str);
     return suggestions;
 }

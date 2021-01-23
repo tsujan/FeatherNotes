@@ -20,6 +20,7 @@
 
 #include <QString>
 #include <QHash>
+#include <QTextCodec>
 
 class Hunspell;
 

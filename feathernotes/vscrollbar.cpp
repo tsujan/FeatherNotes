@@ -17,9 +17,7 @@
 
 #include "vscrollbar.h"
 #include <QApplication>
-#if (QT_VERSION != QT_VERSION_CHECK(5,14,0))
 #include <QEvent>
-#endif
 
 namespace FeatherNotes {
 
@@ -36,7 +34,7 @@ bool VScrollBar::event (QEvent *event)
     if (event->type() == QEvent::Enter)
         QApplication::setWheelScrollLines (102);
     else if (event->type() == QEvent::Leave
-             /* Apparently, the Qt5 hover bug is never going to be fixed! */
+             /* Apparently, Qt's hover bug is never going to be fixed! */
              || (QApplication::wheelScrollLines() != defaultWheelSpeed
                  && !rect().contains (mapFromGlobal (QCursor::pos()))))
     {
@@ -45,28 +43,5 @@ bool VScrollBar::event (QEvent *event)
 
     return QScrollBar::event (event);
 }
-/*************************/
-#if (QT_VERSION == QT_VERSION_CHECK(5,14,0))
-void HScrollBar::wheelEvent (QWheelEvent *event) {
-    if (event->angleDelta().x() == 0)
-    {
-        int deltaY = event->angleDelta().y();
-        if (deltaY != 0)
-        {
-            QWheelEvent e (event->pos(),
-                           event->globalPos(),
-                           event->pixelDelta(),
-                           QPoint (deltaY, 0),
-                           event->buttons(),
-                           event->modifiers(),
-                           event->phase(),
-                           event->source());
-            QCoreApplication::sendEvent (this, &e);
-            return;
-        }
-    }
-    QScrollBar::wheelEvent (event);
-}
-#endif
 
 }
