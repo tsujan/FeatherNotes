@@ -1,7 +1,7 @@
 V0.9.0
 ---------
  * Small fixes to smooth scrolling and link opening.
- * Prevent Qt from giving non-plain text to the selection clipboard.
+ * Prevent Qt from continuously setting the selection clipboard on selection change with mouse.
 
 V0.8.0
 ---------
