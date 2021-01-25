@@ -802,6 +802,12 @@ void FN::newNote()
         }
     }
 
+    /* first reset the password and fonts */
+    pswrd_.clear();
+    defaultFont_ = QFont ("Monospace");
+    defaultFont_.setPointSize (qMax (font().pointSize(), 9));
+    nodeFont_ = font();
+
     QDomDocument doc;
     QDomProcessingInstruction inst = doc.createProcessingInstruction ("xml", "version=\'1.0\' encoding=\'utf-8\'");
     doc.insertBefore(inst, QDomNode());
@@ -1083,10 +1089,11 @@ void FN::fileOpen (const QString &filePath, bool startup)
                 }
                 else
                 {
+                    QString oldPswrd = pswrd_;
                     pswrd_ = root.attribute ("pswrd");
                     if (!pswrd_.isEmpty() && !isPswrdCorrect())
                     {
-                        pswrd_.clear();
+                        pswrd_ = oldPswrd;
                         if (startup)
                         {
                             xmlPath_.clear();
@@ -1119,7 +1126,8 @@ void FN::fileOpen (const QString &filePath, bool startup)
             xmlPath_.clear();
             return;
         }
-        notSavedOrOpened (false);
+        if (!filePath.isEmpty())
+            notSavedOrOpened (false);
     }
 
     /* start the timer (again) if file
