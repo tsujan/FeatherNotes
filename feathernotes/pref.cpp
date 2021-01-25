@@ -326,6 +326,12 @@ PrefDialog::PrefDialog (QWidget *parent)
             win->setOpenLastFile (checked == Qt::Checked);
         });
 
+        /* the number of recently opend files */
+        ui->recentSpin->setValue (win->getRecentFilesNumber());
+        connect (ui->recentSpin, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), win, [win] (int value) {
+            win->setRecentFilesNumber (value); // will take effect at closeEvent()
+        });
+
         /* spell checking */
 #ifdef HAS_HUNSPELL
         ui->dictEdit->setText (win->getDictPath());
@@ -480,7 +486,7 @@ void PrefDialog::onClosing()
 
         win->writeConfig();
         win->writeGeometryConfig();
-        win->rememberLastOpenedFile();
+        win->rememberLastOpenedFile (true); // sets recent files info too
     }
 }
 /*************************/

@@ -43,7 +43,7 @@ public:
     ~FN();
 
     void writeGeometryConfig();
-    void rememberLastOpenedFile();
+    void rememberLastOpenedFile (bool recentNumIsSet = false);
     void writeConfig();
 
     bool isSizeRem() const {
@@ -209,6 +209,11 @@ public:
         openLastFile_ = openLastFile;
     }
 
+    int getRecentFilesNumber();
+    void setRecentFilesNumber (int recentNum) {
+        recentNum_ = recentNum;
+    }
+
 #ifdef HAS_HUNSPELL
     QString getDictPath() const {
         return dictPath_;
@@ -327,6 +332,10 @@ private slots:
     void checkPswrd();
     void aboutDialog();
     void showHelpDialog();
+    void updateRecentAction();
+    void updateRecenMenu();
+    void openRecentFile();
+    void clearRecentMenu();
     void closeTagsDialog();
 
 #ifdef HAS_HUNSPELL
@@ -343,7 +352,7 @@ private:
     void showEvent (QShowEvent *event);
     void showDoc (QDomDocument &doc);
     void setTitle (const QString& fname);
-    void notSaved();
+    void notSavedOrOpened (bool notSaved);
     void setNodesTexts();
     bool unSaved (bool modified);
     TextEdit *newWidget();
@@ -397,6 +406,7 @@ private:
     QString linkAtPos_; // Text hyperlink at the right-click position.
     QTextTable *txtTable_; // Text table at the right-click position.
     int imgScale_; QString lastImgPath_;
+    int recentNum_;
     bool shownBefore_,
          remSize_, remSplitter_,
          remPosition_,

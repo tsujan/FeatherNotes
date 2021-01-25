@@ -42,7 +42,6 @@ TextEdit::TextEdit (QWidget *parent) : QTextEdit (parent)
     autoReplace = false;
     textTab_ = "    "; // the default text tab is four spaces
     pressPoint = QPoint();
-    noDataFromSelection_ = false;
     scrollTimer_ = nullptr;
 
     VScrollBar *vScrollBar = new VScrollBar;
@@ -707,17 +706,6 @@ bool TextEdit::event (QEvent *e)
     return QTextEdit::event (e);
 }
 /*************************/
-QMimeData* TextEdit::createMimeDataFromSelection() const
-{
-    /* NOTE: Because of a Qt bug, if the mouse moves after a double/triple click,
-             the selected text will be sent to the selection clipboard continuously,
-             which will result in this warning under X11:
-             "QXcbClipboard: SelectionRequest too old" */
-    if (!noDataFromSelection_ && textCursor().hasSelection())
-        return QTextEdit::createMimeDataFromSelection();
-    return nullptr;
-}
-/*************************/
 bool TextEdit::canInsertFromMimeData (const QMimeData *source) const
 {
     if (source->hasImage() || source->hasUrls())
@@ -791,7 +779,6 @@ void TextEdit::mousePressEvent (QMouseEvent *e)
             && e->buttons() == Qt::LeftButton)
         {
             tripleClickTimer_.invalidate();
-            noDataFromSelection_ = true;
             if (!(qApp->keyboardModifiers() & Qt::ControlModifier))
             {
                 QTextCursor txtCur = textCursor();
@@ -810,24 +797,23 @@ void TextEdit::mousePressEvent (QMouseEvent *e)
                     while (j > i && blockText.at (j -  1).isSpace())
                         --j;
                     txtCur.setPosition (txtCur.position() + j - i, QTextCursor::KeepAnchor);
+                    setTextCursor (txtCur);
                 }
-                else
-                    txtCur.setPosition (txtCur.position() + i, QTextCursor::KeepAnchor);
-                setTextCursor (txtCur);
+                if (txtCur.hasSelection())
+                {
+                    QClipboard *cl = QApplication::clipboard();
+                    if (cl->supportsSelection())
+                    {
+                        if (QMimeData *data = createMimeDataFromSelection())
+                            cl->setMimeData (data, QClipboard::Selection);
+                    }
+                }
                 e->accept();
                 return;
             }
         }
         else
             tripleClickTimer_.invalidate();
-    }
-
-    if (e->buttons() == Qt::LeftButton
-        && (qApp->keyboardModifiers() & Qt::ShiftModifier))
-    {
-        /* this is definitely not a drag start but may happen after
-           a double/triple click; see createMimeDataFromSelection() */
-        noDataFromSelection_ = true;
     }
 
     QTextEdit::mousePressEvent (e);
@@ -839,25 +825,6 @@ void TextEdit::mousePressEvent (QMouseEvent *e)
 /*************************/
 void TextEdit::mouseReleaseEvent (QMouseEvent *e)
 {
-    /* NOTE: In createMimeDataFromSelection(), we prevented Qt from giving the selected
-             text to the selection clipboard after a double/triple click. Instead, we
-             set the selection clipboard here, after the left mouse button is released. */
-    if (noDataFromSelection_)
-    {
-        noDataFromSelection_ = false;
-        if (e->button() == Qt::LeftButton)
-        {
-            QClipboard *cl = QApplication::clipboard();
-            if (cl->supportsSelection())
-            {
-                if (QMimeData *data = createMimeDataFromSelection())
-                    cl->setMimeData (data, QClipboard::Selection);
-            }
-        }
-        e->accept();
-        return;
-    }
-
     QTextEdit::mouseReleaseEvent (e);
     if (e->button() != Qt::LeftButton)
         return;
@@ -879,7 +846,6 @@ void TextEdit::mouseReleaseEvent (QMouseEvent *e)
 /*************************/
 void TextEdit::mouseDoubleClickEvent (QMouseEvent *e)
 {
-    noDataFromSelection_ = true;
     tripleClickTimer_.start();
     QTextEdit::mouseDoubleClickEvent (e);
 }

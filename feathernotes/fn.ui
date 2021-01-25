@@ -218,8 +218,15 @@
     <property name="title">
      <string>&amp;File</string>
     </property>
+    <widget class="QMenu" name="menuOpenRecently">
+     <property name="title">
+      <string>Recenl&amp;y Opened</string>
+     </property>
+     <addaction name="actionClearRecent"/>
+    </widget>
     <addaction name="actionNew"/>
     <addaction name="actionOpen"/>
+    <addaction name="menuOpenRecently"/>
     <addaction name="separator"/>
     <addaction name="actionSave"/>
     <addaction name="actionSaveAs"/>
@@ -1359,6 +1366,11 @@
    </property>
    <property name="toolTip">
     <string>Paste Date and Time</string>
+   </property>
+  </action>
+  <action name="actionClearRecent">
+   <property name="text">
+    <string>&amp;Clear</string>
    </property>
   </action>
  </widget>

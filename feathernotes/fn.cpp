@@ -61,6 +61,9 @@
 #include "x11.h"
 #endif
 
+#define DEFAULT_RECENT_NUM 10
+#define MAX_RECENT_NUM 20
+
 namespace FeatherNotes {
 
 static QSize TOOLBAR_ICON_SIZE;
@@ -124,6 +127,7 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     searchingOtherNode_ = false;
     rplOtherNode_ = false;
     replCount_ = 0;
+    recentNum_ = 0;
 
     /* replace dock */
     ui->dockReplace->setVisible (false);
@@ -345,6 +349,10 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
 
     connect (ui->actionAbout, &QAction::triggered, this, &FN::aboutDialog);
     connect (ui->actionHelp, &QAction::triggered, this, &FN::showHelpDialog);
+
+    connect (ui->menuFile, &QMenu::aboutToShow, this, &FN::updateRecentAction);
+    connect (ui->menuOpenRecently, &QMenu::aboutToShow, this, &FN::updateRecenMenu);
+    connect (ui->actionClearRecent, &QAction::triggered, this, &FN::clearRecentMenu);
 
 #ifdef HAS_HUNSPELL
     connect (ui->actionCheckSpelling, &QAction::triggered, this, &FN::checkSpelling);
@@ -1048,6 +1056,7 @@ void FN::showDoc (QDomDocument &doc)
 /*************************/
 void FN::fileOpen (const QString &filePath, bool startup)
 {
+    bool success = false;
     if (!filePath.isEmpty())
     {
         QFile file (filePath);
@@ -1066,29 +1075,51 @@ void FN::fileOpen (const QString &filePath, bool startup)
                 QDomElement root = document.firstChildElement ("feathernotes");
                 if (root.isNull())
                 {
-                    if (startup) xmlPath_.clear();
-                    return;
+                    if (startup)
+                    {
+                        xmlPath_.clear();
+                        return;
+                    }
                 }
-                pswrd_ = root.attribute ("pswrd");
-                if (!pswrd_.isEmpty() && !isPswrdCorrect())
+                else
                 {
-                    if (startup) xmlPath_.clear();
-                    return;
+                    pswrd_ = root.attribute ("pswrd");
+                    if (!pswrd_.isEmpty() && !isPswrdCorrect())
+                    {
+                        pswrd_.clear();
+                        if (startup)
+                        {
+                            xmlPath_.clear();
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        success = true;
+                        showDoc (document);
+                        if (xmlPath_ != filePath)
+                        {
+                            xmlPath_ = filePath;
+                            QTimer::singleShot (0, this, [this] () {
+                                rememberLastOpenedFile();
+                            });
+                        }
+                        setTitle (xmlPath_);
+                        docProp();
+                    }
                 }
-                showDoc (document);
-                if (xmlPath_ != filePath)
-                {
-                    xmlPath_ = filePath;
-                    QTimer::singleShot (0, this, [this] () {
-                        rememberLastOpenedFile();
-                    });
-                }
-                setTitle (xmlPath_);
-                docProp();
             }
-            else if (startup) xmlPath_.clear();
         }
-        else if (startup) xmlPath_.clear();
+    }
+
+    if (!success)
+    {
+        if (startup)
+        {
+            xmlPath_.clear();
+            return;
+        }
+        notSavedOrOpened (false);
     }
 
     /* start the timer (again) if file
@@ -1218,12 +1249,20 @@ void FN::openFNDoc (const QString &filePath)
         }
     }
 
-    /* TextEdit::insertFromMimeData() should first return */
+    /* in the case of dropping,
+       TextEdit::insertFromMimeData() should first return */
     QTimer::singleShot (0, this, [this, filePath] () {
         fileOpen (filePath);
         raise();
         activateWindow();
     });
+}
+/*************************/
+void FN::openRecentFile()
+{
+    QAction *action = qobject_cast<QAction*>(QObject::sender());
+    if (!action) return;
+    openFNDoc (action->data().toString());
 }
 /*************************/
 void FN::dragMoveEvent (QDragMoveEvent *event)
@@ -1309,11 +1348,12 @@ void FN::autoSaving()
     fileSave (xmlPath_);
 }
 /*************************/
-void FN::notSaved()
+void FN::notSavedOrOpened (bool notSaved)
 {
     MessageBox msgBox (QMessageBox::Warning,
                        tr ("FeatherNotes"),
-                       tr ("<center><b><big>Cannot be saved!</big></b></center>"),
+                       notSaved ? tr ("<center><b><big>Cannot be saved!</big></b></center>")
+                                : tr ("<center><b><big>Cannot be opened!</big></b></center>"),
                        QMessageBox::Close,
                        this);
     msgBox.changeButtonText (QMessageBox::Close, tr ("Close"));
@@ -1452,7 +1492,7 @@ bool FN::saveFile()
     bool overwrite (fname == xmlPath_);
     if (!fileSave (fname))
     {
-        notSaved();
+        notSavedOrOpened (true);
         return false;
     }
     else if (!overwrite)
@@ -4587,6 +4627,7 @@ void FN::readAndApplyConfig (bool startup)
         ui->actionRedo->setIcon (symbolicIcon::icon (":icons/edit-redo.svg"));
         ui->actionFind->setIcon (symbolicIcon::icon (":icons/edit-find.svg"));
         ui->actionClear->setIcon (symbolicIcon::icon (":icons/edit-clear.svg"));
+        ui->actionClearRecent->setIcon (symbolicIcon::icon (":icons/edit-clear.svg"));
         ui->actionBold->setIcon (symbolicIcon::icon (":icons/format-text-bold.svg"));
         ui->actionItalic->setIcon (symbolicIcon::icon (":icons/format-text-italic.svg"));
         ui->actionUnderline->setIcon (symbolicIcon::icon (":icons/format-text-underline.svg"));
@@ -4611,6 +4652,7 @@ void FN::readAndApplyConfig (bool startup)
         ui->actionDelete->setIcon (symbolicIcon::icon (":icons/edit-delete.svg"));
         ui->actionSelectAll->setIcon (symbolicIcon::icon (":icons/edit-select-all.svg"));
         ui->actionDate->setIcon (symbolicIcon::icon (":icons/document-open-recent.svg"));
+        ui->menuOpenRecently->setIcon (symbolicIcon::icon (":icons/document-open-recent.svg"));
         icn = symbolicIcon::icon (":icons/image-x-generic.svg");
         ui->actionEmbedImage->setIcon (icn);
         ui->actionImageScale->setIcon (icn);
@@ -4763,16 +4805,56 @@ void FN::writeGeometryConfig()
     settings.endGroup();
 }
 /*************************/
-void FN::rememberLastOpenedFile()
+// Recent files are also updated.
+void FN::rememberLastOpenedFile (bool recentNumIsSet)
 {
-    if (openLastFile_
-        && !xmlPath_.isEmpty()) // a file has been opened
+    Settings settings ("feathernotes", "fn");
+    settings.beginGroup ("text");
+
+    int recentNum;
+    QStringList recentFiles;
+    if (recentNumIsSet) // recentNum_ is set in the Preferences dialog
+        recentNum = recentNum_;
+    else
+        recentNum = settings.value ("recentFilesNumber", DEFAULT_RECENT_NUM).toInt();
+    recentNum = qBound (0, recentNum, MAX_RECENT_NUM);
+    if (recentNum > 0)
+        recentFiles = settings.value ("recentFiles").toStringList();
+
+    if (!recentNumIsSet)
     {
-        Settings settings ("feathernotes", "fn");
-        settings.beginGroup ("text");
-        settings.setValue ("lastOpenedFile", xmlPath_);
-        settings.endGroup();
+        if (openLastFile_
+            && !xmlPath_.isEmpty()) // a file has been opened or saved to
+        {
+            settings.setValue ("lastOpenedFile", xmlPath_);
+        }
     }
+    else
+        settings.setValue ("recentFilesNumber", recentNum);
+
+    if (recentNum == 0)
+    {
+        settings.setValue ("recentFiles", ""); // don't save "@Invalid()"
+        settings.endGroup();
+        return;
+    }
+
+    recentFiles.removeAll ("");
+    recentFiles.removeDuplicates();
+    if (!recentNumIsSet
+        && !xmlPath_.isEmpty()) // a file has been opened or saved to
+    {
+        recentFiles.removeAll (xmlPath_);
+        recentFiles.prepend (xmlPath_);
+    }
+    while (recentFiles.count() > recentNum)
+        recentFiles.removeLast();
+    if (recentFiles.isEmpty())
+        settings.setValue ("recentFiles", "");
+    else
+        settings.setValue ("recentFiles", recentFiles);
+
+    settings.endGroup();
 }
 /*************************/
 void FN::writeConfig()
@@ -5490,6 +5572,98 @@ void FN::showHelpDialog()
         delete dlg;
         break;
     }
+}
+/*************************/
+void FN::updateRecentAction()
+{
+    if (auto action = ui->menuOpenRecently->menuAction())
+        action->setEnabled (getRecentFilesNumber() > 0);
+}
+/*************************/
+void FN::updateRecenMenu()
+{
+    QList<QAction*> curActions = ui->menuOpenRecently->actions();
+
+    QSettings settings ("feathernotes", "fn");
+    settings.beginGroup ("text");
+
+    int recentNum = qBound (0, settings.value ("recentFilesNumber", DEFAULT_RECENT_NUM).toInt(), MAX_RECENT_NUM);
+    if (recentNum == 0)
+    {
+        while (curActions.size() > 1)
+        {
+            auto action = curActions.takeAt (curActions.size() - 2);
+            ui->menuOpenRecently->removeAction (action);
+            delete action;
+        }
+        ui->actionClearRecent->setEnabled (false);
+        settings.endGroup();
+        return;
+    }
+
+    QStringList recentFiles = settings.value ("recentFiles").toStringList();
+    settings.endGroup();
+
+    recentFiles.removeAll ("");
+    recentFiles.removeDuplicates();
+    while (recentFiles.count() > recentNum)
+        recentFiles.removeLast();
+    recentNum = qMin (recentNum, recentFiles.count());
+
+    int usableActionsNum = curActions.size() - 1; // except for the clear action
+    QFontMetrics metrics (ui->menuOpenRecently->font());
+    int w = 150 * metrics.horizontalAdvance (' ');
+    for (int i = 0; i < recentNum; ++i)
+    {
+        if (i < usableActionsNum)
+        {
+            curActions.at (i)->setText (metrics.elidedText (recentFiles.at (i), Qt::ElideMiddle, w));
+            curActions.at (i)->setData (recentFiles.at (i));
+        }
+        else
+        {
+            QAction *newAction = new QAction (this);
+            connect (newAction, &QAction::triggered, this, &FN::openRecentFile);
+            ui->menuOpenRecently->addAction (newAction);
+            newAction->setText (metrics.elidedText (recentFiles.at (i), Qt::ElideMiddle, w));
+            newAction->setData (recentFiles.at (i));
+        }
+    }
+    ui->menuOpenRecently->addAction (ui->actionClearRecent); // put it at the end
+    ui->actionClearRecent->setEnabled (recentNum != 0);
+    while (curActions.size() - 1 > recentNum)
+    {
+        auto action = curActions.takeAt (curActions.size() - 2);
+        ui->menuOpenRecently->removeAction (action);
+        delete action;
+    }
+}
+/*************************/
+void FN::clearRecentMenu()
+{
+    QList<QAction*> curActions = ui->menuOpenRecently->actions();
+    while (curActions.size() > 1)
+    {
+        auto action = curActions.takeAt (curActions.size() - 2);
+        ui->menuOpenRecently->removeAction (action);
+        delete action;
+    }
+    ui->actionClearRecent->setEnabled (false);
+
+    QSettings settings ("feathernotes", "fn");
+    settings.beginGroup ("text");
+    settings.setValue ("recentFiles", ""); // don't save "@Invalid()"
+    settings.endGroup();
+}
+/*************************/
+// Only called by the Preferences dialog to get an up-to-date number.
+int FN::getRecentFilesNumber()
+{
+    QSettings settings ("feathernotes", "fn");
+    settings.beginGroup ("text");
+    recentNum_ = qBound (0, settings.value ("recentFilesNumber", DEFAULT_RECENT_NUM).toInt(), MAX_RECENT_NUM);
+    settings.endGroup();
+    return recentNum_;
 }
 /*************************/
 #ifdef HAS_HUNSPELL

@@ -2,7 +2,8 @@ V0.9.0
 ---------
  * Small fixes to smooth scrolling and link opening.
  * Require Qt5.12.
- * Prevent Qt from continuously setting the selection clipboard on selection change with mouse (after a double/triple click).
+ * Prevented password transference from one document to another in a rare case.
+ * Added an item to the File menu for the recently opened files, whose number can be set in the Preferences dialog (and can be zero).
 
 V0.8.0
 ---------
