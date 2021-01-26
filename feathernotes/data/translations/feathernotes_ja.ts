@@ -1407,7 +1407,7 @@
         <source>The file already exists.
 Do you want to replace it?
 </source>
-        <translation>ファイルは既に存在しています。
+        <translation>ファイルが既に存在しています。
 置き換えますか？
 </translation>
     </message>
