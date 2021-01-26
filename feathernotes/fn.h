@@ -213,6 +213,12 @@ public:
     void setRecentFilesNumber (int recentNum) {
         recentNum_ = recentNum;
     }
+    bool getOpenReccentSeparately() const {
+        return openReccentSeparately_;
+    }
+    void setOpenReccentSeparately (bool separately) {
+        openReccentSeparately_ = separately;
+    }
 
 #ifdef HAS_HUNSPELL
     QString getDictPath() const {
@@ -407,6 +413,7 @@ private:
     QTextTable *txtTable_; // Text table at the right-click position.
     int imgScale_; QString lastImgPath_;
     int recentNum_;
+    bool openReccentSeparately_;
     bool shownBefore_,
          remSize_, remSplitter_,
          remPosition_,

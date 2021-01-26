@@ -5,6 +5,7 @@ V0.9.0
  * Prevented the transference of password or lack of it from one note to another in rare cases.
  * Prevented the transference of font settings from an opened note to a newly created one.
  * Added an item to the File menu for the recently opened files, whose number can be set in the Preferences dialog (and can be zero).
+ * Added an option to open recent files separately (namely, in other instances of FeatherNotes).
 
 V0.8.0
 ---------

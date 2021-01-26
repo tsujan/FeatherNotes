@@ -26,9 +26,9 @@
     <name>FeatherNotes::FN</name>
     <message>
         <location filename="../../fn.ui" line="14"/>
-        <location filename="../../fn.cpp" line="1362"/>
-        <location filename="../../fn.cpp" line="3501"/>
-        <location filename="../../fn.cpp" line="5211"/>
+        <location filename="../../fn.cpp" line="1382"/>
+        <location filename="../../fn.cpp" line="3521"/>
+        <location filename="../../fn.cpp" line="5234"/>
         <source>FeatherNotes</source>
         <translation></translation>
     </message>
@@ -215,7 +215,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="535"/>
-        <location filename="../../fn.cpp" line="879"/>
+        <location filename="../../fn.cpp" line="881"/>
         <source>Save</source>
         <translation>保存</translation>
     </message>
@@ -226,7 +226,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="543"/>
-        <location filename="../../fn.cpp" line="622"/>
+        <location filename="../../fn.cpp" line="624"/>
         <source>&amp;Open</source>
         <translation>開く(&amp;O)</translation>
     </message>
@@ -397,7 +397,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="711"/>
-        <location filename="../../fn.cpp" line="621"/>
+        <location filename="../../fn.cpp" line="623"/>
         <source>&amp;New Note</source>
         <translation>新しいノート(&amp;N)</translation>
     </message>
@@ -438,7 +438,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="757"/>
-        <location filename="../../fn.cpp" line="624"/>
+        <location filename="../../fn.cpp" line="626"/>
         <source>&amp;Quit</source>
         <translation>終了(&amp;Q)</translation>
     </message>
@@ -499,7 +499,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="823"/>
-        <location filename="../../fn.cpp" line="3743"/>
+        <location filename="../../fn.cpp" line="3763"/>
         <source>Embed Image</source>
         <translation>画像の埋め込み</translation>
     </message>
@@ -992,418 +992,418 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2493"/>
+        <location filename="../../fn.cpp" line="2513"/>
         <source>Node Icon</source>
         <translation>ノードのアイコン</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="616"/>
-        <location filename="../../fn.cpp" line="4462"/>
+        <location filename="../../fn.cpp" line="618"/>
+        <location filename="../../fn.cpp" line="4482"/>
         <source>&amp;Raise/Hide</source>
         <translation>表示/隠す(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="781"/>
+        <location filename="../../fn.cpp" line="783"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;New note?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;新ノート？&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="782"/>
+        <location filename="../../fn.cpp" line="784"/>
         <source>&lt;center&gt;&lt;i&gt;Do you really want to leave this document&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;and create an empty one?&lt;/i&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;i&gt;この文書を本当に破棄して、&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;空のものを作成しますか？&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="785"/>
-        <location filename="../../fn.cpp" line="2328"/>
-        <location filename="../../fn.cpp" line="4110"/>
+        <location filename="../../fn.cpp" line="787"/>
+        <location filename="../../fn.cpp" line="2348"/>
+        <location filename="../../fn.cpp" line="4130"/>
         <source>Yes</source>
         <translation>はい</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="786"/>
-        <location filename="../../fn.cpp" line="2329"/>
-        <location filename="../../fn.cpp" line="4111"/>
+        <location filename="../../fn.cpp" line="788"/>
+        <location filename="../../fn.cpp" line="2349"/>
+        <location filename="../../fn.cpp" line="4131"/>
         <source>No</source>
         <translation>いいえ</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="871"/>
+        <location filename="../../fn.cpp" line="873"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Save changes?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;変更内容を保存しますか？&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="873"/>
+        <location filename="../../fn.cpp" line="875"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been modified.&lt;/i&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;i&gt;文書が変更されています。&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="875"/>
+        <location filename="../../fn.cpp" line="877"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been removed.&lt;/i&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;i&gt;文書は削除されました。&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="880"/>
+        <location filename="../../fn.cpp" line="882"/>
         <source>Discard changes</source>
         <translation>変更破棄</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="881"/>
-        <location filename="../../fn.cpp" line="2441"/>
-        <location filename="../../fn.cpp" line="2536"/>
-        <location filename="../../fn.cpp" line="2803"/>
-        <location filename="../../fn.cpp" line="3686"/>
-        <location filename="../../fn.cpp" line="3767"/>
-        <location filename="../../fn.cpp" line="3928"/>
-        <location filename="../../fn.cpp" line="4204"/>
-        <location filename="../../fn.cpp" line="5090"/>
-        <location filename="../../fn.cpp" line="5343"/>
-        <location filename="../../fn.cpp" line="5458"/>
+        <location filename="../../fn.cpp" line="883"/>
+        <location filename="../../fn.cpp" line="2461"/>
+        <location filename="../../fn.cpp" line="2556"/>
+        <location filename="../../fn.cpp" line="2823"/>
+        <location filename="../../fn.cpp" line="3706"/>
+        <location filename="../../fn.cpp" line="3787"/>
+        <location filename="../../fn.cpp" line="3948"/>
+        <location filename="../../fn.cpp" line="4224"/>
+        <location filename="../../fn.cpp" line="5113"/>
+        <location filename="../../fn.cpp" line="5366"/>
+        <location filename="../../fn.cpp" line="5486"/>
         <source>Cancel</source>
         <translation>キャンセル</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1215"/>
+        <location filename="../../fn.cpp" line="1227"/>
         <source>Open file...</source>
         <translation>ファイルを開く...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1363"/>
-        <location filename="../../fn.cpp" line="5212"/>
+        <location filename="../../fn.cpp" line="1383"/>
+        <location filename="../../fn.cpp" line="5235"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be saved!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;保存できませんでした！&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1367"/>
-        <location filename="../../fn.cpp" line="3079"/>
-        <location filename="../../fn.cpp" line="3505"/>
-        <location filename="../../fn.cpp" line="5215"/>
-        <location filename="../../fn.cpp" line="5765"/>
+        <location filename="../../fn.cpp" line="1387"/>
+        <location filename="../../fn.cpp" line="3099"/>
+        <location filename="../../fn.cpp" line="3525"/>
+        <location filename="../../fn.cpp" line="5238"/>
+        <location filename="../../fn.cpp" line="5792"/>
         <source>Close</source>
         <translation>閉じる</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1463"/>
-        <location filename="../../fn.cpp" line="1484"/>
+        <location filename="../../fn.cpp" line="1483"/>
+        <location filename="../../fn.cpp" line="1504"/>
         <source>Save As...</source>
         <translation>名前を付けて保存...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2325"/>
+        <location filename="../../fn.cpp" line="2345"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Delete this node?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;このノードを削除しますか？&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2326"/>
+        <location filename="../../fn.cpp" line="2346"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;i&gt;Warning!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
 &lt;center&gt;This action cannot be undone.&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;i&gt;警告！&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
 &lt;center&gt;この操作は元に戻せません。&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2427"/>
+        <location filename="../../fn.cpp" line="2447"/>
         <source>Tags</source>
         <translation>タグ</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2442"/>
-        <location filename="../../fn.cpp" line="2537"/>
-        <location filename="../../fn.cpp" line="2804"/>
-        <location filename="../../fn.cpp" line="3688"/>
-        <location filename="../../fn.cpp" line="3768"/>
-        <location filename="../../fn.cpp" line="3929"/>
-        <location filename="../../fn.cpp" line="4205"/>
-        <location filename="../../fn.cpp" line="5092"/>
-        <location filename="../../fn.cpp" line="5344"/>
-        <location filename="../../fn.cpp" line="5459"/>
+        <location filename="../../fn.cpp" line="2462"/>
+        <location filename="../../fn.cpp" line="2557"/>
+        <location filename="../../fn.cpp" line="2824"/>
+        <location filename="../../fn.cpp" line="3708"/>
+        <location filename="../../fn.cpp" line="3788"/>
+        <location filename="../../fn.cpp" line="3949"/>
+        <location filename="../../fn.cpp" line="4225"/>
+        <location filename="../../fn.cpp" line="5115"/>
+        <location filename="../../fn.cpp" line="5367"/>
+        <location filename="../../fn.cpp" line="5487"/>
         <source>OK</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2630"/>
-        <location filename="../../fn.cpp" line="2663"/>
+        <location filename="../../fn.cpp" line="2650"/>
+        <location filename="../../fn.cpp" line="2683"/>
         <source>&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</source>
         <translation>&lt;b&gt;メインノード:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;すべてのノード:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2636"/>
-        <location filename="../../fn.cpp" line="2669"/>
+        <location filename="../../fn.cpp" line="2656"/>
+        <location filename="../../fn.cpp" line="2689"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</source>
         <translation>&lt;b&gt;ノート:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;メインノード:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;すべてのノード:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3066"/>
+        <location filename="../../fn.cpp" line="3086"/>
         <source>%1 Matches</source>
         <translation>%1 個が一致</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3068"/>
+        <location filename="../../fn.cpp" line="3088"/>
         <source>One Match</source>
         <translation>1 個が一致</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3070"/>
-        <location filename="../../fn.cpp" line="3385"/>
+        <location filename="../../fn.cpp" line="3090"/>
+        <location filename="../../fn.cpp" line="3405"/>
         <source>No Match</source>
         <translation>一致せず</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3185"/>
-        <location filename="../../fn.cpp" line="3237"/>
+        <location filename="../../fn.cpp" line="3205"/>
+        <location filename="../../fn.cpp" line="3257"/>
         <source>Replacement</source>
         <translation>置換します</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3492"/>
+        <location filename="../../fn.cpp" line="3512"/>
         <source>No Replacement</source>
         <translation>何も置換されません</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3494"/>
+        <location filename="../../fn.cpp" line="3514"/>
         <source>One Replacement</source>
         <translation>1 個置換しました</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3497"/>
+        <location filename="../../fn.cpp" line="3517"/>
         <source>%1 Replacements</source>
         <translation>%1 個置換しました</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3674"/>
+        <location filename="../../fn.cpp" line="3694"/>
         <source>Insert Link</source>
         <translation>リンクの挿入</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2501"/>
-        <location filename="../../fn.cpp" line="3752"/>
+        <location filename="../../fn.cpp" line="2521"/>
+        <location filename="../../fn.cpp" line="3772"/>
         <source>Image path</source>
         <translation>画像の場所</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2505"/>
-        <location filename="../../fn.cpp" line="3756"/>
+        <location filename="../../fn.cpp" line="2525"/>
+        <location filename="../../fn.cpp" line="3776"/>
         <source>Open image</source>
         <translation>画像を開く</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3764"/>
-        <location filename="../../fn.cpp" line="3925"/>
+        <location filename="../../fn.cpp" line="3784"/>
+        <location filename="../../fn.cpp" line="3945"/>
         <source>Scaling percentage</source>
         <translation>倍率</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2523"/>
-        <location filename="../../fn.cpp" line="3873"/>
+        <location filename="../../fn.cpp" line="2543"/>
+        <location filename="../../fn.cpp" line="3893"/>
         <source>Open Image...</source>
         <translation>画像を開く...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="618"/>
-        <location filename="../../fn.cpp" line="4450"/>
+        <location filename="../../fn.cpp" line="620"/>
+        <location filename="../../fn.cpp" line="4470"/>
         <source>&amp;Raise</source>
         <translation>表示(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="827"/>
+        <location filename="../../fn.cpp" line="829"/>
         <source>New Node</source>
         <translation>新ノード</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1217"/>
-        <location filename="../../fn.cpp" line="1465"/>
-        <location filename="../../fn.cpp" line="1486"/>
+        <location filename="../../fn.cpp" line="1229"/>
+        <location filename="../../fn.cpp" line="1485"/>
+        <location filename="../../fn.cpp" line="1506"/>
         <source>FeatherNotes documents (*.fnx);;All Files (*)</source>
         <translation>FeatherNotes 文書 (*.fnx);;すべてのファイル (*)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1364"/>
+        <location filename="../../fn.cpp" line="1384"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be opened!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1447"/>
-        <location filename="../../fn.cpp" line="4951"/>
-        <location filename="../../fn.cpp" line="4960"/>
-        <location filename="../../fn.cpp" line="5079"/>
-        <location filename="../../fn.cpp" line="5263"/>
-        <location filename="../../fn.cpp" line="5272"/>
-        <location filename="../../fn.cpp" line="5298"/>
+        <location filename="../../fn.cpp" line="1467"/>
+        <location filename="../../fn.cpp" line="4974"/>
+        <location filename="../../fn.cpp" line="4983"/>
+        <location filename="../../fn.cpp" line="5102"/>
+        <location filename="../../fn.cpp" line="5286"/>
+        <location filename="../../fn.cpp" line="5295"/>
+        <location filename="../../fn.cpp" line="5321"/>
         <source>Untitled</source>
         <translation>無題</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2192"/>
+        <location filename="../../fn.cpp" line="2212"/>
         <source>Select Text Color</source>
         <translation>文字色の選択</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2214"/>
+        <location filename="../../fn.cpp" line="2234"/>
         <source>Select Background Color</source>
         <translation>背景色の選択</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2324"/>
+        <location filename="../../fn.cpp" line="2344"/>
         <source>Deletion</source>
         <translation>削除</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2437"/>
+        <location filename="../../fn.cpp" line="2457"/>
         <source>Tag(s) for this node</source>
         <translation>ノードのタグ</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2525"/>
-        <location filename="../../fn.cpp" line="3875"/>
+        <location filename="../../fn.cpp" line="2545"/>
+        <location filename="../../fn.cpp" line="3895"/>
         <source>Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)</source>
         <translation>画像ファイル (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;すべてのファイル (*)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2705"/>
+        <location filename="../../fn.cpp" line="2725"/>
         <source>Select Document Font</source>
         <translation>文書のフォントを選択</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2760"/>
+        <location filename="../../fn.cpp" line="2780"/>
         <source>Select Node Font</source>
         <translation>ノードのフォントを選択</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2775"/>
+        <location filename="../../fn.cpp" line="2795"/>
         <source>Set Document Colors</source>
         <translation>文書の色を設定</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2785"/>
+        <location filename="../../fn.cpp" line="2805"/>
         <source>These colors will be applied to new nodes.&lt;br&gt;They may or may not affect existing nodes&lt;br&gt;but document reopening is recommended.</source>
         <translation>これらの色は新しいノードに適用されます。&lt;br&gt;既存のノードに影響する場合としない場合があり、&lt;br&gt;文書を再度開くことをお勧めします。</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2788"/>
+        <location filename="../../fn.cpp" line="2808"/>
         <source>Background color:</source>
         <translation>背景の色:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2794"/>
+        <location filename="../../fn.cpp" line="2814"/>
         <source>Text color:</source>
         <translation>文字の色:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3502"/>
+        <location filename="../../fn.cpp" line="3522"/>
         <source>The first 1000 replacements are highlighted.</source>
         <translation>最初の 1000 個の置換が強調表示されます。</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3759"/>
-        <location filename="../../fn.cpp" line="3921"/>
+        <location filename="../../fn.cpp" line="3779"/>
+        <location filename="../../fn.cpp" line="3941"/>
         <source>Scale to</source>
         <translation>拡大率</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3763"/>
-        <location filename="../../fn.cpp" line="3924"/>
+        <location filename="../../fn.cpp" line="3783"/>
+        <location filename="../../fn.cpp" line="3944"/>
         <source>%</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3915"/>
+        <location filename="../../fn.cpp" line="3935"/>
         <source>Scale Image(s)</source>
         <translation>画像の拡大縮小</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4074"/>
+        <location filename="../../fn.cpp" line="4094"/>
         <source>untitled</source>
         <translation>無題</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4105"/>
+        <location filename="../../fn.cpp" line="4125"/>
         <source>Error</source>
         <translation>エラー</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4106"/>
+        <location filename="../../fn.cpp" line="4126"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Image cannot be saved! Retry?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;画像を保存できません！ 再試行しますか？&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4107"/>
+        <location filename="../../fn.cpp" line="4127"/>
         <source>&lt;center&gt;Maybe you did not choose a proper extension&lt;/center&gt;
 &lt;center&gt;or do not have write permission.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</source>
         <translation>&lt;center&gt;たぶん適切な拡張子を選択していないか、&lt;/center&gt;
 &lt;center&gt;書き込み権限がありません。&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4134"/>
+        <location filename="../../fn.cpp" line="4154"/>
         <source>Save Image As...</source>
         <translation>名前を付けて画像を保存...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4136"/>
+        <location filename="../../fn.cpp" line="4156"/>
         <source>Image Files (*.png *.jpg *.jpeg *.bmp);;All Files (*)</source>
         <translation>画像ファイル (*.png *.jpg *.jpeg *.bmp);;すべてのファイル (*)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4186"/>
+        <location filename="../../fn.cpp" line="4206"/>
         <source>Insert Table</source>
         <translation>表の挿入</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4192"/>
+        <location filename="../../fn.cpp" line="4212"/>
         <source>Rows:</source>
         <translation>行:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4198"/>
+        <location filename="../../fn.cpp" line="4218"/>
         <source>Columns:</source>
         <translation>列:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4970"/>
+        <location filename="../../fn.cpp" line="4993"/>
         <source>Print Document</source>
         <translation>文書の印刷</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5047"/>
+        <location filename="../../fn.cpp" line="5070"/>
         <source>Export HTML</source>
         <translation>HTML へエクスポート</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5052"/>
+        <location filename="../../fn.cpp" line="5075"/>
         <source>Export:</source>
         <translation>エクスポート:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5053"/>
+        <location filename="../../fn.cpp" line="5076"/>
         <source>&amp;Current node</source>
         <translation>現在のノード(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5055"/>
+        <location filename="../../fn.cpp" line="5078"/>
         <source>With all &amp;sub-nodes</source>
         <translation>現在のノードとすべてのサブノード(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5056"/>
+        <location filename="../../fn.cpp" line="5079"/>
         <source>&amp;All nodes</source>
         <translation>すべてのノード(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5068"/>
+        <location filename="../../fn.cpp" line="5091"/>
         <source>Output file:</source>
         <translation>出力ファイル:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5087"/>
+        <location filename="../../fn.cpp" line="5110"/>
         <source>Select path</source>
         <translation>パスの選択</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5129"/>
+        <location filename="../../fn.cpp" line="5152"/>
         <source>Question</source>
         <translation>質問</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5130"/>
+        <location filename="../../fn.cpp" line="5153"/>
         <source>The file already exists.
 Do you want to replace it?
 </source>
@@ -1412,106 +1412,106 @@ Do you want to replace it?
 </translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5303"/>
+        <location filename="../../fn.cpp" line="5326"/>
         <source>Save HTML As...</source>
         <translation>HTMLで名前を付けて保存...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5305"/>
+        <location filename="../../fn.cpp" line="5328"/>
         <source>HTML Files (*.html *.htm)</source>
         <translation>HTML ファイル (*.html *.htm)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5326"/>
+        <location filename="../../fn.cpp" line="5349"/>
         <source>Set Password</source>
         <translation>パスワードの設定</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5334"/>
+        <location filename="../../fn.cpp" line="5357"/>
         <source>Type password</source>
         <translation>パスワードを入力します</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5339"/>
+        <location filename="../../fn.cpp" line="5362"/>
         <source>Retype password</source>
         <translation>パスワードを再入力します</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5414"/>
+        <location filename="../../fn.cpp" line="5437"/>
         <source>&lt;center&gt;Passwords were different. Retry!&lt;/center&gt;</source>
         <translation>&lt;center&gt;パスワードが違います。再入力して下さい！&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5446"/>
-        <location filename="../../fn.cpp" line="5454"/>
+        <location filename="../../fn.cpp" line="5474"/>
+        <location filename="../../fn.cpp" line="5482"/>
         <source>Enter Password</source>
         <translation>パスワードの入力</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5520"/>
+        <location filename="../../fn.cpp" line="5548"/>
         <source>&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</source>
         <translation>&lt;center&gt;間違ったパスワードです。再入力して下さい！&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5563"/>
+        <location filename="../../fn.cpp" line="5591"/>
         <source>A lightweight notes manager</source>
         <translation>軽量なメモ管理</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5564"/>
+        <location filename="../../fn.cpp" line="5592"/>
         <source>based on Qt</source>
         <translation>Qt ベース</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5565"/>
+        <location filename="../../fn.cpp" line="5593"/>
         <source>Author</source>
         <translation>作者</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5567"/>
-        <location filename="../../fn.cpp" line="5568"/>
+        <location filename="../../fn.cpp" line="5595"/>
+        <location filename="../../fn.cpp" line="5596"/>
         <source>About FeatherNotes</source>
         <translation>FeatherNotes について</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5567"/>
+        <location filename="../../fn.cpp" line="5595"/>
         <source>Translators</source>
         <translation>翻訳者</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5757"/>
+        <location filename="../../fn.cpp" line="5784"/>
         <source>See Preferences → Text → Spell Checking!</source>
         <translation>[設定] → [テキスト] → [スペルチェック] を見て下さい！</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5779"/>
+        <location filename="../../fn.cpp" line="5806"/>
         <source>You need to add a Hunspell dictionary.</source>
         <translation>Hunspell 辞書を追加して下さい。</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5784"/>
+        <location filename="../../fn.cpp" line="5811"/>
         <source>The Hunspell dictionary does not exist.</source>
         <translation>Hunspell 辞書が存在しません。</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5792"/>
+        <location filename="../../fn.cpp" line="5819"/>
         <source>The Hunspell dictionary is not accompanied by an affix file.</source>
         <translation>Hunspell 辞書に付属ファイルがありません。</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5810"/>
-        <location filename="../../fn.cpp" line="5825"/>
         <location filename="../../fn.cpp" line="5837"/>
+        <location filename="../../fn.cpp" line="5852"/>
+        <location filename="../../fn.cpp" line="5864"/>
         <source>No misspelling from text cursor.</source>
         <translation>テキストのカーソル位置から、スペルミスはありません。</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5848"/>
+        <location filename="../../fn.cpp" line="5875"/>
         <source>Spell Checking</source>
         <translation>スペルチェック</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5566"/>
+        <location filename="../../fn.cpp" line="5594"/>
         <source>aka.</source>
         <translation>別名</translation>
     </message>
@@ -1803,7 +1803,7 @@ name but ending with &quot;.aff&quot;.</source>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="466"/>
-        <location filename="../../pref.cpp" line="690"/>
+        <location filename="../../pref.cpp" line="695"/>
         <source>Add dictionary...</source>
         <translation>辞書を追加する...</translation>
     </message>
@@ -1823,43 +1823,48 @@ name but ending with &quot;.aff&quot;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../prefDialog.ui" line="571"/>
+        <location filename="../../prefDialog.ui" line="554"/>
+        <source>Open recent files separately</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../prefDialog.ui" line="578"/>
         <source>Shortcuts</source>
         <translation>ショートカット</translation>
     </message>
     <message>
-        <location filename="../../prefDialog.ui" line="590"/>
+        <location filename="../../prefDialog.ui" line="597"/>
         <source>Action</source>
         <translation>動作</translation>
     </message>
     <message>
-        <location filename="../../prefDialog.ui" line="595"/>
+        <location filename="../../prefDialog.ui" line="602"/>
         <source>Shortcut</source>
         <translation>ショートカット</translation>
     </message>
     <message>
-        <location filename="../../prefDialog.ui" line="603"/>
+        <location filename="../../prefDialog.ui" line="610"/>
         <source>Default</source>
         <translation>既定値</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="377"/>
-        <location filename="../../pref.cpp" line="563"/>
+        <location filename="../../pref.cpp" line="382"/>
+        <location filename="../../pref.cpp" line="568"/>
         <source>Warning: Ambiguous shortcut detected!</source>
         <translation>警告: あいまいなショートカットが検出されました！</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="546"/>
+        <location filename="../../pref.cpp" line="551"/>
         <source>The typed shortcut was reserved.</source>
         <translation>入力されたショートカットは予約されています。</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="661"/>
+        <location filename="../../pref.cpp" line="666"/>
         <source>Application restart is needed for changes to take effect.</source>
         <translation>変更を有効にするにはアプリケーションの再起動が必要です。</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="692"/>
+        <location filename="../../pref.cpp" line="697"/>
         <source>Hunspell Dictionary Files (*.dic)</source>
         <translation>Hunspell 辞書ファイル (*.dic)</translation>
     </message>

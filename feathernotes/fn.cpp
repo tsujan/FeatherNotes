@@ -56,6 +56,7 @@
 #include <QClipboard>
 #include <QApplication>
 #include <QMimeDatabase>
+#include <QProcess>
 
 #ifdef HAS_X11
 #include "x11.h"
@@ -128,6 +129,7 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     rplOtherNode_ = false;
     replCount_ = 0;
     recentNum_ = 0;
+    openReccentSeparately_ = false;
 
     /* replace dock */
     ui->dockReplace->setVisible (false);
@@ -1084,6 +1086,9 @@ void FN::fileOpen (const QString &filePath, bool startup)
                     if (startup)
                     {
                         xmlPath_.clear();
+                        QTimer::singleShot (0, this, [this] () {
+                            notSavedOrOpened (false);
+                        });
                         return;
                     }
                 }
@@ -1097,6 +1102,7 @@ void FN::fileOpen (const QString &filePath, bool startup)
                         if (startup)
                         {
                             xmlPath_.clear();
+                            notSavedOrOpened (false);
                             return;
                         }
                     }
@@ -1124,6 +1130,12 @@ void FN::fileOpen (const QString &filePath, bool startup)
         if (startup)
         {
             xmlPath_.clear();
+            if (!filePath.isEmpty())
+            {
+                QTimer::singleShot (0, this, [this] () {
+                    notSavedOrOpened (false);
+                });
+            }
             return;
         }
         if (!filePath.isEmpty())
@@ -1270,7 +1282,15 @@ void FN::openRecentFile()
 {
     QAction *action = qobject_cast<QAction*>(QObject::sender());
     if (!action) return;
-    openFNDoc (action->data().toString());
+
+    /* openReccentSeparately_ is up-to-date because updateRecentAction() is already called */
+    if (openReccentSeparately_)
+    {
+        QProcess::startDetached (QCoreApplication::applicationFilePath(),
+                                 QStringList() << action->data().toString());
+    }
+    else
+        openFNDoc (action->data().toString());
 }
 /*************************/
 void FN::dragMoveEvent (QDragMoveEvent *event)
@@ -4838,7 +4858,10 @@ void FN::rememberLastOpenedFile (bool recentNumIsSet)
         }
     }
     else
+    {
         settings.setValue ("recentFilesNumber", recentNum);
+        settings.setValue ("openReccentSeparately", openReccentSeparately_);
+    }
 
     if (recentNum == 0)
     {
@@ -5425,15 +5448,13 @@ bool FN::isPswrdCorrect()
         if (underE_ && QObject::sender() == nullptr) // opened by command line
         {
             if (!isVisible())
-            {
                 activateTray();
-                QCoreApplication::processEvents();
-            }
             else // not needed really
             {
                 raise();
                 activateWindow();
             }
+            QCoreApplication::processEvents();
         }
         else if (!underE_&& (!isVisible() || !isActiveWindow()))
         {
@@ -5441,6 +5462,13 @@ bool FN::isPswrdCorrect()
             QCoreApplication::processEvents();
         }
     }
+    else if (!isVisible() || !isActiveWindow())
+    {
+        raise();
+        activateWindow();
+        QCoreApplication::processEvents();
+    }
+    QCoreApplication::processEvents();
 
     QDialog *dialog = new QDialog (this);
     dialog->setWindowTitle (tr ("Enter Password"));
@@ -5592,11 +5620,8 @@ void FN::updateRecenMenu()
 {
     QList<QAction*> curActions = ui->menuOpenRecently->actions();
 
-    QSettings settings ("feathernotes", "fn");
-    settings.beginGroup ("text");
-
-    int recentNum = qBound (0, settings.value ("recentFilesNumber", DEFAULT_RECENT_NUM).toInt(), MAX_RECENT_NUM);
-    if (recentNum == 0)
+    /* recentNum_ is up-to-date because updateRecentAction() is already called */
+    if (recentNum_ == 0)
     {
         while (curActions.size() > 1)
         {
@@ -5605,23 +5630,24 @@ void FN::updateRecenMenu()
             delete action;
         }
         ui->actionClearRecent->setEnabled (false);
-        settings.endGroup();
         return;
     }
 
+    QSettings settings ("feathernotes", "fn");
+    settings.beginGroup ("text");
     QStringList recentFiles = settings.value ("recentFiles").toStringList();
     settings.endGroup();
 
     recentFiles.removeAll ("");
     recentFiles.removeDuplicates();
-    while (recentFiles.count() > recentNum)
+    while (recentFiles.count() > recentNum_)
         recentFiles.removeLast();
-    recentNum = qMin (recentNum, recentFiles.count());
+    recentNum_ = qMin (recentNum_, recentFiles.count());
 
     int usableActionsNum = curActions.size() - 1; // except for the clear action
     QFontMetrics metrics (ui->menuOpenRecently->font());
     int w = 150 * metrics.horizontalAdvance (' ');
-    for (int i = 0; i < recentNum; ++i)
+    for (int i = 0; i < recentNum_; ++i)
     {
         if (i < usableActionsNum)
         {
@@ -5638,8 +5664,8 @@ void FN::updateRecenMenu()
         }
     }
     ui->menuOpenRecently->addAction (ui->actionClearRecent); // put it at the end
-    ui->actionClearRecent->setEnabled (recentNum != 0);
-    while (curActions.size() - 1 > recentNum)
+    ui->actionClearRecent->setEnabled (recentNum_ != 0);
+    while (curActions.size() - 1 > recentNum_)
     {
         auto action = curActions.takeAt (curActions.size() - 2);
         ui->menuOpenRecently->removeAction (action);
@@ -5670,6 +5696,7 @@ int FN::getRecentFilesNumber()
     QSettings settings ("feathernotes", "fn");
     settings.beginGroup ("text");
     recentNum_ = qBound (0, settings.value ("recentFilesNumber", DEFAULT_RECENT_NUM).toInt(), MAX_RECENT_NUM);
+    openReccentSeparately_ = settings.value ("openReccentSeparately", false).toBool();
     settings.endGroup();
     return recentNum_;
 }
