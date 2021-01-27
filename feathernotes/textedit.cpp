@@ -43,6 +43,7 @@ TextEdit::TextEdit (QWidget *parent) : QTextEdit (parent)
     textTab_ = "    "; // the default text tab is four spaces
     pressPoint = QPoint();
     scrollTimer_ = nullptr;
+    isCopyOrCut_ = false;
 
     VScrollBar *vScrollBar = new VScrollBar;
     setVerticalScrollBar (vScrollBar);
@@ -149,10 +150,23 @@ static inline bool isOnlySpaces (const QString &str)
 
 void TextEdit::keyPressEvent (QKeyEvent *event)
 {
-    if (event->modifiers() == Qt::ControlModifier && !isReadOnly() && event->key() == Qt::Key_Z)
-    { // only for a workaround (see TextEdit::undo)
+    if (event == QKeySequence::Undo)
+    { // only for a workaround; see TextEdit::undo
         if (document()->isUndoAvailable())
             undo();
+        event->accept();
+        return;
+    }
+    /* overriding copy() and cut() */
+    if (event == QKeySequence::Copy)
+    {
+        copy();
+        event->accept();
+        return;
+    }
+    if (event == QKeySequence::Cut)
+    {
+        cut();
         event->accept();
         return;
     }
@@ -706,6 +720,24 @@ bool TextEdit::event (QEvent *e)
     return QTextEdit::event (e);
 }
 /*************************/
+QMimeData* TextEdit::createMimeDataFromSelection() const
+{
+    /* this is for giving only plain text to the selection clipboard
+       and leaving the main clipboard to QTextEdit */
+    if (!isCopyOrCut_)
+    {
+        QTextCursor cursor = textCursor();
+        if (cursor.hasSelection())
+        {
+            QMimeData *mimeData = new QMimeData;
+            mimeData->setText (cursor.selection().toPlainText());
+            return mimeData;
+        }
+        return nullptr;
+    }
+    return QTextEdit::createMimeDataFromSelection();
+}
+/*************************/
 bool TextEdit::canInsertFromMimeData (const QMimeData *source) const
 {
     if (source->hasImage() || source->hasUrls())
@@ -988,6 +1020,20 @@ void TextEdit::undo()
             cur.setBlockCharFormat (fmt);
         }
     }
+}
+/*************************/
+// See createMimeDataFromSelection() for the reason.
+void TextEdit::copy()
+{
+    isCopyOrCut_ = true;
+    QTextEdit::copy();
+    isCopyOrCut_ = false;
+}
+void TextEdit::cut()
+{
+    isCopyOrCut_ = true;
+    QTextEdit::cut();
+    isCopyOrCut_ = false;
 }
 
 }

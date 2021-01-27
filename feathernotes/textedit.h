@@ -56,9 +56,12 @@ signals:
 
 public slots:
     void undo();
+    void copy();
+    void cut();
 
 protected:
     void keyPressEvent (QKeyEvent *event);
+    QMimeData* createMimeDataFromSelection() const;
     bool canInsertFromMimeData (const QMimeData *source) const;
     void insertFromMimeData (const QMimeData *source);
     void mouseMoveEvent (QMouseEvent *e);
@@ -80,6 +83,7 @@ private:
     QString textTab_; // text tab in terms of spaces
     QPoint pressPoint;
     QElapsedTimer tripleClickTimer_;
+    bool isCopyOrCut_; // to distinguish the selection clipboard
     /****************************
      ***** Smooth scrolling *****
      ****************************/

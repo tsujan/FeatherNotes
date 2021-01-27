@@ -1817,9 +1817,24 @@ void FN::txtContextMenu (const QPoint &p)
             thisAction->setText (txt);
         /* find appropriate places for actionCopyLink and actionPasteHTML */
         if (thisAction->objectName() == "edit-copy")
+        {
             copyIndx = i;
+            /* also, we want to override QTextEdit::copy() */
+            disconnect (thisAction, &QAction::triggered, nullptr, nullptr);
+            connect (thisAction, &QAction::triggered, textEdit, &TextEdit::copy);
+        }
         else if (thisAction->objectName() == "edit-paste")
             pasteIndx = i;
+        else if (thisAction->objectName() == "edit-undo")
+        { // overriding QTextEdit::undo()
+            disconnect (thisAction, &QAction::triggered, nullptr, nullptr);
+            connect (thisAction, &QAction::triggered, textEdit, &TextEdit::undo);
+        }
+        else if (thisAction->objectName() == "edit-cut")
+        { // overriding QTextEdit::cut()
+            disconnect (thisAction, &QAction::triggered, nullptr, nullptr);
+            connect (thisAction, &QAction::triggered, textEdit, &TextEdit::cut);
+        }
     }
     if (!linkAtPos_.isEmpty())
     {
