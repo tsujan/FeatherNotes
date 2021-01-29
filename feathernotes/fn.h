@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2020 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2021 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -386,6 +386,7 @@ private:
 
     Ui::FN *ui;
     bool isX11_;
+    bool closed_; // Whether FN::closeEvent() is called before quitting.
     //QWidget *dummyWidget; // For hiding the main window while keeping all its state info.
     QSystemTrayIcon *tray_;
     bool quitting_;

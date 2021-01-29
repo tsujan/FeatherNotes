@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2020 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2021 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -89,6 +89,8 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
 #endif // HAS_X11
 
     ui->setupUi (this);
+
+    closed_ = false;
     imgScale_ = 100;
 
     TOOLBAR_ICON_SIZE = ui->mainToolBar->iconSize();
@@ -563,14 +565,21 @@ void FN::closeEvent (QCloseEvent *event)
         event->ignore();
     }
     else
+    {
+        writeGeometryConfig();
+        delete tray_; // otherwise the app won't quit under KDE
+        tray_ = nullptr;
         event->accept();
+        closed_ = true; // window info shouldn't be saved after closing
+    }
 }
 /*************************/
 void FN::quitting()
 {
-    writeGeometryConfig();
-    delete tray_; // otherwise the app won't quit under KDE
-    tray_ = nullptr;
+    /* quitting may happen by receiving POSIX signals
+       and without calling FN::closeEvent() */
+    if (!closed_)
+        writeGeometryConfig();
 }
 /*************************/
 void FN::checkTray()

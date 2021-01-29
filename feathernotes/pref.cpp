@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2019 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2019-2021 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the

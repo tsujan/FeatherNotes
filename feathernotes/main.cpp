@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2020 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2021 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -27,7 +27,6 @@ void handleQuitSignals (const std::vector<int>& quitSignals)
 {
     auto handler = [](int sig) ->void {
         Q_UNUSED (sig);
-        //printf("\nUser signal = %d.\n", sig);
         QCoreApplication::quit();
     };
 
@@ -72,7 +71,7 @@ int main(int argc, char *argv[])
     handleQuitSignals ({SIGQUIT, SIGINT, SIGTERM, SIGHUP}); // -> https://en.wikipedia.org/wiki/Unix_signal
 #endif
 
-    app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
+    app.setAttribute (Qt::AA_UseHighDpiPixmaps, true);
 
     QStringList langs (QLocale::system().uiLanguages());
     QString lang; // bcp47Name() doesn't work under vbox
@@ -109,7 +108,6 @@ int main(int argc, char *argv[])
     }
 
     FeatherNotes::FN w (message);
-    //w.show();
 
     QObject::connect (&app, &QCoreApplication::aboutToQuit, &w, &FeatherNotes::FN::quitting);
 
