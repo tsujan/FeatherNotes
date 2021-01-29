@@ -10,6 +10,7 @@ V0.9.0
  * Removed a redundant shortcut and variable.
  * Fixed the bugs in seaching and replacing in all nodes.
  * Go to the last active node when starting with the last opened note.
+ * Save the final settings with SIGTERM signal too.
 
 V0.8.0
 ---------

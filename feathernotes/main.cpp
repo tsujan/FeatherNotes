@@ -111,5 +111,7 @@ int main(int argc, char *argv[])
     FeatherNotes::FN w (message);
     //w.show();
 
+    QObject::connect (&app, &QCoreApplication::aboutToQuit, &w, &FeatherNotes::FN::quitting);
+
     return app.exec();
 }

@@ -431,9 +431,11 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
         }
     }
 
+    bool startWithLastFile = true;
     /* always an absolute path */
     if (!filePath.isEmpty())
     {
+        startWithLastFile = false;
         if (filePath.startsWith ("file://"))
             filePath = QUrl (filePath).toLocalFile();
         filePath = QDir::current().absoluteFilePath (filePath);
@@ -442,7 +444,7 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     else
         filePath = xmlPath_;
 
-    fileOpen (filePath, true);
+    fileOpen (filePath, true, startWithLastFile);
 
     /*dummyWidget = nullptr;
     if (hasTray_)
@@ -561,12 +563,14 @@ void FN::closeEvent (QCloseEvent *event)
         event->ignore();
     }
     else
-    {
-        writeGeometryConfig();
-        delete tray_; // otherwise the app won't quit under KDE
-        tray_ = nullptr;
         event->accept();
-    }
+}
+/*************************/
+void FN::quitting()
+{
+    writeGeometryConfig();
+    delete tray_; // otherwise the app won't quit under KDE
+    tray_ = nullptr;
 }
 /*************************/
 void FN::checkTray()
@@ -1051,7 +1055,7 @@ void FN::showDoc (QDomDocument &doc, int node)
         enableActions (true);
 }
 /*************************/
-void FN::fileOpen (const QString &filePath, bool startup)
+void FN::fileOpen (const QString &filePath, bool startup, bool startWithLastFile)
 {
     bool success = false;
     if (!filePath.isEmpty())
@@ -1098,7 +1102,7 @@ void FN::fileOpen (const QString &filePath, bool startup)
                     else
                     {
                         success = true;
-                        if (startup && lastNode_ > -1)
+                        if (startup && startWithLastFile && lastNode_ > -1)
                             showDoc (document, lastNode_);
                         else
                             showDoc (document);

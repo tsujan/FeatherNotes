@@ -226,6 +226,9 @@ public:
     }
 #endif
 
+public slots:
+    void quitting();
+
 private slots:
     bool close();
     void checkTray();
@@ -346,7 +349,7 @@ private slots:
 
 private:
     void enableActions (bool enable);
-    void fileOpen (const QString &filePath, bool startup = false);
+    void fileOpen (const QString &filePath, bool startup = false, bool startWithLastFile = false);
     bool fileSave (const QString &filePath);
     void createTrayIcon();
     void closeEvent (QCloseEvent *event);
