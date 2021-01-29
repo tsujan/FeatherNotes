@@ -171,7 +171,7 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     /* search and replacement */
     << QKeySequence (Qt::Key_F3).toString() << QKeySequence (Qt::Key_F4).toString() << QKeySequence (Qt::Key_F5).toString() << QKeySequence (Qt::Key_F6).toString() << QKeySequence (Qt::Key_F7).toString()
     << QKeySequence (Qt::Key_F8).toString() << QKeySequence (Qt::Key_F9).toString() << QKeySequence (Qt::Key_F10).toString()
-    << QKeySequence (Qt::Key_F11).toString() << QKeySequence (Qt::CTRL | Qt::SHIFT | Qt::Key_W).toString() << QKeySequence (Qt::SHIFT | Qt::Key_F7).toString() << QKeySequence (Qt::CTRL | Qt::SHIFT | Qt::Key_F7).toString()
+    << QKeySequence (Qt::Key_F11).toString() << QKeySequence (Qt::SHIFT | Qt::Key_F7).toString() << QKeySequence (Qt::CTRL | Qt::SHIFT | Qt::Key_F7).toString()
     /* zooming */
     << QKeySequence (Qt::CTRL | Qt::Key_Equal).toString() << QKeySequence (Qt::CTRL | Qt::Key_Plus).toString() << QKeySequence (Qt::CTRL | Qt::Key_Minus).toString() << QKeySequence (Qt::CTRL | Qt::Key_0).toString()
     /* text tabulation */
@@ -189,7 +189,6 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     }
 
     shownBefore_ = false;
-    splitterSizes_ = QByteArray::fromBase64 ("AAAA/wAAAAEAAAACAAAAqgAAAhIB/////wEAAAABAA==");
     remSize_ = true;
     remSplitter_ = true;
     remPosition_ = true;
@@ -395,9 +394,6 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
 
     QShortcut *fullscreen = new QShortcut (QKeySequence (Qt::Key_F11), this);
     connect (fullscreen, &QShortcut::activated, this, &FN::fullScreening);
-
-    QShortcut *defaultsize = new QShortcut (QKeySequence (Qt::CTRL | Qt::SHIFT | Qt::Key_W), this);
-    connect (defaultsize, &QShortcut::activated, this, &FN::defaultSize);
 
     QShortcut *zoomin = new QShortcut (QKeySequence (Qt::CTRL | Qt::Key_Equal), this);
     QShortcut *zoominPlus = new QShortcut (QKeySequence (Qt::CTRL | Qt::Key_Plus), this);
@@ -659,24 +655,6 @@ void FN::showContextMenu (const QPoint &p)
 void FN::fullScreening()
 {
     setWindowState (windowState() ^ Qt::WindowFullScreen);
-}
-/*************************/
-void FN::defaultSize()
-{
-    if (isMaximized() || isFullScreen())
-        return;
-    /*if (isMaximized() && isFullScreen())
-        showMaximized();
-    if (isMaximized())
-        showNormal();*/
-    if (size() != startSize_)
-    {
-        //setVisible (false);
-        resize (startSize_);
-        //QTimer::singleShot (250, this, &QWidget::showNormal);
-    }
-    QList<int> sizes; sizes << 170 << 530;
-    ui->splitter->setSizes (sizes);
 }
 /*************************/
 void FN::zoomingIn()
@@ -974,7 +952,7 @@ void FN::enableActions (bool enable)
     }
 }
 /*************************/
-void FN::showDoc (QDomDocument &doc)
+void FN::showDoc (QDomDocument &doc, int node)
 {
     if (saveNeeded_)
     {
@@ -1034,8 +1012,19 @@ void FN::showDoc (QDomDocument &doc)
     delete m;
     /* first connect to selectionChanged()... */
     connect (ui->treeView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &FN::selChanged);
-    /* ... and then, select the first row */
-    ui->treeView->setCurrentIndex (newModel->index(0, 0));
+    /* ... and then, select the (first) row */
+    QModelIndex indx = newModel->index (0, 0);
+    while (indx.isValid() && node > 0)
+    {
+        indx = newModel->adjacentIndex (indx, true);
+        --node;
+    }
+    if (!indx.isValid())
+        indx = newModel->index (0, 0);
+    ui->treeView->setCurrentIndex (indx);
+    QTimer::singleShot (0, this, [this, indx] () {
+        ui->treeView->scrollTo (indx);
+    });
     ui->treeView->expandAll();
     delete model_;
     model_ = newModel;
@@ -1109,7 +1098,10 @@ void FN::fileOpen (const QString &filePath, bool startup)
                     else
                     {
                         success = true;
-                        showDoc (document);
+                        if (startup && lastNode_ > -1)
+                            showDoc (document, lastNode_);
+                        else
+                            showDoc (document);
                         if (xmlPath_ != filePath)
                         {
                             xmlPath_ = filePath;
@@ -3496,7 +3488,7 @@ void FN::replaceAll()
     textEdit->setExtraSelections (extraSelections);
     hlight();
 
-    if (ui->everywhereButton->isChecked() && model_->rowCount() > 1)
+    if (ui->everywhereButton->isChecked())
     {
         nxtIndx = ui->treeView->currentIndex();
         QString text;
@@ -4594,15 +4586,24 @@ void FN::readAndApplyConfig (bool startup)
             resize (winSize_);
     }
 
-    if (settings.value ("splitterSizes").toString() == "none")
+    QByteArray splitterSizes;
+    QVariant v = settings.value ("splitterSizes");
+    if (v.toString() == "none")
         remSplitter_ = false; // true by default
     else
     {
         remSplitter_ = true;
-        splitterSizes_ = settings.value ("splitterSizes", splitterSizes_).toByteArray();
+        if (v.isValid())
+            splitterSizes = v.toByteArray();
     }
     if (startup)
-        ui->splitter->restoreState (splitterSizes_);
+    {
+        if (splitterSizes.isEmpty() || !ui->splitter->restoreState (splitterSizes))
+        {
+            QList<int> sizes; sizes << 170 << 530;
+            ui->splitter->setSizes (sizes);
+        }
+    }
 
     if (settings.value ("position").toString() == "none")
         remPosition_ = false; // true by default
@@ -4803,7 +4804,12 @@ void FN::readAndApplyConfig (bool startup)
 
     openLastFile_ = settings.value ("openLastFile").toBool(); // false by default
     if (openLastFile_)
+    {
         xmlPath_ = settings.value ("lastOpenedFile").toString();
+        lastNode_ = settings.value ("lastNode", -1).toInt();
+    }
+    else
+        lastNode_ = -1;
 
 #ifdef HAS_HUNSPELL
     dictPath_ = settings.value ("dictionaryPath").toString();
@@ -4812,7 +4818,7 @@ void FN::readAndApplyConfig (bool startup)
     settings.endGroup();
 }
 /*************************/
-void FN::writeGeometryConfig()
+void FN::writeGeometryConfig (bool withLastNodeInfo)
 {
     Settings settings ("feathernotes", "fn");
     settings.beginGroup ("window");
@@ -4846,6 +4852,26 @@ void FN::writeGeometryConfig()
     settings.setValue ("prefSize", prefSize_);
 
     settings.endGroup();
+
+    if (withLastNodeInfo && openLastFile_ && !xmlPath_.isEmpty())
+    {
+        settings.beginGroup ("text");
+
+        lastNode_ = 0;
+        QModelIndex curIndx = ui->treeView->currentIndex();
+        QModelIndex indx = model_->index (0, 0, QModelIndex());
+        if (curIndx.isValid() && indx.isValid())
+        {
+            while (indx != curIndx
+                   && (indx = model_->adjacentIndex (indx, true)).isValid())
+            {
+                ++lastNode_;
+            }
+        }
+        settings.setValue ("lastNode", lastNode_);
+
+        settings.endGroup();
+    }
 }
 /*************************/
 // Recent files are also updated.
@@ -4864,16 +4890,19 @@ void FN::rememberLastOpenedFile (bool recentNumIsSet)
     if (recentNum > 0)
         recentFiles = settings.value ("recentFiles").toStringList();
 
-    if (!recentNumIsSet)
+    if (openLastFile_
+        && !xmlPath_.isEmpty()) // a file has been opened or saved to
     {
-        if (openLastFile_
-            && !xmlPath_.isEmpty()) // a file has been opened or saved to
-        {
-            settings.setValue ("lastOpenedFile", xmlPath_);
-        }
+        settings.setValue ("lastOpenedFile", xmlPath_);
     }
-    else
+
+    if (recentNumIsSet) // called by the Preferences dialog
     {
+        if (!openLastFile_)
+        {
+            settings.remove ("lastOpenedFile");
+            settings.remove ("lastNode");
+        }
         settings.setValue ("recentFilesNumber", recentNum);
         settings.setValue ("openReccentSeparately", openReccentSeparately_);
     }

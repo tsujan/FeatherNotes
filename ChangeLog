@@ -7,6 +7,9 @@ V0.9.0
  * Added an item to the File menu for the recently opened files, whose number can be set in the Preferences dialog (and can be zero).
  * Added an option to open recent files separately (namely, in other instances of FeatherNotes).
  * Prevented Qt from giving rich text to the selection clipboard.
+ * Removed a redundant shortcut and variable.
+ * Fixed the bugs in seaching and replacing in all nodes.
+ * Go to the last active node when starting with the last opened note.
 
 V0.8.0
 ---------

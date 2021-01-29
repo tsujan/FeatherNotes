@@ -42,7 +42,7 @@ public:
     explicit FN (const QStringList& message, QWidget *parent = nullptr);
     ~FN();
 
-    void writeGeometryConfig();
+    void writeGeometryConfig (bool withLastNodeInfo = true);
     void rememberLastOpenedFile (bool recentNumIsSet = false);
     void writeConfig();
 
@@ -74,9 +74,6 @@ public:
         remSplitter_ = rem;
     }
     QByteArray getSpltiterState() const;
-    void setSplitterSizes (const QByteArray &sizes) {
-        splitterSizes_ = sizes;
-    }
 
     QSize getPrefSize() const {
         return prefSize_;
@@ -234,7 +231,6 @@ private slots:
     void checkTray();
     void showContextMenu (const QPoint &p);
     void fullScreening();
-    void defaultSize();
     void rehighlight (TextEdit *textEdit);
     void zoomingIn();
     void zoomingOut();
@@ -356,7 +352,7 @@ private:
     void closeEvent (QCloseEvent *event);
     void resizeEvent (QResizeEvent *event);
     void showEvent (QShowEvent *event);
-    void showDoc (QDomDocument &doc);
+    void showDoc (QDomDocument &doc, int node = -1);
     void setTitle (const QString& fname);
     void notSavedOrOpened (bool notSaved);
     void setNodesTexts();
@@ -429,12 +425,11 @@ private:
          autoReplace_,
          openLastFile_,
          treeViewDND_;
+    int lastNode_;
     QString dateFormat_;
     int autoSave_;
     QPoint position_; // Excluding the window frame.
     QSize winSize_, startSize_, prefSize_;
-    //QList<int> splitterSizes_;
-    QByteArray splitterSizes_;
     QTimer *timer_;
     QString pswrd_;
     bool underE_; // Is FeatherNotes running under Enlightenment?

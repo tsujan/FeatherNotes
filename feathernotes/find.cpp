@@ -376,7 +376,7 @@ void FN::find()
     QModelIndex nxtIndx;
     if (found.isNull())
     {
-        if (!ui->everywhereButton->isChecked() || model_->rowCount() == 1)
+        if (!ui->everywhereButton->isChecked())
         {
             if (backwardSearch)
                 start.movePosition (QTextCursor::End, QTextCursor::MoveAnchor);
@@ -400,7 +400,11 @@ void FN::find()
                     if (!backwardSearch)
                         nxtIndx = model_->index (0, 0);
                     else
+                    {
                         nxtIndx = model_->index (model_->rowCount() - 1, 0);
+                        while (model_->hasChildren (nxtIndx))
+                            nxtIndx = model_->index (model_->rowCount (nxtIndx) - 1, 0, nxtIndx);
+                    }
                 }
                 DomItem *item = static_cast<DomItem*>(nxtIndx.internalPointer());
                 if (TextEdit *thisTextEdit = widgets_.value (item))

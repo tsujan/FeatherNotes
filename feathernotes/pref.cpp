@@ -141,13 +141,7 @@ PrefDialog::PrefDialog (QWidget *parent)
         /* splitter position */
         ui->splitterSizeBox->setChecked (win->isSplitterRem());
         connect (ui->splitterSizeBox, &QCheckBox::stateChanged, win, [win] (int checked) {
-            if (checked == Qt::Checked)
-            {
-                win->remSplitter (true);
-                win->setSplitterSizes (win->getSpltiterState());
-            }
-            else if (checked == Qt::Unchecked)
-                win->remSplitter (false);
+            win->remSplitter (checked == Qt::Checked);
         });
 
         /* window position */
@@ -490,7 +484,7 @@ void PrefDialog::onClosing()
         win->setPrefSize (size());
 
         win->writeConfig();
-        win->writeGeometryConfig();
+        win->writeGeometryConfig (false); // doesn't save the last node info
         win->rememberLastOpenedFile (true); // saves everything about recent files
     }
 }

@@ -151,12 +151,6 @@ The background and text colors are respected when a &lt;span style=&quot; font-w
 &lt;td&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(Un-)Fullscreen&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Ctrl+Shift+W&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Resize window to start size (700×500 by default)&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;
 &lt;td colspan="3"&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600; font-style:italic;&quot;&gt;In the following, the text editor should be focused&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
