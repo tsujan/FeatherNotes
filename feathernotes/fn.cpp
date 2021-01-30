@@ -2992,7 +2992,11 @@ void FN::findInNames()
         if (down)
             indx = model_->index (0, 0);
         else
+        {
             indx = model_->index (model_->rowCount() - 1, 0);
+            while (model_->hasChildren (indx))
+                indx = model_->index (model_->rowCount (indx) - 1, 0, indx);
+        }
         if (indx == ui->treeView->currentIndex())
             return;
 

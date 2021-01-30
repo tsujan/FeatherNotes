@@ -8,7 +8,7 @@ V0.9.0
  * Added an option to open recent files separately (namely, in other instances of FeatherNotes).
  * Prevented Qt from giving rich text to the selection clipboard.
  * Removed a redundant shortcut and variable.
- * Fixed the bugs in seaching and replacing in all nodes.
+ * Fixed the bugs of seaching and replacing in all nodes.
  * Go to the last active node when starting with the last opened note.
  * Save the final settings with SIGTERM signal too.
 
