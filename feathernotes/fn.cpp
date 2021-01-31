@@ -988,8 +988,13 @@ void FN::showDoc (QDomDocument &doc, int node)
     QDomElement root = doc.firstChildElement ("feathernotes");
     QString fontStr = root.attribute ("txtfont");
     if (!fontStr.isEmpty())
-        defaultFont_.fromString (fontStr);
-    else // defaultFont_ may have changed by the user
+    {
+        /* since defaultFont_ may have been set in textFontDialog(),
+           it needs to be redefined completely */
+        QFont f; f.fromString (fontStr);
+        defaultFont_ = f;
+    }
+    else
     {
         defaultFont_ = QFont ("Monospace");
         defaultFont_.setPointSize (qMax (font().pointSize(), 9));
@@ -2745,13 +2750,13 @@ void FN::textFontDialog()
                                           tr ("Select Document Font"));
     if (ok)
     {
-        QFont font (newFont.family(), newFont.pointSize());
-        defaultFont_ = font;
+        defaultFont_ = QFont (newFont.family(), newFont.pointSize());
+        defaultFont_.setFamilies (newFont.families()); // to override the existing font families
 
         noteModified();
 
         QTextCharFormat fmt;
-        fmt.setFont (defaultFont_);
+        fmt.setFont (defaultFont_, QTextCharFormat::FontPropertiesSpecifiedOnly);
 
         /* change the font for all shown nodes
            FIXME: Text zooming won't work until the document is reloaded. */
