@@ -125,7 +125,7 @@
     <message>
         <location filename="../../fn.ui" line="223"/>
         <source>Recenl&amp;y Opened</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Son Açılan</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="245"/>
@@ -989,7 +989,7 @@
     <message>
         <location filename="../../fn.ui" line="1373"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Açık</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2538"/>
@@ -1081,29 +1081,30 @@
         <location filename="../../fn.cpp" line="5304"/>
         <location filename="../../fn.cpp" line="5858"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Kapatma</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1493"/>
         <location filename="../../fn.cpp" line="1514"/>
         <source>Save As...</source>
-        <translation type="unfinished"></translation>
+        <translation>Farklı Kaydet...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2370"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Delete this node?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Bu düğüm silinsin mi?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2371"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;i&gt;Warning!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
 &lt;center&gt;This action cannot be undone.&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;i&gt;Uyarı!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
+&lt;center&gt;Bu eylem geri alınamaz.&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2472"/>
         <source>Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Etiketler</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2487"/>
@@ -1117,108 +1118,108 @@
         <location filename="../../fn.cpp" line="5433"/>
         <location filename="../../fn.cpp" line="5553"/>
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamam</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2675"/>
         <location filename="../../fn.cpp" line="2708"/>
         <source>&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Ana düğümler:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Bütün düğümler:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2681"/>
         <location filename="../../fn.cpp" line="2714"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Not:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Ana düğümler::&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Bütün düğümler:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3115"/>
         <source>%1 Matches</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Eşleşme</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3117"/>
         <source>One Match</source>
-        <translation type="unfinished"></translation>
+        <translation>Bir eşleşme</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3119"/>
         <location filename="../../fn.cpp" line="3434"/>
         <source>No Match</source>
-        <translation type="unfinished"></translation>
+        <translation>Eşleşme yok</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3234"/>
         <location filename="../../fn.cpp" line="3286"/>
         <source>Replacement</source>
-        <translation type="unfinished"></translation>
+        <translation>Yedek</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3541"/>
         <source>No Replacement</source>
-        <translation type="unfinished"></translation>
+        <translation>Yedek yok</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3543"/>
         <source>One Replacement</source>
-        <translation type="unfinished"></translation>
+        <translation>Bir yedek</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3546"/>
         <source>%1 Replacements</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Yedekler</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3723"/>
         <source>Insert Link</source>
-        <translation type="unfinished"></translation>
+        <translation>Bağlantı Ekle</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2546"/>
         <location filename="../../fn.cpp" line="3801"/>
         <source>Image path</source>
-        <translation type="unfinished"></translation>
+        <translation>Görüntü yolu</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2550"/>
         <location filename="../../fn.cpp" line="3805"/>
         <source>Open image</source>
-        <translation type="unfinished"></translation>
+        <translation>Görüntü aç</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3813"/>
         <location filename="../../fn.cpp" line="3974"/>
         <source>Scaling percentage</source>
-        <translation type="unfinished"></translation>
+        <translation>Ölçekleme yüzdesi</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2568"/>
         <location filename="../../fn.cpp" line="3922"/>
         <source>Open Image...</source>
-        <translation type="unfinished"></translation>
+        <translation>Görüntü aç...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="629"/>
         <location filename="../../fn.cpp" line="4499"/>
         <source>&amp;Raise</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Yükseltmek</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="820"/>
         <source>New Node</source>
-        <translation type="unfinished"></translation>
+        <translation>Yeni düğüm</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1239"/>
         <location filename="../../fn.cpp" line="1495"/>
         <location filename="../../fn.cpp" line="1516"/>
         <source>FeatherNotes documents (*.fnx);;All Files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>FeatherNotes belgeler(*.fnx);;tüm dosyalar (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1394"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be opened!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Açılamaz!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1477"/>
@@ -1229,22 +1230,22 @@
         <location filename="../../fn.cpp" line="5361"/>
         <location filename="../../fn.cpp" line="5387"/>
         <source>Untitled</source>
-        <translation type="unfinished"></translation>
+        <translation>İsimsiz</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2237"/>
         <source>Select Text Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Metin rengini seç</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2259"/>
         <source>Select Background Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Arkaplan rengini seç</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2369"/>
         <source>Deletion</source>
-        <translation type="unfinished"></translation>
+        <translation>Silme</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2482"/>
