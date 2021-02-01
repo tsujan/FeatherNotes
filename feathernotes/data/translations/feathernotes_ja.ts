@@ -125,7 +125,7 @@
     <message>
         <location filename="../../fn.ui" line="223"/>
         <source>Recenl&amp;y Opened</source>
-        <translation type="unfinished"></translation>
+        <translation>最近開いたファイル(&amp;Y)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="245"/>
@@ -263,7 +263,7 @@
     <message>
         <location filename="../../fn.ui" line="574"/>
         <source>Redo</source>
-        <translation>やり直し</translation>
+        <translation>やり直す</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="577"/>
@@ -511,7 +511,7 @@
     <message>
         <location filename="../../fn.ui" line="834"/>
         <source>E&amp;xpand All</source>
-        <translation>すべて展開</translation>
+        <translation>すべて展開(&amp;X)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="837"/>
@@ -581,7 +581,7 @@
     <message>
         <location filename="../../fn.ui" line="911"/>
         <source>Re&amp;name Node</source>
-        <translation>ノード名の変更</translation>
+        <translation>ノード名の変更(&amp;N)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="914"/>
@@ -989,7 +989,7 @@
     <message>
         <location filename="../../fn.ui" line="1373"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>消去(&amp;C)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2538"/>
@@ -1041,7 +1041,7 @@
     <message>
         <location filename="../../fn.cpp" line="868"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been removed.&lt;/i&gt;&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;i&gt;文書は削除されました。&lt;/i&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;i&gt;文書が削除されました。&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="873"/>
@@ -1072,7 +1072,7 @@
         <location filename="../../fn.cpp" line="1393"/>
         <location filename="../../fn.cpp" line="5301"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be saved!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;保存できませんでした！&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;保存できません！&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1397"/>
@@ -1219,7 +1219,7 @@
     <message>
         <location filename="../../fn.cpp" line="1394"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be opened!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;開けません！&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1477"/>
@@ -1815,17 +1815,17 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../prefDialog.ui" line="510"/>
         <source>Start with the last opened file</source>
-        <translation>最後に開いたファイルで開始する</translation>
+        <translation>最後に開いたファイルで始める</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="522"/>
         <source>Number of recent files:</source>
-        <translation type="unfinished"></translation>
+        <translation>最近開いたファイルの数:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="554"/>
         <source>Open recent files separately</source>
-        <translation type="unfinished"></translation>
+        <translation>最近開いたファイルを個別に開く</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="578"/>
