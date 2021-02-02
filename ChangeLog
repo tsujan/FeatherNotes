@@ -12,6 +12,7 @@ V0.9.0
  * Go to the last active node when starting with the last opened note.
  * Save the final settings with SIGTERM signal too.
  * Prevent Qt from clearing format when the document font is changed.
+ * Added cmake support (besides qmake).
 
 V0.8.0
 ---------
