@@ -50,6 +50,8 @@
 #include <QWindow>
 #include <QStyledItemDelegate>
 #include <QTextTable>
+#include <QTextTableFormat>
+#include <QTextTableCell>
 #include <QTextBlock>
 #include <QTextDocumentFragment>
 #include <QTextDocumentWriter>
@@ -1884,8 +1886,7 @@ void FN::txtContextMenu (const QPoint &p)
     if (!sepAdded) menu->addSeparator();
     menu->addAction (ui->actionEmbedImage);
     menu->addAction (ui->actionTable);
-    txtTable_ = cur.currentTable();
-    if (txtTable_)
+    if (cur.currentTable())
     {
         menu->addSeparator();
         if (cur.hasComplexSelection())
@@ -1908,7 +1909,6 @@ void FN::txtContextMenu (const QPoint &p)
 
     menu->exec (textEdit->viewport()->mapToGlobal (p));
     delete menu;
-    txtTable_ = nullptr;
 }
 /*************************/
 void FN::copyLink()
@@ -4301,7 +4301,8 @@ void FN::tableMergeCells()
 
     TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
     QTextCursor cur = textEdit->textCursor();
-    txtTable_->mergeCells (cur);
+    if (QTextTable *table = cur.currentTable())
+        table->mergeCells (cur);
 }
 /*************************/
 void FN::tablePrependRow()
@@ -4311,8 +4312,11 @@ void FN::tablePrependRow()
 
     TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
     QTextCursor cur = textEdit->textCursor();
-    QTextTableCell tableCell = txtTable_->cellAt (cur);
-    txtTable_->insertRows (tableCell.row(), 1);
+    if (QTextTable *table = cur.currentTable())
+    {
+        QTextTableCell tableCell = table->cellAt (cur);
+        table->insertRows (tableCell.row(), 1);
+    }
 }
 /*************************/
 void FN::tableAppendRow()
@@ -4322,8 +4326,11 @@ void FN::tableAppendRow()
 
     TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
     QTextCursor cur = textEdit->textCursor();
-    QTextTableCell tableCell = txtTable_->cellAt (cur);
-    txtTable_->insertRows (tableCell.row() + 1, 1);
+    if (QTextTable *table = cur.currentTable())
+    {
+        QTextTableCell tableCell = table->cellAt (cur);
+        table->insertRows (tableCell.row() + 1, 1);
+    }
 }
 /*************************/
 void FN::tablePrependCol()
@@ -4333,8 +4340,11 @@ void FN::tablePrependCol()
 
     TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
     QTextCursor cur = textEdit->textCursor();
-    QTextTableCell tableCell = txtTable_->cellAt (cur);
-    txtTable_->insertColumns (tableCell.column(), 1);
+    if (QTextTable *table = cur.currentTable())
+    {
+        QTextTableCell tableCell = table->cellAt (cur);
+        table->insertColumns (tableCell.column(), 1);
+    }
 }
 /*************************/
 void FN::tableAppendCol()
@@ -4344,8 +4354,11 @@ void FN::tableAppendCol()
 
     TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
     QTextCursor cur = textEdit->textCursor();
-    QTextTableCell tableCell = txtTable_->cellAt (cur);
-    txtTable_->insertColumns (tableCell.column() + 1, 1);
+    if (QTextTable *table = cur.currentTable())
+    {
+        QTextTableCell tableCell = table->cellAt (cur);
+        table->insertColumns (tableCell.column() + 1, 1);
+    }
 }
 /*************************/
 void FN::tableDeleteRow()
@@ -4355,8 +4368,11 @@ void FN::tableDeleteRow()
 
     TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
     QTextCursor cur = textEdit->textCursor();
-    QTextTableCell tableCell = txtTable_->cellAt (cur);
-    txtTable_->removeRows (tableCell.row(), 1);
+    if (QTextTable *table = cur.currentTable())
+    {
+        QTextTableCell tableCell = table->cellAt (cur);
+        table->removeRows (tableCell.row(), 1);
+    }
 }
 /*************************/
 void FN::tableDeleteCol()
@@ -4366,8 +4382,11 @@ void FN::tableDeleteCol()
 
     TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
     QTextCursor cur = textEdit->textCursor();
-    QTextTableCell tableCell = txtTable_->cellAt (cur);
-    txtTable_->removeColumns (tableCell.column(), 1);
+    if (QTextTable *table = cur.currentTable())
+    {
+        QTextTableCell tableCell = table->cellAt (cur);
+        table->removeColumns (tableCell.column(), 1);
+    }
 }
 /*************************/
 void FN::toggleWrapping()

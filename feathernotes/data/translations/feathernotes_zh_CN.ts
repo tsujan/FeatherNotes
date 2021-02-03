@@ -26,9 +26,9 @@
     <name>FeatherNotes::FN</name>
     <message>
         <location filename="../../fn.ui" line="14"/>
-        <location filename="../../fn.cpp" line="1392"/>
+        <location filename="../../fn.cpp" line="1394"/>
         <location filename="../../fn.cpp" line="3550"/>
-        <location filename="../../fn.cpp" line="5300"/>
+        <location filename="../../fn.cpp" line="5319"/>
         <source>FeatherNotes</source>
         <translation>羽毛笔笔记</translation>
     </message>
@@ -215,7 +215,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="535"/>
-        <location filename="../../fn.cpp" line="872"/>
+        <location filename="../../fn.cpp" line="874"/>
         <source>Save</source>
         <translation>保存</translation>
     </message>
@@ -226,7 +226,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="543"/>
-        <location filename="../../fn.cpp" line="633"/>
+        <location filename="../../fn.cpp" line="635"/>
         <source>&amp;Open</source>
         <translation>打开</translation>
     </message>
@@ -397,7 +397,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="711"/>
-        <location filename="../../fn.cpp" line="632"/>
+        <location filename="../../fn.cpp" line="634"/>
         <source>&amp;New Note</source>
         <translation>新笔记</translation>
     </message>
@@ -438,7 +438,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="757"/>
-        <location filename="../../fn.cpp" line="635"/>
+        <location filename="../../fn.cpp" line="637"/>
         <source>&amp;Quit</source>
         <translation>退出</translation>
     </message>
@@ -997,59 +997,59 @@
         <translation>目录图标</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="627"/>
-        <location filename="../../fn.cpp" line="4511"/>
+        <location filename="../../fn.cpp" line="629"/>
+        <location filename="../../fn.cpp" line="4530"/>
         <source>&amp;Raise/Hide</source>
         <translation>升起/隐藏</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="774"/>
+        <location filename="../../fn.cpp" line="776"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;New note?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;新建笔记?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="775"/>
+        <location filename="../../fn.cpp" line="777"/>
         <source>&lt;center&gt;&lt;i&gt;Do you really want to leave this document&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;and create an empty one?&lt;/i&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;i&gt;你真的想离开这个文档吗&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;并创建一个空文档?&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="778"/>
+        <location filename="../../fn.cpp" line="780"/>
         <location filename="../../fn.cpp" line="2373"/>
         <location filename="../../fn.cpp" line="4159"/>
         <source>Yes</source>
         <translation>是</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="779"/>
+        <location filename="../../fn.cpp" line="781"/>
         <location filename="../../fn.cpp" line="2374"/>
         <location filename="../../fn.cpp" line="4160"/>
         <source>No</source>
         <translation>否</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="864"/>
+        <location filename="../../fn.cpp" line="866"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Save changes?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;保存更改?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="866"/>
+        <location filename="../../fn.cpp" line="868"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been modified.&lt;/i&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;i&gt;文档已经被修改.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="868"/>
+        <location filename="../../fn.cpp" line="870"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been removed.&lt;/i&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;i&gt;文档已被删除.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="873"/>
+        <location filename="../../fn.cpp" line="875"/>
         <source>Discard changes</source>
         <translation>放弃更改</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="874"/>
+        <location filename="../../fn.cpp" line="876"/>
         <location filename="../../fn.cpp" line="2486"/>
         <location filename="../../fn.cpp" line="2581"/>
         <location filename="../../fn.cpp" line="2848"/>
@@ -1057,35 +1057,35 @@
         <location filename="../../fn.cpp" line="3816"/>
         <location filename="../../fn.cpp" line="3977"/>
         <location filename="../../fn.cpp" line="4253"/>
-        <location filename="../../fn.cpp" line="5179"/>
-        <location filename="../../fn.cpp" line="5432"/>
-        <location filename="../../fn.cpp" line="5552"/>
+        <location filename="../../fn.cpp" line="5198"/>
+        <location filename="../../fn.cpp" line="5451"/>
+        <location filename="../../fn.cpp" line="5571"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1237"/>
+        <location filename="../../fn.cpp" line="1239"/>
         <source>Open file...</source>
         <translation>打开文件...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1393"/>
-        <location filename="../../fn.cpp" line="5301"/>
+        <location filename="../../fn.cpp" line="1395"/>
+        <location filename="../../fn.cpp" line="5320"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be saved!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;无法保存!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1397"/>
+        <location filename="../../fn.cpp" line="1399"/>
         <location filename="../../fn.cpp" line="3128"/>
         <location filename="../../fn.cpp" line="3554"/>
-        <location filename="../../fn.cpp" line="5304"/>
-        <location filename="../../fn.cpp" line="5858"/>
+        <location filename="../../fn.cpp" line="5323"/>
+        <location filename="../../fn.cpp" line="5877"/>
         <source>Close</source>
         <translation>关闭</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1493"/>
-        <location filename="../../fn.cpp" line="1514"/>
+        <location filename="../../fn.cpp" line="1495"/>
+        <location filename="../../fn.cpp" line="1516"/>
         <source>Save As...</source>
         <translation>另存为...</translation>
     </message>
@@ -1114,9 +1114,9 @@
         <location filename="../../fn.cpp" line="3817"/>
         <location filename="../../fn.cpp" line="3978"/>
         <location filename="../../fn.cpp" line="4254"/>
-        <location filename="../../fn.cpp" line="5181"/>
-        <location filename="../../fn.cpp" line="5433"/>
-        <location filename="../../fn.cpp" line="5553"/>
+        <location filename="../../fn.cpp" line="5200"/>
+        <location filename="../../fn.cpp" line="5452"/>
+        <location filename="../../fn.cpp" line="5572"/>
         <source>OK</source>
         <translation>确定</translation>
     </message>
@@ -1199,36 +1199,36 @@
         <translation>打开图片...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="629"/>
-        <location filename="../../fn.cpp" line="4499"/>
+        <location filename="../../fn.cpp" line="631"/>
+        <location filename="../../fn.cpp" line="4518"/>
         <source>&amp;Raise</source>
         <translation>升起</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="820"/>
+        <location filename="../../fn.cpp" line="822"/>
         <source>New Node</source>
         <translation>新笔记</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1239"/>
-        <location filename="../../fn.cpp" line="1495"/>
-        <location filename="../../fn.cpp" line="1516"/>
+        <location filename="../../fn.cpp" line="1241"/>
+        <location filename="../../fn.cpp" line="1497"/>
+        <location filename="../../fn.cpp" line="1518"/>
         <source>FeatherNotes documents (*.fnx);;All Files (*)</source>
         <translation>羽毛笔笔记 文档 (*.fnx);;所有文件 (*)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1394"/>
+        <location filename="../../fn.cpp" line="1396"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be opened!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1477"/>
-        <location filename="../../fn.cpp" line="5040"/>
-        <location filename="../../fn.cpp" line="5049"/>
-        <location filename="../../fn.cpp" line="5168"/>
-        <location filename="../../fn.cpp" line="5352"/>
-        <location filename="../../fn.cpp" line="5361"/>
-        <location filename="../../fn.cpp" line="5387"/>
+        <location filename="../../fn.cpp" line="1479"/>
+        <location filename="../../fn.cpp" line="5059"/>
+        <location filename="../../fn.cpp" line="5068"/>
+        <location filename="../../fn.cpp" line="5187"/>
+        <location filename="../../fn.cpp" line="5371"/>
+        <location filename="../../fn.cpp" line="5380"/>
+        <location filename="../../fn.cpp" line="5406"/>
         <source>Untitled</source>
         <translation>无标题</translation>
     </message>
@@ -1358,52 +1358,52 @@
         <translation>列:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5059"/>
+        <location filename="../../fn.cpp" line="5078"/>
         <source>Print Document</source>
         <translation>打印文档</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5136"/>
+        <location filename="../../fn.cpp" line="5155"/>
         <source>Export HTML</source>
         <translation>导出HTML</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5141"/>
+        <location filename="../../fn.cpp" line="5160"/>
         <source>Export:</source>
         <translation>导出:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5142"/>
+        <location filename="../../fn.cpp" line="5161"/>
         <source>&amp;Current node</source>
         <translation>当前节点</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5144"/>
+        <location filename="../../fn.cpp" line="5163"/>
         <source>With all &amp;sub-nodes</source>
         <translation>包含所有子节点</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5145"/>
+        <location filename="../../fn.cpp" line="5164"/>
         <source>&amp;All nodes</source>
         <translation>所有节点</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5157"/>
+        <location filename="../../fn.cpp" line="5176"/>
         <source>Output file:</source>
         <translation>导入文件:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5176"/>
+        <location filename="../../fn.cpp" line="5195"/>
         <source>Select path</source>
         <translation>选择目录</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5218"/>
+        <location filename="../../fn.cpp" line="5237"/>
         <source>Question</source>
         <translation>问题</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5219"/>
+        <location filename="../../fn.cpp" line="5238"/>
         <source>The file already exists.
 Do you want to replace it?
 </source>
@@ -1412,106 +1412,106 @@ Do you want to replace it?
 </translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5392"/>
+        <location filename="../../fn.cpp" line="5411"/>
         <source>Save HTML As...</source>
         <translation>HTML另存为...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5394"/>
+        <location filename="../../fn.cpp" line="5413"/>
         <source>HTML Files (*.html *.htm)</source>
         <translation>HTML 文件 (*.html *.htm)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5415"/>
+        <location filename="../../fn.cpp" line="5434"/>
         <source>Set Password</source>
         <translation>设置密码</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5423"/>
+        <location filename="../../fn.cpp" line="5442"/>
         <source>Type password</source>
         <translation>输入密码</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5428"/>
+        <location filename="../../fn.cpp" line="5447"/>
         <source>Retype password</source>
         <translation>再次输入密码</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5503"/>
+        <location filename="../../fn.cpp" line="5522"/>
         <source>&lt;center&gt;Passwords were different. Retry!&lt;/center&gt;</source>
         <translation>&lt;center&gt;两次密码不同. 请重试!&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5540"/>
-        <location filename="../../fn.cpp" line="5548"/>
+        <location filename="../../fn.cpp" line="5559"/>
+        <location filename="../../fn.cpp" line="5567"/>
         <source>Enter Password</source>
         <translation>输入密码</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5614"/>
+        <location filename="../../fn.cpp" line="5633"/>
         <source>&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</source>
         <translation>&lt;center&gt;密码错误. 请重试!&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5657"/>
+        <location filename="../../fn.cpp" line="5676"/>
         <source>A lightweight notes manager</source>
         <translation>轻量级笔记管理器</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5658"/>
+        <location filename="../../fn.cpp" line="5677"/>
         <source>based on Qt</source>
         <translation>基于Qt</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5659"/>
+        <location filename="../../fn.cpp" line="5678"/>
         <source>Author</source>
         <translation>作者</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5661"/>
-        <location filename="../../fn.cpp" line="5662"/>
+        <location filename="../../fn.cpp" line="5680"/>
+        <location filename="../../fn.cpp" line="5681"/>
         <source>About FeatherNotes</source>
         <translation>关于羽毛笔笔记</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5661"/>
+        <location filename="../../fn.cpp" line="5680"/>
         <source>Translators</source>
         <translation>翻译</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5850"/>
+        <location filename="../../fn.cpp" line="5869"/>
         <source>See Preferences → Text → Spell Checking!</source>
         <translation>见 偏好设置 → 文本 → 拼写检查！</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5872"/>
+        <location filename="../../fn.cpp" line="5891"/>
         <source>You need to add a Hunspell dictionary.</source>
         <translation>您需要添加一个 Hunspell 词典。</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5877"/>
+        <location filename="../../fn.cpp" line="5896"/>
         <source>The Hunspell dictionary does not exist.</source>
         <translation>Hunspell 词典不存在。</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5885"/>
+        <location filename="../../fn.cpp" line="5904"/>
         <source>The Hunspell dictionary is not accompanied by an affix file.</source>
         <translation>Hunspell 词典没有附带词缀文件。</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5903"/>
-        <location filename="../../fn.cpp" line="5918"/>
-        <location filename="../../fn.cpp" line="5930"/>
+        <location filename="../../fn.cpp" line="5922"/>
+        <location filename="../../fn.cpp" line="5937"/>
+        <location filename="../../fn.cpp" line="5949"/>
         <source>No misspelling from text cursor.</source>
         <translation>文本光标处不显示拼写错误。</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5941"/>
+        <location filename="../../fn.cpp" line="5960"/>
         <source>Spell Checking</source>
         <translation>拼写检查</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5660"/>
+        <location filename="../../fn.cpp" line="5679"/>
         <source>aka.</source>
         <translation>混号</translation>
     </message>
