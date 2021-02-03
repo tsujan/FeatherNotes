@@ -90,12 +90,12 @@
     <message>
         <location filename="../../fn.ui" line="186"/>
         <source>Whole Word (F6)</source>
-        <translation type="unfinished"></translation>
+        <translation>Koko sana (F6)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="189"/>
         <source>Whole Word</source>
-        <translation type="unfinished"></translation>
+        <translation>Koko sana</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="192"/>
@@ -120,17 +120,17 @@
     <message>
         <location filename="../../fn.ui" line="219"/>
         <source>&amp;File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tiedosto</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="223"/>
         <source>Recenl&amp;y Opened</source>
-        <translation type="unfinished"></translation>
+        <translation>Äskettäi&amp;n avattu</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="245"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Muokkaa</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="264"/>
@@ -140,33 +140,33 @@
     <message>
         <location filename="../../fn.ui" line="296"/>
         <source>&amp;Tree</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Puu</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="319"/>
         <source>&amp;Options</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Asetukset</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="333"/>
         <source>&amp;Search</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hae</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="340"/>
         <location filename="../../fn.ui" line="988"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ohje</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="437"/>
         <source>Find:</source>
-        <translation type="unfinished"></translation>
+        <translation>Etsi:</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="444"/>
         <source>Replace with:</source>
-        <translation type="unfinished"></translation>
+        <translation>Korvaa:</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="457"/>
@@ -273,7 +273,7 @@
     <message>
         <location filename="../../fn.ui" line="585"/>
         <source>&amp;Find</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Etsi</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="588"/>
@@ -636,7 +636,7 @@
     <message>
         <location filename="../../fn.ui" line="980"/>
         <source>Find and &amp;Replace</source>
-        <translation type="unfinished"></translation>
+        <translation>Etsi ja ko&amp;rvaa</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="983"/>
