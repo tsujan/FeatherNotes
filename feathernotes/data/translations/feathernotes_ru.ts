@@ -14,12 +14,12 @@
     <message>
         <location filename="../../colorLabel.cpp" line="31"/>
         <source>Click to change color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Нажмите чтобы изменить цвет.</translation>
     </message>
     <message>
         <location filename="../../colorLabel.cpp" line="53"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите цвет</translation>
     </message>
 </context>
 <context>
@@ -125,7 +125,7 @@
     <message>
         <location filename="../../fn.ui" line="223"/>
         <source>Recenl&amp;y Opened</source>
-        <translation type="unfinished"></translation>
+        <translation>Недавние&amp;Открытые</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="245"/>
@@ -968,28 +968,28 @@
         <location filename="../../fn.ui" line="1346"/>
         <location filename="../../fn.ui" line="1349"/>
         <source>Check Spelling</source>
-        <translation type="unfinished"></translation>
+        <translation>Проверить орфографию</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1352"/>
         <source>F2</source>
-        <translation type="unfinished">F2</translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1357"/>
         <source>Document &amp;Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Документы &amp;Цвета</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1365"/>
         <location filename="../../fn.ui" line="1368"/>
         <source>Paste Date and Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Вставить дату и время</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1373"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Очистить</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2538"/>
@@ -1219,7 +1219,7 @@
     <message>
         <location filename="../../fn.cpp" line="1396"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be opened!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Не может быть открыто!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1479"/>
@@ -1271,27 +1271,27 @@
     <message>
         <location filename="../../fn.cpp" line="2820"/>
         <source>Set Document Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Установить цвета документа</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2830"/>
         <source>These colors will be applied to new nodes.&lt;br&gt;They may or may not affect existing nodes&lt;br&gt;but document reopening is recommended.</source>
-        <translation type="unfinished"></translation>
+        <translation>Эти цвета будут применены к новым записям. &lt;br&gt; Они могут повлиять или не повлиять на существующие записи, &lt;br&gt; но рекомендуется повторно открыть эту запись.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2833"/>
         <source>Background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Задний цвет:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2839"/>
         <source>Text color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Цвет текста:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3551"/>
         <source>The first 1000 replacements are highlighted.</source>
-        <translation type="unfinished"></translation>
+        <translation>Выделены первые 1000 замен.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3808"/>
@@ -1400,14 +1400,16 @@
     <message>
         <location filename="../../fn.cpp" line="5237"/>
         <source>Question</source>
-        <translation type="unfinished"></translation>
+        <translation>Вопрос</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5238"/>
         <source>The file already exists.
 Do you want to replace it?
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Файл уже существует.
+Вы хотите заменить его?
+</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5411"/>
@@ -1479,34 +1481,34 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="5869"/>
         <source>See Preferences → Text → Spell Checking!</source>
-        <translation type="unfinished"></translation>
+        <translation>См. Настройки → Текст → Проверка орфографии!</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5891"/>
         <source>You need to add a Hunspell dictionary.</source>
-        <translation type="unfinished"></translation>
+        <translation>Вам нужно добавить словарь Hunspell.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5896"/>
         <source>The Hunspell dictionary does not exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>Словарь Hunspell не найден.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5904"/>
         <source>The Hunspell dictionary is not accompanied by an affix file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Словарь Hunspell не сопровождается файлом аффикса.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5922"/>
         <location filename="../../fn.cpp" line="5937"/>
         <location filename="../../fn.cpp" line="5949"/>
         <source>No misspelling from text cursor.</source>
-        <translation type="unfinished"></translation>
+        <translation>Нет текста для поверки орфографии от курсора.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5960"/>
         <source>Spell Checking</source>
-        <translation type="unfinished"></translation>
+        <translation>Проверка орфографии</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5679"/>
@@ -1761,12 +1763,15 @@ the user is typing and under proper circumstances.</source>
 Leave empty for the system default.
 
 Takes effect after closing this dialog.</source>
-        <translation type="unfinished"></translation>
+        <translation>Используется для вставки даты и времени.
+Оставьте пустым для системного значения по умолчанию.
+
+Вступает в силу после закрытия этого диалога.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="369"/>
         <source>Date and time format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Формат даты и времени:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="393"/>
@@ -1781,7 +1786,7 @@ Takes effect after closing this dialog.</source>
     <message>
         <location filename="../../prefDialog.ui" line="434"/>
         <source>Spell Checking</source>
-        <translation type="unfinished"></translation>
+        <translation>Проверка орфографии</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="442"/>
@@ -1789,38 +1794,40 @@ Takes effect after closing this dialog.</source>
         <source>A Hunspell dictionary has a name that ends with &quot;.dic&quot;
 and should be alongside an affix file with the same
 name but ending with &quot;.aff&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Словарь Hunspell имеет имя, которое оканчивается на «.dic»,
+он должен находиться рядом с аффиксным файлом с тем же
+именем, но оканчивающимся на «.aff».</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="447"/>
         <source>Hunspell dictionary path:</source>
-        <translation type="unfinished"></translation>
+        <translation>Путь к словарю Hunspell:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="466"/>
         <location filename="../../pref.cpp" line="689"/>
         <source>Add dictionary...</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавьте словарь...</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="501"/>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Файлы</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="510"/>
         <source>Start with the last opened file</source>
-        <translation type="unfinished"></translation>
+        <translation>Начать с последнего открытого файла</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="522"/>
         <source>Number of recent files:</source>
-        <translation type="unfinished"></translation>
+        <translation>Количество последних файлов:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="554"/>
         <source>Open recent files separately</source>
-        <translation type="unfinished"></translation>
+        <translation>Открывать последние файлы отдельно</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="578"/>
@@ -1861,7 +1868,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../pref.cpp" line="691"/>
         <source>Hunspell Dictionary Files (*.dic)</source>
-        <translation type="unfinished"></translation>
+        <translation>Файлы словаря Hunspell (*.dic)</translation>
     </message>
 </context>
 <context>
@@ -1869,37 +1876,37 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../spellDialog.ui" line="25"/>
         <source>Unknown word:</source>
-        <translation type="unfinished"></translation>
+        <translation>Неизвестное слово:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="51"/>
         <source>Add To Dictionary</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавить в словарь</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="62"/>
         <source>Replace with:</source>
-        <translation type="unfinished">Заменить на:</translation>
+        <translation>Заменить на:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="87"/>
         <source>Ignore Once</source>
-        <translation type="unfinished"></translation>
+        <translation>Игнорировать один раз</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="100"/>
         <source>Ignore All</source>
-        <translation type="unfinished"></translation>
+        <translation>Игнорировать</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="129"/>
         <source>Correct Once</source>
-        <translation type="unfinished"></translation>
+        <translation>Исправить</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="142"/>
         <source>Correct All</source>
-        <translation type="unfinished"></translation>
+        <translation>Исправить всё</translation>
     </message>
 </context>
 <context>
