@@ -1,5 +1,6 @@
 <RCC>
   <qresource>
+    <file>icons/alignment.svg</file>
     <file>icons/all.svg</file>
     <file>icons/application-exit.svg</file>
     <file>icons/application-menu.svg</file>

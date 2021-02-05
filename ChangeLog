@@ -13,6 +13,8 @@ V0.9.0
  * Save the final settings with SIGTERM signal too.
  * Prevent Qt from clearing format when the document font is changed.
  * Added cmake support (besides qmake).
+ * Added a submenu to the table context menu for changing the horizontal alignment of tables.
+ * Don't give styled text to the tray tooltip because KDE's Plasma has a tooltip bug.
 
 V0.8.0
 ---------

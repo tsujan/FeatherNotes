@@ -620,9 +620,9 @@ void FN::createTrayIcon()
         QString shownName = QFileInfo (xmlPath_).fileName();
         if (shownName.endsWith (".fnx"))
             shownName.chop (4);
-        tray_->setToolTip ("<p style='white-space:pre'>"
-                           + shownName
-                           + "</p>");
+        tray_->setToolTip (/*"<p style='white-space:pre'>"
+                           +*/ shownName // KDE's buggy tray can't show styled tooltips
+                           /*+ "</p>"*/);
     }
     QMenu *trayMenu = new QMenu (this);
     /* we don't want shortcuts to be shown here */
@@ -852,9 +852,9 @@ void FN::setTitle (const QString& fname)
 
     if (tray_)
     {
-        tray_->setToolTip ("<p style='white-space:pre'>"
-                           + shownName
-                           + "</p>");
+        tray_->setToolTip (/*"<p style='white-space:pre'>"
+                           +*/ shownName
+                           /*+ "</p>"*/);
     }
 }
 /*************************/
@@ -1886,9 +1886,30 @@ void FN::txtContextMenu (const QPoint &p)
     if (!sepAdded) menu->addSeparator();
     menu->addAction (ui->actionEmbedImage);
     menu->addAction (ui->actionTable);
-    if (cur.currentTable())
+    if (QTextTable *table = cur.currentTable())
     {
         menu->addSeparator();
+
+        QMenu *submenu = menu->addMenu (symbolicIcon::icon (":icons/alignment.svg"), tr ("Align Table"));
+        QAction *a = submenu->addAction (tr ("&Left"));
+        connect (a, &QAction::triggered, table, [table] {
+            QTextTableFormat tf = table->format();
+            tf.setAlignment (Qt::AlignLeft | Qt::AlignVCenter);
+            table->setFormat (tf);
+        });
+        a = submenu->addAction (tr ("&Right"));
+        connect (a, &QAction::triggered, table, [table] {
+            QTextTableFormat tf = table->format();
+            tf.setAlignment (Qt::AlignRight | Qt::AlignVCenter);
+            table->setFormat (tf);
+        });
+        a = submenu->addAction (tr ("&Center"));
+        connect (a, &QAction::triggered, table, [table] {
+            QTextTableFormat tf = table->format();
+            tf.setAlignment (Qt::AlignCenter);
+            table->setFormat (tf);
+        });
+
         if (cur.hasComplexSelection())
             menu->addAction (ui->actionTableMergeCells);
         else
