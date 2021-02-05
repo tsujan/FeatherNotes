@@ -125,7 +125,7 @@
     <message>
         <location filename="../../fn.ui" line="223"/>
         <source>Recenl&amp;y Opened</source>
-        <translation type="unfinished"></translation>
+        <translation>Aberto recentemente</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="245"/>
@@ -989,7 +989,7 @@
     <message>
         <location filename="../../fn.ui" line="1373"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Limpar</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2538"/>
@@ -1219,7 +1219,7 @@
     <message>
         <location filename="../../fn.cpp" line="1396"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be opened!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Não pode ser aberto!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1479"/>
@@ -1821,12 +1821,12 @@ nome, mas terminando com &quot;.aff&quot;.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="522"/>
         <source>Number of recent files:</source>
-        <translation type="unfinished"></translation>
+        <translation>Número de arquivos recentes:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="554"/>
         <source>Open recent files separately</source>
-        <translation type="unfinished"></translation>
+        <translation>Abra os arquivos recentes separadamente</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="578"/>
