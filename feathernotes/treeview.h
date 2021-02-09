@@ -60,16 +60,20 @@ public:
 
     virtual void scrollTo (const QModelIndex &index, QAbstractItemView::ScrollHint hint = QAbstractItemView::EnsureVisible) {
         QTreeView::scrollTo (index, hint);
-        if (index.isValid() && hint == QAbstractItemView::EnsureVisible)
+        if (index.isValid())
         { // ensure that the item is visible horizontally too
             int viewportWidth = viewport()->width();
             QRect vr = visualRect (index);
-            int hPosition = vr.x() - indentation();
             int itemWidth = vr.width() + indentation();
-            if (hPosition < 0 || itemWidth > viewportWidth)
-                horizontalScrollBar()->setValue (hPosition);
-            else if (hPosition + itemWidth > viewportWidth)
-                horizontalScrollBar()->setValue (hPosition + itemWidth - viewportWidth);
+            int hPos;
+            if (QApplication::layoutDirection() == Qt::RightToLeft)
+                hPos = viewportWidth - vr.x() - vr.width() - indentation(); // horizontally mirrored
+            else
+                hPos = vr.x() - indentation();
+            if (hPos < 0 || itemWidth > viewportWidth)
+                horizontalScrollBar()->setValue (hPos);
+            else if (hPos + itemWidth > viewportWidth)
+                horizontalScrollBar()->setValue (hPos + itemWidth - viewportWidth);
         }
     }
 
