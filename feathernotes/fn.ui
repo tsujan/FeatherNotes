@@ -301,6 +301,7 @@
     <addaction name="actionPrepSibling"/>
     <addaction name="actionNewSibling"/>
     <addaction name="actionNewChild"/>
+    <addaction name="separator"/>
     <addaction name="actionDeleteNode"/>
     <addaction name="separator"/>
     <addaction name="actionMoveUp"/>

@@ -181,7 +181,9 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     /* text tabulation */
     << QKeySequence (Qt::SHIFT | Qt::Key_Enter).toString() << QKeySequence (Qt::SHIFT | Qt::Key_Return).toString() << QKeySequence (Qt::CTRL | Qt::Key_Tab).toString() << QKeySequence (Qt::CTRL | Qt::META | Qt::Key_Tab).toString()
     /* used by LineEdit as well as QTextEdit */
-    << QKeySequence (Qt::CTRL | Qt::Key_K).toString();
+    << QKeySequence (Qt::CTRL | Qt::Key_K).toString()
+    /* gives the focus to the side-pane */
+    << QKeySequence (Qt::CTRL | Qt::Key_Escape).toString();
     readShortcuts();
 
     QHash<QString, QString>::const_iterator it = customActions_.constBegin();
@@ -385,15 +387,14 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
         }
     }
 
-    QShortcut *focusSwitcher = new QShortcut (QKeySequence (Qt::Key_Escape), this);
-    connect (focusSwitcher, &QShortcut::activated, [this] {
+    QShortcut *focusView = new QShortcut (QKeySequence (Qt::Key_Escape), this);
+    connect (focusView, &QShortcut::activated, [this] {
         if (QWidget *cw = ui->stackedWidget->currentWidget())
-        {
-            if (cw->hasFocus())
-                ui->treeView->viewport()->setFocus();
-            else
-                cw->setFocus();
-        }
+            cw->setFocus();
+    });
+    QShortcut *focusSidePane = new QShortcut (QKeySequence (Qt::CTRL | Qt::Key_Escape), this);
+    connect (focusSidePane, &QShortcut::activated, [this] {
+        ui->treeView->viewport()->setFocus();
     });
 
     QShortcut *fullscreen = new QShortcut (QKeySequence (Qt::Key_F11), this);
@@ -659,11 +660,34 @@ void FN::showContextMenu (const QPoint &p)
     menu.addAction (ui->actionPrepSibling);
     menu.addAction (ui->actionNewSibling);
     menu.addAction (ui->actionNewChild);
-    menu.addAction (ui->actionDeleteNode);
+
+    if (ui->actionDeleteNode->isEnabled())
+    {
+        menu.addSeparator();
+        menu.addAction (ui->actionDeleteNode);
+    }
+
+    if (ui->actionMoveUp->isEnabled()
+        || ui->actionMoveDown->isEnabled()
+        || ui->actionMoveLeft->isEnabled()
+        || ui->actionMoveRight->isEnabled())
+    {
+        menu.addSeparator();
+    }
+    if (ui->actionMoveUp->isEnabled())
+        menu.addAction (ui->actionMoveUp);
+    if (ui->actionMoveDown->isEnabled())
+        menu.addAction (ui->actionMoveDown);
+    if (ui->actionMoveLeft->isEnabled())
+        menu.addAction (ui->actionMoveLeft);
+    if (ui->actionMoveRight->isEnabled())
+        menu.addAction (ui->actionMoveRight);
+
     menu.addSeparator();
     menu.addAction (ui->actionTags);
     menu.addAction (ui->actionNodeIcon);
     menu.addAction (ui->actionRenameNode);
+
     menu.exec (ui->treeView->viewport()->mapToGlobal (p));
 }
 /*************************/
@@ -942,11 +966,16 @@ void FN::enableActions (bool enable)
     ui->actionPrepSibling->setEnabled (enable);
     ui->actionNewSibling->setEnabled (enable);
     ui->actionNewChild->setEnabled (enable);
-    ui->actionDeleteNode->setEnabled (enable);
-    ui->actionMoveUp->setEnabled (enable);
-    ui->actionMoveDown->setEnabled (enable);
-    ui->actionMoveLeft->setEnabled (enable);
-    ui->actionMoveRight->setEnabled (enable);
+    if (enable)
+        updateNodeActions();
+    else
+    {
+        ui->actionDeleteNode->setEnabled (false);
+        ui->actionMoveUp->setEnabled (false);
+        ui->actionMoveDown->setEnabled (false);
+        ui->actionMoveLeft->setEnabled (false);
+        ui->actionMoveRight->setEnabled (false);
+    }
 
     ui->actionTags->setEnabled (enable);
     ui->actionRenameNode->setEnabled (enable);
@@ -964,6 +993,26 @@ void FN::enableActions (bool enable)
     {
         ui->actionUndo->setEnabled (false);
         ui->actionRedo->setEnabled (false);
+    }
+}
+/*************************/
+void FN::updateNodeActions()
+{
+    QModelIndex index = ui->treeView->currentIndex();
+    QModelIndex pIndex = model_->parent (index);
+
+    ui->actionDeleteNode->setEnabled (pIndex.isValid() || model_->rowCount() > 1);
+    ui->actionMoveUp->setEnabled (index.row() != 0);
+    ui->actionMoveDown->setEnabled (index.row() != model_->rowCount (pIndex) - 1);
+    if (QApplication::layoutDirection() == Qt::RightToLeft)
+    {
+        ui->actionMoveRight->setEnabled (pIndex.isValid());
+        ui->actionMoveLeft->setEnabled (index.row() != 0);
+    }
+    else
+    {
+        ui->actionMoveRight->setEnabled (index.row() != 0);
+        ui->actionMoveLeft->setEnabled (pIndex.isValid());
     }
 }
 /*************************/
@@ -1049,6 +1098,7 @@ void FN::showDoc (QDomDocument &doc, int node)
     delete model_;
     model_ = newModel;
     connect (model_, &QAbstractItemModel::dataChanged, this, &FN::nodeChanged);
+    connect (model_, &DomModel::treeChanged, this, &FN::updateNodeActions);
     connect (model_, &DomModel::treeChanged, this, &FN::noteModified);
     connect (model_, &DomModel::treeChanged, this, &FN::docProp);
     connect (model_, &DomModel::treeChanged, this, &FN::closeTagsDialog);
@@ -1958,6 +2008,7 @@ void FN::selChanged (const QItemSelection &selected, const QItemSelection& /*des
         enableActions (true);
     }*/
 
+    updateNodeActions();
     if (treeViewDND_) return;
 
     /* if a widget is paired with this DOM item, show it;
@@ -2383,6 +2434,13 @@ void FN::newNode()
 /*************************/
 void FN::deleteNode()
 {
+    QModelIndex index = ui->treeView->currentIndex();
+    QModelIndex pIndex = model_->parent (index);
+
+    /* don't delete a single main node */
+    if (!pIndex.isValid() && model_->rowCount() <= 1)
+        return;
+
     closeTagsDialog();
 
     MessageBox msgBox;
@@ -2405,8 +2463,6 @@ void FN::deleteNode()
         return;
     }
 
-    QModelIndex index = ui->treeView->currentIndex();
-
     /* remove all widgets paired with
        this node or its descendants */
     QModelIndexList list = model_->allDescendants (index);
@@ -2428,7 +2484,6 @@ void FN::deleteNode()
     }
 
     /* now, really remove the node */
-    QModelIndex pIndex = model_->parent (index);
     model_->removeRow (index.row(), pIndex);
 }
 /*************************/
@@ -2555,6 +2610,13 @@ void FN::renameNode()
 /*************************/
 void FN::nodeIcon()
 {
+    QModelIndex index = ui->treeView->currentIndex();
+    if (!index.isValid()) return;
+    DomItem *item = static_cast<DomItem*>(index.internalPointer());
+    if (item == nullptr) return;
+    QDomNode node = item->node();
+    QString curIcn = node.toElement().attribute ("icon");
+
     QDialog *dlg = new QDialog (this);
     dlg->setWindowTitle (tr ("Node Icon"));
     QGridLayout *grid = new QGridLayout;
@@ -2626,18 +2688,12 @@ void FN::nodeIcon()
         return;
     }
 
-    QModelIndex index = ui->treeView->currentIndex();
-    DomItem *item = static_cast<DomItem*>(index.internalPointer());
-    QDomNode node = item->node();
-    QString curIcn = node.toElement().attribute ("icon");
-
     if (imagePath.isEmpty())
     {
         if (!curIcn.isEmpty())
         {
             node.toElement().removeAttribute ("icon");
-            emit ui->treeView->dataChanged (index, index);
-            noteModified();
+            emit model_->dataChanged (index, index); // will update geometry and call noteModified()
         }
     }
     else
@@ -2658,8 +2714,7 @@ void FN::nodeIcon()
             if (curIcn != icn)
             {
                 node.toElement().setAttribute ("icon", icn);
-                emit ui->treeView->dataChanged (index, index);
-                noteModified();
+                emit model_->dataChanged (index, index);
             }
         }
     }

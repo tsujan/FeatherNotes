@@ -342,6 +342,7 @@ private slots:
     void openRecentFile();
     void clearRecentMenu();
     void closeTagsDialog();
+    void updateNodeActions();
 
 #ifdef HAS_HUNSPELL
     void checkSpelling();

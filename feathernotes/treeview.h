@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2021 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -20,7 +20,9 @@
 
 #include <QInputEvent>
 #include <QApplication>
+#include <QScrollBar>
 #include <QTreeView>
+#include <QHeaderView>
 #include <QMimeDatabase>
 #include <QMimeData>
 #include <QFileInfo>
@@ -35,6 +37,7 @@ class TreeView : public QTreeView
 public:
     TreeView (QWidget *parent = nullptr) : QTreeView (parent) {
         setDragDropMode (QAbstractItemView::InternalMove);
+        header()->setOffset (0);
         setHeaderHidden (true);
         setAnimated (true);
         setDragEnabled (true);
@@ -49,13 +52,32 @@ public:
         setAutoScroll (true);
         setEditTriggers (QAbstractItemView::DoubleClicked | QAbstractItemView::EditKeyPressed);
         setTextElideMode (Qt::ElideRight);
+
+        /* show the horizontal scrollbar if needed */
+        header()->setStretchLastSection (false);
+        header()->setSectionResizeMode (QHeaderView::ResizeToContents);
+    }
+
+    virtual void scrollTo (const QModelIndex &index, QAbstractItemView::ScrollHint hint = QAbstractItemView::EnsureVisible) {
+        QTreeView::scrollTo (index, hint);
+        if (index.isValid() && hint == QAbstractItemView::EnsureVisible)
+        { // ensure that the item is visible horizontally too
+            int viewportWidth = viewport()->width();
+            QRect vr = visualRect (index);
+            int hPosition = vr.x() - indentation();
+            int itemWidth = vr.width() + indentation();
+            if (hPosition < 0 || itemWidth > viewportWidth)
+                horizontalScrollBar()->setValue (hPosition);
+            else if (hPosition + itemWidth > viewportWidth)
+                horizontalScrollBar()->setValue (hPosition + itemWidth - viewportWidth);
+        }
     }
 
 signals:
     void FNDocDropped (const QString &path);
 
 protected:
-    /* see "qabstractitemview.cpp" */
+    /* see Qt -> "qabstractitemview.cpp" */
     virtual QItemSelectionModel::SelectionFlags selectionCommand (const QModelIndex &index, const QEvent *event = nullptr) const {
         Qt::KeyboardModifiers keyModifiers = Qt::NoModifier;
         if (event)
