@@ -6,7 +6,7 @@
     <message>
         <location filename="../../about.ui" line="145"/>
         <source>License</source>
-        <translation type="unfinished"></translation>
+        <translation>مجوز</translation>
     </message>
 </context>
 <context>
@@ -14,7 +14,7 @@
     <message>
         <location filename="../../colorLabel.cpp" line="31"/>
         <source>Click to change color.</source>
-        <translation type="unfinished"></translation>
+        <translation>برای تغییر رنگ کلیک کنید.</translation>
     </message>
     <message>
         <location filename="../../colorLabel.cpp" line="53"/>
