@@ -125,7 +125,7 @@
     <message>
         <location filename="../../fn.ui" line="223"/>
         <source>Recenl&amp;y Opened</source>
-        <translation type="unfinished"></translation>
+        <translation>Aberto recentemente</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="245"/>
@@ -1237,12 +1237,12 @@
     <message>
         <location filename="../../fn.cpp" line="1943"/>
         <source>Align Table</source>
-        <translation type="unfinished"></translation>
+        <translation>Alinhar tabela</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1956"/>
         <source>&amp;Center</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Centro</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2309"/>
