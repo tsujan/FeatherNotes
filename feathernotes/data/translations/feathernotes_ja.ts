@@ -1237,12 +1237,12 @@
     <message>
         <location filename="../../fn.cpp" line="1943"/>
         <source>Align Table</source>
-        <translation type="unfinished"></translation>
+        <translation>表の整列</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1956"/>
         <source>&amp;Center</source>
-        <translation type="unfinished"></translation>
+        <translation>中央寄せ(&amp;C)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2309"/>
