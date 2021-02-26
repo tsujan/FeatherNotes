@@ -125,7 +125,7 @@
     <message>
         <location filename="../../fn.ui" line="223"/>
         <source>Recenl&amp;y Opened</source>
-        <translation type="unfinished"></translation>
+        <translation>נפת&amp;חו לאחרונה</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="245"/>
@@ -991,7 +991,7 @@
     <message>
         <location filename="../../fn.ui" line="1374"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;פינוי</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2621"/>
@@ -1221,7 +1221,7 @@
     <message>
         <location filename="../../fn.cpp" line="1446"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be opened!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;אי אפשר לפתוח את זה!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1529"/>
@@ -1237,12 +1237,12 @@
     <message>
         <location filename="../../fn.cpp" line="1943"/>
         <source>Align Table</source>
-        <translation type="unfinished"></translation>
+        <translation>יישור טבלה</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1956"/>
         <source>&amp;Center</source>
-        <translation type="unfinished"></translation>
+        <translation>מי&amp;רכוז</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2309"/>
@@ -1833,12 +1833,12 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../prefDialog.ui" line="522"/>
         <source>Number of recent files:</source>
-        <translation type="unfinished"></translation>
+        <translation>מספר הקבצים האחרונים:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="554"/>
         <source>Open recent files separately</source>
-        <translation type="unfinished"></translation>
+        <translation>פתיחת קבצים אחרונים בנפרד</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="578"/>
