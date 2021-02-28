@@ -125,7 +125,7 @@
     <message>
         <location filename="../../fn.ui" line="223"/>
         <source>Recenl&amp;y Opened</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ouvert récemment</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="245"/>
@@ -970,7 +970,7 @@
         <location filename="../../fn.ui" line="1347"/>
         <location filename="../../fn.ui" line="1350"/>
         <source>Check Spelling</source>
-        <translation type="unfinished">Vérifier l&apos;orthographe</translation>
+        <translation>Vérifier l&apos;orthographe</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1353"/>
@@ -1221,7 +1221,7 @@
     <message>
         <location filename="../../fn.cpp" line="1446"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be opened!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Ne peut pas être ouvert !&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1529"/>
@@ -1515,7 +1515,7 @@ Voulez-vous le remplacer ?
         <location filename="../../fn.cpp" line="6013"/>
         <location filename="../../fn.cpp" line="6025"/>
         <source>No misspelling from text cursor.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Aucune faute d&apos;orthographe au curseur de texte.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6036"/>
@@ -1759,7 +1759,7 @@ Nécessite de redémarrer FeatherNotes pour prendre effet.</translation>
 a double hyphen with a long dash, etc. while
 the user is typing and under proper circumstances.</source>
         <translation type="unfinished">Une triple période est remplacée par une ellipse,
-un double trait d&apos;union avec un long tiret, etc.
+un double trait d&apos;union par long tiret, etc.
 l&apos;utilisateur tape dans des circonstances appropriées.</translation>
     </message>
     <message>
@@ -1831,12 +1831,12 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../prefDialog.ui" line="522"/>
         <source>Number of recent files:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nombre de fichiers récents :</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="554"/>
         <source>Open recent files separately</source>
-        <translation type="unfinished"></translation>
+        <translation>Ouvrir les fichiers récents séparément</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="578"/>
@@ -1862,7 +1862,7 @@ name but ending with &quot;.aff&quot;.</source>
         <location filename="../../pref.cpp" line="376"/>
         <location filename="../../pref.cpp" line="562"/>
         <source>Warning: Ambiguous shortcut detected!</source>
-        <translation>Attention&#xa0;: raccourci ambigu détecté&#xa0;!</translation>
+        <translation>Attention : raccourci ambigu détecté !</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="545"/>
@@ -1895,12 +1895,12 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../spellDialog.ui" line="62"/>
         <source>Replace with:</source>
-        <translation type="unfinished">Remplacer par :</translation>
+        <translation>Remplacer par :</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="87"/>
         <source>Ignore Once</source>
-        <translation type="unfinished">Ignorer un</translation>
+        <translation type="unfinished">Ignorer cette fois</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="100"/>
