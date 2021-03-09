@@ -17,6 +17,8 @@ V0.9.0
  * Don't give styled text to the tray tooltip because KDE's Plasma has a tooltip bug.
  * Disable some node actions and also remove them from the tree context menu when they are impossible.
  * Instead of eliding texts, show the horizontal scrollbar in the side-pane when needed.
+ * Fixed the states of direction and alignment actions with undo/redo when the text isn't changed.
+ * Apply the background and foreground colors only to the stylesheets of text editors and not to the default stylesheets of documents. In this way, the custom bg/fg colors of the existing nodes, that are created by a recent version of FeatherNotes, will always be changed consistently.
 
 V0.8.0
 ---------

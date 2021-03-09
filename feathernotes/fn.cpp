@@ -59,6 +59,7 @@
 #include <QApplication>
 #include <QMimeDatabase>
 #include <QProcess>
+#include <QtMath>
 
 #ifdef HAS_X11
 #include "x11.h"
@@ -833,14 +834,16 @@ void FN::newNote()
     QDomElement root = doc.createElement ("feathernotes");
     root.setAttribute ("txtfont", defaultFont_.toString());
     root.setAttribute ("nodefont", nodeFont_.toString());
-    if (bgColor_ != QColor (Qt::white))
+    if (bgColor_ != QColor (Qt::white) || fgColor_ != QColor (Qt::black))
+    {
         root.setAttribute ("bgcolor", bgColor_.name());
-    else
-        root.removeAttribute ("bgcolor");
-    if (fgColor_ != QColor (Qt::black))
         root.setAttribute ("fgcolor", fgColor_.name());
+    }
     else
+    {
+        root.removeAttribute ("bgcolor");
         root.removeAttribute ("fgcolor");
+    }
     doc.appendChild (root);
     QDomElement e = doc.createElement ("node");
     e.setAttribute ("name", tr ("New Node"));
@@ -1117,8 +1120,7 @@ void FN::showDoc (QDomDocument &doc, int node)
     });
 
     /* enable widgets */
-    if (!ui->actionSaveAs->isEnabled())
-        enableActions (true);
+    enableActions (true);
 }
 /*************************/
 void FN::fileOpen (const QString &filePath, bool startup, bool startWithLastFile)
@@ -1456,14 +1458,16 @@ void FN::setNodesTexts()
     QDomElement root = model_->domDocument.firstChildElement ("feathernotes");
     root.setAttribute ("txtfont", defaultFont_.toString());
     root.setAttribute ("nodefont", nodeFont_.toString());
-    if (bgColor_ != QColor (Qt::white))
+    if (bgColor_ != QColor (Qt::white) || fgColor_ != QColor (Qt::black))
+    {
         root.setAttribute ("bgcolor", bgColor_.name());
-    else
-        root.removeAttribute ("bgcolor");
-    if (fgColor_ != QColor (Qt::black))
         root.setAttribute ("fgcolor", fgColor_.name());
+    }
     else
+    {
+        root.removeAttribute ("bgcolor");
         root.removeAttribute ("fgcolor");
+    }
     if (!pswrd_.isEmpty())
         root.setAttribute ("pswrd", pswrd_);
     else
@@ -1743,12 +1747,29 @@ void FN::insertDate()
     }
 }
 /*************************/
-TextEdit *FN::newWidget()
+static inline qreal luminance (const QColor &col)
 {
-    TextEdit *textEdit = new TextEdit;
-    //textEdit->autoIndentation = true; // auto-indentation is enabled by default
-    textEdit->autoBracket = autoBracket_;
-    textEdit->autoReplace = autoReplace_;
+    qreal R = col.redF();
+    qreal G = col.greenF();
+    qreal B = col.blueF();
+    if (R <= 0.03928) R = R/12.92; else R = qPow ((R + 0.055)/1.055, 2.4);
+    if (G <= 0.03928) G = G/12.92; else G = qPow ((G + 0.055)/1.055, 2.4);
+    if (B <= 0.03928) B = B/12.92; else B = qPow ((B + 0.055)/1.055, 2.4);
+    return 0.2126*R + 0.7152*G + 0.0722*B;
+}
+
+static inline bool enoughContrast (const QColor &col1, const QColor &col2)
+{
+    if (!col1.isValid() || !col2.isValid()) return false;
+    qreal rl1 = luminance (col1);
+    qreal rl2 = luminance (col2);
+    if ((qMax (rl1, rl2) + 0.05) / (qMin (rl1, rl2) + 0.05) < 3.5)
+        return false;
+    return true;
+}
+
+void FN::setEditorStyleSheet (TextEdit *textEdit)
+{
     if (bgColor_ == QColor (Qt::white) && fgColor_ == QColor (Qt::black))
     {
         QPalette p = QApplication::palette();
@@ -1764,6 +1785,7 @@ TextEdit *FN::newWidget()
             else
                 textEdit->setStyleSheet ("QTextEdit {"
                                          "color: black;}");
+            /* with dark themes, a totally white background might not be good for the eyes */
             textEdit->viewport()->setStyleSheet (".QWidget {"
                                                  "color: black;"
                                                  "background-color: rgb(236, 236, 236);}");
@@ -1785,10 +1807,42 @@ TextEdit *FN::newWidget()
     }
     else
     {
-        textEdit->document()->setDefaultStyleSheet (DOC_STYLESHEET.arg (bgColor_.name(), fgColor_.name()));
-        if (fgColor_ != QColor (Qt::black))
-            textEdit->CSSTextColor = fgColor_; // only for a workaround (see TextEdit::undo)
+        QPalette p = textEdit->palette();
+        QColor hCol = p.color(QPalette::Active, QPalette::Highlight);
+        QColor hTextColor = p.color(QPalette::Active, QPalette::HighlightedText);
+        if (!enoughContrast (bgColor_, hCol))
+        {
+            if (bgColor_.value() <= 120)
+            {
+                hCol = QColor (200, 200, 200);
+                hTextColor = QColor (Qt::black);
+            }
+            else
+            {
+                hCol = QColor (50, 50, 50);
+                hTextColor = QColor (Qt::white);
+            }
+        }
+        const QString fgColorName = fgColor_.name();
+        textEdit->setStyleSheet (QString ("QTextEdit {"
+                                          "color: %1;"
+                                          "selection-color: %2;"
+                                          "selection-background-color: %3;}")
+                                 .arg (fgColorName, hTextColor.name(), hCol.name()));
+        textEdit->viewport()->setStyleSheet (QString (".QWidget {"
+                                                      "color: %1;"
+                                                      "background-color: %2;}")
+                                             .arg (fgColorName, bgColor_.name()));
     }
+}
+
+TextEdit *FN::newWidget()
+{
+    TextEdit *textEdit = new TextEdit;
+    //textEdit->autoIndentation = true; // auto-indentation is enabled by default
+    textEdit->autoBracket = autoBracket_;
+    textEdit->autoReplace = autoReplace_;
+    setEditorStyleSheet (textEdit);
     textEdit->setAcceptRichText (false);
     textEdit->viewport()->setMouseTracking (true);
     textEdit->setContextMenuPolicy (Qt::CustomContextMenu);
@@ -2051,8 +2105,8 @@ void FN::selChanged (const QItemSelection &selected, const QItemSelection& /*des
                                       "p, li { white-space: pre-wrap; }\n"
                                       "</style></head><body>");
         QRegularExpressionMatch match;
-        bool defaulrDocColor (bgColor_ == QColor (Qt::white) && fgColor_ == QColor (Qt::black));
-        if (defaulrDocColor)
+        bool defaultDocColor (bgColor_ == QColor (Qt::white) && fgColor_ == QColor (Qt::black));
+        if (defaultDocColor)
         {
             static const QRegularExpression htmlRegex (R"(^<!DOCTYPE[A-Za-z0-9/<>,;.:\-={}\s"]+</style></head><body\sstyle=[A-Za-z0-9/<>;:\-\s"']+>)");
             if (text.indexOf (htmlRegex, 0, &match) > -1)
@@ -2060,7 +2114,7 @@ void FN::selChanged (const QItemSelection &selected, const QItemSelection& /*des
         }
         textEdit = newWidget();
         textEdit->setHtml (text);
-        if (!defaulrDocColor)
+        if (!defaultDocColor)
         {
             /* To enable the default stylesheet, we should set the HTML text of the document.
                Setting the HTML text of the editor above is needed for empty nodes. */
@@ -2081,6 +2135,13 @@ void FN::selChanged (const QItemSelection &selected, const QItemSelection& /*des
         connect (textEdit, &QTextEdit::currentCharFormatChanged, this, &FN::formatChanged);
         connect (textEdit, &QTextEdit::cursorPositionChanged, this, &FN::alignmentChanged);
         connect (textEdit, &QTextEdit::cursorPositionChanged, this, &FN::directionChanged);
+        connect (textEdit->document(), &QTextDocument::contentsChange, [this] (int/* pos*/, int charsRemoved, int charsAdded) {
+            if (charsRemoved == charsAdded)
+            { // a special case, where the following slots aren't called automatically
+                alignmentChanged();
+                directionChanged();
+            }
+        });
 
         /* focus the text widget only if
            a document is opened just now */
@@ -2238,10 +2299,18 @@ void FN::mergeFormatOnWordOrSelection (const QTextCharFormat &format)
     if (!cw) return;
 
     TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
-    QTextCursor cursor = textEdit->textCursor();
-    if (!cursor.hasSelection())
-        cursor.select (QTextCursor::WordUnderCursor);
-    cursor.mergeCharFormat (format);
+    QTextCursor cur = textEdit->textCursor();
+    if (!cur.hasSelection())
+    { // apply to the word only if the cusor isn't at its end
+        QTextCursor tmp = cur;
+        tmp.movePosition (QTextCursor::EndOfWord);
+        if (tmp.position() > cur.position())
+            cur.select (QTextCursor::WordUnderCursor);
+    }
+    if (!cur.hasSelection())
+        textEdit->mergeCurrentCharFormat (format); // alows to type with the new format
+    else
+        cur.mergeCharFormat (format);
     /* correct the pressed states of the format buttons if necessary */
     formatChanged (textEdit->currentCharFormat());
 }
@@ -2341,13 +2410,21 @@ void FN::clearFormat()
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
 
-    QTextCursor cur = qobject_cast< TextEdit *>(cw)->textCursor();
-    if (!cur.hasSelection())
-        cur.select (QTextCursor::WordUnderCursor);
     QTextCharFormat fmt;
-    if (fgColor_ != QColor (Qt::black))
-        fmt.setForeground (fgColor_);
-    cur.setCharFormat (fmt);
+
+    TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
+    QTextCursor cur = textEdit->textCursor();
+    if (!cur.hasSelection())
+    { // apply to the word only if the cusor isn't at its end
+        QTextCursor tmp = cur;
+        tmp.movePosition (QTextCursor::EndOfWord);
+        if (tmp.position() > cur.position())
+            cur.select (QTextCursor::WordUnderCursor);
+    }
+    if (!cur.hasSelection())
+        textEdit->setCurrentCharFormat (fmt); // alows to type without format
+    else
+        cur.setCharFormat (fmt);
 }
 /*************************/
 void FN::textAlign (QAction *a)
@@ -2379,10 +2456,10 @@ void FN::textDirection (QAction *a)
 
     QTextCursor cur = qobject_cast< TextEdit *>(cw)->textCursor();
     if (!cur.hasSelection())
-        cur.select (QTextCursor::WordUnderCursor);
+        cur.select (QTextCursor::BlockUnderCursor);
     cur.mergeBlockFormat (fmt);
 
-    alignmentChanged();
+    //alignmentChanged(); // will be called by QTextDocument::contentsChange()
 }
 /*************************/
 void FN::makeHeader()
@@ -2937,7 +3014,6 @@ void FN::docColorDialog()
 
     dialog->setLayout (grid);
 
-    QHash<DomItem*, TextEdit*>::iterator it;
     switch (dialog->exec()) {
     case QDialog::Accepted:
         bgColor_ = bgColorLabel->getColor();
@@ -2951,6 +3027,12 @@ void FN::docColorDialog()
         delete dialog;
         break;
     }
+
+    /* apply the new colors to the existing editors
+       (the colors will be applied to future editors at FN::newWidget) */
+    QHash<DomItem*, TextEdit*>::iterator it;
+    for (it = widgets_.begin(); it != widgets_.end(); ++it)
+        setEditorStyleSheet (it.value());
 }
 /*************************/
 void FN::noteModified()
@@ -5157,8 +5239,15 @@ void FN::txtPrint()
     bool newDocCreated = false;
     if (QObject::sender() == ui->actionPrint)
     {
-        doc = qobject_cast< TextEdit *>(cw)
-              ->document();
+        if (bgColor_ == QColor (Qt::white) && fgColor_ == QColor (Qt::black))
+            doc = qobject_cast<TextEdit*>(cw)->document();
+        else
+        {
+            doc = new QTextDocument();
+            doc->setDefaultStyleSheet (DOC_STYLESHEET.arg (bgColor_.name(), fgColor_.name()));
+            newDocCreated = true;
+            doc->setHtml (qobject_cast<TextEdit*>(cw)->toHtml());
+        }
     }
     else
     {
@@ -5334,7 +5423,17 @@ void FN::exportHTML()
     QTextDocument *doc = nullptr;
     bool newDocCreated = false;
     if (sel == 0)
-        doc = qobject_cast< TextEdit *>(cw)->document();
+    {
+        if (bgColor_ == QColor (Qt::white) && fgColor_ == QColor (Qt::black))
+            doc = qobject_cast<TextEdit*>(cw)->document();
+        else
+        {
+            doc = new QTextDocument();
+            doc->setDefaultStyleSheet (DOC_STYLESHEET.arg (bgColor_.name(), fgColor_.name()));
+            newDocCreated = true;
+            doc->setHtml (qobject_cast<TextEdit*>(cw)->toHtml());
+        }
+    }
     else
     {
         QString text;

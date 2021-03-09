@@ -361,6 +361,7 @@ private:
     void notSavedOrOpened (bool notSaved);
     void setNodesTexts();
     bool unSaved (bool modified);
+    void setEditorStyleSheet (TextEdit *textEdit);
     TextEdit *newWidget();
     void mergeFormatOnWordOrSelection (const QTextCharFormat &format);
     void setNewFont (DomItem *item, const QTextCharFormat &fmt);

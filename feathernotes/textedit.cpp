@@ -150,13 +150,6 @@ static inline bool isOnlySpaces (const QString &str)
 
 void TextEdit::keyPressEvent (QKeyEvent *event)
 {
-    if (event == QKeySequence::Undo)
-    { // only for a workaround; see TextEdit::undo
-        if (document()->isUndoAvailable())
-            undo();
-        event->accept();
-        return;
-    }
     /* overriding copy() and cut() */
     if (event == QKeySequence::Copy)
     {
@@ -1002,24 +995,6 @@ void TextEdit::zooming (float range)
     /* if this is a zoom-out, the text will need
        to be formatted and/or highlighted again */
     if (range < 0) emit zoomedOut (this);
-}
-/*************************/
-void TextEdit::undo()
-{
-    QTextEdit::undo();
-    /* This is a workaround for a weird Qt bug: If some text is pasted at the document start,
-       the pasting is undone and then, some text is pasted at the document start again, the
-       text color of the document stylesheet will be ignored. */
-    if (CSSTextColor.isValid())
-    {
-        QTextCursor cur = textCursor();
-        if (cur.atStart() && cur.atEnd())
-        {
-            QTextCharFormat fmt;
-            fmt.setForeground (CSSTextColor);
-            cur.setBlockCharFormat (fmt);
-        }
-    }
 }
 /*************************/
 // See createMimeDataFromSelection() for the reason.

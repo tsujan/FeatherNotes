@@ -46,7 +46,6 @@ public:
     bool autoIndentation;
     bool autoBracket;
     bool autoReplace;
-    QColor CSSTextColor; // used internally for a workaround
 
 signals:
     void resized();
@@ -55,7 +54,6 @@ signals:
     void zoomedOut (TextEdit *textEdit); // needed for reformatting text
 
 public slots:
-    void undo();
     void copy();
     void cut();
 
