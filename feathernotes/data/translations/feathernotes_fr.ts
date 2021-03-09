@@ -125,7 +125,7 @@
     <message>
         <location filename="../../fn.ui" line="223"/>
         <source>Recenl&amp;y Opened</source>
-        <translation type="unfinished">Ouvert récemment</translation>
+        <translation>Ouvert récemment</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="245"/>
@@ -991,7 +991,7 @@
     <message>
         <location filename="../../fn.ui" line="1374"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Effacer</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2621"/>
@@ -1242,7 +1242,7 @@
     <message>
         <location filename="../../fn.cpp" line="1956"/>
         <source>&amp;Center</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Centrer</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2309"/>
@@ -1493,29 +1493,29 @@ Voulez-vous le remplacer ?
     <message>
         <location filename="../../fn.cpp" line="5945"/>
         <source>See Preferences → Text → Spell Checking!</source>
-        <translation type="unfinished">Voir Préférences → Texte → Vérification orthographique !</translation>
+        <translation>Voir Préférences → Texte → Vérification orthographique !</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5967"/>
         <source>You need to add a Hunspell dictionary.</source>
-        <translation type="unfinished">Vous devez ajouter un dictionnaire Hunspell.</translation>
+        <translation>Vous devez ajouter un dictionnaire Hunspell.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5972"/>
         <source>The Hunspell dictionary does not exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ce dictionaire Hunspell n&apos;éxiste pas.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5980"/>
         <source>The Hunspell dictionary is not accompanied by an affix file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Le dictionnaire Hunspell n&apos;est pas accompagné d&apos;un fichier d&apos;affixe.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5998"/>
         <location filename="../../fn.cpp" line="6013"/>
         <location filename="../../fn.cpp" line="6025"/>
         <source>No misspelling from text cursor.</source>
-        <translation type="unfinished">Aucune faute d&apos;orthographe au curseur de texte.</translation>
+        <translation>Aucune faute d&apos;orthographe au curseur de texte.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6036"/>
@@ -1805,12 +1805,14 @@ Prend effet après la fermeture de cette boîte de dialogue.</translation>
         <source>A Hunspell dictionary has a name that ends with &quot;.dic&quot;
 and should be alongside an affix file with the same
 name but ending with &quot;.aff&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Un dictionnaire Hunspell a un nom qui se termine par &quot;.dic&quot;
+et devrait être à côté d&apos;un fichier d&apos;affixe avec le même
+nom mais se terminant par &quot;.aff&quot;.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="447"/>
         <source>Hunspell dictionary path:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chemin du dictionnaire Hunspell :</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="466"/>
@@ -1877,7 +1879,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../pref.cpp" line="691"/>
         <source>Hunspell Dictionary Files (*.dic)</source>
-        <translation type="unfinished"></translation>
+        <translation>Fichiers de dictionnaire Hunspell (*.dic)</translation>
     </message>
 </context>
 <context>
@@ -1900,22 +1902,22 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../spellDialog.ui" line="87"/>
         <source>Ignore Once</source>
-        <translation type="unfinished">Ignorer cette fois</translation>
+        <translation>Ignorer cette fois</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="100"/>
         <source>Ignore All</source>
-        <translation type="unfinished">Tout ignorer</translation>
+        <translation>Tout ignorer</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="129"/>
         <source>Correct Once</source>
-        <translation type="unfinished">Corriger</translation>
+        <translation>Corriger</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="142"/>
         <source>Correct All</source>
-        <translation type="unfinished">Tout corriger</translation>
+        <translation>Tout corriger</translation>
     </message>
 </context>
 <context>
