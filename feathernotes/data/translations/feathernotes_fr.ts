@@ -19,7 +19,7 @@
     <message>
         <location filename="../../colorLabel.cpp" line="53"/>
         <source>Select Color</source>
-        <translation>Sélectionner une couleur</translation>
+        <translation>Choisir une couleur</translation>
     </message>
 </context>
 <context>
@@ -125,7 +125,7 @@
     <message>
         <location filename="../../fn.ui" line="223"/>
         <source>Recenl&amp;y Opened</source>
-        <translation>Ouvert récemment</translation>
+        <translation>Ouvert &amp;récemment</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="245"/>
@@ -268,7 +268,7 @@
     <message>
         <location filename="../../fn.ui" line="578"/>
         <source>Ctrl+Shift+Z</source>
-        <translation></translation>
+        <translation>Ctrl+Maj+Z</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="586"/>
@@ -318,12 +318,12 @@
     <message>
         <location filename="../../fn.ui" line="634"/>
         <source>&amp;Italic</source>
-        <translation></translation>
+        <translation>&amp;Italique</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="637"/>
         <source>Italic</source>
-        <translation></translation>
+        <translation>Italique</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="640"/>
@@ -363,17 +363,17 @@
     <message>
         <location filename="../../fn.ui" line="682"/>
         <source>Te&amp;xt Color</source>
-        <translation></translation>
+        <translation>Couleur du Te&amp;xte</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="685"/>
         <source>Text color</source>
-        <translation></translation>
+        <translation>Couleur du texte</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="688"/>
         <source>Alt+Shift+T</source>
-        <translation></translation>
+        <translation>Alt+Maj+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="696"/>
@@ -388,7 +388,7 @@
     <message>
         <location filename="../../fn.ui" line="702"/>
         <source>Alt+Shift+B</source>
-        <translation></translation>
+        <translation>Alt+Maj+B</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="707"/>
@@ -399,12 +399,12 @@
         <location filename="../../fn.ui" line="712"/>
         <location filename="../../fn.cpp" line="636"/>
         <source>&amp;New Note</source>
-        <translation></translation>
+        <translation>&amp;Nouvelle Note</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="715"/>
         <source>Ctrl+Alt+Shift+N</source>
-        <translation></translation>
+        <translation>Ctrl+Alt+Maj+N</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="723"/>
@@ -414,7 +414,7 @@
     <message>
         <location filename="../../fn.ui" line="726"/>
         <source>Ctrl+Shift+S</source>
-        <translation></translation>
+        <translation>Ctrl+Maj+S</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="734"/>
@@ -434,7 +434,7 @@
     <message>
         <location filename="../../fn.ui" line="753"/>
         <source>Set Pass&amp;word</source>
-        <translation></translation>
+        <translation>Définir le &amp;mot de passe</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="758"/>
@@ -480,7 +480,7 @@
     <message>
         <location filename="../../fn.ui" line="802"/>
         <source>&amp;Delete</source>
-        <translation></translation>
+        <translation>&amp;Supprimer</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="810"/>
@@ -506,7 +506,7 @@
     <message>
         <location filename="../../fn.ui" line="827"/>
         <source>Ctrl+Alt+Shift+I</source>
-        <translation></translation>
+        <translation>Ctrl+Alt+Maj+I</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="835"/>
@@ -516,7 +516,7 @@
     <message>
         <location filename="../../fn.ui" line="838"/>
         <source>Ctrl+Shift+Down</source>
-        <translation></translation>
+        <translation>Ctrl+Maj+Bas</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="846"/>
@@ -526,7 +526,7 @@
     <message>
         <location filename="../../fn.ui" line="849"/>
         <source>Ctrl+Shift+Up</source>
-        <translation></translation>
+        <translation>Ctrl+Maj+Haut</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="857"/>
@@ -546,12 +546,12 @@
     <message>
         <location filename="../../fn.ui" line="871"/>
         <source>Ctrl+Shift+N</source>
-        <translation></translation>
+        <translation>Ctrl+Maj+N</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="879"/>
         <source>&amp;Delete Node</source>
-        <translation></translation>
+        <translation>&amp;Supprimer le noeud</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="882"/>
@@ -566,7 +566,7 @@
     <message>
         <location filename="../../fn.ui" line="893"/>
         <source>Alt+Up</source>
-        <translation></translation>
+        <translation>Alt+Haut</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="901"/>
@@ -576,17 +576,17 @@
     <message>
         <location filename="../../fn.ui" line="904"/>
         <source>Alt+Down</source>
-        <translation></translation>
+        <translation>Alt+Bas</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="912"/>
         <source>Re&amp;name Node</source>
-        <translation></translation>
+        <translation>Re&amp;nommer le noeud</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="915"/>
         <source>Ctrl+Shift+R</source>
-        <translation></translation>
+        <translation>Ctrl+Maj+R</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="920"/>
@@ -596,12 +596,12 @@
     <message>
         <location filename="../../fn.ui" line="923"/>
         <source>Ctrl+Shift+D</source>
-        <translation></translation>
+        <translation>Ctrl+Maj+D</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="931"/>
         <source>Document &amp;Font</source>
-        <translation></translation>
+        <translation>&amp;Police du Document</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="945"/>
@@ -621,7 +621,7 @@
     <message>
         <location filename="../../fn.ui" line="965"/>
         <source>Ctrl+Shift+I</source>
-        <translation></translation>
+        <translation>Ctrl+Maj+I</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="970"/>
@@ -631,7 +631,7 @@
     <message>
         <location filename="../../fn.ui" line="973"/>
         <source>Ctrl+Shift+P</source>
-        <translation></translation>
+        <translation>Ctrl+Maj+P</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="981"/>
@@ -671,7 +671,7 @@
     <message>
         <location filename="../../fn.ui" line="1022"/>
         <source>Alt+Shift+U</source>
-        <translation></translation>
+        <translation>Alt+Maj+U</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1033"/>
@@ -686,12 +686,12 @@
     <message>
         <location filename="../../fn.ui" line="1039"/>
         <source>Alt+Shift+S</source>
-        <translation></translation>
+        <translation>Alt+Maj+S</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1050"/>
         <source>C&amp;enter</source>
-        <translation></translation>
+        <translation>C&amp;entrer</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1053"/>
@@ -701,13 +701,13 @@
     <message>
         <location filename="../../fn.ui" line="1056"/>
         <source>Alt+Shift+Down</source>
-        <translation></translation>
+        <translation>Alt+Maj+Down</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1067"/>
         <location filename="../../fn.cpp" line="2004"/>
         <source>&amp;Right</source>
-        <translation></translation>
+        <translation>D&amp;roite</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1070"/>
@@ -717,7 +717,7 @@
     <message>
         <location filename="../../fn.ui" line="1073"/>
         <source>Alt+Shift+Right</source>
-        <translation></translation>
+        <translation>Alt+Maj+Droite</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1084"/>
@@ -748,7 +748,7 @@
     <message>
         <location filename="../../fn.ui" line="1107"/>
         <source>Alt+Shift+Up</source>
-        <translation></translation>
+        <translation>Alt+Maj+Haut</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1115"/>
@@ -778,7 +778,7 @@
     <message>
         <location filename="../../fn.ui" line="1140"/>
         <source>Alt+Right</source>
-        <translation></translation>
+        <translation>Alt+Droite</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1148"/>
@@ -828,12 +828,12 @@
     <message>
         <location filename="../../fn.ui" line="1190"/>
         <source>&amp;Node Font</source>
-        <translation></translation>
+        <translation>Police du &amp;Noeud</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1193"/>
         <source>Node Font</source>
-        <translation></translation>
+        <translation>Police du noeud</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1198"/>
@@ -848,17 +848,17 @@
     <message>
         <location filename="../../fn.ui" line="1209"/>
         <source>Ctrl+Shift+V</source>
-        <translation></translation>
+        <translation>Ctrl+Maj+V</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1217"/>
         <source>&amp;Tags</source>
-        <translation></translation>
+        <translation>&amp;Mots clés</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1220"/>
         <source>Ctrl+Shift+T</source>
-        <translation></translation>
+        <translation>Ctrl+Maj+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1228"/>
@@ -883,7 +883,7 @@
     <message>
         <location filename="../../fn.ui" line="1247"/>
         <source>Ctrl+Alt+Shift+T</source>
-        <translation></translation>
+        <translation>Ctrl+Alt+Maj+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1252"/>
@@ -923,7 +923,7 @@
     <message>
         <location filename="../../fn.ui" line="1290"/>
         <source>Export &amp;HTML</source>
-        <translation></translation>
+        <translation>Exporter &amp;HTML</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1295"/>
@@ -948,7 +948,7 @@
     <message>
         <location filename="../../fn.ui" line="1323"/>
         <source>Ctrl+Alt+Shift+Right</source>
-        <translation></translation>
+        <translation>Ctrl+Alt+Maj+Droite</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1328"/>
@@ -959,12 +959,12 @@
     <message>
         <location filename="../../fn.ui" line="1339"/>
         <source>Node &amp;Icon</source>
-        <translation></translation>
+        <translation>&amp;Icône du noeud</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1342"/>
         <source>Ctrl+Shift+C</source>
-        <translation></translation>
+        <translation>Ctrl+Maj+C</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1347"/>
@@ -996,7 +996,7 @@
     <message>
         <location filename="../../fn.cpp" line="2698"/>
         <source>Node Icon</source>
-        <translation></translation>
+        <translation>Icône du noeud</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="631"/>
@@ -1007,14 +1007,14 @@
     <message>
         <location filename="../../fn.cpp" line="801"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;New note?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Nouvelle note ?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="802"/>
         <source>&lt;center&gt;&lt;i&gt;Do you really want to leave this document&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;and create an empty one?&lt;/i&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;i&gt;Voulez-vous vraiment laisser ce document&lt;/i&gt;&lt;/center&gt;
-&lt;center&gt;&lt;i&gt;et créer un vide ? &lt;/i&gt;&lt;/center&gt;</translation>
+&lt;center&gt;&lt;i&gt;et en créer un vide ? &lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="805"/>
@@ -1028,7 +1028,7 @@
         <location filename="../../fn.cpp" line="2530"/>
         <location filename="../../fn.cpp" line="4318"/>
         <source>No</source>
-        <translation></translation>
+        <translation>Non</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="893"/>
@@ -1068,7 +1068,7 @@
     <message>
         <location filename="../../fn.cpp" line="1291"/>
         <source>Open file...</source>
-        <translation></translation>
+        <translation>Ouvrir un fichier...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1447"/>
@@ -1106,7 +1106,7 @@
     <message>
         <location filename="../../fn.cpp" line="2625"/>
         <source>Tags</source>
-        <translation></translation>
+        <translation>Mots clés</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2640"/>
@@ -1174,7 +1174,7 @@
     <message>
         <location filename="../../fn.cpp" line="3881"/>
         <source>Insert Link</source>
-        <translation></translation>
+        <translation>Insérer un lien</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2706"/>
@@ -1186,19 +1186,19 @@
         <location filename="../../fn.cpp" line="2710"/>
         <location filename="../../fn.cpp" line="3963"/>
         <source>Open image</source>
-        <translation></translation>
+        <translation>Ouvrir l&apos;image</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3971"/>
         <location filename="../../fn.cpp" line="4132"/>
         <source>Scaling percentage</source>
-        <translation>Échelle de pourcentage</translation>
+        <translation>Pourcentage de l&apos;échelle</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2728"/>
         <location filename="../../fn.cpp" line="4080"/>
         <source>Open Image...</source>
-        <translation></translation>
+        <translation>Ouvrir l&apos;Image...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="633"/>
@@ -1209,14 +1209,14 @@
     <message>
         <location filename="../../fn.cpp" line="849"/>
         <source>New Node</source>
-        <translation></translation>
+        <translation>Nouveau nœud</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1293"/>
         <location filename="../../fn.cpp" line="1551"/>
         <location filename="../../fn.cpp" line="1572"/>
         <source>FeatherNotes documents (*.fnx);;All Files (*)</source>
-        <translation>FeatherNotes documents (*.fnx);;Tous les fichiers (*)</translation>
+        <translation>Documents FeatherNotes (*.fnx);;Tous les fichiers (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1448"/>
@@ -1237,7 +1237,7 @@
     <message>
         <location filename="../../fn.cpp" line="1997"/>
         <source>Align Table</source>
-        <translation type="unfinished"></translation>
+        <translation>Aligner le tableau</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2010"/>
@@ -1262,7 +1262,7 @@
     <message>
         <location filename="../../fn.cpp" line="2635"/>
         <source>Tag(s) for this node</source>
-        <translation>Tag(s) pour ce noeud</translation>
+        <translation>Mot(s) clé(s) pour ce noeud</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2730"/>
@@ -1335,7 +1335,7 @@
     <message>
         <location filename="../../fn.cpp" line="4313"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Image cannot be saved! Retry?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;L&apos;image ne peut pas être enregistrée ! Réessayez ?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;L&apos;image ne peut pas être enregistrée ! Réessayer ?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4314"/>
@@ -1357,7 +1357,7 @@
     <message>
         <location filename="../../fn.cpp" line="4393"/>
         <source>Insert Table</source>
-        <translation></translation>
+        <translation>Insérer un tableau</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4399"/>
@@ -1377,7 +1377,7 @@
     <message>
         <location filename="../../fn.cpp" line="5320"/>
         <source>Export HTML</source>
-        <translation></translation>
+        <translation>Exporter HTML</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5325"/>
@@ -1436,17 +1436,17 @@ Voulez-vous le remplacer ?
     <message>
         <location filename="../../fn.cpp" line="5609"/>
         <source>Set Password</source>
-        <translation></translation>
+        <translation>Définir le mot de passe</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5617"/>
         <source>Type password</source>
-        <translation></translation>
+        <translation>Tapez le mot de passe</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5622"/>
         <source>Retype password</source>
-        <translation>Retaper le mot de passe</translation>
+        <translation>Retapez le mot de passe</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5697"/>
@@ -1457,7 +1457,7 @@ Voulez-vous le remplacer ?
         <location filename="../../fn.cpp" line="5734"/>
         <location filename="../../fn.cpp" line="5742"/>
         <source>Enter Password</source>
-        <translation></translation>
+        <translation>Entrer le Mot de passe</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5808"/>
@@ -1477,7 +1477,7 @@ Voulez-vous le remplacer ?
     <message>
         <location filename="../../fn.cpp" line="5853"/>
         <source>Author</source>
-        <translation></translation>
+        <translation>Autheur</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5855"/>
@@ -1525,7 +1525,7 @@ Voulez-vous le remplacer ?
     <message>
         <location filename="../../fn.cpp" line="5854"/>
         <source>aka.</source>
-        <translation></translation>
+        <translation>alias.</translation>
     </message>
 </context>
 <context>
@@ -1573,7 +1573,7 @@ Décocher pour définir une taille fixe !</translation>
     <message>
         <location filename="../../prefDialog.ui" line="51"/>
         <source>Start with this size: </source>
-        <translation>Démarrer avec la taille : </translation>
+        <translation>Démarrer avec cette taille : </translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="58"/>
@@ -1635,7 +1635,7 @@ Nécessite de redémarrer FeatherNotes pour prendre effet.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="132"/>
         <source>Add to s&amp;ystray</source>
-        <translation>Ajouter à la zone de notification</translation>
+        <translation>Ajouter à la &amp;zone de notification</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="157"/>
@@ -1647,7 +1647,7 @@ peut être utilisé à la place de cela.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="161"/>
         <source>Start i&amp;conified to tray</source>
-        <translation>Démarrer iconifié sur le plateau</translation>
+        <translation>Démarrer i&amp;conifié dans la zone de notifications</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="170"/>
@@ -1698,7 +1698,7 @@ utiliser l&apos;icône de la zone de notification plus facilement !</translation
     <message>
         <location filename="../../prefDialog.ui" line="213"/>
         <source>Running &amp;under Enlightenment?</source>
-        <translation>Courir sous Enlightenment ?</translation>
+        <translation>Lancer so&amp;us Enlightenment ?</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="238"/>
@@ -1722,12 +1722,12 @@ puis redémarrer FeatherNotes !</translation>
     <message>
         <location filename="../../prefDialog.ui" line="248"/>
         <source>Shifts (X × Y): </source>
-        <translation>Changements (X × Y): </translation>
+        <translation type="unfinished">Changements (X × Y) : </translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="314"/>
         <source>Text</source>
-        <translation></translation>
+        <translation>Texte</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="323"/>
@@ -1759,7 +1759,7 @@ Nécessite de redémarrer FeatherNotes pour prendre effet.</translation>
 a double hyphen with a long dash, etc. while
 the user is typing and under proper circumstances.</source>
         <translation type="unfinished">Une triple période est remplacée par une ellipse,
-un double trait d&apos;union par long tiret, etc.
+un double trait d&apos;union par un long tiret, etc.
 l&apos;utilisateur tape dans des circonstances appropriées.</translation>
     </message>
     <message>
@@ -1782,7 +1782,7 @@ Prend effet après la fermeture de cette boîte de dialogue.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="369"/>
         <source>Date and time format:</source>
-        <translation>Format de la date et de l&apos;heure :</translation>
+        <translation>Format de date et heure :</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="393"/>
@@ -1864,7 +1864,7 @@ nom mais se terminant par &quot;.aff&quot;.</translation>
         <location filename="../../pref.cpp" line="376"/>
         <location filename="../../pref.cpp" line="562"/>
         <source>Warning: Ambiguous shortcut detected!</source>
-        <translation>Attention&#xa0;: raccourci ambigu détecté&#xa0;!</translation>
+        <translation>Attention : raccourci ambigu détecté !</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="545"/>
@@ -1934,7 +1934,7 @@ nom mais se terminant par &quot;.aff&quot;.</translation>
         <location filename="../../domitem.cpp" line="100"/>
         <location filename="../../domitem.cpp" line="137"/>
         <source>New Node</source>
-        <translation></translation>
+        <translation>Nouveau noeud</translation>
     </message>
 </context>
 </TS>

@@ -1237,12 +1237,12 @@
     <message>
         <location filename="../../fn.cpp" line="1997"/>
         <source>Align Table</source>
-        <translation type="unfinished"></translation>
+        <translation>Tabloyu Hizala</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2010"/>
         <source>&amp;Center</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Orta</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2378"/>
@@ -1262,267 +1262,270 @@
     <message>
         <location filename="../../fn.cpp" line="2635"/>
         <source>Tag(s) for this node</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu düğüm için etiketler</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2730"/>
         <location filename="../../fn.cpp" line="4082"/>
         <source>Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Resim Dosyaları (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;Tüm Dosyalar (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2903"/>
         <source>Select Document Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Belge Yazı Tipini Seç</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2958"/>
         <source>Select Node Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Düğüm Yazı Tipini Seçin</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2973"/>
         <source>Set Document Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Belge Renklerini Ayarlama</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2983"/>
         <source>These colors will be applied to new nodes.&lt;br&gt;They may or may not affect existing nodes&lt;br&gt;but document reopening is recommended.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu renkler yeni düğümlere uygulanacaktır. &lt;br&gt; Mevcut düğümleri etkileyebilir veya etkilemeyebilir &lt;br&gt; ancak belgenin yeniden açılması önerilir.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2986"/>
         <source>Background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Arka plan rengi:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2992"/>
         <source>Text color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Metin rengi:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3709"/>
         <source>The first 1000 replacements are highlighted.</source>
-        <translation type="unfinished"></translation>
+        <translation>İlk 1000 değiştirme vurgulanmıştır.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3966"/>
         <location filename="../../fn.cpp" line="4128"/>
         <source>Scale to</source>
-        <translation type="unfinished"></translation>
+        <translation>Ölçekle</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3970"/>
         <location filename="../../fn.cpp" line="4131"/>
         <source>%</source>
-        <translation type="unfinished"></translation>
+        <translation>%</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4122"/>
         <source>Scale Image(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Resimleri Ölçekle</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4281"/>
         <source>untitled</source>
-        <translation type="unfinished"></translation>
+        <translation>başlıksız</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4312"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Hata</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4313"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Image cannot be saved! Retry?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt; &lt;big&gt; Görüntü kaydedilemiyor! Yeniden denilsin mi? &lt;/big&gt; &lt;/b&gt; &lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4314"/>
         <source>&lt;center&gt;Maybe you did not choose a proper extension&lt;/center&gt;
 &lt;center&gt;or do not have write permission.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt; Belki uygun bir uzantı seçmediniz &lt;/center&gt;
+&lt;center&gt; veya yazma izniniz yok. &lt;/center&gt; &lt;p&gt; &lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4341"/>
         <source>Save Image As...</source>
-        <translation type="unfinished"></translation>
+        <translation>Görüntüyü Farklı Kaydet...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4343"/>
         <source>Image Files (*.png *.jpg *.jpeg *.bmp);;All Files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Görüntü Dosyaları (*.png *.jpg *.jpeg *.bmp);;Tüm Dosyalar (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4393"/>
         <source>Insert Table</source>
-        <translation type="unfinished"></translation>
+        <translation>Tablo Ekle</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4399"/>
         <source>Rows:</source>
-        <translation type="unfinished"></translation>
+        <translation>Satırlar:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4405"/>
         <source>Columns:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sütunlar:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5236"/>
         <source>Print Document</source>
-        <translation type="unfinished"></translation>
+        <translation>Belgeyi Yazdır</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5320"/>
         <source>Export HTML</source>
-        <translation type="unfinished"></translation>
+        <translation>HTML&apos;yi dışa aktar</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5325"/>
         <source>Export:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dışa aktar:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5326"/>
         <source>&amp;Current node</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Geçerli düğüm</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5328"/>
         <source>With all &amp;sub-nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Tüm &amp;alt düğümlerle</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5329"/>
         <source>&amp;All nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tüm düğümler</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5341"/>
         <source>Output file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Çıktı dosyası:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5360"/>
         <source>Select path</source>
-        <translation type="unfinished"></translation>
+        <translation>Yol seçin</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5402"/>
         <source>Question</source>
-        <translation type="unfinished"></translation>
+        <translation>Soru</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5403"/>
         <source>The file already exists.
 Do you want to replace it?
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya zaten var.
+Değiştirmek istiyor musun?
+</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5586"/>
         <source>Save HTML As...</source>
-        <translation type="unfinished"></translation>
+        <translation>HTML&apos;yi Farklı Kaydet...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5588"/>
         <source>HTML Files (*.html *.htm)</source>
-        <translation type="unfinished"></translation>
+        <translation>HTML Dosyaları (*.html *.htm)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5609"/>
         <source>Set Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Şifreyi belirle</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5617"/>
         <source>Type password</source>
-        <translation type="unfinished"></translation>
+        <translation>Şifreyi yaz</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5622"/>
         <source>Retype password</source>
-        <translation type="unfinished"></translation>
+        <translation>Şifrenizi yeniden yazın</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5697"/>
         <source>&lt;center&gt;Passwords were different. Retry!&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt; Parolalar farklıydı. Yeniden deneyin! &lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5734"/>
         <location filename="../../fn.cpp" line="5742"/>
         <source>Enter Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Parolanı Gir</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5808"/>
         <source>&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt; Yanlış şifre. Yeniden deneyin! &lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5851"/>
         <source>A lightweight notes manager</source>
-        <translation type="unfinished"></translation>
+        <translation>Hafif bir not yöneticisi</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5852"/>
         <source>based on Qt</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt&apos;ye göre</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5853"/>
         <source>Author</source>
-        <translation type="unfinished"></translation>
+        <translation>Yazar</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5855"/>
         <location filename="../../fn.cpp" line="5856"/>
         <source>About FeatherNotes</source>
-        <translation type="unfinished"></translation>
+        <translation>Tüy Notları Hakkında</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5855"/>
         <source>Translators</source>
-        <translation type="unfinished"></translation>
+        <translation>Çevirmenler</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6044"/>
         <source>See Preferences → Text → Spell Checking!</source>
-        <translation type="unfinished"></translation>
+        <translation>Tercihler → Metin → Yazım Denetimi&apos;ne bakın!</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6066"/>
         <source>You need to add a Hunspell dictionary.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hunspell sözlüğü eklemeniz gerekiyor.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6071"/>
         <source>The Hunspell dictionary does not exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hunspell sözlüğü mevcut değil.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6079"/>
         <source>The Hunspell dictionary is not accompanied by an affix file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hunspell sözlüğüne bir ek dosyası eşlik etmez.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6097"/>
         <location filename="../../fn.cpp" line="6112"/>
         <location filename="../../fn.cpp" line="6124"/>
         <source>No misspelling from text cursor.</source>
-        <translation type="unfinished"></translation>
+        <translation>Metin imlecinden yanlış yazım yok.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6135"/>
         <source>Spell Checking</source>
-        <translation type="unfinished"></translation>
+        <translation>Yazım Denetimi</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5854"/>
         <source>aka.</source>
-        <translation type="unfinished"></translation>
+        <translation>diğer adıyla.</translation>
     </message>
 </context>
 <context>
@@ -1530,13 +1533,13 @@ Do you want to replace it?
     <message>
         <location filename="../../lineedit.cpp" line="35"/>
         <source>Clear text (Ctrl+K)</source>
-        <translation type="unfinished"></translation>
+        <translation>Metni temizle (Ctrl + K)</translation>
     </message>
     <message>
         <location filename="../../lineedit.cpp" line="81"/>
         <source>Ctrl+K</source>
         <comment>Clear text</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+K</translation>
     </message>
 </context>
 <context>
@@ -1544,12 +1547,12 @@ Do you want to replace it?
     <message>
         <location filename="../../prefDialog.ui" line="14"/>
         <source>Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Tercihler</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="27"/>
         <source>Window</source>
-        <translation type="unfinished"></translation>
+        <translation>Pencere</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="36"/>
@@ -1557,17 +1560,20 @@ Do you want to replace it?
 this dialog and also on exit.
 
 Uncheck to set a fixed size!</source>
-        <translation type="unfinished"></translation>
+        <translation>Kapattıktan sonra pencere boyutunu kaydeder
+bu iletişim kutusu ve ayrıca çıkışta.
+
+Sabit bir boyut ayarlamak için işareti kaldırın!</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="42"/>
         <source>Remember window &amp;size</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Pencere ve boyutu hatırla</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="51"/>
         <source>Start with this size: </source>
-        <translation type="unfinished"></translation>
+        <translation>Bu boyutla başlayın: </translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="58"/>
@@ -1575,7 +1581,7 @@ Uncheck to set a fixed size!</source>
         <location filename="../../prefDialog.ui" line="255"/>
         <location filename="../../prefDialog.ui" line="269"/>
         <source> px</source>
-        <translation type="unfinished"></translation>
+        <translation> px</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="97"/>
@@ -1583,12 +1589,15 @@ Uncheck to set a fixed size!</source>
 this dialog and also on exit.
 
 Uncheck for a width ratio of 170/530.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu iletişim kutusunu kapattıktan sonra
+ve ayrıca çıkışta ağaç genişliğini kaydeder.
+
+170/530 genişlik oranının işaretini kaldırın.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="103"/>
         <source>Remember &amp;tree width</source>
-        <translation type="unfinished"></translation>
+        <translation>Ağaç genişliğini hatırla</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="110"/>
@@ -1598,12 +1607,12 @@ this dialog and also on exit.
 (This may not work correctly
 under GTK+ DE&apos;s like Unity
 and Cinnamon.)</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu iletişim kutusunu kapattıktan sonra ve ayrıca çıkışta konumu kaydeder. (Bu, Unity ve Cinnamon gibi GTK + DE&apos;ler altında düzgün çalışmayabilir.)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="118"/>
         <source>Save &amp;position</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaydet ve konumlandır</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="125"/>
@@ -1612,71 +1621,74 @@ If checked, the titlebar close button iconifies
 the window to the systray instead of quitting.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Systray simgesinin kullanılıp kullanılmayacağına karar verir. İşaretlenirse, başlık çubuğu kapat düğmesi, çıkmak yerine pencereyi sistem tepsisine gösterir. Etkili olması için FeatherNotes&apos;un yeniden başlatılması gerekiyor.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="132"/>
         <source>Add to s&amp;ystray</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Systray&apos;e ekle</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="157"/>
         <source>The command line option --tray
 can be used instead of this.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bunun yerine komut satırı seçeneği --tray kullanılabilir.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="161"/>
         <source>Start i&amp;conified to tray</source>
-        <translation type="unfinished"></translation>
+        <translation>Tepside simge haline getirilmeyi başlatın</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="170"/>
         <source>Merge the tree view with its surroundings?</source>
-        <translation type="unfinished"></translation>
+        <translation>Ağaç görünümü çevresiyle birleştirilsin mi?</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="173"/>
         <source>Transparent t&amp;ree view</source>
-        <translation type="unfinished"></translation>
+        <translation>Şeffaf ekran görünümü</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="180"/>
         <source>By default, the active widget style determines
 the size of toolbar icons.</source>
-        <translation type="unfinished"></translation>
+        <translation>Varsayılan olarak, etkin pencere öğesi stili,
+the size of toolbar icons.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="184"/>
         <source>Small toolbar icons</source>
-        <translation type="unfinished"></translation>
+        <translation>Küçük araç çubuğu simgeleri</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="191"/>
         <source>Do not show t&amp;oolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Toolbar&apos;ı gösterme</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="198"/>
         <source>If the menubar is hidden,
 a menu button appears on the toolbar.</source>
-        <translation type="unfinished"></translation>
+        <translation>Menü çubuğu gizlenmişse,
+araç çubuğunda bir menü düğmesi görünür.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="202"/>
         <source>Do not show &amp;menubar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Menü çubuğunu gösterme</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="209"/>
         <source>Check this under Enlightenment (or, probably, another DE)
 to use the systray icon more easily!</source>
-        <translation type="unfinished"></translation>
+        <translation>Bunu Enlightenment altında kontrol edin (veya muhtemelen başka bir DE)
+systray simgesini daha kolay kullanmak için!</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="213"/>
         <source>Running &amp;under Enlightenment?</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Enlightenment altında mı çalışıyor?</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="238"/>
@@ -1688,51 +1700,62 @@ if it is on the left or right, the X-coordinate should be set.
 
 After choosing the coordinate shifts, put the window in a proper
 position and then restart FeatherNotes!</source>
-        <translation type="unfinished"></translation>
+        <translation>Bazı DE&apos;LER (Aydınlanma gibi) pencere konumunu bildirmeyebilir
+düzgün. Eğer durum buysa, sorunu burada çözmeyi deneyebilirsiniz.
+
+Panel alt veya üstte ise, Y koordinatı ayarlanmalıdır;
+solda veya sağda ise, X koordinatı ayarlanmalıdır.
+
+Koordinat vardiyalarını seçtikten sonra, pencereyi uygun bir yere koyun.
+Feathernotes&apos;u konumlandırın ve yeniden başlatın!</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="248"/>
         <source>Shifts (X × Y): </source>
-        <translation type="unfinished"></translation>
+        <translation>Değiştirme (X × Y): </translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="314"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Metin</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="323"/>
         <source>&amp;Wrap lines by default</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Varsayılan olarak satırları kaydır</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="330"/>
         <source>Auto-&amp;indent by default</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Varsayılan olarak otomatik girinti</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="337"/>
         <source>This covers parentheses, braces, brackets and quotes.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu parantezler, parantez, parantez ve tırnak işaretlerini kapsar.
+
+Etkili olması için FeatherNotes&apos;un yeniden başlatılması gerekiyor.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="342"/>
         <source>Auto-&amp;bracket</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Otomatik parantez</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="349"/>
         <source>A triple period is replaced with an ellipsis,
 a double hyphen with a long dash, etc. while
 the user is typing and under proper circumstances.</source>
-        <translation type="unfinished"></translation>
+        <translation>Üç nokta bir üç nokta ile değiştirilir,
+uzun tire içeren çift kısa çizgi vb.
+kullanıcı yazıyor ve uygun koşullar altında.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="354"/>
         <source>&amp;Replace some characters while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Yazarken bazı karakterleri değiştir</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="363"/>
@@ -1741,17 +1764,20 @@ the user is typing and under proper circumstances.</source>
 Leave empty for the system default.
 
 Takes effect after closing this dialog.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tarih ve saati yapıştırmak için kullanılır.
+Sistem Varsayılanı için boş bırakın.
+
+Bu iletişim penceresini kapattıktan sonra etkili olur.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="369"/>
         <source>Date and time format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tarih ve saat biçimi:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="393"/>
         <source>&amp;Auto-save every</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Her birini otomatik Kaydet</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="400"/>
