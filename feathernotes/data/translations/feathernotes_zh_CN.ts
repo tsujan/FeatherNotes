@@ -125,7 +125,7 @@
     <message>
         <location filename="../../fn.ui" line="223"/>
         <source>Recenl&amp;y Opened</source>
-        <translation type="unfinished"></translation>
+        <translation>最近(&amp;y)打开</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="245"/>
@@ -991,7 +991,7 @@
     <message>
         <location filename="../../fn.ui" line="1374"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>清理(&amp;C)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2698"/>
@@ -1221,7 +1221,7 @@
     <message>
         <location filename="../../fn.cpp" line="1448"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be opened!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt; &lt;b&gt; &lt;big&gt;无法打开！&lt;/ big&gt; &lt;/ b&gt; &lt;/ center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1533"/>
@@ -1237,12 +1237,12 @@
     <message>
         <location filename="../../fn.cpp" line="1997"/>
         <source>Align Table</source>
-        <translation type="unfinished"></translation>
+        <translation>对齐表</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2010"/>
         <source>&amp;Center</source>
-        <translation type="unfinished"></translation>
+        <translation>中心(&amp;C)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2378"/>
@@ -1830,12 +1830,12 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../prefDialog.ui" line="522"/>
         <source>Number of recent files:</source>
-        <translation type="unfinished"></translation>
+        <translation>最近的文件数：</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="554"/>
         <source>Open recent files separately</source>
-        <translation type="unfinished"></translation>
+        <translation>分别打开最近的文件</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="578"/>
