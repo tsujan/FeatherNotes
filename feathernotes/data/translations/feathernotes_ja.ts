@@ -1002,7 +1002,7 @@
         <location filename="../../fn.cpp" line="631"/>
         <location filename="../../fn.cpp" line="4688"/>
         <source>&amp;Raise/Hide</source>
-        <translation>表示/隠す(&amp;R)</translation>
+        <translation>表示/非表示(&amp;R)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="801"/>
