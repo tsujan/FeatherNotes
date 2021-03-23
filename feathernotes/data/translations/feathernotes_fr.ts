@@ -1722,7 +1722,7 @@ puis redémarrer FeatherNotes !</translation>
     <message>
         <location filename="../../prefDialog.ui" line="248"/>
         <source>Shifts (X × Y): </source>
-        <translation type="unfinished">Changements (X × Y) : </translation>
+        <translation>Changer (X × Y) : </translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="314"/>
