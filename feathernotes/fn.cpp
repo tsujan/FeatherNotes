@@ -2904,7 +2904,11 @@ void FN::textFontDialog()
     if (ok)
     {
         defaultFont_ = QFont (newFont.family(), newFont.pointSize());
+#if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
         defaultFont_.setFamilies (newFont.families()); // to override the existing font families
+#else
+        defaultFont_.setFamily (newFont.family());
+#endif
 
         noteModified();
 
