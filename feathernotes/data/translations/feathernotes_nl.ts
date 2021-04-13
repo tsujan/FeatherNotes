@@ -1661,7 +1661,7 @@ kan eveneens worden gebruikt.</translation>
         <location filename="../../prefDialog.ui" line="180"/>
         <source>By default, the active widget style determines
 the size of toolbar icons.</source>
-        <translation>Standaard bepaalt de actieve widgetstijl de
+        <translation>Standaard bepaalt de actieve elementstijl de
 grootte van de werkbalkpictogrammen.</translation>
     </message>
     <message>
