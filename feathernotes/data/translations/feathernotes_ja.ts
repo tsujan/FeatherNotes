@@ -1827,7 +1827,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../prefDialog.ui" line="510"/>
         <source>Start with the last opened file</source>
-        <translation>最後に開いたファイルで始める</translation>
+        <translation>最後に開いていたファイルを開いて起動する</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="522"/>
