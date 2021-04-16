@@ -125,7 +125,7 @@
     <message>
         <location filename="../../fn.ui" line="223"/>
         <source>Recenl&amp;y Opened</source>
-        <translation type="unfinished"></translation>
+        <translation>Kür&amp;zlich geöffnet</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="245"/>
@@ -531,7 +531,7 @@
     <message>
         <location filename="../../fn.ui" line="857"/>
         <source>&amp;Append Sibling</source>
-        <translation></translation>
+        <translation>Verwan&amp;dte anhängen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="860"/>
@@ -753,7 +753,7 @@
     <message>
         <location filename="../../fn.ui" line="1115"/>
         <source>&amp;Prepend Sibling</source>
-        <translation></translation>
+        <translation>Verwand&amp;te voranstellen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1118"/>
@@ -991,7 +991,7 @@
     <message>
         <location filename="../../fn.ui" line="1374"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Löschen</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2698"/>
@@ -1221,7 +1221,7 @@
     <message>
         <location filename="../../fn.cpp" line="1448"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be opened!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Kann nicht geöffnet werden!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1533"/>
@@ -1237,12 +1237,12 @@
     <message>
         <location filename="../../fn.cpp" line="1997"/>
         <source>Align Table</source>
-        <translation type="unfinished"></translation>
+        <translation>Tabelle ausrichten</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2010"/>
         <source>&amp;Center</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zentrieren</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2378"/>
@@ -1515,7 +1515,7 @@ Möchten Sie sie ersetzen?
         <location filename="../../fn.cpp" line="6116"/>
         <location filename="../../fn.cpp" line="6128"/>
         <source>No misspelling from text cursor.</source>
-        <translation type="unfinished"></translation>
+        <translation>Keine Schreibfehler ab Textcursor.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6139"/>
@@ -1759,7 +1759,9 @@ Dies benötigt den Neustart von FeatherNotes, um wirksam zu werden.</translation
         <source>A triple period is replaced with an ellipsis,
 a double hyphen with a long dash, etc. while
 the user is typing and under proper circumstances.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ein dreifach-Punkt wird ersetzt durch eine Ellipse,
+ein doppelter Bindestrich mit langem Bindestrich, etc. während
+der Anwender schreibt und unter passenden Umständen.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="354"/>
@@ -1773,7 +1775,10 @@ the user is typing and under proper circumstances.</source>
 Leave empty for the system default.
 
 Takes effect after closing this dialog.</source>
-        <translation type="unfinished"></translation>
+        <translation>Verwendet zum Einfügen von Datum und Zeit.
+Leerlassen für Systemstandard.
+
+Dialogfenster schließen ändert Einstellungen.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="369"/>
@@ -1801,7 +1806,9 @@ Takes effect after closing this dialog.</source>
         <source>A Hunspell dictionary has a name that ends with &quot;.dic&quot;
 and should be alongside an affix file with the same
 name but ending with &quot;.aff&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ein Hunspell-Wörterbuch-Datei endet mit &quot;.dic&quot;
+und hat eine zweite Datei mit dem selben 
+Namen aber endet mit &quot;.aff&quot;.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="447"/>
@@ -1827,17 +1834,17 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../prefDialog.ui" line="522"/>
         <source>Number of recent files:</source>
-        <translation type="unfinished"></translation>
+        <translation>Anzahl kürzlich geöffneter Dateien:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="554"/>
         <source>Open recent files separately</source>
-        <translation type="unfinished"></translation>
+        <translation>Öffne kürzlich geöffnete Dateien getrennt</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="578"/>
         <source>Shortcuts</source>
-        <translation type="unfinished">Tastenkombinationen</translation>
+        <translation>Tastenkombinationen</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="597"/>
@@ -1847,7 +1854,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../prefDialog.ui" line="602"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>Verknüpfung</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="610"/>
@@ -1858,12 +1865,12 @@ name but ending with &quot;.aff&quot;.</source>
         <location filename="../../pref.cpp" line="376"/>
         <location filename="../../pref.cpp" line="562"/>
         <source>Warning: Ambiguous shortcut detected!</source>
-        <translation type="unfinished">Warnung: Mehrdeutiger Tastatur-Kurzbefehl erkannt!</translation>
+        <translation>Warnung: Tastenkombination belegt!</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="545"/>
         <source>The typed shortcut was reserved.</source>
-        <translation type="unfinished">Die eingegebene Verknüpfung wurde reserviert.</translation>
+        <translation>Die Tastenkombination wurde reserviert.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="660"/>
