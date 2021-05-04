@@ -531,472 +531,472 @@
     <message>
         <location filename="../../fn.ui" line="857"/>
         <source>&amp;Append Sibling</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisa sama taseme sõlm &amp;tahapoole</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="860"/>
         <source>Ctrl+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="868"/>
         <source>Append &amp;Child</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisa &amp;alamtaseme sõlm</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="871"/>
         <source>Ctrl+Shift+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+N</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="879"/>
         <source>&amp;Delete Node</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kustuta sõlm</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="882"/>
         <source>Ctrl+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+D</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="890"/>
         <source>Move &amp;Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Liiguta &amp;üles</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="893"/>
         <source>Alt+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Up</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="901"/>
         <source>Move Do&amp;wn</source>
-        <translation type="unfinished"></translation>
+        <translation>Liiguta a&amp;lla</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="904"/>
         <source>Alt+Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Down</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="912"/>
         <source>Re&amp;name Node</source>
-        <translation type="unfinished"></translation>
+        <translation>Muuda sõlme &amp;nime</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="915"/>
         <source>Ctrl+Shift+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+R</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="920"/>
         <source>Tree Pr&amp;operties</source>
-        <translation type="unfinished"></translation>
+        <translation>Märkmepuu &amp;teave</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="923"/>
         <source>Ctrl+Shift+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+D</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="931"/>
         <source>Document &amp;Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Dokumendi &amp;font</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="945"/>
         <source>&amp;Wrap Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Murra ridu</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="948"/>
         <source>Ctrl+W</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+W</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="962"/>
         <source>&amp;Auto-Indentation</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Automaatsed taandread</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="965"/>
         <source>Ctrl+Shift+I</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+I</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="970"/>
         <source>&amp;Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Eelistused</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="973"/>
         <source>Ctrl+Shift+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+P</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="981"/>
         <source>Find and &amp;Replace</source>
-        <translation type="unfinished"></translation>
+        <translation>Otsi ja &amp;asenda</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="984"/>
         <source>Ctrl+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+R</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="992"/>
         <source>Ctrl+H</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+H</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="997"/>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Rakenduse teave</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1005"/>
         <source>Pr&amp;int All Nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Trüki &amp;kõik sõlmed</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1016"/>
         <source>Superscrip&amp;t</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ülaindeks</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1019"/>
         <source>Superscript</source>
-        <translation type="unfinished"></translation>
+        <translation>Ülaindeks</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1022"/>
         <source>Alt+Shift+U</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+U</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1033"/>
         <source>Subscri&amp;pt</source>
-        <translation type="unfinished"></translation>
+        <translation>A&amp;laindeks</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1036"/>
         <source>Subscript</source>
-        <translation type="unfinished"></translation>
+        <translation>Alaindeks</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1039"/>
         <source>Alt+Shift+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+S</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1050"/>
         <source>C&amp;enter</source>
-        <translation type="unfinished"></translation>
+        <translation>K&amp;eskele</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1053"/>
         <source>Align center</source>
-        <translation type="unfinished"></translation>
+        <translation>Joonda keskele</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1056"/>
         <source>Alt+Shift+Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+Down</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1067"/>
         <location filename="../../fn.cpp" line="2004"/>
         <source>&amp;Right</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Paremale</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1070"/>
         <source>Align right</source>
-        <translation type="unfinished"></translation>
+        <translation>Joonda paremale</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1073"/>
         <source>Alt+Shift+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+Right</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1084"/>
         <location filename="../../fn.cpp" line="1998"/>
         <source>&amp;Left</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vasakule</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1087"/>
         <source>Align left</source>
-        <translation type="unfinished"></translation>
+        <translation>Joonda vasakule</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1090"/>
         <source>Alt+Shift+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+Left</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1101"/>
         <source>&amp;Justify</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Rööpselt</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1104"/>
         <source>Justify</source>
-        <translation type="unfinished"></translation>
+        <translation>Joonda rööpselt</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1107"/>
         <source>Alt+Shift+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+Up</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1115"/>
         <source>&amp;Prepend Sibling</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisa sama taseme sõlm &amp;ettepoole</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1118"/>
         <source>Ctrl+M</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+M</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1126"/>
         <source>Move &amp;Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Liiguta &amp;vasakule</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1129"/>
         <source>Alt+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Left</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1137"/>
         <source>Move &amp;Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Liiguta &amp;paremale</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1140"/>
         <source>Alt+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Right</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1148"/>
         <source>h&amp;2</source>
-        <translation type="unfinished"></translation>
+        <translation>h&amp;2 (teise taseme pealkiri)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1151"/>
         <source>Header 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Header 2 (teise taseme pealkiri)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1154"/>
         <source>Ctrl+2</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1162"/>
         <source>h&amp;1</source>
-        <translation type="unfinished"></translation>
+        <translation>h&amp;1 (esimese taseme pealkiri)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1165"/>
         <source>Header 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Header 1 (esimese taseme pealkiri)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1168"/>
         <source>Ctrl+1</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+1</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1176"/>
         <source>h&amp;3</source>
-        <translation type="unfinished"></translation>
+        <translation>h&amp;3 (kolmanda taseme pealkiri)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1179"/>
         <source>Header 3</source>
-        <translation type="unfinished"></translation>
+        <translation>Header 3 (kolmanda taseme pealkiri)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1182"/>
         <source>Ctrl+3</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1190"/>
         <source>&amp;Node Font</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Sõlme font</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1193"/>
         <source>Node Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Sõlme font</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1198"/>
         <source>Scale I&amp;mage(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Skalee&amp;ri pilt(e)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1206"/>
         <source>Paste &amp;HTML</source>
-        <translation type="unfinished"></translation>
+        <translation>Aseta &amp;HTML</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1209"/>
         <source>Ctrl+Shift+V</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+V</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1217"/>
         <source>&amp;Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Sildid</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1220"/>
         <source>Ctrl+Shift+T</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1228"/>
         <source>Insert Lin&amp;k</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisa &amp;viide</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1231"/>
         <source>Ctrl+L</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+L</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1236"/>
         <source>C&amp;opy Link</source>
-        <translation type="unfinished"></translation>
+        <translation>K&amp;opeeri viide</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1244"/>
         <source>I&amp;nsert Table</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisa &amp;tabel</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1247"/>
         <source>Ctrl+Alt+Shift+T</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Alt+Shift+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1252"/>
         <source>Append Row</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisa järgi üks rida</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1257"/>
         <source>Delete Row</source>
-        <translation type="unfinished"></translation>
+        <translation>Kustuta rida</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1262"/>
         <source>Append Column</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisa järgi üks veerg</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1267"/>
         <source>Delete Column</source>
-        <translation type="unfinished"></translation>
+        <translation>Kustuta veerg</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1272"/>
         <source>Merge Cells</source>
-        <translation type="unfinished"></translation>
+        <translation>Liida tabeliväljad</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1277"/>
         <source>Prepend Row</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisa ette üks rida</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1282"/>
         <source>Prepend Column</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisa ette üks veerg</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1290"/>
         <source>Export &amp;HTML</source>
-        <translation type="unfinished"></translation>
+        <translation>Ekspordi &amp;HTML&apos;ina</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1295"/>
         <source>Save Ima&amp;ge(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Salvesta p&amp;ilt</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1306"/>
         <source>RTL</source>
-        <translation type="unfinished"></translation>
+        <translation>Paremalt vasakule</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1309"/>
         <source>Ctrl+Alt+Shift+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Alt+Shift+Left</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1320"/>
         <source>LTR</source>
-        <translation type="unfinished"></translation>
+        <translation>Vasakult paremale</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1323"/>
         <source>Ctrl+Alt+Shift+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Alt+Shift+Right</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1328"/>
         <location filename="../../fn.ui" line="1331"/>
         <source>Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Menüü</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1339"/>
         <source>Node &amp;Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Sõlme &amp;ikoon</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1342"/>
         <source>Ctrl+Shift+C</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+C</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1347"/>
         <location filename="../../fn.ui" line="1350"/>
         <source>Check Spelling</source>
-        <translation type="unfinished"></translation>
+        <translation>Kontrolli õigekirja</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1353"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1358"/>
         <source>Document &amp;Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Dokumendi &amp;värvid</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1366"/>
         <location filename="../../fn.ui" line="1369"/>
         <source>Paste Date and Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Aseta kuupäev ja kellaaeg</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1374"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Eemalda</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2698"/>
         <source>Node Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Sõlme ikoon</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="631"/>
@@ -1885,7 +1885,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../helpDialog.ui" line="14"/>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Abiteave</translation>
     </message>
 </context>
 <context>
@@ -1894,7 +1894,7 @@ name but ending with &quot;.aff&quot;.</source>
         <location filename="../../domitem.cpp" line="100"/>
         <location filename="../../domitem.cpp" line="137"/>
         <source>New Node</source>
-        <translation type="unfinished"></translation>
+        <translation>Uus sõlm</translation>
     </message>
 </context>
 </TS>
