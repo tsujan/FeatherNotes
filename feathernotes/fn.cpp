@@ -3821,9 +3821,17 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
             }
             else
             {
-                if (isMinimized())
-                    showNormal();
-                showAndFocus();
+                if (isX11_)
+                {
+                    if (isMinimized())
+                        showNormal();
+                    showAndFocus();
+                }
+                else
+                {
+                    hide();
+                    QTimer::singleShot (0, this, &FN::showAndFocus);
+                }
             }
         }
         else
