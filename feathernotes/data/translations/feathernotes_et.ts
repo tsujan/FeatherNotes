@@ -1002,7 +1002,7 @@
         <location filename="../../fn.cpp" line="631"/>
         <location filename="../../fn.cpp" line="4700"/>
         <source>&amp;Raise/Hide</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tõsta/peida</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="801"/>
@@ -1192,7 +1192,7 @@
         <location filename="../../fn.cpp" line="3983"/>
         <location filename="../../fn.cpp" line="4144"/>
         <source>Scaling percentage</source>
-        <translation type="unfinished"></translation>
+        <translation>Skaleerimise suhe</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2728"/>
@@ -1204,7 +1204,7 @@
         <location filename="../../fn.cpp" line="633"/>
         <location filename="../../fn.cpp" line="4688"/>
         <source>&amp;Raise</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tõsta</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="849"/>
@@ -1257,7 +1257,7 @@
     <message>
         <location filename="../../fn.cpp" line="2525"/>
         <source>Deletion</source>
-        <translation type="unfinished"></translation>
+        <translation>Kustutamine</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2635"/>
@@ -1309,18 +1309,18 @@
         <location filename="../../fn.cpp" line="3978"/>
         <location filename="../../fn.cpp" line="4140"/>
         <source>Scale to</source>
-        <translation type="unfinished"></translation>
+        <translation>Skaleeri kuni</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3982"/>
         <location filename="../../fn.cpp" line="4143"/>
         <source>%</source>
-        <translation type="unfinished"></translation>
+        <translation>%</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4134"/>
         <source>Scale Image(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Skaleeri pilt(e)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4293"/>
@@ -1560,17 +1560,20 @@ Kas sa soovid selle asendada?
 this dialog and also on exit.
 
 Uncheck to set a fixed size!</source>
-        <translation type="unfinished"></translation>
+        <translation>Akna suurus salvestub selle vaate
+sulgemisel ja rakendusest väljumisel.
+
+Fikseeritud suuruse jaoks lülita see valik välja!</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="42"/>
         <source>Remember window &amp;size</source>
-        <translation type="unfinished"></translation>
+        <translation>Jäta akna &amp;suurus meelde</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="51"/>
         <source>Start with this size: </source>
-        <translation type="unfinished"></translation>
+        <translation>Alusta sellise suurusega: </translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="58"/>
@@ -1578,7 +1581,7 @@ Uncheck to set a fixed size!</source>
         <location filename="../../prefDialog.ui" line="255"/>
         <location filename="../../prefDialog.ui" line="269"/>
         <source> px</source>
-        <translation type="unfinished"></translation>
+        <translation> pikslit</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="97"/>
@@ -1586,12 +1589,15 @@ Uncheck to set a fixed size!</source>
 this dialog and also on exit.
 
 Uncheck for a width ratio of 170/530.</source>
-        <translation type="unfinished"></translation>
+        <translation>Märkmepuu laius salvestub selle vaate
+sulgemisel ja rakendusest väljumisel.
+
+Kui see valik pole kasutusel on laiuseks 170/530.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="103"/>
         <source>Remember &amp;tree width</source>
-        <translation type="unfinished"></translation>
+        <translation>Jäta märkmepuu &amp;laius meelde</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="110"/>
@@ -1601,12 +1607,17 @@ this dialog and also on exit.
 (This may not work correctly
 under GTK+ DE&apos;s like Unity
 and Cinnamon.)</source>
-        <translation type="unfinished"></translation>
+        <translation>Akna asukoht salvestub selle vaate
+sulgemisel ja rakendusest väljumisel.
+
+(GTK+ põhistes töölauakeskonades
+nagu Unity ja Cinnamon see seadistus
+ei pruugi korretselt toimida.)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="118"/>
         <source>Save &amp;position</source>
-        <translation type="unfinished"></translation>
+        <translation>Salvesta akna &amp;asukoht</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="125"/>
@@ -1615,71 +1626,80 @@ If checked, the titlebar close button iconifies
 the window to the systray instead of quitting.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Selle seadistusega määrad, kas kasutame süsteemisalve ikooni.
+Kui see valik on kasutusel, siis akna päiseribal olev sulgemisikooni
+vajutamisel rakendus ei sulgu, vaid läheb vähendatud olekus
+süsteemisalve.
+
+Selle muudatuse jõustamiseks palun käivita FeatherNotes uuesti.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="132"/>
         <source>Add to s&amp;ystray</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisa s&amp;üsteemisalve</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="157"/>
         <source>The command line option --tray
 can be used instead of this.</source>
-        <translation type="unfinished"></translation>
+        <translation>Selle asmel või kasutada ka
+käsurea võtit --tray.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="161"/>
         <source>Start i&amp;conified to tray</source>
-        <translation type="unfinished"></translation>
+        <translation>Alusta nii, et süsteemisalve &amp;ikoon on kasutusel</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="170"/>
         <source>Merge the tree view with its surroundings?</source>
-        <translation type="unfinished"></translation>
+        <translation>Kas eemaldame äärejoone ning sulandame märkepuu ümbritseva aknaosaga?</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="173"/>
         <source>Transparent t&amp;ree view</source>
-        <translation type="unfinished"></translation>
+        <translation>Eemalda mä&amp;rkmepuu taust</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="180"/>
         <source>By default, the active widget style determines
 the size of toolbar icons.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaikimisi määrab töölauakeskkonna vidinate stiil
+tööriistariba ikoonide suuruse.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="184"/>
         <source>Small toolbar icons</source>
-        <translation type="unfinished"></translation>
+        <translation>Kasuta väikeseid tööriistariba ikoone</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="191"/>
         <source>Do not show t&amp;oolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Ära näita &amp;tööriistariba</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="198"/>
         <source>If the menubar is hidden,
 a menu button appears on the toolbar.</source>
-        <translation type="unfinished"></translation>
+        <translation>Peidetud menüüriba puhul
+tekib tööriistaribale menüü nupp.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="202"/>
         <source>Do not show &amp;menubar</source>
-        <translation type="unfinished"></translation>
+        <translation>Ära näita &amp;menüüriba</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="209"/>
         <source>Check this under Enlightenment (or, probably, another DE)
 to use the systray icon more easily!</source>
-        <translation type="unfinished"></translation>
+        <translation>Kui sinu töölauakeskonnaks on Enlightenment või muu sarnane,
+siis see valik võimaldab süsteemisalve ikoone lihtsamini kasutada!</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="213"/>
         <source>Running &amp;under Enlightenment?</source>
-        <translation type="unfinished"></translation>
+        <translation>Kas sin&amp;u töölauakeskkonnaks on Enlightenment?</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="238"/>
@@ -1691,12 +1711,19 @@ if it is on the left or right, the X-coordinate should be set.
 
 After choosing the coordinate shifts, put the window in a proper
 position and then restart FeatherNotes!</source>
-        <translation type="unfinished"></translation>
+        <translation>Mõned töölauakeskkonnad (nagu Enlightenment) ei teavita akna
+asukohast täpselt. Kui see on nii, siis sa võid järgnevat lahendust proovida.
+
+Kui paneel või tegumiriba on all või üleval, siis seadista Y-koordinaadid;
+kui ta aga on vasakul või paremal, siis X-koordinaadid.
+
+Peale koordinaatide nihke seadistamist, aseta rakenduse aken õigesse
+kohta ja käivita FeatherNotes uuesti!</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="248"/>
         <source>Shifts (X × Y): </source>
-        <translation type="unfinished"></translation>
+        <translation>Nihe (X × Y): </translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="314"/>
@@ -1718,7 +1745,9 @@ position and then restart FeatherNotes!</source>
         <source>This covers parentheses, braces, brackets and quotes.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Siia hulka kuuluvad ümarsulud, loogelised sulud, nurksulud ja jutumärgid.
+
+Muudatuse jõustumiseks palun käivita FeatherNotes uuesti.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="342"/>
@@ -1730,12 +1759,14 @@ Needs restarting of FeatherNotes to take effect.</source>
         <source>A triple period is replaced with an ellipsis,
 a double hyphen with a long dash, etc. while
 the user is typing and under proper circumstances.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kui kõik klapib, siis vaikimisi asendame
+kolm punkti (...) mõttepunktiga (...) ja 
+kaks sidekriipsu (--) mõttekriipsuga (—).</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="354"/>
         <source>&amp;Replace some characters while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>Asenda kolm punkti ja kaks kriipsu &amp;vastava tähemärgiga</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="363"/>
@@ -1744,27 +1775,30 @@ the user is typing and under proper circumstances.</source>
 Leave empty for the system default.
 
 Takes effect after closing this dialog.</source>
-        <translation type="unfinished"></translation>
+        <translation>Seda väärtust kasutame kuupäeva ja kellaaja asetamisel.
+Süsteemi vaikeseadistuste kasutamiseks jäta väi tühjaks.
+
+Muutus hakkab kehtima selle vaate sulgemisel.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="369"/>
         <source>Date and time format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuupäeva ja aja vorming:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="393"/>
         <source>&amp;Auto-save every</source>
-        <translation type="unfinished"></translation>
+        <translation>Salvesta &amp;automaatselt iga</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="400"/>
         <source> minute(s)</source>
-        <translation type="unfinished"></translation>
+        <translation> minuti järel</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="434"/>
         <source>Spell Checking</source>
-        <translation type="unfinished"></translation>
+        <translation>Õigekirjakontroll</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="442"/>
@@ -1772,38 +1806,40 @@ Takes effect after closing this dialog.</source>
         <source>A Hunspell dictionary has a name that ends with &quot;.dic&quot;
 and should be alongside an affix file with the same
 name but ending with &quot;.aff&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hunspelli standardit järgiv sõnastik asub .dic lõpuga
+failis ning tema kõrval peab olema sama nimega ja
+.aff laiendiga affiksifail.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="447"/>
         <source>Hunspell dictionary path:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hunspelli sõnastiku asukoht:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="466"/>
         <location filename="../../pref.cpp" line="689"/>
         <source>Add dictionary...</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisa sõnastik...</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="501"/>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Failid</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="510"/>
         <source>Start with the last opened file</source>
-        <translation type="unfinished"></translation>
+        <translation>Käivitamisel ava viimati kasutatud fail</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="522"/>
         <source>Number of recent files:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiljutiste failide arv:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="554"/>
         <source>Open recent files separately</source>
-        <translation type="unfinished"></translation>
+        <translation>Ava hiljutised failid eraldi</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="578"/>
