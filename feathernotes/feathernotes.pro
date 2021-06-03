@@ -124,6 +124,9 @@ unix:!macx:!haiku {
   desktop.path = $$DATADIR/applications
   desktop.files += ./data/$${TARGET}.desktop
 
+  metainfo.path = $$DATADIR/metainfo
+  metainfo.files += ./data/$${TARGET}.metainfo.xml
+
   appIcon.path = $$DATADIR/icons/hicolor/scalable/apps
   appIcon.files += ./data/$${TARGET}.svg
 
@@ -133,7 +136,7 @@ unix:!macx:!haiku {
   trans.path = $$DATADIR/feathernotes
   trans.files += data/translations/translations
 
-  INSTALLS += target mime desktop appIcon fileIcon trans
+  INSTALLS += target mime desktop metainfo appIcon fileIcon trans
 }
 else:macx {
   #VARIABLES
