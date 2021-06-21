@@ -1722,7 +1722,7 @@ puis redémarrer FeatherNotes !</translation>
     <message>
         <location filename="../../prefDialog.ui" line="248"/>
         <source>Shifts (X × Y): </source>
-        <translation>Changer (X × Y)&#xa0;: </translation>
+        <translation>Changer (X × Y) : </translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="314"/>
@@ -1758,8 +1758,8 @@ Nécessite de redémarrer FeatherNotes pour prendre effet.</translation>
         <source>A triple period is replaced with an ellipsis,
 a double hyphen with a long dash, etc. while
 the user is typing and under proper circumstances.</source>
-        <translation type="unfinished">Une triple période est remplacée par une ellipse,
-un double trait d&apos;union par un long tiret, etc.
+        <translation>Une période triple est remplacée par une ellipse,
+un trait d&apos;union double par un long tiret, etc.
 l&apos;utilisateur tape dans des circonstances appropriées.</translation>
     </message>
     <message>
@@ -1864,7 +1864,7 @@ nom mais se terminant par &quot;.aff&quot;.</translation>
         <location filename="../../pref.cpp" line="376"/>
         <location filename="../../pref.cpp" line="562"/>
         <source>Warning: Ambiguous shortcut detected!</source>
-        <translation>Attention&#xa0;: raccourci ambigu détecté&#xa0;!</translation>
+        <translation>Attention : raccourci ambigu détecté !</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="545"/>
