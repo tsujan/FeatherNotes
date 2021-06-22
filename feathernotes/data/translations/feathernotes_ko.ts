@@ -186,7 +186,7 @@
     <message>
         <location filename="../../fn.ui" line="484"/>
         <source>F9</source>
-        <translation type="unfinished">F9</translation>
+        <translation> F9</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="497"/>
@@ -233,12 +233,12 @@
     <message>
         <location filename="../../fn.ui" line="547"/>
         <source>Open a file</source>
-        <translation type="unfinished">파일 열기</translation>
+        <translation>파일 열기</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="550"/>
         <source>Ctrl+O</source>
-        <translation type="unfinished">Ctrl+O</translation>
+        <translation>Ctrl+O</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="558"/>
@@ -248,12 +248,12 @@
     <message>
         <location filename="../../fn.ui" line="561"/>
         <source>Undo</source>
-        <translation type="unfinished">되돌리기</translation>
+        <translation>되돌리기</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="564"/>
         <source>Ctrl+Z</source>
-        <translation type="unfinished">Ctrl+Z</translation>
+        <translation>Ctrl+Z</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="572"/>
