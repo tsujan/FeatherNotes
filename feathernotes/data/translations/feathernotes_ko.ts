@@ -40,7 +40,7 @@
     <message>
         <location filename="../../fn.ui" line="68"/>
         <source>F3</source>
-        <translation type="unfinished">F3</translation>
+        <translation>F3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="81"/>
@@ -161,7 +161,7 @@
     <message>
         <location filename="../../fn.ui" line="438"/>
         <source>Find:</source>
-        <translation type="unfinished">찾기:</translation>
+        <translation>찾기:</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="445"/>
@@ -181,7 +181,7 @@
     <message>
         <location filename="../../fn.ui" line="481"/>
         <source>Previous (F9)</source>
-        <translation type="unfinished">이전 (F9)</translation>
+        <translation>이전 (F9)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="484"/>
