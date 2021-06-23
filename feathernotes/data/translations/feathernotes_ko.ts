@@ -201,7 +201,7 @@
     <message>
         <location filename="../../fn.ui" line="513"/>
         <source>Replace all (F10)</source>
-        <translation type="unfinished">모두 바꾸기 (F10)</translation>
+        <translation>모두 바꾸기 (F10)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="516"/>
@@ -248,7 +248,7 @@
     <message>
         <location filename="../../fn.ui" line="561"/>
         <source>Undo</source>
-        <translation>되돌리기</translation>
+        <translation>실행 취소</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="564"/>
@@ -308,27 +308,27 @@
     <message>
         <location filename="../../fn.ui" line="620"/>
         <source>Bold</source>
-        <translation type="unfinished">굵게</translation>
+        <translation>굵게</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="623"/>
         <source>Ctrl+B</source>
-        <translation type="unfinished">Ctrl+B</translation>
+        <translation>Ctrl+B</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="634"/>
         <source>&amp;Italic</source>
-        <translation>이탤릭체(&amp;I)</translation>
+        <translation>기울임꼴(&amp;I)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="637"/>
         <source>Italic</source>
-        <translation type="unfinished">이탤릭체</translation>
+        <translation>기울임꼴</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="640"/>
         <source>Ctrl+I</source>
-        <translation type="unfinished">Ctrl+I</translation>
+        <translation>Ctrl+I</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="651"/>
@@ -338,12 +338,12 @@
     <message>
         <location filename="../../fn.ui" line="654"/>
         <source>Underline</source>
-        <translation type="unfinished">밑줄</translation>
+        <translation>밑줄</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="657"/>
         <source>Ctrl+U</source>
-        <translation type="unfinished">Ctrl+U</translation>
+        <translation>Ctrl+U</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="668"/>
@@ -358,7 +358,7 @@
     <message>
         <location filename="../../fn.ui" line="674"/>
         <source>Ctrl+T</source>
-        <translation type="unfinished">Ctrl+T</translation>
+        <translation>Ctrl+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="682"/>
@@ -368,12 +368,12 @@
     <message>
         <location filename="../../fn.ui" line="685"/>
         <source>Text color</source>
-        <translation type="unfinished">텍스트 색상</translation>
+        <translation>텍스트 색상</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="688"/>
         <source>Alt+Shift+T</source>
-        <translation type="unfinished">Alt+Shift+T</translation>
+        <translation>Alt+Shift+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="696"/>
@@ -383,28 +383,28 @@
     <message>
         <location filename="../../fn.ui" line="699"/>
         <source>Background color</source>
-        <translation type="unfinished">배경색</translation>
+        <translation>배경색</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="702"/>
         <source>Alt+Shift+B</source>
-        <translation type="unfinished">Alt+Shift+B</translation>
+        <translation>Alt+Shift+B</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="707"/>
         <source>Options</source>
-        <translation type="unfinished">옵션</translation>
+        <translation>옵션</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="712"/>
         <location filename="../../fn.cpp" line="636"/>
         <source>&amp;New Note</source>
-        <translation>&amp;새 노트</translation>
+        <translation>새 노트(&amp;N)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="715"/>
         <source>Ctrl+Alt+Shift+N</source>
-        <translation type="unfinished">Ctrl+Alt+Shift+N</translation>
+        <translation>Ctrl+Alt+Shift+N</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="723"/>
@@ -414,7 +414,7 @@
     <message>
         <location filename="../../fn.ui" line="726"/>
         <source>Ctrl+Shift+S</source>
-        <translation type="unfinished">Ctrl+Shift+S</translation>
+        <translation>Ctrl+Shift+S</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="734"/>
@@ -424,7 +424,7 @@
     <message>
         <location filename="../../fn.ui" line="737"/>
         <source>Ctrl+P</source>
-        <translation type="unfinished">Ctrl+P</translation>
+        <translation>Ctrl+P</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="745"/>
@@ -440,12 +440,12 @@
         <location filename="../../fn.ui" line="758"/>
         <location filename="../../fn.cpp" line="639"/>
         <source>&amp;Quit</source>
-        <translation>나가기(&amp;Q)</translation>
+        <translation>종료(&amp;Q)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="761"/>
         <source>Ctrl+Q</source>
-        <translation type="unfinished">Ctrl+Q</translation>
+        <translation>Ctrl+Q</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="769"/>
@@ -455,7 +455,7 @@
     <message>
         <location filename="../../fn.ui" line="772"/>
         <source>Ctrl+X</source>
-        <translation type="unfinished">Ctrl+X</translation>
+        <translation>Ctrl+X</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="780"/>
@@ -465,7 +465,7 @@
     <message>
         <location filename="../../fn.ui" line="783"/>
         <source>Ctrl+C</source>
-        <translation type="unfinished">Ctrl+C</translation>
+        <translation>Ctrl+C</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="791"/>
@@ -475,7 +475,7 @@
     <message>
         <location filename="../../fn.ui" line="794"/>
         <source>Ctrl+V</source>
-        <translation type="unfinished">Ctrl+V</translation>
+        <translation>Ctrl+V</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="802"/>
@@ -490,7 +490,7 @@
     <message>
         <location filename="../../fn.ui" line="813"/>
         <source>Ctrl+A</source>
-        <translation type="unfinished">Ctrl+A</translation>
+        <translation>Ctrl+A</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="821"/>
@@ -501,7 +501,7 @@
         <location filename="../../fn.ui" line="824"/>
         <location filename="../../fn.cpp" line="3962"/>
         <source>Embed Image</source>
-        <translation type="unfinished">이미지 삽입</translation>
+        <translation>이미지 끼워넣기</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="827"/>
@@ -566,7 +566,7 @@
     <message>
         <location filename="../../fn.ui" line="893"/>
         <source>Alt+Up</source>
-        <translation type="unfinished">Alt+Up</translation>
+        <translation>Alt+Up</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="901"/>
