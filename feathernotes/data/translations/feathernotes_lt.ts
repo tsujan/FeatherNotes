@@ -125,7 +125,7 @@
     <message>
         <location filename="../../fn.ui" line="223"/>
         <source>Recenl&amp;y Opened</source>
-        <translation type="unfinished"></translation>
+        <translation>Paskiaus&amp;iai atverti</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="245"/>
