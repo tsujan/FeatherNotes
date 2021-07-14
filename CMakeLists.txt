@@ -10,6 +10,8 @@ if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
     set(CMAKE_INSTALL_PREFIX "/Applications")
   elseif(UNIX)
     set(CMAKE_INSTALL_PREFIX "/usr")
+  elseif(OS2)
+    set(CMAKE_INSTALL_PREFIX "/@unixroot/usr/")
   endif()
 endif()
 
