@@ -1013,8 +1013,8 @@
         <location filename="../../fn.cpp" line="802"/>
         <source>&lt;center&gt;&lt;i&gt;Do you really want to leave this document&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;and create an empty one?&lt;/i&gt;&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;i&gt;Kas sa kindlasti soovid lõpetada selle dokumendi kasutamist&lt;/i&gt;&lt;/center&gt;
-&lt;center&gt;&lt;i&gt;ja luua uue ja tühja faili?&lt;/i&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;i&gt;Kas sa kindlasti soovid lõpetada töö selle dokumendiga&lt;/i&gt;&lt;/center&gt;
+&lt;center&gt;&lt;i&gt;ning luua uue ja tühja faili?&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="805"/>
