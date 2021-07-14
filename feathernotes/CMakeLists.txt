@@ -3,6 +3,12 @@ set(HUNSPELL_MINIMUM_VERSION "1.6")
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 
+# OS/2 needs an additional lib and tune the processor
+if(OS2)
+  #add_definitions(-mtune=${CMAKE_SYSTEM_PROCESSOR} -march=${CMAKE_SYSTEM_PROCESSOR})
+  set(CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} -lcx")
+endif()
+
 find_package(Qt5Core "${QT_MINIMUM_VERSION}" REQUIRED)
 find_package(Qt5Gui "${QT_MINIMUM_VERSION}" REQUIRED)
 find_package(Qt5Widgets "${QT_MINIMUM_VERSION}" REQUIRED)
@@ -53,7 +59,7 @@ endif()
 
 if(HAIKU)
   add_definitions(-DDATADIR="${CMAKE_INSTALL_PREFIX}/data")
-elseif(UNIX)
+elseif(UNIX OR OS2)
   add_definitions(-DDATADIR="${CMAKE_INSTALL_PREFIX}/share")
 endif()
 
@@ -83,8 +89,14 @@ set(feathernotes_RESOURCES data/fn.qrc)
 set(DESKTOP_FILE data/feathernotes.desktop)
 set(METAINFO_FILE data/feathernotes.metainfo.xml)
 set(XML_FILE data/feathernotes.xml)
-set(ICON_FILE data/feathernotes.svg)
-set(MIME_ICON_FILE data/text-feathernotes-fnx.svg)
+if(NOT OS2)
+  set(ICON_FILE data/feathernotes.svg)
+	set(MIME_ICON_FILE data/text-feathernotes-fnx.svg)
+else()
+  enable_language(RC)
+  set_source_files_properties(data/feathernotes_os2.rc PROPERTIES LANGUAGE RC)
+  set(feathernotes_SRCS ${feathernotes_SRCS} data/feathernotes_os2.rc)
+endif()
 
 if(CMAKE_VERSION VERSION_LESS "3.10.0") # CMP0071 in 3.10: Let AUTOMOC and AUTOUIC process GENERATED files
   qt5_wrap_cpp(EXTRA_HEADERS messagebox.h filedialog.h help.h settings.h treeview.h)
@@ -138,4 +150,12 @@ elseif(UNIX)
   install(FILES ${XML_FILE} DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mime/packages")
   install(FILES ${ICON_FILE} DESTINATION "${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/scalable/apps")
   install(FILES ${MIME_ICON_FILE} DESTINATION "${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/scalable/mimetypes")
+elseif(OS2)
+  SET_TARGET_PROPERTIES(feathernotes PROPERTIES
+  	OS2_DEF_EXEType "WINDOWAPI"
+  )
+  install(TARGETS feathernotes RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
+  install(FILES ${HELP_FILE} DESTINATION "${CMAKE_INSTALL_PREFIX}/share/feathernotes")
+  # also install translated help files
+  install(FILES ${HELP_TR_FILES} DESTINATION "${CMAKE_INSTALL_PREFIX}/share/feathernotes")
 endif()

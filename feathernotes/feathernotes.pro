@@ -65,7 +65,7 @@ RESOURCES += data/fn.qrc
 contains(WITHOUT_X11, YES) {
   message("Compiling without X11...")
 }
-else:unix:!macx:!haiku {
+else:unix:!macx:!haiku:!os2 {
   QT += x11extras
   SOURCES += x11.cpp
   HEADERS += x11.h
@@ -74,7 +74,12 @@ else:unix:!macx:!haiku {
 }
 
 contains(WITH_HUNSPELL, YES) {
-  LIBS += -lhunspell
+	unix {
+    LIBS += -lhunspell
+  }
+  os2 {
+  	LIBS += -lhunspell-1.7_dll
+  }
   SOURCES += spellDialog.cpp spellChecker.cpp
   HEADERS += spellDialog.h spellChecker.h
   FORMS += spellDialog.ui
@@ -92,10 +97,15 @@ unix {
     QMAKE_EXTRA_COMPILERS += updateqm
   }
 }
-else:win32 {
+else:win32|os2 {
   #TRANSLATIONS
   exists($$[QT_INSTALL_BINS]/lrelease.exe) {
-    TRANSLATIONS = $$system("dir /b /S feathernotes_*.ts")
+  	win32 {
+      TRANSLATIONS = $$system("dir /b /S feathernotes_*.ts")
+    }
+    os2 {
+      TRANSLATIONS = $$system("find data/translations/ -name 'feathernotes_*.ts'")
+    }
     updateqm.input = TRANSLATIONS
     updateqm.output = data\\translations\\translations\\${QMAKE_FILE_BASE}.qm
     updateqm.commands = $$[QT_INSTALL_BINS]/lrelease ${QMAKE_FILE_IN} -qm data\\translations\\translations\\${QMAKE_FILE_BASE}.qm
@@ -104,7 +114,7 @@ else:win32 {
   }
 }
 
-unix:!macx:!haiku {
+unix:!macx:!haiku:!os2 {
   #VARIABLES
   isEmpty(PREFIX) {
     PREFIX = /usr
@@ -172,4 +182,27 @@ else:haiku {
   trans.files += data/translations/translations
 
   INSTALLS += target trans
+}
+else:os2 {
+  #VARIABLES
+  RC_FILE = data/featherpad_os2.rc
+  isEmpty(PREFIX) {
+    PREFIX = /@unixroot/usr
+  }
+  BINDIR = $$PREFIX/bin
+  DATADIR =$$PREFIX/share
+
+  DEFINES += DATADIR=\\\"$$DATADIR\\\" PKGDATADIR=\\\"$$PKGDATADIR\\\"
+
+  #MAKE INSTALL
+  target.path =$$BINDIR
+
+  help.path = $$DATADIR/featherpad
+  help.files += ./data/help
+  help.files += ./data/help_*
+
+  trans.path = $$DATADIR/featherpad
+  trans.files += data/translations/translations
+
+  INSTALLS += target help trans
 }
