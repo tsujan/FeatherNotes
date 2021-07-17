@@ -3,9 +3,8 @@ set(HUNSPELL_MINIMUM_VERSION "1.6")
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 
-# OS/2 needs an additional lib and tune the processor
+# OS/2 needs an additional lib
 if(OS2)
-  #add_definitions(-mtune=${CMAKE_SYSTEM_PROCESSOR} -march=${CMAKE_SYSTEM_PROCESSOR})
   set(CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} -lcx")
 endif()
 
