@@ -1833,7 +1833,7 @@ nomon se kun la finaĵo &quot;.aff&quot;.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="554"/>
         <source>Open recent files separately</source>
-        <translation>Malfermu  la lastatempajn dosierojn aparte</translation>
+        <translation>Malfermu la lastatempajn dosierojn aparte</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="578"/>
