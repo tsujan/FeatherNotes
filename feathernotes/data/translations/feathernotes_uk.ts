@@ -6,7 +6,7 @@
     <message>
         <location filename="../../about.ui" line="147"/>
         <source>License</source>
-        <translation type="unfinished"></translation>
+        <translation>Ліцензія</translation>
     </message>
 </context>
 <context>
@@ -14,12 +14,12 @@
     <message>
         <location filename="../../colorLabel.cpp" line="31"/>
         <source>Click to change color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Натисніть для зміни кольору.</translation>
     </message>
     <message>
         <location filename="../../colorLabel.cpp" line="53"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Виберіть колір</translation>
     </message>
 </context>
 <context>
@@ -30,7 +30,7 @@
         <location filename="../../fn.cpp" line="3712"/>
         <location filename="../../fn.cpp" line="5506"/>
         <source>FeatherNotes</source>
-        <translation type="unfinished"></translation>
+        <translation>FeatherNotes</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="65"/>
