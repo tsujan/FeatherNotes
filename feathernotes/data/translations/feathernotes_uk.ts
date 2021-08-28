@@ -712,53 +712,53 @@
     <message>
         <location filename="../../fn.ui" line="1070"/>
         <source>Align right</source>
-        <translation type="unfinished"></translation>
+        <translation>Вирівнювання праворуч</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1073"/>
         <source>Alt+Shift+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+Вправо</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1084"/>
         <location filename="../../fn.cpp" line="1998"/>
         <source>&amp;Left</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ліворуч</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1087"/>
         <source>Align left</source>
-        <translation type="unfinished"></translation>
+        <translation>Вирівнювання ліворуч</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1090"/>
         <source>Alt+Shift+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+Вліво</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1101"/>
         <source>&amp;Justify</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;За шириною</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1104"/>
         <source>Justify</source>
-        <translation type="unfinished"></translation>
+        <translation>За шириною</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1107"/>
         <source>Alt+Shift+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+Вгору</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1115"/>
         <source>&amp;Prepend Sibling</source>
-        <translation type="unfinished"></translation>
+        <translation>Додати однорівневий &amp;вишче</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1118"/>
         <source>Ctrl+M</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+M</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1126"/>
@@ -1744,22 +1744,22 @@ Takes effect after closing this dialog.</source>
     <message>
         <location filename="../../prefDialog.ui" line="369"/>
         <source>Date and time format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Формат дати й часу:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="393"/>
         <source>&amp;Auto-save every</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Автозбереження кожні</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="400"/>
         <source> minute(s)</source>
-        <translation type="unfinished"></translation>
+        <translation> хвилин(и)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="434"/>
         <source>Spell Checking</source>
-        <translation type="unfinished"></translation>
+        <translation>Перевірка правопису</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="442"/>
@@ -1767,79 +1767,81 @@ Takes effect after closing this dialog.</source>
         <source>A Hunspell dictionary has a name that ends with &quot;.dic&quot;
 and should be alongside an affix file with the same
 name but ending with &quot;.aff&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Словник Hunspell має назву, яка закінчується на
+«.dic» і має бути поряд з файлом-афіксом з тією ж
+назвою, але яка закінчується на «.aff».</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="447"/>
         <source>Hunspell dictionary path:</source>
-        <translation type="unfinished"></translation>
+        <translation>Шлях до словника Hunspell:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="466"/>
         <location filename="../../pref.cpp" line="689"/>
         <source>Add dictionary...</source>
-        <translation type="unfinished"></translation>
+        <translation>Додати словник...</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="501"/>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Файли</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="510"/>
         <source>Start with the last opened file</source>
-        <translation type="unfinished"></translation>
+        <translation>Починати з останнього відкритого файлу</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="522"/>
         <source>Number of recent files:</source>
-        <translation type="unfinished"></translation>
+        <translation>Кількість недавніх файлів:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="554"/>
         <source>Open recent files separately</source>
-        <translation type="unfinished"></translation>
+        <translation>Відкрити недавні файли у різних вкладках</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="578"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Комбінації клавіш</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="597"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Дія</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="602"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>Комбінація клавіш</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="610"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Типово</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="376"/>
         <location filename="../../pref.cpp" line="562"/>
         <source>Warning: Ambiguous shortcut detected!</source>
-        <translation type="unfinished"></translation>
+        <translation>Попередження: Виявлено повторювану комбінацію клавіш!</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="545"/>
         <source>The typed shortcut was reserved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Уведену комбінацію клавіш зарезервовано.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="660"/>
         <source>Application restart is needed for changes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Щоб зміни набули чинності, потрібен перезапуск застосунку.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="691"/>
         <source>Hunspell Dictionary Files (*.dic)</source>
-        <translation type="unfinished"></translation>
+        <translation>Файли словника Hunspell (*.dic)</translation>
     </message>
 </context>
 <context>
@@ -1847,37 +1849,37 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../spellDialog.ui" line="25"/>
         <source>Unknown word:</source>
-        <translation type="unfinished"></translation>
+        <translation>Невідоме слово:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="51"/>
         <source>Add To Dictionary</source>
-        <translation type="unfinished"></translation>
+        <translation>Додати до словника</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="62"/>
         <source>Replace with:</source>
-        <translation type="unfinished"></translation>
+        <translation>Замінити на:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="87"/>
         <source>Ignore Once</source>
-        <translation type="unfinished"></translation>
+        <translation>Знехтувати одноразово</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="100"/>
         <source>Ignore All</source>
-        <translation type="unfinished"></translation>
+        <translation>Знехтувати все</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="129"/>
         <source>Correct Once</source>
-        <translation type="unfinished"></translation>
+        <translation>Виправити одноразово</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="142"/>
         <source>Correct All</source>
-        <translation type="unfinished"></translation>
+        <translation>Виправити все</translation>
     </message>
 </context>
 <context>
@@ -1885,7 +1887,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../helpDialog.ui" line="14"/>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Допомога</translation>
     </message>
 </context>
 <context>
@@ -1894,7 +1896,7 @@ name but ending with &quot;.aff&quot;.</source>
         <location filename="../../domitem.cpp" line="100"/>
         <location filename="../../domitem.cpp" line="137"/>
         <source>New Node</source>
-        <translation type="unfinished"></translation>
+        <translation>Новий вузол</translation>
     </message>
 </context>
 </TS>
