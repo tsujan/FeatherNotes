@@ -717,7 +717,7 @@
     <message>
         <location filename="../../fn.ui" line="1073"/>
         <source>Alt+Shift+Right</source>
-        <translation>Alt+Shift+Вправо</translation>
+        <translation>Alt+Shift+Right</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1084"/>
@@ -733,7 +733,7 @@
     <message>
         <location filename="../../fn.ui" line="1090"/>
         <source>Alt+Shift+Left</source>
-        <translation>Alt+Shift+Вліво</translation>
+        <translation>Alt+Shift+Left</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1101"/>
@@ -748,7 +748,7 @@
     <message>
         <location filename="../../fn.ui" line="1107"/>
         <source>Alt+Shift+Up</source>
-        <translation>Alt+Shift+Вгору</translation>
+        <translation>Alt+Shift+Up</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1115"/>
@@ -763,7 +763,7 @@
     <message>
         <location filename="../../fn.ui" line="1126"/>
         <source>Move &amp;Left</source>
-        <translation>Посунути ліворуч</translation>
+        <translation>Посунути &amp;ліворуч</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1129"/>
@@ -773,7 +773,7 @@
     <message>
         <location filename="../../fn.ui" line="1137"/>
         <source>Move &amp;Right</source>
-        <translation>Посунути праворуч</translation>
+        <translation>Посунути &amp;праворуч</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1140"/>
@@ -878,7 +878,7 @@
     <message>
         <location filename="../../fn.ui" line="1244"/>
         <source>I&amp;nsert Table</source>
-        <translation>Вставити таблицю</translation>
+        <translation>В&amp;ставити таблицю</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1247"/>
@@ -888,7 +888,7 @@
     <message>
         <location filename="../../fn.ui" line="1252"/>
         <source>Append Row</source>
-        <translation>Додати рядок</translation>
+        <translation>Додати рядок знизу</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1257"/>
@@ -898,7 +898,7 @@
     <message>
         <location filename="../../fn.ui" line="1262"/>
         <source>Append Column</source>
-        <translation>Додати стовпчик</translation>
+        <translation>Додати стовпчик праворуч</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1267"/>
@@ -908,17 +908,17 @@
     <message>
         <location filename="../../fn.ui" line="1272"/>
         <source>Merge Cells</source>
-        <translation>Об’єднати чарунки</translation>
+        <translation>Об’єднати комірки</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1277"/>
         <source>Prepend Row</source>
-        <translation>Попередній рядок</translation>
+        <translation>Додати рядок угорі</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1282"/>
         <source>Prepend Column</source>
-        <translation>Попередній стовпчик</translation>
+        <translation>Додати стовпчик ліворуч</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1290"/>
@@ -928,7 +928,7 @@
     <message>
         <location filename="../../fn.ui" line="1295"/>
         <source>Save Ima&amp;ge(s)</source>
-        <translation>Зберегти зображення</translation>
+        <translation>Зберегти зобр&amp;аження</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1306"/>
@@ -959,7 +959,7 @@
     <message>
         <location filename="../../fn.ui" line="1339"/>
         <source>Node &amp;Icon</source>
-        <translation>&amp;Значок вузла</translation>
+        <translation>&amp;Піктограма вузла</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1342"/>
@@ -980,13 +980,13 @@
     <message>
         <location filename="../../fn.ui" line="1358"/>
         <source>Document &amp;Colors</source>
-        <translation>&amp;Кольори документу</translation>
+        <translation>&amp;Кольори документа</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1366"/>
         <location filename="../../fn.ui" line="1369"/>
         <source>Paste Date and Time</source>
-        <translation>Вставити дату та час</translation>
+        <translation>Вставити дату й час</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1374"/>
@@ -996,7 +996,7 @@
     <message>
         <location filename="../../fn.cpp" line="2698"/>
         <source>Node Icon</source>
-        <translation>Значок вузла</translation>
+        <translation>Піктограма вузла</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="631"/>
@@ -1007,14 +1007,14 @@
     <message>
         <location filename="../../fn.cpp" line="801"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;New note?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Нова нотатка?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Нова примітка?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="802"/>
         <source>&lt;center&gt;&lt;i&gt;Do you really want to leave this document&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;and create an empty one?&lt;/i&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;i&gt;Ви дійсно бажаєте залишити цей документ&lt;/i&gt;&lt;/center&gt;
-&lt;center&gt;&lt;i&gt;та створити пустий новий?&lt;/i&gt;&lt;/center&gt;</translation>
+&lt;center&gt;&lt;i&gt;і створити новий порожній?&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="805"/>
@@ -1043,12 +1043,12 @@
     <message>
         <location filename="../../fn.cpp" line="897"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been removed.&lt;/i&gt;&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;i&gt;Документ видалено.&lt;/i&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;i&gt;Документ вилучено.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="902"/>
         <source>Discard changes</source>
-        <translation>Скасувати зміни</translation>
+        <translation>Відкинути зміни</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="903"/>
@@ -1101,7 +1101,7 @@
         <source>&lt;center&gt;&lt;b&gt;&lt;i&gt;Warning!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
 &lt;center&gt;This action cannot be undone.&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;i&gt;Попередження!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
-&lt;center&gt;Ця дія не зможе бути скасована.&lt;/center&gt;</translation>
+&lt;center&gt;Цю дію неможливо скасувати.&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2625"/>
@@ -1126,13 +1126,13 @@
         <location filename="../../fn.cpp" line="2828"/>
         <location filename="../../fn.cpp" line="2861"/>
         <source>&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Основні вузли:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Усі вузли:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2834"/>
         <location filename="../../fn.cpp" line="2867"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Примітка:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Основні вузли:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Усі вузли:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3277"/>
@@ -1192,7 +1192,7 @@
         <location filename="../../fn.cpp" line="3983"/>
         <location filename="../../fn.cpp" line="4144"/>
         <source>Scaling percentage</source>
-        <translation>Масштабування</translation>
+        <translation>Відсоток масштабування</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2728"/>
@@ -1204,7 +1204,7 @@
         <location filename="../../fn.cpp" line="633"/>
         <location filename="../../fn.cpp" line="4688"/>
         <source>&amp;Raise</source>
-        <translation>&amp;Розгортання</translation>
+        <translation>&amp;Розгорнути</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="849"/>
@@ -1216,7 +1216,7 @@
         <location filename="../../fn.cpp" line="1551"/>
         <location filename="../../fn.cpp" line="1572"/>
         <source>FeatherNotes documents (*.fnx);;All Files (*)</source>
-        <translation>Документи FeatherNotes (*.fnx);;Всі файли (*)</translation>
+        <translation>Документи FeatherNotes (*.fnx);;Усі файли (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1448"/>
@@ -1242,7 +1242,7 @@
     <message>
         <location filename="../../fn.cpp" line="2010"/>
         <source>&amp;Center</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Центрувати</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2378"/>
@@ -1268,7 +1268,7 @@
         <location filename="../../fn.cpp" line="2730"/>
         <location filename="../../fn.cpp" line="4094"/>
         <source>Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)</source>
-        <translation>Файли зображень (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;Всі файли (*)</translation>
+        <translation>Файли зображень (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;Усі файли (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2903"/>
@@ -1283,12 +1283,12 @@
     <message>
         <location filename="../../fn.cpp" line="2977"/>
         <source>Set Document Colors</source>
-        <translation>Встановити колір документу</translation>
+        <translation>Встановити колір документа</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2987"/>
         <source>These colors will be applied to new nodes.&lt;br&gt;They may or may not affect existing nodes&lt;br&gt;but document reopening is recommended.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ці кольори будуть застосовані до нових вузлів.&lt;br&gt;Вони можуть впливати або не впливати на наявні вузли,&lt;br&gt;але рекомендовано повторно відкрити документи.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2990"/>
@@ -1352,7 +1352,7 @@
     <message>
         <location filename="../../fn.cpp" line="4355"/>
         <source>Image Files (*.png *.jpg *.jpeg *.bmp);;All Files (*)</source>
-        <translation>Файли зображень (*.png *.jpg *.jpeg *.bmp);;Всі файли (*)</translation>
+        <translation>Файли зображень (*.png *.jpg *.jpeg *.bmp);;Усі файли (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4405"/>
