@@ -1727,7 +1727,7 @@ position and then restart FeatherNotes!</source>
     <message>
         <location filename="../../prefDialog.ui" line="314"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Текст</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="323"/>
@@ -1751,7 +1751,7 @@ Needs restarting of FeatherNotes to take effect.</source>
     <message>
         <location filename="../../prefDialog.ui" line="342"/>
         <source>Auto-&amp;bracket</source>
-        <translation type="unfinished"></translation>
+        <translation>Авто&amp;дужки</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="349"/>
