@@ -1392,12 +1392,12 @@
     <message>
         <location filename="../../fn.cpp" line="5340"/>
         <source>With all &amp;sub-nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>З усіма &amp;підвузлами</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5341"/>
         <source>&amp;All nodes</source>
-        <translation>Всі вуз&amp;ли</translation>
+        <translation>Усі вуз&amp;ли</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5353"/>
@@ -1419,8 +1419,8 @@
         <source>The file already exists.
 Do you want to replace it?
 </source>
-        <translation>Файл вже існує.
-Бажаєте замінити?
+        <translation>Файл уже існує.
+Бажаєте замінити його?
 </translation>
     </message>
     <message>
@@ -1436,12 +1436,12 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="5621"/>
         <source>Set Password</source>
-        <translation>Встановити пароль</translation>
+        <translation>Установити пароль</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5629"/>
         <source>Type password</source>
-        <translation>Ввести пароль</translation>
+        <translation>Увести пароль</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5634"/>
@@ -1457,17 +1457,17 @@ Do you want to replace it?
         <location filename="../../fn.cpp" line="5746"/>
         <location filename="../../fn.cpp" line="5754"/>
         <source>Enter Password</source>
-        <translation>Введіть пароль</translation>
+        <translation>Уведіть пароль</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5820"/>
         <source>&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</source>
-        <translation>&lt;center&gt;Пароль не дійсний. Повторіть спробу!&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;Пароль не правильний. Повторіть спробу!&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5863"/>
         <source>A lightweight notes manager</source>
-        <translation>Легкий менеджер нотаток</translation>
+        <translation>Легкий менеджер приміток</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5864"/>
@@ -1503,7 +1503,7 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="6083"/>
         <source>The Hunspell dictionary does not exist.</source>
-        <translation>Словник Hunspell не існує.</translation>
+        <translation>Словника Hunspell не існує.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6091"/>
@@ -1515,7 +1515,7 @@ Do you want to replace it?
         <location filename="../../fn.cpp" line="6124"/>
         <location filename="../../fn.cpp" line="6136"/>
         <source>No misspelling from text cursor.</source>
-        <translation type="unfinished"></translation>
+        <translation>Немає помилок у тексті після курсора.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6147"/>
@@ -1525,7 +1525,7 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="5866"/>
         <source>aka.</source>
-        <translation type="unfinished"></translation>
+        <translation>знаний як</translation>
     </message>
 </context>
 <context>
@@ -1533,13 +1533,13 @@ Do you want to replace it?
     <message>
         <location filename="../../lineedit.cpp" line="35"/>
         <source>Clear text (Ctrl+K)</source>
-        <translation type="unfinished"></translation>
+        <translation>Очистити текст (Ctrl+K)</translation>
     </message>
     <message>
         <location filename="../../lineedit.cpp" line="81"/>
         <source>Ctrl+K</source>
         <comment>Clear text</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+K</translation>
     </message>
 </context>
 <context>
@@ -1552,7 +1552,7 @@ Do you want to replace it?
     <message>
         <location filename="../../prefDialog.ui" line="27"/>
         <source>Window</source>
-        <translation type="unfinished"></translation>
+        <translation>Вікно</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="36"/>
@@ -1560,17 +1560,20 @@ Do you want to replace it?
 this dialog and also on exit.
 
 Uncheck to set a fixed size!</source>
-        <translation type="unfinished"></translation>
+        <translation>Зберігає розмір вікна після закриття цього
+діалогового вікна, а також під час виходу.
+
+Приберіть позначку, щоб установити фіксований розмір!</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="42"/>
         <source>Remember window &amp;size</source>
-        <translation type="unfinished"></translation>
+        <translation>Запам&apos;ятовувати р&amp;озмір вікна</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="51"/>
         <source>Start with this size: </source>
-        <translation type="unfinished"></translation>
+        <translation>Запускати з розміром: </translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="58"/>
@@ -1578,7 +1581,7 @@ Uncheck to set a fixed size!</source>
         <location filename="../../prefDialog.ui" line="255"/>
         <location filename="../../prefDialog.ui" line="269"/>
         <source> px</source>
-        <translation type="unfinished"></translation>
+        <translation> пікселів</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="97"/>
@@ -1586,12 +1589,15 @@ Uncheck to set a fixed size!</source>
 this dialog and also on exit.
 
 Uncheck for a width ratio of 170/530.</source>
-        <translation type="unfinished"></translation>
+        <translation>Зберігає ширину дерева після закриття цього
+діалогового вікна, а також під час виходу.
+
+Приберіть позначку для співвідношення ширини 170/530.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="103"/>
         <source>Remember &amp;tree width</source>
-        <translation type="unfinished"></translation>
+        <translation>Запам&apos;ятовувати ширину д&amp;ерева</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="110"/>
@@ -1601,12 +1607,17 @@ this dialog and also on exit.
 (This may not work correctly
 under GTK+ DE&apos;s like Unity
 and Cinnamon.)</source>
-        <translation type="unfinished"></translation>
+        <translation>Зберігає положення після закриття цього
+діалогового вікна, а також під час виходу.
+
+(Це може працювати неправильно
+зі стільницями GTK+, як-от Unity
+і Cinnamon.)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="118"/>
         <source>Save &amp;position</source>
-        <translation type="unfinished"></translation>
+        <translation>Зберегти &amp;положення</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="125"/>
@@ -1615,71 +1626,79 @@ If checked, the titlebar close button iconifies
 the window to the systray instead of quitting.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Вирішує, чи показувати піктограму в системному лотку.
+Якщо встановлено позначку, кнопка закриття на панелі
+заголовка згортає вікно до системного лотка замість виходу.
+
+Потрібно перезапустити FeatherNotes, щоб зміни стали чинними.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="132"/>
         <source>Add to s&amp;ystray</source>
-        <translation type="unfinished"></translation>
+        <translation>Додати до с&amp;истемного лотка</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="157"/>
         <source>The command line option --tray
 can be used instead of this.</source>
-        <translation type="unfinished"></translation>
+        <translation>Замість цього можна користуватись
+параметром командного рядка --tray.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="161"/>
         <source>Start i&amp;conified to tray</source>
-        <translation type="unfinished"></translation>
+        <translation>Запускати з&amp;горнутим у лоток</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="170"/>
         <source>Merge the tree view with its surroundings?</source>
-        <translation type="unfinished"></translation>
+        <translation>Об&apos;єднати вид дерева з його оточенням?</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="173"/>
         <source>Transparent t&amp;ree view</source>
-        <translation type="unfinished"></translation>
+        <translation>Прозоре подання д&amp;ерева</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="180"/>
         <source>By default, the active widget style determines
 the size of toolbar icons.</source>
-        <translation type="unfinished"></translation>
+        <translation>Усталено стиль активного віджета визначає
+розмір піктограм панелі інструментів.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="184"/>
         <source>Small toolbar icons</source>
-        <translation type="unfinished"></translation>
+        <translation>Малі піктограми панелі інструментів</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="191"/>
         <source>Do not show t&amp;oolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Не показувати панель &amp;інструментів</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="198"/>
         <source>If the menubar is hidden,
 a menu button appears on the toolbar.</source>
-        <translation type="unfinished"></translation>
+        <translation>Якщо панель меню прихована, на
+панелі інструментів з&apos;являється кнопка меню.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="202"/>
         <source>Do not show &amp;menubar</source>
-        <translation type="unfinished"></translation>
+        <translation>Не показувати панель &amp;меню</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="209"/>
         <source>Check this under Enlightenment (or, probably, another DE)
 to use the systray icon more easily!</source>
-        <translation type="unfinished"></translation>
+        <translation>Встановіть позначку, якщо користуєтесь Enlightenment (або, ймовірно,
+іншою DE), щоб простіше користуватись піктограмою у системному лотку!</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="213"/>
         <source>Running &amp;under Enlightenment?</source>
-        <translation type="unfinished"></translation>
+        <translation>Користу&amp;єтесь Enlightenment?</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="238"/>
@@ -1691,12 +1710,19 @@ if it is on the left or right, the X-coordinate should be set.
 
 After choosing the coordinate shifts, put the window in a proper
 position and then restart FeatherNotes!</source>
-        <translation type="unfinished"></translation>
+        <translation>Деякі DE (наприклад, Enlightenment) можуть не повідомляти про положення вікна
+правильно. Якщо це так, ви можете спробувати розв&apos;язувати проблему тут.
+
+Якщо панель знаходиться знизу або зверху, слід установити координату Y;
+якщо вона знаходиться ліворуч або праворуч, слід установити координату X.
+
+Вибравши зсув координат, розташуйте вікно належним чином,
+а потім перезапустіть FeatherNotes!</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="248"/>
         <source>Shifts (X × Y): </source>
-        <translation type="unfinished"></translation>
+        <translation>Зсув (X × Y): </translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="314"/>
@@ -1706,19 +1732,21 @@ position and then restart FeatherNotes!</source>
     <message>
         <location filename="../../prefDialog.ui" line="323"/>
         <source>&amp;Wrap lines by default</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Переносити рядки усталено</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="330"/>
         <source>Auto-&amp;indent by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Автоа&amp;бзацування усталено</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="337"/>
         <source>This covers parentheses, braces, brackets and quotes.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Це охоплює квадратні, круглі й фігурні дужки та лапки.
+
+Потрібно перезапустити FeatherNotes, щоб зміни набрали чинності.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="342"/>
@@ -1730,12 +1758,14 @@ Needs restarting of FeatherNotes to take effect.</source>
         <source>A triple period is replaced with an ellipsis,
 a double hyphen with a long dash, etc. while
 the user is typing and under proper circumstances.</source>
-        <translation type="unfinished"></translation>
+        <translation>Трикрапка замінюється на еліпсис, а
+подвійний дефіс на довге тире під час
+введення тексту, за належних обставин.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="354"/>
         <source>&amp;Replace some characters while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Замінювати деякі символи під час уведення</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="363"/>
@@ -1744,7 +1774,10 @@ the user is typing and under proper circumstances.</source>
 Leave empty for the system default.
 
 Takes effect after closing this dialog.</source>
-        <translation type="unfinished"></translation>
+        <translation>Застосовується для вставлення дати й часу. Залиште
+порожнім для застосування усталеного системою значення.
+
+Набирає чинності після закриття цього діалогового вікна.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="369"/>
