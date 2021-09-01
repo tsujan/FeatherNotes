@@ -1663,7 +1663,7 @@ can be used instead of this.</source>
         <location filename="../../prefDialog.ui" line="180"/>
         <source>By default, the active widget style determines
 the size of toolbar icons.</source>
-        <translation>Усталено стиль активного віджета визначає
+        <translation>Типово стиль активного віджета визначає
 розмір піктограм панелі інструментів.</translation>
     </message>
     <message>
@@ -1732,12 +1732,12 @@ position and then restart FeatherNotes!</source>
     <message>
         <location filename="../../prefDialog.ui" line="323"/>
         <source>&amp;Wrap lines by default</source>
-        <translation>&amp;Переносити рядки усталено</translation>
+        <translation>Типово діє &amp;перенесення рядків</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="330"/>
         <source>Auto-&amp;indent by default</source>
-        <translation>Автоа&amp;бзацування усталено</translation>
+        <translation>Типово діє Автоа&amp;бзацування</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="337"/>
@@ -1775,7 +1775,7 @@ Leave empty for the system default.
 
 Takes effect after closing this dialog.</source>
         <translation>Застосовується для вставлення дати й часу. Залиште
-порожнім для застосування усталеного системою значення.
+порожнім для застосування типового системного значення.
 
 Набирає чинності після закриття цього діалогового вікна.</translation>
     </message>
