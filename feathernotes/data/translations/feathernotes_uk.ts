@@ -156,7 +156,7 @@
         <location filename="../../fn.ui" line="341"/>
         <location filename="../../fn.ui" line="989"/>
         <source>&amp;Help</source>
-        <translation>&amp;Допомога</translation>
+        <translation>&amp;Довідка</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="438"/>
@@ -1925,7 +1925,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../helpDialog.ui" line="14"/>
         <source>Help</source>
-        <translation>Допомога</translation>
+        <translation>Довідка</translation>
     </message>
 </context>
 <context>
