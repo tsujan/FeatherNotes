@@ -19,6 +19,7 @@
 #define VSCROLLBAR_H
 
 #include <QScrollBar>
+#include <QWheelEvent>
 
 namespace FeatherNotes {
 
@@ -31,10 +32,7 @@ public:
     VScrollBar (QWidget *parent = nullptr);
 
 protected:
-    bool event (QEvent *event);
-
-private:
-    int defaultWheelSpeed;
+    void wheelEvent (QWheelEvent *event) override;
 };
 
 }

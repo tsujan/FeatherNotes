@@ -4,7 +4,7 @@
 <context>
     <name>FeatherNotes::AboutDialog</name>
     <message>
-        <location filename="../../about.ui" line="147"/>
+        <location filename="../../about.ui" line="155"/>
         <source>License</source>
         <translation>Licence</translation>
     </message>
@@ -1722,7 +1722,7 @@ puis redémarrer FeatherNotes !</translation>
     <message>
         <location filename="../../prefDialog.ui" line="248"/>
         <source>Shifts (X × Y): </source>
-        <translation>Changer (X × Y) : </translation>
+        <translation>Changer (X × Y)&#xa0;: </translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="314"/>
@@ -1864,7 +1864,7 @@ nom mais se terminant par &quot;.aff&quot;.</translation>
         <location filename="../../pref.cpp" line="376"/>
         <location filename="../../pref.cpp" line="562"/>
         <source>Warning: Ambiguous shortcut detected!</source>
-        <translation>Attention : raccourci ambigu détecté !</translation>
+        <translation>Attention&#xa0;: raccourci ambigu détecté&#xa0;!</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="545"/>

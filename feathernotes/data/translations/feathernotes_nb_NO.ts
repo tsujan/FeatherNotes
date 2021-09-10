@@ -4,7 +4,7 @@
 <context>
     <name>FeatherNotes::AboutDialog</name>
     <message>
-        <location filename="../../about.ui" line="147"/>
+        <location filename="../../about.ui" line="155"/>
         <source>License</source>
         <translation>Lisens</translation>
     </message>
@@ -1759,7 +1759,7 @@ Takes effect after closing this dialog.</source>
     <message>
         <location filename="../../prefDialog.ui" line="434"/>
         <source>Spell Checking</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Stavekontroll</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="442"/>
