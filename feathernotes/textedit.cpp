@@ -949,6 +949,8 @@ void TextEdit::scrollSmoothly()
     {
         int delta = qRound (static_cast<qreal>(it->delta) / static_cast<qreal>(scrollAnimFrames));
         int remainingDelta = it->delta - (scrollAnimFrames - it->leftFrames) * delta;
+        if ((delta >= 0 && remainingDelta < 0) || (delta < 0 && remainingDelta >= 0))
+            remainingDelta = 0;
         if (qAbs (delta) >= qAbs (remainingDelta))
         { // this is the last frame or, due to rounding, there can be no more frame
             if (it->vertical)
