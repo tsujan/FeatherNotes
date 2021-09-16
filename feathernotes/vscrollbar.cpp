@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2021 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -19,8 +19,7 @@
 
 namespace FeatherNotes {
 
-VScrollBar::VScrollBar (QWidget *parent)
-    : QScrollBar (parent) {}
+VScrollBar::VScrollBar (QWidget *parent) : QScrollBar (parent) {}
 /*************************/
 void VScrollBar::wheelEvent (QWheelEvent *event)
 {
@@ -43,11 +42,9 @@ void VScrollBar::wheelEvent (QWheelEvent *event)
     if (qAbs (_effectiveDelta) < 120)
         return;
 
+    int step = (_effectiveDelta < 0 ? 1 : -1) * qMax (pageStep() / ((event->modifiers() & Qt::ShiftModifier) ? 2 : 1), 1);
     _effectiveDelta = 0;
-    if (delta < 0)
-        triggerAction (QAbstractSlider::SliderPageStepAdd);
-    else
-        triggerAction (QAbstractSlider::SliderPageStepSub);
+    setSliderPosition (sliderPosition() + step);
 }
 
 }

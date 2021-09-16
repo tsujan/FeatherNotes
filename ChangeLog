@@ -3,7 +3,7 @@ V0.10.0
  * Fixed compilation against Qt 5.12.
  * When the window isn't active under Wayland, hide and show it again if the tray icon is activated.
  * Better smooth scrolling from inside the view (especially with touchpad).
- * Scroll one page per wheel turn when the cursor is on the vertical scrollbar.
+ * Scroll one page per wheel turn when the cursor is on the vertical scrollbar and half the page when Shift is also pressed.
 
 V0.9.0
 ---------
