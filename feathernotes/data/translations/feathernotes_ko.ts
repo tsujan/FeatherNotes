@@ -120,7 +120,7 @@
     <message>
         <location filename="../../fn.ui" line="219"/>
         <source>&amp;File</source>
-        <translation>파일(&amp;F)</translation>
+        <translation>&amp;파일</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="223"/>
