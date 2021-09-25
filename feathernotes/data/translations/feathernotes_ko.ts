@@ -120,12 +120,12 @@
     <message>
         <location filename="../../fn.ui" line="219"/>
         <source>&amp;File</source>
-        <translation>&amp;파일</translation>
+        <translation>파일(&amp;F)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="223"/>
         <source>Recenl&amp;y Opened</source>
-        <translation>최근에 열림(&amp;Y)</translation>
+        <translation>최근 열림(&amp;Y)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="245"/>
@@ -135,7 +135,7 @@
     <message>
         <location filename="../../fn.ui" line="264"/>
         <source>For&amp;mat</source>
-        <translation>형식&amp;</translation>
+        <translation>형식(&amp;M)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="296"/>
@@ -1626,78 +1626,78 @@ If checked, the titlebar close button iconifies
 the window to the systray instead of quitting.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation type="unfinished">시스템 트레이 아이콘을 사용할지 여부를 결정합니다.
-선택하면 제목 표시 줄 닫기 버튼이 창을 종료하는 
+        <translation>시스템 트레이 아이콘을 사용할지 여부를 결정합니다.
+선택하면 제목 표시줄 닫기 버튼이 창을 종료하는 
 대신 시스템 트레이에 아이콘으로 표시합니다. 
 
-적용하려면 페더노트(FeatherNotes)를 다시 시작해야 합니다.</translation>
+적용하려면 FeatherNotes를 다시 시작해야 합니다.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="132"/>
         <source>Add to s&amp;ystray</source>
-        <translation type="unfinished">시스템 트레이에 추가</translation>
+        <translation>시스템 트레이에 추가(&amp;Y)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="157"/>
         <source>The command line option --tray
 can be used instead of this.</source>
-        <translation type="unfinished">명령 줄 옵션 --tray
-대신 사용할 수 있습니다.</translation>
+        <translation>명령 줄 옵션 --tray
+를 대신 사용할 수 있습니다.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="161"/>
         <source>Start i&amp;conified to tray</source>
-        <translation type="unfinished">트레이에 아이콘화 된 시작</translation>
+        <translation>트레이에 아이콘화된 시작(&amp;C)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="170"/>
         <source>Merge the tree view with its surroundings?</source>
-        <translation type="unfinished">주변에 트리 뷰를 병합 하시겠습니까?</translation>
+        <translation>트리 보기를 주변 환경과 병합하시겠습니까?</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="173"/>
         <source>Transparent t&amp;ree view</source>
-        <translation type="unfinished">투명한 트리 뷰</translation>
+        <translation>투명한 트리 보기(&amp;R)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="180"/>
         <source>By default, the active widget style determines
 the size of toolbar icons.</source>
-        <translation type="unfinished">기본적으로 활성 위젯 스타일은
-툴바 아이콘의 크기.</translation>
+        <translation>기본적으로 활성 위젯 스타일은 도구 모음
+아이콘의 크기를 결정합니다.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="184"/>
         <source>Small toolbar icons</source>
-        <translation type="unfinished">작은 도구 모음 아이콘</translation>
+        <translation>작은 도구 모음 아이콘</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="191"/>
         <source>Do not show t&amp;oolbar</source>
-        <translation type="unfinished">툴바를 표시하지 않음</translation>
+        <translation>도구 모음 표시하지 않음(&amp;O)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="198"/>
         <source>If the menubar is hidden,
 a menu button appears on the toolbar.</source>
-        <translation type="unfinished">메뉴 바가 숨겨져 있으면
+        <translation>메뉴 표시줄이 숨겨져 있으면,
 도구 모음에 메뉴 버튼이 나타납니다.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="202"/>
         <source>Do not show &amp;menubar</source>
-        <translation type="unfinished">메뉴 바 표시 안함</translation>
+        <translation>메뉴 표시줄 표시 안함(&amp;M)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="209"/>
         <source>Check this under Enlightenment (or, probably, another DE)
 to use the systray icon more easily!</source>
-        <translation type="unfinished">시스템 트레이 아이콘을 더 쉽게 사용하려면 계몽(Enlightenment)(또는 아마도 다른 DE)에서 이것을 확인하십시오!</translation>
+        <translation>시스템 트레이 아이콘을 더 쉽게 사용하려면 Enlightenment(또는 아마도 다른 DE)에서 이것을 확인하십시오!</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="213"/>
         <source>Running &amp;under Enlightenment?</source>
-        <translation type="unfinished">계몽(Enlightenment) &amp; 아래 실행 중입니까?</translation>
+        <translation>Enlightenment 아래에서 실행중입니까(&amp;U)?</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="238"/>
@@ -1709,62 +1709,62 @@ if it is on the left or right, the X-coordinate should be set.
 
 After choosing the coordinate shifts, put the window in a proper
 position and then restart FeatherNotes!</source>
-        <translation type="unfinished">일부 DE (예 : Enlightenment)는 창 위치를 보고 하지 않을 수 있습니다.
-바르게. 이 경우 여기에서 문제를 해결할 수 있습니다.
+        <translation>일부 DE(예: Enlightenment)는 창 위치를 올바르게 보고하지 않을 수
+있습니다. 이 경우 여기에서 문제를 해결할 수 있습니다.
 
-패널이 맨 아래 또는 맨 위에 있으면 Y 좌표를 설정해야 합니다.
+패널이 하단 또는 상단에 있는 경우 Y 좌표를 설정해야 합니다.
 왼쪽 또는 오른쪽에 있으면 X 좌표를 설정해야 합니다.
 
-좌표 이동을 선택한 후 창을 적절한 위치에 놓으십시오.
-위치를 지정한 다음 패더노트(이하 &quot;FeatherNotes&quot;)를 다시 시작하십시오!</translation>
+좌표 이동을 선택한 후 창을 적절한 위치에 놓고
+FeatherNotes를 다시 시작하십시오!</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="248"/>
         <source>Shifts (X × Y): </source>
-        <translation type="unfinished">이동 (X × Y) : </translation>
+        <translation>교대 (X × Y) : </translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="314"/>
         <source>Text</source>
-        <translation type="unfinished">텍스트</translation>
+        <translation>텍스트</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="323"/>
         <source>&amp;Wrap lines by default</source>
-        <translation type="unfinished">기본적으로 줄 바꿈 (&amp;W)</translation>
+        <translation>기본적으로 줄 바꿈(&amp;W)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="330"/>
         <source>Auto-&amp;indent by default</source>
-        <translation type="unfinished">기본적으로 자동 들여 쓰기</translation>
+        <translation>기본적으로 자동 들여 쓰기(&amp;I)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="337"/>
         <source>This covers parentheses, braces, brackets and quotes.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation type="unfinished">여기에는 괄호, 중괄호, 괄호 및 따옴표가 포함됩니다.
+        <translation>여기에는 괄호, 중괄호, 대괄호 및 따옴표가 포함됩니다.
 
-적용하려면 패더노트(이하 &quot;FeatherNotes&quot;)를 다시 시작해야 합니다.</translation>
+FeatherNotes를 다시 시작해야 적용됩니다.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="342"/>
         <source>Auto-&amp;bracket</source>
-        <translation type="unfinished">자동 및 브라켓</translation>
+        <translation>자동 대괄호(&amp;B)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="349"/>
         <source>A triple period is replaced with an ellipsis,
 a double hyphen with a long dash, etc. while
 the user is typing and under proper circumstances.</source>
-        <translation type="unfinished">삼중 마침표는 줄임표로 대체됩니다.
-긴 대시 등이 있는 이중 하이픈
-사용자가 적절한 상황에서 입력하고 있습니다.</translation>
+        <translation>사용자가 적절한 상황에서 입력하는 동안,
+세 개의 마침표는 줄임표, 긴 대시가 있는
+이중 하이픈 등으로 대체됩니다.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="354"/>
         <source>&amp;Replace some characters while typing</source>
-        <translation type="unfinished">입력하는 동안 일부 문자 바꾸기</translation>
+        <translation>입력하는 동안 일부 문자 바꾸기(&amp;R)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="363"/>
@@ -1773,30 +1773,30 @@ the user is typing and under proper circumstances.</source>
 Leave empty for the system default.
 
 Takes effect after closing this dialog.</source>
-        <translation type="unfinished">날짜와 시간을 붙여 넣을 때 사용합니다.
-시스템 기본값은 비워 둡니다.
+        <translation>날짜 및 시간을 붙여넣는 데 사용됩니다.
+시스템 기본값인 경우 비워 둡니다.
 
-이 대화 상자를 닫은 후에 적용됩니다.</translation>
+이 대화상자를 닫은 후에 적용됩니다.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="369"/>
         <source>Date and time format:</source>
-        <translation type="unfinished">날짜 및 시간 형식:</translation>
+        <translation>날짜 및 시간 형식:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="393"/>
         <source>&amp;Auto-save every</source>
-        <translation type="unfinished">&amp;다음마다 자동 저장</translation>
+        <translation>자동 저장 간격(&amp;A)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="400"/>
         <source> minute(s)</source>
-        <translation type="unfinished"> 분(초s)</translation>
+        <translation> 분</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="434"/>
         <source>Spell Checking</source>
-        <translation type="unfinished">맞춤법 검사</translation>
+        <translation>맞춤법 검사</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="442"/>
@@ -1804,81 +1804,81 @@ Takes effect after closing this dialog.</source>
         <source>A Hunspell dictionary has a name that ends with &quot;.dic&quot;
 and should be alongside an affix file with the same
 name but ending with &quot;.aff&quot;.</source>
-        <translation type="unfinished">Hunspell 사전에는 &quot;.dic&quot;로 끝나는 이름이 있습니다.
-같은 접미사 파일과 함께 있어야합니다.
-이름이지만 &quot;.aff&quot;로 끝납니다.</translation>
+        <translation>Hunspell 사전에는 &quot;.dic&quot;로 끝나는 이름이 있으며
+이름은 같지만 &quot;.aff&quot;로 끝나는 접사 파일과 
+함께 있어야 합니다.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="447"/>
         <source>Hunspell dictionary path:</source>
-        <translation type="unfinished">Hunspell(이하 &quot;훈스팰&quot;) 사전 경로 :</translation>
+        <translation>Hunspell 사전 경로 :</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="466"/>
         <location filename="../../pref.cpp" line="689"/>
         <source>Add dictionary...</source>
-        <translation type="unfinished">사전 추가 ...</translation>
+        <translation>사전 추가...</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="501"/>
         <source>Files</source>
-        <translation type="unfinished">파일</translation>
+        <translation>파일</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="510"/>
         <source>Start with the last opened file</source>
-        <translation type="unfinished">마지막으로 연 파일로 시작</translation>
+        <translation>마지막으로 열린 파일로 시작</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="522"/>
         <source>Number of recent files:</source>
-        <translation type="unfinished">최근 파일 수 :</translation>
+        <translation>최근 파일 수 :</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="554"/>
         <source>Open recent files separately</source>
-        <translation type="unfinished">최근 파일을 개별적으로 열기</translation>
+        <translation>최근 파일 개별적으로 열기</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="578"/>
         <source>Shortcuts</source>
-        <translation type="unfinished">바로 가기</translation>
+        <translation>단축키</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="597"/>
         <source>Action</source>
-        <translation type="unfinished">동작</translation>
+        <translation>동작</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="602"/>
         <source>Shortcut</source>
-        <translation type="unfinished">바로가기</translation>
+        <translation>단축키</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="610"/>
         <source>Default</source>
-        <translation type="unfinished">기본값</translation>
+        <translation>기본값</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="376"/>
         <location filename="../../pref.cpp" line="562"/>
         <source>Warning: Ambiguous shortcut detected!</source>
-        <translation type="unfinished">경고 : 모호한 바로 가기가 감지되었습니다!</translation>
+        <translation>경고: 모호한 단축키가 감지되었습니다!</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="545"/>
         <source>The typed shortcut was reserved.</source>
-        <translation type="unfinished">입력한 바로 가기가 예약되었습니다.</translation>
+        <translation>입력한 단축키가 예약되었습니다.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="660"/>
         <source>Application restart is needed for changes to take effect.</source>
-        <translation type="unfinished">변경 사항을 적용하려면 응용 프로그램을 다시 시작해야 합니다.</translation>
+        <translation>변경 사항을 적용하려면 응용 프로그램을 다시 시작해야 합니다.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="691"/>
         <source>Hunspell Dictionary Files (*.dic)</source>
-        <translation type="unfinished">Hunspell(이하 &quot;훈스팰&quot;) 사전 파일 (* .dic)</translation>
+        <translation>Hunspell 사전 파일 (* .dic)</translation>
     </message>
 </context>
 <context>
@@ -1886,37 +1886,37 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../spellDialog.ui" line="25"/>
         <source>Unknown word:</source>
-        <translation type="unfinished">알 수 없는 단어:</translation>
+        <translation>알 수 없는 단어:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="51"/>
         <source>Add To Dictionary</source>
-        <translation type="unfinished">사전에 추가</translation>
+        <translation>사전에 추가</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="62"/>
         <source>Replace with:</source>
-        <translation type="unfinished">다음으로 교체:</translation>
+        <translation>다음으로 교체:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="87"/>
         <source>Ignore Once</source>
-        <translation type="unfinished">한 번 무시</translation>
+        <translation>한 번 무시</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="100"/>
         <source>Ignore All</source>
-        <translation type="unfinished">전체 무시</translation>
+        <translation>모두 무시</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="129"/>
         <source>Correct Once</source>
-        <translation type="unfinished">한 번 수정</translation>
+        <translation>한 번 정정</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="142"/>
         <source>Correct All</source>
-        <translation type="unfinished">모두 수정</translation>
+        <translation>모두 정정</translation>
     </message>
 </context>
 <context>
@@ -1924,7 +1924,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../helpDialog.ui" line="14"/>
         <source>Help</source>
-        <translation type="unfinished">도움</translation>
+        <translation>도움말</translation>
     </message>
 </context>
 <context>
@@ -1933,7 +1933,7 @@ name but ending with &quot;.aff&quot;.</source>
         <location filename="../../domitem.cpp" line="100"/>
         <location filename="../../domitem.cpp" line="137"/>
         <source>New Node</source>
-        <translation type="unfinished">새 노드</translation>
+        <translation>새 노드</translation>
     </message>
 </context>
 </TS>
