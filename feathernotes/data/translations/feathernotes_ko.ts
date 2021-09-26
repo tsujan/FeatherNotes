@@ -4,7 +4,7 @@
 <context>
     <name>FeatherNotes::AboutDialog</name>
     <message>
-        <location filename="../../about.ui" line="147"/>
+        <location filename="../../about.ui" line="155"/>
         <source>License</source>
         <translation>라이센스</translation>
     </message>
@@ -30,7 +30,7 @@
         <location filename="../../fn.cpp" line="3712"/>
         <location filename="../../fn.cpp" line="5506"/>
         <source>FeatherNotes</source>
-        <translation>페더노트</translation>
+        <translation>FeatherNotes</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="65"/>
@@ -60,7 +60,7 @@
     <message>
         <location filename="../../fn.ui" line="115"/>
         <source>Search only in names (Ctrl+Shift+F7)</source>
-        <translation>이름에서만 검색 (Ctrl+Shift+F7)</translation>
+        <translation>이름으로만 검색 (Ctrl+Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="118"/>
@@ -125,7 +125,7 @@
     <message>
         <location filename="../../fn.ui" line="223"/>
         <source>Recenl&amp;y Opened</source>
-        <translation>최근에 열림(&amp;Y)</translation>
+        <translation>최근 열림(&amp;Y)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="245"/>
@@ -135,7 +135,7 @@
     <message>
         <location filename="../../fn.ui" line="264"/>
         <source>For&amp;mat</source>
-        <translation>형식&amp;</translation>
+        <translation>형식(&amp;M)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="296"/>
@@ -506,7 +506,7 @@
     <message>
         <location filename="../../fn.ui" line="827"/>
         <source>Ctrl+Alt+Shift+I</source>
-        <translation type="unfinished">Ctrl+Alt+Shift+I</translation>
+        <translation>Ctrl+Alt+Shift+I</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="835"/>
@@ -516,7 +516,7 @@
     <message>
         <location filename="../../fn.ui" line="838"/>
         <source>Ctrl+Shift+Down</source>
-        <translation type="unfinished">Ctrl+Shift+Down</translation>
+        <translation>Ctrl+Shift+Down</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="846"/>
@@ -526,7 +526,7 @@
     <message>
         <location filename="../../fn.ui" line="849"/>
         <source>Ctrl+Shift+Up</source>
-        <translation type="unfinished">Ctrl+Shift+Up</translation>
+        <translation>Ctrl+Shift+Up</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="857"/>
@@ -536,7 +536,7 @@
     <message>
         <location filename="../../fn.ui" line="860"/>
         <source>Ctrl+N</source>
-        <translation type="unfinished">Ctrl+N</translation>
+        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="868"/>
@@ -546,7 +546,7 @@
     <message>
         <location filename="../../fn.ui" line="871"/>
         <source>Ctrl+Shift+N</source>
-        <translation type="unfinished">Ctrl+Shift+N</translation>
+        <translation>Ctrl+Shift+N</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="879"/>
@@ -556,7 +556,7 @@
     <message>
         <location filename="../../fn.ui" line="882"/>
         <source>Ctrl+D</source>
-        <translation type="unfinished">Ctrl+D</translation>
+        <translation>Ctrl+D</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="890"/>
@@ -576,7 +576,7 @@
     <message>
         <location filename="../../fn.ui" line="904"/>
         <source>Alt+Down</source>
-        <translation type="unfinished">Alt+Down</translation>
+        <translation>Alt+Down</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="912"/>
@@ -586,7 +586,7 @@
     <message>
         <location filename="../../fn.ui" line="915"/>
         <source>Ctrl+Shift+R</source>
-        <translation type="unfinished">Ctrl+Shift+R</translation>
+        <translation>Ctrl+Shift+R</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="920"/>
@@ -596,7 +596,7 @@
     <message>
         <location filename="../../fn.ui" line="923"/>
         <source>Ctrl+Shift+D</source>
-        <translation type="unfinished">Ctrl+Shift+D</translation>
+        <translation>Ctrl+Shift+D</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="931"/>
@@ -611,7 +611,7 @@
     <message>
         <location filename="../../fn.ui" line="948"/>
         <source>Ctrl+W</source>
-        <translation type="unfinished">Ctrl+W</translation>
+        <translation>Ctrl+W</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="962"/>
@@ -621,7 +621,7 @@
     <message>
         <location filename="../../fn.ui" line="965"/>
         <source>Ctrl+Shift+I</source>
-        <translation type="unfinished">Ctrl+Shift+I</translation>
+        <translation>Ctrl+Shift+I</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="970"/>
@@ -631,7 +631,7 @@
     <message>
         <location filename="../../fn.ui" line="973"/>
         <source>Ctrl+Shift+P</source>
-        <translation type="unfinished">Ctrl+Shift+P</translation>
+        <translation>Ctrl+Shift+P</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="981"/>
@@ -646,7 +646,7 @@
     <message>
         <location filename="../../fn.ui" line="992"/>
         <source>Ctrl+H</source>
-        <translation type="unfinished">Ctrl+H</translation>
+        <translation>Ctrl+H</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="997"/>
@@ -666,12 +666,12 @@
     <message>
         <location filename="../../fn.ui" line="1019"/>
         <source>Superscript</source>
-        <translation type="unfinished">슈퍼스크립트</translation>
+        <translation>슈퍼스크립트</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1022"/>
         <source>Alt+Shift+U</source>
-        <translation type="unfinished">Alt+Shift+U</translation>
+        <translation>Alt+Shift+U</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1033"/>
@@ -686,7 +686,7 @@
     <message>
         <location filename="../../fn.ui" line="1039"/>
         <source>Alt+Shift+S</source>
-        <translation type="unfinished">Alt+Shift+S</translation>
+        <translation>Alt+Shift+S</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1050"/>
@@ -701,7 +701,7 @@
     <message>
         <location filename="../../fn.ui" line="1056"/>
         <source>Alt+Shift+Down</source>
-        <translation type="unfinished">Alt+Shift+Down</translation>
+        <translation>Alt+Shift+Down</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1067"/>
@@ -712,12 +712,12 @@
     <message>
         <location filename="../../fn.ui" line="1070"/>
         <source>Align right</source>
-        <translation type="unfinished">오른쪽 정렬</translation>
+        <translation>오른쪽 정렬</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1073"/>
         <source>Alt+Shift+Right</source>
-        <translation type="unfinished">Alt+Shift+Right</translation>
+        <translation>Alt+Shift+Right</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1084"/>
@@ -728,7 +728,7 @@
     <message>
         <location filename="../../fn.ui" line="1087"/>
         <source>Align left</source>
-        <translation type="unfinished">왼쪽 정렬</translation>
+        <translation>왼쪽 정렬</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1090"/>
@@ -748,7 +748,7 @@
     <message>
         <location filename="../../fn.ui" line="1107"/>
         <source>Alt+Shift+Up</source>
-        <translation type="unfinished">Alt+Shift+Up</translation>
+        <translation>Alt+Shift+Up</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1115"/>
@@ -758,7 +758,7 @@
     <message>
         <location filename="../../fn.ui" line="1118"/>
         <source>Ctrl+M</source>
-        <translation type="unfinished">Ctrl+M</translation>
+        <translation>Ctrl+M</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1126"/>
@@ -778,52 +778,52 @@
     <message>
         <location filename="../../fn.ui" line="1140"/>
         <source>Alt+Right</source>
-        <translation type="unfinished">Alt+Right</translation>
+        <translation>Alt+Right</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1148"/>
         <source>h&amp;2</source>
-        <translation type="unfinished">h&amp;2</translation>
+        <translation>h&amp;2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1151"/>
         <source>Header 2</source>
-        <translation type="unfinished">머리글 2</translation>
+        <translation>머리글 2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1154"/>
         <source>Ctrl+2</source>
-        <translation type="unfinished">Ctrl+2</translation>
+        <translation>Ctrl+2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1162"/>
         <source>h&amp;1</source>
-        <translation type="unfinished">h&amp;1</translation>
+        <translation>h&amp;1</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1165"/>
         <source>Header 1</source>
-        <translation type="unfinished">머리글 1</translation>
+        <translation>머리글 1</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1168"/>
         <source>Ctrl+1</source>
-        <translation type="unfinished">Ctrl+1</translation>
+        <translation>Ctrl+1</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1176"/>
         <source>h&amp;3</source>
-        <translation type="unfinished">h&amp;3</translation>
+        <translation>h&amp;3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1179"/>
         <source>Header 3</source>
-        <translation type="unfinished">머리글 3</translation>
+        <translation>머리글 3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1182"/>
         <source>Ctrl+3</source>
-        <translation type="unfinished">Ctrl+3</translation>
+        <translation>Ctrl+3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1190"/>
@@ -833,7 +833,7 @@
     <message>
         <location filename="../../fn.ui" line="1193"/>
         <source>Node Font</source>
-        <translation type="unfinished">노드 글꼴</translation>
+        <translation>노드 글꼴</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1198"/>
@@ -848,7 +848,7 @@
     <message>
         <location filename="../../fn.ui" line="1209"/>
         <source>Ctrl+Shift+V</source>
-        <translation type="unfinished">Ctrl+Shift+V</translation>
+        <translation>Ctrl+Shift+V</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1217"/>
@@ -858,7 +858,7 @@
     <message>
         <location filename="../../fn.ui" line="1220"/>
         <source>Ctrl+Shift+T</source>
-        <translation type="unfinished">Ctrl+Shift+T</translation>
+        <translation>Ctrl+Shift+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1228"/>
@@ -868,7 +868,7 @@
     <message>
         <location filename="../../fn.ui" line="1231"/>
         <source>Ctrl+L</source>
-        <translation type="unfinished">Ctrl+L</translation>
+        <translation>Ctrl+L</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1236"/>
@@ -883,42 +883,42 @@
     <message>
         <location filename="../../fn.ui" line="1247"/>
         <source>Ctrl+Alt+Shift+T</source>
-        <translation type="unfinished">Ctrl+Alt+Shift+T</translation>
+        <translation>Ctrl+Alt+Shift+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1252"/>
         <source>Append Row</source>
-        <translation type="unfinished">행 추가</translation>
+        <translation>행 추가</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1257"/>
         <source>Delete Row</source>
-        <translation type="unfinished">행 삭제</translation>
+        <translation>행 삭제</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1262"/>
         <source>Append Column</source>
-        <translation type="unfinished">열 추가</translation>
+        <translation>열 추가</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1267"/>
         <source>Delete Column</source>
-        <translation type="unfinished">열 삭제</translation>
+        <translation>열 삭제</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1272"/>
         <source>Merge Cells</source>
-        <translation type="unfinished">셀 병합</translation>
+        <translation>셀 병합</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1277"/>
         <source>Prepend Row</source>
-        <translation type="unfinished">행 앞에 추가</translation>
+        <translation>행 앞에 추가</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1282"/>
         <source>Prepend Column</source>
-        <translation type="unfinished">열 앞에 추가</translation>
+        <translation>열 앞에 추가</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1290"/>
@@ -948,13 +948,13 @@
     <message>
         <location filename="../../fn.ui" line="1323"/>
         <source>Ctrl+Alt+Shift+Right</source>
-        <translation type="unfinished">Ctrl+Alt+Shift+Right</translation>
+        <translation>Ctrl+Alt+Shift+Right</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1328"/>
         <location filename="../../fn.ui" line="1331"/>
         <source>Menu</source>
-        <translation type="unfinished">메뉴</translation>
+        <translation>메뉴</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1339"/>
@@ -964,18 +964,18 @@
     <message>
         <location filename="../../fn.ui" line="1342"/>
         <source>Ctrl+Shift+C</source>
-        <translation type="unfinished">Ctrl+Shift+C</translation>
+        <translation>Ctrl+Shift+C</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1347"/>
         <location filename="../../fn.ui" line="1350"/>
         <source>Check Spelling</source>
-        <translation type="unfinished">맞춤법 검사</translation>
+        <translation>맞춤법 검사</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1353"/>
         <source>F2</source>
-        <translation type="unfinished">F2</translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1358"/>
@@ -996,7 +996,7 @@
     <message>
         <location filename="../../fn.cpp" line="2698"/>
         <source>Node Icon</source>
-        <translation type="unfinished">노드 아이콘</translation>
+        <translation>노드 아이콘</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="631"/>
@@ -1028,7 +1028,7 @@
         <location filename="../../fn.cpp" line="2530"/>
         <location filename="../../fn.cpp" line="4330"/>
         <source>No</source>
-        <translation type="unfinished">아니오</translation>
+        <translation>아니오</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="893"/>
@@ -1038,12 +1038,12 @@
     <message>
         <location filename="../../fn.cpp" line="895"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been modified.&lt;/i&gt;&lt;/center&gt;</source>
-        <translation type="unfinished">&lt;center&gt;&lt;i&gt;문서가 수정되었습니다.&lt;/i&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;i&gt;문서가 수정되었습니다.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="897"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been removed.&lt;/i&gt;&lt;/center&gt;</source>
-        <translation type="unfinished">&lt;center&gt;&lt;i&gt;문서가 제거되었습니다. &lt;/i&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;i&gt;문서가 제거되었습니다. &lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="902"/>
@@ -1063,7 +1063,7 @@
         <location filename="../../fn.cpp" line="5638"/>
         <location filename="../../fn.cpp" line="5758"/>
         <source>Cancel</source>
-        <translation type="unfinished">취소</translation>
+        <translation>취소</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1291"/>
@@ -1074,7 +1074,7 @@
         <location filename="../../fn.cpp" line="1447"/>
         <location filename="../../fn.cpp" line="5507"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be saved!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished">&lt;center&gt;&lt;b&gt;&lt;big&gt;저장할 수 없습니다!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;저장할 수 없습니다!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1451"/>
@@ -1083,13 +1083,13 @@
         <location filename="../../fn.cpp" line="5510"/>
         <location filename="../../fn.cpp" line="6064"/>
         <source>Close</source>
-        <translation type="unfinished">닫기</translation>
+        <translation>닫기</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1549"/>
         <location filename="../../fn.cpp" line="1570"/>
         <source>Save As...</source>
-        <translation type="unfinished">다른 이름으로 저장...</translation>
+        <translation>다른 이름으로 저장...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2526"/>
@@ -1106,7 +1106,7 @@
     <message>
         <location filename="../../fn.cpp" line="2625"/>
         <source>Tags</source>
-        <translation type="unfinished">태그</translation>
+        <translation>태그</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2640"/>
@@ -1132,7 +1132,7 @@
         <location filename="../../fn.cpp" line="2834"/>
         <location filename="../../fn.cpp" line="2867"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</source>
-        <translation type="unfinished">&lt;b&gt;노트:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;주요 노드:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;전체 노드:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</translation>
+        <translation>&lt;b&gt;노트:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;주요 노드:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;전체 노드:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3277"/>
@@ -1142,29 +1142,29 @@
     <message>
         <location filename="../../fn.cpp" line="3279"/>
         <source>One Match</source>
-        <translation type="unfinished">한 개 일치</translation>
+        <translation>한 개 일치</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3281"/>
         <location filename="../../fn.cpp" line="3596"/>
         <source>No Match</source>
-        <translation type="unfinished">일치 안함</translation>
+        <translation>일치 안함</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3396"/>
         <location filename="../../fn.cpp" line="3448"/>
         <source>Replacement</source>
-        <translation type="unfinished">대체</translation>
+        <translation>대체</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3703"/>
         <source>No Replacement</source>
-        <translation type="unfinished">대체 안함</translation>
+        <translation>대체 안함</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3705"/>
         <source>One Replacement</source>
-        <translation type="unfinished">하나 교체</translation>
+        <translation>한 개 대체</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3708"/>
@@ -1174,25 +1174,25 @@
     <message>
         <location filename="../../fn.cpp" line="3893"/>
         <source>Insert Link</source>
-        <translation type="unfinished">링크 삽입</translation>
+        <translation>링크 삽입</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2706"/>
         <location filename="../../fn.cpp" line="3971"/>
         <source>Image path</source>
-        <translation type="unfinished">이미지 경로</translation>
+        <translation>이미지 경로</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2710"/>
         <location filename="../../fn.cpp" line="3975"/>
         <source>Open image</source>
-        <translation type="unfinished">이미지 열기</translation>
+        <translation>이미지 열기</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3983"/>
         <location filename="../../fn.cpp" line="4144"/>
         <source>Scaling percentage</source>
-        <translation type="unfinished">비율 조정</translation>
+        <translation>배율 비율</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2728"/>
@@ -1209,7 +1209,7 @@
     <message>
         <location filename="../../fn.cpp" line="849"/>
         <source>New Node</source>
-        <translation type="unfinished">새 노드</translation>
+        <translation>새 노드</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1293"/>
@@ -1221,7 +1221,7 @@
     <message>
         <location filename="../../fn.cpp" line="1448"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be opened!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished">&lt;center&gt;&lt;b&gt;&lt;big&gt;열 수 없습니다!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;열 수 없습니다!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1533"/>
@@ -1232,12 +1232,12 @@
         <location filename="../../fn.cpp" line="5567"/>
         <location filename="../../fn.cpp" line="5593"/>
         <source>Untitled</source>
-        <translation type="unfinished">제목 없음</translation>
+        <translation>제목 없음</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1997"/>
         <source>Align Table</source>
-        <translation type="unfinished">표 정렬</translation>
+        <translation>표 정렬</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2010"/>
@@ -1247,22 +1247,22 @@
     <message>
         <location filename="../../fn.cpp" line="2378"/>
         <source>Select Text Color</source>
-        <translation type="unfinished">텍스트 색상 선택</translation>
+        <translation>텍스트 색상 선택</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2400"/>
         <source>Select Background Color</source>
-        <translation type="unfinished">배경색 선택</translation>
+        <translation>배경색 선택</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2525"/>
         <source>Deletion</source>
-        <translation type="unfinished">삭제</translation>
+        <translation>삭제</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2635"/>
         <source>Tag(s) for this node</source>
-        <translation type="unfinished">이 노드의 태그</translation>
+        <translation>이 노드에 대한 태그</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2730"/>
@@ -1273,17 +1273,17 @@
     <message>
         <location filename="../../fn.cpp" line="2903"/>
         <source>Select Document Font</source>
-        <translation type="unfinished">문서 글꼴 선택</translation>
+        <translation>문서 글꼴 선택</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2962"/>
         <source>Select Node Font</source>
-        <translation type="unfinished">노드 글꼴 선택</translation>
+        <translation>노드 글꼴 선택</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2977"/>
         <source>Set Document Colors</source>
-        <translation type="unfinished">문서 색상 설정</translation>
+        <translation>문서 색상 설정</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2987"/>
@@ -1293,29 +1293,29 @@
     <message>
         <location filename="../../fn.cpp" line="2990"/>
         <source>Background color:</source>
-        <translation type="unfinished">배경색:</translation>
+        <translation>배경색:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2996"/>
         <source>Text color:</source>
-        <translation type="unfinished">텍스트 색상:</translation>
+        <translation>텍스트 색상:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3713"/>
         <source>The first 1000 replacements are highlighted.</source>
-        <translation type="unfinished">처음 1000개의 교체가 강조 표시됩니다.</translation>
+        <translation>처음 1000개의 대체 항목이 강조 표시됩니다.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3978"/>
         <location filename="../../fn.cpp" line="4140"/>
         <source>Scale to</source>
-        <translation type="unfinished">확장</translation>
+        <translation>다음으로 확장</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3982"/>
         <location filename="../../fn.cpp" line="4143"/>
         <source>%</source>
-        <translation type="unfinished">%</translation>
+        <translation>%</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4134"/>
@@ -1325,207 +1325,207 @@
     <message>
         <location filename="../../fn.cpp" line="4293"/>
         <source>untitled</source>
-        <translation type="unfinished">제목없음</translation>
+        <translation>제목 없음</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4324"/>
         <source>Error</source>
-        <translation type="unfinished">오류</translation>
+        <translation>오류</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4325"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Image cannot be saved! Retry?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished">&lt;center&gt;&lt;b&gt;&lt;big&gt;이미지를 저장할 수 없습니다! 다시 시도하시겠습니까?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;이미지를 저장할 수 없습니다! 다시 시도하시겠습니까?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4326"/>
         <source>&lt;center&gt;Maybe you did not choose a proper extension&lt;/center&gt;
 &lt;center&gt;or do not have write permission.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;center&gt;적절한 확장을 선택하지 않았을 수 있습니다.&lt;/center&gt;
-&lt;center&gt;또는 쓰기 권한이 없습니다.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</translation>
+        <translation>&lt;center&gt;적절한 확장자를 선택하지 않았거나&lt;/center&gt;
+&lt;center&gt;쓰기 권한이 없을 수 있습니다.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4353"/>
         <source>Save Image As...</source>
-        <translation type="unfinished">다른 이름으로 이미지 저장 ...</translation>
+        <translation>다른 이름으로 이미지 저장 ...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4355"/>
         <source>Image Files (*.png *.jpg *.jpeg *.bmp);;All Files (*)</source>
-        <translation type="unfinished">이미지 파일(*.png *.jpg *.jpeg *.bmp);;모든 파일 (*)</translation>
+        <translation>이미지 파일(*.png *.jpg *.jpeg *.bmp);;모든 파일 (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4405"/>
         <source>Insert Table</source>
-        <translation type="unfinished">표 삽입</translation>
+        <translation>표 삽입</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4411"/>
         <source>Rows:</source>
-        <translation type="unfinished">행:</translation>
+        <translation>행:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4417"/>
         <source>Columns:</source>
-        <translation type="unfinished">열:</translation>
+        <translation>열:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5248"/>
         <source>Print Document</source>
-        <translation type="unfinished">문서 인쇄</translation>
+        <translation>문서 인쇄</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5332"/>
         <source>Export HTML</source>
-        <translation type="unfinished">HTML 내보내기</translation>
+        <translation>HTML 내보내기</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5337"/>
         <source>Export:</source>
-        <translation type="unfinished">내보내기:</translation>
+        <translation>내보내기:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5338"/>
         <source>&amp;Current node</source>
-        <translation type="unfinished">&amp;현재 노드</translation>
+        <translation>현재 노드(&amp;C)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5340"/>
         <source>With all &amp;sub-nodes</source>
-        <translation type="unfinished">모든 &amp; 하위 노드 사용</translation>
+        <translation>모든 하위 노드 포함(&amp;S)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5341"/>
         <source>&amp;All nodes</source>
-        <translation type="unfinished">&amp;모든 노드</translation>
+        <translation>모든 노드(&amp;A)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5353"/>
         <source>Output file:</source>
-        <translation type="unfinished">출력 파일:</translation>
+        <translation>출력 파일:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5372"/>
         <source>Select path</source>
-        <translation type="unfinished">선택 경로</translation>
+        <translation>경로 선택</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5414"/>
         <source>Question</source>
-        <translation type="unfinished">질문</translation>
+        <translation>질문</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5415"/>
         <source>The file already exists.
 Do you want to replace it?
 </source>
-        <translation type="unfinished">파일이 이미 있습니다.
+        <translation>파일이 이미 있습니다.
 교체 하시겠습니까?
 </translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5598"/>
         <source>Save HTML As...</source>
-        <translation type="unfinished">다른 이름으로 HTML 저장 ...</translation>
+        <translation>다른 이름으로 HTML 저장 ...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5600"/>
         <source>HTML Files (*.html *.htm)</source>
-        <translation type="unfinished">HTML 파일 (*.html *.htm)</translation>
+        <translation>HTML 파일 (*.html *.htm)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5621"/>
         <source>Set Password</source>
-        <translation type="unfinished">암호를 설정하세요</translation>
+        <translation>비밀번호 설정</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5629"/>
         <source>Type password</source>
-        <translation type="unfinished">비밀번호 입력</translation>
+        <translation>비밀번호 입력</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5634"/>
         <source>Retype password</source>
-        <translation type="unfinished">비밀번호 재 입력</translation>
+        <translation>비밀번호 재 입력</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5709"/>
         <source>&lt;center&gt;Passwords were different. Retry!&lt;/center&gt;</source>
-        <translation type="unfinished">&lt;center&gt;암호가 다릅니다. 다시 해보세요!&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;비밀번호가 다릅니다. 다시 시도하세요!&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5746"/>
         <location filename="../../fn.cpp" line="5754"/>
         <source>Enter Password</source>
-        <translation type="unfinished">비밀번호 입력</translation>
+        <translation>비밀번호 입력</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5820"/>
         <source>&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</source>
-        <translation type="unfinished">&lt;center&gt;잘못된 비밀번호 입니다. 다시 시도하세요!&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;잘못된 비밀번호 입니다. 다시 시도하세요!&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5863"/>
         <source>A lightweight notes manager</source>
-        <translation type="unfinished">가벼운 메모 관리자</translation>
+        <translation>가벼운 메모 관리자</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5864"/>
         <source>based on Qt</source>
-        <translation type="unfinished">Qt기반으로 작성됨</translation>
+        <translation>Qt기반으로 작성됨</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5865"/>
         <source>Author</source>
-        <translation type="unfinished">저자(Author)</translation>
+        <translation>작성자</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5867"/>
         <location filename="../../fn.cpp" line="5868"/>
         <source>About FeatherNotes</source>
-        <translation type="unfinished">FeatherNotes 정보(패더노트 정보)</translation>
+        <translation>FeatherNotes 정보</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5867"/>
         <source>Translators</source>
-        <translation type="unfinished">Translators(번역자)</translation>
+        <translation>번역자</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6056"/>
         <source>See Preferences → Text → Spell Checking!</source>
-        <translation type="unfinished">환경 설정 → 텍스트 → 맞춤법 검사를 참조하십시오!</translation>
+        <translation>기본 설정 → 텍스트 → 맞춤법 검사를 참조하십시오!</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6078"/>
         <source>You need to add a Hunspell dictionary.</source>
-        <translation type="unfinished">Hunspell(이하 &quot;훈스팰&quot;) 사전을 추가해야합니다.</translation>
+        <translation>Hunspell 사전을 추가해야합니다.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6083"/>
         <source>The Hunspell dictionary does not exist.</source>
-        <translation type="unfinished">Hunspell(이하 &quot;훈스팰&quot;) 사전이 없습니다.</translation>
+        <translation>Hunspell 사전이 없습니다.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6091"/>
         <source>The Hunspell dictionary is not accompanied by an affix file.</source>
-        <translation type="unfinished">Hunspell(이하 &quot;훈스팰&quot;) 사전에는 접미사 파일이 없습니다.</translation>
+        <translation>Hunspell 사전에는 접사 파일이 포함되어 있지 않습니다.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6109"/>
         <location filename="../../fn.cpp" line="6124"/>
         <location filename="../../fn.cpp" line="6136"/>
         <source>No misspelling from text cursor.</source>
-        <translation type="unfinished">텍스트 커서에서 맞춤법 오류가 없습니다.</translation>
+        <translation>텍스트 커서에서 맞춤법 오류가 없습니다.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6147"/>
         <source>Spell Checking</source>
-        <translation type="unfinished">맞춤법 검사</translation>
+        <translation>맞춤법 검사</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5866"/>
         <source>aka.</source>
-        <translation type="unfinished">aka(이하 축약어 &quot;예명&quot;).</translation>
+        <translation>별명.</translation>
     </message>
 </context>
 <context>
@@ -1533,13 +1533,13 @@ Do you want to replace it?
     <message>
         <location filename="../../lineedit.cpp" line="35"/>
         <source>Clear text (Ctrl+K)</source>
-        <translation type="unfinished">문자 초기화 (Ctrl+K)</translation>
+        <translation>텍스트 지우기 (Ctrl+K)</translation>
     </message>
     <message>
         <location filename="../../lineedit.cpp" line="81"/>
         <source>Ctrl+K</source>
         <comment>Clear text</comment>
-        <translation type="unfinished">Ctrl+K</translation>
+        <translation>Ctrl+K</translation>
     </message>
 </context>
 <context>
@@ -1547,12 +1547,12 @@ Do you want to replace it?
     <message>
         <location filename="../../prefDialog.ui" line="14"/>
         <source>Preferences</source>
-        <translation type="unfinished">환경 설정</translation>
+        <translation>기본 설정</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="27"/>
         <source>Window</source>
-        <translation type="unfinished">창</translation>
+        <translation>창</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="36"/>
@@ -1560,20 +1560,20 @@ Do you want to replace it?
 this dialog and also on exit.
 
 Uncheck to set a fixed size!</source>
-        <translation type="unfinished">이 대화 상자와 종료시 
-닫은 후 창 크기를 저장합니다.
+        <translation>이 대화상자를 닫은 후 종료시
+창 크기를 저장합니다.
 
 고정 크기를 설정하려면 선택을 취소하십시오!</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="42"/>
         <source>Remember window &amp;size</source>
-        <translation type="unfinished">창 크기 기억</translation>
+        <translation>창 크기 기억(&amp;S)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="51"/>
         <source>Start with this size: </source>
-        <translation type="unfinished">이 크기 시작: </translation>
+        <translation>이 크기로 시작: </translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="58"/>
@@ -1581,7 +1581,7 @@ Uncheck to set a fixed size!</source>
         <location filename="../../prefDialog.ui" line="255"/>
         <location filename="../../prefDialog.ui" line="269"/>
         <source> px</source>
-        <translation type="unfinished"> px</translation>
+        <translation> 픽셀</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="97"/>
@@ -1589,15 +1589,15 @@ Uncheck to set a fixed size!</source>
 this dialog and also on exit.
 
 Uncheck for a width ratio of 170/530.</source>
-        <translation type="unfinished">이 대화 상자와 종료시에도
-닫은 후 트리 너비 저장.
+        <translation>이 대화상자를 닫고 종료할 때도
+트리 너비를 저장합니다.
 
-170/530의 너비 비율을 선택 취소하십시오.</translation>
+너비 비율이 170/530이면 선택을 취소합니다.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="103"/>
         <source>Remember &amp;tree width</source>
-        <translation type="unfinished">트리 &amp; 너비 기억</translation>
+        <translation>트리 너비 기억(&amp;T)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="110"/>
@@ -1607,17 +1607,17 @@ this dialog and also on exit.
 (This may not work correctly
 under GTK+ DE&apos;s like Unity
 and Cinnamon.)</source>
-        <translation type="unfinished">이 대화 상자와 종료시에도 
-닫은 후 위치 저장
+        <translation>이 대화상자를 닫고 종료할
+때도 위치를 저장합니다.
 
-(올바르게 작동하지 않을 수 있습니다
-Unity와 같은 GTK + DE에서
-그리고 Cinnamon[시나몬].)</translation>
+(이것은 Unity 및 Cinnamon과
+같은 GTK+ DE에서는 제대로
+작동하지 않을 수 있습니다.)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="118"/>
         <source>Save &amp;position</source>
-        <translation type="unfinished">위치 &amp;저장</translation>
+        <translation>위치 저장(&amp;P)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="125"/>
@@ -1626,78 +1626,78 @@ If checked, the titlebar close button iconifies
 the window to the systray instead of quitting.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation type="unfinished">시스템 트레이 아이콘을 사용할지 여부를 결정합니다.
-선택하면 제목 표시 줄 닫기 버튼이 창을 종료하는 
+        <translation>시스템 트레이 아이콘을 사용할지 여부를 결정합니다.
+선택하면 제목 표시줄 닫기 버튼이 창을 종료하는 
 대신 시스템 트레이에 아이콘으로 표시합니다. 
 
-적용하려면 페더노트(FeatherNotes)를 다시 시작해야 합니다.</translation>
+적용하려면 FeatherNotes를 다시 시작해야 합니다.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="132"/>
         <source>Add to s&amp;ystray</source>
-        <translation type="unfinished">시스템 트레이에 추가</translation>
+        <translation>시스템 트레이에 추가(&amp;Y)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="157"/>
         <source>The command line option --tray
 can be used instead of this.</source>
-        <translation type="unfinished">명령 줄 옵션 --tray
-대신 사용할 수 있습니다.</translation>
+        <translation>명령 줄 옵션 --tray
+를 대신 사용할 수 있습니다.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="161"/>
         <source>Start i&amp;conified to tray</source>
-        <translation type="unfinished">트레이에 아이콘화 된 시작</translation>
+        <translation>트레이에 아이콘화된 시작(&amp;C)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="170"/>
         <source>Merge the tree view with its surroundings?</source>
-        <translation type="unfinished">주변에 트리 뷰를 병합 하시겠습니까?</translation>
+        <translation>트리 보기를 주변 환경과 병합하시겠습니까?</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="173"/>
         <source>Transparent t&amp;ree view</source>
-        <translation type="unfinished">투명한 트리 뷰</translation>
+        <translation>투명한 트리 보기(&amp;R)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="180"/>
         <source>By default, the active widget style determines
 the size of toolbar icons.</source>
-        <translation type="unfinished">기본적으로 활성 위젯 스타일은
-툴바 아이콘의 크기.</translation>
+        <translation>기본적으로 활성 위젯 스타일은 도구 모음
+아이콘의 크기를 결정합니다.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="184"/>
         <source>Small toolbar icons</source>
-        <translation type="unfinished">작은 도구 모음 아이콘</translation>
+        <translation>작은 도구 모음 아이콘</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="191"/>
         <source>Do not show t&amp;oolbar</source>
-        <translation type="unfinished">툴바를 표시하지 않음</translation>
+        <translation>도구 모음 표시하지 않음(&amp;O)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="198"/>
         <source>If the menubar is hidden,
 a menu button appears on the toolbar.</source>
-        <translation type="unfinished">메뉴 바가 숨겨져 있으면
+        <translation>메뉴 표시줄이 숨겨져 있으면,
 도구 모음에 메뉴 버튼이 나타납니다.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="202"/>
         <source>Do not show &amp;menubar</source>
-        <translation type="unfinished">메뉴 바 표시 안함</translation>
+        <translation>메뉴 표시줄 표시 안함(&amp;M)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="209"/>
         <source>Check this under Enlightenment (or, probably, another DE)
 to use the systray icon more easily!</source>
-        <translation type="unfinished">시스템 트레이 아이콘을 더 쉽게 사용하려면 계몽(Enlightenment)(또는 아마도 다른 DE)에서 이것을 확인하십시오!</translation>
+        <translation>시스템 트레이 아이콘을 더 쉽게 사용하려면 Enlightenment(또는 아마도 다른 DE)에서 이것을 확인하십시오!</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="213"/>
         <source>Running &amp;under Enlightenment?</source>
-        <translation type="unfinished">계몽(Enlightenment) &amp; 아래 실행 중입니까?</translation>
+        <translation>Enlightenment 아래에서 실행중입니까(&amp;U)?</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="238"/>
@@ -1709,62 +1709,62 @@ if it is on the left or right, the X-coordinate should be set.
 
 After choosing the coordinate shifts, put the window in a proper
 position and then restart FeatherNotes!</source>
-        <translation type="unfinished">일부 DE (예 : Enlightenment)는 창 위치를 보고 하지 않을 수 있습니다.
-바르게. 이 경우 여기에서 문제를 해결할 수 있습니다.
+        <translation>일부 DE(예: Enlightenment)는 창 위치를 올바르게 보고하지 않을 수
+있습니다. 이 경우 여기에서 문제를 해결할 수 있습니다.
 
-패널이 맨 아래 또는 맨 위에 있으면 Y 좌표를 설정해야 합니다.
+패널이 하단 또는 상단에 있는 경우 Y 좌표를 설정해야 합니다.
 왼쪽 또는 오른쪽에 있으면 X 좌표를 설정해야 합니다.
 
-좌표 이동을 선택한 후 창을 적절한 위치에 놓으십시오.
-위치를 지정한 다음 패더노트(이하 &quot;FeatherNotes&quot;)를 다시 시작하십시오!</translation>
+좌표 이동을 선택한 후 창을 적절한 위치에 놓고
+FeatherNotes를 다시 시작하십시오!</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="248"/>
         <source>Shifts (X × Y): </source>
-        <translation type="unfinished">이동 (X × Y) : </translation>
+        <translation>교대 (X × Y) : </translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="314"/>
         <source>Text</source>
-        <translation type="unfinished">텍스트</translation>
+        <translation>텍스트</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="323"/>
         <source>&amp;Wrap lines by default</source>
-        <translation type="unfinished">기본적으로 줄 바꿈 (&amp;W)</translation>
+        <translation>기본적으로 줄 바꿈(&amp;W)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="330"/>
         <source>Auto-&amp;indent by default</source>
-        <translation type="unfinished">기본적으로 자동 들여 쓰기</translation>
+        <translation>기본적으로 자동 들여 쓰기(&amp;I)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="337"/>
         <source>This covers parentheses, braces, brackets and quotes.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation type="unfinished">여기에는 괄호, 중괄호, 괄호 및 따옴표가 포함됩니다.
+        <translation>여기에는 괄호, 중괄호, 대괄호 및 따옴표가 포함됩니다.
 
-적용하려면 패더노트(이하 &quot;FeatherNotes&quot;)를 다시 시작해야 합니다.</translation>
+FeatherNotes를 다시 시작해야 적용됩니다.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="342"/>
         <source>Auto-&amp;bracket</source>
-        <translation type="unfinished">자동 및 브라켓</translation>
+        <translation>자동 대괄호(&amp;B)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="349"/>
         <source>A triple period is replaced with an ellipsis,
 a double hyphen with a long dash, etc. while
 the user is typing and under proper circumstances.</source>
-        <translation type="unfinished">삼중 마침표는 줄임표로 대체됩니다.
-긴 대시 등이 있는 이중 하이픈
-사용자가 적절한 상황에서 입력하고 있습니다.</translation>
+        <translation>사용자가 적절한 상황에서 입력하는 동안,
+세 개의 마침표는 줄임표, 긴 대시가 있는
+이중 하이픈 등으로 대체됩니다.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="354"/>
         <source>&amp;Replace some characters while typing</source>
-        <translation type="unfinished">입력하는 동안 일부 문자 바꾸기</translation>
+        <translation>입력하는 동안 일부 문자 바꾸기(&amp;R)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="363"/>
@@ -1773,30 +1773,30 @@ the user is typing and under proper circumstances.</source>
 Leave empty for the system default.
 
 Takes effect after closing this dialog.</source>
-        <translation type="unfinished">날짜와 시간을 붙여 넣을 때 사용합니다.
-시스템 기본값은 비워 둡니다.
+        <translation>날짜 및 시간을 붙여넣는 데 사용됩니다.
+시스템 기본값인 경우 비워 둡니다.
 
-이 대화 상자를 닫은 후에 적용됩니다.</translation>
+이 대화상자를 닫은 후에 적용됩니다.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="369"/>
         <source>Date and time format:</source>
-        <translation type="unfinished">날짜 및 시간 형식:</translation>
+        <translation>날짜 및 시간 형식:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="393"/>
         <source>&amp;Auto-save every</source>
-        <translation type="unfinished">&amp;다음마다 자동 저장</translation>
+        <translation>자동 저장 간격(&amp;A)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="400"/>
         <source> minute(s)</source>
-        <translation type="unfinished"> 분(초s)</translation>
+        <translation> 분</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="434"/>
         <source>Spell Checking</source>
-        <translation type="unfinished">맞춤법 검사</translation>
+        <translation>맞춤법 검사</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="442"/>
@@ -1804,81 +1804,81 @@ Takes effect after closing this dialog.</source>
         <source>A Hunspell dictionary has a name that ends with &quot;.dic&quot;
 and should be alongside an affix file with the same
 name but ending with &quot;.aff&quot;.</source>
-        <translation type="unfinished">Hunspell 사전에는 &quot;.dic&quot;로 끝나는 이름이 있습니다.
-같은 접미사 파일과 함께 있어야합니다.
-이름이지만 &quot;.aff&quot;로 끝납니다.</translation>
+        <translation>Hunspell 사전에는 &quot;.dic&quot;로 끝나는 이름이 있으며
+이름은 같지만 &quot;.aff&quot;로 끝나는 접사 파일과 
+함께 있어야 합니다.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="447"/>
         <source>Hunspell dictionary path:</source>
-        <translation type="unfinished">Hunspell(이하 &quot;훈스팰&quot;) 사전 경로 :</translation>
+        <translation>Hunspell 사전 경로 :</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="466"/>
         <location filename="../../pref.cpp" line="689"/>
         <source>Add dictionary...</source>
-        <translation type="unfinished">사전 추가 ...</translation>
+        <translation>사전 추가...</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="501"/>
         <source>Files</source>
-        <translation type="unfinished">파일</translation>
+        <translation>파일</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="510"/>
         <source>Start with the last opened file</source>
-        <translation type="unfinished">마지막으로 연 파일로 시작</translation>
+        <translation>마지막으로 열린 파일로 시작</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="522"/>
         <source>Number of recent files:</source>
-        <translation type="unfinished">최근 파일 수 :</translation>
+        <translation>최근 파일 수 :</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="554"/>
         <source>Open recent files separately</source>
-        <translation type="unfinished">최근 파일을 개별적으로 열기</translation>
+        <translation>최근 파일 개별적으로 열기</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="578"/>
         <source>Shortcuts</source>
-        <translation type="unfinished">바로 가기</translation>
+        <translation>단축키</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="597"/>
         <source>Action</source>
-        <translation type="unfinished">동작</translation>
+        <translation>동작</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="602"/>
         <source>Shortcut</source>
-        <translation type="unfinished">바로가기</translation>
+        <translation>단축키</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="610"/>
         <source>Default</source>
-        <translation type="unfinished">기본값</translation>
+        <translation>기본값</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="376"/>
         <location filename="../../pref.cpp" line="562"/>
         <source>Warning: Ambiguous shortcut detected!</source>
-        <translation type="unfinished">경고 : 모호한 바로 가기가 감지되었습니다!</translation>
+        <translation>경고: 모호한 단축키가 감지되었습니다!</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="545"/>
         <source>The typed shortcut was reserved.</source>
-        <translation type="unfinished">입력한 바로 가기가 예약되었습니다.</translation>
+        <translation>입력한 단축키가 예약되었습니다.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="660"/>
         <source>Application restart is needed for changes to take effect.</source>
-        <translation type="unfinished">변경 사항을 적용하려면 응용 프로그램을 다시 시작해야 합니다.</translation>
+        <translation>변경 사항을 적용하려면 응용 프로그램을 다시 시작해야 합니다.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="691"/>
         <source>Hunspell Dictionary Files (*.dic)</source>
-        <translation type="unfinished">Hunspell(이하 &quot;훈스팰&quot;) 사전 파일 (* .dic)</translation>
+        <translation>Hunspell 사전 파일 (* .dic)</translation>
     </message>
 </context>
 <context>
@@ -1886,37 +1886,37 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../spellDialog.ui" line="25"/>
         <source>Unknown word:</source>
-        <translation type="unfinished">알 수 없는 단어:</translation>
+        <translation>알 수 없는 단어:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="51"/>
         <source>Add To Dictionary</source>
-        <translation type="unfinished">사전에 추가</translation>
+        <translation>사전에 추가</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="62"/>
         <source>Replace with:</source>
-        <translation type="unfinished">다음으로 교체:</translation>
+        <translation>다음으로 교체:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="87"/>
         <source>Ignore Once</source>
-        <translation type="unfinished">한 번 무시</translation>
+        <translation>한 번 무시</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="100"/>
         <source>Ignore All</source>
-        <translation type="unfinished">전체 무시</translation>
+        <translation>모두 무시</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="129"/>
         <source>Correct Once</source>
-        <translation type="unfinished">한 번 수정</translation>
+        <translation>한 번 정정</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="142"/>
         <source>Correct All</source>
-        <translation type="unfinished">모두 수정</translation>
+        <translation>모두 정정</translation>
     </message>
 </context>
 <context>
@@ -1924,7 +1924,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../helpDialog.ui" line="14"/>
         <source>Help</source>
-        <translation type="unfinished">도움</translation>
+        <translation>도움말</translation>
     </message>
 </context>
 <context>
@@ -1933,7 +1933,7 @@ name but ending with &quot;.aff&quot;.</source>
         <location filename="../../domitem.cpp" line="100"/>
         <location filename="../../domitem.cpp" line="137"/>
         <source>New Node</source>
-        <translation type="unfinished">새 노드</translation>
+        <translation>새 노드</translation>
     </message>
 </context>
 </TS>

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2021 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -19,6 +19,7 @@
 #define VSCROLLBAR_H
 
 #include <QScrollBar>
+#include <QWheelEvent>
 
 namespace FeatherNotes {
 
@@ -31,10 +32,7 @@ public:
     VScrollBar (QWidget *parent = nullptr);
 
 protected:
-    bool event (QEvent *event);
-
-private:
-    int defaultWheelSpeed;
+    void wheelEvent (QWheelEvent *event) override;
 };
 
 }

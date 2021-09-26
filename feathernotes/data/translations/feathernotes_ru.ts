@@ -4,7 +4,7 @@
 <context>
     <name>FeatherNotes::AboutDialog</name>
     <message>
-        <location filename="../../about.ui" line="147"/>
+        <location filename="../../about.ui" line="155"/>
         <source>License</source>
         <translation>Лицензия</translation>
     </message>
@@ -1237,12 +1237,12 @@
     <message>
         <location filename="../../fn.cpp" line="1997"/>
         <source>Align Table</source>
-        <translation type="unfinished">Выровнять таблицу</translation>
+        <translation>Выровнять таблицу</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2010"/>
         <source>&amp;Center</source>
-        <translation type="unfinished">Центрировать</translation>
+        <translation>Центрировать</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2378"/>

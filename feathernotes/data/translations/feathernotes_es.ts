@@ -4,7 +4,7 @@
 <context>
     <name>FeatherNotes::AboutDialog</name>
     <message>
-        <location filename="../../about.ui" line="147"/>
+        <location filename="../../about.ui" line="155"/>
         <source>License</source>
         <translation>Licencia</translation>
     </message>
@@ -1493,7 +1493,7 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="6056"/>
         <source>See Preferences → Text → Spell Checking!</source>
-        <translation>Vea Preferencias ▸ Texto ▸ Revisar ortografía.</translation>
+        <translation>Vea Preferencias&#xa0;▸ Texto&#xa0;▸ Revisar ortografía.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6078"/>

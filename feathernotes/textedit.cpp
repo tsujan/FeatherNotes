@@ -877,9 +877,10 @@ void TextEdit::mouseDoubleClickEvent (QMouseEvent *e)
 /*************************/
 void TextEdit::wheelEvent (QWheelEvent *e)
 {
+    QPoint deltaPoint = e->angleDelta();
     if (e->modifiers() & Qt::ControlModifier)
     {
-        float delta = e->angleDelta().y() / 120.f;
+        float delta = deltaPoint.y() / 120.f;
         zooming (delta);
         return;
     }
@@ -887,20 +888,33 @@ void TextEdit::wheelEvent (QWheelEvent *e)
     /* smooth scrolling */
     if (e->spontaneous() && e->source() == Qt::MouseEventNotSynthesized)
     {
-        bool horizontal (e->angleDelta().x() != 0);
-        QScrollBar* sbar = horizontal
-                               ? horizontalScrollBar() : verticalScrollBar();
-        if (sbar)
+        bool horizontal (qAbs (deltaPoint.x()) > qAbs (deltaPoint.y()));
+        QScrollBar* sbar = horizontal ? horizontalScrollBar()
+                                      : verticalScrollBar();
+        if (sbar && sbar->isVisible())
         {
-            int delta = horizontal
-                            ? e->angleDelta().x() : e->angleDelta().y();
-            if (e->modifiers() & Qt::ShiftModifier) // scrolling with minimum speed
-                delta /= QApplication::wheelScrollLines();
+            int delta = horizontal ? deltaPoint.x() : deltaPoint.y();
             if ((delta > 0 && sbar->value() == sbar->minimum())
                 || (delta < 0 && sbar->value() == sbar->maximum()))
             {
                 return; // the scrollbar can't move
             }
+
+            if (QApplication::wheelScrollLines() > 1)
+            {
+                if ((e->modifiers() & Qt::ShiftModifier)
+                    || qAbs (delta) < 120) // touchpad
+                { // scrolling with minimum speed
+                    if (qAbs (delta) >= scrollAnimFrames * QApplication::wheelScrollLines())
+                        delta /= QApplication::wheelScrollLines();
+                }
+            }
+
+            /* wait until the angle delta reaches an acceptable value */
+            static int _delta = 0;
+            _delta += delta;
+            if (abs(_delta) < scrollAnimFrames)
+                return;
 
             if (!scrollTimer_)
             {
@@ -911,11 +925,13 @@ void TextEdit::wheelEvent (QWheelEvent *e)
 
             /* set the data for inertial scrolling */
             scrollData data;
-            data.delta = delta;
+            data.delta = _delta;
             data.leftFrames = scrollAnimFrames;
             data.vertical = !horizontal;
             queuedScrollSteps_.append (data);
-            scrollTimer_->start (1000 / SCROLL_FRAMES_PER_SEC);
+            if (!scrollTimer_->isActive())
+                scrollTimer_->start (1000 / SCROLL_FRAMES_PER_SEC);
+            _delta = 0;
             return;
         }
     }
@@ -933,6 +949,8 @@ void TextEdit::scrollSmoothly()
     {
         int delta = qRound (static_cast<qreal>(it->delta) / static_cast<qreal>(scrollAnimFrames));
         int remainingDelta = it->delta - (scrollAnimFrames - it->leftFrames) * delta;
+        if ((delta >= 0 && remainingDelta < 0) || (delta < 0 && remainingDelta >= 0))
+            remainingDelta = 0;
         if (qAbs (delta) >= qAbs (remainingDelta))
         { // this is the last frame or, due to rounding, there can be no more frame
             if (it->vertical)
@@ -952,29 +970,37 @@ void TextEdit::scrollSmoothly()
         }
     }
 
-    if (totalDeltaH != 0 && horizontalScrollBar())
+    if (totalDeltaH != 0)
     {
-        QWheelEvent eventH (QPointF(),
-                            QPointF(),
-                            QPoint(),
-                            QPoint (0, totalDeltaH),
-                            Qt::NoButton,
-                            Qt::NoModifier,
-                            Qt::NoScrollPhase,
-                            false);
-        QCoreApplication::sendEvent (horizontalScrollBar(), &eventH);
+        QScrollBar *hbar = horizontalScrollBar();
+        if (hbar && hbar->isVisible())
+        {
+            QWheelEvent eventH (QPointF(),
+                                QPointF(),
+                                QPoint(),
+                                QPoint (0, totalDeltaH),
+                                Qt::NoButton,
+                                Qt::NoModifier,
+                                Qt::NoScrollPhase,
+                                false);
+            QCoreApplication::sendEvent (hbar, &eventH);
+        }
     }
-    if (totalDeltaV != 0 && verticalScrollBar())
+    if (totalDeltaV != 0)
     {
-        QWheelEvent eventV (QPointF(),
-                            QPointF(),
-                            QPoint(),
-                            QPoint (0, totalDeltaV),
-                            Qt::NoButton,
-                            Qt::NoModifier,
-                            Qt::NoScrollPhase,
-                            false);
-        QCoreApplication::sendEvent (verticalScrollBar(), &eventV);
+        QScrollBar *vbar = verticalScrollBar();
+        if (vbar && vbar->isVisible())
+        {
+            QWheelEvent eventV (QPointF(),
+                                QPointF(),
+                                QPoint(),
+                                QPoint (0, totalDeltaV),
+                                Qt::NoButton,
+                                Qt::NoModifier,
+                                Qt::NoScrollPhase,
+                                false);
+            QCoreApplication::sendEvent (vbar, &eventV);
+        }
     }
 
     if (queuedScrollSteps_.empty())

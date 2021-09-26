@@ -4,7 +4,7 @@
 <context>
     <name>FeatherNotes::AboutDialog</name>
     <message>
-        <location filename="../../about.ui" line="147"/>
+        <location filename="../../about.ui" line="155"/>
         <source>License</source>
         <translation>Licenco</translation>
     </message>
@@ -1833,7 +1833,7 @@ nomon se kun la finaĵo &quot;.aff&quot;.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="554"/>
         <source>Open recent files separately</source>
-        <translation>Malfermu  la lastatempajn dosierojn aparte</translation>
+        <translation>Malfermu la lastatempajn dosierojn aparte</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="578"/>
