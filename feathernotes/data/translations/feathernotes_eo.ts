@@ -4,7 +4,7 @@
 <context>
     <name>FeatherNotes::AboutDialog</name>
     <message>
-        <location filename="../../about.ui" line="155"/>
+        <location filename="../../about.ui" line="157"/>
         <source>License</source>
         <translation>Licenco</translation>
     </message>
@@ -243,12 +243,12 @@
     <message>
         <location filename="../../fn.ui" line="558"/>
         <source>&amp;Undo</source>
-        <translation>Malfar&amp;u</translation>
+        <translation>Malfar&amp;i</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="561"/>
         <source>Undo</source>
-        <translation>Malfaru</translation>
+        <translation>Malfari</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="564"/>
@@ -258,12 +258,12 @@
     <message>
         <location filename="../../fn.ui" line="572"/>
         <source>&amp;Redo</source>
-        <translation>Refa&amp;ru</translation>
+        <translation>Refa&amp;ri</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="575"/>
         <source>Redo</source>
-        <translation>Refaru</translation>
+        <translation>Refari</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="578"/>
@@ -450,7 +450,7 @@
     <message>
         <location filename="../../fn.ui" line="769"/>
         <source>&amp;Cut</source>
-        <translation>&amp;Tranĉu</translation>
+        <translation>&amp;Tranĉi</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="772"/>
@@ -460,7 +460,7 @@
     <message>
         <location filename="../../fn.ui" line="780"/>
         <source>C&amp;opy</source>
-        <translation>&amp;Kopiu</translation>
+        <translation>&amp;Kopii</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="783"/>
@@ -470,7 +470,7 @@
     <message>
         <location filename="../../fn.ui" line="791"/>
         <source>&amp;Paste</source>
-        <translation>Algl&amp;uu</translation>
+        <translation>Algl&amp;ui</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="794"/>
@@ -480,12 +480,12 @@
     <message>
         <location filename="../../fn.ui" line="802"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Forviŝu</translation>
+        <translation>&amp;Forviŝi</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="810"/>
         <source>&amp;Select All</source>
-        <translation>Elektu &amp;Ĉion</translation>
+        <translation>Elekti &amp;Ĉion</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="813"/>
@@ -843,7 +843,7 @@
     <message>
         <location filename="../../fn.ui" line="1206"/>
         <source>Paste &amp;HTML</source>
-        <translation>Algluu &amp;HTML</translation>
+        <translation>Alglui &amp;HTML</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1209"/>
@@ -986,7 +986,7 @@
         <location filename="../../fn.ui" line="1366"/>
         <location filename="../../fn.ui" line="1369"/>
         <source>Paste Date and Time</source>
-        <translation>Algluu la Daton kaj Tempon</translation>
+        <translation>Alglui la Daton kaj Tempon</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1374"/>
