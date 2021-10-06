@@ -1626,16 +1626,16 @@ If checked, the titlebar close button iconifies
 the window to the systray instead of quitting.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation>تعيين می‌کند که آيا برنامه بايد از نوار وظايف استفاده کند.
+        <translation>تعيين می‌کند که آيا برنامه بايد از جعبه‌ی وظايف استفاده کند.
 اگر اتنخاب شود، دکمه‌ی بستن، روی نوار بالايی پنجره، باعث
-خروج از برنامه نمی‌شود بلکه پنجره را به درون نوار وظايف می‌برد.
+خروج از برنامه نمی‌شود بلکه پنجره را به درون جعبه‌ی وظايف می‌برد.
 
 برای فعال شدن نيازمند شروع مجدد برنامه است.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="132"/>
         <source>Add to s&amp;ystray</source>
-        <translation>افزودن به نوار وظايف</translation>
+        <translation>افزودن به جعبه‌ی وظايف</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="157"/>
@@ -1646,7 +1646,7 @@ can be used instead of this.</source>
     <message>
         <location filename="../../prefDialog.ui" line="161"/>
         <source>Start i&amp;conified to tray</source>
-        <translation>شروع از درون نوار وظايف</translation>
+        <translation>شروع از درون جعبه‌ی وظايف</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="170"/>
@@ -1691,7 +1691,7 @@ a menu button appears on the toolbar.</source>
         <location filename="../../prefDialog.ui" line="209"/>
         <source>Check this under Enlightenment (or, probably, another DE)
 to use the systray icon more easily!</source>
-        <translation>برای استفاده‌ی آسانتر از نوار وظايف، اين تنظيم را
+        <translation>برای استفاده‌ی آسانتر از جعبه‌ی وظايف، اين تنظيم را
 تحت Enlightenment (يا شايد محيطی ديگر) به کار ببريد.</translation>
     </message>
     <message>
