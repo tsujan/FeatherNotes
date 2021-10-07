@@ -541,7 +541,7 @@
     <message>
         <location filename="../../fn.ui" line="868"/>
         <source>Append &amp;Child</source>
-        <translation>افزودن زيرشاخه‌ی</translation>
+        <translation>افزودن زيرشاخه</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="871"/>
@@ -591,7 +591,7 @@
     <message>
         <location filename="../../fn.ui" line="920"/>
         <source>Tree Pr&amp;operties</source>
-        <translation>ويژگی‌های شاخه</translation>
+        <translation>ويژگی‌های شاخه‌ها</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="923"/>
@@ -691,12 +691,12 @@
     <message>
         <location filename="../../fn.ui" line="1050"/>
         <source>C&amp;enter</source>
-        <translation>وسظ</translation>
+        <translation>وسط</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1053"/>
         <source>Align center</source>
-        <translation>تراز کردن در وسظ</translation>
+        <translation>تراز کردن در وسط</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1056"/>
@@ -918,12 +918,12 @@
     <message>
         <location filename="../../fn.ui" line="1282"/>
         <source>Prepend Column</source>
-        <translation>افزودن ستون از بالا</translation>
+        <translation>افزودن ستون از پس</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1290"/>
         <source>Export &amp;HTML</source>
-        <translation>تبديل به HTML</translation>
+        <translation>صدور به HTML</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1295"/>
@@ -959,7 +959,7 @@
     <message>
         <location filename="../../fn.ui" line="1339"/>
         <source>Node &amp;Icon</source>
-        <translation>شمايل شاحه</translation>
+        <translation>شمايل شاخه</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1342"/>
@@ -996,7 +996,7 @@
     <message>
         <location filename="../../fn.cpp" line="2698"/>
         <source>Node Icon</source>
-        <translation>شمايل شاحه</translation>
+        <translation>شمايل شاخه</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="631"/>
@@ -1038,8 +1038,7 @@
     <message>
         <location filename="../../fn.cpp" line="895"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been modified.&lt;/i&gt;&lt;/center&gt;</source>
-        <translatorcomment>&lt;center&gt;&lt;i&gt;سند تغيير يافته است.&lt;/i&gt;&lt;/center&gt;</translatorcomment>
-        <translation>&lt;center&gt;&lt;i&gt;The document has been modified.&lt;/i&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;i&gt;سند تغيير يافته است.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="897"/>
@@ -1193,7 +1192,7 @@
         <location filename="../../fn.cpp" line="3983"/>
         <location filename="../../fn.cpp" line="4144"/>
         <source>Scaling percentage</source>
-        <translation>درضد تغيير اندازه</translation>
+        <translation>درصد تغيير اندازه</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2728"/>
@@ -1243,7 +1242,7 @@
     <message>
         <location filename="../../fn.cpp" line="2010"/>
         <source>&amp;Center</source>
-        <translation>وسظ</translation>
+        <translation>وسط</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2378"/>
@@ -1269,7 +1268,7 @@
         <location filename="../../fn.cpp" line="2730"/>
         <location filename="../../fn.cpp" line="4094"/>
         <source>Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)</source>
-        <translation>فايلهای تصويری (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)</translation>
+        <translation>فايلهای تصويری (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;همه‌ی فايلها (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2903"/>
@@ -1378,12 +1377,12 @@
     <message>
         <location filename="../../fn.cpp" line="5332"/>
         <source>Export HTML</source>
-        <translation>تبديل به HTML</translation>
+        <translation>صدور به HTML</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5337"/>
         <source>Export:</source>
-        <translation>تبديل:</translation>
+        <translation>صدور:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5338"/>
@@ -1630,7 +1629,7 @@ Needs restarting of FeatherNotes to take effect.</source>
 اگر اتنخاب شود، دکمه‌ی بستن، روی نوار بالايی پنجره، باعث
 خروج از برنامه نمی‌شود بلکه پنجره را به درون جعبه‌ی وظايف می‌برد.
 
-برای فعال شدن نيازمند شروع مجدد برنامه است.</translation>
+برای فعال شدن، نيازمند شروع مجدد برنامه است.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="132"/>
@@ -1641,7 +1640,7 @@ Needs restarting of FeatherNotes to take effect.</source>
         <location filename="../../prefDialog.ui" line="157"/>
         <source>The command line option --tray
 can be used instead of this.</source>
-        <translation>خط فرمان --tray می‌تواند به جای اين تنظيم به کار برده شود.</translation>
+        <translation>خط فرمان --tray می‌تواند به جای اين گزينه به کار برده شود.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="161"/>
@@ -1691,7 +1690,7 @@ a menu button appears on the toolbar.</source>
         <location filename="../../prefDialog.ui" line="209"/>
         <source>Check this under Enlightenment (or, probably, another DE)
 to use the systray icon more easily!</source>
-        <translation>برای استفاده‌ی آسانتر از جعبه‌ی وظايف، اين تنظيم را
+        <translation>برای استفاده‌ی آسانتر از جعبه‌ی وظايف، اين گزينه را
 تحت Enlightenment (يا شايد محيطی ديگر) به کار ببريد.</translation>
     </message>
     <message>
@@ -1716,7 +1715,7 @@ position and then restart FeatherNotes!</source>
 اگز نوار در سوی چپ يا راست باشد، مختصه‌ی X بايد تعيين شود.
 
 پس از تعيين جابجايی مختصات، پنجره را در جايی که می‌خواهيد بگذاريد
-و سپس برتامه را از نو شروع کنيد.</translation>
+و سپس برنامه را از نو شروع کنيد.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="248"/>
@@ -1758,7 +1757,7 @@ Needs restarting of FeatherNotes to take effect.</source>
 a double hyphen with a long dash, etc. while
 the user is typing and under proper circumstances.</source>
         <translation>به صورت پيشفرض، هز سه نقطه با يک ellipsis و
-هر دو خط تيره با يک خط تيره بلند جايگزين می‌شود.</translation>
+هر دو خط تيره با يک خط تيره‌ی بلند جايگزين می‌شود.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="354"/>
@@ -1773,7 +1772,7 @@ Leave empty for the system default.
 
 Takes effect after closing this dialog.</source>
         <translation>برای چسباندن تاريخ و زمان بکار می‌رود.
-برای استفاده از قالب پيشفرض خالی بگذاريد.
+برای استفاده از قالب پيشفرض، خالی بگذاريد.
 
 پس از بستن اين ديالوگ اثر می‌کند.</translation>
     </message>
@@ -1834,7 +1833,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../prefDialog.ui" line="554"/>
         <source>Open recent files separately</source>
-        <translation>باز کزدن فايلهای تازه بطور جداگانه</translation>
+        <translation>باز کردن فايلهای تازه بطور جداگانه</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="578"/>
