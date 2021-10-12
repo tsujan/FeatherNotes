@@ -5,6 +5,7 @@ V0.10.0
  * Better smooth scrolling from inside the view (especially with touchpad).
  * Scroll one page per wheel turn when the cursor is on the vertical scrollbar and half the page when Shift is also pressed.
  * Scroll the view up/down by a single step without moving text cursor with Ctrl+Up/Down. Also, scroll the view up/down by one page without moving text cursor with Ctrl+PageUp/PageDown.
+ * Don't try to save or restore window position under Wayland because, otherwise, menus might appear at wrong positions.
 
 V0.9.0
 ---------

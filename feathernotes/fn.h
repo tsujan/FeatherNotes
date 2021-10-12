@@ -325,7 +325,6 @@ private slots:
     void replace();
     void replaceAll();
     void showAndFocus();
-    void stealFocus();
     void trayActivated (QSystemTrayIcon::ActivationReason r);
     void activateTray();
     void txtPrint();
@@ -357,7 +356,7 @@ private:
     void resizeEvent (QResizeEvent *event);
     void showEvent (QShowEvent *event);
     void showDoc (QDomDocument &doc, int node = -1);
-    void setTitle (const QString& fname);
+    void setTitle (const QString &fname);
     void notSavedOrOpened (bool notSaved);
     void setNodesTexts();
     bool unSaved (bool modified);
@@ -365,8 +364,8 @@ private:
     TextEdit *newWidget();
     void mergeFormatOnWordOrSelection (const QTextCharFormat &format);
     void setNewFont (DomItem *item, const QTextCharFormat &fmt);
-    QTextCursor finding (const QString& str,
-                         const QTextCursor& start,
+    QTextCursor finding (const QString &str,
+                         const QTextCursor &start,
                          QTextDocument::FindFlags flags) const;
     void findInTags();
     void reallySetSearchFlags (bool h);
@@ -387,7 +386,7 @@ private:
 #endif
 
     Ui::FN *ui;
-    bool isX11_;
+    bool isX11_, isWayland_;
     bool closed_; // Whether FN::closeEvent() is called before quitting.
     //QWidget *dummyWidget; // For hiding the main window while keeping all its state info.
     QSystemTrayIcon *tray_;

@@ -21,6 +21,7 @@
 #include <QFileDialog>
 #include <QTreeView>
 #include <QTimer>
+#include <QGuiApplication>
 
 namespace FeatherNotes {
 
@@ -43,7 +44,7 @@ public:
 
 protected:
     void showEvent(QShowEvent * event) {
-        if (p)
+        if (p && QGuiApplication::platformName() != "wayland")
             QTimer::singleShot (0, this, &FileDialog::center);
         QFileDialog::showEvent (event);
     }

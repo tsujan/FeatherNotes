@@ -91,6 +91,11 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     isX11_ = false;
 #endif // HAS_X11
 
+    if (isX11_)
+        isWayland_ = false;
+    else
+        isWayland_ = (QString::compare (QGuiApplication::platformName(), "wayland", Qt::CaseInsensitive) == 0);
+
     ui->setupUi (this);
 
     closed_ = false;
@@ -477,7 +482,7 @@ bool FN::close()
     if (sender != nullptr && sender->objectName() == "trayQuit" && findChildren<QDialog *>().count() > 0)
     { // don't respond to the tray icon when there's a dialog
         raise();
-        activateWindow();
+        if (!isWayland_) activateWindow();
         return false;
     }
 
@@ -490,7 +495,7 @@ void FN::closeEvent (QCloseEvent *event)
     if (!quitting_)
     {
         event->ignore();
-        if (!isMaximized() && !isFullScreen())
+        if (!isMaximized() && !isFullScreen() && !isWayland_)
         {
             position_.setX (geometry().x());
             position_.setY (geometry().y());
@@ -521,7 +526,7 @@ void FN::closeEvent (QCloseEvent *event)
                     else
                     {
                         raise();
-                        activateWindow();
+                        if (!isWayland_) activateWindow();
                     }
                 }
                 else if (!underE_ && (!isVisible() || !isActiveWindow()))
@@ -547,7 +552,7 @@ void FN::closeEvent (QCloseEvent *event)
                     else
                     {
                         raise();
-                        activateWindow();
+                        if (!isWayland_) activateWindow();
                     }
                 }
                 else if (!underE_ && (!isVisible() || !isActiveWindow()))
@@ -744,7 +749,7 @@ void FN::newNote()
     if (sender != nullptr && sender->objectName() == "trayNew" && findChildren<QDialog *>().count() > 0)
     { // don't respond to the tray icon when there's a dialog
         raise();
-        activateWindow();
+        if (!isWayland_) activateWindow();
         return;
     }
     closeTagsDialog();
@@ -763,7 +768,7 @@ void FN::newNote()
             else
             {
                 raise();
-                activateWindow();
+                if (!isWayland_) activateWindow();
             }
         }
         else if (!underE_ && (!isVisible() || !isActiveWindow()))
@@ -808,8 +813,11 @@ void FN::newNote()
         msgBox.setParent (this, Qt::Dialog);
         msgBox.setWindowModality (Qt::WindowModal);
         msgBox.show();
-        msgBox.move (x() + width()/2 - msgBox.width()/2,
-                     y() + height()/2 - msgBox.height()/ 2);
+        if (!isWayland_)
+        {
+            msgBox.move (x() + width()/2 - msgBox.width()/2,
+                         y() + height()/2 - msgBox.height()/ 2);
+        }
         switch (msgBox.exec())
         {
         case QMessageBox::Yes:
@@ -858,7 +866,7 @@ void FN::newNote()
     docProp();
 }
 /*************************/
-void FN::setTitle (const QString& fname)
+void FN::setTitle (const QString &fname)
 {
     QFileInfo fileInfo;
     if (fname.isEmpty()
@@ -906,8 +914,11 @@ bool FN::unSaved (bool modified)
     msgBox.setWindowModality (Qt::WindowModal);
     /* enforce a central position */
     msgBox.show();
-    msgBox.move (x() + width()/2 - msgBox.width()/2,
-                 y() + height()/2 - msgBox.height()/ 2);
+    if (!isWayland_)
+    {
+        msgBox.move (x() + width()/2 - msgBox.width()/2,
+                     y() + height()/2 - msgBox.height()/ 2);
+    }
     switch (msgBox.exec())
     {
     case QMessageBox::Save:
@@ -1218,7 +1229,7 @@ void FN::openFile()
     if (sender != nullptr && sender->objectName() == "trayOpen" && findChildren<QDialog *>().count() > 0)
     { // don't respond to the tray icon when there's a dialog
         raise();
-        activateWindow();
+        if (!isWayland_) activateWindow();
         return;
     }
     closeTagsDialog();
@@ -1237,7 +1248,7 @@ void FN::openFile()
             else
             {
                 raise();
-                activateWindow();
+                if (!isWayland_) activateWindow();
             }
         }
         else if (!underE_ && (!isVisible() || !isActiveWindow()))
@@ -1338,7 +1349,7 @@ void FN::openFNDoc (const QString &filePath)
     QTimer::singleShot (0, this, [this, filePath] () {
         fileOpen (filePath);
         raise();
-        activateWindow();
+        if (!isWayland_) activateWindow();
     });
 }
 /*************************/
@@ -2530,8 +2541,11 @@ void FN::deleteNode()
     msgBox.changeButtonText (QMessageBox::No, tr ("No"));
     msgBox.setDefaultButton (QMessageBox::No);
     msgBox.show();
-    msgBox.move (x() + width()/2 - msgBox.width()/2,
-                 y() + height()/2 - msgBox.height()/ 2);
+    if (!isWayland_)
+    {
+        msgBox.move (x() + width()/2 - msgBox.width()/2,
+                     y() + height()/2 - msgBox.height()/ 2);
+    }
     switch (msgBox.exec()) {
     case QMessageBox::Yes:
         break;
@@ -3305,7 +3319,7 @@ void FN::findInTags()
                       y() + height()/2 - TagsDialog->height());*/
     TagsDialog->raise();
     TagsDialog->raise();
-    TagsDialog->activateWindow();
+    if (!isWayland_) TagsDialog->activateWindow();
 }
 /*************************/
 // Closes tag matches dialog.
@@ -3398,7 +3412,7 @@ void FN::replaceDock()
         ui->dockReplace->setTabOrder (ui->lineEditFind, ui->lineEditReplace);
         ui->dockReplace->setTabOrder (ui->lineEditReplace, ui->rplNextButton);
         ui->dockReplace->raise();
-        ui->dockReplace->activateWindow();
+        if (!isWayland_) ui->dockReplace->activateWindow();
         if (!ui->lineEditFind->hasFocus())
             ui->lineEditFind->setFocus();
         return;
@@ -3730,7 +3744,7 @@ void FN::showEvent (QShowEvent *event)
     if (!shownBefore_ && !event->spontaneous())
     {
         shownBefore_ = true;
-        if (remPosition_)
+        if (remPosition_ && !isWayland_)
         {
             QSize theSize = (remSize_ ? winSize_ : startSize_);
             setGeometry (position_.x() - (underE_ ? EShift_.width() : 0), position_.y() - (underE_ ? EShift_.height() : 0),
@@ -3744,17 +3758,16 @@ void FN::showAndFocus()
 {
     show();
     raise();
-    activateWindow();
     if (ui->stackedWidget->count() > 0)
         qobject_cast< TextEdit *>(ui->stackedWidget->currentWidget())->setFocus();
-    // to bypass focus stealing prevention
-    QTimer::singleShot (0, this, &FN::stealFocus);
-}
-/*************************/
-void FN::stealFocus()
-{
-    if (QWindow *win = windowHandle())
-        win->requestActivate();
+    if (!isWayland_)
+    { // to bypass focus stealing prevention
+        activateWindow();
+        QTimer::singleShot (0, this, [this] {
+            if (QWindow *win = windowHandle())
+                win->requestActivate();
+        });
+    }
 }
 /*************************/
 void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
@@ -3765,7 +3778,7 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
     if (QObject::sender() == tray_ && findChildren<QDialog *>().count() > 0)
     { // don't respond to the tray icon when there's a dialog
         raise();
-        activateWindow();
+        if (!isWayland_) activateWindow();
         return;
     }
 
@@ -3809,7 +3822,7 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
         {
             if (isActiveWindow())
             {
-                if (!isMaximized() && !isFullScreen())
+                if (!isMaximized() && !isFullScreen() && !isWayland_)
                 {
                     position_.setX (g.x());
                     position_.setY (g.y());
@@ -3837,7 +3850,8 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
         else
         {
             hide();
-            setGeometry (position_.x(), position_.y(), g.width(), g.height());
+            if (!isWayland_)
+                setGeometry (position_.x(), position_.y(), g.width(), g.height());
             QTimer::singleShot (0, this, &FN::showAndFocus);
         }
     }
@@ -4065,7 +4079,7 @@ void FN::imageEmbed (const QString &path)
                           .arg (h));
 
     raise();
-    activateWindow();
+    if (!isWayland_) activateWindow();
 }
 /*************************/
 void FN::setImagePath (bool)
@@ -4332,8 +4346,11 @@ void FN::saveImage()
                 msgBox.setParent (this, Qt::Dialog);
                 msgBox.setWindowModality (Qt::WindowModal);
                 msgBox.show();
-                msgBox.move (x() + width()/2 - msgBox.width()/2,
-                             y() + height()/2 - msgBox.height()/ 2);
+                if (!isWayland_)
+                {
+                    msgBox.move (x() + width()/2 - msgBox.width()/2,
+                                 y() + height()/2 - msgBox.height()/ 2);
+                }
                 switch (msgBox.exec())
                 {
                 case QMessageBox::Yes:
@@ -5047,15 +5064,18 @@ void FN::writeGeometryConfig (bool withLastNodeInfo)
 
     if (remPosition_)
     {
-        QPoint CurrPos;
-        if (isVisible() && !isMaximized() && !isFullScreen())
+        if (!isWayland_)
         {
-            CurrPos.setX (geometry().x());
-            CurrPos.setY (geometry().y());
+            QPoint CurrPos;
+            if (isVisible() && !isMaximized() && !isFullScreen())
+            {
+                CurrPos.setX (geometry().x());
+                CurrPos.setY (geometry().y());
+            }
+            else
+                CurrPos = position_;
+            settings.setValue ("position", CurrPos);
         }
-        else
-            CurrPos = position_;
-        settings.setValue ("position", CurrPos);
     }
     else
         settings.setValue ("position", "none");
@@ -5724,7 +5744,7 @@ bool FN::isPswrdCorrect()
             else // not needed really
             {
                 raise();
-                activateWindow();
+                if (!isWayland_) activateWindow();
             }
             QCoreApplication::processEvents();
         }
@@ -5737,7 +5757,7 @@ bool FN::isPswrdCorrect()
     else if (!isVisible() || !isActiveWindow())
     {
         raise();
-        activateWindow();
+        if (!isWayland_) activateWindow();
         QCoreApplication::processEvents();
     }
     QCoreApplication::processEvents();
