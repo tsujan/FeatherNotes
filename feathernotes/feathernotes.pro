@@ -74,7 +74,8 @@ else:unix:!macx:!haiku {
 }
 
 contains(WITH_HUNSPELL, YES) {
-  LIBS += -lhunspell
+  CONFIG += link_pkgconfig
+  PKGCONFIG += hunspell
   SOURCES += spellDialog.cpp spellChecker.cpp
   HEADERS += spellDialog.h spellChecker.h
   FORMS += spellDialog.ui
