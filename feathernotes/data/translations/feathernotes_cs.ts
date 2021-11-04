@@ -531,7 +531,7 @@
     <message>
         <location filename="../../fn.ui" line="857"/>
         <source>&amp;Append Sibling</source>
-        <translation>&amp;Připojit příbuzné</translation>
+        <translation>&amp;Připojit ty na stejné úrovni</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="860"/>
@@ -1063,7 +1063,7 @@
         <location filename="../../fn.cpp" line="5658"/>
         <location filename="../../fn.cpp" line="5778"/>
         <source>Cancel</source>
-        <translation>Zrušit</translation>
+        <translation>Storno</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1302"/>
@@ -1137,7 +1137,7 @@
     <message>
         <location filename="../../fn.cpp" line="3291"/>
         <source>%1 Matches</source>
-        <translation>%1shod</translation>
+        <translation>%1 shod</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3293"/>
