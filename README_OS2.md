@@ -14,5 +14,5 @@ on the command line, you have to redirect the output, e.g. `feathernotes -h | te
 ## Miscellanea
 * This port was made by Jochen Schäfer (os2@joschs-robotics.de). You find OS/2 binaries
  on my Github repository (https://github.com/josch1710/FeatherNotes/releases).
-* The application icon was made by the great David Graser from the original.
+
 
