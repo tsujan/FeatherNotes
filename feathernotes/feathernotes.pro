@@ -79,6 +79,7 @@ contains(WITH_HUNSPELL, YES) {
   }
   os2 {
   	LIBS += -lhunspell-1.7_dll
+  	INCLUDEPATH += /@unixroot/usr/include/hunspell
   }
   SOURCES += spellDialog.cpp spellChecker.cpp
   HEADERS += spellDialog.h spellChecker.h
