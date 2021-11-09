@@ -60,7 +60,7 @@
     <message>
         <location filename="../../fn.ui" line="115"/>
         <source>Search only in names (Ctrl+Shift+F7)</source>
-        <translation type="unfinished"></translation>
+        <translation>Hae vain nimistä (Ctrl+Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="118"/>
@@ -70,7 +70,7 @@
     <message>
         <location filename="../../fn.ui" line="128"/>
         <source>Search only in tags (Shift+F7)</source>
-        <translation type="unfinished"></translation>
+        <translation>Hae vain tageistä (Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="131"/>
@@ -80,7 +80,7 @@
     <message>
         <location filename="../../fn.ui" line="144"/>
         <source>Search in all nodes (F7)</source>
-        <translation type="unfinished"></translation>
+        <translation>Hae kaikista nodeista (F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="147"/>
@@ -105,12 +105,12 @@
     <message>
         <location filename="../../fn.ui" line="167"/>
         <source>Match Case (F5)</source>
-        <translation type="unfinished"></translation>
+        <translation>Täsmää Kirjasinkoko (F5)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="170"/>
         <source>Match Case</source>
-        <translation type="unfinished"></translation>
+        <translation>Täsmää Kirjasinkoko</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="173"/>
@@ -135,7 +135,7 @@
     <message>
         <location filename="../../fn.ui" line="264"/>
         <source>For&amp;mat</source>
-        <translation type="unfinished"></translation>
+        <translation>Muotoilu</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="296"/>
@@ -171,12 +171,12 @@
     <message>
         <location filename="../../fn.ui" line="458"/>
         <source>To be replaced</source>
-        <translation type="unfinished"></translation>
+        <translation>Korvattava</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="471"/>
         <source>Replacing text</source>
-        <translation type="unfinished"></translation>
+        <translation>Korvaava teksti</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="481"/>
@@ -201,7 +201,7 @@
     <message>
         <location filename="../../fn.ui" line="513"/>
         <source>Replace all (F10)</source>
-        <translation type="unfinished"></translation>
+        <translation>Korvaa kaikki (F10)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="516"/>
@@ -278,7 +278,7 @@
     <message>
         <location filename="../../fn.ui" line="589"/>
         <source>Show/hide searchbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä/piilota hakupalkki</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="592"/>
@@ -288,12 +288,12 @@
     <message>
         <location filename="../../fn.ui" line="600"/>
         <source>&amp;Clear All Formats</source>
-        <translation type="unfinished"></translation>
+        <translation>Poista Kaikki Muotoilut</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="603"/>
         <source>Clear all formats</source>
-        <translation type="unfinished"></translation>
+        <translation>Poista kaikki muotoilut</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="606"/>
@@ -333,12 +333,12 @@
     <message>
         <location filename="../../fn.ui" line="651"/>
         <source>&amp;Underline</source>
-        <translation type="unfinished"></translation>
+        <translation>Alleviivaus</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="654"/>
         <source>Underline</source>
-        <translation type="unfinished"></translation>
+        <translation>Alleviivaus</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="657"/>
@@ -348,12 +348,12 @@
     <message>
         <location filename="../../fn.ui" line="668"/>
         <source>&amp;Strike Through</source>
-        <translation type="unfinished"></translation>
+        <translation>Yliviivaus</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="671"/>
         <source>Strike through</source>
-        <translation type="unfinished"></translation>
+        <translation>Yliviivaus</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="674"/>
@@ -399,7 +399,7 @@
         <location filename="../../fn.ui" line="712"/>
         <location filename="../../fn.cpp" line="641"/>
         <source>&amp;New Note</source>
-        <translation type="unfinished"></translation>
+        <translation>Uusi Merkintä</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="715"/>
@@ -429,7 +429,7 @@
     <message>
         <location filename="../../fn.ui" line="745"/>
         <source>P&amp;rint with Sub-Nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Tulosta alisolmujen kanssa</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="753"/>
@@ -495,13 +495,13 @@
     <message>
         <location filename="../../fn.ui" line="821"/>
         <source>E&amp;mbed Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Upota Kuva</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="824"/>
         <location filename="../../fn.cpp" line="3976"/>
         <source>Embed Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Upota Kuva</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="827"/>
@@ -511,7 +511,7 @@
     <message>
         <location filename="../../fn.ui" line="835"/>
         <source>E&amp;xpand All</source>
-        <translation type="unfinished"></translation>
+        <translation>Laajenna Kaikki</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="838"/>
@@ -521,7 +521,7 @@
     <message>
         <location filename="../../fn.ui" line="846"/>
         <source>Collap&amp;se All</source>
-        <translation type="unfinished"></translation>
+        <translation>Romahduta Kaikki</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="849"/>
@@ -531,7 +531,7 @@
     <message>
         <location filename="../../fn.ui" line="857"/>
         <source>&amp;Append Sibling</source>
-        <translation type="unfinished"></translation>
+        <translation>Liitä Sisarus</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="860"/>
@@ -541,7 +541,7 @@
     <message>
         <location filename="../../fn.ui" line="868"/>
         <source>Append &amp;Child</source>
-        <translation type="unfinished"></translation>
+        <translation>Liitä Lapsi</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="871"/>
@@ -551,7 +551,7 @@
     <message>
         <location filename="../../fn.ui" line="879"/>
         <source>&amp;Delete Node</source>
-        <translation type="unfinished"></translation>
+        <translation>Poista Solmu</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="882"/>
@@ -561,7 +561,7 @@
     <message>
         <location filename="../../fn.ui" line="890"/>
         <source>Move &amp;Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Siirrä Ylös</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="893"/>
@@ -571,7 +571,7 @@
     <message>
         <location filename="../../fn.ui" line="901"/>
         <source>Move Do&amp;wn</source>
-        <translation type="unfinished"></translation>
+        <translation>Siirrä Alas</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="904"/>
@@ -581,7 +581,7 @@
     <message>
         <location filename="../../fn.ui" line="912"/>
         <source>Re&amp;name Node</source>
-        <translation type="unfinished"></translation>
+        <translation>Muuta Solmun Nimeä</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="915"/>
@@ -591,7 +591,7 @@
     <message>
         <location filename="../../fn.ui" line="920"/>
         <source>Tree Pr&amp;operties</source>
-        <translation type="unfinished"></translation>
+        <translation>Puun Ominaisuudet</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="923"/>
@@ -601,12 +601,12 @@
     <message>
         <location filename="../../fn.ui" line="931"/>
         <source>Document &amp;Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Asiakirjan Fontti</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="945"/>
         <source>&amp;Wrap Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiedo Rivit</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="948"/>
@@ -616,7 +616,7 @@
     <message>
         <location filename="../../fn.ui" line="962"/>
         <source>&amp;Auto-Indentation</source>
-        <translation type="unfinished"></translation>
+        <translation>Automaattinen Sisennys</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="965"/>
@@ -656,17 +656,17 @@
     <message>
         <location filename="../../fn.ui" line="1005"/>
         <source>Pr&amp;int All Nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Tulosta Kaikki Solmut</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1016"/>
         <source>Superscrip&amp;t</source>
-        <translation type="unfinished"></translation>
+        <translation>Yläindeksi</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1019"/>
         <source>Superscript</source>
-        <translation type="unfinished"></translation>
+        <translation>Yläindeksi</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1022"/>
@@ -676,12 +676,12 @@
     <message>
         <location filename="../../fn.ui" line="1033"/>
         <source>Subscri&amp;pt</source>
-        <translation type="unfinished"></translation>
+        <translation>Alaindeksi</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1036"/>
         <source>Subscript</source>
-        <translation type="unfinished"></translation>
+        <translation>Alaindeksi</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1039"/>
@@ -691,12 +691,12 @@
     <message>
         <location filename="../../fn.ui" line="1050"/>
         <source>C&amp;enter</source>
-        <translation type="unfinished"></translation>
+        <translation>Keskitä</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1053"/>
         <source>Align center</source>
-        <translation type="unfinished"></translation>
+        <translation>Keskitä</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1056"/>
@@ -707,12 +707,12 @@
         <location filename="../../fn.ui" line="1067"/>
         <location filename="../../fn.cpp" line="2015"/>
         <source>&amp;Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Oikealle</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1070"/>
         <source>Align right</source>
-        <translation type="unfinished"></translation>
+        <translation>Keskitä oikealle</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1073"/>
@@ -723,12 +723,12 @@
         <location filename="../../fn.ui" line="1084"/>
         <location filename="../../fn.cpp" line="2009"/>
         <source>&amp;Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Vasemmalle</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1087"/>
         <source>Align left</source>
-        <translation type="unfinished"></translation>
+        <translation>Keskitä vasemmalle</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1090"/>
@@ -738,12 +738,12 @@
     <message>
         <location filename="../../fn.ui" line="1101"/>
         <source>&amp;Justify</source>
-        <translation type="unfinished"></translation>
+        <translation>Tasaa</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1104"/>
         <source>Justify</source>
-        <translation type="unfinished"></translation>
+        <translation>Tasaa</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1107"/>
@@ -753,7 +753,7 @@
     <message>
         <location filename="../../fn.ui" line="1115"/>
         <source>&amp;Prepend Sibling</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää Sisarus Alkuun</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1118"/>
@@ -763,7 +763,7 @@
     <message>
         <location filename="../../fn.ui" line="1126"/>
         <source>Move &amp;Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Siirrä Vasemmalle</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1129"/>
@@ -773,7 +773,7 @@
     <message>
         <location filename="../../fn.ui" line="1137"/>
         <source>Move &amp;Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Siirrä Oikealle</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1140"/>
@@ -783,7 +783,7 @@
     <message>
         <location filename="../../fn.ui" line="1148"/>
         <source>h&amp;2</source>
-        <translation type="unfinished"></translation>
+        <translation>h&amp;2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1151"/>
@@ -798,7 +798,7 @@
     <message>
         <location filename="../../fn.ui" line="1162"/>
         <source>h&amp;1</source>
-        <translation type="unfinished"></translation>
+        <translation>h&amp;1</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1165"/>
@@ -813,7 +813,7 @@
     <message>
         <location filename="../../fn.ui" line="1176"/>
         <source>h&amp;3</source>
-        <translation type="unfinished"></translation>
+        <translation>h&amp;3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1179"/>
@@ -828,22 +828,22 @@
     <message>
         <location filename="../../fn.ui" line="1190"/>
         <source>&amp;Node Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Solmun Fontti</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1193"/>
         <source>Node Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Solmun Fontti</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1198"/>
         <source>Scale I&amp;mage(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Muuta Kuvakokoa</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1206"/>
         <source>Paste &amp;HTML</source>
-        <translation type="unfinished"></translation>
+        <translation>Liitä HTML</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1209"/>
@@ -853,7 +853,7 @@
     <message>
         <location filename="../../fn.ui" line="1217"/>
         <source>&amp;Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Tagit</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1220"/>
@@ -863,7 +863,7 @@
     <message>
         <location filename="../../fn.ui" line="1228"/>
         <source>Insert Lin&amp;k</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää Linkki</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1231"/>
@@ -873,12 +873,12 @@
     <message>
         <location filename="../../fn.ui" line="1236"/>
         <source>C&amp;opy Link</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopioi Linkki</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1244"/>
         <source>I&amp;nsert Table</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää Taulukko</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1247"/>
@@ -888,47 +888,47 @@
     <message>
         <location filename="../../fn.ui" line="1252"/>
         <source>Append Row</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää Rivi Loppuun</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1257"/>
         <source>Delete Row</source>
-        <translation type="unfinished"></translation>
+        <translation>Poista Rivi</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1262"/>
         <source>Append Column</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää Sarake Loppuun</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1267"/>
         <source>Delete Column</source>
-        <translation type="unfinished"></translation>
+        <translation>Poista Sarake</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1272"/>
         <source>Merge Cells</source>
-        <translation type="unfinished"></translation>
+        <translation>Yhdistä Solut</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1277"/>
         <source>Prepend Row</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää Rivi Alkuun</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1282"/>
         <source>Prepend Column</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää Sarake Alkuun</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1290"/>
         <source>Export &amp;HTML</source>
-        <translation type="unfinished"></translation>
+        <translation>Vie HTML</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1295"/>
         <source>Save Ima&amp;ge(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tallenna Kuva(t)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1306"/>
