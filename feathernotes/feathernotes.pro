@@ -73,14 +73,14 @@ else:unix:!macx:!haiku:!os2 {
   DEFINES += HAS_X11
 }
 
+# OS/2's qmake port doesn't seem to handle setting VARIABLES
+os2 {
+  WITH_HUNSPELL=YES
+}
+
 contains(WITH_HUNSPELL, YES) {
-	unix {
-    LIBS += -lhunspell
-  }
-  os2 {
-  	LIBS += -lhunspell-1.7_dll
-  	INCLUDEPATH += /@unixroot/usr/include/hunspell
-  }
+  CONFIG += link_pkgconfig
+  PKGCONFIG += hunspell
   SOURCES += spellDialog.cpp spellChecker.cpp
   HEADERS += spellDialog.h spellChecker.h
   FORMS += spellDialog.ui

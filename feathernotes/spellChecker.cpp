@@ -22,7 +22,7 @@
 #include <QStringList>
 #include <QRegularExpression>
 
-#include <hunspell/hunspell.hxx>
+#include <hunspell.hxx>
 
 namespace FeatherNotes {
 
