@@ -1159,7 +1159,7 @@
     <message>
         <location filename="../../fn.cpp" line="3717"/>
         <source>No Replacement</source>
-        <translation>Ei Korvausta</translation>
+        <translation>Ei Korvattavaa</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3719"/>
@@ -1493,7 +1493,7 @@ Korvataanko se?
     <message>
         <location filename="../../fn.cpp" line="6076"/>
         <source>See Preferences → Text → Spell Checking!</source>
-        <translation>Huomaa Asetukset → Teksti → Oikeinkirjoitus!</translation>
+        <translation>Asetukset → Teksti → Oikeinkirjoituksen Tarkistus!</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6098"/>
@@ -1503,7 +1503,7 @@ Korvataanko se?
     <message>
         <location filename="../../fn.cpp" line="6103"/>
         <source>The Hunspell dictionary does not exist.</source>
-        <translation>Hunspell sanakirjaa ei löydy.</translation>
+        <translation>Hunspell sanakirjaa ei ole olemassa.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6111"/>
