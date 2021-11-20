@@ -1564,8 +1564,8 @@ Uncheck to set a fixed size!</source>
 při ukončení aplikace uloží velikost
 okna.
 
-Pro nastavení pevné velikosti zrušte
-zaškrnutí!</translation>
+Pokud chcete nastavit pevnou velikost, zrušte
+zaškrtnutí!</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="42"/>
@@ -1635,7 +1635,7 @@ Needs restarting of FeatherNotes to take effect.</source>
 oblasti systémového panelu. Pokud je zaškrtnuto,
 tlačítko zavřít na titulní liště okna ho namísto
 ukončení aplikace zminimalizuje do právě do
-oznamovací oblasti..
+oznamovací oblasti.
 
 Aby se změna projevila, je třeba FeatherNotes
 zavřít a spustit znovu.</translation>
@@ -1655,7 +1655,7 @@ volbu příkazového řádku --tray</translation>
     <message>
         <location filename="../../prefDialog.ui" line="161"/>
         <source>Start i&amp;conified to tray</source>
-        <translation>Spouštět zminimalizované do oznamovací oblasti</translation>
+        <translation>&amp;Spouštět zminimalizované do oznamovací oblasti</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="170"/>
@@ -1673,7 +1673,7 @@ volbu příkazového řádku --tray</translation>
 the size of toolbar icons.</source>
         <translation>Ve výchozím stavu je velikost ikon na liště
 nástrojů určována právě používaným stylem
-widgetů.</translation>
+ovládacích prvků.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="184"/>
@@ -1708,7 +1708,7 @@ byla snáze použitelná!</translation>
     <message>
         <location filename="../../prefDialog.ui" line="213"/>
         <source>Running &amp;under Enlightenment?</source>
-        <translation>Provoz&amp;ujete v Enlightenment?</translation>
+        <translation>Provoz&amp;ujete v prostředí Enlightenment?</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="238"/>
@@ -1769,7 +1769,7 @@ Aby se změna projevila, je třeba FeatherNotes ukončit a spustit znovu.</trans
         <source>A triple period is replaced with an ellipsis,
 a double hyphen with a long dash, etc. while
 the user is typing and under proper circumstances.</source>
-        <translation>Za správných podmínek, jsou tři tečky jsou
+        <translation>Pokud vše funguje, jsou tři tečky jsou
 nahrazeny výpustkou, dva spojovníky
 pomlčkou, atd – zatímco uživatel píše.</translation>
     </message>
@@ -1786,7 +1786,7 @@ Leave empty for the system default.
 
 Takes effect after closing this dialog.</source>
         <translation>Slouží pro vkládání data a času.
-Pro použití systémového výchozího nevyplňujte.
+Pokud chcete použít systémový výchozí, nevyplňujte.
 
 Uplatní se po zavření tohoto dialogu.</translation>
     </message>
