@@ -101,7 +101,7 @@ unix {
 else:win32|os2 {
   #TRANSLATIONS
   exists($$[QT_INSTALL_BINS]/lrelease.exe) {
-  	win32 {
+    win32 {
       TRANSLATIONS = $$system("dir /b /S feathernotes_*.ts")
     }
     os2 {

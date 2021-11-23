@@ -910,7 +910,8 @@ void TextEdit::wheelEvent (QWheelEvent *e)
     }
 
     /* smooth scrolling */
-    if (e->spontaneous() && e->source() == Qt::MouseEventNotSynthesized)
+    int wsl = QApplication::wheelScrollLines();
+    if (wsl > 0 && e->spontaneous() && e->source() == Qt::MouseEventNotSynthesized)
     {
         bool horizontal (qAbs (deltaPoint.x()) > qAbs (deltaPoint.y()));
         QScrollBar* sbar = horizontal ? horizontalScrollBar()
@@ -924,13 +925,13 @@ void TextEdit::wheelEvent (QWheelEvent *e)
                 return; // the scrollbar can't move
             }
 
-            if (QApplication::wheelScrollLines() > 1)
+            if (wsl > 1)
             {
                 if ((e->modifiers() & Qt::ShiftModifier)
                     || qAbs (delta) < 120) // touchpad
                 { // scrolling with minimum speed
-                    if (qAbs (delta) >= scrollAnimFrames * QApplication::wheelScrollLines())
-                        delta /= QApplication::wheelScrollLines();
+                    if (qAbs (delta) >= scrollAnimFrames * wsl)
+                        delta /= wsl;
                 }
             }
 
