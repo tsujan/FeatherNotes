@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ca">
+<TS version="2.1" language="hr">
 <context>
     <name>FeatherNotes::AboutDialog</name>
     <message>
         <location filename="../../about.ui" line="157"/>
         <source>License</source>
-        <translation>Llicència</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -14,12 +14,12 @@
     <message>
         <location filename="../../colorLabel.cpp" line="31"/>
         <source>Click to change color.</source>
-        <translation>Feu clic per canviar el color.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../colorLabel.cpp" line="53"/>
         <source>Select Color</source>
-        <translation>Selecciona el color</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -30,138 +30,138 @@
         <location filename="../../fn.cpp" line="3726"/>
         <location filename="../../fn.cpp" line="5526"/>
         <source>FeatherNotes</source>
-        <translation>FeatherNotes</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="65"/>
         <source>Next (F3)</source>
-        <translation>Següent (F3)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="68"/>
         <source>F3</source>
-        <translation>F3</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="81"/>
         <source>Previous (F4)</source>
-        <translation>Anterior (F4)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="84"/>
         <source>F4</source>
-        <translation>F4</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="100"/>
         <source>Search...</source>
-        <translation>Cerca...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="115"/>
         <source>Search only in names (Ctrl+Shift+F7)</source>
-        <translation>Cerca només als noms (Ctrl+Maj+F7)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="118"/>
         <source>Ctrl+Shift+F7</source>
-        <translation>Ctrl+Maj+F7</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="128"/>
         <source>Search only in tags (Shift+F7)</source>
-        <translation>Cerca només a les etiquetes (Maj+F7)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="131"/>
         <source>Shift+F7</source>
-        <translation>Maj+F7</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="144"/>
         <source>Search in all nodes (F7)</source>
-        <translation>Cerca en tots els nodes (F7)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="147"/>
         <source>F7</source>
-        <translation>F7</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="186"/>
         <source>Whole Word (F6)</source>
-        <translation>Paraula sencera (F6)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="189"/>
         <source>Whole Word</source>
-        <translation>Paraula sencera</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="192"/>
         <source>F6</source>
-        <translation>F6</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="167"/>
         <source>Match Case (F5)</source>
-        <translation>Distingir entre majúscules i minúscules (F5)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="170"/>
         <source>Match Case</source>
-        <translation>Distingir entre majúscules i minúscules</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="173"/>
         <source>F5</source>
-        <translation>F5</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="219"/>
         <source>&amp;File</source>
-        <translation>&amp;Fitxer</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="223"/>
         <source>Recenl&amp;y Opened</source>
-        <translation>&amp;Oberts recents</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="245"/>
         <source>&amp;Edit</source>
-        <translation>&amp;Edita</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="264"/>
         <source>For&amp;mat</source>
-        <translation>&amp;Format</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="296"/>
         <source>&amp;Tree</source>
-        <translation>&amp;Arbre</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="320"/>
         <source>&amp;Options</source>
-        <translation>&amp;Opcions</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="334"/>
         <source>&amp;Search</source>
-        <translation>&amp;Cerca</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="341"/>
         <location filename="../../fn.ui" line="989"/>
         <source>&amp;Help</source>
-        <translation>&amp;Ajuda</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="438"/>
         <source>Find:</source>
-        <translation>Cerca:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="445"/>
