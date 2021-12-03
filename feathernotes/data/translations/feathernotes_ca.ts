@@ -166,888 +166,889 @@
     <message>
         <location filename="../../fn.ui" line="445"/>
         <source>Replace with:</source>
-        <translation type="unfinished"></translation>
+        <translation>Reemplaça per:</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="458"/>
         <source>To be replaced</source>
-        <translation type="unfinished"></translation>
+        <translation>Per ser substituït</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="471"/>
         <source>Replacing text</source>
-        <translation type="unfinished"></translation>
+        <translation>Text de substitució</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="481"/>
         <source>Previous (F9)</source>
-        <translation type="unfinished"></translation>
+        <translation>Anterior (F9)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="484"/>
         <source>F9</source>
-        <translation type="unfinished"></translation>
+        <translation>F9</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="497"/>
         <source>Next (F8)</source>
-        <translation type="unfinished"></translation>
+        <translation>Següent (F8)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="500"/>
         <source>F8</source>
-        <translation type="unfinished"></translation>
+        <translation>F8</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="513"/>
         <source>Replace all (F10)</source>
-        <translation type="unfinished"></translation>
+        <translation>Substitueix-ho tot (F10)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="516"/>
         <source>F10</source>
-        <translation type="unfinished"></translation>
+        <translation>F10</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="533"/>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Desa</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="536"/>
         <location filename="../../fn.cpp" line="909"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Desa</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="539"/>
         <source>Ctrl+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+S</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="544"/>
         <location filename="../../fn.cpp" line="642"/>
         <source>&amp;Open</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Obre</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="547"/>
         <source>Open a file</source>
-        <translation type="unfinished"></translation>
+        <translation>Obre un fitxer</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="550"/>
         <source>Ctrl+O</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+O</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="558"/>
         <source>&amp;Undo</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Desfés</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="561"/>
         <source>Undo</source>
-        <translation type="unfinished"></translation>
+        <translation>Desfés</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="564"/>
         <source>Ctrl+Z</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Z</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="572"/>
         <source>&amp;Redo</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Refer</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="575"/>
         <source>Redo</source>
-        <translation type="unfinished"></translation>
+        <translation>Refer</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="578"/>
         <source>Ctrl+Shift+Z</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Maj+Z</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="586"/>
         <source>&amp;Find</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Cerca</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="589"/>
         <source>Show/hide searchbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra/oculta la barra de cerca</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="592"/>
         <source>Ctrl+F</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+F</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="600"/>
         <source>&amp;Clear All Formats</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Neteja tots els formats</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="603"/>
         <source>Clear all formats</source>
-        <translation type="unfinished"></translation>
+        <translation>Neteja tots els formats</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="606"/>
         <source>Ctrl+E</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+E</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="617"/>
         <source>&amp;Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Negreta</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="620"/>
         <source>Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>Negreta</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="623"/>
         <source>Ctrl+B</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+B</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="634"/>
         <source>&amp;Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Cursiva</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="637"/>
         <source>Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>Cursiva</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="640"/>
         <source>Ctrl+I</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+I</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="651"/>
         <source>&amp;Underline</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Subratllat</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="654"/>
         <source>Underline</source>
-        <translation type="unfinished"></translation>
+        <translation>Subratllat</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="657"/>
         <source>Ctrl+U</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+U</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="668"/>
         <source>&amp;Strike Through</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ratllat</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="671"/>
         <source>Strike through</source>
-        <translation type="unfinished"></translation>
+        <translation>Ratllat</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="674"/>
         <source>Ctrl+T</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="682"/>
         <source>Te&amp;xt Color</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Color de text</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="685"/>
         <source>Text color</source>
-        <translation type="unfinished"></translation>
+        <translation>Color de text</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="688"/>
         <source>Alt+Shift+T</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Maj+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="696"/>
         <source>Back&amp;ground Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Color de &amp;fons</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="699"/>
         <source>Background color</source>
-        <translation type="unfinished"></translation>
+        <translation>Color de fons</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="702"/>
         <source>Alt+Shift+B</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Maj+B</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="707"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Opcions</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="712"/>
         <location filename="../../fn.cpp" line="641"/>
         <source>&amp;New Note</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nota nova</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="715"/>
         <source>Ctrl+Alt+Shift+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Alt+Maj+N</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="723"/>
         <source>Save &amp;As</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Anomena i desa</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="726"/>
         <source>Ctrl+Shift+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Maj+S</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="734"/>
         <source>&amp;Print</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Imprimeix</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="737"/>
         <source>Ctrl+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+P</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="745"/>
         <source>P&amp;rint with Sub-Nodes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Imprimeix amb subnodes</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="753"/>
         <source>Set Pass&amp;word</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Estableix la contrasenya</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="758"/>
         <location filename="../../fn.cpp" line="644"/>
         <source>&amp;Quit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Surt</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="761"/>
         <source>Ctrl+Q</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Q</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="769"/>
         <source>&amp;Cut</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Talla</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="772"/>
         <source>Ctrl+X</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+X</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="780"/>
         <source>C&amp;opy</source>
-        <translation type="unfinished"></translation>
+        <translation>C&amp;opia</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="783"/>
         <source>Ctrl+C</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+C</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="791"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Enganxa</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="794"/>
         <source>Ctrl+V</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+V</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="802"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Suprimeix</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="810"/>
         <source>&amp;Select All</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Selecciona-ho tot</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="813"/>
         <source>Ctrl+A</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+A</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="821"/>
         <source>E&amp;mbed Image</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Incrusta la imatge</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="824"/>
         <location filename="../../fn.cpp" line="3976"/>
         <source>Embed Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Incrusta la imatge</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="827"/>
         <source>Ctrl+Alt+Shift+I</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Alt+Maj+I</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="835"/>
         <source>E&amp;xpand All</source>
-        <translation type="unfinished"></translation>
+        <translation>E&amp;xpandeix-ho tot</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="838"/>
         <source>Ctrl+Shift+Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Maj+Fletxa avall</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="846"/>
         <source>Collap&amp;se All</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Redueix-ho tot</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="849"/>
         <source>Ctrl+Shift+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Maj+Fletxa amunt</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="857"/>
         <source>&amp;Append Sibling</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Afegeix un germà</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="860"/>
         <source>Ctrl+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="868"/>
         <source>Append &amp;Child</source>
-        <translation type="unfinished"></translation>
+        <translation>Afegeix un &amp;fill</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="871"/>
         <source>Ctrl+Shift+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Maj+N</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="879"/>
         <source>&amp;Delete Node</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Suprimeix el node</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="882"/>
         <source>Ctrl+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+D</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="890"/>
         <source>Move &amp;Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Mou &amp;amunt</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="893"/>
         <source>Alt+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Fletxa amunt</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="901"/>
         <source>Move Do&amp;wn</source>
-        <translation type="unfinished"></translation>
+        <translation>Mou avall</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="904"/>
         <source>Alt+Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Fletxa avall</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="912"/>
         <source>Re&amp;name Node</source>
-        <translation type="unfinished"></translation>
+        <translation>Canvia el nom del node</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="915"/>
         <source>Ctrl+Shift+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Maj+R</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="920"/>
         <source>Tree Pr&amp;operties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propietats de l&apos;arbre</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="923"/>
         <source>Ctrl+Shift+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Maj+D</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="931"/>
         <source>Document &amp;Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipus de lletra del document</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="945"/>
         <source>&amp;Wrap Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ajusta les línies</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="948"/>
         <source>Ctrl+W</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+W</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="962"/>
         <source>&amp;Auto-Indentation</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Sagnat automàtic</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="965"/>
         <source>Ctrl+Shift+I</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Maj+I</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="970"/>
         <source>&amp;Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Preferències</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="973"/>
         <source>Ctrl+Shift+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Maj+P</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="981"/>
         <source>Find and &amp;Replace</source>
-        <translation type="unfinished"></translation>
+        <translation>Cerca i &amp;reemplaça</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="984"/>
         <source>Ctrl+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+R</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="992"/>
         <source>Ctrl+H</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+H</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="997"/>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Quant a</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1005"/>
         <source>Pr&amp;int All Nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Imprimeix &amp;tots els nodes</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1016"/>
         <source>Superscrip&amp;t</source>
-        <translation type="unfinished"></translation>
+        <translation>Superínde&amp;x</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1019"/>
         <source>Superscript</source>
-        <translation type="unfinished"></translation>
+        <translation>Superíndex</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1022"/>
         <source>Alt+Shift+U</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Maj+U</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1033"/>
         <source>Subscri&amp;pt</source>
-        <translation type="unfinished"></translation>
+        <translation>Subín&amp;dex</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1036"/>
         <source>Subscript</source>
-        <translation type="unfinished"></translation>
+        <translation>Subíndex</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1039"/>
         <source>Alt+Shift+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Maj+S</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1050"/>
         <source>C&amp;enter</source>
-        <translation type="unfinished"></translation>
+        <translation>C&amp;entra</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1053"/>
         <source>Align center</source>
-        <translation type="unfinished"></translation>
+        <translation>Alinea el centre</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1056"/>
         <source>Alt+Shift+Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Maj+Fletxa avall</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1067"/>
         <location filename="../../fn.cpp" line="2015"/>
         <source>&amp;Right</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Dreta</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1070"/>
         <source>Align right</source>
-        <translation type="unfinished"></translation>
+        <translation>Alinea a la dreta</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1073"/>
         <source>Alt+Shift+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Maj+Fletxa dreta</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1084"/>
         <location filename="../../fn.cpp" line="2009"/>
         <source>&amp;Left</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Esquerra</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1087"/>
         <source>Align left</source>
-        <translation type="unfinished"></translation>
+        <translation>Alinea a l&apos;esquerra</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1090"/>
         <source>Alt+Shift+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Maj+esquerra</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1101"/>
         <source>&amp;Justify</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Justifica</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1104"/>
         <source>Justify</source>
-        <translation type="unfinished"></translation>
+        <translation>Justifica</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1107"/>
         <source>Alt+Shift+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Maj+Fletxa amunt</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1115"/>
         <source>&amp;Prepend Sibling</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Anteposa germà</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1118"/>
         <source>Ctrl+M</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+M</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1126"/>
         <source>Move &amp;Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Mou a &amp;l&apos;esquerra</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1129"/>
         <source>Alt+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+esquerra</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1137"/>
         <source>Move &amp;Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Mou a la dreta</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1140"/>
         <source>Alt+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Fletxa dreta</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1148"/>
         <source>h&amp;2</source>
-        <translation type="unfinished"></translation>
+        <translation>h&amp;2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1151"/>
         <source>Header 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Capçalera 2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1154"/>
         <source>Ctrl+2</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1162"/>
         <source>h&amp;1</source>
-        <translation type="unfinished"></translation>
+        <translation>h&amp;1</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1165"/>
         <source>Header 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Capçalera 1</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1168"/>
         <source>Ctrl+1</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+1</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1176"/>
         <source>h&amp;3</source>
-        <translation type="unfinished"></translation>
+        <translation>h&amp;3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1179"/>
         <source>Header 3</source>
-        <translation type="unfinished"></translation>
+        <translation>Capçalera 3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1182"/>
         <source>Ctrl+3</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1190"/>
         <source>&amp;Node Font</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tipus de lletra del node</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1193"/>
         <source>Node Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipus de lletra del node</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1198"/>
         <source>Scale I&amp;mage(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Escala les &amp;imatges</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1206"/>
         <source>Paste &amp;HTML</source>
-        <translation type="unfinished"></translation>
+        <translation>Enganxa &amp;HTML</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1209"/>
         <source>Ctrl+Shift+V</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Maj+V</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1217"/>
         <source>&amp;Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Etiquetes</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1220"/>
         <source>Ctrl+Shift+T</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Maj+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1228"/>
         <source>Insert Lin&amp;k</source>
-        <translation type="unfinished"></translation>
+        <translation>Insereix un &amp;enllaç</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1231"/>
         <source>Ctrl+L</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+L</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1236"/>
         <source>C&amp;opy Link</source>
-        <translation type="unfinished"></translation>
+        <translation>C&amp;opia l&apos;enllaç</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1244"/>
         <source>I&amp;nsert Table</source>
-        <translation type="unfinished"></translation>
+        <translation>I&amp;nsereix una taula</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1247"/>
         <source>Ctrl+Alt+Shift+T</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Alt+Maj+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1252"/>
         <source>Append Row</source>
-        <translation type="unfinished"></translation>
+        <translation>Afegeix una fila</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1257"/>
         <source>Delete Row</source>
-        <translation type="unfinished"></translation>
+        <translation>Suprimeix fila</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1262"/>
         <source>Append Column</source>
-        <translation type="unfinished"></translation>
+        <translation>Afegeix una columna</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1267"/>
         <source>Delete Column</source>
-        <translation type="unfinished"></translation>
+        <translation>Suprimeix columna</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1272"/>
         <source>Merge Cells</source>
-        <translation type="unfinished"></translation>
+        <translation>Fusiona les cel·les</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1277"/>
         <source>Prepend Row</source>
-        <translation type="unfinished"></translation>
+        <translation>Preposa la fila</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1282"/>
         <source>Prepend Column</source>
-        <translation type="unfinished"></translation>
+        <translation>Preposa columna</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1290"/>
         <source>Export &amp;HTML</source>
-        <translation type="unfinished"></translation>
+        <translation>Exporta &amp;HTML</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1295"/>
         <source>Save Ima&amp;ge(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Desa imatges</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1306"/>
         <source>RTL</source>
-        <translation type="unfinished"></translation>
+        <translation>De dreta a esquerra</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1309"/>
         <source>Ctrl+Alt+Shift+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Alt+Maj+Esquerra</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1320"/>
         <source>LTR</source>
-        <translation type="unfinished"></translation>
+        <translation>D&apos;esquerra a dreta</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1323"/>
         <source>Ctrl+Alt+Shift+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Alt+Maj+Fletxa dreta</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1328"/>
         <location filename="../../fn.ui" line="1331"/>
         <source>Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Menú</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1339"/>
         <source>Node &amp;Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Icona del &amp;node</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1342"/>
         <source>Ctrl+Shift+C</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Maj+C</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1347"/>
         <location filename="../../fn.ui" line="1350"/>
         <source>Check Spelling</source>
-        <translation type="unfinished"></translation>
+        <translation>Comprova l&apos;ortografia</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1353"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1358"/>
         <source>Document &amp;Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Colors de document</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1366"/>
         <location filename="../../fn.ui" line="1369"/>
         <source>Paste Date and Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Enganxa la data i l&apos;hora</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1374"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Neteja</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2712"/>
         <source>Node Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Icona del node</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="636"/>
         <location filename="../../fn.cpp" line="4717"/>
         <source>&amp;Raise/Hide</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Apuja/amaga</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="806"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;New note?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Nota nova?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="807"/>
         <source>&lt;center&gt;&lt;i&gt;Do you really want to leave this document&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;and create an empty one?&lt;/i&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;i&gt;Realment voleu sortir d&apos;aquest document&lt;/i&gt;&lt;/center&gt;
+&lt;center&gt;&lt;i&gt;i crear-ne un de buit?t?&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="810"/>
         <location filename="../../fn.cpp" line="2540"/>
         <location filename="../../fn.cpp" line="4343"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Sí</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="811"/>
         <location filename="../../fn.cpp" line="2541"/>
         <location filename="../../fn.cpp" line="4344"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>No</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="901"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Save changes?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Voleu desar els canvis?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="903"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been modified.&lt;/i&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;i&gt;S&apos;ha modificat el document.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="905"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been removed.&lt;/i&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;i&gt;S&apos;ha eliminat el document.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="910"/>
         <source>Discard changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Descarta els canvis</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="911"/>
@@ -1062,18 +1063,18 @@
         <location filename="../../fn.cpp" line="5658"/>
         <location filename="../../fn.cpp" line="5778"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancel·la</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1302"/>
         <source>Open file...</source>
-        <translation type="unfinished"></translation>
+        <translation>Obre un fitxer...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1458"/>
         <location filename="../../fn.cpp" line="5527"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be saved!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;No es pot desar!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1462"/>
@@ -1082,29 +1083,30 @@
         <location filename="../../fn.cpp" line="5530"/>
         <location filename="../../fn.cpp" line="6084"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Tanca</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1560"/>
         <location filename="../../fn.cpp" line="1581"/>
         <source>Save As...</source>
-        <translation type="unfinished"></translation>
+        <translation>Desa com...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2537"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Delete this node?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Voleu suprimir aquest node?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2538"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;i&gt;Warning!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
 &lt;center&gt;This action cannot be undone.&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;i&gt;Avís!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
+&lt;center&gt;Aquesta acció no es pot desfer.&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2639"/>
         <source>Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Etiquetes</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2654"/>
@@ -1118,108 +1120,108 @@
         <location filename="../../fn.cpp" line="5659"/>
         <location filename="../../fn.cpp" line="5779"/>
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation>D&apos;acord</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2842"/>
         <location filename="../../fn.cpp" line="2875"/>
         <source>&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Nodes principals:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Tots els nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2848"/>
         <location filename="../../fn.cpp" line="2881"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Nota:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Nodes principals:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Tots els nodes:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3291"/>
         <source>%1 Matches</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Coincidències</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3293"/>
         <source>One Match</source>
-        <translation type="unfinished"></translation>
+        <translation>Una coincidència</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3295"/>
         <location filename="../../fn.cpp" line="3610"/>
         <source>No Match</source>
-        <translation type="unfinished"></translation>
+        <translation>Sense coincidència</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3410"/>
         <location filename="../../fn.cpp" line="3462"/>
         <source>Replacement</source>
-        <translation type="unfinished"></translation>
+        <translation>Substitució</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3717"/>
         <source>No Replacement</source>
-        <translation type="unfinished"></translation>
+        <translation>Sense substitució</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3719"/>
         <source>One Replacement</source>
-        <translation type="unfinished"></translation>
+        <translation>Una substitució</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3722"/>
         <source>%1 Replacements</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Substitucions</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3907"/>
         <source>Insert Link</source>
-        <translation type="unfinished"></translation>
+        <translation>Insereix un enllaç</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2720"/>
         <location filename="../../fn.cpp" line="3985"/>
         <source>Image path</source>
-        <translation type="unfinished"></translation>
+        <translation>Camí a la imatge</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2724"/>
         <location filename="../../fn.cpp" line="3989"/>
         <source>Open image</source>
-        <translation type="unfinished"></translation>
+        <translation>Obre la imatge</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3997"/>
         <location filename="../../fn.cpp" line="4158"/>
         <source>Scaling percentage</source>
-        <translation type="unfinished"></translation>
+        <translation>Percentatge d&apos;escala</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2742"/>
         <location filename="../../fn.cpp" line="4106"/>
         <source>Open Image...</source>
-        <translation type="unfinished"></translation>
+        <translation>Obre la imatge...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="638"/>
         <location filename="../../fn.cpp" line="4705"/>
         <source>&amp;Raise</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Alçar</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="857"/>
         <source>New Node</source>
-        <translation type="unfinished"></translation>
+        <translation>Nou node</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1304"/>
         <location filename="../../fn.cpp" line="1562"/>
         <location filename="../../fn.cpp" line="1583"/>
         <source>FeatherNotes documents (*.fnx);;All Files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Documents de FeatherNotes (*.fnx);;Tots els fitxers (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1459"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be opened!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;No es pot obrir!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1544"/>
@@ -1230,297 +1232,300 @@
         <location filename="../../fn.cpp" line="5587"/>
         <location filename="../../fn.cpp" line="5613"/>
         <source>Untitled</source>
-        <translation type="unfinished"></translation>
+        <translation>Sense títol</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2008"/>
         <source>Align Table</source>
-        <translation type="unfinished"></translation>
+        <translation>Alinea la taula</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2021"/>
         <source>&amp;Center</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Centrar</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2389"/>
         <source>Select Text Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecciona el color del text</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2411"/>
         <source>Select Background Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecciona el color de fons</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2536"/>
         <source>Deletion</source>
-        <translation type="unfinished"></translation>
+        <translation>Supressió</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2649"/>
         <source>Tag(s) for this node</source>
-        <translation type="unfinished"></translation>
+        <translation>Etiqueta(es) d&apos;aquest node</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2744"/>
         <location filename="../../fn.cpp" line="4108"/>
         <source>Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Fitxers d&apos;imatge (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2917"/>
         <source>Select Document Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccioneu el tipus de lletra del document</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2976"/>
         <source>Select Node Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccioneu el tipus de lletra del node</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2991"/>
         <source>Set Document Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Estableix els colors del document</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3001"/>
         <source>These colors will be applied to new nodes.&lt;br&gt;They may or may not affect existing nodes&lt;br&gt;but document reopening is recommended.</source>
-        <translation type="unfinished"></translation>
+        <translation>Aquests colors s&apos;aplicaran als nodes nous.&lt;br&gt;Poden o no afectar els nodes existents&lt;br&gt;però es recomana tornar a obrir el document.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3004"/>
         <source>Background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Color de fons:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3010"/>
         <source>Text color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Color del text:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3727"/>
         <source>The first 1000 replacements are highlighted.</source>
-        <translation type="unfinished"></translation>
+        <translation>Es ressalten les primeres 1.000 substitucions.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3992"/>
         <location filename="../../fn.cpp" line="4154"/>
         <source>Scale to</source>
-        <translation type="unfinished"></translation>
+        <translation>Escala a</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3996"/>
         <location filename="../../fn.cpp" line="4157"/>
         <source>%</source>
-        <translation type="unfinished"></translation>
+        <translation>%</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4148"/>
         <source>Scale Image(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Escala les imatges</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4307"/>
         <source>untitled</source>
-        <translation type="unfinished"></translation>
+        <translation>sense títol</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4338"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Error</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4339"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Image cannot be saved! Retry?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;La imatge no es pot desar! Vol tornar a provar-ho?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4340"/>
         <source>&lt;center&gt;Maybe you did not choose a proper extension&lt;/center&gt;
 &lt;center&gt;or do not have write permission.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;Potser no heu triat una extensió adequada&lt;/center&gt;
+&lt;center&gt;o no té permisos d&apos;escriptura.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4370"/>
         <source>Save Image As...</source>
-        <translation type="unfinished"></translation>
+        <translation>Desa la imatge com a...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4372"/>
         <source>Image Files (*.png *.jpg *.jpeg *.bmp);;All Files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Fitxers d&apos;imatge (*.png *.jpg *.jpeg *.bmp);;Tots els fitxers (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4422"/>
         <source>Insert Table</source>
-        <translation type="unfinished"></translation>
+        <translation>Insereix una taula</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4428"/>
         <source>Rows:</source>
-        <translation type="unfinished"></translation>
+        <translation>Files:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4434"/>
         <source>Columns:</source>
-        <translation type="unfinished"></translation>
+        <translation>Columnes:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5268"/>
         <source>Print Document</source>
-        <translation type="unfinished"></translation>
+        <translation>Imprimeix el document</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5352"/>
         <source>Export HTML</source>
-        <translation type="unfinished"></translation>
+        <translation>Exporta HTML</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5357"/>
         <source>Export:</source>
-        <translation type="unfinished"></translation>
+        <translation>Exporta:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5358"/>
         <source>&amp;Current node</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Node actual</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5360"/>
         <source>With all &amp;sub-nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Amb tots els &amp;subnodes</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5361"/>
         <source>&amp;All nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tots els nodes</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5373"/>
         <source>Output file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Fitxer de sortida:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5392"/>
         <source>Select path</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccioneu el camí</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5434"/>
         <source>Question</source>
-        <translation type="unfinished"></translation>
+        <translation>Pregunta</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5435"/>
         <source>The file already exists.
 Do you want to replace it?
 </source>
-        <translation type="unfinished"></translation>
+        <translation>El fitxer ja existeix.
+Voleu reemplaçar-lo?
+</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5618"/>
         <source>Save HTML As...</source>
-        <translation type="unfinished"></translation>
+        <translation>Desa l&apos;HTML com a...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5620"/>
         <source>HTML Files (*.html *.htm)</source>
-        <translation type="unfinished"></translation>
+        <translation>Fitxers HTML (*.html *.htm)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5641"/>
         <source>Set Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Estableix la contrasenya</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5649"/>
         <source>Type password</source>
-        <translation type="unfinished"></translation>
+        <translation>Escriu la contrasenya</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5654"/>
         <source>Retype password</source>
-        <translation type="unfinished"></translation>
+        <translation>Torna a escriure la contrasenya</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5729"/>
         <source>&lt;center&gt;Passwords were different. Retry!&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;Les contrasenyes eren diferents. Reintenta!&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5766"/>
         <location filename="../../fn.cpp" line="5774"/>
         <source>Enter Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduïu la contrasenya</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5840"/>
         <source>&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;Contrasenya incorrecta. Reintenta!&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5883"/>
         <source>A lightweight notes manager</source>
-        <translation type="unfinished"></translation>
+        <translation>Un gestor de notes lleuger</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5884"/>
         <source>based on Qt</source>
-        <translation type="unfinished"></translation>
+        <translation>basat en Qt</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5885"/>
         <source>Author</source>
-        <translation type="unfinished"></translation>
+        <translation>Autor</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5887"/>
         <location filename="../../fn.cpp" line="5888"/>
         <source>About FeatherNotes</source>
-        <translation type="unfinished"></translation>
+        <translation>Quant a FeatherNotes</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5887"/>
         <source>Translators</source>
-        <translation type="unfinished"></translation>
+        <translation>Traductors</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6076"/>
         <source>See Preferences → Text → Spell Checking!</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vegeu Preferències ! → Text → Comprovació ortogràfica!</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6098"/>
         <source>You need to add a Hunspell dictionary.</source>
-        <translation type="unfinished"></translation>
+        <translation>Heu d&apos;afegir un diccionari Hunspell.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6103"/>
         <source>The Hunspell dictionary does not exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>El diccionari Hunspell no existeix.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6111"/>
         <source>The Hunspell dictionary is not accompanied by an affix file.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">El diccionari Hunspell no està acompanyat per un fitxer affix.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6129"/>
         <location filename="../../fn.cpp" line="6144"/>
         <location filename="../../fn.cpp" line="6156"/>
         <source>No misspelling from text cursor.</source>
-        <translation type="unfinished"></translation>
+        <translation>No hi ha errors d&apos;ortografia des del cursor de text.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6167"/>
         <source>Spell Checking</source>
-        <translation type="unfinished"></translation>
+        <translation>Comprovació ortogràfica</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5886"/>
         <source>aka.</source>
-        <translation type="unfinished"></translation>
+        <translation>àlies</translation>
     </message>
 </context>
 <context>
@@ -1528,13 +1533,13 @@ Do you want to replace it?
     <message>
         <location filename="../../lineedit.cpp" line="35"/>
         <source>Clear text (Ctrl+K)</source>
-        <translation type="unfinished"></translation>
+        <translation>Neteja el text (Ctrl+K)</translation>
     </message>
     <message>
         <location filename="../../lineedit.cpp" line="81"/>
         <source>Ctrl+K</source>
         <comment>Clear text</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+K</translation>
     </message>
 </context>
 <context>
@@ -1542,12 +1547,12 @@ Do you want to replace it?
     <message>
         <location filename="../../prefDialog.ui" line="14"/>
         <source>Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Preferències</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="27"/>
         <source>Window</source>
-        <translation type="unfinished"></translation>
+        <translation>Finestra</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="36"/>
@@ -1555,17 +1560,20 @@ Do you want to replace it?
 this dialog and also on exit.
 
 Uncheck to set a fixed size!</source>
-        <translation type="unfinished"></translation>
+        <translation>Desa la mida de la finestra després de tancar
+aquest diàleg i també en sortir.
+
+Desmarqueu per establir una mida fixa!</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="42"/>
         <source>Remember window &amp;size</source>
-        <translation type="unfinished"></translation>
+        <translation>Recorda la mida de la &amp;finestra</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="51"/>
         <source>Start with this size: </source>
-        <translation type="unfinished"></translation>
+        <translation>Comença amb aquesta mida: </translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="58"/>
@@ -1573,7 +1581,7 @@ Uncheck to set a fixed size!</source>
         <location filename="../../prefDialog.ui" line="255"/>
         <location filename="../../prefDialog.ui" line="269"/>
         <source> px</source>
-        <translation type="unfinished"></translation>
+        <translation> px</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="97"/>
@@ -1581,12 +1589,15 @@ Uncheck to set a fixed size!</source>
 this dialog and also on exit.
 
 Uncheck for a width ratio of 170/530.</source>
-        <translation type="unfinished"></translation>
+        <translation>Desa l&apos;amplada de l&apos;arbre després de tancar
+aquest diàleg i també en sortir.
+
+Desmarqueu per a una ràtio d&apos;amplada de 170/530.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="103"/>
         <source>Remember &amp;tree width</source>
-        <translation type="unfinished"></translation>
+        <translation>Recorda l&apos;amplada de &amp;l&apos;arbre</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="110"/>
@@ -1596,12 +1607,17 @@ this dialog and also on exit.
 (This may not work correctly
 under GTK+ DE&apos;s like Unity
 and Cinnamon.)</source>
-        <translation type="unfinished"></translation>
+        <translation>Desa la posició després de tancar
+aquest diàleg i també en sortir.
+
+(Pot no funcionar correctament
+als escriptoris GTK+ com a Unity
+i Cinnamon.)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="118"/>
         <source>Save &amp;position</source>
-        <translation type="unfinished"></translation>
+        <translation>Desa la &amp;posició</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="125"/>
@@ -1610,71 +1626,79 @@ If checked, the titlebar close button iconifies
 the window to the systray instead of quitting.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Decideix si s&apos;ha d&apos;utilitzar una icona de la bandeja del sistema.
+Si està marcat, el botó de tancament de la barra de títol es minimitza
+a la finestra de la safata del sistema en lloc de sortir
+
+Cal reiniciar FeatherNotes perquè tingui efecte.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="132"/>
         <source>Add to s&amp;ystray</source>
-        <translation type="unfinished"></translation>
+        <translation>Afegeix a la &amp;safata del sistema</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="157"/>
         <source>The command line option --tray
 can be used instead of this.</source>
-        <translation type="unfinished"></translation>
+        <translation>Es pot utilitzar l&apos;opció --tray de 
+la línia d&apos;ordres en lloc d&apos;això.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="161"/>
         <source>Start i&amp;conified to tray</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Iniciar minimitzat a la safata</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="170"/>
         <source>Merge the tree view with its surroundings?</source>
-        <translation type="unfinished"></translation>
+        <translation>Fusionar la vista en arbre amb el seu entorn?</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="173"/>
         <source>Transparent t&amp;ree view</source>
-        <translation type="unfinished"></translation>
+        <translation>Vista d&apos;arbre &amp;transparent</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="180"/>
         <source>By default, the active widget style determines
 the size of toolbar icons.</source>
-        <translation type="unfinished"></translation>
+        <translation>Per defecte, l&apos;estil d&apos;estri actiu determina
+la mida de les icones de la barra d&apos;eines.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="184"/>
         <source>Small toolbar icons</source>
-        <translation type="unfinished"></translation>
+        <translation>Icones petites de la barra d&apos;eines</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="191"/>
         <source>Do not show t&amp;oolbar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">No mostris la &amp;barra d&apos;eines</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="198"/>
         <source>If the menubar is hidden,
 a menu button appears on the toolbar.</source>
-        <translation type="unfinished"></translation>
+        <translation>Si la barra de menús està oculta,
+a la barra d&apos;eines apareix un botó de menú.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="202"/>
         <source>Do not show &amp;menubar</source>
-        <translation type="unfinished"></translation>
+        <translation>No mostris la barra de menús</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="209"/>
         <source>Check this under Enlightenment (or, probably, another DE)
 to use the systray icon more easily!</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Activar sota Enlightenment (o, potser, en un altre entorn d&apos;escriptori)
+per utilitzar la icona de la safata del sistema més fàcilment!</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="213"/>
         <source>Running &amp;under Enlightenment?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">S&apos;està executant Enlightenment?</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="238"/>
