@@ -4,7 +4,7 @@
 <context>
     <name>FeatherNotes::AboutDialog</name>
     <message>
-        <location filename="../../about.ui" line="157"/>
+        <location filename="../../about.ui" line="159"/>
         <source>License</source>
         <translation>Llicència</translation>
     </message>
@@ -1783,7 +1783,7 @@ Takes effect after closing this dialog.</source>
     <message>
         <location filename="../../prefDialog.ui" line="434"/>
         <source>Spell Checking</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Comprovació ortogràfica</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="442"/>
@@ -1881,7 +1881,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../spellDialog.ui" line="62"/>
         <source>Replace with:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Reemplaça per:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="87"/>
@@ -1918,7 +1918,7 @@ name but ending with &quot;.aff&quot;.</source>
         <location filename="../../domitem.cpp" line="100"/>
         <location filename="../../domitem.cpp" line="137"/>
         <source>New Node</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nou node</translation>
     </message>
 </context>
 </TS>

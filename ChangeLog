@@ -6,6 +6,7 @@ V0.10.0
  * Scroll one page per wheel turn when the cursor is on the vertical scrollbar and half the page when Shift is also pressed.
  * Scroll the view up/down by a single step without moving text cursor with Ctrl+Up/Down. Also, scroll the view up/down by one page without moving text cursor with Ctrl+PageUp/PageDown.
  * Don't try to save or restore window position under Wayland because, otherwise, menus might appear at wrong positions.
+ * Don't let QTextEdit's built-in undo/redo shortcuts cause a scroll jump when there's nothing to undo/redo.
 
 V0.9.0
 ---------

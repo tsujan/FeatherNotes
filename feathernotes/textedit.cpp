@@ -164,6 +164,25 @@ void TextEdit::keyPressEvent (QKeyEvent *event)
         return;
     }
 
+    /* QWidgetTextControl::undo() and QWidgetTextControl::redo() call ensureCursorVisible()
+       even when there's nothing to undo/redo. Users may press the undo/redo shortcut keys
+       just to make sure of the state of a document and a scroll jump can confuse them when
+       there's nothing to undo/redo. */
+    if (event == QKeySequence::Undo)
+    {
+        if (document()->isUndoAvailable())
+            undo();
+        event->accept();
+        return;
+    }
+    if (event == QKeySequence::Redo)
+    {
+        if (document()->isRedoAvailable())
+            redo();
+        event->accept();
+        return;
+    }
+
     if (event->key() == Qt::Key_Return || event->key() == Qt::Key_Enter)
     {
         QTextCursor cur = textCursor();
