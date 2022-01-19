@@ -6,7 +6,7 @@
     <message>
         <location filename="../../about.ui" line="159"/>
         <source>License</source>
-        <translation type="unfinished"></translation>
+        <translation>Ліцэнзія</translation>
     </message>
 </context>
 <context>
@@ -14,12 +14,12 @@
     <message>
         <location filename="../../colorLabel.cpp" line="31"/>
         <source>Click to change color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Націсьніце, каб зьмяніць колер.</translation>
     </message>
     <message>
         <location filename="../../colorLabel.cpp" line="53"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Абраць колер</translation>
     </message>
 </context>
 <context>
@@ -30,573 +30,573 @@
         <location filename="../../fn.cpp" line="3726"/>
         <location filename="../../fn.cpp" line="5526"/>
         <source>FeatherNotes</source>
-        <translation type="unfinished"></translation>
+        <translation>FeatherNotes</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="65"/>
         <source>Next (F3)</source>
-        <translation type="unfinished"></translation>
+        <translation>Наступны (F3)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="68"/>
         <source>F3</source>
-        <translation type="unfinished"></translation>
+        <translation>F3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="81"/>
         <source>Previous (F4)</source>
-        <translation type="unfinished"></translation>
+        <translation>Папярэдні</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="84"/>
         <source>F4</source>
-        <translation type="unfinished"></translation>
+        <translation>F4</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="100"/>
         <source>Search...</source>
-        <translation type="unfinished"></translation>
+        <translation>Шукаць...</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="115"/>
         <source>Search only in names (Ctrl+Shift+F7)</source>
-        <translation type="unfinished"></translation>
+        <translation>Шукаць толькі па назвах</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="118"/>
         <source>Ctrl+Shift+F7</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+F7</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="128"/>
         <source>Search only in tags (Shift+F7)</source>
-        <translation type="unfinished"></translation>
+        <translation>Шукаць толькі па тэгах (Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="131"/>
         <source>Shift+F7</source>
-        <translation type="unfinished"></translation>
+        <translation>Shift+F7</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="144"/>
         <source>Search in all nodes (F7)</source>
-        <translation type="unfinished"></translation>
+        <translation>Шукаць па ўсіх вузлах</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="147"/>
         <source>F7</source>
-        <translation type="unfinished"></translation>
+        <translation>F7</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="186"/>
         <source>Whole Word (F6)</source>
-        <translation type="unfinished"></translation>
+        <translation>Слова Цалкам (F6)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="189"/>
         <source>Whole Word</source>
-        <translation type="unfinished"></translation>
+        <translation>Слова Цалкам</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="192"/>
         <source>F6</source>
-        <translation type="unfinished"></translation>
+        <translation>F6</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="167"/>
         <source>Match Case (F5)</source>
-        <translation type="unfinished"></translation>
+        <translation>Зьмена малых/вялізных літар (рэгістру) (F5)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="170"/>
         <source>Match Case</source>
-        <translation type="unfinished"></translation>
+        <translation>Зьмена малых/вялізных літар (рэгістру)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="173"/>
         <source>F5</source>
-        <translation type="unfinished"></translation>
+        <translation>F5</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="219"/>
         <source>&amp;File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Файл</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="223"/>
         <source>Recenl&amp;y Opened</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Нядаўна адкрытыя</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="245"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Рэдагаваць</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="264"/>
         <source>For&amp;mat</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Фармат</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="296"/>
         <source>&amp;Tree</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Дрэва</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="320"/>
         <source>&amp;Options</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Настаўленьні</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="334"/>
         <source>&amp;Search</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Пошук</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="341"/>
         <location filename="../../fn.ui" line="989"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Дапамога</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="438"/>
         <source>Find:</source>
-        <translation type="unfinished"></translation>
+        <translation>Знайсьці:</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="445"/>
         <source>Replace with:</source>
-        <translation type="unfinished"></translation>
+        <translation>Замяніць на:</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="458"/>
         <source>To be replaced</source>
-        <translation type="unfinished"></translation>
+        <translation>Да замены</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="471"/>
         <source>Replacing text</source>
-        <translation type="unfinished"></translation>
+        <translation>Тэкст на замену</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="481"/>
         <source>Previous (F9)</source>
-        <translation type="unfinished"></translation>
+        <translation>Папярэдні</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="484"/>
         <source>F9</source>
-        <translation type="unfinished"></translation>
+        <translation>F9</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="497"/>
         <source>Next (F8)</source>
-        <translation type="unfinished"></translation>
+        <translation>Наступны (F8)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="500"/>
         <source>F8</source>
-        <translation type="unfinished"></translation>
+        <translation>F8</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="513"/>
         <source>Replace all (F10)</source>
-        <translation type="unfinished"></translation>
+        <translation>Замяніць усё</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="516"/>
         <source>F10</source>
-        <translation type="unfinished"></translation>
+        <translation>F10</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="533"/>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Захаваць</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="536"/>
         <location filename="../../fn.cpp" line="909"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Захаваць</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="539"/>
         <source>Ctrl+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+S</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="544"/>
         <location filename="../../fn.cpp" line="642"/>
         <source>&amp;Open</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Адкрыць</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="547"/>
         <source>Open a file</source>
-        <translation type="unfinished"></translation>
+        <translation>Адкрыць файл</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="550"/>
         <source>Ctrl+O</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+O</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="558"/>
         <source>&amp;Undo</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Павянуць</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="561"/>
         <source>Undo</source>
-        <translation type="unfinished"></translation>
+        <translation>Павярнуць</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="564"/>
         <source>Ctrl+Z</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Z</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="572"/>
         <source>&amp;Redo</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Паўтарыць</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="575"/>
         <source>Redo</source>
-        <translation type="unfinished"></translation>
+        <translation>Паўтарыць</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="578"/>
         <source>Ctrl+Shift+Z</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+Z</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="586"/>
         <source>&amp;Find</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Знайсьці</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="589"/>
         <source>Show/hide searchbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Паказаць/прыхаваць стужку пошуку</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="592"/>
         <source>Ctrl+F</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+F</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="600"/>
         <source>&amp;Clear All Formats</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ачысьціць усе фарматаваньні</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="603"/>
         <source>Clear all formats</source>
-        <translation type="unfinished"></translation>
+        <translation>Ачысціць усе фарматаваньні</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="606"/>
         <source>Ctrl+E</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+E</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="617"/>
         <source>&amp;Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Тлусты</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="620"/>
         <source>Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>Тлусты</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="623"/>
         <source>Ctrl+B</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+B</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="634"/>
         <source>&amp;Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;нахілены</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="637"/>
         <source>Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>нахілены</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="640"/>
         <source>Ctrl+I</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+I</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="651"/>
         <source>&amp;Underline</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Падкрэсьлены</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="654"/>
         <source>Underline</source>
-        <translation type="unfinished"></translation>
+        <translation>Падкрэсьлены</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="657"/>
         <source>Ctrl+U</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+U</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="668"/>
         <source>&amp;Strike Through</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Перакрэсьлены</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="671"/>
         <source>Strike through</source>
-        <translation type="unfinished"></translation>
+        <translation>Перакрэсьлены</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="674"/>
         <source>Ctrl+T</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="682"/>
         <source>Te&amp;xt Color</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Колер Тэксту</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="685"/>
         <source>Text color</source>
-        <translation type="unfinished"></translation>
+        <translation>Колер Тэксту</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="688"/>
         <source>Alt+Shift+T</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="696"/>
         <source>Back&amp;ground Color</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Колер Тла</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="699"/>
         <source>Background color</source>
-        <translation type="unfinished"></translation>
+        <translation>Колер тла</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="702"/>
         <source>Alt+Shift+B</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+B</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="707"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Настаўленьні</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="712"/>
         <location filename="../../fn.cpp" line="641"/>
         <source>&amp;New Note</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Новая Нататка</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="715"/>
         <source>Ctrl+Alt+Shift+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Alt+Shift+N</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="723"/>
         <source>Save &amp;As</source>
-        <translation type="unfinished"></translation>
+        <translation>Захаваць &amp;Як</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="726"/>
         <source>Ctrl+Shift+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+S</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="734"/>
         <source>&amp;Print</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Друк</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="737"/>
         <source>Ctrl+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+P</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="745"/>
         <source>P&amp;rint with Sub-Nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Друкаваць разам з падвузламі</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="753"/>
         <source>Set Pass&amp;word</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Усталяваць Пароль</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="758"/>
         <location filename="../../fn.cpp" line="644"/>
         <source>&amp;Quit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Пайсьці</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="761"/>
         <source>Ctrl+Q</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Q</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="769"/>
         <source>&amp;Cut</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Выняць</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="772"/>
         <source>Ctrl+X</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+X</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="780"/>
         <source>C&amp;opy</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Капіяваць</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="783"/>
         <source>Ctrl+C</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+C</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="791"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Уставіць</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="794"/>
         <source>Ctrl+V</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+V</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="802"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Выдаліць</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="810"/>
         <source>&amp;Select All</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Вылучыць Усё</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="813"/>
         <source>Ctrl+A</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+A</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="821"/>
         <source>E&amp;mbed Image</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Убудаваць Выяву</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="824"/>
         <location filename="../../fn.cpp" line="3976"/>
         <source>Embed Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Убудаваць Выяву</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="827"/>
         <source>Ctrl+Alt+Shift+I</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Alt+Shift+I</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="835"/>
         <source>E&amp;xpand All</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Разгарнуць Усё</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="838"/>
         <source>Ctrl+Shift+Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+Down</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="846"/>
         <source>Collap&amp;se All</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Згарнуць Усё</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="849"/>
         <source>Ctrl+Shift+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+Up</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="857"/>
         <source>&amp;Append Sibling</source>
-        <translation type="unfinished"></translation>
+        <translation>Дадаць ніжэй</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="860"/>
         <source>Ctrl+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="868"/>
         <source>Append &amp;Child</source>
-        <translation type="unfinished"></translation>
+        <translation>Дадаць &amp;укладку</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="871"/>
         <source>Ctrl+Shift+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+N</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="879"/>
         <source>&amp;Delete Node</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Выдаліць Вузел</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="882"/>
         <source>Ctrl+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+D</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="890"/>
         <source>Move &amp;Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Перасунуць у &amp;Верх</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="893"/>
         <source>Alt+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Up</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="901"/>
         <source>Move Do&amp;wn</source>
-        <translation type="unfinished"></translation>
+        <translation>Перасунуць у &amp;Ніз</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="904"/>
         <source>Alt+Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Down</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="912"/>
         <source>Re&amp;name Node</source>
-        <translation type="unfinished"></translation>
+        <translation>Перайменаваць Вузел</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="915"/>
         <source>Ctrl+Shift+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+R</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="920"/>
         <source>Tree Pr&amp;operties</source>
-        <translation type="unfinished"></translation>
+        <translation>Уласьцівасьці &amp;Дрэва</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="923"/>
         <source>Ctrl+Shift+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+D</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="931"/>
