@@ -833,7 +833,7 @@
     <message>
         <location filename="../../fn.ui" line="1193"/>
         <source>Node Font</source>
-        <translation>Aantekeningslettertype</translation>
+        <translation>Zijbalklettertype</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1198"/>
@@ -959,7 +959,7 @@
     <message>
         <location filename="../../fn.ui" line="1339"/>
         <source>Node &amp;Icon</source>
-        <translation>Aantekeningsp&amp;ictogram</translation>
+        <translation>Notitiep&amp;ictogram</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1342"/>
@@ -996,7 +996,7 @@
     <message>
         <location filename="../../fn.cpp" line="2712"/>
         <source>Node Icon</source>
-        <translation>Aantekeningspictogram</translation>
+        <translation>Zijbalkpictogram</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="636"/>
@@ -1094,7 +1094,7 @@
     <message>
         <location filename="../../fn.cpp" line="2537"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Delete this node?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Deze aantekening verwijderen?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Wil je deze notitie verwijderen?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2538"/>
@@ -1126,13 +1126,13 @@
         <location filename="../../fn.cpp" line="2842"/>
         <location filename="../../fn.cpp" line="2875"/>
         <source>&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</source>
-        <translation>&lt;b&gt;Hoofdaantekeningen:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Alle notities:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</translation>
+        <translation>&lt;b&gt;Hoofdnotities:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Alle notities:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2848"/>
         <location filename="../../fn.cpp" line="2881"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</source>
-        <translation>&lt;b&gt;Aantekening:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Hoofdaantekeningen:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Alle aantekeningen:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</translation>
+        <translation>&lt;b&gt;Notitie:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Hoofdnotities:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Alle notities:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3291"/>
@@ -1209,7 +1209,7 @@
     <message>
         <location filename="../../fn.cpp" line="857"/>
         <source>New Node</source>
-        <translation>Nieuwe aantekening</translation>
+        <translation>Nieuwe notitie</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1304"/>
@@ -1262,7 +1262,7 @@
     <message>
         <location filename="../../fn.cpp" line="2649"/>
         <source>Tag(s) for this node</source>
-        <translation>Label(s) van deze aantekening</translation>
+        <translation>Label(s) van deze notitie</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2744"/>
@@ -1278,7 +1278,7 @@
     <message>
         <location filename="../../fn.cpp" line="2976"/>
         <source>Select Node Font</source>
-        <translation>Kies een aantekeningslettertype</translation>
+        <translation>Kies een lijstlettertype</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2991"/>
@@ -1288,7 +1288,7 @@
     <message>
         <location filename="../../fn.cpp" line="3001"/>
         <source>These colors will be applied to new nodes.&lt;br&gt;They may or may not affect existing nodes&lt;br&gt;but document reopening is recommended.</source>
-        <translation>Deze kleuren worden toegepast op nieuwe aantekeningen.&lt;br&gt;Ze worden mogelijk ook toegepast op bestaande aantekeningen,&lt;br&gt;maar het is beter om het document opnieuw te openen.</translation>
+        <translation>Deze kleuren worden toegepast op nieuwe notities.&lt;br&gt;Ze worden mogelijk ook toegepast op bestaande notities,&lt;br&gt;maar het is beter om het document opnieuw te openen.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3004"/>
@@ -1387,17 +1387,17 @@
     <message>
         <location filename="../../fn.cpp" line="5358"/>
         <source>&amp;Current node</source>
-        <translation>&amp;Huidige aantekening</translation>
+        <translation>&amp;Huidige notitie</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5360"/>
         <source>With all &amp;sub-nodes</source>
-        <translation>Inclu&amp;sief alle onderliggende aantekeningen</translation>
+        <translation>Inclu&amp;sief alle onderliggende notities</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5361"/>
         <source>&amp;All nodes</source>
-        <translation>&amp;Alle aantekeningen</translation>
+        <translation>&amp;Alle notities</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5373"/>
@@ -1934,7 +1934,7 @@ op &apos;.aff&apos;.</translation>
         <location filename="../../domitem.cpp" line="100"/>
         <location filename="../../domitem.cpp" line="137"/>
         <source>New Node</source>
-        <translation>Nieuwe aantekening</translation>
+        <translation>Nieuwe notities</translation>
     </message>
 </context>
 </TS>
