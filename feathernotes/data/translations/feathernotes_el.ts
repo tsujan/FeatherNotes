@@ -14,7 +14,7 @@
     <message>
         <location filename="../../colorLabel.cpp" line="31"/>
         <source>Click to change color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Κάντε κλικ για αλλαγή του χρώματος.</translation>
     </message>
     <message>
         <location filename="../../colorLabel.cpp" line="53"/>
