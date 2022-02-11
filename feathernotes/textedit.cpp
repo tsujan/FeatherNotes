@@ -916,6 +916,39 @@ void TextEdit::mouseDoubleClickEvent (QMouseEvent *e)
 {
     tripleClickTimer_.start();
     QTextEdit::mouseDoubleClickEvent (e);
+
+    /* Select the text between spaces with Ctrl.
+       NOTE: QTextEdit should process the event before this. */
+    if (e->button() == Qt::LeftButton
+        && (qApp->keyboardModifiers() & Qt::ControlModifier))
+    {
+        QTextCursor txtCur = textCursor();
+        const int blockPos = txtCur.block().position();
+        const QString blockText = txtCur.block().text();
+        const int l = blockText.length();
+        int anc = txtCur.anchor();
+        int pos = txtCur.position();
+        while (anc > blockPos && !blockText.at (anc - blockPos - 1).isSpace())
+            -- anc;
+        while (pos < blockPos + l && !blockText.at (pos - blockPos).isSpace())
+            ++ pos;
+        if (anc != textCursor().anchor() || pos != textCursor().position())
+        {
+            txtCur.setPosition (anc);
+            txtCur.setPosition (pos, QTextCursor::KeepAnchor);
+            setTextCursor (txtCur);
+            if (txtCur.hasSelection())
+            {
+                QClipboard *cl = QApplication::clipboard();
+                if (cl->supportsSelection())
+                {
+                    if (QMimeData *data = createMimeDataFromSelection())
+                        cl->setMimeData (data, QClipboard::Selection);
+                }
+            }
+            e->accept();
+        }
+    }
 }
 /*************************/
 void TextEdit::wheelEvent (QWheelEvent *e)

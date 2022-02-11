@@ -4,7 +4,7 @@
 <context>
     <name>FeatherNotes::AboutDialog</name>
     <message>
-        <location filename="../../about.ui" line="159"/>
+        <location filename="../../about.ui" line="161"/>
         <source>License</source>
         <translation>Ліцэнзія</translation>
     </message>
@@ -975,7 +975,7 @@
     <message>
         <location filename="../../fn.ui" line="1353"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">F2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1358"/>
@@ -1857,7 +1857,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../spellDialog.ui" line="62"/>
         <source>Replace with:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Замяніць на:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="87"/>
