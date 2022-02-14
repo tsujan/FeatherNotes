@@ -125,7 +125,7 @@
     <message>
         <location filename="../../fn.ui" line="223"/>
         <source>Recenl&amp;y Opened</source>
-        <translation type="unfinished"></translation>
+        <translation>Mos&amp;tanában megnyitott</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="245"/>
@@ -991,7 +991,7 @@
     <message>
         <location filename="../../fn.ui" line="1374"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tisztítás</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2712"/>
@@ -1221,7 +1221,7 @@
     <message>
         <location filename="../../fn.cpp" line="1459"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be opened!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Nem lehet megnyitni!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1544"/>
@@ -1237,12 +1237,12 @@
     <message>
         <location filename="../../fn.cpp" line="2008"/>
         <source>Align Table</source>
-        <translation type="unfinished"></translation>
+        <translation>Táblázat igazítása</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2021"/>
         <source>&amp;Center</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Középre</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2389"/>
@@ -1833,12 +1833,12 @@ csak &quot;.aff&quot;-ra végződik.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="522"/>
         <source>Number of recent files:</source>
-        <translation type="unfinished"></translation>
+        <translation>Legutóbbi fájlok száma:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="554"/>
         <source>Open recent files separately</source>
-        <translation type="unfinished"></translation>
+        <translation>Legutóbbi fájlok megnyitása külön</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="578"/>
