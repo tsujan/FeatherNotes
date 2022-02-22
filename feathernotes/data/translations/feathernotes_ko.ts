@@ -1013,7 +1013,7 @@
         <location filename="../../fn.cpp" line="807"/>
         <source>&lt;center&gt;&lt;i&gt;Do you really want to leave this document&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;and create an empty one?&lt;/i&gt;&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;i&gt;이 문서를 남기고&lt;/i&gt;&lt;/center&gt;
+        <translation>&lt;center&gt;&lt;i&gt;이 문서를 그대로 두고&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;빈 문서를 만드시겠습니까?&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
@@ -1774,9 +1774,9 @@ Leave empty for the system default.
 
 Takes effect after closing this dialog.</source>
         <translation>날짜 및 시간을 붙여넣는 데 사용됩니다.
-시스템 기본값인 경우 비워 둡니다.
+시스템 기본값을 사용하려면 비워 두십시오.
 
-이 대화상자를 닫은 후에 적용됩니다.</translation>
+이 대화창을 닫은 후에 적용됩니다.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="369"/>
