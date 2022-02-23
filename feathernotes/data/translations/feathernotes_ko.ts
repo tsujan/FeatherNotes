@@ -30,7 +30,7 @@
         <location filename="../../fn.cpp" line="3726"/>
         <location filename="../../fn.cpp" line="5526"/>
         <source>FeatherNotes</source>
-        <translation>FeatherNotes</translation>
+        <translation>페더노트(FeatherNotes)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="65"/>
@@ -125,7 +125,7 @@
     <message>
         <location filename="../../fn.ui" line="223"/>
         <source>Recenl&amp;y Opened</source>
-        <translation>최근 열림(&amp;Y)</translation>
+        <translation>최근에 열림(&amp;Y)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="245"/>
@@ -171,7 +171,7 @@
     <message>
         <location filename="../../fn.ui" line="458"/>
         <source>To be replaced</source>
-        <translation>교체 대상</translation>
+        <translation>교체 예정</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="471"/>
@@ -278,7 +278,7 @@
     <message>
         <location filename="../../fn.ui" line="589"/>
         <source>Show/hide searchbar</source>
-        <translation>검색 창 표시/숨김</translation>
+        <translation>검색 창 표시 / 숨기기</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="592"/>
