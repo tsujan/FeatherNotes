@@ -30,7 +30,7 @@
         <location filename="../../fn.cpp" line="3726"/>
         <location filename="../../fn.cpp" line="5526"/>
         <source>FeatherNotes</source>
-        <translation>페더노트(FeatherNotes)</translation>
+        <translation>FeatherNotes</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="65"/>
@@ -278,7 +278,7 @@
     <message>
         <location filename="../../fn.ui" line="589"/>
         <source>Show/hide searchbar</source>
-        <translation>검색 창 표시 / 숨기기</translation>
+        <translation>검색 창 표시/숨김</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="592"/>
