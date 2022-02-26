@@ -511,7 +511,7 @@
     <message>
         <location filename="../../fn.ui" line="835"/>
         <source>E&amp;xpand All</source>
-        <translation>모두 확장(&amp;X)</translation>
+        <translation>모두 펼치기(&amp;X)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="838"/>
@@ -1674,7 +1674,7 @@ the size of toolbar icons.</source>
     <message>
         <location filename="../../prefDialog.ui" line="191"/>
         <source>Do not show t&amp;oolbar</source>
-        <translation>도구 모음 표시하지 않음(&amp;O)</translation>
+        <translation>도구 모음 표시 안함(&amp;O)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="198"/>
