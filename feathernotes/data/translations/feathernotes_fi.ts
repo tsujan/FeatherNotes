@@ -1865,7 +1865,7 @@ jonka pääte on &quot;.aff&quot;.</translation>
         <location filename="../../pref.cpp" line="376"/>
         <location filename="../../pref.cpp" line="562"/>
         <source>Warning: Ambiguous shortcut detected!</source>
-        <translation>Varoitus: Monimerkityksinen pikänäppäin!</translation>
+        <translation>Varoitus: Samaa yhdistelmää käytetty useammin kuin kerran!</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="545"/>
