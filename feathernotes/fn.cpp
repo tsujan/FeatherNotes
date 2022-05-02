@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2021 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2022 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -140,6 +140,7 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     replCount_ = 0;
     recentNum_ = 0;
     openReccentSeparately_ = false;
+    rememberExpanded_ = false;
 
     /* replace dock */
     ui->dockReplace->setVisible (false);
@@ -250,6 +251,8 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     /* signal connections */
 
     connect (ui->treeView, &QWidget::customContextMenuRequested, this, &FN::showContextMenu);
+    connect (ui->treeView, &QTreeView::expanded, this, &FN::indexExpanded);
+    connect (ui->treeView, &QTreeView::collapsed, this, &FN::indexCollapsed);
     connect (ui->treeView, &TreeView::FNDocDropped, this, &FN::openFNDoc);
 
     connect (ui->actionNew, &QAction::triggered, this, &FN::newNote);
@@ -697,6 +700,60 @@ void FN::showContextMenu (const QPoint &p)
     menu.exec (ui->treeView->viewport()->mapToGlobal (p));
 }
 /*************************/
+void FN::indexExpanded (const QModelIndex &index)
+{
+    if (!rememberExpanded_ || !index.isValid()) return;
+    if (DomItem *item = static_cast<DomItem*>(index.internalPointer()))
+    {
+        QDomNode node = item->node();
+        if (!node.toElement().attribute ("collapse").isEmpty())
+        {
+            node.toElement().removeAttribute ("collapse");
+            noteModified();
+        }
+    }
+}
+/*************************/
+void FN::indexCollapsed (const QModelIndex &index)
+{
+    if (!rememberExpanded_ || !index.isValid()) return;
+    if (DomItem *item = static_cast<DomItem*>(index.internalPointer()))
+    {
+        QDomNode node = item->node();
+        node.toElement().setAttribute ("collapse", "1");
+        noteModified();
+    }
+}
+/*************************/
+void FN::setCollapsedStates()
+{
+    QModelIndex indx = model_->index (0, 0);
+    while (indx.isValid())
+    {
+        if (model_->hasChildren (indx))
+        {
+            if (DomItem *item = static_cast<DomItem*>(indx.internalPointer()))
+            {
+                QDomNode node = item->node();
+                if (ui->treeView->isExpanded (indx))
+                {
+                    if (!node.toElement().attribute ("collapse").isEmpty())
+                    {
+                        node.toElement().removeAttribute ("collapse");
+                        noteModified();
+                    }
+                }
+                else if (node.toElement().attribute ("collapse") != "1")
+                {
+                    node.toElement().setAttribute ("collapse", "1");
+                    noteModified();
+                }
+            }
+        }
+        indx = model_->adjacentIndex (indx, true);
+    }
+}
+/*************************/
 void FN::fullScreening()
 {
     setWindowState (windowState() ^ Qt::WindowFullScreen);
@@ -1108,7 +1165,26 @@ void FN::showDoc (QDomDocument &doc, int node)
     QTimer::singleShot (0, this, [this, indx] () {
         ui->treeView->scrollTo (indx);
     });
-    ui->treeView->expandAll();
+
+    if (!rememberExpanded_)
+        ui->treeView->expandAll();
+    else
+    {
+        QModelIndex _indx = newModel->index (0, 0);
+        ui->treeView->setUpdatesEnabled (false);
+        while (_indx.isValid())
+        {
+            if (DomItem *item = static_cast<DomItem*>(_indx.internalPointer()))
+            {
+                QDomNode node = item->node();
+                if (node.toElement().attribute ("collapse").isEmpty())
+                    ui->treeView->expand (_indx);
+            }
+            _indx = newModel->adjacentIndex (_indx, true);
+        }
+        ui->treeView->setUpdatesEnabled (true);
+    }
+
     delete model_;
     model_ = newModel;
     connect (model_, &QAbstractItemModel::dataChanged, this, &FN::nodeChanged);
@@ -5043,6 +5119,8 @@ void FN::readAndApplyConfig (bool startup)
     dictPath_ = settings.value ("dictionaryPath").toString();
 #endif
 
+    rememberExpanded_ = settings.value ("rememberExpanded").toBool(); // false by default
+
     settings.endGroup();
 }
 /*************************/
@@ -5209,6 +5287,8 @@ void FN::writeConfig()
 #ifdef HAS_HUNSPELL
     settings.setValue ("dictionaryPath", dictPath_);
 #endif
+
+    settings.setValue ("rememberExpanded", rememberExpanded_);
 
     settings.endGroup();
 

@@ -331,6 +331,14 @@ PrefDialog::PrefDialog (QWidget *parent)
             win->setOpenReccentSeparately (checked == Qt::Checked);
         });
 
+        /* whether expanded states of nodes should be remembered */
+        ui->expandBox->setChecked (win->getRememberExpanded());
+        connect (ui->expandBox, &QCheckBox::stateChanged, win, [win] (int checked) {
+            win->setRememberExpanded (checked == Qt::Checked);
+            if (checked == Qt::Checked)
+                win->setCollapsedStates();
+        });
+
         /* spell checking */
 #ifdef HAS_HUNSPELL
         ui->dictEdit->setText (win->getDictPath());

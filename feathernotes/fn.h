@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2021 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2022 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -217,6 +217,14 @@ public:
         openReccentSeparately_ = separately;
     }
 
+    void setCollapsedStates();
+    bool getRememberExpanded() const {
+        return rememberExpanded_;
+    }
+    void setRememberExpanded (bool remember) {
+        rememberExpanded_ = remember;
+    }
+
 #ifdef HAS_HUNSPELL
     QString getDictPath() const {
         return dictPath_;
@@ -233,6 +241,8 @@ private slots:
     bool close();
     void checkTray();
     void showContextMenu (const QPoint &p);
+    void indexExpanded (const QModelIndex &index);
+    void indexCollapsed (const QModelIndex &index);
     void fullScreening();
     void rehighlight (TextEdit *textEdit);
     void zoomingIn();
@@ -414,6 +424,7 @@ private:
     int imgScale_; QString lastImgPath_;
     int recentNum_;
     bool openReccentSeparately_;
+    bool rememberExpanded_;
     bool shownBefore_,
          remSize_, remSplitter_,
          remPosition_,

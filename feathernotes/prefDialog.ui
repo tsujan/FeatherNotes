@@ -556,6 +556,16 @@ name but ending with &quot;.aff&quot;.</string>
            </widget>
           </item>
           <item>
+           <widget class="QCheckBox" name="expandBox">
+            <property name="toolTip">
+             <string>By default, all nodes are expanded on opening a document.</string>
+            </property>
+            <property name="text">
+             <string>Remember expanded states of nodes</string>
+            </property>
+           </widget>
+          </item>
+          <item>
            <spacer name="verticalSpacer_2">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
