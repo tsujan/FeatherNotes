@@ -38,6 +38,7 @@
 #include <QDateTime>
 #include <QDir>
 #include <QTextStream>
+#include <QActionGroup>
 #include <QToolButton>
 #include <QPrinter>
 #include <QPrintDialog>
@@ -249,6 +250,8 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     ui->actionRTL->setActionGroup (aGroup1);
 
     /* signal connections */
+
+    connect (ui->actionQuit, &QAction::triggered, this, &FN::close);
 
     connect (ui->treeView, &QWidget::customContextMenuRequested, this, &FN::showContextMenu);
     connect (ui->treeView, &QTreeView::expanded, this, &FN::indexExpanded);
@@ -495,6 +498,19 @@ bool FN::close()
 /*************************/
 void FN::closeEvent (QCloseEvent *event)
 {
+    /* NOTE: With Qt6, "QCoreApplication::quit()" calls "closeEvent()" when the window
+             is visible. But we want the app to quit without any prompt when receiving
+             SIGTERM and similar signals. Here, we handle the situation by checking if
+             the event is spontaneous or is sent by our actions. This is also safe with Qt5. */
+    QObject *sender = QObject::sender();
+    if (!event->spontaneous()
+        && (sender == nullptr
+            || (sender != ui->actionQuit && sender->objectName() != "trayQuit")))
+    {
+        event->accept();
+        return;
+    }
+
     if (!quitting_)
     {
         event->ignore();
@@ -519,7 +535,7 @@ void FN::closeEvent (QCloseEvent *event)
         {
             if (tray_)
             {
-                if (underE_ && QObject::sender() != nullptr && QObject::sender()->objectName() == "trayQuit")
+                if (underE_ && sender != nullptr && sender->objectName() == "trayQuit")
                 {
                     if (!isVisible())
                     {
@@ -545,7 +561,7 @@ void FN::closeEvent (QCloseEvent *event)
         {
             if (tray_)
             {
-                if (underE_ && QObject::sender() != nullptr && QObject::sender()->objectName() == "trayQuit")
+                if (underE_ && sender != nullptr && sender->objectName() == "trayQuit")
                 {
                     if (!isVisible())
                     {
@@ -583,6 +599,11 @@ void FN::closeEvent (QCloseEvent *event)
         tray_ = nullptr;
         event->accept();
         closed_ = true; // window info shouldn't be saved after closing
+
+        /* WARNING: With Qt6, the app won't quit if its window is hidden when this
+                    method is called (e.g., if iconified in the system tray). This is
+                    definitely a Qt6 bug. An explicit quitting is also safe with Qt5. */
+        QCoreApplication::quit();
     }
 }
 /*************************/
@@ -1087,6 +1108,60 @@ void FN::updateNodeActions()
     }
 }
 /*************************/
+// Qt6 has changed "QFont::toString()" in a backward incompatible way, so that,
+// if a document is saved by the Qt6 version, the Qt5 version will show wrong fonts.
+// This function circumvents the problem when it's used instead of "QFont::toString()".
+static inline void fontFromString (QFont &f, const QString &str)
+{
+#if (QT_VERSION < QT_VERSION_CHECK(6,0,0))
+    const QChar comma (QLatin1Char (','));
+    QStringList l = str.split (comma);
+    if (l.size() <= 10)
+        f.fromString (str);
+    else
+    {
+        l = l.mid (0, 10);
+        int weight = l.at (4).toInt();
+        switch (weight) {
+        case 100:
+            weight = 0;
+            break;
+        case 200:
+            weight = 12;
+            break;
+        case 300:
+            weight = 25;
+            break;
+        case 400:
+            weight = 50;
+            break;
+        case 500:
+            weight = 57;
+            break;
+        case 600:
+            weight = 63;
+            break;
+        case 700:
+            weight = 75;
+            break;
+        case 800:
+            weight = 81;
+            break;
+        case 900:
+            weight = 87;
+            break;
+        default:
+            weight = 50;
+            break;
+        }
+        l[4] = QString::number (weight);
+        f.fromString (l.join (comma));
+    }
+#else
+    f.fromString (str);
+#endif
+}
+/*************************/
 void FN::showDoc (QDomDocument &doc, int node)
 {
     if (saveNeeded_)
@@ -1113,7 +1188,7 @@ void FN::showDoc (QDomDocument &doc, int node)
     {
         /* since defaultFont_ may have been set in textFontDialog(),
            it needs to be redefined completely */
-        QFont f; f.fromString (fontStr);
+        QFont f; fontFromString (f, fontStr);
         defaultFont_ = f;
     }
     else
@@ -1123,7 +1198,7 @@ void FN::showDoc (QDomDocument &doc, int node)
     }
     fontStr = root.attribute ("nodefont");
     if (!fontStr.isEmpty())
-        nodeFont_.fromString (fontStr);
+        fontFromString (nodeFont_, fontStr);
     else // nodeFont_ may have changed by the user
         nodeFont_ = font();
 
@@ -1188,10 +1263,7 @@ void FN::showDoc (QDomDocument &doc, int node)
     delete model_;
     model_ = newModel;
     connect (model_, &QAbstractItemModel::dataChanged, this, &FN::nodeChanged);
-    connect (model_, &DomModel::treeChanged, this, &FN::updateNodeActions);
-    connect (model_, &DomModel::treeChanged, this, &FN::noteModified);
-    connect (model_, &DomModel::treeChanged, this, &FN::docProp);
-    connect (model_, &DomModel::treeChanged, this, &FN::closeTagsDialog);
+    connect (model_, &DomModel::treeChanged, this, &FN::treeChanged);
 
     connect (model_, &DomModel::dragStarted, [this] (const QModelIndex &draggedIndex) {
         if (draggedIndex == ui->treeView->currentIndex())
@@ -2994,11 +3066,7 @@ void FN::textFontDialog()
     if (ok)
     {
         defaultFont_ = QFont (newFont.family(), newFont.pointSize());
-#if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
         defaultFont_.setFamilies (newFont.families()); // to override the existing font families
-#else
-        defaultFont_.setFamily (newFont.family());
-#endif
 
         noteModified();
 
@@ -3150,6 +3218,14 @@ void FN::noteModified()
 void FN::nodeChanged (const QModelIndex&, const QModelIndex&)
 {
     noteModified();
+}
+/*************************/
+void FN::treeChanged()
+{
+    updateNodeActions();
+    noteModified();
+    docProp();
+    closeTagsDialog();
 }
 /*************************/
 void FN::showHideSearch()
@@ -5928,11 +6004,7 @@ void FN::aboutDialog()
 {
     class AboutDialog : public QDialog {
     public:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
         explicit AboutDialog (QWidget* parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags()) : QDialog (parent, f) {
-#else
-        explicit AboutDialog (QWidget* parent = nullptr, Qt::WindowFlags f = nullptr) : QDialog (parent, f) {
-#endif
             aboutUi.setupUi (this);
             aboutUi.textLabel->setOpenExternalLinks (true);
         }

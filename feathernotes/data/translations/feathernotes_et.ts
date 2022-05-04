@@ -26,9 +26,9 @@
     <name>FeatherNotes::FN</name>
     <message>
         <location filename="../../fn.ui" line="14"/>
-        <location filename="../../fn.cpp" line="1533"/>
-        <location filename="../../fn.cpp" line="3802"/>
-        <location filename="../../fn.cpp" line="5606"/>
+        <location filename="../../fn.cpp" line="1605"/>
+        <location filename="../../fn.cpp" line="3878"/>
+        <location filename="../../fn.cpp" line="5682"/>
         <source>FeatherNotes</source>
         <translation>FeatherNotes</translation>
     </message>
@@ -215,7 +215,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="536"/>
-        <location filename="../../fn.cpp" line="966"/>
+        <location filename="../../fn.cpp" line="987"/>
         <source>Save</source>
         <translation>Salvesta</translation>
     </message>
@@ -226,7 +226,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="544"/>
-        <location filename="../../fn.cpp" line="645"/>
+        <location filename="../../fn.cpp" line="666"/>
         <source>&amp;Open</source>
         <translation>&amp;Ava</translation>
     </message>
@@ -397,7 +397,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="712"/>
-        <location filename="../../fn.cpp" line="644"/>
+        <location filename="../../fn.cpp" line="665"/>
         <source>&amp;New Note</source>
         <translation>&amp;Uus märge</translation>
     </message>
@@ -438,7 +438,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="758"/>
-        <location filename="../../fn.cpp" line="647"/>
+        <location filename="../../fn.cpp" line="668"/>
         <source>&amp;Quit</source>
         <translation>&amp;Välju</translation>
     </message>
@@ -499,7 +499,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="824"/>
-        <location filename="../../fn.cpp" line="4052"/>
+        <location filename="../../fn.cpp" line="4128"/>
         <source>Embed Image</source>
         <translation>Lõimi pilt</translation>
     </message>
@@ -705,7 +705,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="1067"/>
-        <location filename="../../fn.cpp" line="2091"/>
+        <location filename="../../fn.cpp" line="2163"/>
         <source>&amp;Right</source>
         <translation>&amp;Paremale</translation>
     </message>
@@ -721,7 +721,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="1084"/>
-        <location filename="../../fn.cpp" line="2085"/>
+        <location filename="../../fn.cpp" line="2157"/>
         <source>&amp;Left</source>
         <translation>&amp;Vasakule</translation>
     </message>
@@ -994,428 +994,428 @@
         <translation>&amp;Eemalda</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2788"/>
+        <location filename="../../fn.cpp" line="2860"/>
         <source>Node Icon</source>
         <translation>Sõlme ikoon</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="639"/>
-        <location filename="../../fn.cpp" line="4793"/>
+        <location filename="../../fn.cpp" line="660"/>
+        <location filename="../../fn.cpp" line="4869"/>
         <source>&amp;Raise/Hide</source>
         <translation>&amp;Tõsta/peida</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="863"/>
+        <location filename="../../fn.cpp" line="884"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;New note?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Uus märge?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="864"/>
+        <location filename="../../fn.cpp" line="885"/>
         <source>&lt;center&gt;&lt;i&gt;Do you really want to leave this document&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;and create an empty one?&lt;/i&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;i&gt;Kas sa kindlasti soovid lõpetada töö selle dokumendiga&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;ning luua uue ja tühja faili?&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="867"/>
-        <location filename="../../fn.cpp" line="2616"/>
-        <location filename="../../fn.cpp" line="4419"/>
+        <location filename="../../fn.cpp" line="888"/>
+        <location filename="../../fn.cpp" line="2688"/>
+        <location filename="../../fn.cpp" line="4495"/>
         <source>Yes</source>
         <translation>Jah</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="868"/>
-        <location filename="../../fn.cpp" line="2617"/>
-        <location filename="../../fn.cpp" line="4420"/>
+        <location filename="../../fn.cpp" line="889"/>
+        <location filename="../../fn.cpp" line="2689"/>
+        <location filename="../../fn.cpp" line="4496"/>
         <source>No</source>
         <translation>Ei</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="958"/>
+        <location filename="../../fn.cpp" line="979"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Save changes?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Kas salvestame muudatused?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="960"/>
+        <location filename="../../fn.cpp" line="981"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been modified.&lt;/i&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;i&gt;Sa oled dokumenti muutnud.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="962"/>
+        <location filename="../../fn.cpp" line="983"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been removed.&lt;/i&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;i&gt;Dokument on kustutatud.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="967"/>
+        <location filename="../../fn.cpp" line="988"/>
         <source>Discard changes</source>
         <translation>Loobu muudatustest</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="968"/>
-        <location filename="../../fn.cpp" line="2729"/>
-        <location filename="../../fn.cpp" line="2831"/>
-        <location filename="../../fn.cpp" line="3095"/>
-        <location filename="../../fn.cpp" line="3995"/>
-        <location filename="../../fn.cpp" line="4076"/>
-        <location filename="../../fn.cpp" line="4237"/>
-        <location filename="../../fn.cpp" line="4516"/>
-        <location filename="../../fn.cpp" line="5475"/>
-        <location filename="../../fn.cpp" line="5738"/>
-        <location filename="../../fn.cpp" line="5858"/>
+        <location filename="../../fn.cpp" line="989"/>
+        <location filename="../../fn.cpp" line="2801"/>
+        <location filename="../../fn.cpp" line="2903"/>
+        <location filename="../../fn.cpp" line="3163"/>
+        <location filename="../../fn.cpp" line="4071"/>
+        <location filename="../../fn.cpp" line="4152"/>
+        <location filename="../../fn.cpp" line="4313"/>
+        <location filename="../../fn.cpp" line="4592"/>
+        <location filename="../../fn.cpp" line="5551"/>
+        <location filename="../../fn.cpp" line="5814"/>
+        <location filename="../../fn.cpp" line="5934"/>
         <source>Cancel</source>
         <translation>Tühista</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1378"/>
+        <location filename="../../fn.cpp" line="1450"/>
         <source>Open file...</source>
         <translation>Ava fail...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1534"/>
-        <location filename="../../fn.cpp" line="5607"/>
+        <location filename="../../fn.cpp" line="1606"/>
+        <location filename="../../fn.cpp" line="5683"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be saved!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Salvestamine pole võimalik!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1538"/>
-        <location filename="../../fn.cpp" line="3380"/>
-        <location filename="../../fn.cpp" line="3806"/>
-        <location filename="../../fn.cpp" line="5610"/>
-        <location filename="../../fn.cpp" line="6164"/>
+        <location filename="../../fn.cpp" line="1610"/>
+        <location filename="../../fn.cpp" line="3456"/>
+        <location filename="../../fn.cpp" line="3882"/>
+        <location filename="../../fn.cpp" line="5686"/>
+        <location filename="../../fn.cpp" line="6236"/>
         <source>Close</source>
         <translation>Sulge</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1636"/>
-        <location filename="../../fn.cpp" line="1657"/>
+        <location filename="../../fn.cpp" line="1708"/>
+        <location filename="../../fn.cpp" line="1729"/>
         <source>Save As...</source>
         <translation>Salvesta kui...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2613"/>
+        <location filename="../../fn.cpp" line="2685"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Delete this node?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Kas kustutame selle sõlme?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2614"/>
+        <location filename="../../fn.cpp" line="2686"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;i&gt;Warning!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
 &lt;center&gt;This action cannot be undone.&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;i&gt;Hoiatus!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
 &lt;center&gt;Sa ei saa seda tegevust hiljem tühistada.&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2715"/>
+        <location filename="../../fn.cpp" line="2787"/>
         <source>Tags</source>
         <translation>Sildid</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2730"/>
-        <location filename="../../fn.cpp" line="2832"/>
-        <location filename="../../fn.cpp" line="3096"/>
-        <location filename="../../fn.cpp" line="3997"/>
-        <location filename="../../fn.cpp" line="4077"/>
-        <location filename="../../fn.cpp" line="4238"/>
-        <location filename="../../fn.cpp" line="4517"/>
-        <location filename="../../fn.cpp" line="5477"/>
-        <location filename="../../fn.cpp" line="5739"/>
-        <location filename="../../fn.cpp" line="5859"/>
+        <location filename="../../fn.cpp" line="2802"/>
+        <location filename="../../fn.cpp" line="2904"/>
+        <location filename="../../fn.cpp" line="3164"/>
+        <location filename="../../fn.cpp" line="4073"/>
+        <location filename="../../fn.cpp" line="4153"/>
+        <location filename="../../fn.cpp" line="4314"/>
+        <location filename="../../fn.cpp" line="4593"/>
+        <location filename="../../fn.cpp" line="5553"/>
+        <location filename="../../fn.cpp" line="5815"/>
+        <location filename="../../fn.cpp" line="5935"/>
         <source>OK</source>
         <translation>Sobib</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2918"/>
-        <location filename="../../fn.cpp" line="2951"/>
+        <location filename="../../fn.cpp" line="2990"/>
+        <location filename="../../fn.cpp" line="3023"/>
         <source>&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</source>
         <translation>&lt;b&gt;Põhisõlmed:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Kõik sõlmed:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2924"/>
-        <location filename="../../fn.cpp" line="2957"/>
+        <location filename="../../fn.cpp" line="2996"/>
+        <location filename="../../fn.cpp" line="3029"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</source>
         <translation>&lt;b&gt;Märge:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Põhisõlmed:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Kõik sõlmed:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3367"/>
+        <location filename="../../fn.cpp" line="3443"/>
         <source>%1 Matches</source>
         <translation>%1 vastet</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3369"/>
+        <location filename="../../fn.cpp" line="3445"/>
         <source>One Match</source>
         <translation>Üks vaste</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3371"/>
-        <location filename="../../fn.cpp" line="3686"/>
+        <location filename="../../fn.cpp" line="3447"/>
+        <location filename="../../fn.cpp" line="3762"/>
         <source>No Match</source>
         <translation>Vasteid pole</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3486"/>
-        <location filename="../../fn.cpp" line="3538"/>
+        <location filename="../../fn.cpp" line="3562"/>
+        <location filename="../../fn.cpp" line="3614"/>
         <source>Replacement</source>
         <translation>Asenda sisu</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3793"/>
+        <location filename="../../fn.cpp" line="3869"/>
         <source>No Replacement</source>
         <translation>Pole midagi asendada</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3795"/>
+        <location filename="../../fn.cpp" line="3871"/>
         <source>One Replacement</source>
         <translation>Üks asendus</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3798"/>
+        <location filename="../../fn.cpp" line="3874"/>
         <source>%1 Replacements</source>
         <translation>%1 asendust</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3983"/>
+        <location filename="../../fn.cpp" line="4059"/>
         <source>Insert Link</source>
         <translation>Lisa viide</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2796"/>
-        <location filename="../../fn.cpp" line="4061"/>
+        <location filename="../../fn.cpp" line="2868"/>
+        <location filename="../../fn.cpp" line="4137"/>
         <source>Image path</source>
         <translation>Pildi asukoht</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2800"/>
-        <location filename="../../fn.cpp" line="4065"/>
+        <location filename="../../fn.cpp" line="2872"/>
+        <location filename="../../fn.cpp" line="4141"/>
         <source>Open image</source>
         <translation>Ava pilt</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4073"/>
-        <location filename="../../fn.cpp" line="4234"/>
+        <location filename="../../fn.cpp" line="4149"/>
+        <location filename="../../fn.cpp" line="4310"/>
         <source>Scaling percentage</source>
         <translation>Skaleerimise suhe</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2818"/>
-        <location filename="../../fn.cpp" line="4182"/>
+        <location filename="../../fn.cpp" line="2890"/>
+        <location filename="../../fn.cpp" line="4258"/>
         <source>Open Image...</source>
         <translation>Ava pilt...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="641"/>
-        <location filename="../../fn.cpp" line="4781"/>
+        <location filename="../../fn.cpp" line="662"/>
+        <location filename="../../fn.cpp" line="4857"/>
         <source>&amp;Raise</source>
         <translation>&amp;Tõsta</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="914"/>
+        <location filename="../../fn.cpp" line="935"/>
         <source>New Node</source>
         <translation>Uus sõlm</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1380"/>
-        <location filename="../../fn.cpp" line="1638"/>
-        <location filename="../../fn.cpp" line="1659"/>
+        <location filename="../../fn.cpp" line="1452"/>
+        <location filename="../../fn.cpp" line="1710"/>
+        <location filename="../../fn.cpp" line="1731"/>
         <source>FeatherNotes documents (*.fnx);;All Files (*)</source>
         <translation>FeatherNotes dokumendid (*.fnx);;Kõik failid (*)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1535"/>
+        <location filename="../../fn.cpp" line="1607"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be opened!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Avamine ei ole võimalik!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1620"/>
-        <location filename="../../fn.cpp" line="5329"/>
-        <location filename="../../fn.cpp" line="5338"/>
-        <location filename="../../fn.cpp" line="5464"/>
-        <location filename="../../fn.cpp" line="5658"/>
-        <location filename="../../fn.cpp" line="5667"/>
-        <location filename="../../fn.cpp" line="5693"/>
+        <location filename="../../fn.cpp" line="1692"/>
+        <location filename="../../fn.cpp" line="5405"/>
+        <location filename="../../fn.cpp" line="5414"/>
+        <location filename="../../fn.cpp" line="5540"/>
+        <location filename="../../fn.cpp" line="5734"/>
+        <location filename="../../fn.cpp" line="5743"/>
+        <location filename="../../fn.cpp" line="5769"/>
         <source>Untitled</source>
         <translation>Nimeta</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2084"/>
+        <location filename="../../fn.cpp" line="2156"/>
         <source>Align Table</source>
         <translation>Joonda tabel</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2097"/>
+        <location filename="../../fn.cpp" line="2169"/>
         <source>&amp;Center</source>
         <translation>&amp;Keskele</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2465"/>
+        <location filename="../../fn.cpp" line="2537"/>
         <source>Select Text Color</source>
         <translation>Vali teksti värv</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2487"/>
+        <location filename="../../fn.cpp" line="2559"/>
         <source>Select Background Color</source>
         <translation>Vali taustavärv</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2612"/>
+        <location filename="../../fn.cpp" line="2684"/>
         <source>Deletion</source>
         <translation>Kustutamine</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2725"/>
+        <location filename="../../fn.cpp" line="2797"/>
         <source>Tag(s) for this node</source>
         <translation>Selle sõlme silt või sildid</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2820"/>
-        <location filename="../../fn.cpp" line="4184"/>
+        <location filename="../../fn.cpp" line="2892"/>
+        <location filename="../../fn.cpp" line="4260"/>
         <source>Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)</source>
         <translation>Pildifailid (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;Kõik failid (*)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2993"/>
+        <location filename="../../fn.cpp" line="3065"/>
         <source>Select Document Font</source>
         <translation>Vali dokumendi font</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3052"/>
+        <location filename="../../fn.cpp" line="3120"/>
         <source>Select Node Font</source>
         <translation>Vali sõlme font</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3067"/>
+        <location filename="../../fn.cpp" line="3135"/>
         <source>Set Document Colors</source>
         <translation>Seadista dokumendi värve</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3077"/>
+        <location filename="../../fn.cpp" line="3145"/>
         <source>These colors will be applied to new nodes.&lt;br&gt;They may or may not affect existing nodes&lt;br&gt;but document reopening is recommended.</source>
         <translation>Need värvid kehtivad eelkõige uute sõlmede lisamisel.&lt;br&gt;Olemasolevaid sõlmi võivad nad mõjutada&lt;br&gt;kuid soovitame, et ava dokument uuesti.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3080"/>
+        <location filename="../../fn.cpp" line="3148"/>
         <source>Background color:</source>
         <translation>Taustavärv:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3086"/>
+        <location filename="../../fn.cpp" line="3154"/>
         <source>Text color:</source>
         <translation>Teksti värv:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3803"/>
+        <location filename="../../fn.cpp" line="3879"/>
         <source>The first 1000 replacements are highlighted.</source>
         <translation>1000 esimest asendust on esile tõstetud.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4068"/>
-        <location filename="../../fn.cpp" line="4230"/>
+        <location filename="../../fn.cpp" line="4144"/>
+        <location filename="../../fn.cpp" line="4306"/>
         <source>Scale to</source>
         <translation>Skaleeri kuni</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4072"/>
-        <location filename="../../fn.cpp" line="4233"/>
+        <location filename="../../fn.cpp" line="4148"/>
+        <location filename="../../fn.cpp" line="4309"/>
         <source>%</source>
         <translation>%</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4224"/>
+        <location filename="../../fn.cpp" line="4300"/>
         <source>Scale Image(s)</source>
         <translation>Skaleeri pilt(e)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4383"/>
+        <location filename="../../fn.cpp" line="4459"/>
         <source>untitled</source>
         <translation>nimetu</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4414"/>
+        <location filename="../../fn.cpp" line="4490"/>
         <source>Error</source>
         <translation>Viga</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4415"/>
+        <location filename="../../fn.cpp" line="4491"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Image cannot be saved! Retry?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Pildi salvestamine ei õnnestu! Kas proovime uuesti?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4416"/>
+        <location filename="../../fn.cpp" line="4492"/>
         <source>&lt;center&gt;Maybe you did not choose a proper extension&lt;/center&gt;
 &lt;center&gt;or do not have write permission.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</source>
         <translation>&lt;center&gt;Võib-olla sa ei valinud õiget tüüpi faili&lt;/center&gt;
 &lt;center&gt;või puuduvad kirjutusõigused.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4446"/>
+        <location filename="../../fn.cpp" line="4522"/>
         <source>Save Image As...</source>
         <translation>Salvesta pilt kui...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4448"/>
+        <location filename="../../fn.cpp" line="4524"/>
         <source>Image Files (*.png *.jpg *.jpeg *.bmp);;All Files (*)</source>
         <translation>Pildifailie (*.png *.jpg *.jpeg *.bmp);;Kõik failid (*)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4498"/>
+        <location filename="../../fn.cpp" line="4574"/>
         <source>Insert Table</source>
         <translation>Lisa tabel</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4504"/>
+        <location filename="../../fn.cpp" line="4580"/>
         <source>Rows:</source>
         <translation>Ridu:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4510"/>
+        <location filename="../../fn.cpp" line="4586"/>
         <source>Columns:</source>
         <translation>Veerge:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5348"/>
+        <location filename="../../fn.cpp" line="5424"/>
         <source>Print Document</source>
         <translation>Trüki dokument</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5432"/>
+        <location filename="../../fn.cpp" line="5508"/>
         <source>Export HTML</source>
         <translation>Ekspordi html-failine</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5437"/>
+        <location filename="../../fn.cpp" line="5513"/>
         <source>Export:</source>
         <translation>Ekspordi:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5438"/>
+        <location filename="../../fn.cpp" line="5514"/>
         <source>&amp;Current node</source>
         <translation>Vaid &amp;see sõlm</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5440"/>
+        <location filename="../../fn.cpp" line="5516"/>
         <source>With all &amp;sub-nodes</source>
         <translation>Koos kõikide &amp;alamsõlmedega</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5441"/>
+        <location filename="../../fn.cpp" line="5517"/>
         <source>&amp;All nodes</source>
         <translation>&amp;Kõik sõlmed</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5453"/>
+        <location filename="../../fn.cpp" line="5529"/>
         <source>Output file:</source>
         <translation>Väljundfail:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5472"/>
+        <location filename="../../fn.cpp" line="5548"/>
         <source>Select path</source>
         <translation>Vali asukoht</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5514"/>
+        <location filename="../../fn.cpp" line="5590"/>
         <source>Question</source>
         <translation>Küsimus</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5515"/>
+        <location filename="../../fn.cpp" line="5591"/>
         <source>The file already exists.
 Do you want to replace it?
 </source>
@@ -1424,106 +1424,106 @@ Kas sa soovid selle asendada?
 </translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5698"/>
+        <location filename="../../fn.cpp" line="5774"/>
         <source>Save HTML As...</source>
         <translation>Salvesta HTML kui...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5700"/>
+        <location filename="../../fn.cpp" line="5776"/>
         <source>HTML Files (*.html *.htm)</source>
         <translation>HTML-failid (*.html *.htm)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5721"/>
+        <location filename="../../fn.cpp" line="5797"/>
         <source>Set Password</source>
         <translation>Seadista failile salasõna</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5729"/>
+        <location filename="../../fn.cpp" line="5805"/>
         <source>Type password</source>
         <translation>Sisesta salasõna</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5734"/>
+        <location filename="../../fn.cpp" line="5810"/>
         <source>Retype password</source>
         <translation>Korda salasõna</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5809"/>
+        <location filename="../../fn.cpp" line="5885"/>
         <source>&lt;center&gt;Passwords were different. Retry!&lt;/center&gt;</source>
         <translation>&lt;center&gt;Sisestatud salasõnad olid erinevad. Palun proovi uuesti!&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5846"/>
-        <location filename="../../fn.cpp" line="5854"/>
+        <location filename="../../fn.cpp" line="5922"/>
+        <location filename="../../fn.cpp" line="5930"/>
         <source>Enter Password</source>
         <translation>Sisesta salasõna</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5920"/>
+        <location filename="../../fn.cpp" line="5996"/>
         <source>&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</source>
         <translation>&lt;center&gt;Vale salasõna. Palun proovi uuesti!&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5963"/>
+        <location filename="../../fn.cpp" line="6035"/>
         <source>A lightweight notes manager</source>
         <translation>Lihtne ja kiire märkmete haldur</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5964"/>
+        <location filename="../../fn.cpp" line="6036"/>
         <source>based on Qt</source>
         <translation>mis kasutab Qt-teeke</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5965"/>
+        <location filename="../../fn.cpp" line="6037"/>
         <source>Author</source>
         <translation>Autor</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5967"/>
-        <location filename="../../fn.cpp" line="5968"/>
+        <location filename="../../fn.cpp" line="6039"/>
+        <location filename="../../fn.cpp" line="6040"/>
         <source>About FeatherNotes</source>
         <translation>Teve FeatherNotes&apos;i kohta</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5967"/>
+        <location filename="../../fn.cpp" line="6039"/>
         <source>Translators</source>
         <translation>Tõlkijad</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6156"/>
+        <location filename="../../fn.cpp" line="6228"/>
         <source>See Preferences → Text → Spell Checking!</source>
         <translation>Tee vajalik muudatus siin: Seadistused → Tekst → Õigekiri!</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6178"/>
+        <location filename="../../fn.cpp" line="6250"/>
         <source>You need to add a Hunspell dictionary.</source>
         <translation>Sa pead lisama Hunspelli-põhise sõnastiku.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6183"/>
+        <location filename="../../fn.cpp" line="6255"/>
         <source>The Hunspell dictionary does not exist.</source>
         <translation>Hunspelli-põhist sõnastikku ei leidu.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6191"/>
+        <location filename="../../fn.cpp" line="6263"/>
         <source>The Hunspell dictionary is not accompanied by an affix file.</source>
         <translation>Hunspell&apos;i sõnastikul puudub liidete fail.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6209"/>
-        <location filename="../../fn.cpp" line="6224"/>
-        <location filename="../../fn.cpp" line="6236"/>
+        <location filename="../../fn.cpp" line="6281"/>
+        <location filename="../../fn.cpp" line="6296"/>
+        <location filename="../../fn.cpp" line="6308"/>
         <source>No misspelling from text cursor.</source>
         <translation>Alates kursori asukohast ei leidu õigekirjavigu.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6247"/>
+        <location filename="../../fn.cpp" line="6319"/>
         <source>Spell Checking</source>
         <translation>Õigekirjakontroll</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5966"/>
+        <location filename="../../fn.cpp" line="6038"/>
         <source>aka.</source>
         <translation>tuntud ka kui</translation>
     </message>

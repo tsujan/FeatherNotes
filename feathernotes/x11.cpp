@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2022 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -15,11 +15,13 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <QString>
+#include <QApplication>
+#if (QT_VERSION < QT_VERSION_CHECK(6,0,0))
+#include <QX11Info>
+#endif
 #include "x11.h"
 
 #include <X11/Xatom.h>
-#include <QX11Info>
 
 namespace FeatherNotes {
 
@@ -28,12 +30,23 @@ namespace FeatherNotes {
  ***       because Qt is not rooted enough in X11.         ***
  *************************************************************/
 
+static inline Display* getDisplay()
+{
+#if (QT_VERSION < QT_VERSION_CHECK(6,0,0))
+    return QX11Info::display();
+#else
+    if (auto x11NativeInterfce = qApp->nativeInterface<QNativeInterface::QX11Application>())
+        return x11NativeInterfce->display();
+    return nullptr;
+#endif
+}
+
 // Get the curent virtual desktop.
 long fromDesktop()
 {
     long res = -1;
 
-    Display  *disp = QX11Info::display();
+    Display *disp = getDisplay();
     if (!disp) return res;
 
     Atom actual_type;
@@ -66,7 +79,7 @@ long onWhichDesktop (Window w)
 {
     long res = -1;
 
-    Display *disp = QX11Info::display();
+    Display *disp = getDisplay();
     if (!disp) return res;
 
     Atom wm_desktop = XInternAtom (disp, "_NET_WM_DESKTOP", False);
@@ -96,7 +109,7 @@ long onWhichDesktop (Window w)
 // which was defined in gdkwindow-x11.c.
 void moveToCurrentDesktop (Window w)
 {
-    Display *disp = QX11Info::display();
+    Display *disp = getDisplay();
     if (!disp) return;
 
     Atom type_ret;

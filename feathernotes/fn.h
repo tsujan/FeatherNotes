@@ -316,9 +316,8 @@ private slots:
     void toggleWrapping();
     void toggleIndent();
     void prefDialog();
-    void noteModified();
-    void docProp();
     void nodeChanged (const QModelIndex&, const QModelIndex&);
+    void treeChanged();
     void showHideSearch();
     void clearTagsList (int);
     void selectRow (QListWidgetItem *item);
@@ -350,8 +349,6 @@ private slots:
     void updateRecenMenu();
     void openRecentFile();
     void clearRecentMenu();
-    void closeTagsDialog();
-    void updateNodeActions();
 
 #ifdef HAS_HUNSPELL
     void checkSpelling();
@@ -390,6 +387,10 @@ private:
     void dragEnterEvent (QDragEnterEvent *event);
     void dropEvent (QDropEvent *event);
     bool event (QEvent *event);
+    void noteModified();
+    void docProp();
+    void closeTagsDialog();
+    void updateNodeActions();
 
 #ifdef HAS_HUNSPELL
     void spellingCheckingMsg (const QString &msg, bool hasInfo);

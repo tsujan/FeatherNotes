@@ -2,6 +2,10 @@ V0.10.1
 ---------
  * Select the text between spaces with Ctrl + double click.
  * Added an option for remembering the expanded state of each node.
+ * Require Qt5.15.
+ * Enabled compilation against Qt6. With cmake, "ENABLE_QT5" should be set to "OFF" (as in `cmake .. -DENABLE_QT5=OFF`) — it's "ON" by default.
+ * With Qt6, accept the close event on receiving SIGTERM and similar signals (because, in Qt6, "qApp->quit()" calls "closeEvent()").
+ * Added a workaround for the problem Qt6 has with quitting from the tray icon when the window is iconified.
 
 V0.10.0
 ---------

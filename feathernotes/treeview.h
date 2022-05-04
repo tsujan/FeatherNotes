@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2021 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2022 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -166,7 +166,11 @@ protected:
             && qApp->keyboardModifiers() == Qt::NoModifier)
         {
             if (indexAt (event->pos()).isValid())
+#if (QT_VERSION < QT_VERSION_CHECK(6,0,0))
                 itemPressPoint_ = event->globalPos();
+#else
+                itemPressPoint_ = event->globalPosition().toPoint();
+#endif
             else itemPressPoint_ = QPoint();
         }
         else itemPressPoint_ = QPoint();
@@ -175,7 +179,11 @@ protected:
 
     virtual void mouseMoveEvent (QMouseEvent *event) {
         /* prevent dragging if there is no real mouse movement */
+#if (QT_VERSION < QT_VERSION_CHECK(6,0,0))
         if (event->buttons() == Qt::LeftButton && event->globalPos() == itemPressPoint_)
+#else
+        if (event->buttons() == Qt::LeftButton && event->globalPosition().toPoint() == itemPressPoint_)
+#endif
             return;
         QTreeView::mouseMoveEvent (event);
     }

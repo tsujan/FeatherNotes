@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2021 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2022 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -54,12 +54,7 @@ int main(int argc, char *argv[])
     else if (option == "--version" || option == "-v")
     {
         QTextStream out (stdout);
-        out << name << " " << version
-#if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
-            << Qt::endl;
-#else
-            << endl;
-#endif
+        out << name << " " << version << Qt::endl;
         return 0;
     }
 
@@ -71,7 +66,9 @@ int main(int argc, char *argv[])
     handleQuitSignals ({SIGQUIT, SIGINT, SIGTERM, SIGHUP}); // -> https://en.wikipedia.org/wiki/Unix_signal
 #endif
 
+#if (QT_VERSION < QT_VERSION_CHECK(6,0,0))
     app.setAttribute (Qt::AA_UseHighDpiPixmaps, true);
+#endif
 
     QStringList langs (QLocale::system().uiLanguages());
     QString lang; // bcp47Name() doesn't work under vbox
@@ -79,17 +76,28 @@ int main(int argc, char *argv[])
         lang = langs.first().replace ('-', '_');
 
     QTranslator qtTranslator;
+#if (QT_VERSION < QT_VERSION_CHECK(6,0,0))
     if (!qtTranslator.load ("qt_" + lang, QLibraryInfo::location (QLibraryInfo::TranslationsPath)))
+#else
+    if (!qtTranslator.load ("qt_" + lang, QLibraryInfo::path (QLibraryInfo::TranslationsPath)))
+#endif
     { // shouldn't be needed
         if (!langs.isEmpty())
         {
             lang = langs.first().split (QLatin1Char ('_')).first();
+#if (QT_VERSION < QT_VERSION_CHECK(6,0,0))
             qtTranslator.load ("qt_" + lang, QLibraryInfo::location (QLibraryInfo::TranslationsPath));
+#else
+            (void)qtTranslator.load ("qt_" + lang, QLibraryInfo::path (QLibraryInfo::TranslationsPath));
+#endif
         }
     }
     app.installTranslator (&qtTranslator);
 
     QTranslator FPTranslator;
+
+#if (QT_VERSION < QT_VERSION_CHECK(6,0,0))
+
 #if defined (Q_OS_HAIKU)
     FPTranslator.load ("feathernotes_" + lang, qApp->applicationDirPath() + "/translations");
 #elif defined (Q_OS_WIN)
@@ -97,6 +105,19 @@ int main(int argc, char *argv[])
 #else
     FPTranslator.load ("feathernotes_" + lang, QStringLiteral (DATADIR) + "/feathernotes/translations");
 #endif
+
+#else
+
+#if defined (Q_OS_HAIKU)
+    (void)FPTranslator.load ("feathernotes_" + lang, qApp->applicationDirPath() + "/translations");
+#elif defined (Q_OS_WIN)
+    (void)FPTranslator.load ("feathernotes_" + lang, qApp->applicationDirPath() + "\\..\\data\\translations\\translations");
+#else
+    (void)FPTranslator.load ("feathernotes_" + lang, QStringLiteral (DATADIR) + "/feathernotes/translations");
+#endif
+
+#endif
+
     app.installTranslator (&FPTranslator);
 
     QStringList message;
