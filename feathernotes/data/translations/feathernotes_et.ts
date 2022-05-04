@@ -1844,12 +1844,12 @@ failis ning tema kõrval peab olema sama nimega ja
     <message>
         <location filename="../../prefDialog.ui" line="561"/>
         <source>By default, all nodes are expanded on opening a document.</source>
-        <translation type="unfinished"></translation>
+        <translation>Faili avamisel on vaikimisi kõik sõlmed avatud.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="564"/>
         <source>Remember expanded states of nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Jäta sõlmede avatud/suletud olekud meelde</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="588"/>

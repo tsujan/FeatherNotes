@@ -1843,12 +1843,12 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../prefDialog.ui" line="561"/>
         <source>By default, all nodes are expanded on opening a document.</source>
-        <translation type="unfinished"></translation>
+        <translation>Типово всі вузли розширюються за відкриття документа.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="564"/>
         <source>Remember expanded states of nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Запам&apos;ятовувати розширений стан вузлів</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="588"/>
