@@ -1110,7 +1110,7 @@ void FN::updateNodeActions()
 /*************************/
 // Qt6 has changed "QFont::toString()" in a backward incompatible way, so that,
 // if a document is saved by the Qt6 version, the Qt5 version will show wrong fonts.
-// This function circumvents the problem when it's used instead of "QFont::toString()".
+// This function circumvents the problem when it's used instead of "QFont::fromString()".
 static inline void fontFromString (QFont &f, const QString &str)
 {
 #if (QT_VERSION < QT_VERSION_CHECK(6,0,0))
