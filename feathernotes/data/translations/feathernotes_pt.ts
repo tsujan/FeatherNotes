@@ -1823,7 +1823,7 @@ nome, mas terminando com &quot;.aff&quot;.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="501"/>
         <source>Files</source>
-        <translation>Arquivos</translation>
+        <translation>Ficheiros</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="510"/>
@@ -1833,22 +1833,22 @@ nome, mas terminando com &quot;.aff&quot;.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="522"/>
         <source>Number of recent files:</source>
-        <translation>Número de arquivos recentes:</translation>
+        <translation>Número de ficheiros recentes:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="554"/>
         <source>Open recent files separately</source>
-        <translation>Abra os arquivos recentes separadamente</translation>
+        <translation>Abrir os ficheiros recentes separadamente</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="561"/>
         <source>By default, all nodes are expanded on opening a document.</source>
-        <translation type="unfinished"></translation>
+        <translation>Por defeito, todos os nodes são expandidos ao abrir um documento.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="564"/>
         <source>Remember expanded states of nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Lembrar estados expandidos dos nodes</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="588"/>
@@ -1889,7 +1889,7 @@ nome, mas terminando com &quot;.aff&quot;.</translation>
     <message>
         <location filename="../../pref.cpp" line="699"/>
         <source>Hunspell Dictionary Files (*.dic)</source>
-        <translation>Arquivos de Dicionário Hunspell (*.dic)</translation>
+        <translation>Ficheiros de Dicionário Hunspell (*.dic)</translation>
     </message>
 </context>
 <context>
