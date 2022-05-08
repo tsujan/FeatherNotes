@@ -88,9 +88,6 @@ public:
     void remPosition (bool rem) {
         remPosition_ = rem;
     }
-    void setPosition (const QPoint &pos) {
-        position_ = pos;
-    }
 
     bool isUnderE() const {
         return underE_;
@@ -361,6 +358,7 @@ private:
     void createTrayIcon();
     void closeEvent (QCloseEvent *event);
     void resizeEvent (QResizeEvent *event);
+    void changeEvent (QEvent *event);
     void showEvent (QShowEvent *event);
     void showDoc (QDomDocument &doc, int node = -1);
     void setTitle (const QString &fname);
@@ -427,7 +425,8 @@ private:
     bool openReccentSeparately_;
     bool rememberExpanded_;
     bool shownBefore_,
-         remSize_, remSplitter_,
+         remSize_, isMaxed_, isFull_,
+         remSplitter_,
          remPosition_,
          hasTray_,
          minToTray_,

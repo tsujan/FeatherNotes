@@ -150,7 +150,6 @@ PrefDialog::PrefDialog (QWidget *parent)
             if (checked == Qt::Checked)
             {
                 win->remPosition (true);
-                win->setPosition (win->geometry().topLeft());
                 if (win->isUnderE())
                 {
                     ui->ELabel->setEnabled (true);
@@ -507,7 +506,6 @@ void PrefDialog::prefSize (int value)
         if (value == Qt::Checked)
         {
             win->remSize (true);
-            win->setWinSize (win->size());
             ui->winSpinX->setEnabled (false);
             ui->winSpinY->setEnabled (false);
             ui->winLabel->setEnabled (false);

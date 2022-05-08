@@ -202,6 +202,11 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
         ++it;
     }
 
+    /* isMaxed_, isFull_, winSize_ and position_ are set when needed,
+       regardless of remSize_ and remSize_ */
+    isMaxed_ = false;
+    isFull_= false;
+
     shownBefore_ = false;
     remSize_ = true;
     remSplitter_ = true;
@@ -816,9 +821,50 @@ void FN::unZooming()
 /*************************/
 void FN::resizeEvent (QResizeEvent *event)
 {
-    if (remSize_ && windowState() == Qt::WindowNoState)
+    if (!isMaximized() && !isFullScreen())
         winSize_ = event->size();
     QWidget::resizeEvent (event);
+}
+/*************************/
+void FN::changeEvent (QEvent *event)
+{
+    if (event->type() == QEvent::WindowStateChange)
+    {
+        if (windowState() == Qt::WindowFullScreen)
+        {
+            isFull_ = true;
+            isMaxed_ = false;
+        }
+        else if (windowState() == (Qt::WindowFullScreen ^ Qt::WindowMaximized))
+        {
+            isFull_ = true;
+            isMaxed_ = true;
+        }
+        else
+        {
+            isFull_ = false;
+            if (windowState() == Qt::WindowMaximized)
+                isMaxed_ = true;
+            else
+                isMaxed_ = false;
+        }
+        /* if the window gets maximized/fullscreen, remember its position */
+        if (!isWayland_
+            && ((windowState() & Qt::WindowMaximized)
+                || (windowState() & Qt::WindowFullScreen)))
+        {
+            if (auto stateEvent = static_cast<QWindowStateChangeEvent*>(event))
+            {
+                if (!(stateEvent->oldState() & Qt::WindowMaximized)
+                    && !(stateEvent->oldState() & Qt::WindowFullScreen))
+                {
+                    position_.setX (geometry().x());
+                    position_.setY (geometry().y());
+                }
+            }
+        }
+    }
+    QWidget::changeEvent (event);
 }
 /*************************/
 void FN::newNote()
@@ -3891,8 +3937,8 @@ void FN::replaceAll()
 /*************************/
 void FN::showEvent (QShowEvent *event)
 {
-    /* To position the main window correctly with translucency when it's
-       shown for the first time, we use setGeometry() inside showEvent(). */
+    /* To position the main window correctly when it's shown for
+       the first time, we call setGeometry() inside showEvent(). */
     if (!shownBefore_ && !event->spontaneous())
     {
         shownBefore_ = true;
@@ -3901,6 +3947,12 @@ void FN::showEvent (QShowEvent *event)
             QSize theSize = (remSize_ ? winSize_ : startSize_);
             setGeometry (position_.x() - (underE_ ? EShift_.width() : 0), position_.y() - (underE_ ? EShift_.height() : 0),
                          theSize.width(), theSize.height());
+            if (isFull_ && isMaxed_)
+                setWindowState (Qt::WindowMaximized | Qt::WindowFullScreen);
+            else if (isMaxed_)
+                setWindowState (Qt::WindowMaximized);
+            else if (isFull_)
+                setWindowState (Qt::WindowFullScreen);
         }
     }
     QWidget::showEvent (event);
@@ -4959,11 +5011,24 @@ void FN::readAndApplyConfig (bool startup)
     else
     {
         remSize_ = true;
-        winSize_ = settings.value ("size", QSize (700, 500)).toSize();
-        if (winSize_.isEmpty())
-            winSize_ = QSize (700, 500);
         if (startup)
+        {
+            winSize_ = settings.value ("size", QSize (700, 500)).toSize();
+            if (winSize_.isEmpty())
+                winSize_ = QSize (700, 500);
+            isMaxed_ = settings.value ("max", false).toBool();
+            isFull_ = settings.value ("fullscreen", false).toBool();
             resize (winSize_);
+            if (!remPosition_ || isWayland_) // otherwise -> showEvent()
+            {
+                if (isFull_ && isMaxed_)
+                    setWindowState (Qt::WindowMaximized | Qt::WindowFullScreen);
+                else if (isMaxed_)
+                    setWindowState (Qt::WindowMaximized);
+                else if (isFull_)
+                    setWindowState (Qt::WindowFullScreen);
+            }
+        }
     }
 
     QByteArray splitterSizes;
@@ -4990,7 +5055,8 @@ void FN::readAndApplyConfig (bool startup)
     else
     {
         remPosition_ = true;
-        position_ = settings.value ("position", QPoint (0, 0)).toPoint();
+        if (startup)
+            position_ = settings.value ("position", QPoint (0, 0)).toPoint();
     }
 
     prefSize_ = settings.value ("prefSize").toSize();
@@ -5206,9 +5272,17 @@ void FN::writeGeometryConfig (bool withLastNodeInfo)
     settings.beginGroup ("window");
 
     if (remSize_)
+    {
         settings.setValue ("size", winSize_);
+        settings.setValue ("max", isMaxed_);
+        settings.setValue ("fullscreen", isFull_);
+    }
     else
+    {
         settings.setValue ("size", "none");
+        settings.remove ("max");
+        settings.remove ("fullscreen");
+    }
     settings.setValue ("startSize", startSize_);
 
     if (remSplitter_)
