@@ -1842,12 +1842,12 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../prefDialog.ui" line="561"/>
         <source>By default, all nodes are expanded on opening a document.</source>
-        <translation type="unfinished"></translation>
+        <translation>기본적으로, 모든 노드는 문서를 열 때 확장됩니다.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="564"/>
         <source>Remember expanded states of nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>노드의 확장 상태 기억</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="588"/>
