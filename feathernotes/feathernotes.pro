@@ -8,8 +8,8 @@ lessThan(QT_MAJOR_VERSION, 6) {
   }
 } else {
   equals(QT_MAJOR_VERSION, 6) {
-    lessThan(QT_MINOR_VERSION, 3) {
-      error("FeatherPad needs at least Qt 6.3.0.")
+    lessThan(QT_MINOR_VERSION, 1) {
+      error("FeatherPad needs at least Qt 6.1.")
     }
   } else {
     error("FeatherPad cannot be compiled against this version of Qt.")
