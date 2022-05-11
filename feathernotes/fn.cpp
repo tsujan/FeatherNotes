@@ -100,6 +100,7 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     ui->setupUi (this);
 
     closed_ = false;
+    closeInteractively_ = false;
     imgScale_ = 100;
 
     TOOLBAR_ICON_SIZE = ui->mainToolBar->iconSize();
@@ -498,19 +499,18 @@ bool FN::close()
     }
 
     quitting_ = true;
+    closeInteractively_ = true;
     return QWidget::close();
 }
 /*************************/
 void FN::closeEvent (QCloseEvent *event)
 {
-    /* NOTE: With Qt6, "QCoreApplication::quit()" calls "closeEvent()" when the window
-             is visible. But we want the app to quit without any prompt when receiving
-             SIGTERM and similar signals. Here, we handle the situation by checking if
-             the event is spontaneous or is sent by our actions. This is also safe with Qt5. */
+    /* NOTE: With Qt6, "QCoreApplication::quit()" calls "closeEvent()" when the window is
+             visible. But we want the app to quit without any prompt when receiving SIGTERM
+             and similar signals. Here, we handle the situation by checking if the event is
+             sent by us without calling "FN::close()". This is also safe with Qt5. */
     QObject *sender = QObject::sender();
-    if (!event->spontaneous()
-        && (sender == nullptr
-            || (sender != ui->actionQuit && sender->objectName() != "trayQuit")))
+    if (!event->spontaneous() && !closeInteractively_)
     {
         event->accept();
         return;
