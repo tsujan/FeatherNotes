@@ -509,7 +509,6 @@ void FN::closeEvent (QCloseEvent *event)
              visible. But we want the app to quit without any prompt when receiving SIGTERM
              and similar signals. Here, we handle the situation by checking if the event is
              sent by us without calling "FN::close()". This is also safe with Qt5. */
-    QObject *sender = QObject::sender();
     if (!event->spontaneous() && !closeInteractively_)
     {
         event->accept();
@@ -540,7 +539,7 @@ void FN::closeEvent (QCloseEvent *event)
         {
             if (tray_)
             {
-                if (underE_ && sender != nullptr && sender->objectName() == "trayQuit")
+                if (underE_ && QObject::sender() != nullptr && QObject::sender()->objectName() == "trayQuit")
                 {
                     if (!isVisible())
                     {
@@ -566,7 +565,7 @@ void FN::closeEvent (QCloseEvent *event)
         {
             if (tray_)
             {
-                if (underE_ && sender != nullptr && sender->objectName() == "trayQuit")
+                if (underE_ && QObject::sender() != nullptr && QObject::sender()->objectName() == "trayQuit")
                 {
                     if (!isVisible())
                     {
@@ -589,6 +588,7 @@ void FN::closeEvent (QCloseEvent *event)
                 keep = true;
         }
     }
+
     if (keep)
     {
         if (tray_)
