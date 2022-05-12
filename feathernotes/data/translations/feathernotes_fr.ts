@@ -1722,7 +1722,7 @@ puis redémarrer FeatherNotes !</translation>
     <message>
         <location filename="../../prefDialog.ui" line="248"/>
         <source>Shifts (X × Y): </source>
-        <translation>Changer (X × Y)&#xa0;: </translation>
+        <translation>Changer (X × Y) : </translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="314"/>
@@ -1843,12 +1843,12 @@ nom mais se terminant par &quot;.aff&quot;.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="561"/>
         <source>By default, all nodes are expanded on opening a document.</source>
-        <translation type="unfinished"></translation>
+        <translation>Par défaut, tous les nœuds sont développés à l&apos;ouverture d&apos;un document.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="564"/>
         <source>Remember expanded states of nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Se souvenir des états étendus des noeuds</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="588"/>
@@ -1874,7 +1874,7 @@ nom mais se terminant par &quot;.aff&quot;.</translation>
         <location filename="../../pref.cpp" line="383"/>
         <location filename="../../pref.cpp" line="568"/>
         <source>Warning: Ambiguous shortcut detected!</source>
-        <translation>Attention&#xa0;: raccourci ambigu détecté&#xa0;!</translation>
+        <translation>Attention : raccourci ambigu détecté !</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="551"/>

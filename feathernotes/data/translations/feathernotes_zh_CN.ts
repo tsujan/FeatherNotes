@@ -1840,12 +1840,12 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../prefDialog.ui" line="561"/>
         <source>By default, all nodes are expanded on opening a document.</source>
-        <translation type="unfinished"></translation>
+        <translation>默认情况下，在打开一个文档时，所有的节点都被展开。</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="564"/>
         <source>Remember expanded states of nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>记住节点的扩展状态</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="588"/>
