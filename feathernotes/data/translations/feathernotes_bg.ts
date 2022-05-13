@@ -125,7 +125,7 @@
     <message>
         <location filename="../../fn.ui" line="223"/>
         <source>Recenl&amp;y Opened</source>
-        <translation type="unfinished"></translation>
+        <translation>Скоро отваряни</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="245"/>
@@ -991,7 +991,7 @@
     <message>
         <location filename="../../fn.ui" line="1374"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>Изчистване</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2906"/>
@@ -1221,7 +1221,7 @@
     <message>
         <location filename="../../fn.cpp" line="1653"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be opened!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Не може да се отвори!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1738"/>
@@ -1237,12 +1237,12 @@
     <message>
         <location filename="../../fn.cpp" line="2202"/>
         <source>Align Table</source>
-        <translation type="unfinished"></translation>
+        <translation>Подравни таблицата</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2215"/>
         <source>&amp;Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Център</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2583"/>
@@ -1832,22 +1832,22 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../prefDialog.ui" line="522"/>
         <source>Number of recent files:</source>
-        <translation type="unfinished"></translation>
+        <translation>Брой скоро отваряни файлове:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="554"/>
         <source>Open recent files separately</source>
-        <translation type="unfinished"></translation>
+        <translation>Отвори поотделно последните файлове</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="561"/>
         <source>By default, all nodes are expanded on opening a document.</source>
-        <translation type="unfinished"></translation>
+        <translation>По подразбиране всичко се разширява при отварянето на документ.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="564"/>
         <source>Remember expanded states of nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Запомни разширеното състояние на възлите</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="588"/>
