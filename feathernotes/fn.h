@@ -262,7 +262,7 @@ private slots:
     void setCursorInsideSelection (bool sel);
     void txtContextMenu (const QPoint &p);
     void copyLink();
-    void selChanged (const QItemSelection &selected, const QItemSelection&);
+    void selChanged (const QItemSelection &selected, const QItemSelection &deselected);
     void setSaveEnabled (bool modified);
     void setUndoEnabled (bool enabled);
     void setRedoEnabled (bool enabled);

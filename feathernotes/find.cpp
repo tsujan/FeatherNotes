@@ -462,17 +462,26 @@ void FN::hlight() const
     QList<QTextEdit::ExtraSelection> extraSelections;
     /* prepend green highlights */
     extraSelections.append (greenSels_[textEdit]);
-    QColor yellow = qGray(fgColor_.rgb()) > 127 ? QColor (Qt::darkYellow) : QColor (Qt::yellow);
-    QTextCursor found;
-    /* first put a start cursor at the top left edge... */
+
+    /* first put a start cursor at the top left corner... */
     QPoint Point (0, 0);
     QTextCursor start = textEdit->cursorForPosition (Point);
-    /* ... then move it backward by the search text length */
-    int startPos = start.position() - txt.length();
-    if (startPos >= 0)
-        start.setPosition (startPos);
-    else
+    if (textEdit->verticalScrollBar()->value() == textEdit->verticalScrollBar()->minimum()
+        && textEdit->horizontalScrollBar()->value() == textEdit->horizontalScrollBar()->minimum())
+    {
+        /* WARNING: "QTextEdit::cursorForPosition()" has a bug that may
+           give an irrelevant cursor for (0, 0) with newly created widgets. */
         start.setPosition (0);
+    }
+    else
+    {
+        /* ... then move it backward by the search text length */
+        int startPos = start.position() - txt.length();
+        if (startPos >= 0)
+            start.setPosition (startPos);
+        else
+            start.setPosition (0);
+    }
     int w = textEdit->geometry().width();
     int h = textEdit->geometry().height();
     /* get the visible text to check if
@@ -489,6 +498,8 @@ void FN::hlight() const
     Qt::CaseSensitivity cs = ui->caseButton->isChecked() ? Qt::CaseSensitive : Qt::CaseInsensitive;
     if (str.contains (txt, cs)) // don't waste time if the searched text isn't visible
     {
+        QColor yellow = qGray (fgColor_.rgb()) > 127 ? QColor (Qt::darkYellow) : QColor (Qt::yellow);
+        QTextCursor found;
         while (!(found = finding (txt, start, searchFlags_)).isNull())
         {
             QTextEdit::ExtraSelection extra;

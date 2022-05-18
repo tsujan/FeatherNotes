@@ -2247,7 +2247,7 @@ void FN::copyLink()
     clipboard->setText (linkAtPos_);
 }
 /*************************/
-void FN::selChanged (const QItemSelection &selected, const QItemSelection& /*deselected*/)
+void FN::selChanged (const QItemSelection &selected, const QItemSelection &deselected)
 {
     if (selected.isEmpty()) // if the last node is closed
     {
@@ -2270,6 +2270,24 @@ void FN::selChanged (const QItemSelection &selected, const QItemSelection& /*des
     updateNodeActions();
     if (treeViewDND_) return;
 
+    QString globalSearchTxt;
+    if (ui->everywhereButton->isChecked())
+    { // find the globally searched text (the text of "ui->lineEdit" isn't reliable)
+        if (!deselected.isEmpty())
+        {
+            QModelIndex oldIndx = deselected.indexes().at (0);
+            QHash<DomItem*, TextEdit*>::iterator iter;
+            for (iter = widgets_.begin(); iter != widgets_.end(); ++iter)
+            {
+                if (iter.key() == static_cast<DomItem*>(oldIndx.internalPointer()))
+                {
+                    globalSearchTxt = searchEntries_[iter.value()];
+                    break;
+                }
+            }
+        }
+    }
+
     /* if a widget is paired with this DOM item, show it;
        otherwise create a widget and pair it with the item */
     QModelIndex index = selected.indexes().at (0);
@@ -2288,14 +2306,40 @@ void FN::selChanged (const QItemSelection &selected, const QItemSelection& /*des
     {
         textEdit = it.value();
         ui->stackedWidget->setCurrentWidget (textEdit);
-        QString txt = searchEntries_[textEdit];
-        /* change the search entry's text only
-           if the search isn't done in tags or names */
-        if (!ui->tagsButton->isChecked()
-            && !ui->namesButton->isChecked())
-        {
-            ui->lineEdit->setText (txt);
-            if (!txt.isEmpty()) hlight();
+        QString searchTxt = searchEntries_[textEdit];
+        if (ui->everywhereButton->isChecked())
+        { // keep the previous search string when searching in all nodes
+            searchEntries_[textEdit] = globalSearchTxt;
+            ui->lineEdit->setText (globalSearchTxt);
+            if (globalSearchTxt.isEmpty())
+            {
+               if (!searchTxt.isEmpty())
+               { // remove all yellow and green highlights
+                    disconnect (textEdit->verticalScrollBar(), &QAbstractSlider::valueChanged, this, &FN::scrolled);
+                    disconnect (textEdit->horizontalScrollBar(), &QAbstractSlider::valueChanged, this, &FN::scrolled);
+                    disconnect (textEdit, &TextEdit::resized, this, &FN::hlight);
+                    disconnect (textEdit, &QTextEdit::textChanged, this, &FN::hlight);
+                    QList<QTextEdit::ExtraSelection> extraSelections;
+                    greenSels_[textEdit] = extraSelections;
+                    textEdit->setExtraSelections (extraSelections);
+               }
+            }
+            else
+            {
+                hlight();
+                if (searchTxt.isEmpty())
+                { // there was no connection before
+                    connect (textEdit->verticalScrollBar(), &QAbstractSlider::valueChanged, this, &FN::scrolled);
+                    connect (textEdit->horizontalScrollBar(), &QAbstractSlider::valueChanged, this, &FN::scrolled);
+                    connect (textEdit, &TextEdit::resized, this, &FN::hlight);
+                    connect (textEdit, &QTextEdit::textChanged, this, &FN::hlight);
+                }
+            }
+        }
+        else if (!ui->tagsButton->isChecked() && !ui->namesButton->isChecked())
+        { // change the search entry's text only if the search isn't done in tags or names
+            ui->lineEdit->setText (searchTxt);
+            if (!searchTxt.isEmpty()) hlight();
         }
     }
     else
@@ -2348,18 +2392,30 @@ void FN::selChanged (const QItemSelection &selected, const QItemSelection& /*des
             }
         });
 
-        /* focus the text widget only if
-           a document is opened just now */
+        /* focus the text widget only if a document is opened just now */
         if (widgets_.isEmpty())
             textEdit->setFocus();
 
         widgets_[static_cast<DomItem*>(index.internalPointer())] = textEdit;
-        searchEntries_[textEdit] = QString();
         greenSels_[textEdit] = QList<QTextEdit::ExtraSelection>();
-        if (!ui->tagsButton->isChecked()
-            && !ui->namesButton->isChecked())
+        if (ui->everywhereButton->isChecked())
         {
-            ui->lineEdit->setText (QString());
+            searchEntries_[textEdit] = globalSearchTxt;
+            ui->lineEdit->setText (globalSearchTxt);
+            if (!globalSearchTxt.isEmpty())
+            {
+                hlight();
+                connect (textEdit->verticalScrollBar(), &QAbstractSlider::valueChanged, this, &FN::scrolled);
+                connect (textEdit->horizontalScrollBar(), &QAbstractSlider::valueChanged, this, &FN::scrolled);
+                connect (textEdit, &TextEdit::resized, this, &FN::hlight);
+                connect (textEdit, &QTextEdit::textChanged, this, &FN::hlight);
+            }
+        }
+        else
+        {
+            searchEntries_[textEdit] = QString();
+            if (!ui->tagsButton->isChecked() && !ui->namesButton->isChecked())
+                ui->lineEdit->setText (QString());
         }
     }
 
