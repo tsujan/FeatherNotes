@@ -429,6 +429,34 @@ Takes effect after closing this dialog.</string>
            </layout>
           </item>
           <item>
+           <widget class="QCheckBox" name="exitSaveBox">
+            <property name="toolTip">
+             <string>If this option is checked, the opened document will
+be saved on exiting without prompt and without
+showing a warning if saving is not possible.</string>
+            </property>
+            <property name="text">
+             <string>Save opened document on exiting</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_1">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>5</width>
+              <height>5</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
            <widget class="QGroupBox" name="dictGroupBox">
             <property name="title">
              <string>Spell Checking</string>
@@ -476,7 +504,7 @@ name but ending with &quot;.aff&quot;.</string>
            </widget>
           </item>
           <item>
-           <spacer name="verticalSpacer_1">
+           <spacer name="verticalSpacer_2">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
             </property>
@@ -566,7 +594,7 @@ name but ending with &quot;.aff&quot;.</string>
            </widget>
           </item>
           <item>
-           <spacer name="verticalSpacer_2">
+           <spacer name="verticalSpacer_3">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
             </property>

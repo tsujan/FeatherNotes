@@ -26,9 +26,9 @@
     <name>FeatherNotes::FN</name>
     <message>
         <location filename="../../fn.ui" line="14"/>
-        <location filename="../../fn.cpp" line="1651"/>
-        <location filename="../../fn.cpp" line="3980"/>
-        <location filename="../../fn.cpp" line="5812"/>
+        <location filename="../../fn.cpp" line="1680"/>
+        <location filename="../../fn.cpp" line="4009"/>
+        <location filename="../../fn.cpp" line="5845"/>
         <source>FeatherNotes</source>
         <translation>FeatherNotes</translation>
     </message>
@@ -215,7 +215,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="536"/>
-        <location filename="../../fn.cpp" line="1033"/>
+        <location filename="../../fn.cpp" line="1042"/>
         <source>Save</source>
         <translation>Зберегти</translation>
     </message>
@@ -226,7 +226,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="544"/>
-        <location filename="../../fn.cpp" line="671"/>
+        <location filename="../../fn.cpp" line="680"/>
         <source>&amp;Open</source>
         <translation>&amp;Відкрити</translation>
     </message>
@@ -397,7 +397,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="712"/>
-        <location filename="../../fn.cpp" line="670"/>
+        <location filename="../../fn.cpp" line="679"/>
         <source>&amp;New Note</source>
         <translation>&amp;Нова примітка</translation>
     </message>
@@ -438,7 +438,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="758"/>
-        <location filename="../../fn.cpp" line="673"/>
+        <location filename="../../fn.cpp" line="682"/>
         <source>&amp;Quit</source>
         <translation>&amp;Вийти</translation>
     </message>
@@ -499,7 +499,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="824"/>
-        <location filename="../../fn.cpp" line="4236"/>
+        <location filename="../../fn.cpp" line="4265"/>
         <source>Embed Image</source>
         <translation>Вбудувати зображення</translation>
     </message>
@@ -705,7 +705,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="1067"/>
-        <location filename="../../fn.cpp" line="2209"/>
+        <location filename="../../fn.cpp" line="2238"/>
         <source>&amp;Right</source>
         <translation>&amp;Праворуч</translation>
     </message>
@@ -721,7 +721,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="1084"/>
-        <location filename="../../fn.cpp" line="2203"/>
+        <location filename="../../fn.cpp" line="2232"/>
         <source>&amp;Left</source>
         <translation>&amp;Ліворуч</translation>
     </message>
@@ -994,428 +994,428 @@
         <translation>&amp;Очистити</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2962"/>
+        <location filename="../../fn.cpp" line="2991"/>
         <source>Node Icon</source>
         <translation>Піктограма вузла</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="665"/>
-        <location filename="../../fn.cpp" line="4977"/>
+        <location filename="../../fn.cpp" line="674"/>
+        <location filename="../../fn.cpp" line="5006"/>
         <source>&amp;Raise/Hide</source>
         <translation>&amp;Розгорнути/згорнути</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="930"/>
+        <location filename="../../fn.cpp" line="939"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;New note?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Нова примітка?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="931"/>
+        <location filename="../../fn.cpp" line="940"/>
         <source>&lt;center&gt;&lt;i&gt;Do you really want to leave this document&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;and create an empty one?&lt;/i&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;i&gt;Ви дійсно бажаєте залишити цей документ&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;і створити новий порожній?&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="934"/>
-        <location filename="../../fn.cpp" line="2790"/>
-        <location filename="../../fn.cpp" line="4603"/>
+        <location filename="../../fn.cpp" line="943"/>
+        <location filename="../../fn.cpp" line="2819"/>
+        <location filename="../../fn.cpp" line="4632"/>
         <source>Yes</source>
         <translation>Так</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="935"/>
-        <location filename="../../fn.cpp" line="2791"/>
-        <location filename="../../fn.cpp" line="4604"/>
+        <location filename="../../fn.cpp" line="944"/>
+        <location filename="../../fn.cpp" line="2820"/>
+        <location filename="../../fn.cpp" line="4633"/>
         <source>No</source>
         <translation>Ні</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1025"/>
+        <location filename="../../fn.cpp" line="1034"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Save changes?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Зберегти зміни?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1027"/>
+        <location filename="../../fn.cpp" line="1036"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been modified.&lt;/i&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;i&gt;Документ змінено.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1029"/>
+        <location filename="../../fn.cpp" line="1038"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been removed.&lt;/i&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;i&gt;Документ вилучено.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1034"/>
+        <location filename="../../fn.cpp" line="1043"/>
         <source>Discard changes</source>
         <translation>Відкинути зміни</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1035"/>
-        <location filename="../../fn.cpp" line="2903"/>
-        <location filename="../../fn.cpp" line="3005"/>
-        <location filename="../../fn.cpp" line="3265"/>
-        <location filename="../../fn.cpp" line="4179"/>
-        <location filename="../../fn.cpp" line="4260"/>
-        <location filename="../../fn.cpp" line="4421"/>
-        <location filename="../../fn.cpp" line="4700"/>
-        <location filename="../../fn.cpp" line="5681"/>
-        <location filename="../../fn.cpp" line="5944"/>
-        <location filename="../../fn.cpp" line="6064"/>
+        <location filename="../../fn.cpp" line="1044"/>
+        <location filename="../../fn.cpp" line="2932"/>
+        <location filename="../../fn.cpp" line="3034"/>
+        <location filename="../../fn.cpp" line="3294"/>
+        <location filename="../../fn.cpp" line="4208"/>
+        <location filename="../../fn.cpp" line="4289"/>
+        <location filename="../../fn.cpp" line="4450"/>
+        <location filename="../../fn.cpp" line="4729"/>
+        <location filename="../../fn.cpp" line="5714"/>
+        <location filename="../../fn.cpp" line="5977"/>
+        <location filename="../../fn.cpp" line="6097"/>
         <source>Cancel</source>
         <translation>Скасувати</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1496"/>
+        <location filename="../../fn.cpp" line="1525"/>
         <source>Open file...</source>
         <translation>Відкрити файл...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1652"/>
-        <location filename="../../fn.cpp" line="5813"/>
+        <location filename="../../fn.cpp" line="1681"/>
+        <location filename="../../fn.cpp" line="5846"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be saved!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Неможливо зберегти!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1656"/>
-        <location filename="../../fn.cpp" line="3558"/>
-        <location filename="../../fn.cpp" line="3984"/>
-        <location filename="../../fn.cpp" line="5816"/>
-        <location filename="../../fn.cpp" line="6366"/>
+        <location filename="../../fn.cpp" line="1685"/>
+        <location filename="../../fn.cpp" line="3587"/>
+        <location filename="../../fn.cpp" line="4013"/>
+        <location filename="../../fn.cpp" line="5849"/>
+        <location filename="../../fn.cpp" line="6399"/>
         <source>Close</source>
         <translation>Закрити</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1754"/>
-        <location filename="../../fn.cpp" line="1775"/>
+        <location filename="../../fn.cpp" line="1783"/>
+        <location filename="../../fn.cpp" line="1804"/>
         <source>Save As...</source>
         <translation>Зберегти як...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2787"/>
+        <location filename="../../fn.cpp" line="2816"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Delete this node?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Видалити цей вузол?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2788"/>
+        <location filename="../../fn.cpp" line="2817"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;i&gt;Warning!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
 &lt;center&gt;This action cannot be undone.&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;i&gt;Попередження!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
 &lt;center&gt;Цю дію неможливо скасувати.&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2889"/>
+        <location filename="../../fn.cpp" line="2918"/>
         <source>Tags</source>
         <translation>Мітки</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2904"/>
-        <location filename="../../fn.cpp" line="3006"/>
-        <location filename="../../fn.cpp" line="3266"/>
-        <location filename="../../fn.cpp" line="4181"/>
-        <location filename="../../fn.cpp" line="4261"/>
-        <location filename="../../fn.cpp" line="4422"/>
-        <location filename="../../fn.cpp" line="4701"/>
-        <location filename="../../fn.cpp" line="5683"/>
-        <location filename="../../fn.cpp" line="5945"/>
-        <location filename="../../fn.cpp" line="6065"/>
+        <location filename="../../fn.cpp" line="2933"/>
+        <location filename="../../fn.cpp" line="3035"/>
+        <location filename="../../fn.cpp" line="3295"/>
+        <location filename="../../fn.cpp" line="4210"/>
+        <location filename="../../fn.cpp" line="4290"/>
+        <location filename="../../fn.cpp" line="4451"/>
+        <location filename="../../fn.cpp" line="4730"/>
+        <location filename="../../fn.cpp" line="5716"/>
+        <location filename="../../fn.cpp" line="5978"/>
+        <location filename="../../fn.cpp" line="6098"/>
         <source>OK</source>
         <translation>Гаразд</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3092"/>
-        <location filename="../../fn.cpp" line="3125"/>
+        <location filename="../../fn.cpp" line="3121"/>
+        <location filename="../../fn.cpp" line="3154"/>
         <source>&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</source>
         <translation>&lt;b&gt;Основні вузли:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Усі вузли:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3098"/>
-        <location filename="../../fn.cpp" line="3131"/>
+        <location filename="../../fn.cpp" line="3127"/>
+        <location filename="../../fn.cpp" line="3160"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</source>
         <translation>&lt;b&gt;Примітка:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Основні вузли:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Усі вузли:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3545"/>
+        <location filename="../../fn.cpp" line="3574"/>
         <source>%1 Matches</source>
         <translation>%1 збігів</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3547"/>
+        <location filename="../../fn.cpp" line="3576"/>
         <source>One Match</source>
         <translation>Один збіг</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3549"/>
-        <location filename="../../fn.cpp" line="3864"/>
+        <location filename="../../fn.cpp" line="3578"/>
+        <location filename="../../fn.cpp" line="3893"/>
         <source>No Match</source>
         <translation>Жодного збігу</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3664"/>
-        <location filename="../../fn.cpp" line="3716"/>
+        <location filename="../../fn.cpp" line="3693"/>
+        <location filename="../../fn.cpp" line="3745"/>
         <source>Replacement</source>
         <translation>Заміна</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3971"/>
+        <location filename="../../fn.cpp" line="4000"/>
         <source>No Replacement</source>
         <translation>Без заміни</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3973"/>
+        <location filename="../../fn.cpp" line="4002"/>
         <source>One Replacement</source>
         <translation>Одна заміна</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3976"/>
+        <location filename="../../fn.cpp" line="4005"/>
         <source>%1 Replacements</source>
         <translation>%1 замін</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4167"/>
+        <location filename="../../fn.cpp" line="4196"/>
         <source>Insert Link</source>
         <translation>Вставити посилання</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2970"/>
-        <location filename="../../fn.cpp" line="4245"/>
+        <location filename="../../fn.cpp" line="2999"/>
+        <location filename="../../fn.cpp" line="4274"/>
         <source>Image path</source>
         <translation>Шлях до зображення</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2974"/>
-        <location filename="../../fn.cpp" line="4249"/>
+        <location filename="../../fn.cpp" line="3003"/>
+        <location filename="../../fn.cpp" line="4278"/>
         <source>Open image</source>
         <translation>Відкрити зображення</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4257"/>
-        <location filename="../../fn.cpp" line="4418"/>
+        <location filename="../../fn.cpp" line="4286"/>
+        <location filename="../../fn.cpp" line="4447"/>
         <source>Scaling percentage</source>
         <translation>Відсоток масштабування</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2992"/>
-        <location filename="../../fn.cpp" line="4366"/>
+        <location filename="../../fn.cpp" line="3021"/>
+        <location filename="../../fn.cpp" line="4395"/>
         <source>Open Image...</source>
         <translation>Відкрити зображення...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="667"/>
-        <location filename="../../fn.cpp" line="4965"/>
+        <location filename="../../fn.cpp" line="676"/>
+        <location filename="../../fn.cpp" line="4994"/>
         <source>&amp;Raise</source>
         <translation>&amp;Розгорнути</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="981"/>
+        <location filename="../../fn.cpp" line="990"/>
         <source>New Node</source>
         <translation>Новий вузол</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1498"/>
-        <location filename="../../fn.cpp" line="1756"/>
-        <location filename="../../fn.cpp" line="1777"/>
+        <location filename="../../fn.cpp" line="1527"/>
+        <location filename="../../fn.cpp" line="1785"/>
+        <location filename="../../fn.cpp" line="1806"/>
         <source>FeatherNotes documents (*.fnx);;All Files (*)</source>
         <translation>Документи FeatherNotes (*.fnx);;Усі файли (*)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1653"/>
+        <location filename="../../fn.cpp" line="1682"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be opened!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Неможливо відкрити!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1738"/>
-        <location filename="../../fn.cpp" line="5535"/>
-        <location filename="../../fn.cpp" line="5544"/>
-        <location filename="../../fn.cpp" line="5670"/>
-        <location filename="../../fn.cpp" line="5864"/>
-        <location filename="../../fn.cpp" line="5873"/>
-        <location filename="../../fn.cpp" line="5899"/>
+        <location filename="../../fn.cpp" line="1767"/>
+        <location filename="../../fn.cpp" line="5568"/>
+        <location filename="../../fn.cpp" line="5577"/>
+        <location filename="../../fn.cpp" line="5703"/>
+        <location filename="../../fn.cpp" line="5897"/>
+        <location filename="../../fn.cpp" line="5906"/>
+        <location filename="../../fn.cpp" line="5932"/>
         <source>Untitled</source>
         <translation>Новий</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2202"/>
+        <location filename="../../fn.cpp" line="2231"/>
         <source>Align Table</source>
         <translation>Вирівняти таблицю</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2215"/>
+        <location filename="../../fn.cpp" line="2244"/>
         <source>&amp;Center</source>
         <translation>&amp;Центрувати</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2639"/>
+        <location filename="../../fn.cpp" line="2668"/>
         <source>Select Text Color</source>
         <translation>Вибрати колір тексту</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2661"/>
+        <location filename="../../fn.cpp" line="2690"/>
         <source>Select Background Color</source>
         <translation>Вибрати колір тла</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2786"/>
+        <location filename="../../fn.cpp" line="2815"/>
         <source>Deletion</source>
         <translation>Видалення</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2899"/>
+        <location filename="../../fn.cpp" line="2928"/>
         <source>Tag(s) for this node</source>
         <translation>Мітка(и) для вузла</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2994"/>
-        <location filename="../../fn.cpp" line="4368"/>
+        <location filename="../../fn.cpp" line="3023"/>
+        <location filename="../../fn.cpp" line="4397"/>
         <source>Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)</source>
         <translation>Файли зображень (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;Усі файли (*)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3167"/>
+        <location filename="../../fn.cpp" line="3196"/>
         <source>Select Document Font</source>
         <translation>Вибрати шрифт документу</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3222"/>
+        <location filename="../../fn.cpp" line="3251"/>
         <source>Select Node Font</source>
         <translation>Вибрати шрифт вузла</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3237"/>
+        <location filename="../../fn.cpp" line="3266"/>
         <source>Set Document Colors</source>
         <translation>Встановити колір документа</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3247"/>
+        <location filename="../../fn.cpp" line="3276"/>
         <source>These colors will be applied to new nodes.&lt;br&gt;They may or may not affect existing nodes&lt;br&gt;but document reopening is recommended.</source>
         <translation>Ці кольори будуть застосовані до нових вузлів.&lt;br&gt;Вони можуть впливати або не впливати на наявні вузли,&lt;br&gt;але рекомендовано повторно відкрити документи.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3250"/>
+        <location filename="../../fn.cpp" line="3279"/>
         <source>Background color:</source>
         <translation>Колір тла:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3256"/>
+        <location filename="../../fn.cpp" line="3285"/>
         <source>Text color:</source>
         <translation>Колір тексту:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3981"/>
+        <location filename="../../fn.cpp" line="4010"/>
         <source>The first 1000 replacements are highlighted.</source>
         <translation>Перші 1000 замін будуть підсвічені.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4252"/>
-        <location filename="../../fn.cpp" line="4414"/>
+        <location filename="../../fn.cpp" line="4281"/>
+        <location filename="../../fn.cpp" line="4443"/>
         <source>Scale to</source>
         <translation>Масштабувати до</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4256"/>
-        <location filename="../../fn.cpp" line="4417"/>
+        <location filename="../../fn.cpp" line="4285"/>
+        <location filename="../../fn.cpp" line="4446"/>
         <source>%</source>
         <translation>%</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4408"/>
+        <location filename="../../fn.cpp" line="4437"/>
         <source>Scale Image(s)</source>
         <translation>Масштабування зображення(жень)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4567"/>
+        <location filename="../../fn.cpp" line="4596"/>
         <source>untitled</source>
         <translation>новий</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4598"/>
+        <location filename="../../fn.cpp" line="4627"/>
         <source>Error</source>
         <translation>Помилка</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4599"/>
+        <location filename="../../fn.cpp" line="4628"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Image cannot be saved! Retry?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Неможливо зберегти зображення! Повторити?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4600"/>
+        <location filename="../../fn.cpp" line="4629"/>
         <source>&lt;center&gt;Maybe you did not choose a proper extension&lt;/center&gt;
 &lt;center&gt;or do not have write permission.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</source>
         <translation>&lt;center&gt;Можливо ви не вибрали відповідне розширення файлу&lt;/center&gt;
 &lt;center&gt;або не маєте прав доступу для збереження.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4630"/>
+        <location filename="../../fn.cpp" line="4659"/>
         <source>Save Image As...</source>
         <translation>Зберегти зображення як...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4632"/>
+        <location filename="../../fn.cpp" line="4661"/>
         <source>Image Files (*.png *.jpg *.jpeg *.bmp);;All Files (*)</source>
         <translation>Файли зображень (*.png *.jpg *.jpeg *.bmp);;Усі файли (*)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4682"/>
+        <location filename="../../fn.cpp" line="4711"/>
         <source>Insert Table</source>
         <translation>Вставити таблицю</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4688"/>
+        <location filename="../../fn.cpp" line="4717"/>
         <source>Rows:</source>
         <translation>Рядки:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4694"/>
+        <location filename="../../fn.cpp" line="4723"/>
         <source>Columns:</source>
         <translation>Стовпчики:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5554"/>
+        <location filename="../../fn.cpp" line="5587"/>
         <source>Print Document</source>
         <translation>Друкувати документ</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5638"/>
+        <location filename="../../fn.cpp" line="5671"/>
         <source>Export HTML</source>
         <translation>Експорт HTML</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5643"/>
+        <location filename="../../fn.cpp" line="5676"/>
         <source>Export:</source>
         <translation>Експортувати:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5644"/>
+        <location filename="../../fn.cpp" line="5677"/>
         <source>&amp;Current node</source>
         <translation>&amp;Поточний вузол</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5646"/>
+        <location filename="../../fn.cpp" line="5679"/>
         <source>With all &amp;sub-nodes</source>
         <translation>З усіма &amp;підвузлами</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5647"/>
+        <location filename="../../fn.cpp" line="5680"/>
         <source>&amp;All nodes</source>
         <translation>Усі вуз&amp;ли</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5659"/>
+        <location filename="../../fn.cpp" line="5692"/>
         <source>Output file:</source>
         <translation>Вихідний файл:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5678"/>
+        <location filename="../../fn.cpp" line="5711"/>
         <source>Select path</source>
         <translation>Вибрати шлях</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5720"/>
+        <location filename="../../fn.cpp" line="5753"/>
         <source>Question</source>
         <translation>Питання</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5721"/>
+        <location filename="../../fn.cpp" line="5754"/>
         <source>The file already exists.
 Do you want to replace it?
 </source>
@@ -1424,106 +1424,106 @@ Do you want to replace it?
 </translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5904"/>
+        <location filename="../../fn.cpp" line="5937"/>
         <source>Save HTML As...</source>
         <translation>Зберегти HTML як...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5906"/>
+        <location filename="../../fn.cpp" line="5939"/>
         <source>HTML Files (*.html *.htm)</source>
         <translation>Файли HTML (*.html *.htm)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5927"/>
+        <location filename="../../fn.cpp" line="5960"/>
         <source>Set Password</source>
         <translation>Установити пароль</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5935"/>
+        <location filename="../../fn.cpp" line="5968"/>
         <source>Type password</source>
         <translation>Увести пароль</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5940"/>
+        <location filename="../../fn.cpp" line="5973"/>
         <source>Retype password</source>
         <translation>Повторити пароль</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6015"/>
+        <location filename="../../fn.cpp" line="6048"/>
         <source>&lt;center&gt;Passwords were different. Retry!&lt;/center&gt;</source>
         <translation>&lt;center&gt;Паролі не збігаються. Повторіть спробу!&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6052"/>
-        <location filename="../../fn.cpp" line="6060"/>
+        <location filename="../../fn.cpp" line="6085"/>
+        <location filename="../../fn.cpp" line="6093"/>
         <source>Enter Password</source>
         <translation>Уведіть пароль</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6126"/>
+        <location filename="../../fn.cpp" line="6159"/>
         <source>&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</source>
         <translation>&lt;center&gt;Пароль не правильний. Повторіть спробу!&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6165"/>
+        <location filename="../../fn.cpp" line="6198"/>
         <source>A lightweight notes manager</source>
         <translation>Легкий менеджер приміток</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6166"/>
+        <location filename="../../fn.cpp" line="6199"/>
         <source>based on Qt</source>
         <translation>заснований на Qt</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6167"/>
+        <location filename="../../fn.cpp" line="6200"/>
         <source>Author</source>
         <translation>Автор</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6169"/>
-        <location filename="../../fn.cpp" line="6170"/>
+        <location filename="../../fn.cpp" line="6202"/>
+        <location filename="../../fn.cpp" line="6203"/>
         <source>About FeatherNotes</source>
         <translation>Про FeatherNotes</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6169"/>
+        <location filename="../../fn.cpp" line="6202"/>
         <source>Translators</source>
         <translation>Перекладачі</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6358"/>
+        <location filename="../../fn.cpp" line="6391"/>
         <source>See Preferences → Text → Spell Checking!</source>
         <translation>Дивіться Налаштування → Текст → Перевірка правопису!</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6380"/>
+        <location filename="../../fn.cpp" line="6413"/>
         <source>You need to add a Hunspell dictionary.</source>
         <translation>Потрібно додати словник Hunspell.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6385"/>
+        <location filename="../../fn.cpp" line="6418"/>
         <source>The Hunspell dictionary does not exist.</source>
         <translation>Словника Hunspell не існує.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6393"/>
+        <location filename="../../fn.cpp" line="6426"/>
         <source>The Hunspell dictionary is not accompanied by an affix file.</source>
         <translation>Словник Hunspell не супроводжується додатковим файлом.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6411"/>
-        <location filename="../../fn.cpp" line="6426"/>
-        <location filename="../../fn.cpp" line="6438"/>
+        <location filename="../../fn.cpp" line="6444"/>
+        <location filename="../../fn.cpp" line="6459"/>
+        <location filename="../../fn.cpp" line="6471"/>
         <source>No misspelling from text cursor.</source>
         <translation>Немає помилок у тексті після курсора.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6449"/>
+        <location filename="../../fn.cpp" line="6482"/>
         <source>Spell Checking</source>
         <translation>Перевірка правопису</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6168"/>
+        <location filename="../../fn.cpp" line="6201"/>
         <source>aka.</source>
         <translation>знаний як</translation>
     </message>
@@ -1796,12 +1796,24 @@ Takes effect after closing this dialog.</source>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="434"/>
+        <source>If this option is checked, the opened document will
+be saved on exiting without prompt and without
+showing a warning if saving is not possible.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../prefDialog.ui" line="439"/>
+        <source>Save opened document on exiting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../prefDialog.ui" line="462"/>
         <source>Spell Checking</source>
         <translation>Перевірка правопису</translation>
     </message>
     <message>
-        <location filename="../../prefDialog.ui" line="442"/>
-        <location filename="../../prefDialog.ui" line="454"/>
+        <location filename="../../prefDialog.ui" line="470"/>
+        <location filename="../../prefDialog.ui" line="482"/>
         <source>A Hunspell dictionary has a name that ends with &quot;.dic&quot;
 and should be alongside an affix file with the same
 name but ending with &quot;.aff&quot;.</source>
@@ -1810,84 +1822,84 @@ name but ending with &quot;.aff&quot;.</source>
 назвою, але яка закінчується на «.aff».</translation>
     </message>
     <message>
-        <location filename="../../prefDialog.ui" line="447"/>
+        <location filename="../../prefDialog.ui" line="475"/>
         <source>Hunspell dictionary path:</source>
         <translation>Шлях до словника Hunspell:</translation>
     </message>
     <message>
-        <location filename="../../prefDialog.ui" line="466"/>
-        <location filename="../../pref.cpp" line="695"/>
+        <location filename="../../prefDialog.ui" line="494"/>
+        <location filename="../../pref.cpp" line="701"/>
         <source>Add dictionary...</source>
         <translation>Додати словник...</translation>
     </message>
     <message>
-        <location filename="../../prefDialog.ui" line="501"/>
+        <location filename="../../prefDialog.ui" line="529"/>
         <source>Files</source>
         <translation>Файли</translation>
     </message>
     <message>
-        <location filename="../../prefDialog.ui" line="510"/>
+        <location filename="../../prefDialog.ui" line="538"/>
         <source>Start with the last opened file</source>
         <translation>Починати з останнього відкритого файлу</translation>
     </message>
     <message>
-        <location filename="../../prefDialog.ui" line="522"/>
+        <location filename="../../prefDialog.ui" line="550"/>
         <source>Number of recent files:</source>
         <translation>Кількість недавніх файлів:</translation>
     </message>
     <message>
-        <location filename="../../prefDialog.ui" line="554"/>
+        <location filename="../../prefDialog.ui" line="582"/>
         <source>Open recent files separately</source>
         <translation>Відкрити недавні файли у різних вкладках</translation>
     </message>
     <message>
-        <location filename="../../prefDialog.ui" line="561"/>
+        <location filename="../../prefDialog.ui" line="589"/>
         <source>By default, all nodes are expanded on opening a document.</source>
         <translation>Типово всі вузли розширюються за відкриття документа.</translation>
     </message>
     <message>
-        <location filename="../../prefDialog.ui" line="564"/>
+        <location filename="../../prefDialog.ui" line="592"/>
         <source>Remember expanded states of nodes</source>
         <translation>Запам&apos;ятовувати розширений стан вузлів</translation>
     </message>
     <message>
-        <location filename="../../prefDialog.ui" line="588"/>
+        <location filename="../../prefDialog.ui" line="616"/>
         <source>Shortcuts</source>
         <translation>Комбінації клавіш</translation>
     </message>
     <message>
-        <location filename="../../prefDialog.ui" line="607"/>
+        <location filename="../../prefDialog.ui" line="635"/>
         <source>Action</source>
         <translation>Дія</translation>
     </message>
     <message>
-        <location filename="../../prefDialog.ui" line="612"/>
+        <location filename="../../prefDialog.ui" line="640"/>
         <source>Shortcut</source>
         <translation>Комбінація клавіш</translation>
     </message>
     <message>
-        <location filename="../../prefDialog.ui" line="620"/>
+        <location filename="../../prefDialog.ui" line="648"/>
         <source>Default</source>
         <translation>Типово</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="383"/>
-        <location filename="../../pref.cpp" line="568"/>
+        <location filename="../../pref.cpp" line="389"/>
+        <location filename="../../pref.cpp" line="574"/>
         <source>Warning: Ambiguous shortcut detected!</source>
         <translation>Попередження: Виявлено повторювану комбінацію клавіш!</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="551"/>
+        <location filename="../../pref.cpp" line="557"/>
         <source>The typed shortcut was reserved.</source>
         <translation>Уведену комбінацію клавіш зарезервовано.</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="666"/>
+        <location filename="../../pref.cpp" line="672"/>
         <source>Application restart is needed for changes to take effect.</source>
         <translation>Щоб зміни набули чинності, потрібен перезапуск застосунку.</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="697"/>
+        <location filename="../../pref.cpp" line="703"/>
         <source>Hunspell Dictionary Files (*.dic)</source>
         <translation>Файли словника Hunspell (*.dic)</translation>
     </message>

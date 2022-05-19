@@ -222,6 +222,13 @@ public:
         rememberExpanded_ = remember;
     }
 
+    bool getSaveOnExit() const {
+        return saveOnExit_;
+    }
+    void setSaveOnExit (bool saveOnExit) {
+        saveOnExit_ = saveOnExit;
+    }
+
 #ifdef HAS_HUNSPELL
     QString getDictPath() const {
         return dictPath_;
@@ -423,10 +430,7 @@ private:
     QString linkAtPos_; // Text hyperlink at the right-click position.
     int imgScale_; QString lastImgPath_;
     int recentNum_;
-    bool openReccentSeparately_;
-    bool rememberExpanded_;
-    bool shownBefore_,
-         remSize_, isMaxed_, isFull_,
+    bool remSize_, isMaxed_, isFull_,
          remSplitter_,
          remPosition_,
          hasTray_,
@@ -440,7 +444,10 @@ private:
          autoBracket_,
          autoReplace_,
          openLastFile_,
-         treeViewDND_;
+         openReccentSeparately_,
+         rememberExpanded_,
+         saveOnExit_;
+    bool shownBefore_, treeViewDND_; // Used internally.
     int lastNode_;
     QString dateFormat_;
     int autoSave_;

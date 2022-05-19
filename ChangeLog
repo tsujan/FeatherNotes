@@ -8,6 +8,7 @@ V0.10.1
  * Added a workaround for the problem Qt6 has with quitting from the tray icon when the window is iconified.
  * Fixed the problems in restoring of window size and position.
  * Keep the search string on node switching if the search is done in all nodes.
+ * Added an option for saving on exiting without prompt.
 
 V0.10.0
 ---------

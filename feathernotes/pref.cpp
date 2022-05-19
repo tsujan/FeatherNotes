@@ -338,6 +338,12 @@ PrefDialog::PrefDialog (QWidget *parent)
                 win->setCollapsedStates();
         });
 
+        /* saving on exiting */
+        ui->exitSaveBox->setChecked (win->getSaveOnExit());
+        connect (ui->exitSaveBox, &QCheckBox::stateChanged, win, [win] (int checked) {
+            win->setSaveOnExit (checked == Qt::Checked);
+        });
+
         /* spell checking */
 #ifdef HAS_HUNSPELL
         ui->dictEdit->setText (win->getDictPath());

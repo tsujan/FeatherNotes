@@ -198,7 +198,7 @@ bool DomModel::removeRows (int row, int count, const QModelIndex &parent)
         return true;
 
     if (dropRow_ > -1)
-        emit dragStarted (index (dropRow_, 0, parent)); // announce the DND start
+        emit dragStarted (index (row, 0, parent)); // announce the DND start
 
     beginRemoveRows (parent, row, row + count - 1);
 

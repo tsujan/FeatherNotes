@@ -142,7 +142,6 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     replCount_ = 0;
     recentNum_ = 0;
     openReccentSeparately_ = false;
-    rememberExpanded_ = false;
 
     /* replace dock */
     ui->dockReplace->setVisible (false);
@@ -208,7 +207,6 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     isMaxed_ = false;
     isFull_= false;
 
-    shownBefore_ = false;
     remSize_ = true;
     remSplitter_ = true;
     remPosition_ = true;
@@ -221,6 +219,9 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     autoBracket_ = false;
     autoReplace_ = false;
     openLastFile_ = false;
+    saveOnExit_ = false;
+    rememberExpanded_ = false;
+    shownBefore_ = false;
     treeViewDND_ = false;
     readAndApplyConfig();
 
@@ -561,31 +562,36 @@ void FN::closeEvent (QCloseEvent *event)
             if (unSaved (false))
                 keep = true;
         }
-        else if (saveNeeded_)
+        else if (saveNeeded_ > 0)
         {
-            if (tray_)
+            if (saveOnExit_ && !xmlPath_.isEmpty())
+                fileSave (xmlPath_);
+            else
             {
-                if (underE_ && QObject::sender() != nullptr && QObject::sender()->objectName() == "trayQuit")
+                if (tray_)
                 {
-                    if (!isVisible())
+                    if (underE_ && QObject::sender() != nullptr && QObject::sender()->objectName() == "trayQuit")
+                    {
+                        if (!isVisible())
+                        {
+                            activateTray();
+                            QCoreApplication::processEvents();
+                        }
+                        else
+                        {
+                            raise();
+                            if (!isWayland_) activateWindow();
+                        }
+                    }
+                    else if (!underE_ && (!isVisible() || !isActiveWindow()))
                     {
                         activateTray();
                         QCoreApplication::processEvents();
                     }
-                    else
-                    {
-                        raise();
-                        if (!isWayland_) activateWindow();
-                    }
                 }
-                else if (!underE_ && (!isVisible() || !isActiveWindow()))
-                {
-                    activateTray();
-                    QCoreApplication::processEvents();
-                }
+                if (unSaved (true))
+                    keep = true;
             }
-            if (unSaved (true))
-                keep = true;
         }
     }
 
@@ -617,7 +623,10 @@ void FN::quitting()
     /* quitting may happen by receiving POSIX signals
        and without calling FN::closeEvent() */
     if (!closed_)
+    {
+        if (saveOnExit_) autoSaving();
         writeGeometryConfig();
+    }
 }
 /*************************/
 void FN::checkTray()
@@ -911,7 +920,7 @@ void FN::newNote()
             return;
         }
     }
-    else if (saveNeeded_)
+    else if (saveNeeded_ > 0)
     {
         if (unSaved (true))
         {
@@ -1210,7 +1219,7 @@ static inline void fontFromString (QFont &f, const QString &str)
 /*************************/
 void FN::showDoc (QDomDocument &doc, int node)
 {
-    if (saveNeeded_)
+    if (saveNeeded_ > 0)
     {
         saveNeeded_ = 0;
         ui->actionSave->setEnabled (false);
@@ -1322,6 +1331,26 @@ void FN::showDoc (QDomDocument &doc, int node)
         ui->treeView->setAutoScroll (true);
         ui->treeView->setCurrentIndex (droppedIndex);
         treeViewDND_ = false;
+        /* WARNING: QTreeView collapses the index and its children on dropping,
+                    without emitting "QTreeView::collapsed()". */
+        if (rememberExpanded_)
+        {
+            QModelIndex indx = droppedIndex;
+            QModelIndex sibling = model_->sibling (indx.row() + 1, 0, indx);
+            while (indx != sibling)
+            {
+                if (model_->hasChildren (indx))
+                {
+                    if (DomItem *item = static_cast<DomItem*>(indx.internalPointer()))
+                    {
+                        QDomNode node = item->node();
+                        if (node.toElement().attribute ("collapse").isEmpty())
+                            ui->treeView->expand (indx);
+                    }
+                }
+                indx = model_->adjacentIndex (indx, true);
+            }
+        }
     });
 
     /* enable widgets */
@@ -1461,7 +1490,7 @@ void FN::openFile()
             return;
         }
     }
-    else if (saveNeeded_)
+    else if (saveNeeded_ > 0)
     {
         if (unSaved (true))
         {
@@ -1528,7 +1557,7 @@ void FN::openFNDoc (const QString &filePath)
             return;
         }
     }
-    else if (saveNeeded_)
+    else if (saveNeeded_ > 0)
     {
         if (unSaved (true))
         {
@@ -1822,7 +1851,7 @@ bool FN::fileSave (const QString &filePath)
             QHash<DomItem*, TextEdit*>::iterator it;
             for (it = widgets_.begin(); it != widgets_.end(); ++it)
                 it.value()->document()->setModified (false);
-            if (saveNeeded_)
+            if (saveNeeded_ > 0)
             {
                 saveNeeded_ = 0;
                 ui->actionSave->setEnabled (false);
@@ -1852,7 +1881,7 @@ bool FN::fileSave (const QString &filePath)
             QHash<DomItem*, TextEdit*>::iterator it;
             for (it = widgets_.begin(); it != widgets_.end(); ++it)
                 it.value()->document()->setModified (false);
-            if (saveNeeded_)
+            if (saveNeeded_ > 0)
             {
                 saveNeeded_ = 0;
                 ui->actionSave->setEnabled (false);
@@ -2439,7 +2468,7 @@ void FN::setSaveEnabled (bool modified)
         noteModified();
     else
     {
-        if (saveNeeded_)
+        if (saveNeeded_ > 0)
             --saveNeeded_;
         if (saveNeeded_ == 0)
         {
@@ -2814,7 +2843,7 @@ void FN::deleteNode()
         if (it != widgets_.end())
         {
             TextEdit *textEdit = it.value();
-            if (saveNeeded_ && textEdit->document()->isModified())
+            if (saveNeeded_ > 0 && textEdit->document()->isModified())
                 --saveNeeded_;
             searchEntries_.remove (textEdit);
             greenSels_.remove (textEdit);
@@ -5319,6 +5348,8 @@ void FN::readAndApplyConfig (bool startup)
 
     rememberExpanded_ = settings.value ("rememberExpanded").toBool(); // false by default
 
+    saveOnExit_ = settings.value ("saveOnExit").toBool(); // false by default
+
     settings.endGroup();
 }
 /*************************/
@@ -5495,6 +5526,8 @@ void FN::writeConfig()
 #endif
 
     settings.setValue ("rememberExpanded", rememberExpanded_);
+
+    settings.setValue ("saveOnExit", saveOnExit_);
 
     settings.endGroup();
 
