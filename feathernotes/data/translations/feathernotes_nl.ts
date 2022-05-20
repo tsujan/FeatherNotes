@@ -531,7 +531,7 @@
     <message>
         <location filename="../../fn.ui" line="857"/>
         <source>&amp;Append Sibling</source>
-        <translation>Gelijksoortige &amp;toekennen</translation>
+        <translation>No&amp;titie hieronder invoegen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="860"/>
@@ -541,7 +541,7 @@
     <message>
         <location filename="../../fn.ui" line="868"/>
         <source>Append &amp;Child</source>
-        <translation>Onderliggende &amp;toekennen</translation>
+        <translation>Onderliggende notitie toevoe&amp;gen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="871"/>
@@ -581,7 +581,7 @@
     <message>
         <location filename="../../fn.ui" line="912"/>
         <source>Re&amp;name Node</source>
-        <translation>Notitie&amp;naam wijzigen</translation>
+        <translation>&amp;Naam wijzigen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="915"/>
@@ -753,7 +753,7 @@
     <message>
         <location filename="../../fn.ui" line="1115"/>
         <source>&amp;Prepend Sibling</source>
-        <translation>Gelijksoortige &amp;bijvoegen</translation>
+        <translation>Notitie hier&amp;boven toevoegen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1118"/>
@@ -853,7 +853,7 @@
     <message>
         <location filename="../../fn.ui" line="1217"/>
         <source>&amp;Tags</source>
-        <translation>&amp;Labels</translation>
+        <translation>Labels &amp;toekennen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1220"/>
@@ -888,7 +888,7 @@
     <message>
         <location filename="../../fn.ui" line="1252"/>
         <source>Append Row</source>
-        <translation>Rij toevoegen</translation>
+        <translation>Rij hieronder invoegen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1257"/>
@@ -898,7 +898,7 @@
     <message>
         <location filename="../../fn.ui" line="1262"/>
         <source>Append Column</source>
-        <translation>Kolom toevoegen</translation>
+        <translation>Kolom hieronder invoegen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1267"/>
@@ -913,12 +913,12 @@
     <message>
         <location filename="../../fn.ui" line="1277"/>
         <source>Prepend Row</source>
-        <translation>Rij erboven invoegen</translation>
+        <translation>Rij hierboven invoegen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1282"/>
         <source>Prepend Column</source>
-        <translation>Kolom erboven invoegen</translation>
+        <translation>Kolom hierboven invoegen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1290"/>
@@ -959,7 +959,7 @@
     <message>
         <location filename="../../fn.ui" line="1339"/>
         <source>Node &amp;Icon</source>
-        <translation>Notitiep&amp;ictogram</translation>
+        <translation>P&amp;ictogram wijzigen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1342"/>
@@ -996,7 +996,7 @@
     <message>
         <location filename="../../fn.cpp" line="2991"/>
         <source>Node Icon</source>
-        <translation>Notitiepictogram</translation>
+        <translation>Pictogram wijzigen</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="674"/>
@@ -1101,12 +1101,12 @@
         <source>&lt;center&gt;&lt;b&gt;&lt;i&gt;Warning!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
 &lt;center&gt;This action cannot be undone.&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;i&gt;Waarschuwing!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
-&lt;center&gt;Deze actie kan niet ongedaan worden gemaakt.&lt;/center&gt;</translation>
+&lt;center&gt;Deze actie is onomkeerbaar.&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2918"/>
         <source>Tags</source>
-        <translation>Labels</translation>
+        <translation>Labels toekennen en/of aanpassen</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2933"/>
@@ -1797,12 +1797,14 @@ Laat leeg om de systeemopmaak te gebruiken.</translation>
         <source>If this option is checked, the opened document will
 be saved on exiting without prompt and without
 showing a warning if saving is not possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Schakel deze optie in om geopende documenten auto-
+matisch op te slaan na het afsluiten. Let op: er wordt géén
+waarschuwing getoond als opslaan niet mogelijk is.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="439"/>
         <source>Save opened document on exiting</source>
-        <translation type="unfinished"></translation>
+        <translation>Geopende documenten automatisch opslaan na afsluiten</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="462"/>

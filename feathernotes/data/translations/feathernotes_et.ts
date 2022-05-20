@@ -1800,12 +1800,14 @@ Muutus hakkab kehtima selle vaate sulgemisel.</translation>
         <source>If this option is checked, the opened document will
 be saved on exiting without prompt and without
 showing a warning if saving is not possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kui see valik on kasutusel, siis avatud fail salvestub
+sulgemisel ilma hoiatuseta ning ilma teateta, kui
+salvestamine ei peaks olema võimalik.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="439"/>
         <source>Save opened document on exiting</source>
-        <translation type="unfinished"></translation>
+        <translation>Sulgemisel salvesta avatud dokument</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="462"/>

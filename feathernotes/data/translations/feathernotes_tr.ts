@@ -1789,12 +1789,14 @@ Bu iletişim penceresini kapattıktan sonra etkili olur.</translation>
         <source>If this option is checked, the opened document will
 be saved on exiting without prompt and without
 showing a warning if saving is not possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu seçenek işaretlenirse, açılan belge
+ istenmeden ve gerekmeden çıkarken kaydedilebilir
+ kaydetme mümkün değilse bir uyarı gösteriliyor.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="439"/>
         <source>Save opened document on exiting</source>
-        <translation type="unfinished"></translation>
+        <translation>Açılan belgeyi çıkarken kaydet</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="462"/>
