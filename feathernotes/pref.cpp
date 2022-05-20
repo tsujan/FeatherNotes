@@ -507,7 +507,7 @@ void PrefDialog::prefSize (int value)
     FN *win = static_cast<FN *>(parent_);
     if (win == nullptr) return;
 
-    if (qobject_cast<QCheckBox *>(QObject::sender()))
+    if (qobject_cast<QCheckBox*>(QObject::sender()))
     {
         if (value == Qt::Checked)
         {
@@ -527,9 +527,9 @@ void PrefDialog::prefSize (int value)
             ui->winXLabel->setEnabled (true);
         }
     }
-    else if (ui->winSpinX == qobject_cast<QSpinBox *>(QObject::sender()))
+    else if (ui->winSpinX == qobject_cast<QSpinBox*>(QObject::sender()))
         win->setStartSize (QSize (ui->winSpinX->value(), win->getStartSize().height()));
-    else if (ui->winSpinY == qobject_cast<QSpinBox *>(QObject::sender()))
+    else if (ui->winSpinY == qobject_cast<QSpinBox*>(QObject::sender()))
         win->setStartSize (QSize (win->getStartSize().width(), ui->winSpinY->value()));
 }
 /*************************/

@@ -799,7 +799,7 @@ void FN::zoomingIn()
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
 
-    TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
+    TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
     textEdit->zooming (1.f);
 }
 /*************************/
@@ -808,7 +808,7 @@ void FN::zoomingOut()
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
 
-    TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
+    TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
     textEdit->zooming (-1.f);
 
     rehighlight (textEdit);
@@ -819,7 +819,7 @@ void FN::unZooming()
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
 
-    TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
+    TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
     textEdit->setFont (defaultFont_);
     QFontMetricsF metrics (defaultFont_);
     textEdit->setTabStopDistance (4 * metrics.horizontalAdvance (' '));
@@ -1226,13 +1226,13 @@ void FN::showDoc (QDomDocument &doc, int node)
         setWindowModified (false);
     }
 
+    widgets_.clear();
+    searchEntries_.clear();
+    greenSels_.clear();
     while (ui->stackedWidget->count() > 0)
     {
-        widgets_.clear();
-        searchEntries_.clear();
-        greenSels_.clear();
         QWidget *cw = ui->stackedWidget->currentWidget();
-        TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
+        TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
         ui->stackedWidget->removeWidget (cw);
         delete textEdit; textEdit = nullptr;
     }
@@ -1909,7 +1909,7 @@ void FN::undoing()
         it.key()->setExtraSelections (QList<QTextEdit::ExtraSelection>());
     }
 
-    qobject_cast< TextEdit *>(cw)->undo();
+    qobject_cast<TextEdit*>(cw)->undo();
 }
 /*************************/
 void FN::redoing()
@@ -1917,7 +1917,7 @@ void FN::redoing()
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
 
-    qobject_cast< TextEdit *>(cw)->redo();
+    qobject_cast<TextEdit*>(cw)->redo();
 }
 /*************************/
 void FN::cutText()
@@ -1925,7 +1925,7 @@ void FN::cutText()
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
 
-    qobject_cast< TextEdit *>(cw)->cut();
+    qobject_cast<TextEdit*>(cw)->cut();
 }
 /*************************/
 void FN::copyText()
@@ -1933,7 +1933,7 @@ void FN::copyText()
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
 
-    qobject_cast< TextEdit *>(cw)->copy();
+    qobject_cast<TextEdit*>(cw)->copy();
 }
 /*************************/
 void FN::pasteText()
@@ -1941,7 +1941,7 @@ void FN::pasteText()
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
 
-    qobject_cast< TextEdit *>(cw)->paste();
+    qobject_cast<TextEdit*>(cw)->paste();
 }
 /*************************/
 void FN::pasteHTML()
@@ -1949,7 +1949,7 @@ void FN::pasteHTML()
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
 
-    TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
+    TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
     textEdit->setAcceptRichText (true);
     textEdit->paste();
     textEdit->setAcceptRichText (false);
@@ -1960,7 +1960,7 @@ void FN::deleteText()
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
 
-    TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
+    TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
     if (!textEdit->isReadOnly())
         textEdit->insertPlainText ("");
 }
@@ -1968,16 +1968,16 @@ void FN::deleteText()
 void FN::selectAllText()
 {
     if (QWidget *cw = ui->stackedWidget->currentWidget())
-        qobject_cast< TextEdit *>(cw)->selectAll();
+        qobject_cast<TextEdit*>(cw)->selectAll();
 }
 /*************************/
 void FN::insertDate()
 {
     if (QWidget *cw = ui->stackedWidget->currentWidget())
     {
-        qobject_cast< TextEdit *>(cw)->insertPlainText (QDateTime::currentDateTime().toString (dateFormat_.isEmpty()
-                                                            ? locale().dateTimeFormat()
-                                                            : dateFormat_));
+        qobject_cast<TextEdit*>(cw)->insertPlainText (QDateTime::currentDateTime().toString (dateFormat_.isEmpty()
+                                                          ? locale().dateTimeFormat()
+                                                          : dateFormat_));
     }
 }
 /*************************/
@@ -2125,7 +2125,7 @@ void FN::setCursorInsideSelection (bool sel)
     {
         if (QWidget *cw = ui->stackedWidget->currentWidget())
         {
-            TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
+            TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
             /* WARNING: Qt4 didn't need disconnecting. Why?! */
             disconnect (textEdit, &QTextEdit::copyAvailable, this, &FN::setCursorInsideSelection);
             QTextCursor cur = textEdit->textCursor();
@@ -2140,7 +2140,7 @@ void FN::txtContextMenu (const QPoint &p)
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
 
-    TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
+    TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
     QTextCursor cur = textEdit->textCursor();
     bool hasSel = cur.hasSelection();
     /* set the text cursor at the position of
@@ -2509,14 +2509,14 @@ void FN::alignmentChanged()
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
 
-    Qt::Alignment a = qobject_cast< TextEdit *>(cw)->alignment();
+    Qt::Alignment a = qobject_cast<TextEdit*>(cw)->alignment();
     if (a & Qt::AlignLeft)
     {
         if (a & Qt::AlignAbsolute)
             ui->actionLeft->setChecked (true);
         else // get alignment from text layout direction
         {
-            QTextCursor cur = qobject_cast< TextEdit *>(cw)->textCursor();
+            QTextCursor cur = qobject_cast<TextEdit*>(cw)->textCursor();
             QTextBlockFormat fmt = cur.blockFormat();
             if (fmt.layoutDirection() == Qt::LeftToRight)
                 ui->actionLeft->setChecked (true);
@@ -2542,7 +2542,7 @@ void FN::alignmentChanged()
             ui->actionRight->setChecked (true);
         else // get alignment from text layout direction
         {
-            QTextCursor cur = qobject_cast< TextEdit *>(cw)->textCursor();
+            QTextCursor cur = qobject_cast<TextEdit*>(cw)->textCursor();
             QTextBlockFormat fmt = cur.blockFormat();
             if (fmt.layoutDirection() == Qt::RightToLeft)
                 ui->actionRight->setChecked (true);
@@ -2567,7 +2567,7 @@ void FN::directionChanged()
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
 
-    QTextCursor cur = qobject_cast< TextEdit *>(cw)->textCursor();
+    QTextCursor cur = qobject_cast<TextEdit*>(cw)->textCursor();
     QTextBlockFormat fmt = cur.blockFormat();
     if (fmt.layoutDirection() == Qt::LeftToRight)
         ui->actionLTR->setChecked (true);
@@ -2588,7 +2588,7 @@ void FN::mergeFormatOnWordOrSelection (const QTextCharFormat &format)
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
 
-    TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
+    TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
     QTextCursor cur = textEdit->textCursor();
     if (!cur.hasSelection())
     { // apply to the word only if the cusor isn't at its end
@@ -2657,7 +2657,7 @@ void FN::textColor()
     if (!cw) return;
 
     QColor color;
-    if ((color = qobject_cast< TextEdit *>(cw)->textColor())
+    if ((color = qobject_cast<TextEdit*>(cw)->textColor())
         == fgColor_)
     {
         if (lastTxtColor_.isValid())
@@ -2679,7 +2679,7 @@ void FN::bgColor()
     if (!cw) return;
 
     QColor color;
-    if ((color = qobject_cast< TextEdit *>(cw)->textBackgroundColor())
+    if ((color = qobject_cast<TextEdit*>(cw)->textBackgroundColor())
         == QColor (Qt::black)) // this is a Qt bug
     {
         if (lastBgColor_.isValid())
@@ -2702,7 +2702,7 @@ void FN::clearFormat()
 
     QTextCharFormat fmt;
 
-    TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
+    TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
     QTextCursor cur = textEdit->textCursor();
     if (!cur.hasSelection())
     { // apply to the word only if the cusor isn't at its end
@@ -2722,7 +2722,7 @@ void FN::textAlign (QAction *a)
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
 
-    TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
+    TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
     if (a == ui->actionLeft)
         textEdit->setAlignment (Qt::Alignment (Qt::AlignLeft | Qt::AlignAbsolute));
     else if (a == ui->actionCenter)
@@ -2744,7 +2744,7 @@ void FN::textDirection (QAction *a)
     else if (a == ui->actionRTL)
         fmt.setLayoutDirection (Qt::RightToLeft);
 
-    QTextCursor cur = qobject_cast< TextEdit *>(cw)->textCursor();
+    QTextCursor cur = qobject_cast<TextEdit*>(cw)->textCursor();
     if (!cur.hasSelection())
         cur.select (QTextCursor::BlockUnderCursor);
     cur.mergeBlockFormat (fmt);
@@ -3238,7 +3238,7 @@ void FN::textFontDialog()
            because the font may be smaller now */
         if (QWidget *cw = ui->stackedWidget->currentWidget())
         {
-            TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
+            TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
             rehighlight (textEdit);
         }
     }
@@ -3399,7 +3399,7 @@ void FN::showHideSearch()
         if (QWidget *cw = ui->stackedWidget->currentWidget())
         {
             /* return focus to the document */
-            qobject_cast< TextEdit *>(cw)->setFocus();
+            qobject_cast<TextEdit*>(cw)->setFocus();
             /* cancel search */
             QHash<TextEdit*,QString>::iterator it;
             for (it = searchEntries_.begin(); it != searchEntries_.end(); ++it)
@@ -3735,7 +3735,7 @@ void FN::closeReplaceDock (bool visible)
 
     /* return focus to the document */
     if (ui->stackedWidget->count() > 0)
-        qobject_cast< TextEdit *>(ui->stackedWidget->currentWidget())->setFocus();
+        qobject_cast<TextEdit*>(ui->stackedWidget->currentWidget())->setFocus();
 }
 /*************************/
 // Resize the floating dock widget to its minimum size.
@@ -3751,7 +3751,7 @@ void FN::replace()
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
 
-    TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
+    TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
 
     ui->dockReplace->setWindowTitle (tr ("Replacement"));
 
@@ -3920,7 +3920,7 @@ void FN::replaceAll()
 
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
-    TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
+    TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
 
     if (txtReplace_ != ui->lineEditReplace->text())
     {
@@ -4059,7 +4059,7 @@ void FN::showAndFocus()
     show();
     raise();
     if (ui->stackedWidget->count() > 0)
-        qobject_cast< TextEdit *>(ui->stackedWidget->currentWidget())->setFocus();
+        qobject_cast<TextEdit*>(ui->stackedWidget->currentWidget())->setFocus();
     if (!isWayland_)
     { // to bypass focus stealing prevention
         activateWindow();
@@ -4188,7 +4188,7 @@ void FN::insertLink()
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
 
-    TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
+    TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
     QTextCursor cur = textEdit->textCursor();
     if (!cur.hasSelection()) return;
     /* only if the position is after the anchor,
@@ -4371,7 +4371,7 @@ void FN::imageEmbed (const QString &path)
         w = imgSize.width();
         h = imgSize.height();
     }
-    TextEdit *textEdit = qobject_cast< TextEdit *>(ui->stackedWidget->currentWidget());
+    TextEdit *textEdit = qobject_cast<TextEdit*>(ui->stackedWidget->currentWidget());
     //QString ("<img src=\"data:image/png;base64,%1\">")
     textEdit->insertHtml (QString ("<img src=\"data:image;base64,%1\" width=\"%2\" height=\"%3\" />")
                           .arg (QString (base64array))
@@ -4430,7 +4430,7 @@ bool FN::isImageSelected()
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return false;
 
-    TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
+    TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
     QTextCursor cur = textEdit->textCursor();
     if (!cur.hasSelection()) return false;
 
@@ -4471,7 +4471,7 @@ void FN::scaleImage()
     grid->setColumnStretch (1, 1);
     grid->setRowStretch (1, 1);
 
-    TextEdit *textEdit = qobject_cast< TextEdit *>(ui->stackedWidget->currentWidget());
+    TextEdit *textEdit = qobject_cast<TextEdit*>(ui->stackedWidget->currentWidget());
     QTextCursor cur = textEdit->textCursor();
     QTextDocumentFragment docFrag = cur.selection();
     if (docFrag.isEmpty()) return;
@@ -4581,7 +4581,7 @@ void FN::scaleImage()
 /*************************/
 void FN::saveImage()
 {
-    TextEdit *textEdit = qobject_cast< TextEdit *>(ui->stackedWidget->currentWidget());
+    TextEdit *textEdit = qobject_cast<TextEdit*>(ui->stackedWidget->currentWidget());
     QTextCursor cur = textEdit->textCursor();
     QTextDocumentFragment docFrag = cur.selection();
     if (docFrag.isEmpty()) return;
@@ -4773,7 +4773,7 @@ void FN::addTable()
         return;
     }
 
-    TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
+    TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
     QTextCursor cur = textEdit->textCursor();
     QTextTableFormat tf;
     tf.setCellPadding (3);
@@ -4786,7 +4786,7 @@ void FN::tableMergeCells()
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
 
-    TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
+    TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
     QTextCursor cur = textEdit->textCursor();
     if (QTextTable *table = cur.currentTable())
         table->mergeCells (cur);
@@ -4797,7 +4797,7 @@ void FN::tablePrependRow()
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
 
-    TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
+    TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
     QTextCursor cur = textEdit->textCursor();
     if (QTextTable *table = cur.currentTable())
     {
@@ -4811,7 +4811,7 @@ void FN::tableAppendRow()
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
 
-    TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
+    TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
     QTextCursor cur = textEdit->textCursor();
     if (QTextTable *table = cur.currentTable())
     {
@@ -4825,7 +4825,7 @@ void FN::tablePrependCol()
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
 
-    TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
+    TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
     QTextCursor cur = textEdit->textCursor();
     if (QTextTable *table = cur.currentTable())
     {
@@ -4839,7 +4839,7 @@ void FN::tableAppendCol()
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
 
-    TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
+    TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
     QTextCursor cur = textEdit->textCursor();
     if (QTextTable *table = cur.currentTable())
     {
@@ -4853,7 +4853,7 @@ void FN::tableDeleteRow()
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
 
-    TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
+    TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
     QTextCursor cur = textEdit->textCursor();
     if (QTextTable *table = cur.currentTable())
     {
@@ -4867,7 +4867,7 @@ void FN::tableDeleteCol()
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
 
-    TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
+    TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
     QTextCursor cur = textEdit->textCursor();
     if (QTextTable *table = cur.currentTable())
     {
@@ -4884,12 +4884,12 @@ void FN::toggleWrapping()
     if (ui->actionWrap->isChecked())
     {
         for (int i = 0; i < count; ++i)
-            qobject_cast< TextEdit *>(ui->stackedWidget->widget (i))->setLineWrapMode (QTextEdit::WidgetWidth);
+            qobject_cast<TextEdit*>(ui->stackedWidget->widget (i))->setLineWrapMode (QTextEdit::WidgetWidth);
     }
     else
     {
         for (int i = 0; i < count; ++i)
-            qobject_cast< TextEdit *>(ui->stackedWidget->widget (i))->setLineWrapMode (QTextEdit::NoWrap);
+            qobject_cast<TextEdit*>(ui->stackedWidget->widget (i))->setLineWrapMode (QTextEdit::NoWrap);
     }
     hlight();
 }
@@ -4902,12 +4902,12 @@ void FN::toggleIndent()
     if (ui->actionIndent->isChecked())
     {
         for (int i = 0; i < count; ++i)
-            qobject_cast< TextEdit *>(ui->stackedWidget->widget (i))->autoIndentation = true;
+            qobject_cast<TextEdit*>(ui->stackedWidget->widget (i))->autoIndentation = true;
     }
     else
     {
         for (int i = 0; i < count; ++i)
-            qobject_cast< TextEdit *>(ui->stackedWidget->widget (i))->autoIndentation = false;
+            qobject_cast<TextEdit*>(ui->stackedWidget->widget (i))->autoIndentation = false;
     }
 }
 /*************************/
@@ -5898,7 +5898,7 @@ void FN::setHTMLName (bool checked)
         if (!list1.isEmpty()) break;
     }
     if (list1.isEmpty()) return;
-    int index = list1.indexOf (qobject_cast< QRadioButton *>(QObject::sender()));
+    int index = list1.indexOf (qobject_cast<QRadioButton*>(QObject::sender()));
 
     /* choose an appropriate name */
     QModelIndex indx = ui->treeView->currentIndex();

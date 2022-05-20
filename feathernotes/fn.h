@@ -418,13 +418,13 @@ private:
     LineEdit *ImagePathEntry_, *htmlPahEntry_;
     /* By pairing each widget with a DOM item, we won't need to worry
        about keeping the correspondence between widgets and nodes: */
-    QHash<DomItem*,TextEdit*> widgets_;
+    QHash<DomItem*, TextEdit*> widgets_;
     QTextDocument::FindFlags searchFlags_; // Whole word and case sensitivity flags.
-    QHash<TextEdit*,QString> searchEntries_; // Search entries, one for each QTextEdit.
+    QHash<TextEdit*, QString> searchEntries_; // Search entries, one for each QTextEdit.
     bool searchingOtherNode_; // Needed when jumping to another node during search.
     bool rplOtherNode_; // Like above but for replacement.
     int replCount_; // Needed for counting replacements in all nodes.
-    QHash<TextEdit*, QList<QTextEdit::ExtraSelection> > greenSels_; // For replaced matches.
+    QHash<TextEdit*, QList<QTextEdit::ExtraSelection>> greenSels_; // For replaced matches.
     QString txtReplace_; // The replacing text.
     QModelIndexList tagsList_;
     QString linkAtPos_; // Text hyperlink at the right-click position.

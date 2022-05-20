@@ -47,7 +47,7 @@ public:
 
         if (!text.isEmpty()) // set an appropriate width
         {
-            if (QGridLayout *lo = qobject_cast< QGridLayout *>(layout()))
+            if (QGridLayout *lo = qobject_cast<QGridLayout*>(layout()))
             {
                 int tw = 0;
                 QString t (text);

@@ -101,7 +101,7 @@ QTextCursor FN::finding (const QString &str,
     if (ui->stackedWidget->currentIndex() == -1 || str.isEmpty())
         return QTextCursor(); // null cursor
 
-    TextEdit *textEdit = qobject_cast< TextEdit *>(ui->stackedWidget->currentWidget());
+    TextEdit *textEdit = qobject_cast<TextEdit*>(ui->stackedWidget->currentWidget());
     QTextDocument *txtdoc = textEdit->document();
     QTextCursor res = QTextCursor (start);
     if (str.contains ('\n'))
@@ -335,7 +335,7 @@ void FN::find()
         return;
     }
 
-    TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
+    TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
     disconnect (textEdit->verticalScrollBar(), &QAbstractSlider::valueChanged, this, &FN::scrolled);
     disconnect (textEdit->horizontalScrollBar(), &QAbstractSlider::valueChanged, this, &FN::scrolled);
     disconnect (textEdit, &TextEdit::resized, this, &FN::hlight);
@@ -442,7 +442,7 @@ void FN::find()
     {
         searchingOtherNode_ = true;
         ui->treeView->setCurrentIndex (nxtIndx); // selChanged() is called immediately
-        textEdit = qobject_cast< TextEdit *>(ui->stackedWidget->currentWidget());
+        textEdit = qobject_cast<TextEdit*>(ui->stackedWidget->currentWidget());
         ui->lineEdit->setText (txt);
         searchEntries_[textEdit] = txt;
         find();
@@ -455,7 +455,7 @@ void FN::hlight() const
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
 
-    TextEdit *textEdit = qobject_cast< TextEdit *>(cw);
+    TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
     const QString txt = searchEntries_[textEdit];
     if (txt.isEmpty()) return;
 
@@ -536,7 +536,7 @@ void FN::reallySetSearchFlags (bool h)
     {
         for (int i = 0; i < ui->stackedWidget->count(); ++i)
         {
-            TextEdit *textEdit = qobject_cast< TextEdit *>(ui->stackedWidget->widget (i));
+            TextEdit *textEdit = qobject_cast<TextEdit*>(ui->stackedWidget->widget (i));
             QTextCursor start = textEdit->textCursor();
             start.setPosition (start.anchor());
             textEdit->setTextCursor (start);
