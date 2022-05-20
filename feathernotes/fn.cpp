@@ -4243,7 +4243,7 @@ void FN::insertLink()
         format.setAnchor (true);
         format.setFontUnderline (true);
         format.setFontItalic (true);
-        format.setForeground (QColor (0, 0, 255));
+        format.setForeground (qGray (bgColor_.rgb()) > 127 ? QColor (Qt::blue) : QColor (85, 227, 255));
     }
     else
     {

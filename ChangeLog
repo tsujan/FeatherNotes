@@ -9,6 +9,7 @@ V0.10.1
  * Fixed the problems in restoring of window size and position.
  * Keep the search string on node switching if the search is done in all nodes.
  * Added an option for saving on exiting without prompt.
+ * When inserting a link, choose a blue color based on the background color.
 
 V0.10.0
 ---------
