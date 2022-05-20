@@ -3318,7 +3318,7 @@ void FN::docColorDialog()
     case QDialog::Rejected:
     default:
         delete dialog;
-        break;
+        return;
     }
 
     /* apply the new colors to the existing editors
@@ -3326,6 +3326,17 @@ void FN::docColorDialog()
     QHash<DomItem*, TextEdit*>::iterator it;
     for (it = widgets_.begin(); it != widgets_.end(); ++it)
         setEditorStyleSheet (it.value());
+
+    /* remove green highlights and update the yellow ones
+       because their colors may not be suitable now */
+    QHash<TextEdit*,QList<QTextEdit::ExtraSelection> >::iterator iter;
+    for (iter = greenSels_.begin(); iter != greenSels_.end(); ++iter)
+    {
+        QList<QTextEdit::ExtraSelection> extraSelectionsIth;
+        greenSels_[iter.key()] = extraSelectionsIth;
+        iter.key()->setExtraSelections (QList<QTextEdit::ExtraSelection>());
+    }
+    hlight();
 }
 /*************************/
 void FN::noteModified()

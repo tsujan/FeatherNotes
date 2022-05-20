@@ -27,8 +27,8 @@
     <message>
         <location filename="../../fn.ui" line="14"/>
         <location filename="../../fn.cpp" line="1680"/>
-        <location filename="../../fn.cpp" line="4009"/>
-        <location filename="../../fn.cpp" line="5845"/>
+        <location filename="../../fn.cpp" line="4020"/>
+        <location filename="../../fn.cpp" line="5856"/>
         <source>FeatherNotes</source>
         <translation></translation>
     </message>
@@ -499,7 +499,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="824"/>
-        <location filename="../../fn.cpp" line="4265"/>
+        <location filename="../../fn.cpp" line="4276"/>
         <source>Embed Image</source>
         <translation>گذاشتن تصوير</translation>
     </message>
@@ -1000,7 +1000,7 @@
     </message>
     <message>
         <location filename="../../fn.cpp" line="674"/>
-        <location filename="../../fn.cpp" line="5006"/>
+        <location filename="../../fn.cpp" line="5017"/>
         <source>&amp;Raise/Hide</source>
         <translation>پيش آوردن يا پنهان کردن</translation>
     </message>
@@ -1019,14 +1019,14 @@
     <message>
         <location filename="../../fn.cpp" line="943"/>
         <location filename="../../fn.cpp" line="2819"/>
-        <location filename="../../fn.cpp" line="4632"/>
+        <location filename="../../fn.cpp" line="4643"/>
         <source>Yes</source>
         <translation>آری</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="944"/>
         <location filename="../../fn.cpp" line="2820"/>
-        <location filename="../../fn.cpp" line="4633"/>
+        <location filename="../../fn.cpp" line="4644"/>
         <source>No</source>
         <translation>نه</translation>
     </message>
@@ -1055,13 +1055,13 @@
         <location filename="../../fn.cpp" line="2932"/>
         <location filename="../../fn.cpp" line="3034"/>
         <location filename="../../fn.cpp" line="3294"/>
-        <location filename="../../fn.cpp" line="4208"/>
-        <location filename="../../fn.cpp" line="4289"/>
-        <location filename="../../fn.cpp" line="4450"/>
-        <location filename="../../fn.cpp" line="4729"/>
-        <location filename="../../fn.cpp" line="5714"/>
-        <location filename="../../fn.cpp" line="5977"/>
-        <location filename="../../fn.cpp" line="6097"/>
+        <location filename="../../fn.cpp" line="4219"/>
+        <location filename="../../fn.cpp" line="4300"/>
+        <location filename="../../fn.cpp" line="4461"/>
+        <location filename="../../fn.cpp" line="4740"/>
+        <location filename="../../fn.cpp" line="5725"/>
+        <location filename="../../fn.cpp" line="5988"/>
+        <location filename="../../fn.cpp" line="6108"/>
         <source>Cancel</source>
         <translation>لغو</translation>
     </message>
@@ -1072,16 +1072,16 @@
     </message>
     <message>
         <location filename="../../fn.cpp" line="1681"/>
-        <location filename="../../fn.cpp" line="5846"/>
+        <location filename="../../fn.cpp" line="5857"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be saved!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;قابل ذخيره‌سازی نيست!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1685"/>
-        <location filename="../../fn.cpp" line="3587"/>
-        <location filename="../../fn.cpp" line="4013"/>
-        <location filename="../../fn.cpp" line="5849"/>
-        <location filename="../../fn.cpp" line="6399"/>
+        <location filename="../../fn.cpp" line="3598"/>
+        <location filename="../../fn.cpp" line="4024"/>
+        <location filename="../../fn.cpp" line="5860"/>
+        <location filename="../../fn.cpp" line="6410"/>
         <source>Close</source>
         <translation>بستن</translation>
     </message>
@@ -1112,13 +1112,13 @@
         <location filename="../../fn.cpp" line="2933"/>
         <location filename="../../fn.cpp" line="3035"/>
         <location filename="../../fn.cpp" line="3295"/>
-        <location filename="../../fn.cpp" line="4210"/>
-        <location filename="../../fn.cpp" line="4290"/>
-        <location filename="../../fn.cpp" line="4451"/>
-        <location filename="../../fn.cpp" line="4730"/>
-        <location filename="../../fn.cpp" line="5716"/>
-        <location filename="../../fn.cpp" line="5978"/>
-        <location filename="../../fn.cpp" line="6098"/>
+        <location filename="../../fn.cpp" line="4221"/>
+        <location filename="../../fn.cpp" line="4301"/>
+        <location filename="../../fn.cpp" line="4462"/>
+        <location filename="../../fn.cpp" line="4741"/>
+        <location filename="../../fn.cpp" line="5727"/>
+        <location filename="../../fn.cpp" line="5989"/>
+        <location filename="../../fn.cpp" line="6109"/>
         <source>OK</source>
         <translation>تاييد</translation>
     </message>
@@ -1135,74 +1135,74 @@
         <translation>&lt;b&gt;يادداشت:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;شاخه‌های اصلی:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;همه‌ی شاخه‌ها:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3574"/>
+        <location filename="../../fn.cpp" line="3585"/>
         <source>%1 Matches</source>
         <translation>%1 نمونه</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3576"/>
+        <location filename="../../fn.cpp" line="3587"/>
         <source>One Match</source>
         <translation>يک نمونه</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3578"/>
-        <location filename="../../fn.cpp" line="3893"/>
+        <location filename="../../fn.cpp" line="3589"/>
+        <location filename="../../fn.cpp" line="3904"/>
         <source>No Match</source>
         <translation>هيچ نمونه</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3693"/>
-        <location filename="../../fn.cpp" line="3745"/>
+        <location filename="../../fn.cpp" line="3704"/>
+        <location filename="../../fn.cpp" line="3756"/>
         <source>Replacement</source>
         <translation>جايگذاری</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4000"/>
+        <location filename="../../fn.cpp" line="4011"/>
         <source>No Replacement</source>
         <translation>بدون جايگذاری</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4002"/>
+        <location filename="../../fn.cpp" line="4013"/>
         <source>One Replacement</source>
         <translation>يک جايگذاری</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4005"/>
+        <location filename="../../fn.cpp" line="4016"/>
         <source>%1 Replacements</source>
         <translation>%1 جايگذاری</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4196"/>
+        <location filename="../../fn.cpp" line="4207"/>
         <source>Insert Link</source>
         <translation>گذاشتن پيوند</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2999"/>
-        <location filename="../../fn.cpp" line="4274"/>
+        <location filename="../../fn.cpp" line="4285"/>
         <source>Image path</source>
         <translation>مسير تصوير</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3003"/>
-        <location filename="../../fn.cpp" line="4278"/>
+        <location filename="../../fn.cpp" line="4289"/>
         <source>Open image</source>
         <translation>باز کردن تصوير</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4286"/>
-        <location filename="../../fn.cpp" line="4447"/>
+        <location filename="../../fn.cpp" line="4297"/>
+        <location filename="../../fn.cpp" line="4458"/>
         <source>Scaling percentage</source>
         <translation>درصد تغيير اندازه</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3021"/>
-        <location filename="../../fn.cpp" line="4395"/>
+        <location filename="../../fn.cpp" line="4406"/>
         <source>Open Image...</source>
         <translation>باز کردن تصوير...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="676"/>
-        <location filename="../../fn.cpp" line="4994"/>
+        <location filename="../../fn.cpp" line="5005"/>
         <source>&amp;Raise</source>
         <translation>پيش آوردن</translation>
     </message>
@@ -1225,12 +1225,12 @@
     </message>
     <message>
         <location filename="../../fn.cpp" line="1767"/>
-        <location filename="../../fn.cpp" line="5568"/>
-        <location filename="../../fn.cpp" line="5577"/>
-        <location filename="../../fn.cpp" line="5703"/>
-        <location filename="../../fn.cpp" line="5897"/>
-        <location filename="../../fn.cpp" line="5906"/>
-        <location filename="../../fn.cpp" line="5932"/>
+        <location filename="../../fn.cpp" line="5579"/>
+        <location filename="../../fn.cpp" line="5588"/>
+        <location filename="../../fn.cpp" line="5714"/>
+        <location filename="../../fn.cpp" line="5908"/>
+        <location filename="../../fn.cpp" line="5917"/>
+        <location filename="../../fn.cpp" line="5943"/>
         <source>Untitled</source>
         <translation>بی‌نام</translation>
     </message>
@@ -1266,7 +1266,7 @@
     </message>
     <message>
         <location filename="../../fn.cpp" line="3023"/>
-        <location filename="../../fn.cpp" line="4397"/>
+        <location filename="../../fn.cpp" line="4408"/>
         <source>Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)</source>
         <translation>فايلهای تصويری (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;همه‌ی فايلها (*)</translation>
     </message>
@@ -1301,121 +1301,121 @@
         <translation>رنگ متن:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4010"/>
+        <location filename="../../fn.cpp" line="4021"/>
         <source>The first 1000 replacements are highlighted.</source>
         <translation>تنها ۱۰۰۰ جايگزينی نخست رنگی شده‌اند.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4281"/>
-        <location filename="../../fn.cpp" line="4443"/>
+        <location filename="../../fn.cpp" line="4292"/>
+        <location filename="../../fn.cpp" line="4454"/>
         <source>Scale to</source>
         <translation>تغيير اندازه به</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4285"/>
-        <location filename="../../fn.cpp" line="4446"/>
+        <location filename="../../fn.cpp" line="4296"/>
+        <location filename="../../fn.cpp" line="4457"/>
         <source>%</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4437"/>
+        <location filename="../../fn.cpp" line="4448"/>
         <source>Scale Image(s)</source>
         <translation>تغيير اندازه‌ی تصوير(ها)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4596"/>
+        <location filename="../../fn.cpp" line="4607"/>
         <source>untitled</source>
         <translation>بی‌نام</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4627"/>
+        <location filename="../../fn.cpp" line="4638"/>
         <source>Error</source>
         <translation>خطا</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4628"/>
+        <location filename="../../fn.cpp" line="4639"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Image cannot be saved! Retry?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;تصوير قابل ذخيره‌سازی نيست! امتحان مجدد؟&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4629"/>
+        <location filename="../../fn.cpp" line="4640"/>
         <source>&lt;center&gt;Maybe you did not choose a proper extension&lt;/center&gt;
 &lt;center&gt;or do not have write permission.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</source>
         <translation>&lt;center&gt;شايد افزونه‌ی مناسبی (بعد از نقطه) انتخاب نکرده‌ايد&lt;/center&gt;
 &lt;center&gt;يا اجازه‌ی نوشتن نداريد.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4659"/>
+        <location filename="../../fn.cpp" line="4670"/>
         <source>Save Image As...</source>
         <translation>ذخيره‌سازی تصوير به عنوان...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4661"/>
+        <location filename="../../fn.cpp" line="4672"/>
         <source>Image Files (*.png *.jpg *.jpeg *.bmp);;All Files (*)</source>
         <translation>فايلهای تصويری (*.png *.jpg *.jpeg *.bmp);;همه‌ی فايلها (*)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4711"/>
+        <location filename="../../fn.cpp" line="4722"/>
         <source>Insert Table</source>
         <translation>گذاشتن جدول</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4717"/>
+        <location filename="../../fn.cpp" line="4728"/>
         <source>Rows:</source>
         <translation>رديف:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4723"/>
+        <location filename="../../fn.cpp" line="4734"/>
         <source>Columns:</source>
         <translation>ستون:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5587"/>
+        <location filename="../../fn.cpp" line="5598"/>
         <source>Print Document</source>
         <translation>چاپ سند</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5671"/>
+        <location filename="../../fn.cpp" line="5682"/>
         <source>Export HTML</source>
         <translation>صدور به HTML</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5676"/>
+        <location filename="../../fn.cpp" line="5687"/>
         <source>Export:</source>
         <translation>صدور:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5677"/>
+        <location filename="../../fn.cpp" line="5688"/>
         <source>&amp;Current node</source>
         <translation>شاخه‌ی فعلی</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5679"/>
+        <location filename="../../fn.cpp" line="5690"/>
         <source>With all &amp;sub-nodes</source>
         <translation>با همه‌ی زيرشاخه‌ها</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5680"/>
+        <location filename="../../fn.cpp" line="5691"/>
         <source>&amp;All nodes</source>
         <translation>همه‌ی شاخه‌ها</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5692"/>
+        <location filename="../../fn.cpp" line="5703"/>
         <source>Output file:</source>
         <translation>فايل خروجی:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5711"/>
+        <location filename="../../fn.cpp" line="5722"/>
         <source>Select path</source>
         <translation>انتخاب مسير</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5753"/>
+        <location filename="../../fn.cpp" line="5764"/>
         <source>Question</source>
         <translation>پرسش</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5754"/>
+        <location filename="../../fn.cpp" line="5765"/>
         <source>The file already exists.
 Do you want to replace it?
 </source>
@@ -1424,106 +1424,106 @@ Do you want to replace it?
 </translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5937"/>
+        <location filename="../../fn.cpp" line="5948"/>
         <source>Save HTML As...</source>
         <translation>ذخيره‌سازی HTML به عنوان...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5939"/>
+        <location filename="../../fn.cpp" line="5950"/>
         <source>HTML Files (*.html *.htm)</source>
         <translation>فايلهای HTML (*.html *.htm)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5960"/>
+        <location filename="../../fn.cpp" line="5971"/>
         <source>Set Password</source>
         <translation>انتخاب گذرواژه</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5968"/>
+        <location filename="../../fn.cpp" line="5979"/>
         <source>Type password</source>
         <translation>گذرواژه را تايپ کنيد</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5973"/>
+        <location filename="../../fn.cpp" line="5984"/>
         <source>Retype password</source>
         <translation>گذرواژه را دوباره تايپ کنيد</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6048"/>
+        <location filename="../../fn.cpp" line="6059"/>
         <source>&lt;center&gt;Passwords were different. Retry!&lt;/center&gt;</source>
         <translation>&lt;center&gt;گذرواژه‌ها فرق داشتند. امتحان مجدد؟&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6085"/>
-        <location filename="../../fn.cpp" line="6093"/>
+        <location filename="../../fn.cpp" line="6096"/>
+        <location filename="../../fn.cpp" line="6104"/>
         <source>Enter Password</source>
         <translation>ورود گذرواژه</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6159"/>
+        <location filename="../../fn.cpp" line="6170"/>
         <source>&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</source>
         <translation>&lt;center&gt;گذرواژه نادرست بود. امتحان مجدد؟&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6198"/>
+        <location filename="../../fn.cpp" line="6209"/>
         <source>A lightweight notes manager</source>
         <translation>يک دفتر يادداشت سبک</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6199"/>
+        <location filename="../../fn.cpp" line="6210"/>
         <source>based on Qt</source>
         <translation>بر پايه‌ی Qt</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6200"/>
+        <location filename="../../fn.cpp" line="6211"/>
         <source>Author</source>
         <translation>نگارنده</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6202"/>
-        <location filename="../../fn.cpp" line="6203"/>
+        <location filename="../../fn.cpp" line="6213"/>
+        <location filename="../../fn.cpp" line="6214"/>
         <source>About FeatherNotes</source>
         <translation>درباره‌ی FeatherNotes</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6202"/>
+        <location filename="../../fn.cpp" line="6213"/>
         <source>Translators</source>
         <translation>مترجمان</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6391"/>
+        <location filename="../../fn.cpp" line="6402"/>
         <source>See Preferences → Text → Spell Checking!</source>
         <translation>تنظيمها ← متن ← بررسی تلفظ را مشاهده کنيد!</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6413"/>
+        <location filename="../../fn.cpp" line="6424"/>
         <source>You need to add a Hunspell dictionary.</source>
         <translation>نياز به افزودن لغتنامه‌ی Hunspell داريد.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6418"/>
+        <location filename="../../fn.cpp" line="6429"/>
         <source>The Hunspell dictionary does not exist.</source>
         <translation>لغتنامه‌ی Hunspell وجود ندارد.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6426"/>
+        <location filename="../../fn.cpp" line="6437"/>
         <source>The Hunspell dictionary is not accompanied by an affix file.</source>
         <translation>لغتنامه‌ی Hunspell همراه فايل ضميمه نيست.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6444"/>
-        <location filename="../../fn.cpp" line="6459"/>
-        <location filename="../../fn.cpp" line="6471"/>
+        <location filename="../../fn.cpp" line="6455"/>
+        <location filename="../../fn.cpp" line="6470"/>
+        <location filename="../../fn.cpp" line="6482"/>
         <source>No misspelling from text cursor.</source>
         <translation>لفظ نادرستی با شروع از نشانگر متنی وجود ندارد.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6482"/>
+        <location filename="../../fn.cpp" line="6493"/>
         <source>Spell Checking</source>
         <translation>بررسی تلفظ</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6201"/>
+        <location filename="../../fn.cpp" line="6212"/>
         <source>aka.</source>
         <translation></translation>
     </message>
