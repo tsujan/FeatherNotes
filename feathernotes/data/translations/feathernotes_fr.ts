@@ -1722,7 +1722,7 @@ puis redémarrer FeatherNotes !</translation>
     <message>
         <location filename="../../prefDialog.ui" line="248"/>
         <source>Shifts (X × Y): </source>
-        <translation>Changer (X × Y)&#xa0;: </translation>
+        <translation>Changer (X × Y) : </translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="314"/>
@@ -1799,12 +1799,14 @@ Prend effet après la fermeture de cette boîte de dialogue.</translation>
         <source>If this option is checked, the opened document will
 be saved on exiting without prompt and without
 showing a warning if saving is not possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Si cette option est cochée, le document ouvert sera
+sauvegardé en quittant sans invite et sans
+afficher un avertissement si l&apos;enregistrement n&apos;est pas possible.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="439"/>
         <source>Save opened document on exiting</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrer le document ouvert en quittant</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="462"/>
@@ -1886,7 +1888,7 @@ nom mais se terminant par &quot;.aff&quot;.</translation>
         <location filename="../../pref.cpp" line="389"/>
         <location filename="../../pref.cpp" line="574"/>
         <source>Warning: Ambiguous shortcut detected!</source>
-        <translation>Attention&#xa0;: raccourci ambigu détecté&#xa0;!</translation>
+        <translation>Attention : raccourci ambigu détecté !</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="557"/>
