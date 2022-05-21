@@ -1799,12 +1799,14 @@ Takes effect after closing this dialog.</source>
         <source>If this option is checked, the opened document will
 be saved on exiting without prompt and without
 showing a warning if saving is not possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Якщо ця опція позначена, відкритий документ буде
+збережено під час виходу без запиту й без
+показу попередження, якщо збереження неможливе.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="439"/>
         <source>Save opened document on exiting</source>
-        <translation type="unfinished"></translation>
+        <translation>Зберегти відкритий документ під час виходу</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="462"/>

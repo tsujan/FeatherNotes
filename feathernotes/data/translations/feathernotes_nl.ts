@@ -531,7 +531,7 @@
     <message>
         <location filename="../../fn.ui" line="857"/>
         <source>&amp;Append Sibling</source>
-        <translation>No&amp;titie hieronder invoegen</translation>
+        <translation>No&amp;titie hieronder toevoegen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="860"/>
