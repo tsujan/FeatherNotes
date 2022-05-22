@@ -160,12 +160,13 @@ protected:
     }
 
     virtual void mousePressEvent (QMouseEvent *event) {
+        QModelIndex index = indexAt (event->pos());
         /* get the global press position if it's inside an item to know
            whether there will be a real mouse movement at mouseMoveEvent() */
         if (event->buttons() == Qt::LeftButton
             && qApp->keyboardModifiers() == Qt::NoModifier)
         {
-            if (indexAt (event->pos()).isValid())
+            if (index.isValid())
 #if (QT_VERSION < QT_VERSION_CHECK(6,0,0))
                 itemPressPoint_ = event->globalPos();
 #else
@@ -175,6 +176,11 @@ protected:
         }
         else itemPressPoint_ = QPoint();
         QTreeView::mousePressEvent (event);
+
+        /* immediately scroll to the index if it's the current index
+           ("QAbstractItemView::mousePressEvent()" adds a delay) */
+        if (index.isValid() && index == currentIndex())
+            scrollTo (index);
     }
 
     virtual void mouseMoveEvent (QMouseEvent *event) {

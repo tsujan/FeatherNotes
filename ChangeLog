@@ -10,6 +10,7 @@ V0.11.0
  * Keep the search string on node switching if the search is done in all nodes.
  * Added an option for saving on exiting without prompt.
  * When inserting a link, choose a blue color based on the background color.
+ * Scroll to the clicked node without delay.
 
 V0.10.0
 ---------

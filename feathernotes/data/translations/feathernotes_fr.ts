@@ -1722,7 +1722,7 @@ puis redémarrer FeatherNotes !</translation>
     <message>
         <location filename="../../prefDialog.ui" line="248"/>
         <source>Shifts (X × Y): </source>
-        <translation>Changer (X × Y) : </translation>
+        <translation>Changer (X × Y)&#xa0;: </translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="314"/>
@@ -1888,7 +1888,7 @@ nom mais se terminant par &quot;.aff&quot;.</translation>
         <location filename="../../pref.cpp" line="389"/>
         <location filename="../../pref.cpp" line="574"/>
         <source>Warning: Ambiguous shortcut detected!</source>
-        <translation>Attention : raccourci ambigu détecté !</translation>
+        <translation>Attention&#xa0;: raccourci ambigu détecté&#xa0;!</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="557"/>
