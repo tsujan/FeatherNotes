@@ -1810,12 +1810,14 @@ Uplatní se po zavření tohoto dialogu.</translation>
         <source>If this option is checked, the opened document will
 be saved on exiting without prompt and without
 showing a warning if saving is not possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokud je tato volba zaškrtnuta, otevřený dokument bude
+při ukončování aplikace uložen bez dotazu a bez zobrazení
+varování pokud ukládání není možné.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="439"/>
         <source>Save opened document on exiting</source>
-        <translation type="unfinished"></translation>
+        <translation>Při ukončování aplikace uložit otevřené dokumenty</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="462"/>
@@ -1866,12 +1868,12 @@ názvem ale končící na „.aff“.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="589"/>
         <source>By default, all nodes are expanded on opening a document.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ve výchozím stavu jsou při otevírání dokumentu všechny uzly rozbaleny.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="592"/>
         <source>Remember expanded states of nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Pamatovat si stav rozbalení uzlů</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="616"/>
