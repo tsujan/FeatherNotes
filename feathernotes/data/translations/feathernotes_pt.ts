@@ -1799,12 +1799,14 @@ Entra em vigor após fechar esta caixa de diálogo.</translation>
         <source>If this option is checked, the opened document will
 be saved on exiting without prompt and without
 showing a warning if saving is not possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Se esta opção for assinalada, o documento aberto
+será guardado à saída sem perguntar e sem
+mostrar um aviso se o guardar não for possível.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="439"/>
         <source>Save opened document on exiting</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar documento aberto ao sair</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="462"/>
