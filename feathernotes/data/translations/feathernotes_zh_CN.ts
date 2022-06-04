@@ -1744,7 +1744,7 @@ position and then restart FeatherNotes!</source>
 Needs restarting of FeatherNotes to take effect.</source>
         <translation>这包括括号、大括号、括号和引号。
 
-需要重新启动羽毛笔记才能生效。</translation>
+需要重新启动FeatherNotes才能生效。</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="342"/>
@@ -1797,12 +1797,14 @@ Takes effect after closing this dialog.</source>
         <source>If this option is checked, the opened document will
 be saved on exiting without prompt and without
 showing a warning if saving is not possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>如果选中此选项，
+打开的文档将会在退出时自动保存。
+如果无法保存，则会显示警告。</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="439"/>
         <source>Save opened document on exiting</source>
-        <translation type="unfinished"></translation>
+        <translation>退出时保存已打开的文档</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="462"/>
