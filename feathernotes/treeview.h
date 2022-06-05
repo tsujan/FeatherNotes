@@ -186,9 +186,9 @@ protected:
     virtual void mouseMoveEvent (QMouseEvent *event) {
         /* prevent dragging if there is no real mouse movement */
 #if (QT_VERSION < QT_VERSION_CHECK(6,0,0))
-        if (event->buttons() == Qt::LeftButton && event->globalPos() == itemPressPoint_)
+        if (event->buttons() == Qt::LeftButton && (event->globalPos() - itemPressPoint_).manhattanLength() < QApplication::startDragDistance())
 #else
-        if (event->buttons() == Qt::LeftButton && event->globalPosition().toPoint() == itemPressPoint_)
+        if (event->buttons() == Qt::LeftButton && (event->globalPosition().toPoint() - itemPressPoint_).manhattanLength() < QApplication::startDragDistance())
 #endif
             return;
         QTreeView::mouseMoveEvent (event);
