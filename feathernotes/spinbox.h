@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2022 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -19,30 +19,26 @@
 #define SPINBOX_H
 
 #include <QSpinBox>
+#include <QKeyEvent>
 
 namespace FeatherNotes {
 
-/* Forget about the focus-out event and emit the signal
-   editingFinished() only if Return/Enter is pressed. */
+/* We need a signal that is emitted only when Return/Enter is pressed. */
 class SpinBox : public QSpinBox
 {
+    Q_OBJECT
 public:
     SpinBox (QWidget *p = nullptr) : QSpinBox (p) {}
 
-    bool event (QEvent *event) {
-#ifdef QT_KEYPAD_NAVIGATION
-        if (event->type() == QEvent::EnterEditFocus
-                || event->type() == QEvent::LeaveEditFocus)
-        {
-            return QWidget::event(event);
-        }
-        else
-#endif
-            return QSpinBox::event (event);
-    }
+signals:
+    void returnPressed();
 
 protected:
-    void focusOutEvent (QFocusEvent*) {return;}
+    void keyPressEvent (QKeyEvent *event) {
+        QAbstractSpinBox::keyPressEvent (event);
+        if (event->key() == Qt::Key_Enter || event->key() == Qt::Key_Return)
+            emit returnPressed();
+    }
 };
 
 }

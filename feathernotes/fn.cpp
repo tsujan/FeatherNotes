@@ -19,6 +19,7 @@
 #include "ui_fn.h"
 #include "ui_about.h"
 #include "dommodel.h"
+#include "treedelegate.h"
 #include "spinbox.h"
 #include "simplecrypt.h"
 #include "settings.h"
@@ -49,7 +50,6 @@
 #include <QToolTip>
 #include <QScreen>
 #include <QWindow>
-#include <QStyledItemDelegate>
 #include <QTextTable>
 #include <QTextTableFormat>
 #include <QTextTableCell>
@@ -105,8 +105,8 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
 
     TOOLBAR_ICON_SIZE = ui->mainToolBar->iconSize();
 
-    QStyledItemDelegate *delegate = new QStyledItemDelegate (this);
-    ui->treeView->setItemDelegate (delegate);
+    treeDelegate *del = new treeDelegate (this);
+    ui->treeView->setItemDelegate (del); //use our delegate with opaque editor
     ui->treeView->setContextMenuPolicy (Qt::CustomContextMenu);
 
     /* NOTE: The auto-saving timer starts only when a new note is created,
@@ -4295,7 +4295,7 @@ void FN::embedImage()
     spinBox->setValue (imgScale_);
     spinBox->setSuffix (tr ("%"));
     spinBox->setToolTip (tr ("Scaling percentage"));
-    connect (spinBox, &QAbstractSpinBox::editingFinished, dialog, &QDialog::accept);
+    connect (spinBox, &SpinBox::returnPressed, dialog, &QDialog::accept);
     QSpacerItem *spacer = new QSpacerItem (1, 10);
     QPushButton *cancelButton = new QPushButton (symbolicIcon::icon (":icons/dialog-cancel.svg"), tr ("Cancel"));
     QPushButton *okButton = new QPushButton (symbolicIcon::icon (":icons/dialog-ok.svg"), tr ("OK"));
@@ -4456,7 +4456,7 @@ void FN::scaleImage()
     spinBox->setRange (1, 200);
     spinBox->setSuffix (tr ("%"));
     spinBox->setToolTip (tr ("Scaling percentage"));
-    connect (spinBox, &QAbstractSpinBox::editingFinished, dialog, &QDialog::accept);
+    connect (spinBox, &SpinBox::returnPressed, dialog, &QDialog::accept);
     QSpacerItem *spacer = new QSpacerItem (1, 10);
     QPushButton *cancelButton = new QPushButton (symbolicIcon::icon (":icons/dialog-cancel.svg"), tr ("Cancel"));
     QPushButton *okButton = new QPushButton (symbolicIcon::icon (":icons/dialog-ok.svg"), tr ("OK"));
@@ -4729,13 +4729,13 @@ void FN::addTable()
     SpinBox *spinBoxRow = new SpinBox();
     spinBoxRow->setRange (1, 100);
     spinBoxRow->setValue (1);
-    connect (spinBoxRow, &QAbstractSpinBox::editingFinished, dialog, &QDialog::accept);
+    connect (spinBoxRow, &SpinBox::returnPressed, dialog, &QDialog::accept);
     QLabel *labelCol = new QLabel();
     labelCol->setText (tr ("Columns:"));
     SpinBox *spinBoxCol = new SpinBox();
     spinBoxCol->setRange (1, 100);
     spinBoxCol->setValue (1);
-    connect (spinBoxCol, &QAbstractSpinBox::editingFinished, dialog, &QDialog::accept);
+    connect (spinBoxCol, &SpinBox::returnPressed, dialog, &QDialog::accept);
     QSpacerItem *spacer = new QSpacerItem (1, 10);
     QPushButton *cancelButton = new QPushButton (symbolicIcon::icon (":icons/dialog-cancel.svg"), tr ("Cancel"));
     QPushButton *okButton = new QPushButton (symbolicIcon::icon (":icons/dialog-ok.svg"), tr ("OK"));

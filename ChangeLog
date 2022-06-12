@@ -11,6 +11,7 @@ V0.11.0
  * Added an option for saving on exiting without prompt.
  * When inserting a link, choose a blue color based on the background color.
  * Scroll to the clicked node without delay.
+ * Fixed node renaming with transparent tree view.
 
 V0.10.0
 ---------

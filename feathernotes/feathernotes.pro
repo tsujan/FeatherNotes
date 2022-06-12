@@ -53,6 +53,7 @@ HEADERS += fn.h \
            lineedit.h \
            pref.h \
            spinbox.h \
+           treedelegate.h \
            simplecrypt.h \
            vscrollbar.h \
            settings.h \
