@@ -58,7 +58,7 @@ public:
         header()->setSectionResizeMode (QHeaderView::ResizeToContents);
     }
 
-    virtual void scrollTo (const QModelIndex &index, QAbstractItemView::ScrollHint hint = QAbstractItemView::EnsureVisible) {
+    void scrollTo (const QModelIndex &index, QAbstractItemView::ScrollHint hint = QAbstractItemView::EnsureVisible) override {
         QTreeView::scrollTo (index, hint);
         if (index.isValid())
         { // ensure that the item is visible horizontally too
@@ -82,7 +82,7 @@ signals:
 
 protected:
     /* see Qt -> "qabstractitemview.cpp" */
-    virtual QItemSelectionModel::SelectionFlags selectionCommand (const QModelIndex &index, const QEvent *event = nullptr) const {
+    QItemSelectionModel::SelectionFlags selectionCommand (const QModelIndex &index, const QEvent *event = nullptr) const override {
         Qt::KeyboardModifiers keyModifiers = Qt::NoModifier;
         if (event)
         {
@@ -105,7 +105,7 @@ protected:
             return QTreeView::selectionCommand (index, event);
     }
 
-    virtual void dragEnterEvent (QDragEnterEvent *event) {
+    void dragEnterEvent (QDragEnterEvent *event) override {
         if (event->mimeData()->hasUrls())
         {
             bool FNDocFound (false);
@@ -136,7 +136,7 @@ protected:
         QTreeView::dragEnterEvent (event);
     }
 
-    virtual void dropEvent (QDropEvent *event) {
+    void dropEvent (QDropEvent *event) override {
         if (event->mimeData()->hasUrls())
         {
             const auto urls = event->mimeData()->urls();
@@ -159,7 +159,7 @@ protected:
         QTreeView::dropEvent (event);
     }
 
-    virtual void mousePressEvent (QMouseEvent *event) {
+    void mousePressEvent (QMouseEvent *event) override {
         QModelIndex index = indexAt (event->pos());
         /* get the global press position if it's inside an item to know
            whether there will be a real mouse movement at mouseMoveEvent() */
@@ -183,7 +183,7 @@ protected:
             scrollTo (index);
     }
 
-    virtual void mouseMoveEvent (QMouseEvent *event) {
+    void mouseMoveEvent (QMouseEvent *event) override {
         /* prevent dragging if there is no real mouse movement */
 #if (QT_VERSION < QT_VERSION_CHECK(6,0,0))
         if (event->buttons() == Qt::LeftButton && (event->globalPos() - itemPressPoint_).manhattanLength() < QApplication::startDragDistance())

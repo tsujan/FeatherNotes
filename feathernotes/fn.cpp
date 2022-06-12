@@ -106,7 +106,7 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     TOOLBAR_ICON_SIZE = ui->mainToolBar->iconSize();
 
     treeDelegate *del = new treeDelegate (this);
-    ui->treeView->setItemDelegate (del); //use our delegate with opaque editor
+    ui->treeView->setItemDelegate (del); // use our delegate with opaque editor
     ui->treeView->setContextMenuPolicy (Qt::CustomContextMenu);
 
     /* NOTE: The auto-saving timer starts only when a new note is created,

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2022 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2022 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -31,7 +31,7 @@ class treeDelegate : public QStyledItemDelegate
 public:
     treeDelegate (QObject *parent) : QStyledItemDelegate (parent) {}
 
-    virtual QWidget* createEditor (QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const {
+    QWidget* createEditor (QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const override {
         /* return the default editor but ensure that its background isn't transparent */
         QWidget* editor = QStyledItemDelegate::createEditor (parent, option, index);
         QPalette p = editor->palette();

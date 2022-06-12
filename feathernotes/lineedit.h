@@ -36,7 +36,7 @@ signals:
     void receivedFocus();
 
 protected:
-    virtual void keyPressEvent (QKeyEvent *event)
+    void keyPressEvent (QKeyEvent *event) override
     {
         /* because of a bug in Qt, the non-breaking space (ZWNJ) may not be inserted with SHIFT+SPACE */
         if (event->key() == 0x200c)

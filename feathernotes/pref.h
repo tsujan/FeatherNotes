@@ -39,7 +39,7 @@ public:
     }
 
 protected:
-    virtual void keyPressEvent (QKeyEvent *event);
+    void keyPressEvent (QKeyEvent *event) override;
 };
 
 
@@ -50,12 +50,12 @@ class Delegate : public QStyledItemDelegate
 public:
     Delegate (QObject *parent = nullptr);
 
-    virtual QWidget* createEditor (QWidget *parent,
-                                   const QStyleOptionViewItem&,
-                                   const QModelIndex&) const;
+    QWidget* createEditor (QWidget *parent,
+                           const QStyleOptionViewItem&,
+                           const QModelIndex&) const override;
 
 protected:
-    virtual bool eventFilter (QObject *object, QEvent *event);
+    bool eventFilter (QObject *object, QEvent *event) override;
 };
 
 namespace Ui {
