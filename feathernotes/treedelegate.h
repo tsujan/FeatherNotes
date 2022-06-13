@@ -33,7 +33,7 @@ public:
 
     QWidget* createEditor (QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const override {
         /* return the default editor but ensure that its background isn't transparent */
-        QWidget* editor = QStyledItemDelegate::createEditor (parent, option, index);
+        QWidget *editor = QStyledItemDelegate::createEditor (parent, option, index);
         QPalette p = editor->palette();
         p.setColor (QPalette::Text, qApp->palette().text().color());
         p.setColor (QPalette::Base, qApp->palette().color (QPalette::Base));

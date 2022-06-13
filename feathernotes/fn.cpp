@@ -105,8 +105,10 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
 
     TOOLBAR_ICON_SIZE = ui->mainToolBar->iconSize();
 
-    treeDelegate *del = new treeDelegate (this);
-    ui->treeView->setItemDelegate (del); // use our delegate with opaque editor
+    /* use our delegate with opaque editor */
+    treeDelegate *treeDel = new treeDelegate (this);
+    ui->treeView->setItemDelegate (treeDel);
+
     ui->treeView->setContextMenuPolicy (Qt::CustomContextMenu);
 
     /* NOTE: The auto-saving timer starts only when a new note is created,
@@ -192,6 +194,7 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     << QKeySequence (Qt::CTRL | Qt::Key_K).toString()
     /* gives the focus to the side-pane */
     << QKeySequence (Qt::CTRL | Qt::Key_Escape).toString();
+
     readShortcuts();
 
     QHash<QString, QString>::const_iterator it = customActions_.constBegin();
@@ -241,10 +244,7 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     if (!tbList.isEmpty())
         tbList.at (tbList.count() - 1)->setPopupMode (QToolButton::InstantPopup);
 
-    if (hasTray_)
-        quitting_ = false;
-    else
-        quitting_ = true;
+    quitting_ = !hasTray_;
 
     QActionGroup *aGroup = new QActionGroup (this);
     ui->actionLeft->setActionGroup (aGroup);
@@ -388,7 +388,7 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
 
     /* Once the tray icon is created, it'll persist even if the systray
        disappears temporarily. But for the tray icon to be created, the
-       systray should exist. Hence, we wait 1 min for the systray at startup. */
+       systray should exist. Hence, we wait 30 sec for the systray at startup. */
     tray_ = nullptr;
     trayCounter_ = 0;
     if (hasTray_)
@@ -524,7 +524,7 @@ void FN::closeEvent (QCloseEvent *event)
             position_.setX (geometry().x());
             position_.setY (geometry().y());
         }
-        if (tray_ && QSystemTrayIcon::isSystemTrayAvailable())
+        if (tray_ != nullptr && QSystemTrayIcon::isSystemTrayAvailable())
             QTimer::singleShot (0, this, &QWidget::hide);
         else
             QTimer::singleShot (0, this, &QWidget::showMinimized);
@@ -639,7 +639,7 @@ void FN::checkTray()
             createTrayIcon();
             trayCounter_ = 0; // not needed
         }
-        else if (trayCounter_ < 12)
+        else if (trayCounter_ < 6)
         {
             trayTimer->start();
             ++trayCounter_;
@@ -647,7 +647,13 @@ void FN::checkTray()
         else
         {
             trayTimer->deleteLater();
+            bool wasNotShown = isHidden();
             show();
+            if (wasNotShown)
+            {
+                QMessageBox::warning (this, tr ("Warning"),
+                                      tr ("System tray is not available.\nPlease disable tray in Preferences."));
+            }
         }
     }
 }

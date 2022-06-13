@@ -99,10 +99,13 @@ protected:
                     keyModifiers = QApplication::keyboardModifiers();
             }
         }
-        if (selectionMode() == QAbstractItemView::SingleSelection && (keyModifiers & Qt::ControlModifier) && selectionModel()->isSelected (index))
+        if (selectionMode() == QAbstractItemView::SingleSelection
+            && (keyModifiers & Qt::ControlModifier)
+            && selectionModel()->isSelected (index))
+        {
             return QItemSelectionModel::ClearAndSelect | QItemSelectionModel::Rows;
-        else
-            return QTreeView::selectionCommand (index, event);
+        }
+        return QTreeView::selectionCommand (index, event);
     }
 
     void dragEnterEvent (QDragEnterEvent *event) override {
