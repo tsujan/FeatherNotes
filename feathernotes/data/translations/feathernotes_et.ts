@@ -1203,13 +1203,14 @@
     <message>
         <location filename="../../fn.cpp" line="654"/>
         <source>Warning</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoiatus</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="655"/>
         <source>System tray is not available.
 Please disable tray in Preferences.</source>
-        <translation type="unfinished"></translation>
+        <translation>Süsteemisalve funktsionaalsus pole kasutatav.
+Palun lülita kõik sellega seonduv seadistustes välja.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="682"/>

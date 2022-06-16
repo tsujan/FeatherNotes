@@ -1203,13 +1203,14 @@
     <message>
         <location filename="../../fn.cpp" line="654"/>
         <source>Warning</source>
-        <translation type="unfinished"></translation>
+        <translation>Uyarı</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="655"/>
         <source>System tray is not available.
 Please disable tray in Preferences.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sistem çekmecesi mevcut değil.
+Lütfen Tercihler&apos;den sistem çekmecesini kapatın.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="682"/>

@@ -1203,13 +1203,14 @@
     <message>
         <location filename="../../fn.cpp" line="654"/>
         <source>Warning</source>
-        <translation type="unfinished"></translation>
+        <translation>Попередження</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="655"/>
         <source>System tray is not available.
 Please disable tray in Preferences.</source>
-        <translation type="unfinished"></translation>
+        <translation>Системний лоток недоступний.
+Вимкніть його у налаштуваннях.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="682"/>
