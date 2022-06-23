@@ -1203,13 +1203,14 @@
     <message>
         <location filename="../../fn.cpp" line="654"/>
         <source>Warning</source>
-        <translation type="unfinished"></translation>
+        <translation>Attention</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="655"/>
         <source>System tray is not available.
 Please disable tray in Preferences.</source>
-        <translation type="unfinished"></translation>
+        <translation>La barre d&apos;état système n&apos;est pas disponible.
+Veuillez désactiver la barre d&apos;état système dans les Préférences.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="682"/>
@@ -1733,7 +1734,7 @@ puis redémarrer FeatherNotes !</translation>
     <message>
         <location filename="../../prefDialog.ui" line="248"/>
         <source>Shifts (X × Y): </source>
-        <translation>Changer (X × Y)&#xa0;: </translation>
+        <translation>Changer (X × Y) : </translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="314"/>
@@ -1899,7 +1900,7 @@ nom mais se terminant par &quot;.aff&quot;.</translation>
         <location filename="../../pref.cpp" line="389"/>
         <location filename="../../pref.cpp" line="574"/>
         <source>Warning: Ambiguous shortcut detected!</source>
-        <translation>Attention&#xa0;: raccourci ambigu détecté&#xa0;!</translation>
+        <translation>Attention : raccourci ambigu détecté !</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="557"/>
