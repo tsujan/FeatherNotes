@@ -13,6 +13,7 @@ V0.11.0
  * Scroll to the clicked node without delay.
  * Fixed node renaming with transparent tree view.
  * Reduced the wait for systray to 30 sec. Also, show a warning dialog if there's no tray and the app was supposed to minimize into tray.
+ * Made toolbar icons small by default.
 
 V0.10.0
 ---------

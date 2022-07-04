@@ -71,8 +71,6 @@
 
 namespace FeatherNotes {
 
-static QSize TOOLBAR_ICON_SIZE;
-
 // Regex of an embedded image (should be checked for the image):
 static const QRegularExpression EMBEDDED_IMG (R"(<\s*img(?=\s)[^<>]*(?<=\s)src\s*=\s*"data:[^<>]*;base64\s*,[a-zA-Z0-9+=/\s]+"[^<>]*/*>)");
 
@@ -102,8 +100,6 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     closed_ = false;
     closeInteractively_ = false;
     imgScale_ = 100;
-
-    TOOLBAR_ICON_SIZE = ui->mainToolBar->iconSize();
 
     /* use our delegate with opaque editor */
     treeDelegate *treeDel = new treeDelegate (this);
@@ -216,7 +212,7 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     wrapByDefault_ = true;
     indentByDefault_ = true;
     transparentTree_ = false;
-    smallToolbarIcons_ = false;
+    smallToolbarIcons_ = true; // there are many icons
     noToolbar_ = false;
     noMenubar_ = false;
     autoBracket_ = false;
@@ -4967,22 +4963,11 @@ void FN::makeTreeTransparent (bool trans)
 /*************************/
 void FN::setToolBarIconSize (bool small)
 {
-    if (small)
-    {
-        if (!smallToolbarIcons_)
-        {
-            smallToolbarIcons_ = true;
-            ui->mainToolBar->setIconSize (QSize (16, 16));
-        }
-    }
-    else
-    {
-        if (smallToolbarIcons_)
-        {
-            smallToolbarIcons_ = false;
-            ui->mainToolBar->setIconSize (TOOLBAR_ICON_SIZE);
-        }
-    }
+    smallToolbarIcons_ = small;
+    int styleSize = style()->pixelMetric (QStyle::PM_ToolBarIconSize);
+    QSize s = small ? QSize (16, 16) : QSize (styleSize, styleSize);
+    if (s != ui->mainToolBar->iconSize())
+        ui->mainToolBar->setIconSize (s);
 }
 /*************************/
 void FN::showToolbar (bool show)
@@ -5183,10 +5168,11 @@ void FN::readAndApplyConfig (bool startup)
     else if (!startup)
         makeTreeTransparent (false);
 
-    if (settings.value ("smallToolbarIcons").toBool()) // false by default
+    v = settings.value ("smallToolbarIcons"); // true by default
+    if (v.isValid())
+        setToolBarIconSize (v.toBool());
+    else
         setToolBarIconSize (true);
-    else if (!startup)
-        setToolBarIconSize (false);
 
     noToolbar_ = settings.value ("noToolbar").toBool(); // false by default
     noMenubar_ = settings.value ("noMenubar").toBool(); // false by default
