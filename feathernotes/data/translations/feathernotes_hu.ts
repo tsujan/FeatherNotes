@@ -1606,13 +1606,9 @@ Ha nincs bejelölve akkor az alapértelmezett arány 170/530 lesz.</translation>
         <source>Saves position after closing
 this dialog and also on exit.
 
-(This may not work correctly
-under GTK DEs.)</source>
-        <translation>Ablakhelyzet mentése bezáráskor.
-A párbeszédpanel bezárása után lép érvénybe.
-
-(Ez lehet, hogy nem működik megfelelően
-a GTK asztali környezetek alatt.)</translation>
+This may not work correctly
+with some window managers.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>

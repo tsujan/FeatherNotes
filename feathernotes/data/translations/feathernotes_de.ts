@@ -1606,13 +1606,9 @@ Auswahl aufheben für ein Breitenverhältnis von 170/530.</translation>
         <source>Saves position after closing
 this dialog and also on exit.
 
-(This may not work correctly
-under GTK DEs.)</source>
-        <translation>Speichert Fensterposition nach Schließen
-dieses Dialoges und Beendung des Programms.
-
-(Die einwandfreie Funktionsfähigkeit unter
-GTK Desktopumgebungen ist nicht gewährleistet.)</translation>
+This may not work correctly
+with some window managers.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>

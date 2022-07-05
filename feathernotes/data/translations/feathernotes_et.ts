@@ -1607,14 +1607,9 @@ Kui see valik pole kasutusel on laiuseks 170/530.</translation>
         <source>Saves position after closing
 this dialog and also on exit.
 
-(This may not work correctly
-under GTK DEs.)</source>
-        <translation>Akna asukoht salvestub selle vaate
-sulgemisel ja rakendusest väljumisel.
-
-(GTK+ põhistes töölauakeskonades
-nagu Unity ja Cinnamon see seadistus
-ei pruugi korretselt toimida.)</translation>
+This may not work correctly
+with some window managers.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>

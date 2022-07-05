@@ -1604,14 +1604,9 @@ dialog ini dan saat keluar aplikasi.
         <source>Saves position after closing
 this dialog and also on exit.
 
-(This may not work correctly
-under GTK DEs.)</source>
-        <translation type="unfinished">Menyimpan posisi setelah menutup
-dialog ini dan juga saat keluar.
-
-(Ini mungkin tidak berfungsi secara
-benar dengan GTK + DE seperti
-Unity dan Cinnamon.)</translation>
+This may not work correctly
+with some window managers.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>

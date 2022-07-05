@@ -1606,14 +1606,9 @@ Desmarqueu per a una ràtio d&apos;amplada de 170/530.</translation>
         <source>Saves position after closing
 this dialog and also on exit.
 
-(This may not work correctly
-under GTK DEs.)</source>
-        <translation>Desa la posició després de tancar
-aquest diàleg i també en sortir.
-
-(Pot no funcionar correctament
-als escriptoris GTK+ com a Unity
-i Cinnamon.)</translation>
+This may not work correctly
+with some window managers.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>

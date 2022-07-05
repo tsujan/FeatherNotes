@@ -1608,13 +1608,13 @@ Malmarku por la proprcio 170/530.</translation>
         <source>Saves position after closing
 this dialog and also on exit.
 
-(This may not work correctly
-under GTK DEs.)</source>
+This may not work correctly
+with some window managers.</source>
         <translation>Konservu la pozicion post ĉi tiu dialogo
 estas fermita kaj ankaŭ forlasante.
 
-(Ĉi tio eble ne havas ĝustan efikon
-kun labortablaj medioj bazitaj sur GTK.)</translation>
+Ĉi tio eble ne havas ĝustan efikon ĉe
+iuj fenestraj agordiloj.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>

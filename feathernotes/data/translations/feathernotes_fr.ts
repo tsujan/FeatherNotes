@@ -1607,12 +1607,9 @@ Décocher la case pour un rapport de largeur de 170/530.</translation>
         <source>Saves position after closing
 this dialog and also on exit.
 
-(This may not work correctly
-under GTK DEs.)</source>
-        <translation>Enregistrer la position après la fermeture
-de cette boîte de dialogue et également à la sortie.
-
-(Cela peut ne pas fonctionner correctement sous GTK.)</translation>
+This may not work correctly
+with some window managers.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>

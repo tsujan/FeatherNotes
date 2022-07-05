@@ -1606,15 +1606,9 @@ Uncheck for a width ratio of 170/530.</source>
         <source>Saves position after closing
 this dialog and also on exit.
 
-(This may not work correctly
-under GTK DEs.)</source>
-        <translation>Сохраняет расположение после закрытия
-этого диалога, а также после выхода.
-
-(Может работать некорректно
-в окружениях рабочего стола,
-основанных на GTK+, таких как
-Unity или Cinnamon.)</translation>
+This may not work correctly
+with some window managers.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>

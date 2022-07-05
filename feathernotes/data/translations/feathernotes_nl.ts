@@ -1607,13 +1607,9 @@ Kruis af om een breedteverhouding van 170/530 te gebruiken.</translation>
         <source>Saves position after closing
 this dialog and also on exit.
 
-(This may not work correctly
-under GTK DEs.)</source>
-        <translation>Onthoud de vensterpositie, zowel na het sluiten van
-dit venster als na het afsluiten van het programma.
-
-(Dit werkt mogelijk niet naar behoren in
-GTK-werkomgevingen.)</translation>
+This may not work correctly
+with some window managers.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>

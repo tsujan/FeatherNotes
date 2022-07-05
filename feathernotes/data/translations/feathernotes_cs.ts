@@ -1611,15 +1611,9 @@ zrušte zaškrtnutí.</translation>
         <source>Saves position after closing
 this dialog and also on exit.
 
-(This may not work correctly
-under GTK DEs.)</source>
-        <translation>Při zavření tohoto dialogu a také
-při ukončení aplikace uloží pozici.
-
-(Toto nemusí správně fungovat
-pod desktopovými prostředími,
-založenými na knihovnách GTK+
-jako je Unity a Cinnamon.)</translation>
+This may not work correctly
+with some window managers.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>

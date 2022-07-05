@@ -1608,14 +1608,9 @@ pločio santykį 170/530.</translation>
         <source>Saves position after closing
 this dialog and also on exit.
 
-(This may not work correctly
-under GTK DEs.)</source>
-        <translation>Įrašo poziciją užverus šį dialogą,
-o taip pat išeinant iš programos.
-
-(Tai gali neveikti tinkamai GTK+
-darbalaukio aplinkose, tokiose kaip
-Unity ir Cinnamon.)</translation>
+This may not work correctly
+with some window managers.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>

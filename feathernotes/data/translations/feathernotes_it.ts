@@ -1606,13 +1606,9 @@ Lasciare non spuntato per avere una dimensione di 170/530.</translation>
         <source>Saves position after closing
 this dialog and also on exit.
 
-(This may not work correctly
-under GTK DEs.)</source>
-        <translation>Salva la posizione dopo la chiusura di
-questo dialogo e anche alla chiusura.
-
-(Questo non potrebbe funzionare
-correttamente usando DE Gtk)</translation>
+This may not work correctly
+with some window managers.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>

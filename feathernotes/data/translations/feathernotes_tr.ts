@@ -1607,9 +1607,9 @@ ve ayrıca çıkışta ağaç genişliğini kaydeder.
         <source>Saves position after closing
 this dialog and also on exit.
 
-(This may not work correctly
-under GTK DEs.)</source>
-        <translation>Bu iletişim kutusunu kapattıktan sonra ve ayrıca çıkışta konumu kaydeder. (Bu, Unity ve Cinnamon gibi GTK + DE&apos;ler altında düzgün çalışmayabilir.)</translation>
+This may not work correctly
+with some window managers.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>

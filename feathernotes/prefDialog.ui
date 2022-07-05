@@ -110,8 +110,8 @@ Uncheck for a width ratio of 170/530.</string>
              <string>Saves position after closing
 this dialog and also on exit.
 
-(This may not work correctly
-under GTK DEs.)</string>
+This may not work correctly
+with some window managers.</string>
             </property>
             <property name="text">
              <string>Save &amp;position</string>

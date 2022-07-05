@@ -1606,13 +1606,9 @@ Desmarque para uma taxa de largura de 170/530.</translation>
         <source>Saves position after closing
 this dialog and also on exit.
 
-(This may not work correctly
-under GTK DEs.)</source>
-        <translation>Salva a posição depois de fechar
-este diálogo e também ao sair.
-
-(Isso pode não funcionar corretamente
-sob GTK DE&apos;s.)</translation>
+This may not work correctly
+with some window managers.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>

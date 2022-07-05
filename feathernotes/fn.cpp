@@ -80,7 +80,6 @@ static const QString DOC_STYLESHEET ("body{background-color: %1; color: %2;}");
 FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui (new Ui::FN)
 {
 #ifdef HAS_X11
-    // For now, the lack of x11 is seen as wayland.
 #if defined Q_OS_LINUX || defined Q_OS_FREEBSD || defined Q_OS_OPENBSD || defined Q_OS_NETBSD || defined Q_OS_HURD
     isX11_ = (QString::compare (QGuiApplication::platformName(), "xcb", Qt::CaseInsensitive) == 0);
 #else
@@ -327,6 +326,7 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     connect (ui->actionDeleteNode, &QAction::triggered, this, &FN::deleteNode);
     connect (ui->actionMoveUp, &QAction::triggered, this, &FN::moveUpNode);
     connect (ui->actionMoveDown, &QAction::triggered, this, &FN::moveDownNode);
+
     if (QApplication::layoutDirection() == Qt::RightToLeft)
     {
         connect (ui->actionMoveLeft, &QAction::triggered, this, &FN::moveRightNode);
