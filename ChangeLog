@@ -14,6 +14,7 @@ V0.11.0
  * Fixed node renaming with transparent tree view.
  * Reduced the wait for systray to 30 sec. Also, show a warning dialog if there's no tray and the app was supposed to minimize into tray.
  * Made toolbar icons small by default.
+ * Removed the workaround for Enlightenment.
 
 V0.10.0
 ---------

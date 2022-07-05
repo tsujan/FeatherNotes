@@ -111,8 +111,7 @@ Uncheck for a width ratio of 170/530.</string>
 this dialog and also on exit.
 
 (This may not work correctly
-under GTK+ DE's like Unity
-and Cinnamon.)</string>
+under GTK DEs.)</string>
             </property>
             <property name="text">
              <string>Save &amp;position</string>
@@ -134,7 +133,7 @@ Needs restarting of FeatherNotes to take effect.</string>
            </widget>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <layout class="QHBoxLayout" name="horizontalLayout_1">
             <item>
              <spacer name="horizontalSpacer_1">
               <property name="orientation">
@@ -202,91 +201,6 @@ a menu button appears on the toolbar.</string>
              <string>Do not show &amp;menubar</string>
             </property>
            </widget>
-          </item>
-          <item>
-           <widget class="QCheckBox" name="EBox">
-            <property name="toolTip">
-             <string>Check this under Enlightenment (or, probably, another DE)
-to use the systray icon more easily!</string>
-            </property>
-            <property name="text">
-             <string>Running &amp;under Enlightenment?</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_3">
-            <item>
-             <spacer name="horizontalSpacer_2">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeType">
-               <enum>QSizePolicy::Fixed</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>22</width>
-                <height>5</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item>
-             <widget class="QLabel" name="ELabel">
-              <property name="toolTip">
-               <string>Some DE's (like Enlightenment) may not report the window position
-correctly. If that is the case, you could try to fix the problem here.
-
-If the panel is on the bottom or top, the Y-coordinate should be set;
-if it is on the left or right, the X-coordinate should be set.
-
-After choosing the coordinate shifts, put the window in a proper
-position and then restart FeatherNotes!</string>
-              </property>
-              <property name="text">
-               <string>Shifts (X × Y): </string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QSpinBox" name="ESpinX">
-              <property name="suffix">
-               <string> px</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="XLabel">
-              <property name="text">
-               <string notr="true"> × </string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QSpinBox" name="ESpinY">
-              <property name="suffix">
-               <string> px</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <spacer name="horizontalSpacer_3">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeType">
-               <enum>QSizePolicy::MinimumExpanding</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>5</width>
-                <height>5</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-           </layout>
           </item>
          </layout>
         </widget>
@@ -356,7 +270,7 @@ the user is typing and under proper circumstances.</string>
            </widget>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_6">
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
             <item>
              <widget class="QLabel" name="dateLabel">
               <property name="toolTip">
@@ -386,7 +300,7 @@ Takes effect after closing this dialog.</string>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
             <item>
              <widget class="QCheckBox" name="autoSaveBox">
               <property name="text">
@@ -411,7 +325,7 @@ Takes effect after closing this dialog.</string>
              </widget>
             </item>
             <item>
-             <spacer name="horizontalSpacer_4">
+             <spacer name="horizontalSpacer_2">
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
               </property>
@@ -463,7 +377,7 @@ showing a warning if saving is not possible.</string>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_5">
              <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_5">
+              <layout class="QHBoxLayout" name="horizontalLayout_4">
                <item>
                 <widget class="QLabel" name="dictLabel">
                  <property name="toolTip">
@@ -540,7 +454,7 @@ name but ending with &quot;.aff&quot;.</string>
            </widget>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_7">
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
             <property name="spacing">
              <number>5</number>
             </property>
@@ -559,7 +473,7 @@ name but ending with &quot;.aff&quot;.</string>
              </widget>
             </item>
             <item>
-             <spacer name="horizontalSpacer_5">
+             <spacer name="horizontalSpacer_3">
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
               </property>

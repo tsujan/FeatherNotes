@@ -147,28 +147,7 @@ PrefDialog::PrefDialog (QWidget *parent)
         /* window position */
         ui->positionBox->setChecked (win->isPositionRem());
         connect (ui->positionBox, &QCheckBox::stateChanged, win, [this, win] (int checked) {
-            if (checked == Qt::Checked)
-            {
-                win->remPosition (true);
-                if (win->isUnderE())
-                {
-                    ui->ELabel->setEnabled (true);
-                    ui->XLabel->setEnabled (true);
-                    ui->ESpinX->setEnabled (true);
-                    ui->ESpinY->setEnabled (true);
-                }
-            }
-            else if (checked == Qt::Unchecked)
-            {
-                win->remPosition (false);
-                if (win->isUnderE())
-                {
-                    ui->ELabel->setEnabled (false);
-                    ui->XLabel->setEnabled (false);
-                    ui->ESpinX->setEnabled (false);
-                    ui->ESpinY->setEnabled (false);
-                }
-            }
+            win->remPosition (checked == Qt::Checked);
         });
 
         /* use tray */
@@ -220,34 +199,6 @@ PrefDialog::PrefDialog (QWidget *parent)
             }
             else if (checked == Qt::Unchecked)
                 win->showMenubar (true);
-        });
-
-        /* Enlightenment */
-        ui->EBox->setChecked (win->isUnderE());
-        ui->ESpinX->setValue (win->EShift().width());
-        ui->ESpinY->setValue (win->EShift().height());
-        if (!win->isUnderE() || !win->isPositionRem())
-        {
-            ui->ELabel->setDisabled (true);
-            ui->ESpinX->setDisabled (true);
-            ui->XLabel->setDisabled (true);
-            ui->ESpinY->setDisabled (true);
-        }
-        connect (ui->ESpinX, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), win, [win] (int value) {
-            win->setEShift (QSize (value, win->EShift().height())); // takes effect in FN::showEvent()
-        });
-        connect (ui->ESpinY, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), win, [win] (int value) {
-            win->setEShift (QSize (win->EShift().width(), value)); // takes effect in FN::showEvent()
-        });
-        connect (ui->EBox, &QCheckBox::stateChanged, win, [this, win] (int checked) {
-            bool isChecked (checked == Qt::Checked);
-            win->setUnderE (isChecked);
-            ui->ESpinX->setEnabled (isChecked);
-            ui->ESpinY->setEnabled (isChecked);
-            ui->ELabel->setEnabled (isChecked);
-            ui->XLabel->setEnabled (isChecked);
-            if (isChecked)
-                win->setEShift (QSize (ui->ESpinX->value(), ui->ESpinY->value()));
         });
 
         /************
@@ -426,11 +377,6 @@ PrefDialog::PrefDialog (QWidget *parent)
             QWhatsThis::enterWhatsThisMode();
         });
     }
-
-    const QString EToolTip = ui->ELabel->toolTip();
-    ui->ESpinX->setToolTip (EToolTip);
-    ui->ESpinY->setToolTip (EToolTip);
-    ui->XLabel->setToolTip (EToolTip);
 
     /* set tooltip as "whatsthis" */
     const auto widgets = findChildren<QWidget*>();

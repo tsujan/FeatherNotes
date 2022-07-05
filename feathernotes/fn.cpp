@@ -534,26 +534,10 @@ void FN::closeEvent (QCloseEvent *event)
     {
         if (!xmlPath_.isEmpty() && (!QFile::exists (xmlPath_) || !QFileInfo (xmlPath_).isFile()))
         {
-            if (tray_)
+            if (tray_ && (!isVisible() || !isActiveWindow()))
             {
-                if (underE_ && QObject::sender() != nullptr && QObject::sender()->objectName() == "trayQuit")
-                {
-                    if (!isVisible())
-                    {
-                        activateTray();
-                        QCoreApplication::processEvents();
-                    }
-                    else
-                    {
-                        raise();
-                        if (!isWayland_) activateWindow();
-                    }
-                }
-                else if (!underE_ && (!isVisible() || !isActiveWindow()))
-                {
-                    activateTray();
-                    QCoreApplication::processEvents();
-                }
+                activateTray();
+                QCoreApplication::processEvents();
             }
             if (unSaved (false))
                 keep = true;
@@ -564,26 +548,10 @@ void FN::closeEvent (QCloseEvent *event)
                 fileSave (xmlPath_);
             else
             {
-                if (tray_)
+                if (tray_ && (!isVisible() || !isActiveWindow()))
                 {
-                    if (underE_ && QObject::sender() != nullptr && QObject::sender()->objectName() == "trayQuit")
-                    {
-                        if (!isVisible())
-                        {
-                            activateTray();
-                            QCoreApplication::processEvents();
-                        }
-                        else
-                        {
-                            raise();
-                            if (!isWayland_) activateWindow();
-                        }
-                    }
-                    else if (!underE_ && (!isVisible() || !isActiveWindow()))
-                    {
-                        activateTray();
-                        QCoreApplication::processEvents();
-                    }
+                    activateTray();
+                    QCoreApplication::processEvents();
                 }
                 if (unSaved (true))
                     keep = true;
@@ -674,8 +642,6 @@ void FN::createTrayIcon()
     QMenu *trayMenu = new QMenu (this);
     /* we don't want shortcuts to be shown here */
     QAction *actionshowMainWindow = trayMenu->addAction (tr ("&Raise/Hide"));
-    if (underE_)
-        actionshowMainWindow->setText (tr ("&Raise"));
     connect (actionshowMainWindow, &QAction::triggered, this, &FN::activateTray);
     /* use system icons with the tray menu because it gets its style from the panel */
     QAction *actionNewTray = trayMenu->addAction (QIcon::fromTheme ("document-new"), tr ("&New Note"));
@@ -891,26 +857,10 @@ void FN::newNote()
 
     if (timer_->isActive()) timer_->stop();
 
-    if (tray_)
+    if (tray_ && (!isVisible() || !isActiveWindow()))
     {
-        if (underE_ && sender != nullptr && sender->objectName() == "trayNew")
-        {
-            if (!isVisible())
-            {
-                activateTray();
-                QCoreApplication::processEvents();
-            }
-            else
-            {
-                raise();
-                if (!isWayland_) activateWindow();
-            }
-        }
-        else if (!underE_ && (!isVisible() || !isActiveWindow()))
-        {
-            activateTray();
-            QCoreApplication::processEvents();
-        }
+        activateTray();
+        QCoreApplication::processEvents();
     }
 
     if (!xmlPath_.isEmpty() && !QFile::exists (xmlPath_))
@@ -1461,26 +1411,10 @@ void FN::openFile()
 
     if (timer_->isActive()) timer_->stop();
 
-    if (tray_)
+    if (tray_ && (!isVisible() || !isActiveWindow()))
     {
-        if (underE_ && sender != nullptr && sender->objectName() == "trayOpen")
-        {
-            if (!isVisible())
-            {
-                activateTray();
-                QCoreApplication::processEvents();
-            }
-            else
-            {
-                raise();
-                if (!isWayland_) activateWindow();
-            }
-        }
-        else if (!underE_ && (!isVisible() || !isActiveWindow()))
-        {
-            activateTray();
-            QCoreApplication::processEvents();
-        }
+        activateTray();
+        QCoreApplication::processEvents();
     }
 
     if (!xmlPath_.isEmpty() && !QFile::exists (xmlPath_))
@@ -4043,7 +3977,7 @@ void FN::showEvent (QShowEvent *event)
         if (remPosition_ && !isWayland_)
         {
             QSize theSize = (remSize_ ? winSize_ : startSize_);
-            setGeometry (position_.x() - (underE_ ? EShift_.width() : 0), position_.y() - (underE_ ? EShift_.height() : 0),
+            setGeometry (position_.x(), position_.y(),
                          theSize.width(), theSize.height());
             if (isFull_ && isMaxed_)
                 setWindowState (Qt::WindowMaximized | Qt::WindowFullScreen);
@@ -4086,10 +4020,6 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
 
     if (!isVisible())
     {
-        /* make the widget an independent window again */
-        /*if (parent() != nullptr)
-            setParent (nullptr, Qt::Window);
-        QTimer::singleShot (0, this, SLOT (show()));*/
         show();
 
 #ifdef HAS_X11
@@ -4101,12 +4031,6 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
 #ifdef HAS_X11
     else if (!isX11_ || onWhichDesktop (winId()) == fromDesktop())
     {
-        if (isX11_ && underE_)
-        {
-            hide();
-            QTimer::singleShot (250, this, &QWidget::show);
-            return;
-        }
         QRect sr;
         if (QWindow *win = windowHandle())
         {
@@ -4129,9 +4053,6 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
                     position_.setX (g.x());
                     position_.setY (g.y());
                 }
-                /* instead of hiding the window in the ususal way,
-                   reparent it to preserve its state info */
-                //setParent (dummyWidget, Qt::SubWindow);
                 QTimer::singleShot (0, this, &QWidget::hide);
             }
             else
@@ -4178,7 +4099,7 @@ void FN::activateTray()
     if (sender != nullptr && sender->objectName() == "raiseHide" && findChildren<QDialog *>().count() > 0)
     { // don't respond to the tray icon when there's a dialog
         raise();
-        activateWindow();
+        if (!isWayland_) activateWindow();
         return;
     }
 
@@ -4983,34 +4904,6 @@ void FN::showMenubar (bool show)
     noMenubar_ = !show;
 }
 /*************************/
-void FN::setUnderE (bool yes)
-{
-    if (yes)
-    {
-        if (!underE_)
-        {
-            underE_ = true;
-            if (tray_)
-            {
-                if (QAction *actionshowMainWindow = tray_->contextMenu()->findChild<QAction *>("raiseHide"))
-                    actionshowMainWindow->setText (tr ("&Raise"));
-            }
-        }
-    }
-    else
-    {
-        if (underE_)
-        {
-            underE_ = false;
-            if (tray_)
-            {
-                if (QAction *actionshowMainWindow = tray_->contextMenu()->findChild<QAction *>("raiseHide"))
-                    actionshowMainWindow->setText (tr ("&Raise/Hide"));
-            }
-        }
-    }
-}
-/*************************/
 void FN::updateCustomizableShortcuts()
 {
     QHash<QAction*, QKeySequence>::const_iterator iter = defaultShortcuts_.constBegin();
@@ -5151,17 +5044,6 @@ void FN::readAndApplyConfig (bool startup)
     hasTray_ = settings.value ("hasTray").toBool(); // false by default
 
     minToTray_ = settings.value ("minToTray").toBool(); // false by default
-
-    bool bv = settings.value ("underE").toBool(); // false by default
-    if (startup)
-        underE_ = bv;
-    else
-        setUnderE (bv);
-
-    if (settings.contains ("Shift"))
-        EShift_ = settings.value ("Shift").toSize();
-    else
-        EShift_ = QSize (0, 0);
 
     if (settings.value ("transparentTree").toBool()) // false by default
         makeTreeTransparent (true);
@@ -5494,8 +5376,6 @@ void FN::writeConfig()
 
     settings.setValue ("hasTray", hasTray_);
     settings.setValue ("minToTray", minToTray_);
-    settings.setValue ("underE", underE_);
-    settings.setValue ("Shift", EShift_);
     settings.setValue ("transparentTree", transparentTree_);
     settings.setValue ("smallToolbarIcons", smallToolbarIcons_);
     settings.setValue ("noToolbar", noToolbar_);
@@ -6057,24 +5937,10 @@ void FN::reallySetPswrd()
 /*************************/
 bool FN::isPswrdCorrect()
 {
-    if (tray_)
+    if (tray_ && (!isVisible() || !isActiveWindow()))
     {
-        if (underE_ && QObject::sender() == nullptr) // opened by command line
-        {
-            if (!isVisible())
-                activateTray();
-            else // not needed really
-            {
-                raise();
-                if (!isWayland_) activateWindow();
-            }
-            QCoreApplication::processEvents();
-        }
-        else if (!underE_&& (!isVisible() || !isActiveWindow()))
-        {
-            activateTray();
-            QCoreApplication::processEvents();
-        }
+        activateTray();
+        QCoreApplication::processEvents();
     }
     else if (!isVisible() || !isActiveWindow())
     {

@@ -89,17 +89,6 @@ public:
         remPosition_ = rem;
     }
 
-    bool isUnderE() const {
-        return underE_;
-    }
-    void setUnderE (bool yes);
-    QSize EShift() const {
-        return EShift_;
-    }
-    void setEShift (QSize shift) {
-        EShift_ = shift;
-    }
-
     bool hasTray() const {
         return hasTray_;
     }
@@ -455,8 +444,6 @@ private:
     QSize winSize_, startSize_, prefSize_;
     QTimer *timer_;
     QString pswrd_;
-    bool underE_; // Is FeatherNotes running under Enlightenment?
-    QSize EShift_; // The shift Enlightenment's panel creates (a bug?).
     QHash<QString, QString> customActions_;
     QHash<QAction*, QKeySequence> defaultShortcuts_;
     QStringList uncustomizedActions_, reservedShortcuts_;
