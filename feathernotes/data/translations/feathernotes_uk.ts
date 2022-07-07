@@ -1609,7 +1609,11 @@ this dialog and also on exit.
 
 This may not work correctly
 with some window managers.</source>
-        <translation type="unfinished"></translation>
+        <translation>Зберігає позицію після закриття цього
+діалогового вікна, а також під час виходу.
+
+Може не працювати належним чином
+з деякими менеджерами вікон.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>

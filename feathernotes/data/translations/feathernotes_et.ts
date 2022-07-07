@@ -1609,7 +1609,11 @@ this dialog and also on exit.
 
 This may not work correctly
 with some window managers.</source>
-        <translation type="unfinished"></translation>
+        <translation>Salvestab asukoha selle vaate
+või rakenduse sulgemisel.
+
+See lahendus ei pruugi kõikide
+aknahalduritega korralikult toimida.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>

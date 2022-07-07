@@ -1609,7 +1609,11 @@ this dialog and also on exit.
 
 This may not work correctly
 with some window managers.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu diyaloğu kapattıktan sonra ve
+ayrıca çıkışta konumu kaydeder.
+
+ Bu, bazı pencere yöneticileriyle
+düzgün çalışmayabilir.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>
