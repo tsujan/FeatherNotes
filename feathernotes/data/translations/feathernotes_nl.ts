@@ -1609,7 +1609,11 @@ this dialog and also on exit.
 
 This may not work correctly
 with some window managers.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bewaart de vensterpositie na het sluiten
+van dit venster en afsluiten.
+
+Let op: sommige vensterbeheerders kunnen
+hier niet mee omgaan.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>

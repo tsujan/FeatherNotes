@@ -1202,13 +1202,14 @@
     <message>
         <location filename="../../fn.cpp" line="618"/>
         <source>Warning</source>
-        <translation type="unfinished"></translation>
+        <translation>Avviso</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="619"/>
         <source>System tray is not available.
 Please disable tray in Preferences.</source>
-        <translation type="unfinished"></translation>
+        <translation>Il vassoio non è presente.
+Per favore disabilitare il vassoio nelle preferenze.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="942"/>
@@ -1608,7 +1609,11 @@ this dialog and also on exit.
 
 This may not work correctly
 with some window managers.</source>
-        <translation type="unfinished"></translation>
+        <translation>Salva la posizione alla chiusura
+di questo dialogo e anche all&apos;uscita.
+
+Questo potrebbe non funzionare 
+correttamente con alcuni gestori finestre.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>
@@ -1759,12 +1764,14 @@ Chiudendo questo dialogo lo attiva.</translation>
         <source>If this option is checked, the opened document will
 be saved on exiting without prompt and without
 showing a warning if saving is not possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Se spuntato questa opzione il documento verrà
+salvato senza conferma e senza avviso per un
+salvataggio impossibile.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="353"/>
         <source>Save opened document on exiting</source>
-        <translation type="unfinished"></translation>
+        <translation>Salva documento aperto alla chiusura</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="376"/>
@@ -1815,12 +1822,12 @@ stesso nome che però termina con &quot;.aff&quot;.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="503"/>
         <source>By default, all nodes are expanded on opening a document.</source>
-        <translation type="unfinished"></translation>
+        <translation>Per impostazione predefinita tutte le voci sono espanse all&apos;apertura.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="506"/>
         <source>Remember expanded states of nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Ricorda stato della espansione per le voci</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="530"/>

@@ -1609,7 +1609,11 @@ this dialog and also on exit.
 
 This may not work correctly
 with some window managers.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauvegarde la position de ce dialogue 
+après la fermeture et également à la sortie.
+
+Ceci peut ne pas fonctionner correctement
+avec certains gestionnaires de fenêtres.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>
@@ -1849,7 +1853,7 @@ nom mais se terminant par &quot;.aff&quot;.</translation>
         <location filename="../../pref.cpp" line="340"/>
         <location filename="../../pref.cpp" line="520"/>
         <source>Warning: Ambiguous shortcut detected!</source>
-        <translation>Attention&#xa0;: raccourci ambigu détecté&#xa0;!</translation>
+        <translation>Attention : raccourci ambigu détecté !</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="503"/>
