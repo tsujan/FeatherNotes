@@ -1609,7 +1609,11 @@ this dialog and also on exit.
 
 This may not work correctly
 with some window managers.</source>
-        <translation type="unfinished"></translation>
+        <translation>Guarda a posição após fechar
+este diálogo e também ao sair.
+
+Isto pode não funcionar corretamente
+com alguns gestores de janelas.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>
