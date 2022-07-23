@@ -1202,7 +1202,7 @@
     <message>
         <location filename="../../fn.cpp" line="618"/>
         <source>Warning</source>
-        <translation type="unfinished"></translation>
+        <translation>Įspėjimas</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="619"/>
