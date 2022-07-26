@@ -327,7 +327,7 @@ void FN::find()
         return;
     }
     else
-        closeTagsDialog();
+        closeWinDialogs();
 
     if (ui->namesButton->isChecked())
     {

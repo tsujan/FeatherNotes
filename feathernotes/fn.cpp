@@ -15,7 +15,7 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "fn.h"
+#include "singleton.h"
 #include "ui_fn.h"
 #include "ui_about.h"
 #include "dommodel.h"
@@ -79,21 +79,6 @@ static const QString DOC_STYLESHEET ("body{background-color: %1; color: %2;}");
 
 FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui (new Ui::FN)
 {
-#ifdef HAS_X11
-#if defined Q_OS_LINUX || defined Q_OS_FREEBSD || defined Q_OS_OPENBSD || defined Q_OS_NETBSD || defined Q_OS_HURD
-    isX11_ = (QString::compare (QGuiApplication::platformName(), "xcb", Qt::CaseInsensitive) == 0);
-#else
-    isX11_ = false;
-#endif // defined Q_WS_X11
-#else
-    isX11_ = false;
-#endif // HAS_X11
-
-    if (isX11_)
-        isWayland_ = false;
-    else
-        isWayland_ = (QString::compare (QGuiApplication::platformName(), "wayland", Qt::CaseInsensitive) == 0);
-
     ui->setupUi (this);
 
     closed_ = false;
@@ -117,6 +102,8 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     /* appearance */
     setAttribute (Qt::WA_AlwaysShowToolTips);
     ui->statusBar->setVisible (false);
+
+    setAttribute (Qt::WA_DeleteOnClose, false); // we delete windows in singleton
 
     defaultFont_ = QFont ("Monospace");
     defaultFont_.setPointSize (qMax (font().pointSize(), 9));
@@ -391,7 +378,7 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     {
         if (QSystemTrayIcon::isSystemTrayAvailable())
             createTrayIcon();
-        else
+        else if (!static_cast<FNSingleton*>(qApp)->isTrayChecked())
         {
             QTimer *trayTimer = new QTimer (this);
             trayTimer->setSingleShot (true);
@@ -400,6 +387,7 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
             trayTimer->start();
             ++trayCounter_;
         }
+        else show();
     }
 
     QShortcut *focusView = new QShortcut (QKeySequence (Qt::Key_Escape), this);
@@ -488,10 +476,12 @@ FN::~FN()
 bool FN::close()
 {
     QObject *sender = QObject::sender();
-    if (sender != nullptr && sender->objectName() == "trayQuit" && findChildren<QDialog *>().count() > 0)
-    { // don't respond to the tray icon when there's a dialog
+    if (sender != nullptr && sender->objectName() == "trayQuit"
+        && qApp->activeModalWidget() != nullptr)
+    { // don't respond to the tray icon when there's a modal dialog
         raise();
-        if (!isWayland_) activateWindow();
+        if (!static_cast<FNSingleton*>(qApp)->isWayland())
+            activateWindow();
         return false;
     }
 
@@ -514,8 +504,9 @@ void FN::closeEvent (QCloseEvent *event)
 
     if (!quitting_)
     {
+        closeNonModalDialogs();
         event->ignore();
-        if (!isMaximized() && !isFullScreen() && !isWayland_)
+        if (!isMaximized() && !isFullScreen() && !static_cast<FNSingleton*>(qApp)->isWayland())
         {
             position_.setX (geometry().x());
             position_.setY (geometry().y());
@@ -539,6 +530,7 @@ void FN::closeEvent (QCloseEvent *event)
                 activateTray();
                 QCoreApplication::processEvents();
             }
+            closeWinDialogs();
             if (unSaved (false))
                 keep = true;
         }
@@ -553,6 +545,7 @@ void FN::closeEvent (QCloseEvent *event)
                     activateTray();
                     QCoreApplication::processEvents();
                 }
+                closeWinDialogs();
                 if (unSaved (true))
                     keep = true;
             }
@@ -570,26 +563,35 @@ void FN::closeEvent (QCloseEvent *event)
     else
     {
         writeGeometryConfig();
-        delete tray_; // otherwise the app won't quit under KDE
+        delete tray_; // otherwise the app might not quit under KDE
         tray_ = nullptr;
-        event->accept();
+        FNSingleton *singleton = static_cast<FNSingleton*>(qApp);
+        singleton->removeWin (this);
         closed_ = true; // window info shouldn't be saved after closing
+        event->accept();
 
-        /* WARNING: With Qt6, the app won't quit if its window is hidden when this
-                    method is called (e.g., if iconified in the system tray). This is
-                    definitely a Qt6 bug. An explicit quitting is also safe with Qt5. */
-        QCoreApplication::quit();
+        /* We set "quitOnLastWindowClosed" to "false" to prevent the
+           app from quitting when the remaining windows are iconified.
+           So, we should quit explicitly after the last window is closed. */
+        if (!singleton->quitOnLastWindowClosed() && singleton->Wins.isEmpty())
+            QCoreApplication::quit();
     }
 }
 /*************************/
+// This method should be called only when the app quits without closing its windows
+// (e.g., with SIGTERM).
 void FN::quitting()
 {
-    /* quitting may happen by receiving POSIX signals
-       and without calling FN::closeEvent() */
+    /* WARNING: Qt5 has a bug that will cause a crash if "QDockWidget::visibilityChanged"
+                isn't disconnected here. This is also good with Qt6. */
+    disconnect (ui->dockReplace, &QDockWidget::visibilityChanged, this, &FN::closeReplaceDock);
+
     if (!closed_)
     {
         if (saveOnExit_) autoSaving();
-        writeGeometryConfig();
+        FNSingleton *singleton = static_cast<FNSingleton*>(qApp);
+        if (!singleton->Wins.isEmpty() && this == singleton->Wins.last())
+            writeGeometryConfig();
     }
 }
 /*************************/
@@ -599,24 +601,33 @@ void FN::checkTray()
     {
         if (QSystemTrayIcon::isSystemTrayAvailable())
         {
+            static_cast<FNSingleton*>(qApp)->setTrayChecked();
             trayTimer->deleteLater();
             createTrayIcon();
             trayCounter_ = 0; // not needed
         }
-        else if (trayCounter_ < 6)
+        else if (trayCounter_ < 4)
         {
             trayTimer->start();
             ++trayCounter_;
         }
         else
         {
+            static_cast<FNSingleton*>(qApp)->setTrayChecked();
             trayTimer->deleteLater();
             bool wasNotShown = isHidden();
             show();
             if (wasNotShown)
             {
-                QMessageBox::warning (this, tr ("Warning"),
-                                      tr ("System tray is not available.\nPlease disable tray in Preferences."));
+                closeWinDialogs();
+                auto msgBox =  new MessageBox (QMessageBox::Warning,
+                                               tr ("Warning"),
+                                               tr ("System tray is not available.\nPlease disable tray in Preferences."),
+                                               QMessageBox::Close,
+                                               this);
+                msgBox->setAttribute (Qt::WA_DeleteOnClose, true);
+                msgBox->changeButtonText (QMessageBox::Close, tr ("Close"));
+                msgBox->open();
             }
         }
     }
@@ -826,7 +837,7 @@ void FN::changeEvent (QEvent *event)
                 isMaxed_ = false;
         }
         /* if the window gets maximized/fullscreen, remember its position */
-        if (!isWayland_
+        if (!static_cast<FNSingleton*>(qApp)->isWayland()
             && ((windowState() & Qt::WindowMaximized)
                 || (windowState() & Qt::WindowFullScreen)))
         {
@@ -847,13 +858,15 @@ void FN::changeEvent (QEvent *event)
 void FN::newNote()
 {
     QObject *sender = QObject::sender();
-    if (sender != nullptr && sender->objectName() == "trayNew" && findChildren<QDialog *>().count() > 0)
-    { // don't respond to the tray icon when there's a dialog
+    if (sender != nullptr && sender->objectName() == "trayNew"
+        && qApp->activeModalWidget() != nullptr)
+    { // don't respond to the tray icon when there's a modal dialog
         raise();
-        if (!isWayland_) activateWindow();
+        if (!static_cast<FNSingleton*>(qApp)->isWayland())
+            activateWindow();
         return;
     }
-    closeTagsDialog();
+    closeWinDialogs();
 
     if (timer_->isActive()) timer_->stop();
 
@@ -898,7 +911,7 @@ void FN::newNote()
         msgBox.setParent (this, Qt::Dialog);
         msgBox.setWindowModality (Qt::WindowModal);
         msgBox.show();
-        if (!isWayland_)
+        if (!static_cast<FNSingleton*>(qApp)->isWayland())
         {
             msgBox.move (x() + width()/2 - msgBox.width()/2,
                          y() + height()/2 - msgBox.height()/ 2);
@@ -978,6 +991,7 @@ void FN::setTitle (const QString &fname)
     }
 }
 /*************************/
+// NOTE: closeWinDialogs() should be already called wherever this method is used.
 bool FN::unSaved (bool modified)
 {
     int unsaved = false;
@@ -999,7 +1013,7 @@ bool FN::unSaved (bool modified)
     msgBox.setWindowModality (Qt::WindowModal);
     /* enforce a central position */
     msgBox.show();
-    if (!isWayland_)
+    if (!static_cast<FNSingleton*>(qApp)->isWayland())
     {
         msgBox.move (x() + width()/2 - msgBox.width()/2,
                      y() + height()/2 - msgBox.height()/ 2);
@@ -1343,7 +1357,7 @@ void FN::fileOpen (const QString &filePath, bool startup, bool startWithLastFile
                 {
                     QString oldPswrd = pswrd_;
                     pswrd_ = root.attribute ("pswrd");
-                    if (!pswrd_.isEmpty() && !isPswrdCorrect())
+                    if (!pswrd_.isEmpty() && !isPswrdCorrect (filePath))
                     {
                         pswrd_ = oldPswrd;
                         if (startup)
@@ -1401,13 +1415,15 @@ void FN::fileOpen (const QString &filePath, bool startup, bool startWithLastFile
 void FN::openFile()
 {
     QObject *sender = QObject::sender();
-    if (sender != nullptr && sender->objectName() == "trayOpen" && findChildren<QDialog *>().count() > 0)
-    { // don't respond to the tray icon when there's a dialog
+    if (sender != nullptr && sender->objectName() == "trayOpen"
+        && qApp->activeModalWidget() != nullptr)
+    { // don't respond to the tray icon when there's a modal dialog
         raise();
-        if (!isWayland_) activateWindow();
+        if (!static_cast<FNSingleton*>(qApp)->isWayland())
+            activateWindow();
         return;
     }
-    closeTagsDialog();
+    closeWinDialogs();
 
     if (timer_->isActive()) timer_->stop();
 
@@ -1455,32 +1471,39 @@ void FN::openFile()
         path = dir.path();
     }
 
-    QString filePath;
-    FileDialog dialog (this);
-    dialog.setAcceptMode (QFileDialog::AcceptOpen);
-    dialog.setWindowTitle (tr ("Open file..."));
-    dialog.setFileMode (QFileDialog::ExistingFiles);
-    dialog.setNameFilter (tr ("FeatherNotes documents (*.fnx);;All Files (*)"));
+    FileDialog *dialog = new FileDialog (this);
+    dialog->setAttribute (Qt::WA_DeleteOnClose, true);
+    dialog->setAcceptMode (QFileDialog::AcceptOpen);
+    dialog->setWindowTitle (tr ("Open file..."));
+    dialog->setFileMode (QFileDialog::ExistingFiles);
+    dialog->setNameFilter (tr ("FeatherNotes documents (*.fnx);;All Files (*)"));
     if (QFileInfo (path).isDir())
-        dialog.setDirectory (path);
+        dialog->setDirectory (path);
     else
     {
-        dialog.setDirectory (path.section ("/", 0, -2)); // workaround for KDE
-        dialog.selectFile (path);
-        dialog.autoScroll();
+        dialog->setDirectory (path.section ("/", 0, -2)); // workaround for KDE
+        dialog->selectFile (path);
+        dialog->autoScroll();
     }
-    if (dialog.exec())
-        filePath = dialog.selectedFiles().at (0);
+    dialog->open();
+    connect (dialog, &QDialog::finished, this, [this, dialog] (int res) {
+        QString filePath;
+        if (res == QDialog::Accepted)
+            filePath = dialog->selectedFiles().at (0);
 
-    /* fileOpen() restarts auto-saving even when opening is canceled */
-    fileOpen (filePath);
+        /* let the dialog be closed */
+        QTimer::singleShot (0, this, [this, filePath] () {
+            /* fileOpen() restarts auto-saving even when opening is canceled */
+            fileOpen (filePath);
+        });
+    });
 }
 /*************************/
 void FN::openFNDoc (const QString &filePath)
 {
     if (filePath.isEmpty()) return; // impossible
 
-    closeTagsDialog();
+    closeWinDialogs();
 
     if (timer_->isActive()) timer_->stop();
 
@@ -1508,7 +1531,8 @@ void FN::openFNDoc (const QString &filePath)
     QTimer::singleShot (0, this, [this, filePath] () {
         fileOpen (filePath);
         raise();
-        if (!isWayland_) activateWindow();
+        if (!static_cast<FNSingleton*>(qApp)->isWayland())
+            activateWindow();
     });
 }
 /*************************/
@@ -1612,14 +1636,16 @@ void FN::autoSaving()
 /*************************/
 void FN::notSavedOrOpened (bool notSaved)
 {
-    MessageBox msgBox (QMessageBox::Warning,
-                       tr ("FeatherNotes"),
-                       notSaved ? tr ("<center><b><big>Cannot be saved!</big></b></center>")
-                                : tr ("<center><b><big>Cannot be opened!</big></b></center>"),
-                       QMessageBox::Close,
-                       this);
-    msgBox.changeButtonText (QMessageBox::Close, tr ("Close"));
-    msgBox.exec();
+    closeWinDialogs();
+    auto msgBox =  new MessageBox (QMessageBox::Warning,
+                                   tr ("FeatherNotes"),
+                                   notSaved ? tr ("<center><b><big>Cannot be saved!</big></b></center>")
+                                             : tr ("<center><b><big>Cannot be opened!</big></b></center>"),
+                                   QMessageBox::Close,
+                                   this);
+    msgBox->setAttribute (Qt::WA_DeleteOnClose, true);
+    msgBox->changeButtonText (QMessageBox::Close, tr ("Close"));
+    msgBox->open();
 }
 /*************************/
 void FN::setNodesTexts()
@@ -1714,7 +1740,9 @@ bool FN::saveFile()
         /* use Save-As for Save or saving */
         if (QObject::sender() != ui->actionSaveAs)
         {
+            closeWinDialogs();
             FileDialog dialog (this);
+            dialog.setWindowModality (Qt::WindowModal);
             dialog.setAcceptMode (QFileDialog::AcceptSave);
             dialog.setWindowTitle (tr ("Save As..."));
             dialog.setFileMode (QFileDialog::AnyFile);
@@ -1735,7 +1763,9 @@ bool FN::saveFile()
 
     if (QObject::sender() == ui->actionSaveAs)
     {
+        closeWinDialogs();
         FileDialog dialog (this);
+        dialog.setWindowModality (Qt::WindowModal);
         dialog.setAcceptMode (QFileDialog::AcceptSave);
         dialog.setWindowTitle (tr ("Save As..."));
         dialog.setFileMode (QFileDialog::AnyFile);
@@ -2592,21 +2622,31 @@ void FN::textColor()
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
 
-    QColor color;
-    if ((color = qobject_cast<TextEdit*>(cw)->textColor())
-        == fgColor_)
+    closeWinDialogs();
+
+    QColor color = qobject_cast<TextEdit*>(cw)->textColor();
+    if (color == fgColor_)
     {
         if (lastTxtColor_.isValid())
             color = lastTxtColor_;
     }
-    color = QColorDialog::getColor (color,
-                                    this,
-                                    tr ("Select Text Color"));
-    if (!color.isValid()) return;
-    lastTxtColor_ = color;
-    QTextCharFormat fmt;
-    fmt.setForeground (color);
-    mergeFormatOnWordOrSelection (fmt);
+    auto dlg = new QColorDialog (color, this);
+    dlg->setAttribute (Qt::WA_DeleteOnClose, true);
+    dlg->setWindowTitle (tr ("Select Text Color"));
+    dlg->open();
+    connect (dlg, &QDialog::finished, this, [this, dlg] (int res) {
+        if (res == QDialog::Accepted)
+        {
+            QColor col = dlg->selectedColor();
+            if (col.isValid())
+            {
+                lastTxtColor_ = col;
+                QTextCharFormat fmt;
+                fmt.setForeground (col);
+                mergeFormatOnWordOrSelection (fmt);
+            }
+        }
+    });
 }
 /*************************/
 void FN::bgColor()
@@ -2614,21 +2654,31 @@ void FN::bgColor()
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
 
-    QColor color;
-    if ((color = qobject_cast<TextEdit*>(cw)->textBackgroundColor())
-        == QColor (Qt::black)) // this is a Qt bug
+    closeWinDialogs();
+
+    QColor color = qobject_cast<TextEdit*>(cw)->textBackgroundColor();
+    if (color == QColor (Qt::black)) // this is a Qt bug
     {
         if (lastBgColor_.isValid())
             color = lastBgColor_;
     }
-    color = QColorDialog::getColor (color,
-                                    this,
-                                    tr ("Select Background Color"));
-    if (!color.isValid()) return;
-    lastBgColor_ = color;
-    QTextCharFormat fmt;
-    fmt.setBackground (color);
-    mergeFormatOnWordOrSelection (fmt);
+    auto dlg = new QColorDialog (color, this);
+    dlg->setAttribute (Qt::WA_DeleteOnClose, true);
+    dlg->setWindowTitle (tr ("Select Background Color"));
+    dlg->open();
+    connect (dlg, &QDialog::finished, this, [this, dlg] (int res) {
+        if (res == QDialog::Accepted)
+        {
+            QColor col = dlg->selectedColor();
+            if (col.isValid())
+            {
+                lastBgColor_ = col;
+                QTextCharFormat fmt;
+                fmt.setBackground (col);
+                mergeFormatOnWordOrSelection (fmt);
+            }
+        }
+    });
 }
 /*************************/
 void FN::clearFormat()
@@ -2715,7 +2765,7 @@ void FN::collapseAll()
 /*************************/
 void FN::newNode()
 {
-    closeTagsDialog();
+    closeWinDialogs();
 
     QModelIndex index = ui->treeView->currentIndex();
     if (QObject::sender() == ui->actionNewSibling)
@@ -2744,7 +2794,7 @@ void FN::deleteNode()
     if (!pIndex.isValid() && model_->rowCount() <= 1)
         return;
 
-    closeTagsDialog();
+    closeWinDialogs();
 
     MessageBox msgBox;
     msgBox.setIcon (QMessageBox::Question);
@@ -2755,8 +2805,10 @@ void FN::deleteNode()
     msgBox.changeButtonText (QMessageBox::Yes, tr ("Yes"));
     msgBox.changeButtonText (QMessageBox::No, tr ("No"));
     msgBox.setDefaultButton (QMessageBox::No);
+    msgBox.setParent (this, Qt::Dialog);
+    msgBox.setWindowModality (Qt::WindowModal);
     msgBox.show();
-    if (!isWayland_)
+    if (!static_cast<FNSingleton*>(qApp)->isWayland())
     {
         msgBox.move (x() + width()/2 - msgBox.width()/2,
                      y() + height()/2 - msgBox.height()/ 2);
@@ -2795,7 +2847,7 @@ void FN::deleteNode()
 /*************************/
 void FN::moveUpNode()
 {
-    closeTagsDialog();
+    closeWinDialogs();
 
     QModelIndex index = ui->treeView->currentIndex();
     QModelIndex pIndex = model_->parent (index);
@@ -2807,7 +2859,7 @@ void FN::moveUpNode()
 /*************************/
 void FN::moveLeftNode()
 {
-    closeTagsDialog();
+    closeWinDialogs();
 
     QModelIndex index = ui->treeView->currentIndex();
     QModelIndex pIndex = model_->parent (index);
@@ -2819,7 +2871,7 @@ void FN::moveLeftNode()
 /*************************/
 void FN::moveDownNode()
 {
-    closeTagsDialog();
+    closeWinDialogs();
 
     QModelIndex index = ui->treeView->currentIndex();
     QModelIndex pIndex = model_->parent (index);
@@ -2831,7 +2883,7 @@ void FN::moveDownNode()
 /*************************/
 void FN::moveRightNode()
 {
-    closeTagsDialog();
+    closeWinDialogs();
 
     QModelIndex index = ui->treeView->currentIndex();
     QModelIndex pIndex = model_->parent (index);
@@ -2844,6 +2896,8 @@ void FN::moveRightNode()
 // Add or edit tags.
 void FN::handleTags()
 {
+    closeWinDialogs();
+
     QModelIndex index = ui->treeView->currentIndex();
     DomItem *item = static_cast<DomItem*>(index.internalPointer());
     QDomNode node = item->node();
@@ -2851,6 +2905,7 @@ void FN::handleTags()
     QString tags = attributeMap.namedItem ("tag").nodeValue();
 
     QDialog *dialog = new QDialog (this);
+    dialog->setAttribute (Qt::WA_DeleteOnClose, true);
     dialog->setWindowTitle (tr ("Tags"));
     QGridLayout *grid = new QGridLayout;
     grid->setSpacing (5);
@@ -2878,35 +2933,23 @@ void FN::handleTags()
     grid->setRowStretch (1, 1);
 
     dialog->setLayout (grid);
-    /*dialog->resize (dialog->minimumWidth(),
-                    dialog->minimumHeight());*/
-    /*dialog->show();
-    dialog->move (x() + width()/2 - dialog->width(),
-                  y() + height()/2 - dialog->height());*/
 
-    QString newTags;
-    switch (dialog->exec()) {
-    case QDialog::Accepted:
-        newTags = lineEdit->text();
-        delete dialog;
-        break;
-    case QDialog::Rejected:
-    default:
-        delete dialog;
-        return;
-    }
+    dialog->open();
+    connect (dialog, &QDialog::finished, this, [this, lineEdit, node, tags] (int res) {
+        if (res == QDialog::Accepted)
+        {
+            QString newTags = lineEdit->text();
+            if (newTags != tags)
+            {
+                if (newTags.isEmpty())
+                    node.toElement().removeAttribute ("tag");
+                else
+                    node.toElement().setAttribute ("tag", newTags);
 
-    if (newTags != tags)
-    {
-        closeTagsDialog();
-
-        if (newTags.isEmpty())
-            node.toElement().removeAttribute ("tag");
-        else
-            node.toElement().setAttribute ("tag", newTags);
-
-        noteModified();
-    }
+                noteModified();
+            }
+        }
+    });
 }
 /*************************/
 void FN::renameNode()
@@ -2920,10 +2963,14 @@ void FN::nodeIcon()
     if (!index.isValid()) return;
     DomItem *item = static_cast<DomItem*>(index.internalPointer());
     if (item == nullptr) return;
+
+    closeWinDialogs();
+
     QDomNode node = item->node();
     QString curIcn = node.toElement().attribute ("icon");
 
     QDialog *dlg = new QDialog (this);
+    dlg->setAttribute (Qt::WA_DeleteOnClose, true);
     dlg->setWindowTitle (tr ("Node Icon"));
     QGridLayout *grid = new QGridLayout;
     grid->setSpacing (5);
@@ -2981,49 +3028,43 @@ void FN::nodeIcon()
 
     dlg->setLayout (grid);
     dlg->resize (dlg->sizeHint());
-
-    QString imagePath;
-    switch (dlg->exec()) {
-    case QDialog::Accepted:
-        imagePath = ImagePathEntry->text();
-        delete dlg;
-        break;
-    case QDialog::Rejected:
-    default:
-        delete dlg;
-        return;
-    }
-
-    if (imagePath.isEmpty())
-    {
-        if (!curIcn.isEmpty())
+    dlg->open();
+    connect (dlg, &QDialog::finished, this, [this, ImagePathEntry, index, node, curIcn] (int res) {
+        if (res == QDialog::Accepted)
         {
-            node.toElement().removeAttribute ("icon");
-            emit model_->dataChanged (index, index); // will update geometry and call noteModified()
-        }
-    }
-    else
-    {
-        QFile file (imagePath);
-        if (file.open (QIODevice::ReadOnly))
-        {
-            QDataStream in (&file);
-            QByteArray rawarray;
-            QDataStream datastream (&rawarray, QIODevice::WriteOnly);
-            char a;
-            while (in.readRawData (&a, 1) != 0)
-                datastream.writeRawData (&a, 1);
-            file.close();
-            QByteArray base64array = rawarray.toBase64();
-            const QString icn = QString (base64array);
-
-            if (curIcn != icn)
+            QString imagePath = ImagePathEntry->text();
+            if (imagePath.isEmpty())
             {
-                node.toElement().setAttribute ("icon", icn);
-                emit model_->dataChanged (index, index);
+                if (!curIcn.isEmpty())
+                {
+                    node.toElement().removeAttribute ("icon");
+                    emit model_->dataChanged (index, index); // will update geometry and call noteModified()
+                }
+            }
+            else
+            {
+                QFile file (imagePath);
+                if (file.open (QIODevice::ReadOnly))
+                {
+                    QDataStream in (&file);
+                    QByteArray rawarray;
+                    QDataStream datastream (&rawarray, QIODevice::WriteOnly);
+                    char a;
+                    while (in.readRawData (&a, 1) != 0)
+                        datastream.writeRawData (&a, 1);
+                    file.close();
+                    QByteArray base64array = rawarray.toBase64();
+                    const QString icn = QString (base64array);
+
+                    if (curIcn != icn)
+                    {
+                        node.toElement().setAttribute ("icon", icn);
+                        emit model_->dataChanged (index, index);
+                    }
+                }
             }
         }
-    }
+    });
 }
 /*************************/
 void FN::toggleStatusBar()
@@ -3127,78 +3168,99 @@ void FN::setNewFont (DomItem *item, const QTextCharFormat &fmt)
 /*************************/
 void FN::textFontDialog()
 {
-    bool ok;
-    QFont newFont = QFontDialog::getFont (&ok, defaultFont_, this,
-                                          tr ("Select Document Font"));
-    if (ok)
-    {
-        defaultFont_ = QFont (newFont.family(), newFont.pointSize());
-        defaultFont_.setFamilies (newFont.families()); // to override the existing font families
+    closeWinDialogs();
 
-        noteModified();
-
-        QTextCharFormat fmt;
-        fmt.setFont (defaultFont_, QTextCharFormat::FontPropertiesSpecifiedOnly);
-
-        /* change the font for all shown nodes
-           FIXME: Text zooming won't work until the document is reloaded. */
-        QHash<DomItem*, TextEdit*>::iterator it;
-        for (it = widgets_.begin(); it != widgets_.end(); ++it)
+    auto dlg = new QFontDialog (defaultFont_, this);
+    dlg->setAttribute (Qt::WA_DeleteOnClose, true);
+    dlg->setWindowTitle (tr ("Select Document Font"));
+    dlg->open();
+    connect (dlg, &QDialog::finished, this, [this, dlg] (int res) {
+        if (res == QDialog::Accepted)
         {
-            it.value()->setFont (defaultFont_); // needed when the application font changes
-            it.value()->document()->setDefaultFont (defaultFont_);
-            QTextCursor cursor = it.value()->textCursor();
-            cursor.select (QTextCursor::Document);
-            cursor.mergeCharFormat (fmt);
-            QFontMetricsF metrics (defaultFont_);
-            it.value()->setTabStopDistance (4 * metrics.horizontalAdvance (' '));
-        }
+            QFont newFont = dlg->selectedFont();
+            defaultFont_ = QFont (newFont.family(), newFont.pointSize());
+            defaultFont_.setFamilies (newFont.families()); // to override the existing font families
 
-        /* also, change the font for all nodes that aren't shown yet */
-        for (int i = 0; i < model_->rowCount (QModelIndex()); ++i)
-        {
-            QModelIndex index = model_->index (i, 0, QModelIndex());
-            DomItem *item = static_cast<DomItem*>(index.internalPointer());
-            if (!widgets_.contains (item))
-                setNewFont (item, fmt);
-            QModelIndexList list = model_->allDescendants (index);
-            for (int j = 0; j < list.count(); ++j)
-            {
-                item = static_cast<DomItem*>(list.at (j).internalPointer());
-                if (!widgets_.contains (item))
-                    setNewFont (item, fmt);
-            }
-        }
+            noteModified();
 
-        /* rehighlight found matches for this node
-           because the font may be smaller now */
-        if (QWidget *cw = ui->stackedWidget->currentWidget())
-        {
-            TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
-            rehighlight (textEdit);
+            /* let the dialog be closed */
+            QTimer::singleShot (0, this, [this] () {
+                QTextCharFormat fmt;
+                fmt.setFont (defaultFont_, QTextCharFormat::FontPropertiesSpecifiedOnly);
+
+                /* change the font for all shown nodes
+                FIXME: Text zooming won't work until the document is reloaded. */
+                QHash<DomItem*, TextEdit*>::iterator it;
+                for (it = widgets_.begin(); it != widgets_.end(); ++it)
+                {
+                    it.value()->setFont (defaultFont_); // needed when the application font changes
+                    it.value()->document()->setDefaultFont (defaultFont_);
+                    QTextCursor cursor = it.value()->textCursor();
+                    cursor.select (QTextCursor::Document);
+                    cursor.mergeCharFormat (fmt);
+                    QFontMetricsF metrics (defaultFont_);
+                    it.value()->setTabStopDistance (4 * metrics.horizontalAdvance (' '));
+                }
+
+                /* also, change the font for all nodes that aren't shown yet */
+                for (int i = 0; i < model_->rowCount (QModelIndex()); ++i)
+                {
+                    QModelIndex index = model_->index (i, 0, QModelIndex());
+                    DomItem *item = static_cast<DomItem*>(index.internalPointer());
+                    if (!widgets_.contains (item))
+                        setNewFont (item, fmt);
+                    QModelIndexList list = model_->allDescendants (index);
+                    for (int j = 0; j < list.count(); ++j)
+                    {
+                        item = static_cast<DomItem*>(list.at (j).internalPointer());
+                        if (!widgets_.contains (item))
+                            setNewFont (item, fmt);
+                    }
+                }
+
+                /* rehighlight found matches for this node
+                because the font may be smaller now */
+                if (QWidget *cw = ui->stackedWidget->currentWidget())
+                {
+                    TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
+                    rehighlight (textEdit);
+                }
+            });
         }
-    }
+    });
 }
 /*************************/
 void FN::nodeFontDialog()
 {
-    bool ok;
-    QFont newFont = QFontDialog::getFont (&ok, nodeFont_, this,
-                                          tr ("Select Node Font"));
-    if (ok)
-    {
-        nodeFont_ = newFont;
-        noteModified();
-        ui->treeView->setFont (nodeFont_);
-    }
+    closeWinDialogs();
+
+    auto dlg = new QFontDialog (defaultFont_, this);
+    dlg->setAttribute (Qt::WA_DeleteOnClose, true);
+    dlg->setWindowTitle (tr ("Select Node Font"));
+    dlg->open();
+    connect (dlg, &QDialog::finished, this, [this, dlg] (int res) {
+        if (res == QDialog::Accepted)
+        {
+            nodeFont_ = dlg->selectedFont();
+            noteModified();
+
+            /* let the dialog be closed */
+            QTimer::singleShot (0, this, [this] () {
+                ui->treeView->setFont (nodeFont_);
+            });
+        }
+    });
 }
 /*************************/
 void FN::docColorDialog()
 {
+    closeWinDialogs();
+
     QColor oldBgColor = bgColor_;
     QColor oldFgColor = fgColor_;
 
     QDialog *dialog = new QDialog (this);
+    dialog->setAttribute (Qt::WA_DeleteOnClose, true);
     dialog->setWindowTitle (tr ("Set Document Colors"));
     QGridLayout *grid = new QGridLayout;
     grid->setSpacing (5);
@@ -3243,36 +3305,38 @@ void FN::docColorDialog()
 
     dialog->setLayout (grid);
 
-    switch (dialog->exec()) {
-    case QDialog::Accepted:
-        bgColor_ = bgColorLabel->getColor();
-        fgColor_ = fgColorLabel->getColor();
-        if (bgColor_ != oldBgColor || fgColor_ != oldFgColor)
-            noteModified();
-        delete dialog;
-        break;
-    case QDialog::Rejected:
-    default:
-        delete dialog;
-        return;
-    }
+    dialog->open();
+    connect (dialog, &QDialog::finished, this, [this, bgColorLabel, fgColorLabel, oldBgColor, oldFgColor] (int res) {
+        if (res == QDialog::Accepted)
+        {
+            bgColor_ = bgColorLabel->getColor();
+            fgColor_ = fgColorLabel->getColor();
+            if (bgColor_ != oldBgColor || fgColor_ != oldFgColor)
+            {
+                noteModified();
 
-    /* apply the new colors to the existing editors
-       (the colors will be applied to future editors at FN::newWidget) */
-    QHash<DomItem*, TextEdit*>::iterator it;
-    for (it = widgets_.begin(); it != widgets_.end(); ++it)
-        setEditorStyleSheet (it.value());
+                /* let the dialog be closed */
+                QTimer::singleShot (0, this, [this] () {
+                    /* apply the new colors to the existing editors
+                    (the colors will be applied to future editors at FN::newWidget) */
+                    QHash<DomItem*, TextEdit*>::iterator it;
+                    for (it = widgets_.begin(); it != widgets_.end(); ++it)
+                        setEditorStyleSheet (it.value());
 
-    /* remove green highlights and update the yellow ones
-       because their colors may not be suitable now */
-    QHash<TextEdit*,QList<QTextEdit::ExtraSelection> >::iterator iter;
-    for (iter = greenSels_.begin(); iter != greenSels_.end(); ++iter)
-    {
-        QList<QTextEdit::ExtraSelection> extraSelectionsIth;
-        greenSels_[iter.key()] = extraSelectionsIth;
-        iter.key()->setExtraSelections (QList<QTextEdit::ExtraSelection>());
-    }
-    hlight();
+                    /* remove green highlights and update the yellow ones
+                    because their colors may not be suitable now */
+                    QHash<TextEdit*,QList<QTextEdit::ExtraSelection> >::iterator iter;
+                    for (iter = greenSels_.begin(); iter != greenSels_.end(); ++iter)
+                    {
+                        QList<QTextEdit::ExtraSelection> extraSelectionsIth;
+                        greenSels_[iter.key()] = extraSelectionsIth;
+                        iter.key()->setExtraSelections (QList<QTextEdit::ExtraSelection>());
+                    }
+                    hlight();
+                });
+            }
+        }
+    });
 }
 /*************************/
 void FN::noteModified()
@@ -3296,6 +3360,7 @@ void FN::noteModified()
 void FN::nodeChanged (const QModelIndex&, const QModelIndex&)
 {
     noteModified();
+    closeWinDialogs(); // in the case of renaming
 }
 /*************************/
 void FN::treeChanged()
@@ -3303,7 +3368,7 @@ void FN::treeChanged()
     updateNodeActions();
     noteModified();
     docProp();
-    closeTagsDialog();
+    closeWinDialogs();
 }
 /*************************/
 void FN::showHideSearch()
@@ -3483,18 +3548,7 @@ void FN::findInTags()
     QString txt = ui->lineEdit->text();
     if (txt.isEmpty()) return;
 
-    /* close any existing tag matches dialog */
-    QList<QDialog *> list = findChildren<QDialog*>();
-    for (int i = 0; i < list.count(); ++i)
-    {
-        QList<QListWidget *> list1 = list.at (i)->findChildren<QListWidget *>();
-        if (!list1.isEmpty())
-        {
-            /* this also deletes the dialog */
-            list.at (i)->done (QDialog::Rejected);
-            break;
-        }
-    }
+    closeWinDialogs();
 
     QModelIndex nxtIndx = model_->index (0, 0, QModelIndex());
     DomItem *item = static_cast<DomItem*>(nxtIndx.internalPointer());
@@ -3548,21 +3602,43 @@ void FN::findInTags()
     /*TagsDialog->move (x() + width()/2 - TagsDialog->width(),
                       y() + height()/2 - TagsDialog->height());*/
     TagsDialog->raise();
-    TagsDialog->raise();
-    if (!isWayland_) TagsDialog->activateWindow();
+    if (!static_cast<FNSingleton*>(qApp)->isWayland())
+        TagsDialog->activateWindow();
 }
 /*************************/
-// Closes tag matches dialog.
-void FN::closeTagsDialog()
+void FN::closeNonModalDialogs()
 {
-    QList<QDialog *> list = findChildren<QDialog*>();
-    for (int i = 0; i < list.count(); ++i)
+    const auto dialogs = findChildren<QDialog*>();
+    for (const auto dlg : dialogs)
     {
-        QList<QListWidget *> list1 = list.at (i)->findChildren<QListWidget *>();
-        if (!list1.isEmpty()) // the only non-modal dialog (tag dialog) has a list widget
+        if (!dlg->isModal())
+            dlg->done (QDialog::Rejected);
+    }
+}
+/*************************/
+// Closes non-modal dialogs of this window and window-modal dialogs of all windows.
+
+/* WARNING: The reason for closing all window-modal dialogs is an old Qt bug: If a
+            window-modal dialog is opened in a window and is closed after another dialog
+            is opened in another window, the second dialog will be seen as a child of
+            the first window, so that a crash will happen if the dialog is closed after
+            closing the first window.
+
+            As a workaround, we can show a warning bar instead of opening a new dialog,
+            or close the previous one. With FeatherNotes, the second way is preferable. */
+
+void FN::closeWinDialogs()
+{
+    closeNonModalDialogs();
+    FNSingleton *singleton = static_cast<FNSingleton*>(qApp);
+    const auto wins = singleton->Wins;
+    for (const auto &win : wins)
+    {
+        const auto dlgs = win->findChildren<QDialog*>();
+        for (const auto dlg : dlgs)
         {
-            list.at (i)->done (QDialog::Rejected);
-            break;
+            if (dlg->windowModality() == Qt::WindowModal)
+                dlg->done (QDialog::Rejected);
         }
     }
 }
@@ -3642,7 +3718,8 @@ void FN::replaceDock()
         ui->dockReplace->setTabOrder (ui->lineEditFind, ui->lineEditReplace);
         ui->dockReplace->setTabOrder (ui->lineEditReplace, ui->rplNextButton);
         ui->dockReplace->raise();
-        if (!isWayland_) ui->dockReplace->activateWindow();
+        if (!static_cast<FNSingleton*>(qApp)->isWayland())
+            ui->dockReplace->activateWindow();
         if (!ui->lineEditFind->hasFocus())
             ui->lineEditFind->setFocus();
         return;
@@ -3952,15 +4029,15 @@ void FN::replaceAll()
             ui->dockReplace->setWindowTitle (tr ("%1 Replacements").arg (replCount_));
             if (replCount_ > 1000 && !txtReplace_.isEmpty())
             {
-                MessageBox msgBox (QMessageBox::Information,
-                                   tr ("FeatherNotes"),
-                                   "<center>" + tr ("The first 1000 replacements are highlighted.") + "</center>",
-                                   QMessageBox::Close,
-                                   this);
-                msgBox.changeButtonText (QMessageBox::Close, tr ("Close"));
-                msgBox.setParent (this, Qt::Dialog);
-                msgBox.setWindowModality (Qt::WindowModal);
-                msgBox.exec();
+                closeWinDialogs();
+                auto msgBox = new MessageBox (QMessageBox::Information,
+                                              tr ("FeatherNotes"),
+                                              "<center>" + tr ("The first 1000 replacements are highlighted.") + "</center>",
+                                              QMessageBox::Close,
+                                              this);
+                msgBox->setAttribute (Qt::WA_DeleteOnClose, true);
+                msgBox->changeButtonText (QMessageBox::Close, tr ("Close"));
+                msgBox->open();
             }
         }
         replCount_ = 0;
@@ -3974,7 +4051,7 @@ void FN::showEvent (QShowEvent *event)
     if (!shownBefore_ && !event->spontaneous())
     {
         shownBefore_ = true;
-        if (remPosition_ && !isWayland_)
+        if (remPosition_ && !static_cast<FNSingleton*>(qApp)->isWayland())
         {
             QSize theSize = (remSize_ ? winSize_ : startSize_);
             setGeometry (position_.x(), position_.y(),
@@ -3996,7 +4073,7 @@ void FN::showAndFocus()
     raise();
     if (ui->stackedWidget->count() > 0)
         qobject_cast<TextEdit*>(ui->stackedWidget->currentWidget())->setFocus();
-    if (!isWayland_)
+    if (!static_cast<FNSingleton*>(qApp)->isWayland())
     { // to bypass focus stealing prevention
         activateWindow();
         QTimer::singleShot (0, this, [this] {
@@ -4006,15 +4083,71 @@ void FN::showAndFocus()
     }
 }
 /*************************/
+void FN::activateFNWindow()
+{
+    if (qApp->activeModalWidget() != nullptr || findChildren<QDialog*>().count() > 0)
+    {
+        raise();
+        if (!static_cast<FNSingleton*>(qApp)->isWayland())
+            activateWindow();
+        return;
+    }
+#ifdef HAS_X11
+    FNSingleton *singleton = static_cast<FNSingleton*>(qApp);
+#endif
+    if (!isVisible())
+    {
+        show();
+#ifdef HAS_X11
+        if (singleton->isX11() && onWhichDesktop (winId()) != fromDesktop())
+        {
+            closeNonModalDialogs();
+            moveToCurrentDesktop (winId());
+        }
+#endif
+        showAndFocus();
+    }
+#ifdef HAS_X11
+    else if (singleton->isX11() && onWhichDesktop (winId()) != fromDesktop())
+    {
+        closeNonModalDialogs();
+        moveToCurrentDesktop (winId());
+        if (isMinimized())
+            showNormal();
+        showAndFocus();
+    }
+#endif
+    else if (!isActiveWindow())
+    {
+#ifdef HAS_X11
+        if (singleton->isX11())
+        {
+            if (isMinimized())
+                showNormal();
+            showAndFocus();
+        }
+        else
+#endif
+        {
+            closeNonModalDialogs();
+            hide();
+            QTimer::singleShot (0, this, &FN::showAndFocus);
+        }
+    }
+}
+/*************************/
 void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
 {
     if (!tray_) return;
     if (r != QSystemTrayIcon::Trigger) return;
 
-    if (QObject::sender() == tray_ && findChildren<QDialog *>().count() > 0)
-    { // don't respond to the tray icon when there's a dialog
+    FNSingleton *singleton = static_cast<FNSingleton*>(qApp);
+
+    if (QObject::sender() == tray_ && qApp->activeModalWidget() != nullptr)
+    { // don't respond to the tray icon when there's a modal dialog
         raise();
-        if (!isWayland_) activateWindow();
+        if (!singleton->isWayland())
+            activateWindow();
         return;
     }
 
@@ -4023,13 +4156,16 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
         show();
 
 #ifdef HAS_X11
-        if (isX11_ && onWhichDesktop (winId()) != fromDesktop())
+        if (singleton->isX11() && onWhichDesktop (winId()) != fromDesktop())
+        {
+            closeNonModalDialogs();
             moveToCurrentDesktop (winId());
+        }
 #endif
         showAndFocus();
     }
 #ifdef HAS_X11
-    else if (!isX11_ || onWhichDesktop (winId()) == fromDesktop())
+    else if (!singleton->isX11() || onWhichDesktop (winId()) == fromDesktop())
     {
         QRect sr;
         if (QWindow *win = windowHandle())
@@ -4048,16 +4184,17 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
         {
             if (isActiveWindow())
             {
-                if (!isMaximized() && !isFullScreen() && !isWayland_)
+                if (!isMaximized() && !isFullScreen() && !singleton->isWayland())
                 {
                     position_.setX (g.x());
                     position_.setY (g.y());
                 }
+                closeNonModalDialogs();
                 QTimer::singleShot (0, this, &QWidget::hide);
             }
             else
             {
-                if (isX11_)
+                if (singleton->isX11())
                 {
                     if (isMinimized())
                         showNormal();
@@ -4065,6 +4202,7 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
                 }
                 else
                 {
+                    closeNonModalDialogs();
                     hide();
                     QTimer::singleShot (0, this, &FN::showAndFocus);
                 }
@@ -4072,34 +4210,50 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
         }
         else
         {
+            closeNonModalDialogs();
             hide();
-            if (!isWayland_)
+            if (!singleton->isWayland())
                 setGeometry (position_.x(), position_.y(), g.width(), g.height());
             QTimer::singleShot (0, this, &FN::showAndFocus);
         }
     }
     else
     {
-        if (isX11_)
-            moveToCurrentDesktop (winId());
+        closeNonModalDialogs();
+        moveToCurrentDesktop (winId());
         if (isMinimized())
             showNormal();
         showAndFocus();
     }
 #else
-    /* without X11, just iconify the window */
+    else if (!isActiveWindow())
+    {
+        closeNonModalDialogs();
+        hide();
+        QTimer::singleShot (0, this, &FN::showAndFocus);
+    }
     else
+    {
+        closeNonModalDialogs();
+        if (!isMaximized() && !isFullScreen())
+        {
+            position_.setX (geometry().x());
+            position_.setY (geometry().y());
+        }
         QTimer::singleShot (0, this, &QWidget::hide);
+    }
 #endif
 }
 /*************************/
 void FN::activateTray()
 {
     QObject *sender = QObject::sender();
-    if (sender != nullptr && sender->objectName() == "raiseHide" && findChildren<QDialog *>().count() > 0)
-    { // don't respond to the tray icon when there's a dialog
+    if (sender != nullptr && sender->objectName() == "raiseHide"
+        && qApp->activeModalWidget() != nullptr)
+    { // don't respond to the tray icon when there's a modal dialog
         raise();
-        if (!isWayland_) activateWindow();
+        if (!static_cast<FNSingleton*>(qApp)->isWayland())
+            activateWindow();
         return;
     }
 
@@ -4114,19 +4268,22 @@ void FN::insertLink()
     TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
     QTextCursor cur = textEdit->textCursor();
     if (!cur.hasSelection()) return;
+
+    closeWinDialogs();
+
     /* only if the position is after the anchor,
        the format will be detected correctly */
     int pos, anch;
-    QTextCursor cursor = cur;
     if ((pos = cur.position()) < (anch = cur.anchor()))
     {
-        cursor.setPosition (pos);
-        cursor.setPosition (anch, QTextCursor::KeepAnchor);
+        cur.setPosition (pos);
+        cur.setPosition (anch, QTextCursor::KeepAnchor);
     }
-    QTextCharFormat format = cursor.charFormat();
+    QTextCharFormat format = cur.charFormat();
     QString href = format.anchorHref();
 
     QDialog *dialog = new QDialog (this);
+    dialog->setAttribute (Qt::WA_DeleteOnClose, true);
     dialog->setWindowTitle (tr ("Insert Link"));
     QGridLayout *grid = new QGridLayout;
     grid->setSpacing (5);
@@ -4152,42 +4309,43 @@ void FN::insertLink()
     grid->setColumnStretch (0, 1);
     grid->setRowStretch (1, 1);
 
-    /* show the dialog */
     dialog->setLayout (grid);
-    /*dialog->resize (dialog->minimumWidth(),
-                    dialog->minimumHeight());*/
-    /*dialog->show();
-    dialog->move (x() + width()/2 - dialog->width(),
-                  y() + height()/2 - dialog->height());*/
 
-    QString address;
-    switch (dialog->exec()) {
-    case QDialog::Accepted:
-        address = linkEntry->text();
-        delete dialog;
-        break;
-    case QDialog::Rejected:
-    default:
-        delete dialog;
-        return;
-    }
+    /* show the dialog */
+    dialog->open();
+    connect (dialog, &QDialog::finished, textEdit, [this, textEdit, linkEntry] (int res) {
+        if (res == QDialog::Accepted)
+        {
+            /* repeated calculations */
+            QTextCursor cur = textEdit->textCursor();
+            int pos, anch;
+            QTextCursor cursor = cur;
+            if ((pos = cur.position()) < (anch = cur.anchor()))
+            {
+                cursor.setPosition (pos);
+                cursor.setPosition (anch, QTextCursor::KeepAnchor);
+            }
+            QTextCharFormat format = cursor.charFormat();
 
-    if (!address.isEmpty())
-    {
-        format.setAnchor (true);
-        format.setFontUnderline (true);
-        format.setFontItalic (true);
-        format.setForeground (qGray (bgColor_.rgb()) > 127 ? QColor (Qt::blue) : QColor (85, 227, 255));
-    }
-    else
-    {
-        format.setAnchor (false);
-        format.setFontUnderline (false);
-        format.setFontItalic (false);
-        format.setForeground (QBrush());
-    }
-    format.setAnchorHref (address);
-    cur.mergeCharFormat (format);
+            QString address = linkEntry->text();
+            if (!address.isEmpty())
+            {
+                format.setAnchor (true);
+                format.setFontUnderline (true);
+                format.setFontItalic (true);
+                format.setForeground (qGray (bgColor_.rgb()) > 127 ? QColor (Qt::blue) : QColor (85, 227, 255));
+            }
+            else
+            {
+                format.setAnchor (false);
+                format.setFontUnderline (false);
+                format.setFontItalic (false);
+                format.setForeground (QBrush());
+            }
+            format.setAnchorHref (address);
+            cur.mergeCharFormat (format);
+        }
+    });
 }
 /*************************/
 void FN::embedImage()
@@ -4195,7 +4353,10 @@ void FN::embedImage()
     int index = ui->stackedWidget->currentIndex();
     if (index == -1) return;
 
+    closeWinDialogs();
+
     QDialog *dialog = new QDialog (this);
+    dialog->setAttribute (Qt::WA_DeleteOnClose, true);
     dialog->setWindowTitle (tr ("Embed Image"));
     QGridLayout *grid = new QGridLayout;
     grid->setSpacing (5);
@@ -4236,31 +4397,18 @@ void FN::embedImage()
     grid->setColumnStretch (1, 1);
     grid->setRowStretch (2, 1);
 
-    /* show the dialog */
     dialog->setLayout (grid);
-    /*dialog->resize (dialog->minimumWidth(),
-                    dialog->minimumHeight());*/
-    //dialog->setFixedHeight (dialog->sizeHint().height());
-    /*dialog->show();
-    dialog->move (x() + width()/2 - dialog->width(),
-                  y() + height()/2 - dialog->height());*/
 
-    switch (dialog->exec()) {
-    case QDialog::Accepted:
+    dialog->open();
+    connect (dialog, &QDialog::finished, this, [this, spinBox] (int res) {
         lastImgPath_ = ImagePathEntry_->text();
-        imgScale_ = spinBox->value();
-        delete dialog;
         ImagePathEntry_ = nullptr;
-        break;
-    case QDialog::Rejected:
-    default:
-        lastImgPath_ = ImagePathEntry_->text();
-        delete dialog;
-        ImagePathEntry_ = nullptr;
-        return;
-    }
-
-    imageEmbed (lastImgPath_);
+        if (res == QDialog::Accepted)
+        {
+            imgScale_ = spinBox->value();
+            imageEmbed (lastImgPath_);
+        }
+    });
 }
 /*************************/
 void FN::imageEmbed (const QString &path)
@@ -4284,7 +4432,7 @@ void FN::imageEmbed (const QString &path)
     QImage img = QImage (path);
     QSize imgSize = img.size();
     int w, h;
-    if (QObject::sender() == ui->actionEmbedImage)
+    if (qobject_cast<QDialog*>(QObject::sender())) // from embedImage()
     {
         w = imgSize.width() * imgScale_ / 100;
         h = imgSize.height() * imgScale_ / 100;
@@ -4302,7 +4450,8 @@ void FN::imageEmbed (const QString &path)
                           .arg (h));
 
     raise();
-    if (!isWayland_) activateWindow();
+    if (!static_cast<FNSingleton*>(qApp)->isWayland())
+        activateWindow();
 }
 /*************************/
 void FN::setImagePath (bool)
@@ -4367,7 +4516,33 @@ bool FN::isImageSelected()
 /*************************/
 void FN::scaleImage()
 {
+    TextEdit *textEdit = qobject_cast<TextEdit*>(ui->stackedWidget->currentWidget());
+    QTextCursor cur = textEdit->textCursor();
+    QTextDocumentFragment docFrag = cur.selection();
+    if (docFrag.isEmpty()) return;
+    QString txt = docFrag.toHtml();
+
+    QRegularExpression imageExp (R"((?<=\s)src\s*=\s*"data:[^<>]*;base64\s*,[a-zA-Z0-9+=/\s]+)");
+    QRegularExpressionMatch match;
+    QSize imageSize;
+    int W = 0, H = 0;
+
+    int startIndex = txt.indexOf (EMBEDDED_IMG, 0, &match);
+    if (startIndex == -1) return;
+
+    QString str = txt.mid (startIndex, match.capturedLength());
+    int indx = str.lastIndexOf (imageExp, -1, &match);
+    QString imgStr = str.mid (indx, match.capturedLength());
+    imgStr.remove (QRegularExpression (R"(src\s*=\s*"data:[^<>]*;base64\s*,)"));
+    QImage image;
+    if (image.loadFromData (QByteArray::fromBase64 (imgStr.toUtf8())))
+        imageSize = image.size();
+    if (imageSize.isEmpty()) return;
+
+    closeWinDialogs();
+
     QDialog *dialog = new QDialog (this);
+    dialog->setAttribute (Qt::WA_DeleteOnClose, true);
     dialog->setWindowTitle (tr ("Scale Image(s)"));
     QGridLayout *grid = new QGridLayout;
     grid->setSpacing (5);
@@ -4393,29 +4568,6 @@ void FN::scaleImage()
     grid->addWidget (okButton, 2, 3, Qt::AlignCenter);
     grid->setColumnStretch (1, 1);
     grid->setRowStretch (1, 1);
-
-    TextEdit *textEdit = qobject_cast<TextEdit*>(ui->stackedWidget->currentWidget());
-    QTextCursor cur = textEdit->textCursor();
-    QTextDocumentFragment docFrag = cur.selection();
-    if (docFrag.isEmpty()) return;
-    QString txt = docFrag.toHtml();
-
-    QRegularExpression imageExp (R"((?<=\s)src\s*=\s*"data:[^<>]*;base64\s*,[a-zA-Z0-9+=/\s]+)");
-    QRegularExpressionMatch match;
-    QSize imageSize;
-    int W = 0, H = 0;
-
-    int startIndex = txt.indexOf (EMBEDDED_IMG, 0, &match);
-    if (startIndex == -1) return;
-
-    QString str = txt.mid (startIndex, match.capturedLength());
-    int indx = str.lastIndexOf (imageExp, -1, &match);
-    QString imgStr = str.mid (indx, match.capturedLength());
-    imgStr.remove (QRegularExpression (R"(src\s*=\s*"data:[^<>]*;base64\s*,)"));
-    QImage image;
-    if (image.loadFromData (QByteArray::fromBase64 (imgStr.toUtf8())))
-        imageSize = image.size();
-    if (imageSize.isEmpty()) return;
 
     int scale = 100;
 
@@ -4445,61 +4597,62 @@ void FN::scaleImage()
     }
 
     spinBox->setValue (scale);
-    /* show the dialog */
+
     dialog->setLayout (grid);
-    /*dialog->resize (dialog->minimumWidth(),
-                    dialog->minimumHeight());*/
-    /*dialog->show();
-    dialog->move (x() + width()/2 - dialog->width(),
-                  y() + height()/2 - dialog->height());*/
 
-    switch (dialog->exec()) {
-    case QDialog::Accepted:
-        scale = spinBox->value();
-        delete dialog;
-        break;
-    case QDialog::Rejected:
-    default:
-        delete dialog;
-        return;
-    }
-
-    while ((indx = txt.indexOf (EMBEDDED_IMG, startIndex, &match)) != -1)
-    {
-        str = txt.mid (indx, match.capturedLength());
-
-        if (imageSize.isEmpty()) // already calculated for the first image
+    dialog->open();
+    connect (dialog, &QDialog::finished, textEdit,
+             [spinBox, textEdit, imageExp, txt, imgStr, startIndex, imageSize] (int res) {
+        if (res == QDialog::Accepted)
         {
-            QRegularExpressionMatch imageMatch;
-            int pos = str.lastIndexOf (imageExp, -1, &imageMatch);
+            int scale = spinBox->value();
 
-            if (pos == -1)
+            int startIndx = startIndex;
+            QSize imgSize = imageSize;
+            QString text = txt;
+            QString imgString = imgStr;
+
+            QRegularExpressionMatch match;
+            int indx;
+            while ((indx = text.indexOf (EMBEDDED_IMG, startIndx, &match)) != -1)
             {
-                startIndex = indx + match.capturedLength();
-                continue;
+                QString str = text.mid (indx, match.capturedLength());
+
+                if (imgSize.isEmpty()) // already calculated for the first image
+                {
+                    QRegularExpressionMatch imageMatch;
+                    int pos = str.lastIndexOf (imageExp, -1, &imageMatch);
+
+                    if (pos == -1)
+                    {
+                        startIndx = indx + match.capturedLength();
+                        continue;
+                    }
+                    imgString = str.mid (pos, imageMatch.capturedLength());
+                    imgString.remove (QRegularExpression (R"(src\s*=\s*"data:[^<>]*;base64\s*,)"));
+                    QImage image;
+                    if (!image.loadFromData (QByteArray::fromBase64 (imgString.toUtf8())))
+                    {
+                        startIndx = indx + match.capturedLength();
+                        continue;
+                    }
+                    imgSize = image.size();
+                    if (imgSize.isEmpty()) return;
+                }
+
+                int W = imgSize.width() * scale / 100;
+                int H = imgSize.height() * scale / 100;
+                text.replace (indx, match.capturedLength(), "<img src=\"data:image;base64," + imgString + QString ("\" width=\"%1\" height=\"%2\">").arg (W).arg (H));
+                imgSize = QSize(); // for the next image
+
+                /* since the text is changed, startIndex should be found again */
+                indx = text.indexOf (EMBEDDED_IMG, startIndx, &match);
+                startIndx = indx + match.capturedLength();
             }
-            imgStr = str.mid (pos, imageMatch.capturedLength());
-            imgStr.remove (QRegularExpression (R"(src\s*=\s*"data:[^<>]*;base64\s*,)"));
-            QImage image;
-            if (!image.loadFromData (QByteArray::fromBase64 (imgStr.toUtf8())))
-            {
-                startIndex = indx + match.capturedLength();
-                continue;
-            }
-            imageSize = image.size();
-            if (imageSize.isEmpty()) return;
+            QTextCursor cur = textEdit->textCursor();
+            cur.insertHtml (text);
         }
-
-        W = imageSize.width() * scale / 100;
-        H = imageSize.height() * scale / 100;
-        txt.replace (indx, match.capturedLength(), "<img src=\"data:image;base64," + imgStr + QString ("\" width=\"%1\" height=\"%2\">").arg (W).arg (H));
-        imageSize = QSize(); // for the next image
-
-        /* since the text is changed, startIndex should be found again */
-        indx = txt.indexOf (EMBEDDED_IMG, startIndex, &match);
-        startIndex = indx + match.capturedLength();
-    }
-    cur.insertHtml (txt);
+    });
 }
 /*************************/
 void FN::saveImage()
@@ -4556,6 +4709,7 @@ void FN::saveImage()
         {
             if (err)
             {
+                closeWinDialogs();
                 MessageBox msgBox;
                 msgBox.setIcon (QMessageBox::Question);
                 msgBox.setWindowTitle (tr ("Error"));
@@ -4569,7 +4723,7 @@ void FN::saveImage()
                 msgBox.setParent (this, Qt::Dialog);
                 msgBox.setWindowModality (Qt::WindowModal);
                 msgBox.show();
-                if (!isWayland_)
+                if (!static_cast<FNSingleton*>(qApp)->isWayland())
                 {
                     msgBox.move (x() + width()/2 - msgBox.width()/2,
                                  y() + height()/2 - msgBox.height()/ 2);
@@ -4587,8 +4741,10 @@ void FN::saveImage()
 
             if (retry)
             {
+                closeWinDialogs();
                 QString fname;
                 FileDialog dialog (this);
+                dialog.setWindowModality (Qt::WindowModal);
                 dialog.setAcceptMode (QFileDialog::AcceptSave);
                 dialog.setWindowTitle (tr ("Save Image As..."));
                 dialog.setFileMode (QFileDialog::AnyFile);
@@ -4641,7 +4797,10 @@ void FN::addTable()
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
 
+    closeWinDialogs();
+
     QDialog *dialog = new QDialog (this);
+    dialog->setAttribute (Qt::WA_DeleteOnClose, true);
     dialog->setWindowTitle (tr ("Insert Table"));
     QGridLayout *grid = new QGridLayout;
     grid->setSpacing (5);
@@ -4676,32 +4835,21 @@ void FN::addTable()
     grid->setRowStretch (2, 1);
 
     dialog->setLayout (grid);
-    /*dialog->resize (dialog->minimumWidth(),
-                    dialog->minimumHeight());*/
-    /*dialog->show();
-    dialog->move (x() + width()/2 - dialog->width(),
-                  y() + height()/2 - dialog->height());*/
 
-    int rows = 0;
-    int columns = 0;
-    switch (dialog->exec()) {
-    case QDialog::Accepted:
-        rows = spinBoxRow->value();
-        columns = spinBoxCol->value();
-        delete dialog;
-        break;
-    case QDialog::Rejected:
-    default:
-        delete dialog;
-        return;
-    }
-
-    TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
-    QTextCursor cur = textEdit->textCursor();
-    QTextTableFormat tf;
-    tf.setCellPadding (3);
-    QTextTable *table = cur.insertTable (rows, columns);
-    table->setFormat (tf);
+    dialog->open();
+    connect (dialog, &QDialog::finished, cw, [this, cw, spinBoxRow, spinBoxCol] (int res) {
+        if (res == QDialog::Accepted)
+        {
+            int rows = spinBoxRow->value();
+            int columns = spinBoxCol->value();
+            TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
+            QTextCursor cur = textEdit->textCursor();
+            QTextTableFormat tf;
+            tf.setCellPadding (3);
+            QTextTable *table = cur.insertTable (rows, columns);
+            table->setFormat (tf);
+        }
+    });
 }
 /*************************/
 void FN::tableMergeCells()
@@ -4836,6 +4984,7 @@ void FN::toggleIndent()
 /*************************/
 void FN::prefDialog()
 {
+    closeWinDialogs();
     /* first, update settings because another
        FeatherNotes window may have changed them  */
     readAndApplyConfig (false);
@@ -4999,7 +5148,7 @@ void FN::readAndApplyConfig (bool startup)
             isMaxed_ = settings.value ("max", false).toBool();
             isFull_ = settings.value ("fullscreen", false).toBool();
             resize (winSize_);
-            if (!remPosition_ || isWayland_) // otherwise -> showEvent()
+            if (!remPosition_ || static_cast<FNSingleton*>(qApp)->isWayland()) // otherwise -> showEvent()
             {
                 if (isFull_ && isMaxed_)
                     setWindowState (Qt::WindowMaximized | Qt::WindowFullScreen);
@@ -5222,10 +5371,14 @@ void FN::readAndApplyConfig (bool startup)
     if (openLastFile_)
     {
         xmlPath_ = settings.value ("lastOpenedFile").toString();
+        static_cast<FNSingleton*>(qApp)->setLastFile (xmlPath_);
         lastNode_ = settings.value ("lastNode", -1).toInt();
     }
     else
+    {
         lastNode_ = -1;
+        static_cast<FNSingleton*>(qApp)->setLastFile (QString());
+    }
 
 #ifdef HAS_HUNSPELL
     dictPath_ = settings.value ("dictionaryPath").toString();
@@ -5264,7 +5417,7 @@ void FN::writeGeometryConfig (bool withLastNodeInfo)
 
     if (remPosition_)
     {
-        if (!isWayland_)
+        if (!static_cast<FNSingleton*>(qApp)->isWayland())
         {
             QPoint CurrPos;
             if (isVisible() && !isMaximized() && !isFullScreen())
@@ -5325,6 +5478,7 @@ void FN::rememberLastOpenedFile (bool recentNumIsSet)
         && !xmlPath_.isEmpty()) // a file has been opened or saved to
     {
         settings.setValue ("lastOpenedFile", xmlPath_);
+        static_cast<FNSingleton*>(qApp)->setLastFile (xmlPath_);
     }
 
     if (recentNumIsSet) // called by the Preferences dialog
@@ -5332,6 +5486,7 @@ void FN::rememberLastOpenedFile (bool recentNumIsSet)
         if (!openLastFile_)
         {
             settings.remove ("lastOpenedFile");
+            static_cast<FNSingleton*>(qApp)->setLastFile (QString());
             settings.remove ("lastNode");
         }
         settings.setValue ("recentFilesNumber", recentNum);
@@ -5437,6 +5592,8 @@ void FN::txtPrint()
 {
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
+
+    closeWinDialogs();
 
     QApplication::setOverrideCursor (QCursor(Qt::WaitCursor));
 
@@ -5550,7 +5707,10 @@ void FN::exportHTML()
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
 
+    closeWinDialogs();
+
     QDialog *dialog = new QDialog (this);
+    dialog->setWindowModality (Qt::WindowModal);
     dialog->setWindowTitle (tr ("Export HTML"));
     QGridLayout *grid = new QGridLayout;
     grid->setSpacing (5);
@@ -5724,16 +5884,15 @@ void FN::exportHTML()
     if (!success)
     {
         QString str = writer.device()->errorString ();
-        MessageBox msgBox (QMessageBox::Warning,
-                           tr ("FeatherNotes"),
-                           tr ("<center><b><big>Cannot be saved!</big></b></center>"),
-                           QMessageBox::Close,
-                           this);
-        msgBox.changeButtonText (QMessageBox::Close, tr ("Close"));
-        msgBox.setInformativeText (QString ("<center><i>%1.</i></center>").arg (str));
-        msgBox.setParent (this, Qt::Dialog);
-        msgBox.setWindowModality (Qt::WindowModal);
-        msgBox.exec();
+        auto msgBox = new MessageBox (QMessageBox::Warning,
+                                      tr ("FeatherNotes"),
+                                      tr ("<center><b><big>Cannot be saved!</big></b></center>"),
+                                      QMessageBox::Close,
+                                      this);
+        msgBox->setAttribute (Qt::WA_DeleteOnClose, true);
+        msgBox->changeButtonText (QMessageBox::Close, tr ("Close"));
+        msgBox->setInformativeText (QString ("<center><i>%1.</i></center>").arg (str));
+        msgBox->open();
     }
 }
 /*************************/
@@ -5839,8 +5998,11 @@ void FN::setPswd()
     int index = ui->stackedWidget->currentIndex();
     if (index == -1) return;
 
+    closeWinDialogs();
+
     QDialog *dialog = new QDialog (this);
     dialog->setWindowTitle (tr ("Set Password"));
+    dialog->setAttribute (Qt::WA_DeleteOnClose, true);
     QGridLayout *grid = new QGridLayout;
     grid->setSpacing (5);
     grid->setContentsMargins (5, 5, 5, 5);
@@ -5849,18 +6011,39 @@ void FN::setPswd()
     lineEdit1->setMinimumWidth (200);
     lineEdit1->setEchoMode (QLineEdit::Password);
     lineEdit1->setPlaceholderText (tr ("Type password"));
-    connect (lineEdit1, &QLineEdit::returnPressed, this, &FN::reallySetPswrd);
+    connect (lineEdit1, &QLineEdit::returnPressed, this, [this, lineEdit1] {
+        if (pswrd_ != lineEdit1->text())
+        {
+            pswrd_ = lineEdit1->text();
+            noteModified();
+        }
+        reallySetPswrd();
+    });
     LineEdit *lineEdit2 = new LineEdit();
     lineEdit2->returnOnClear = false;
     lineEdit2->setEchoMode (QLineEdit::Password);
     lineEdit2->setPlaceholderText (tr ("Retype password"));
-    connect (lineEdit2, &QLineEdit::returnPressed, this, &FN::reallySetPswrd);
+    connect (lineEdit2, &QLineEdit::returnPressed, this, [this, lineEdit1] {
+        if (pswrd_ != lineEdit1->text())
+        {
+            pswrd_ = lineEdit1->text();
+            noteModified();
+        }
+        reallySetPswrd();
+    });
     QLabel *label = new QLabel();
     QSpacerItem *spacer = new QSpacerItem (1, 10);
     QPushButton *cancelButton = new QPushButton (symbolicIcon::icon (":icons/dialog-cancel.svg"), tr ("Cancel"));
     QPushButton *okButton = new QPushButton (symbolicIcon::icon (":icons/dialog-ok.svg"), tr ("OK"));
     connect (cancelButton, &QAbstractButton::clicked, dialog, &QDialog::reject);
-    connect (okButton, &QAbstractButton::clicked, this, &FN::reallySetPswrd);
+    connect (okButton, &QAbstractButton::clicked, this, [this, lineEdit1] {
+        if (pswrd_ != lineEdit1->text())
+        {
+            pswrd_ = lineEdit1->text();
+            noteModified();
+        }
+        reallySetPswrd();
+    });
 
     grid->addWidget (lineEdit1, 0, 0, 1, 3);
     grid->addWidget (lineEdit2, 1, 0, 1, 3);
@@ -5873,26 +6056,8 @@ void FN::setPswd()
     label->setVisible (false);
 
     dialog->setLayout (grid);
-    /*dialog->resize (dialog->minimumWidth(),
-                    dialog->minimumHeight());*/
-    /*dialog->show();
-    dialog->move (x() + width()/2 - dialog->width(),
-                  y() + height()/2 - dialog->height());*/
 
-    switch (dialog->exec()) {
-    case QDialog::Accepted:
-        if (pswrd_ != lineEdit1->text())
-        {
-            pswrd_ = lineEdit1->text();
-            noteModified();
-        }
-        delete dialog;
-        break;
-    case QDialog::Rejected:
-    default:
-        delete dialog;
-        break;
-    }
+    dialog->open();
 }
 /*************************/
 void FN::reallySetPswrd()
@@ -5935,7 +6100,7 @@ void FN::reallySetPswrd()
         list.at (i)->accept();
 }
 /*************************/
-bool FN::isPswrdCorrect()
+bool FN::isPswrdCorrect (const QString &file)
 {
     if (tray_ && (!isVisible() || !isActiveWindow()))
     {
@@ -5945,10 +6110,13 @@ bool FN::isPswrdCorrect()
     else if (!isVisible() || !isActiveWindow())
     {
         raise();
-        if (!isWayland_) activateWindow();
+        if (!static_cast<FNSingleton*>(qApp)->isWayland())
+            activateWindow();
         QCoreApplication::processEvents();
     }
     QCoreApplication::processEvents();
+
+    closeWinDialogs();
 
     QDialog *dialog = new QDialog (this);
     dialog->setWindowTitle (tr ("Enter Password"));
@@ -5961,18 +6129,24 @@ bool FN::isPswrdCorrect()
     lineEdit->setEchoMode (QLineEdit::Password);
     lineEdit->setPlaceholderText (tr ("Enter Password"));
     connect (lineEdit, &QLineEdit::returnPressed, this, &FN::checkPswrd);
+    QLabel *pathLabel = new QLabel(file);
+    pathLabel->setWordWrap (true);
+    pathLabel->setAlignment (Qt::AlignCenter);
     QLabel *label = new QLabel();
-    QSpacerItem *spacer = new QSpacerItem (1, 5);
+    QSpacerItem *spacer0 = new QSpacerItem (1, 5);
+    QSpacerItem *spacer1 = new QSpacerItem (1, 5);
     QPushButton *cancelButton = new QPushButton (symbolicIcon::icon (":icons/dialog-cancel.svg"), tr ("Cancel"));
     QPushButton *okButton = new QPushButton (symbolicIcon::icon (":icons/dialog-ok.svg"), tr ("OK"));
     connect (cancelButton, &QAbstractButton::clicked, dialog, &QDialog::reject);
     connect (okButton, &QAbstractButton::clicked, this, &FN::checkPswrd);
 
-    grid->addWidget (lineEdit, 0, 0, 1, 3);
-    grid->addWidget (label, 1, 0, 1, 3);
-    grid->addItem (spacer, 2, 0);
-    grid->addWidget (cancelButton, 3, 0, 1, 2, Qt::AlignRight);
-    grid->addWidget (okButton, 3, 2, Qt::AlignCenter);
+    grid->addWidget (pathLabel, 0, 0, 1, 3);
+    grid->addItem (spacer0, 1, 0);
+    grid->addWidget (lineEdit, 2, 0, 1, 3);
+    grid->addWidget (label, 3, 0, 1, 3);
+    grid->addItem (spacer1, 4, 0);
+    grid->addWidget (cancelButton, 5, 0, 1, 2, Qt::AlignRight);
+    grid->addWidget (okButton, 5, 2, Qt::AlignCenter);
     grid->setColumnStretch (1, 1);
     grid->setRowStretch (2, 1);
     label->setVisible (false);
@@ -6016,7 +6190,7 @@ void FN::checkPswrd()
     if (listEdit.isEmpty()) return;
 
     QList<QLabel *> listLabel = list.at (i)->findChildren<QLabel *>();
-    if (listLabel.isEmpty()) return;
+    if (listLabel.size() < 2) return;
 
     QList<QPushButton *> listBtn = list.at (i)->findChildren<QPushButton *>();
     if (listBtn.isEmpty()) return;
@@ -6025,8 +6199,8 @@ void FN::checkPswrd()
 
     if (listEdit.at (0)->text() != pswrd_)
     {
-        listLabel.at (0)->setText (tr ("<center>Wrong password. Retry!</center>"));
-        listLabel.at (0)->setVisible (true);
+        listLabel.at (1)->setText (tr ("<center>Wrong password. Retry!</center>"));
+        listLabel.at (1)->setVisible (true);
     }
     else
         list.at (i)->accept();
@@ -6034,6 +6208,8 @@ void FN::checkPswrd()
 /*************************/
 void FN::aboutDialog()
 {
+    closeWinDialogs();
+
     class AboutDialog : public QDialog {
     public:
         explicit AboutDialog (QWidget* parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags()) : QDialog (parent, f) {
@@ -6057,33 +6233,31 @@ void FN::aboutDialog()
         Ui::AboutDialog aboutUi;
     };
 
-    AboutDialog dialog (this);
+    auto dialog = new AboutDialog (this);
+    dialog->setAttribute (Qt::WA_DeleteOnClose, true);
 
     QIcon FPIcon = QIcon::fromTheme ("feathernotes");
     if (FPIcon.isNull())
         FPIcon = QIcon (":icons/feathernotes.svg");
-    dialog.setMainIcon (FPIcon);
-    dialog.settMainTitle (QString ("<center><b><big>%1 %2</big></b></center><br>").arg (qApp->applicationName()).arg (qApp->applicationVersion()));
-    dialog.setMainText ("<center> " + tr ("A lightweight notes manager") + " </center>\n<center> "
-                        + tr ("based on Qt") + " </center><br><center> "
-                        + tr ("Author")+": <a href='mailto:tsujan2000@gmail.com?Subject=My%20Subject'>Pedram Pourang ("
-                        + tr ("aka.") + " Tsu Jan)</a> </center><p></p>");
-    dialog.setTabTexts (tr ("About FeatherNotes"), tr ("Translators"));
-    dialog.setWindowTitle (tr ("About FeatherNotes"));
-    dialog.setWindowModality (Qt::WindowModal);
-    dialog.exec();
+    dialog->setMainIcon (FPIcon);
+    dialog->settMainTitle (QString ("<center><b><big>%1 %2</big></b></center><br>").arg (qApp->applicationName()).arg (qApp->applicationVersion()));
+    dialog->setMainText ("<center> " + tr ("A lightweight notes manager") + " </center>\n<center> "
+                         + tr ("based on Qt") + " </center><br><center> "
+                         + tr ("Author")+": <a href='mailto:tsujan2000@gmail.com?Subject=My%20Subject'>Pedram Pourang ("
+                         + tr ("aka.") + " Tsu Jan)</a> </center><p></p>");
+    dialog->setTabTexts (tr ("About FeatherNotes"), tr ("Translators"));
+    dialog->setWindowTitle (tr ("About FeatherNotes"));
+    dialog->open();
 }
 /*************************/
 void FN::showHelpDialog()
 {
-    FHelp *dlg = new FHelp (this);
+    closeWinDialogs();
+
+    auto dlg = new FHelp (this);
+    dlg->setAttribute (Qt::WA_DeleteOnClose, true);
     dlg->resize (ui->stackedWidget->size().expandedTo (ui->treeView->size()));
-    switch (dlg->exec()) {
-    case QDialog::Rejected:
-    default:
-        delete dlg;
-        break;
-    }
+    dlg->open();
 }
 /*************************/
 void FN::updateRecentAction()
@@ -6252,29 +6426,30 @@ static inline void selectWord (QTextCursor& cur)
 
 void FN::spellingCheckingMsg (const QString &msg, bool hasInfo)
 {
-    MessageBox msgBox;
+    auto msgBox = new MessageBox (this);
+    msgBox->setAttribute (Qt::WA_DeleteOnClose, true);
     if (hasInfo)
     {
-        msgBox.setIcon (QMessageBox::Warning);
-        msgBox.setText ("<center><b><big>" + msg + "</big></b></center>");
-        msgBox.setInformativeText ("<center><i>" + tr ("See Preferences → Text → Spell Checking!") + "</i></center>");
+        msgBox->setIcon (QMessageBox::Warning);
+        msgBox->setText ("<center><b><big>" + msg + "</big></b></center>");
+        msgBox->setInformativeText ("<center><i>" + tr ("See Preferences → Text → Spell Checking!") + "</i></center>");
     }
     else
     {
-        msgBox.setIcon (QMessageBox::Information);
-        msgBox.setText ("<center>" + msg + "</center>");
+        msgBox->setIcon (QMessageBox::Information);
+        msgBox->setText ("<center>" + msg + "</center>");
     }
-    msgBox.setStandardButtons (QMessageBox::Close);
-    msgBox.changeButtonText (QMessageBox::Close, tr ("Close"));
-    msgBox.setParent (this, Qt::Dialog);
-    msgBox.setWindowModality (Qt::WindowModal);
-    msgBox.exec();
+    msgBox->setStandardButtons (QMessageBox::Close);
+    msgBox->changeButtonText (QMessageBox::Close, tr ("Close"));
+    msgBox->open();
 }
 
 void FN::checkSpelling()
 {
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
+
+    closeWinDialogs();
 
     auto dictPath = dictPath_;
     if (dictPath.isEmpty())
@@ -6347,32 +6522,33 @@ void FN::checkSpelling()
     textEdit->setTextCursor (cur);
     textEdit->ensureCursorVisible();
 
-    SpellDialog dlg (spellChecker, word, this);
-    dlg.setWindowTitle (tr ("Spell Checking"));
+    auto dlg = new SpellDialog (spellChecker, word, this);
+    dlg->setAttribute (Qt::WA_DeleteOnClose, true);
+    dlg->setWindowTitle (tr ("Spell Checking"));
 
-    connect (&dlg, &SpellDialog::spellChecked, [&dlg, textEdit] (int res) {
+    connect (dlg, &SpellDialog::spellChecked, [dlg, textEdit] (int res) {
         QTextCursor cur = textEdit->textCursor();
         if (!cur.hasSelection()) return; // impossible
         QString word = cur.selectedText();
         QString corrected;
         switch (res) {
         case SpellDialog::CorrectOnce:
-            cur.insertText (dlg.replacement());
+            cur.insertText (dlg->replacement());
             break;
         case SpellDialog::IgnoreOnce:
             break;
         case SpellDialog::CorrectAll:
             /* remember this corretion */
-            dlg.spellChecker()->addToCorrections (word, dlg.replacement());
-            cur.insertText (dlg.replacement());
+            dlg->spellChecker()->addToCorrections (word, dlg->replacement());
+            cur.insertText (dlg->replacement());
             break;
         case SpellDialog::IgnoreAll:
             /* always ignore the selected word */
-            dlg.spellChecker()->ignoreWord (word);
+            dlg->spellChecker()->ignoreWord (word);
             break;
         case SpellDialog::AddToDict:
             /* not only ignore it but also add it to user dictionary */
-            dlg.spellChecker()->addToUserWordlist (word);
+            dlg->spellChecker()->addToUserWordlist (word);
             break;
         }
 
@@ -6382,7 +6558,7 @@ void FN::checkSpelling()
         {
             textEdit->setTextCursor (cur);
             textEdit->ensureCursorVisible();
-            dlg.close();
+            dlg->close();
             return;
         }
         if (cur.movePosition (QTextCursor::NextCharacter))
@@ -6396,14 +6572,14 @@ void FN::checkSpelling()
             {
                 textEdit->setTextCursor (cur);
                 textEdit->ensureCursorVisible();
-                dlg.close();
+                dlg->close();
                 return;
             }
             selectWord (cur);
             word = cur.selectedText();
         }
-        while (dlg.spellChecker()->spell (word)
-               || !(corrected = dlg.spellChecker()->correct (word)).isEmpty())
+        while (dlg->spellChecker()->spell (word)
+               || !(corrected = dlg->spellChecker()->correct (word)).isEmpty())
         {
             if (!corrected.isEmpty())
             {
@@ -6416,7 +6592,7 @@ void FN::checkSpelling()
             {
                 textEdit->setTextCursor (cur);
                 textEdit->ensureCursorVisible();
-                dlg.close();
+                dlg->close();
                 return;
             }
             if (cur.movePosition (QTextCursor::NextCharacter))
@@ -6429,7 +6605,7 @@ void FN::checkSpelling()
                 {
                     textEdit->setTextCursor (cur);
                     textEdit->ensureCursorVisible();
-                    dlg.close();
+                    dlg->close();
                     return;
                 }
                 selectWord (cur);
@@ -6438,12 +6614,14 @@ void FN::checkSpelling()
         }
         textEdit->setTextCursor (cur);
         textEdit->ensureCursorVisible();
-        dlg.checkWord (word);
+        dlg->checkWord (word);
     });
 
-    dlg.exec();
+    dlg->open();
 
-    delete spellChecker;
+    connect (dlg, &QDialog::finished, this, [spellChecker] {
+        delete spellChecker;
+    });
 }
 #endif
 /*************************/

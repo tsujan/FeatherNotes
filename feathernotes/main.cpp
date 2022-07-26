@@ -15,13 +15,12 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <QTextStream>
+#include "singleton.h"
+
 #include <csignal> // signal.h in C
-#include <QStringList>
-#include <QApplication>
 #include <QLibraryInfo>
 #include <QTranslator>
-#include <QTextStream>
-#include "fn.h"
 
 void handleQuitSignals (const std::vector<int>& quitSignals)
 {
@@ -37,7 +36,7 @@ void handleQuitSignals (const std::vector<int>& quitSignals)
 int main(int argc, char *argv[])
 {
     const QString name = "FeatherNotes";
-    const QString version = "0.11.0";
+    const QString version = "1.0.0";
     const QString option = QString::fromUtf8 (argv[1]);
     if (option == "--help" || option == "-h")
     {
@@ -58,16 +57,16 @@ int main(int argc, char *argv[])
         return 0;
     }
 
-    QApplication app (argc, argv);
-    app.setApplicationName (name);
-    app.setApplicationVersion (version);
+    FeatherNotes::FNSingleton singleton (argc, argv);
+    singleton.setApplicationName (name);
+    singleton.setApplicationVersion (version);
 
 #if not defined (Q_OS_WIN)
     handleQuitSignals ({SIGQUIT, SIGINT, SIGTERM, SIGHUP}); // -> https://en.wikipedia.org/wiki/Unix_signal
 #endif
 
 #if (QT_VERSION < QT_VERSION_CHECK(6,0,0))
-    app.setAttribute (Qt::AA_UseHighDpiPixmaps, true);
+    singleton.setAttribute (Qt::AA_UseHighDpiPixmaps, true);
 #endif
 
     QStringList langs (QLocale::system().uiLanguages());
@@ -77,60 +76,54 @@ int main(int argc, char *argv[])
 
     QTranslator qtTranslator;
 #if (QT_VERSION < QT_VERSION_CHECK(6,0,0))
-    if (!qtTranslator.load ("qt_" + lang, QLibraryInfo::location (QLibraryInfo::TranslationsPath)))
+    if (qtTranslator.load ("qt_" + lang, QLibraryInfo::location (QLibraryInfo::TranslationsPath)))
 #else
-    if (!qtTranslator.load ("qt_" + lang, QLibraryInfo::path (QLibraryInfo::TranslationsPath)))
+    if (qtTranslator.load ("qt_" + lang, QLibraryInfo::path (QLibraryInfo::TranslationsPath)))
 #endif
-    { // shouldn't be needed
-        if (!langs.isEmpty())
-        {
-            lang = langs.first().split (QLatin1Char ('_')).first();
+    {
+        singleton.installTranslator (&qtTranslator);
+    }
+    else if (!langs.isEmpty())
+    {
+        lang = langs.first().split (QLatin1Char ('_')).first();
 #if (QT_VERSION < QT_VERSION_CHECK(6,0,0))
-            qtTranslator.load ("qt_" + lang, QLibraryInfo::location (QLibraryInfo::TranslationsPath));
+        if (qtTranslator.load ("qt_" + lang, QLibraryInfo::location (QLibraryInfo::TranslationsPath)))
 #else
-            (void)qtTranslator.load ("qt_" + lang, QLibraryInfo::path (QLibraryInfo::TranslationsPath));
+        if (qtTranslator.load ("qt_" + lang, QLibraryInfo::path (QLibraryInfo::TranslationsPath)))
 #endif
+        {
+            singleton.installTranslator (&qtTranslator);
         }
     }
-    app.installTranslator (&qtTranslator);
 
     QTranslator FPTranslator;
-
-#if (QT_VERSION < QT_VERSION_CHECK(6,0,0))
-
 #if defined (Q_OS_HAIKU)
-    FPTranslator.load ("feathernotes_" + lang, qApp->applicationDirPath() + "/translations");
+    if (FPTranslator.load ("feathernotes_" + lang, qApp->applicationDirPath() + "/translations"))
 #elif defined (Q_OS_WIN)
-    FPTranslator.load ("feathernotes_" + lang, qApp->applicationDirPath() + "\\..\\data\\translations\\translations");
+    if (FPTranslator.load ("feathernotes_" + lang, qApp->applicationDirPath() + "\\..\\data\\translations\\translations"))
 #else
-    FPTranslator.load ("feathernotes_" + lang, QStringLiteral (DATADIR) + "/feathernotes/translations");
+    if (FPTranslator.load ("feathernotes_" + lang, QStringLiteral (DATADIR) + "/feathernotes/translations"))
 #endif
-
-#else
-
-#if defined (Q_OS_HAIKU)
-    (void)FPTranslator.load ("feathernotes_" + lang, qApp->applicationDirPath() + "/translations");
-#elif defined (Q_OS_WIN)
-    (void)FPTranslator.load ("feathernotes_" + lang, qApp->applicationDirPath() + "\\..\\data\\translations\\translations");
-#else
-    (void)FPTranslator.load ("feathernotes_" + lang, QStringLiteral (DATADIR) + "/feathernotes/translations");
-#endif
-
-#endif
-
-    app.installTranslator (&FPTranslator);
-
-    QStringList message;
-    if (argc > 1)
     {
-        message << QString::fromUtf8 (argv[1]);
-        if (argc > 2)
-            message << QString::fromUtf8 (argv[2]);
+        singleton.installTranslator (&FPTranslator);
     }
 
-    FeatherNotes::FN w (message);
+    QStringList info;
+    if (argc > 1)
+    {
+        info << QString::fromUtf8 (argv[1]);
+        if (argc > 2)
+            info << QString::fromUtf8 (argv[2]);
+    }
 
-    QObject::connect (&app, &QCoreApplication::aboutToQuit, &w, &FeatherNotes::FN::quitting);
+    if (!singleton.isPrimaryInstance())
+    {
+        singleton.sendInfo (info); // is sent to the primary instance
+        return 0;
+    }
 
-    return app.exec();
+    QObject::connect (&singleton, &QCoreApplication::aboutToQuit, &singleton, &FeatherNotes::FNSingleton::quitting);
+    singleton.openFile (info);
+
+    return singleton.exec();
 }

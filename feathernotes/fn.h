@@ -42,9 +42,16 @@ public:
     explicit FN (const QStringList& message, QWidget *parent = nullptr);
     ~FN();
 
+    void activateFNWindow();
+    void quitting();
+
     void writeGeometryConfig (bool withLastNodeInfo = true);
     void rememberLastOpenedFile (bool recentNumIsSet = false);
     void writeConfig();
+
+    QString currentPath() const {
+        return xmlPath_;
+    }
 
     bool isSizeRem() const {
         return remSize_;
@@ -227,9 +234,6 @@ public:
     }
 #endif
 
-public slots:
-    void quitting();
-
 private slots:
     bool close();
     void checkTray();
@@ -376,14 +380,15 @@ private:
     QString validatedShortcut (const QVariant v, bool *isValid);
     void readAndApplyConfig (bool startup = true);
     QString nodeAddress (QModelIndex index);
-    bool isPswrdCorrect();
+    bool isPswrdCorrect (const QString &file);
     void dragMoveEvent (QDragMoveEvent *event);
     void dragEnterEvent (QDragEnterEvent *event);
     void dropEvent (QDropEvent *event);
     bool event (QEvent *event);
     void noteModified();
     void docProp();
-    void closeTagsDialog();
+    void closeNonModalDialogs();
+    void closeWinDialogs();
     void updateNodeActions();
 
 #ifdef HAS_HUNSPELL
@@ -391,7 +396,6 @@ private:
 #endif
 
     Ui::FN *ui;
-    bool isX11_, isWayland_;
     bool closed_; // Whether FN::closeEvent() is called before quitting.
     bool closeInteractively_; // See the note inside "FN::closeEvent()".
     //QWidget *dummyWidget; // For hiding the main window while keeping all its state info.

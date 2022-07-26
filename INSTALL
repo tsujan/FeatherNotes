@@ -38,8 +38,8 @@ And, finally, in OpenSUSE:
  * libqt5-qttools-devel
  * hunspell-devel (for spell checking)
 
-With cmake
-==========
+NOTE: `pkgconfig` is required for finding Hunspell's version with cmake. Since it may be provided by more that one package in some distros, it is not listed above.
+
 Then, open a terminal inside this folder and issue the following commands:
 
 	mkdir build && cd build
@@ -49,40 +49,23 @@ Then, open a terminal inside this folder and issue the following commands:
 
 NOTE: Experimental compilation against Qt6 can be done with `cmake .. -DENABLE_QT5=OFF`. When Qt6 becomes the default version of Qt in some distros, that compilation option will be set to `OFF` by default.
 
-With qmake
-==========
-If you prefer qmake, use these commands instead:
+************************************
+*   Compilation without Hunspell   *
+************************************
 
-	qmake && make
-	sudo make install
+Under Linux and Unix, FeatherNotes supports spell checking with Hunspell, which is included in the compilation by default.
 
-You might need to put the full path of qmake in the first command (it can belong to Qt5 or Qt6) and also the full path of "lrelease" binary in 'feathernotes/feathernotes.pro'. After a qmake compilation, you could clean the source directory with this command:
+But if you do not want the spell checking support, you could first turn it off with:
 
-	make distclean
-
-*********************************
-*   Compilation with Hunspell   *
-*********************************
-
-Under Linux and Unix, FeatherNotes supports spell checking with Hunspell. If the compilation is done by cmake, Hunspell will be included automatically.
-
-But if you use qmake and want the spell checking support, you should turn it on at first:
-
-	qmake WITH_HUNSPELL=YES
-
-The reason is that the qmake support has existed from the beginning and needs to be backward compatible.
+	cmake .. -DWITH_HUNSPELL=OFF
 
 *******************************
 *   Compilation without X11   *
 *******************************
 
-If, for whatever reason, you do not want the X11 support, you could first turn on the option "WITHOUT_X11" with cmake:
+If, for whatever reason, you do not want the X11 support, you could first turn on the option "WITHOUT_X11":
 
 	cmake .. -DWITHOUT_X11=ON
-
-Or, if you use qmake:
-
-	qmake WITHOUT_X11=YES
 
 The result will have all features except for virtual desktop awareness.
 

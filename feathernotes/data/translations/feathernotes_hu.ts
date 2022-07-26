@@ -4,7 +4,7 @@
 <context>
     <name>FeatherNotes::AboutDialog</name>
     <message>
-        <location filename="../../about.ui" line="167"/>
+        <location filename="../../about.ui" line="169"/>
         <source>License</source>
         <translation>Licenc</translation>
     </message>
@@ -26,9 +26,9 @@
     <name>FeatherNotes::FN</name>
     <message>
         <location filename="../../fn.ui" line="14"/>
-        <location filename="../../fn.cpp" line="1616"/>
-        <location filename="../../fn.cpp" line="3956"/>
-        <location filename="../../fn.cpp" line="5728"/>
+        <location filename="../../fn.cpp" line="1641"/>
+        <location filename="../../fn.cpp" line="4034"/>
+        <location filename="../../fn.cpp" line="5888"/>
         <source>FeatherNotes</source>
         <translation>FeatherNotes</translation>
     </message>
@@ -215,7 +215,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="536"/>
-        <location filename="../../fn.cpp" line="994"/>
+        <location filename="../../fn.cpp" line="1008"/>
         <source>Save</source>
         <translation>Mentés</translation>
     </message>
@@ -226,7 +226,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="544"/>
-        <location filename="../../fn.cpp" line="648"/>
+        <location filename="../../fn.cpp" line="659"/>
         <source>&amp;Open</source>
         <translation>Me&amp;gnyitás</translation>
     </message>
@@ -397,7 +397,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="712"/>
-        <location filename="../../fn.cpp" line="647"/>
+        <location filename="../../fn.cpp" line="658"/>
         <source>&amp;New Note</source>
         <translation>Ú&amp;j jegyzet</translation>
     </message>
@@ -438,7 +438,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="758"/>
-        <location filename="../../fn.cpp" line="650"/>
+        <location filename="../../fn.cpp" line="661"/>
         <source>&amp;Quit</source>
         <translation>&amp;Kilépés</translation>
     </message>
@@ -499,7 +499,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="824"/>
-        <location filename="../../fn.cpp" line="4199"/>
+        <location filename="../../fn.cpp" line="4360"/>
         <source>Embed Image</source>
         <translation>Kép beágyazása</translation>
     </message>
@@ -705,7 +705,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="1067"/>
-        <location filename="../../fn.cpp" line="2174"/>
+        <location filename="../../fn.cpp" line="2204"/>
         <source>&amp;Right</source>
         <translation>&amp;Jobbra igazítás</translation>
     </message>
@@ -721,7 +721,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="1084"/>
-        <location filename="../../fn.cpp" line="2168"/>
+        <location filename="../../fn.cpp" line="2198"/>
         <source>&amp;Left</source>
         <translation>&amp;Balra igazítás</translation>
     </message>
@@ -994,432 +994,433 @@
         <translation>&amp;Tisztítás</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2927"/>
+        <location filename="../../fn.cpp" line="2974"/>
         <source>Node Icon</source>
         <translation>Elemikon</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="644"/>
+        <location filename="../../fn.cpp" line="655"/>
         <source>&amp;Raise/Hide</source>
         <translation>&amp;Megjelenítés/Elrejtés</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="891"/>
+        <location filename="../../fn.cpp" line="904"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;New note?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Új jegyzet?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="892"/>
+        <location filename="../../fn.cpp" line="905"/>
         <source>&lt;center&gt;&lt;i&gt;Do you really want to leave this document&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;and create an empty one?&lt;/i&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;i&gt;Biztosan bezárja a dokumentumot&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;és létrehoz egy újat?&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="895"/>
-        <location filename="../../fn.cpp" line="2755"/>
-        <location filename="../../fn.cpp" line="4566"/>
+        <location filename="../../fn.cpp" line="908"/>
+        <location filename="../../fn.cpp" line="2805"/>
+        <location filename="../../fn.cpp" line="4720"/>
         <source>Yes</source>
         <translation>Igen</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="896"/>
-        <location filename="../../fn.cpp" line="2756"/>
-        <location filename="../../fn.cpp" line="4567"/>
+        <location filename="../../fn.cpp" line="909"/>
+        <location filename="../../fn.cpp" line="2806"/>
+        <location filename="../../fn.cpp" line="4721"/>
         <source>No</source>
         <translation>Nem</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="986"/>
+        <location filename="../../fn.cpp" line="1000"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Save changes?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Menti a változtatásokat?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="988"/>
+        <location filename="../../fn.cpp" line="1002"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been modified.&lt;/i&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;i&gt;A dokumentum módosítva lett.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="990"/>
+        <location filename="../../fn.cpp" line="1004"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been removed.&lt;/i&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;i&gt;A dokumentum törölve lett.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="995"/>
+        <location filename="../../fn.cpp" line="1009"/>
         <source>Discard changes</source>
         <translation>Elvetés</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="996"/>
-        <location filename="../../fn.cpp" line="2868"/>
-        <location filename="../../fn.cpp" line="2970"/>
-        <location filename="../../fn.cpp" line="3230"/>
-        <location filename="../../fn.cpp" line="4142"/>
-        <location filename="../../fn.cpp" line="4223"/>
+        <location filename="../../fn.cpp" line="1010"/>
+        <location filename="../../fn.cpp" line="2923"/>
+        <location filename="../../fn.cpp" line="3017"/>
+        <location filename="../../fn.cpp" line="3292"/>
+        <location filename="../../fn.cpp" line="4299"/>
         <location filename="../../fn.cpp" line="4384"/>
-        <location filename="../../fn.cpp" line="4663"/>
-        <location filename="../../fn.cpp" line="5597"/>
-        <location filename="../../fn.cpp" line="5860"/>
-        <location filename="../../fn.cpp" line="5966"/>
+        <location filename="../../fn.cpp" line="4559"/>
+        <location filename="../../fn.cpp" line="4822"/>
+        <location filename="../../fn.cpp" line="5757"/>
+        <location filename="../../fn.cpp" line="6036"/>
+        <location filename="../../fn.cpp" line="6138"/>
         <source>Cancel</source>
         <translation>Mégse</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1461"/>
+        <location filename="../../fn.cpp" line="1477"/>
         <source>Open file...</source>
         <translation>Fájl megnyitása...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1617"/>
-        <location filename="../../fn.cpp" line="5729"/>
+        <location filename="../../fn.cpp" line="1642"/>
+        <location filename="../../fn.cpp" line="5889"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be saved!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Nem menthető!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1621"/>
-        <location filename="../../fn.cpp" line="3534"/>
-        <location filename="../../fn.cpp" line="3960"/>
-        <location filename="../../fn.cpp" line="5732"/>
-        <location filename="../../fn.cpp" line="6268"/>
+        <location filename="../../fn.cpp" line="629"/>
+        <location filename="../../fn.cpp" line="1647"/>
+        <location filename="../../fn.cpp" line="3588"/>
+        <location filename="../../fn.cpp" line="4039"/>
+        <location filename="../../fn.cpp" line="5893"/>
+        <location filename="../../fn.cpp" line="6443"/>
         <source>Close</source>
         <translation>Bezárás</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1719"/>
-        <location filename="../../fn.cpp" line="1740"/>
+        <location filename="../../fn.cpp" line="1747"/>
+        <location filename="../../fn.cpp" line="1770"/>
         <source>Save As...</source>
         <translation>Mentés másként...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2752"/>
+        <location filename="../../fn.cpp" line="2802"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Delete this node?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Törli ezt az elemet?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2753"/>
+        <location filename="../../fn.cpp" line="2803"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;i&gt;Warning!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
 &lt;center&gt;This action cannot be undone.&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;i&gt;Figyelmeztetés!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
 &lt;center&gt;Ezt a műveletet nem lehet visszavonni.&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2854"/>
+        <location filename="../../fn.cpp" line="2909"/>
         <source>Tags</source>
         <translation>Címkék</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2869"/>
-        <location filename="../../fn.cpp" line="2971"/>
-        <location filename="../../fn.cpp" line="3231"/>
-        <location filename="../../fn.cpp" line="4144"/>
-        <location filename="../../fn.cpp" line="4224"/>
+        <location filename="../../fn.cpp" line="2924"/>
+        <location filename="../../fn.cpp" line="3018"/>
+        <location filename="../../fn.cpp" line="3293"/>
+        <location filename="../../fn.cpp" line="4301"/>
         <location filename="../../fn.cpp" line="4385"/>
-        <location filename="../../fn.cpp" line="4664"/>
-        <location filename="../../fn.cpp" line="5599"/>
-        <location filename="../../fn.cpp" line="5861"/>
-        <location filename="../../fn.cpp" line="5967"/>
+        <location filename="../../fn.cpp" line="4560"/>
+        <location filename="../../fn.cpp" line="4823"/>
+        <location filename="../../fn.cpp" line="5759"/>
+        <location filename="../../fn.cpp" line="6037"/>
+        <location filename="../../fn.cpp" line="6139"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3057"/>
-        <location filename="../../fn.cpp" line="3090"/>
+        <location filename="../../fn.cpp" line="3098"/>
+        <location filename="../../fn.cpp" line="3131"/>
         <source>&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</source>
         <translation>&lt;b&gt;Főelemek:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Összes elem:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3063"/>
-        <location filename="../../fn.cpp" line="3096"/>
+        <location filename="../../fn.cpp" line="3104"/>
+        <location filename="../../fn.cpp" line="3137"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</source>
         <translation>&lt;b&gt;Jegyzet:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Fő elemek:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Összes elem:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3521"/>
+        <location filename="../../fn.cpp" line="3575"/>
         <source>%1 Matches</source>
         <translation>%1 egyezés</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3523"/>
+        <location filename="../../fn.cpp" line="3577"/>
         <source>One Match</source>
         <translation>Egy egyezés</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3525"/>
-        <location filename="../../fn.cpp" line="3840"/>
+        <location filename="../../fn.cpp" line="3579"/>
+        <location filename="../../fn.cpp" line="3917"/>
         <source>No Match</source>
         <translation>Nincs egyezés</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3640"/>
-        <location filename="../../fn.cpp" line="3692"/>
+        <location filename="../../fn.cpp" line="3716"/>
+        <location filename="../../fn.cpp" line="3769"/>
         <source>Replacement</source>
         <translation>Csere</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3947"/>
+        <location filename="../../fn.cpp" line="4024"/>
         <source>No Replacement</source>
         <translation>Nincs csere</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3949"/>
+        <location filename="../../fn.cpp" line="4026"/>
         <source>One Replacement</source>
         <translation>Egy csere</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3952"/>
+        <location filename="../../fn.cpp" line="4029"/>
         <source>%1 Replacements</source>
         <translation>%1 csere</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4130"/>
+        <location filename="../../fn.cpp" line="4287"/>
         <source>Insert Link</source>
         <translation>Link beszúrása</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2935"/>
-        <location filename="../../fn.cpp" line="4208"/>
+        <location filename="../../fn.cpp" line="2982"/>
+        <location filename="../../fn.cpp" line="4369"/>
         <source>Image path</source>
         <translation>Kép útvonala</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2939"/>
-        <location filename="../../fn.cpp" line="4212"/>
+        <location filename="../../fn.cpp" line="2986"/>
+        <location filename="../../fn.cpp" line="4373"/>
         <source>Open image</source>
         <translation>Kép megnyitása</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4220"/>
         <location filename="../../fn.cpp" line="4381"/>
+        <location filename="../../fn.cpp" line="4556"/>
         <source>Scaling percentage</source>
         <translation>Átméretezés százalékban</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2957"/>
-        <location filename="../../fn.cpp" line="4329"/>
+        <location filename="../../fn.cpp" line="3004"/>
+        <location filename="../../fn.cpp" line="4478"/>
         <source>Open Image...</source>
         <translation>Kép megnyitása...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="618"/>
+        <location filename="../../fn.cpp" line="624"/>
         <source>Warning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="619"/>
+        <location filename="../../fn.cpp" line="625"/>
         <source>System tray is not available.
 Please disable tray in Preferences.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="942"/>
+        <location filename="../../fn.cpp" line="955"/>
         <source>New Node</source>
         <translation>Új elem</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1463"/>
-        <location filename="../../fn.cpp" line="1721"/>
-        <location filename="../../fn.cpp" line="1742"/>
+        <location filename="../../fn.cpp" line="1479"/>
+        <location filename="../../fn.cpp" line="1749"/>
+        <location filename="../../fn.cpp" line="1772"/>
         <source>FeatherNotes documents (*.fnx);;All Files (*)</source>
         <translation>FeatherNotes dokumentumok (*.fnx);;Minden fájl (*)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1618"/>
+        <location filename="../../fn.cpp" line="1643"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be opened!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Nem lehet megnyitni!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1703"/>
-        <location filename="../../fn.cpp" line="5451"/>
-        <location filename="../../fn.cpp" line="5460"/>
-        <location filename="../../fn.cpp" line="5586"/>
-        <location filename="../../fn.cpp" line="5780"/>
-        <location filename="../../fn.cpp" line="5789"/>
-        <location filename="../../fn.cpp" line="5815"/>
+        <location filename="../../fn.cpp" line="1729"/>
+        <location filename="../../fn.cpp" line="5608"/>
+        <location filename="../../fn.cpp" line="5617"/>
+        <location filename="../../fn.cpp" line="5746"/>
+        <location filename="../../fn.cpp" line="5939"/>
+        <location filename="../../fn.cpp" line="5948"/>
+        <location filename="../../fn.cpp" line="5974"/>
         <source>Untitled</source>
         <translation>Névtelen</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2167"/>
+        <location filename="../../fn.cpp" line="2197"/>
         <source>Align Table</source>
         <translation>Táblázat igazítása</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2180"/>
+        <location filename="../../fn.cpp" line="2210"/>
         <source>&amp;Center</source>
         <translation>&amp;Középre</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2604"/>
+        <location filename="../../fn.cpp" line="2635"/>
         <source>Select Text Color</source>
         <translation>Szövegszín kiválasztása</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2626"/>
+        <location filename="../../fn.cpp" line="2667"/>
         <source>Select Background Color</source>
         <translation>Háttérszín kiválasztása</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2751"/>
+        <location filename="../../fn.cpp" line="2801"/>
         <source>Deletion</source>
         <translation>Törlés</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2864"/>
+        <location filename="../../fn.cpp" line="2919"/>
         <source>Tag(s) for this node</source>
         <translation>Címkék az elemhez</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2959"/>
-        <location filename="../../fn.cpp" line="4331"/>
+        <location filename="../../fn.cpp" line="3006"/>
+        <location filename="../../fn.cpp" line="4480"/>
         <source>Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)</source>
         <translation>Képfájlok (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;Minden fájl (*)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3132"/>
+        <location filename="../../fn.cpp" line="3175"/>
         <source>Select Document Font</source>
         <translation>Dokumentum betűtípusának kiválasztása</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3187"/>
+        <location filename="../../fn.cpp" line="3239"/>
         <source>Select Node Font</source>
         <translation>Elemek betűtípusának kiválasztása</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3202"/>
+        <location filename="../../fn.cpp" line="3264"/>
         <source>Set Document Colors</source>
         <translation>Dokumentumszínek beállítása</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3212"/>
+        <location filename="../../fn.cpp" line="3274"/>
         <source>These colors will be applied to new nodes.&lt;br&gt;They may or may not affect existing nodes&lt;br&gt;but document reopening is recommended.</source>
         <translation>Ezek a színek lesznek alkalmazva az új elemekre.&lt;br&gt;Ezek vagy érintik, vagy nem érintik a meglévő elemeket,&lt;br&gt;de javasolt a dokumentum újbóli megnyitása.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3215"/>
+        <location filename="../../fn.cpp" line="3277"/>
         <source>Background color:</source>
         <translation>Háttérszín:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3221"/>
+        <location filename="../../fn.cpp" line="3283"/>
         <source>Text color:</source>
         <translation>Szövegszín:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3957"/>
+        <location filename="../../fn.cpp" line="4035"/>
         <source>The first 1000 replacements are highlighted.</source>
         <translation>Az első 1000 csere van kiemelve.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4215"/>
-        <location filename="../../fn.cpp" line="4377"/>
+        <location filename="../../fn.cpp" line="4376"/>
+        <location filename="../../fn.cpp" line="4552"/>
         <source>Scale to</source>
         <translation>Átméretezés</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4219"/>
         <location filename="../../fn.cpp" line="4380"/>
+        <location filename="../../fn.cpp" line="4555"/>
         <source>%</source>
         <translation>%</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4371"/>
+        <location filename="../../fn.cpp" line="4546"/>
         <source>Scale Image(s)</source>
         <translation>Kép(ek) átméretezése</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4530"/>
+        <location filename="../../fn.cpp" line="4683"/>
         <source>untitled</source>
         <translation>névtelen</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4561"/>
+        <location filename="../../fn.cpp" line="4715"/>
         <source>Error</source>
         <translation>Hiba</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4562"/>
+        <location filename="../../fn.cpp" line="4716"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Image cannot be saved! Retry?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;A kép nem menthető! Újrapróbálja?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4563"/>
+        <location filename="../../fn.cpp" line="4717"/>
         <source>&lt;center&gt;Maybe you did not choose a proper extension&lt;/center&gt;
 &lt;center&gt;or do not have write permission.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</source>
         <translation>&lt;center&gt;Lehet hogy nem jó a fájl kiterjesztése,&lt;/center&gt;
 &lt;center&gt;vagy nincs írási engedélye.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4593"/>
+        <location filename="../../fn.cpp" line="4749"/>
         <source>Save Image As...</source>
         <translation>Kép mentése másként...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4595"/>
+        <location filename="../../fn.cpp" line="4751"/>
         <source>Image Files (*.png *.jpg *.jpeg *.bmp);;All Files (*)</source>
         <translation>Képfájlok (*.png *.jpg *.jpeg *.bmp);;Minden fájl (*)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4645"/>
+        <location filename="../../fn.cpp" line="4804"/>
         <source>Insert Table</source>
         <translation>Táblázat beszúrása</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4651"/>
+        <location filename="../../fn.cpp" line="4810"/>
         <source>Rows:</source>
         <translation>Sorok:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4657"/>
+        <location filename="../../fn.cpp" line="4816"/>
         <source>Columns:</source>
         <translation>Oszlopok:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5470"/>
+        <location filename="../../fn.cpp" line="5627"/>
         <source>Print Document</source>
         <translation>Dokumentum nyomtatása</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5554"/>
+        <location filename="../../fn.cpp" line="5714"/>
         <source>Export HTML</source>
         <translation>HTML exportálása</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5559"/>
+        <location filename="../../fn.cpp" line="5719"/>
         <source>Export:</source>
         <translation>Exportálás:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5560"/>
+        <location filename="../../fn.cpp" line="5720"/>
         <source>&amp;Current node</source>
         <translation>&amp;Legutóbbi elem</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5562"/>
+        <location filename="../../fn.cpp" line="5722"/>
         <source>With all &amp;sub-nodes</source>
         <translation>A&amp;l-elemekkel</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5563"/>
+        <location filename="../../fn.cpp" line="5723"/>
         <source>&amp;All nodes</source>
         <translation>&amp;Összes elem</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5575"/>
+        <location filename="../../fn.cpp" line="5735"/>
         <source>Output file:</source>
         <translation>Kimeneti fájl:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5594"/>
+        <location filename="../../fn.cpp" line="5754"/>
         <source>Select path</source>
         <translation>Útvonal kiválasztása</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5636"/>
+        <location filename="../../fn.cpp" line="5796"/>
         <source>Question</source>
         <translation>Kérdés</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5637"/>
+        <location filename="../../fn.cpp" line="5797"/>
         <source>The file already exists.
 Do you want to replace it?
 </source>
@@ -1428,106 +1429,106 @@ Szeretné cserélni?
 </translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5820"/>
+        <location filename="../../fn.cpp" line="5979"/>
         <source>Save HTML As...</source>
         <translation>HTML mentése másként...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5822"/>
+        <location filename="../../fn.cpp" line="5981"/>
         <source>HTML Files (*.html *.htm)</source>
         <translation>HTML fájlok (*.html *.htm)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5843"/>
+        <location filename="../../fn.cpp" line="6004"/>
         <source>Set Password</source>
         <translation>Jelszó beállítása</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5851"/>
+        <location filename="../../fn.cpp" line="6013"/>
         <source>Type password</source>
         <translation>Jelszó</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5856"/>
+        <location filename="../../fn.cpp" line="6025"/>
         <source>Retype password</source>
         <translation>Jelszó újra</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5931"/>
+        <location filename="../../fn.cpp" line="6096"/>
         <source>&lt;center&gt;Passwords were different. Retry!&lt;/center&gt;</source>
         <translation>&lt;center&gt;A jelszavak nem egyeznek. Próbálja újra!&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5954"/>
-        <location filename="../../fn.cpp" line="5962"/>
+        <location filename="../../fn.cpp" line="6122"/>
+        <location filename="../../fn.cpp" line="6130"/>
         <source>Enter Password</source>
         <translation>Jelszó</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6028"/>
+        <location filename="../../fn.cpp" line="6202"/>
         <source>&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</source>
         <translation>&lt;center&gt;Hibás jelszó. Próbálja újra!&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6067"/>
+        <location filename="../../fn.cpp" line="6244"/>
         <source>A lightweight notes manager</source>
         <translation>Egy könnyed jegyzetkezelő</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6068"/>
+        <location filename="../../fn.cpp" line="6245"/>
         <source>based on Qt</source>
         <translation>amely a Qt-n alapul</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6069"/>
+        <location filename="../../fn.cpp" line="6246"/>
         <source>Author</source>
         <translation>Szerző</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6071"/>
-        <location filename="../../fn.cpp" line="6072"/>
+        <location filename="../../fn.cpp" line="6248"/>
+        <location filename="../../fn.cpp" line="6249"/>
         <source>About FeatherNotes</source>
         <translation>FeatherNotes névjegye</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6071"/>
+        <location filename="../../fn.cpp" line="6248"/>
         <source>Translators</source>
         <translation>Fordítók</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6260"/>
+        <location filename="../../fn.cpp" line="6435"/>
         <source>See Preferences → Text → Spell Checking!</source>
         <translation>Lásd: Beállítások → Szöveg → Helyesírás-ellenőrzés!</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6282"/>
+        <location filename="../../fn.cpp" line="6457"/>
         <source>You need to add a Hunspell dictionary.</source>
         <translation>Hozzá kell adnia egy Hunspell szótárat.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6287"/>
+        <location filename="../../fn.cpp" line="6462"/>
         <source>The Hunspell dictionary does not exist.</source>
         <translation>A Hunspell szótár nem létezik.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6295"/>
+        <location filename="../../fn.cpp" line="6470"/>
         <source>The Hunspell dictionary is not accompanied by an affix file.</source>
         <translation>A Hunspell szótárhoz nem kapcsolódik affix fájl.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6313"/>
-        <location filename="../../fn.cpp" line="6328"/>
-        <location filename="../../fn.cpp" line="6340"/>
+        <location filename="../../fn.cpp" line="6488"/>
+        <location filename="../../fn.cpp" line="6503"/>
+        <location filename="../../fn.cpp" line="6515"/>
         <source>No misspelling from text cursor.</source>
         <translation>Nincs elírás a szövegkurzortól.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6351"/>
+        <location filename="../../fn.cpp" line="6527"/>
         <source>Spell Checking</source>
         <translation>Helyesírás ellenőrzés</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6070"/>
+        <location filename="../../fn.cpp" line="6247"/>
         <source>aka.</source>
         <translation>más néven</translation>
     </message>

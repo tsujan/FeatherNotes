@@ -18,6 +18,7 @@ if(NOT ENABLE_QT5)
   find_package(Qt6Xml "${QT6_MINIMUM_VERSION}" REQUIRED)
   find_package(Qt6Network "${QT6_MINIMUM_VERSION}" REQUIRED)
   find_package(Qt6PrintSupport "${QT6_MINIMUM_VERSION}" REQUIRED)
+  find_package(Qt6DBus "${QT6_MINIMUM_VERSION}" REQUIRED)
 else()
   set(QT_VERSION_MAJOR 5)
   find_package(Qt5Core "${QT5_MINIMUM_VERSION}" REQUIRED)
@@ -27,6 +28,7 @@ else()
   find_package(Qt5Xml "${QT5_MINIMUM_VERSION}" REQUIRED)
   find_package(Qt5Network "${QT5_MINIMUM_VERSION}" REQUIRED)
   find_package(Qt5PrintSupport "${QT5_MINIMUM_VERSION}" REQUIRED)
+  find_package(Qt5DBus "${QT5_MINIMUM_VERSION}" REQUIRED)
 endif()
 
 if(WITH_HUNSPELL)
@@ -58,7 +60,8 @@ if(QT_VERSION_MAJOR EQUAL 6)
                       ${Qt6Svg_INCLUDE_DIRS}
                       ${Qt6Xml_INCLUDE_DIRS}
                       ${Qt6Network_INCLUDE_DIRS}
-                      ${Qt6PrintSupport_INCLUDE_DIRS})
+                      ${Qt6PrintSupport_INCLUDE_DIRS}
+                      ${Qt6DBus_INCLUDE_DIRS})
 else()
   include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR}
                       ${Qt5Core_INCLUDE_DIRS}
@@ -67,7 +70,8 @@ else()
                       ${Qt5Svg_INCLUDE_DIRS}
                       ${Qt5Xml_INCLUDE_DIRS}
                       ${Qt5Network_INCLUDE_DIRS}
-                      ${Qt5PrintSupport_INCLUDE_DIRS})
+                      ${Qt5PrintSupport_INCLUDE_DIRS}
+                      ${Qt5DBus_INCLUDE_DIRS})
 endif()
 
 if(WITH_HUNSPELL)
@@ -95,6 +99,7 @@ endif()
 
 set(feathernotes_SRCS
     main.cpp
+    singleton.cpp
     colorLabel.cpp
     fn.cpp
     find.cpp
@@ -113,6 +118,24 @@ endif()
 
 if(NOT WITHOUT_X11 AND UNIX AND NOT APPLE AND NOT HAIKU)
   set(feathernotes_SRCS ${feathernotes_SRCS} x11.cpp)
+endif()
+
+if(QT_VERSION_MAJOR EQUAL 6)
+  qt6_add_dbus_adaptor(feathernotes_DBUS_SRCS
+      org.feathernotes.Application.xml
+      singleton.h
+      FeatherNotes::FNSingleton
+      feathernotesadaptor
+      FeatherNotesAdaptor
+  )
+else()
+  qt5_add_dbus_adaptor(feathernotes_DBUS_SRCS
+      org.feathernotes.Application.xml
+      singleton.h
+      FeatherNotes::FNSingleton
+      feathernotesadaptor
+      FeatherNotesAdaptor
+  )
 endif()
 
 set(feathernotes_RESOURCES data/fn.qrc)
@@ -146,7 +169,7 @@ if(Qt${QT_VERSION_MAJOR}LinguistTools_FOUND)
   else()
     qt5_add_translation(QM_FILES ${TS_FILES})
   endif()
-  add_executable(feathernotes ${feathernotes_SRCS} ${feathernotes_RESOURCES} ${EXTRA_HEADERS} ${DESKTOP_FILE} ${QM_FILES})
+  add_executable(feathernotes ${feathernotes_SRCS} ${feathernotes_DBUS_SRCS} ${feathernotes_RESOURCES} ${EXTRA_HEADERS} ${DESKTOP_FILE} ${QM_FILES})
   if(HAIKU)
     install(FILES ${QM_FILES} DESTINATION "${CMAKE_INSTALL_PREFIX}/translations")
   elseif(APPLE)
@@ -155,7 +178,7 @@ if(Qt${QT_VERSION_MAJOR}LinguistTools_FOUND)
     install(FILES ${QM_FILES} DESTINATION "${CMAKE_INSTALL_PREFIX}/share/feathernotes/translations")
   endif()
 else(Qt${QT_VERSION_MAJOR}LinguistTools_FOUND)
-  add_executable(feathernotes ${feathernotes_SRCS} ${feathernotes_RESOURCES} ${EXTRA_HEADERS} ${DESKTOP_FILE})
+  add_executable(feathernotes ${feathernotes_SRCS} ${feathernotes_DBUS_SRCS} ${feathernotes_RESOURCES} ${EXTRA_HEADERS} ${DESKTOP_FILE})
 endif(Qt${QT_VERSION_MAJOR}LinguistTools_FOUND)
 
 if(QT_VERSION_MAJOR EQUAL 6)
@@ -165,7 +188,8 @@ if(QT_VERSION_MAJOR EQUAL 6)
                                      ${Qt6Svg_LIBRARIES}
                                      ${Qt6Xml_LIBRARIES}
                                      ${Qt6Network_LIBRARIES}
-                                     ${Qt6PrintSupport_LIBRARIES})
+                                     ${Qt6PrintSupport_LIBRARIES}
+                                     ${Qt6DBus_LIBRARIES})
 else()
   target_link_libraries(feathernotes ${Qt5Core_LIBRARIES}
                                      ${Qt5Gui_LIBRARIES}
@@ -173,7 +197,8 @@ else()
                                      ${Qt5Svg_LIBRARIES}
                                      ${Qt5Xml_LIBRARIES}
                                      ${Qt5Network_LIBRARIES}
-                                     ${Qt5PrintSupport_LIBRARIES})
+                                     ${Qt5PrintSupport_LIBRARIES}
+                                     ${Qt5DBus_LIBRARIES})
 endif()
 
 if(WITH_HUNSPELL)
