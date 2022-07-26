@@ -476,12 +476,9 @@ FN::~FN()
 bool FN::close()
 {
     QObject *sender = QObject::sender();
-    if (sender != nullptr && sender->objectName() == "trayQuit"
-        && qApp->activeModalWidget() != nullptr)
-    { // don't respond to the tray icon when there's a modal dialog
-        raise();
-        if (!static_cast<FNSingleton*>(qApp)->isWayland())
-            activateWindow();
+    if (sender != nullptr && sender->objectName() == "trayQuit" && hasBlockingDialog())
+    { // don't respond to the tray icon when there's a blocking dialog
+        activateFNWindow (true);
         return false;
     }
 
@@ -527,7 +524,7 @@ void FN::closeEvent (QCloseEvent *event)
         {
             if (tray_ && (!isVisible() || !isActiveWindow()))
             {
-                activateTray();
+                activateFNWindow (true);
                 QCoreApplication::processEvents();
             }
             closeWinDialogs();
@@ -542,7 +539,7 @@ void FN::closeEvent (QCloseEvent *event)
             {
                 if (tray_ && (!isVisible() || !isActiveWindow()))
                 {
-                    activateTray();
+                    activateFNWindow (true);
                     QCoreApplication::processEvents();
                 }
                 closeWinDialogs();
@@ -662,16 +659,12 @@ void FN::createTrayIcon()
     connect (actionNewTray, &QAction::triggered, this, &FN::newNote);
     connect (actionOpenTray, &QAction::triggered, this, &FN::openFile);
     connect (antionQuitTray, &QAction::triggered, this, &FN::close);
-    actionshowMainWindow->setObjectName ("raiseHide");
     actionNewTray->setObjectName ("trayNew");
     actionOpenTray->setObjectName ("trayOpen");
     antionQuitTray->setObjectName ("trayQuit");
     tray_->setContextMenu (trayMenu);
     tray_->setVisible (true);
     connect (tray_, &QSystemTrayIcon::activated, this, &FN::trayActivated );
-
-    /*QShortcut *toggleTray = new QShortcut (QKeySequence (tr ("Ctrl+Shift+M", "Minimize to tray")), this);
-    connect (toggleTray, &QShortcut::activated, this, &FN::activateTray);*/
 }
 /*************************/
 void FN::showContextMenu (const QPoint &p)
@@ -858,12 +851,9 @@ void FN::changeEvent (QEvent *event)
 void FN::newNote()
 {
     QObject *sender = QObject::sender();
-    if (sender != nullptr && sender->objectName() == "trayNew"
-        && qApp->activeModalWidget() != nullptr)
-    { // don't respond to the tray icon when there's a modal dialog
-        raise();
-        if (!static_cast<FNSingleton*>(qApp)->isWayland())
-            activateWindow();
+    if (sender != nullptr && sender->objectName() == "trayNew" && hasBlockingDialog())
+    { // don't respond to the tray icon when there's a blocking dialog
+        activateFNWindow (true);
         return;
     }
     closeWinDialogs();
@@ -872,7 +862,7 @@ void FN::newNote()
 
     if (tray_ && (!isVisible() || !isActiveWindow()))
     {
-        activateTray();
+        activateFNWindow (true);
         QCoreApplication::processEvents();
     }
 
@@ -1415,12 +1405,9 @@ void FN::fileOpen (const QString &filePath, bool startup, bool startWithLastFile
 void FN::openFile()
 {
     QObject *sender = QObject::sender();
-    if (sender != nullptr && sender->objectName() == "trayOpen"
-        && qApp->activeModalWidget() != nullptr)
-    { // don't respond to the tray icon when there's a modal dialog
-        raise();
-        if (!static_cast<FNSingleton*>(qApp)->isWayland())
-            activateWindow();
+    if (sender != nullptr && sender->objectName() == "trayOpen" && hasBlockingDialog())
+    { // don't respond to the tray icon when there's a blocking dialog
+        activateFNWindow (true);
         return;
     }
     closeWinDialogs();
@@ -1429,7 +1416,7 @@ void FN::openFile()
 
     if (tray_ && (!isVisible() || !isActiveWindow()))
     {
-        activateTray();
+        activateFNWindow (true);
         QCoreApplication::processEvents();
     }
 
@@ -3606,6 +3593,27 @@ void FN::findInTags()
         TagsDialog->activateWindow();
 }
 /*************************/
+// Returns true if this window has a modal dialog or
+// another window has an application-modal dialog.
+bool FN::hasBlockingDialog()
+{
+    const auto dialogs = findChildren<QDialog*>();
+    for (const auto dlg : dialogs)
+    {
+        if (dlg->isModal())
+            return true;
+    }
+    /* FNSingleton isn't used because it doesn't see a window
+       with password prompt, before its file is opened. */
+    const auto wins = qApp->topLevelWidgets();
+    for (const auto &win : wins)
+    {
+        if (win->windowModality() == Qt::ApplicationModal)
+            return true;
+    }
+    return false;
+}
+/*************************/
 void FN::closeNonModalDialogs()
 {
     const auto dialogs = findChildren<QDialog*>();
@@ -3630,8 +3638,7 @@ void FN::closeNonModalDialogs()
 void FN::closeWinDialogs()
 {
     closeNonModalDialogs();
-    FNSingleton *singleton = static_cast<FNSingleton*>(qApp);
-    const auto wins = singleton->Wins;
+    const auto wins = static_cast<FNSingleton*>(qApp)->Wins;
     for (const auto &win : wins)
     {
         const auto dlgs = win->findChildren<QDialog*>();
@@ -4083,18 +4090,18 @@ void FN::showAndFocus()
     }
 }
 /*************************/
-void FN::activateFNWindow()
+void FN::activateFNWindow (bool noDelay)
 {
-    if (qApp->activeModalWidget() != nullptr || findChildren<QDialog*>().count() > 0)
+    FNSingleton *singleton = static_cast<FNSingleton*>(qApp);
+    if (noDelay || !findChildren<QDialog*>().isEmpty() || hasBlockingDialog())
     {
+        show();
         raise();
-        if (!static_cast<FNSingleton*>(qApp)->isWayland())
+        if (!singleton->isWayland())
             activateWindow();
         return;
     }
-#ifdef HAS_X11
-    FNSingleton *singleton = static_cast<FNSingleton*>(qApp);
-#endif
+
     if (!isVisible())
     {
         show();
@@ -4143,11 +4150,9 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
 
     FNSingleton *singleton = static_cast<FNSingleton*>(qApp);
 
-    if (QObject::sender() == tray_ && qApp->activeModalWidget() != nullptr)
-    { // don't respond to the tray icon when there's a modal dialog
-        raise();
-        if (!singleton->isWayland())
-            activateWindow();
+    if (hasBlockingDialog())
+    { // don't respond to the tray icon when there's a blocking dialog
+        activateFNWindow (true);
         return;
     }
 
@@ -4247,13 +4252,9 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
 /*************************/
 void FN::activateTray()
 {
-    QObject *sender = QObject::sender();
-    if (sender != nullptr && sender->objectName() == "raiseHide"
-        && qApp->activeModalWidget() != nullptr)
+    if (hasBlockingDialog())
     { // don't respond to the tray icon when there's a modal dialog
-        raise();
-        if (!static_cast<FNSingleton*>(qApp)->isWayland())
-            activateWindow();
+        activateFNWindow (true);
         return;
     }
 
@@ -6102,19 +6103,12 @@ void FN::reallySetPswrd()
 /*************************/
 bool FN::isPswrdCorrect (const QString &file)
 {
-    if (tray_ && (!isVisible() || !isActiveWindow()))
+    if (!isVisible() || !isActiveWindow())
     {
-        activateTray();
+        activateFNWindow (true);
         QCoreApplication::processEvents();
     }
-    else if (!isVisible() || !isActiveWindow())
-    {
-        raise();
-        if (!static_cast<FNSingleton*>(qApp)->isWayland())
-            activateWindow();
-        QCoreApplication::processEvents();
-    }
-    QCoreApplication::processEvents();
+    QCoreApplication::processEvents(); // needed when starting iconified
 
     closeWinDialogs();
 

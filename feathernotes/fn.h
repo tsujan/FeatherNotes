@@ -42,7 +42,7 @@ public:
     explicit FN (const QStringList& message, QWidget *parent = nullptr);
     ~FN();
 
-    void activateFNWindow();
+    void activateFNWindow (bool noDelay = false);
     void quitting();
 
     void writeGeometryConfig (bool withLastNodeInfo = true);
@@ -387,6 +387,7 @@ private:
     bool event (QEvent *event);
     void noteModified();
     void docProp();
+    bool hasBlockingDialog();
     void closeNonModalDialogs();
     void closeWinDialogs();
     void updateNodeActions();
