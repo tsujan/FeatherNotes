@@ -362,6 +362,7 @@ private:
     void showEvent (QShowEvent *event);
     void showDoc (QDomDocument &doc, int node = -1);
     void setTitle (const QString &fname);
+    void showWarningBar (const QString &message, int timeout);
     void notSavedOrOpened (bool notSaved);
     void setNodesTexts();
     bool unSaved (bool modified);
@@ -377,7 +378,7 @@ private:
     void findInNames();
     bool isImageSelected();
     void readShortcuts();
-    QString validatedShortcut (const QVariant v, bool *isValid);
+    QString validatedShortcut (const QVariant v, QStringList &added, bool *isValid);
     void readAndApplyConfig (bool startup = true);
     QString nodeAddress (QModelIndex index);
     bool isPswrdCorrect (const QString &file);
@@ -388,6 +389,7 @@ private:
     void noteModified();
     void docProp();
     bool hasBlockingDialog();
+    void closeWarningBar();
     void closeNonModalDialogs();
     void closeWinDialogs();
     void updateNodeActions();

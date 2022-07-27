@@ -20,6 +20,7 @@
 #include "ui_about.h"
 #include "dommodel.h"
 #include "treedelegate.h"
+#include "warningbar.h"
 #include "spinbox.h"
 #include "simplecrypt.h"
 #include "settings.h"
@@ -136,10 +137,10 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     /* get the default (customizable) shortcuts before any change */
     static const QStringList excluded = {"actionCut", "actionCopy", "actionPaste", "actionSelectAll"};
     const auto allMenus = ui->menuBar->findChildren<QMenu*>();
-    for (auto thisMenu : allMenus)
+    for (const auto &thisMenu : allMenus)
     {
         const auto menuActions = thisMenu->actions();
-        for (auto menuAction : menuActions)
+        for (const auto &menuAction : menuActions)
         {
             QKeySequence seq = menuAction->shortcut();
             if (!seq.isEmpty() && !excluded.contains (menuAction->objectName()))
@@ -612,20 +613,10 @@ void FN::checkTray()
         {
             static_cast<FNSingleton*>(qApp)->setTrayChecked();
             trayTimer->deleteLater();
-            bool wasNotShown = isHidden();
             show();
-            if (wasNotShown)
-            {
-                closeWinDialogs();
-                auto msgBox =  new MessageBox (QMessageBox::Warning,
-                                               tr ("Warning"),
-                                               tr ("System tray is not available.\nPlease disable tray in Preferences."),
-                                               QMessageBox::Close,
-                                               this);
-                msgBox->setAttribute (Qt::WA_DeleteOnClose, true);
-                msgBox->changeButtonText (QMessageBox::Close, tr ("Close"));
-                msgBox->open();
-            }
+            showWarningBar ("<center><b><big>"
+                            + tr ("System tray is not available.\nPlease disable tray in Preferences.")
+                            + "</big></b></center>", -1);
         }
     }
 }
@@ -1621,18 +1612,25 @@ void FN::autoSaving()
     fileSave (xmlPath_);
 }
 /*************************/
+void FN::showWarningBar (const QString &message, int timeout)
+{
+    /* don't close and show the same warning bar */
+    if (auto prevBar = ui->centralWidget->findChild<WarningBar*>())
+    {
+        if (!prevBar->isClosing() && prevBar->getMessage() == message)
+        {
+            prevBar->setTimeout (timeout);
+            return;
+        }
+    }
+
+    new WarningBar (message, timeout, ui->centralWidget);
+}
+/*************************/
 void FN::notSavedOrOpened (bool notSaved)
 {
-    closeWinDialogs();
-    auto msgBox =  new MessageBox (QMessageBox::Warning,
-                                   tr ("FeatherNotes"),
-                                   notSaved ? tr ("<center><b><big>Cannot be saved!</big></b></center>")
-                                             : tr ("<center><b><big>Cannot be opened!</big></b></center>"),
-                                   QMessageBox::Close,
-                                   this);
-    msgBox->setAttribute (Qt::WA_DeleteOnClose, true);
-    msgBox->changeButtonText (QMessageBox::Close, tr ("Close"));
-    msgBox->open();
+    showWarningBar (notSaved ? tr ("<center><b><big>Cannot be saved!</big></b></center>")
+                             : tr ("<center><b><big>Cannot be opened!</big></b></center>"), 10);
 }
 /*************************/
 void FN::setNodesTexts()
@@ -2231,6 +2229,8 @@ void FN::copyLink()
 /*************************/
 void FN::selChanged (const QItemSelection &selected, const QItemSelection &deselected)
 {
+    closeWarningBar();
+
     if (selected.isEmpty()) // if the last node is closed
     {
         if (ui->lineEdit->isVisible())
@@ -3598,7 +3598,7 @@ void FN::findInTags()
 bool FN::hasBlockingDialog()
 {
     const auto dialogs = findChildren<QDialog*>();
-    for (const auto dlg : dialogs)
+    for (const auto &dlg : dialogs)
     {
         if (dlg->isModal())
             return true;
@@ -3614,14 +3614,26 @@ bool FN::hasBlockingDialog()
     return false;
 }
 /*************************/
+void FN::closeWarningBar()
+{
+    const auto warningBars = ui->centralWidget->findChildren<WarningBar*>();
+    for (const auto &wb : warningBars)
+    {
+        if (!wb->isPermanent())
+            wb->closeBar();
+    }
+}
+/*************************/
 void FN::closeNonModalDialogs()
 {
     const auto dialogs = findChildren<QDialog*>();
-    for (const auto dlg : dialogs)
+    for (const auto &dlg : dialogs)
     {
         if (!dlg->isModal())
             dlg->done (QDialog::Rejected);
     }
+    /* also close warning bar */
+    closeWarningBar();
 }
 /*************************/
 // Closes non-modal dialogs of this window and window-modal dialogs of all windows.
@@ -3638,11 +3650,10 @@ void FN::closeNonModalDialogs()
 void FN::closeWinDialogs()
 {
     closeNonModalDialogs();
-    const auto wins = static_cast<FNSingleton*>(qApp)->Wins;
+    const auto wins = qApp->topLevelWidgets();
     for (const auto &win : wins)
     {
-        const auto dlgs = win->findChildren<QDialog*>();
-        for (const auto dlg : dlgs)
+        if (auto dlg = qobject_cast<QDialog*>(win))
         {
             if (dlg->windowModality() == Qt::WindowModal)
                 dlg->done (QDialog::Rejected);
@@ -4037,14 +4048,9 @@ void FN::replaceAll()
             if (replCount_ > 1000 && !txtReplace_.isEmpty())
             {
                 closeWinDialogs();
-                auto msgBox = new MessageBox (QMessageBox::Information,
-                                              tr ("FeatherNotes"),
-                                              "<center>" + tr ("The first 1000 replacements are highlighted.") + "</center>",
-                                              QMessageBox::Close,
-                                              this);
-                msgBox->setAttribute (Qt::WA_DeleteOnClose, true);
-                msgBox->changeButtonText (QMessageBox::Close, tr ("Close"));
-                msgBox->open();
+                showWarningBar ("<center><b><big>"
+                                 + tr ("The first 1000 replacements are highlighted.")
+                                 + "</big></b></center>", 10);
             }
         }
         replCount_ = 0;
@@ -5077,12 +5083,13 @@ void FN::readShortcuts()
     Settings settings (tmp.fileName(), QSettings::NativeFormat);
 
     settings.beginGroup ("shortcuts");
+    QStringList addedShortcuts; // to prevent ambiguous shortcuts
     QStringList actions = settings.childKeys();
     for (int i = 0; i < actions.size(); ++i)
     {
         QVariant v = settings.value (actions.at (i));
         bool isValid;
-        QString vs = validatedShortcut (v, &isValid);
+        QString vs = validatedShortcut (v, addedShortcuts, &isValid);
         if (isValid)
             customActions_.insert (actions.at (i), vs);
         else // remove the key on writing config
@@ -5091,9 +5098,8 @@ void FN::readShortcuts()
     settings.endGroup();
 }
 /*************************/
-QString FN::validatedShortcut (const QVariant v, bool *isValid)
+QString FN::validatedShortcut (const QVariant v, QStringList &added, bool *isValid)
 {
-    static QStringList added;
     if (v.isValid())
     {
         QString str = v.toString();
@@ -5106,7 +5112,7 @@ QString FN::validatedShortcut (const QVariant v, bool *isValid)
         if (!QKeySequence (str, QKeySequence::PortableText).toString().isEmpty())
         {
             if (!reservedShortcuts_.contains (str)
-                // prevent ambiguous shortcuts at startup as far as possible
+                // prevent ambiguous shortcuts as far as possible
                 && !added.contains (str))
             {
                 *isValid = true;
@@ -5884,16 +5890,8 @@ void FN::exportHTML()
 
     if (!success)
     {
-        QString str = writer.device()->errorString ();
-        auto msgBox = new MessageBox (QMessageBox::Warning,
-                                      tr ("FeatherNotes"),
-                                      tr ("<center><b><big>Cannot be saved!</big></b></center>"),
-                                      QMessageBox::Close,
-                                      this);
-        msgBox->setAttribute (Qt::WA_DeleteOnClose, true);
-        msgBox->changeButtonText (QMessageBox::Close, tr ("Close"));
-        msgBox->setInformativeText (QString ("<center><i>%1.</i></center>").arg (str));
-        msgBox->open();
+        showWarningBar (tr ("<center><b><big>Cannot be saved!</big></b></center>")
+                        + "\n<center>" + writer.device()->errorString() + "</center>", 15);
     }
 }
 /*************************/
@@ -6113,6 +6111,7 @@ bool FN::isPswrdCorrect (const QString &file)
     closeWinDialogs();
 
     QDialog *dialog = new QDialog (this);
+    dialog->setWindowModality (Qt::WindowModal);
     dialog->setWindowTitle (tr ("Enter Password"));
     QGridLayout *grid = new QGridLayout;
     grid->setSpacing (5);
@@ -6420,22 +6419,13 @@ static inline void selectWord (QTextCursor& cur)
 
 void FN::spellingCheckingMsg (const QString &msg, bool hasInfo)
 {
-    auto msgBox = new MessageBox (this);
-    msgBox->setAttribute (Qt::WA_DeleteOnClose, true);
     if (hasInfo)
     {
-        msgBox->setIcon (QMessageBox::Warning);
-        msgBox->setText ("<center><b><big>" + msg + "</big></b></center>");
-        msgBox->setInformativeText ("<center><i>" + tr ("See Preferences → Text → Spell Checking!") + "</i></center>");
+        showWarningBar ("<center><b><big>" + msg + "</big></b></center>"
+                        + "\n<center><i>" + tr ("See Preferences → Text → Spell Checking!") + "</i></center>", 20);
     }
     else
-    {
-        msgBox->setIcon (QMessageBox::Information);
-        msgBox->setText ("<center>" + msg + "</center>");
-    }
-    msgBox->setStandardButtons (QMessageBox::Close);
-    msgBox->changeButtonText (QMessageBox::Close, tr ("Close"));
-    msgBox->open();
+        showWarningBar ("<center>" + msg + "</center>", 15);
 }
 
 void FN::checkSpelling()

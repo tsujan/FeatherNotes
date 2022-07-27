@@ -26,9 +26,6 @@
     <name>FeatherNotes::FN</name>
     <message>
         <location filename="../../fn.ui" line="14"/>
-        <location filename="../../fn.cpp" line="1628"/>
-        <location filename="../../fn.cpp" line="4041"/>
-        <location filename="../../fn.cpp" line="5889"/>
         <source>FeatherNotes</source>
         <translation>FeatherNotes</translation>
     </message>
@@ -215,7 +212,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="536"/>
-        <location filename="../../fn.cpp" line="998"/>
+        <location filename="../../fn.cpp" line="989"/>
         <source>Save</source>
         <translation>저장</translation>
     </message>
@@ -226,7 +223,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="544"/>
-        <location filename="../../fn.cpp" line="656"/>
+        <location filename="../../fn.cpp" line="647"/>
         <source>&amp;Open</source>
         <translation>열기(&amp;O)</translation>
     </message>
@@ -397,7 +394,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="712"/>
-        <location filename="../../fn.cpp" line="655"/>
+        <location filename="../../fn.cpp" line="646"/>
         <source>&amp;New Note</source>
         <translation>새 노트(&amp;N)</translation>
     </message>
@@ -438,7 +435,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="758"/>
-        <location filename="../../fn.cpp" line="658"/>
+        <location filename="../../fn.cpp" line="649"/>
         <source>&amp;Quit</source>
         <translation>종료(&amp;Q)</translation>
     </message>
@@ -499,7 +496,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="824"/>
-        <location filename="../../fn.cpp" line="4361"/>
+        <location filename="../../fn.cpp" line="4367"/>
         <source>Embed Image</source>
         <translation>이미지 끼워넣기</translation>
     </message>
@@ -705,7 +702,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="1067"/>
-        <location filename="../../fn.cpp" line="2191"/>
+        <location filename="../../fn.cpp" line="2189"/>
         <source>&amp;Right</source>
         <translation>오른쪽(&amp;R)</translation>
     </message>
@@ -721,7 +718,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="1084"/>
-        <location filename="../../fn.cpp" line="2185"/>
+        <location filename="../../fn.cpp" line="2183"/>
         <source>&amp;Left</source>
         <translation>왼쪽(&amp;L)</translation>
     </message>
@@ -999,95 +996,90 @@
         <translation>노드 아이콘</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="652"/>
+        <location filename="../../fn.cpp" line="643"/>
         <source>&amp;Raise/Hide</source>
         <translation>올리기/숨기기(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="894"/>
+        <location filename="../../fn.cpp" line="885"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;New note?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;새 메모입니까?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="895"/>
+        <location filename="../../fn.cpp" line="886"/>
         <source>&lt;center&gt;&lt;i&gt;Do you really want to leave this document&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;and create an empty one?&lt;/i&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;i&gt;이 문서를 그대로 두고&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;빈 문서를 만드시겠습니까?&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="898"/>
+        <location filename="../../fn.cpp" line="889"/>
         <location filename="../../fn.cpp" line="2792"/>
-        <location filename="../../fn.cpp" line="4721"/>
+        <location filename="../../fn.cpp" line="4727"/>
         <source>Yes</source>
         <translation>예</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="899"/>
+        <location filename="../../fn.cpp" line="890"/>
         <location filename="../../fn.cpp" line="2793"/>
-        <location filename="../../fn.cpp" line="4722"/>
+        <location filename="../../fn.cpp" line="4728"/>
         <source>No</source>
         <translation>아니오</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="990"/>
+        <location filename="../../fn.cpp" line="981"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Save changes?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;변경사항을 저장하시겠습니까?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="992"/>
+        <location filename="../../fn.cpp" line="983"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been modified.&lt;/i&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;i&gt;문서가 수정되었습니다.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="994"/>
+        <location filename="../../fn.cpp" line="985"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been removed.&lt;/i&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;i&gt;문서가 제거되었습니다. &lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="999"/>
+        <location filename="../../fn.cpp" line="990"/>
         <source>Discard changes</source>
         <translation>변경 내용 삭제</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1000"/>
+        <location filename="../../fn.cpp" line="991"/>
         <location filename="../../fn.cpp" line="2910"/>
         <location filename="../../fn.cpp" line="3004"/>
         <location filename="../../fn.cpp" line="3279"/>
-        <location filename="../../fn.cpp" line="4300"/>
-        <location filename="../../fn.cpp" line="4385"/>
-        <location filename="../../fn.cpp" line="4560"/>
-        <location filename="../../fn.cpp" line="4823"/>
-        <location filename="../../fn.cpp" line="5758"/>
-        <location filename="../../fn.cpp" line="6037"/>
-        <location filename="../../fn.cpp" line="6132"/>
+        <location filename="../../fn.cpp" line="4306"/>
+        <location filename="../../fn.cpp" line="4391"/>
+        <location filename="../../fn.cpp" line="4566"/>
+        <location filename="../../fn.cpp" line="4829"/>
+        <location filename="../../fn.cpp" line="5764"/>
+        <location filename="../../fn.cpp" line="6035"/>
+        <location filename="../../fn.cpp" line="6131"/>
         <source>Cancel</source>
         <translation>취소</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1464"/>
+        <location filename="../../fn.cpp" line="1455"/>
         <source>Open file...</source>
         <translation>파일 열기...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1629"/>
-        <location filename="../../fn.cpp" line="5890"/>
+        <location filename="../../fn.cpp" line="1632"/>
+        <location filename="../../fn.cpp" line="5893"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be saved!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;저장할 수 없습니다!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="626"/>
-        <location filename="../../fn.cpp" line="1634"/>
         <location filename="../../fn.cpp" line="3575"/>
-        <location filename="../../fn.cpp" line="4046"/>
-        <location filename="../../fn.cpp" line="5894"/>
-        <location filename="../../fn.cpp" line="6437"/>
         <source>Close</source>
         <translation>닫기</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1734"/>
-        <location filename="../../fn.cpp" line="1757"/>
+        <location filename="../../fn.cpp" line="1732"/>
+        <location filename="../../fn.cpp" line="1755"/>
         <source>Save As...</source>
         <translation>다른 이름으로 저장...</translation>
     </message>
@@ -1112,13 +1104,13 @@
         <location filename="../../fn.cpp" line="2911"/>
         <location filename="../../fn.cpp" line="3005"/>
         <location filename="../../fn.cpp" line="3280"/>
-        <location filename="../../fn.cpp" line="4302"/>
-        <location filename="../../fn.cpp" line="4386"/>
-        <location filename="../../fn.cpp" line="4561"/>
-        <location filename="../../fn.cpp" line="4824"/>
-        <location filename="../../fn.cpp" line="5760"/>
-        <location filename="../../fn.cpp" line="6038"/>
-        <location filename="../../fn.cpp" line="6133"/>
+        <location filename="../../fn.cpp" line="4308"/>
+        <location filename="../../fn.cpp" line="4392"/>
+        <location filename="../../fn.cpp" line="4567"/>
+        <location filename="../../fn.cpp" line="4830"/>
+        <location filename="../../fn.cpp" line="5766"/>
+        <location filename="../../fn.cpp" line="6036"/>
+        <location filename="../../fn.cpp" line="6132"/>
         <source>OK</source>
         <translation>확인</translation>
     </message>
@@ -1146,106 +1138,101 @@
     </message>
     <message>
         <location filename="../../fn.cpp" line="3566"/>
-        <location filename="../../fn.cpp" line="3924"/>
+        <location filename="../../fn.cpp" line="3935"/>
         <source>No Match</source>
         <translation>일치 안함</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3723"/>
-        <location filename="../../fn.cpp" line="3776"/>
+        <location filename="../../fn.cpp" line="3734"/>
+        <location filename="../../fn.cpp" line="3787"/>
         <source>Replacement</source>
         <translation>대체</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4031"/>
+        <location filename="../../fn.cpp" line="4042"/>
         <source>No Replacement</source>
         <translation>대체 안함</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4033"/>
+        <location filename="../../fn.cpp" line="4044"/>
         <source>One Replacement</source>
         <translation>한 개 대체</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4036"/>
+        <location filename="../../fn.cpp" line="4047"/>
         <source>%1 Replacements</source>
         <translation>%1개 교체</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4288"/>
+        <location filename="../../fn.cpp" line="4294"/>
         <source>Insert Link</source>
         <translation>링크 삽입</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2969"/>
-        <location filename="../../fn.cpp" line="4370"/>
+        <location filename="../../fn.cpp" line="4376"/>
         <source>Image path</source>
         <translation>이미지 경로</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2973"/>
-        <location filename="../../fn.cpp" line="4374"/>
+        <location filename="../../fn.cpp" line="4380"/>
         <source>Open image</source>
         <translation>이미지 열기</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4382"/>
-        <location filename="../../fn.cpp" line="4557"/>
+        <location filename="../../fn.cpp" line="4388"/>
+        <location filename="../../fn.cpp" line="4563"/>
         <source>Scaling percentage</source>
         <translation>배율 비율</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2991"/>
-        <location filename="../../fn.cpp" line="4479"/>
+        <location filename="../../fn.cpp" line="4485"/>
         <source>Open Image...</source>
         <translation>이미지 열기...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="621"/>
-        <source>Warning</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../fn.cpp" line="622"/>
+        <location filename="../../fn.cpp" line="618"/>
         <source>System tray is not available.
 Please disable tray in Preferences.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="945"/>
+        <location filename="../../fn.cpp" line="936"/>
         <source>New Node</source>
         <translation>새 노드</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1466"/>
-        <location filename="../../fn.cpp" line="1736"/>
-        <location filename="../../fn.cpp" line="1759"/>
+        <location filename="../../fn.cpp" line="1457"/>
+        <location filename="../../fn.cpp" line="1734"/>
+        <location filename="../../fn.cpp" line="1757"/>
         <source>FeatherNotes documents (*.fnx);;All Files (*)</source>
         <translation>FeatherNotes 문서 (*.fnx);;모든 파일 (*)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1630"/>
+        <location filename="../../fn.cpp" line="1633"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be opened!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;열 수 없습니다!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1716"/>
-        <location filename="../../fn.cpp" line="5609"/>
-        <location filename="../../fn.cpp" line="5618"/>
-        <location filename="../../fn.cpp" line="5747"/>
-        <location filename="../../fn.cpp" line="5940"/>
-        <location filename="../../fn.cpp" line="5949"/>
-        <location filename="../../fn.cpp" line="5975"/>
+        <location filename="../../fn.cpp" line="1714"/>
+        <location filename="../../fn.cpp" line="5615"/>
+        <location filename="../../fn.cpp" line="5624"/>
+        <location filename="../../fn.cpp" line="5753"/>
+        <location filename="../../fn.cpp" line="5938"/>
+        <location filename="../../fn.cpp" line="5947"/>
+        <location filename="../../fn.cpp" line="5973"/>
         <source>Untitled</source>
         <translation>제목 없음</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2184"/>
+        <location filename="../../fn.cpp" line="2182"/>
         <source>Align Table</source>
         <translation>표 정렬</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2197"/>
+        <location filename="../../fn.cpp" line="2195"/>
         <source>&amp;Center</source>
         <translation>중앙(&amp;C)</translation>
     </message>
@@ -1271,7 +1258,7 @@ Please disable tray in Preferences.</source>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2993"/>
-        <location filename="../../fn.cpp" line="4481"/>
+        <location filename="../../fn.cpp" line="4487"/>
         <source>Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)</source>
         <translation>이미지 파일 (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;모든 파일 (*)</translation>
     </message>
@@ -1306,121 +1293,121 @@ Please disable tray in Preferences.</source>
         <translation>텍스트 색상:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4042"/>
+        <location filename="../../fn.cpp" line="4052"/>
         <source>The first 1000 replacements are highlighted.</source>
         <translation>처음 1000개의 대체 항목이 강조 표시됩니다.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4377"/>
-        <location filename="../../fn.cpp" line="4553"/>
+        <location filename="../../fn.cpp" line="4383"/>
+        <location filename="../../fn.cpp" line="4559"/>
         <source>Scale to</source>
         <translation>다음으로 확장</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4381"/>
-        <location filename="../../fn.cpp" line="4556"/>
+        <location filename="../../fn.cpp" line="4387"/>
+        <location filename="../../fn.cpp" line="4562"/>
         <source>%</source>
         <translation>%</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4547"/>
+        <location filename="../../fn.cpp" line="4553"/>
         <source>Scale Image(s)</source>
         <translation>이미지 크기조정</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4684"/>
+        <location filename="../../fn.cpp" line="4690"/>
         <source>untitled</source>
         <translation>제목 없음</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4716"/>
+        <location filename="../../fn.cpp" line="4722"/>
         <source>Error</source>
         <translation>오류</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4717"/>
+        <location filename="../../fn.cpp" line="4723"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Image cannot be saved! Retry?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;이미지를 저장할 수 없습니다! 다시 시도하시겠습니까?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4718"/>
+        <location filename="../../fn.cpp" line="4724"/>
         <source>&lt;center&gt;Maybe you did not choose a proper extension&lt;/center&gt;
 &lt;center&gt;or do not have write permission.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</source>
         <translation>&lt;center&gt;적절한 확장자를 선택하지 않았거나&lt;/center&gt;
 &lt;center&gt;쓰기 권한이 없을 수 있습니다.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4750"/>
+        <location filename="../../fn.cpp" line="4756"/>
         <source>Save Image As...</source>
         <translation>다른 이름으로 이미지 저장 ...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4752"/>
+        <location filename="../../fn.cpp" line="4758"/>
         <source>Image Files (*.png *.jpg *.jpeg *.bmp);;All Files (*)</source>
         <translation>이미지 파일(*.png *.jpg *.jpeg *.bmp);;모든 파일 (*)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4805"/>
+        <location filename="../../fn.cpp" line="4811"/>
         <source>Insert Table</source>
         <translation>표 삽입</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4811"/>
+        <location filename="../../fn.cpp" line="4817"/>
         <source>Rows:</source>
         <translation>행:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4817"/>
+        <location filename="../../fn.cpp" line="4823"/>
         <source>Columns:</source>
         <translation>열:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5628"/>
+        <location filename="../../fn.cpp" line="5634"/>
         <source>Print Document</source>
         <translation>문서 인쇄</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5715"/>
+        <location filename="../../fn.cpp" line="5721"/>
         <source>Export HTML</source>
         <translation>HTML 내보내기</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5720"/>
+        <location filename="../../fn.cpp" line="5726"/>
         <source>Export:</source>
         <translation>내보내기:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5721"/>
+        <location filename="../../fn.cpp" line="5727"/>
         <source>&amp;Current node</source>
         <translation>현재 노드(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5723"/>
+        <location filename="../../fn.cpp" line="5729"/>
         <source>With all &amp;sub-nodes</source>
         <translation>모든 하위 노드 포함(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5724"/>
+        <location filename="../../fn.cpp" line="5730"/>
         <source>&amp;All nodes</source>
         <translation>모든 노드(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5736"/>
+        <location filename="../../fn.cpp" line="5742"/>
         <source>Output file:</source>
         <translation>출력 파일:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5755"/>
+        <location filename="../../fn.cpp" line="5761"/>
         <source>Select path</source>
         <translation>경로 선택</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5797"/>
+        <location filename="../../fn.cpp" line="5803"/>
         <source>Question</source>
         <translation>질문</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5798"/>
+        <location filename="../../fn.cpp" line="5804"/>
         <source>The file already exists.
 Do you want to replace it?
 </source>
@@ -1429,106 +1416,106 @@ Do you want to replace it?
 </translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5980"/>
+        <location filename="../../fn.cpp" line="5978"/>
         <source>Save HTML As...</source>
         <translation>다른 이름으로 HTML 저장 ...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5982"/>
+        <location filename="../../fn.cpp" line="5980"/>
         <source>HTML Files (*.html *.htm)</source>
         <translation>HTML 파일 (*.html *.htm)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6005"/>
+        <location filename="../../fn.cpp" line="6003"/>
         <source>Set Password</source>
         <translation>비밀번호 설정</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6014"/>
+        <location filename="../../fn.cpp" line="6012"/>
         <source>Type password</source>
         <translation>비밀번호 입력</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6026"/>
+        <location filename="../../fn.cpp" line="6024"/>
         <source>Retype password</source>
         <translation>비밀번호 재 입력</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6097"/>
+        <location filename="../../fn.cpp" line="6095"/>
         <source>&lt;center&gt;Passwords were different. Retry!&lt;/center&gt;</source>
         <translation>&lt;center&gt;비밀번호가 다릅니다. 다시 시도하세요!&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6116"/>
-        <location filename="../../fn.cpp" line="6124"/>
+        <location filename="../../fn.cpp" line="6115"/>
+        <location filename="../../fn.cpp" line="6123"/>
         <source>Enter Password</source>
         <translation>비밀번호 입력</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6196"/>
+        <location filename="../../fn.cpp" line="6195"/>
         <source>&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</source>
         <translation>&lt;center&gt;잘못된 비밀번호 입니다. 다시 시도하세요!&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6238"/>
+        <location filename="../../fn.cpp" line="6237"/>
         <source>A lightweight notes manager</source>
         <translation>가벼운 메모 관리자</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6239"/>
+        <location filename="../../fn.cpp" line="6238"/>
         <source>based on Qt</source>
         <translation>Qt기반으로 작성됨</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6240"/>
+        <location filename="../../fn.cpp" line="6239"/>
         <source>Author</source>
         <translation>작성자</translation>
     </message>
     <message>
+        <location filename="../../fn.cpp" line="6241"/>
         <location filename="../../fn.cpp" line="6242"/>
-        <location filename="../../fn.cpp" line="6243"/>
         <source>About FeatherNotes</source>
         <translation>FeatherNotes 정보</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6242"/>
+        <location filename="../../fn.cpp" line="6241"/>
         <source>Translators</source>
         <translation>번역자</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6429"/>
+        <location filename="../../fn.cpp" line="6425"/>
         <source>See Preferences → Text → Spell Checking!</source>
         <translation>기본 설정 → 텍스트 → 맞춤법 검사를 참조하십시오!</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6451"/>
+        <location filename="../../fn.cpp" line="6441"/>
         <source>You need to add a Hunspell dictionary.</source>
         <translation>Hunspell 사전을 추가해야합니다.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6456"/>
+        <location filename="../../fn.cpp" line="6446"/>
         <source>The Hunspell dictionary does not exist.</source>
         <translation>Hunspell 사전이 없습니다.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6464"/>
+        <location filename="../../fn.cpp" line="6454"/>
         <source>The Hunspell dictionary is not accompanied by an affix file.</source>
         <translation>Hunspell 사전에는 접사 파일이 포함되어 있지 않습니다.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6482"/>
-        <location filename="../../fn.cpp" line="6497"/>
-        <location filename="../../fn.cpp" line="6509"/>
+        <location filename="../../fn.cpp" line="6472"/>
+        <location filename="../../fn.cpp" line="6487"/>
+        <location filename="../../fn.cpp" line="6499"/>
         <source>No misspelling from text cursor.</source>
         <translation>텍스트 커서에서 맞춤법 오류가 없습니다.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6521"/>
+        <location filename="../../fn.cpp" line="6511"/>
         <source>Spell Checking</source>
         <translation>맞춤법 검사</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6241"/>
+        <location filename="../../fn.cpp" line="6240"/>
         <source>aka.</source>
         <translation>별명.</translation>
     </message>

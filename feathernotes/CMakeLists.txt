@@ -152,12 +152,12 @@ else()
 endif()
 
 if(QT_VERSION_MAJOR EQUAL 6)
-  set(EXTRA_HEADERS spinbox.h messagebox.h filedialog.h help.h settings.h treeview.h treedelegate.h)
+  set(EXTRA_HEADERS warningbar.h spinbox.h messagebox.h filedialog.h help.h settings.h treeview.h treedelegate.h)
 else()
   if(CMAKE_VERSION VERSION_LESS "3.10.0") # CMP0071 in 3.10: Let AUTOMOC and AUTOUIC process GENERATED files
-    qt5_wrap_cpp(EXTRA_HEADERS spinbox.h messagebox.h filedialog.h help.h settings.h treeview.h treedelegate.h)
+    qt5_wrap_cpp(EXTRA_HEADERS warningbar.h spinbox.h messagebox.h filedialog.h help.h settings.h treeview.h treedelegate.h)
   else()
-    set(EXTRA_HEADERS spinbox.h messagebox.h filedialog.h help.h settings.h treeview.h treedelegate.h)
+    set(EXTRA_HEADERS warningbar.h spinbox.h messagebox.h filedialog.h help.h settings.h treeview.h treedelegate.h)
   endif()
 endif()
 

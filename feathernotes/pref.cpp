@@ -380,7 +380,7 @@ PrefDialog::PrefDialog (QWidget *parent)
 
     /* set tooltip as "whatsthis" */
     const auto widgets = findChildren<QWidget*>();
-    for (QWidget *w : widgets)
+    for (const auto &w : widgets)
     {
         QString tip = w->toolTip();
         if (!tip.isEmpty())
