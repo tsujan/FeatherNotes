@@ -1601,7 +1601,11 @@ this dialog and also on exit.
 
 This may not work correctly
 with some window managers.</source>
-        <translation type="unfinished"></translation>
+        <translation>Uloží pozice po zavření
+a také při ukončení tohoto dialogu.
+
+To nemusí fungovat správně
+s některými správci oken.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>
