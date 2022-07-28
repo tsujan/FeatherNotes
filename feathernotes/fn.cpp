@@ -4370,11 +4370,11 @@ void FN::embedImage()
     grid->setContentsMargins (5, 5, 5, 5);
 
     /* create the needed widgets */
-    ImagePathEntry_ = new LineEdit();
-    ImagePathEntry_->returnOnClear = false;
-    ImagePathEntry_->setMinimumWidth (200);
-    ImagePathEntry_->setToolTip (tr ("Image path"));
-    connect (ImagePathEntry_, &QLineEdit::returnPressed, dialog, &QDialog::accept);
+    imagePathEntry_ = new LineEdit();
+    imagePathEntry_->returnOnClear = false;
+    imagePathEntry_->setMinimumWidth (200);
+    imagePathEntry_->setToolTip (tr ("Image path"));
+    connect (imagePathEntry_, &QLineEdit::returnPressed, dialog, &QDialog::accept);
     QToolButton *openBtn = new QToolButton();
     openBtn->setIcon (symbolicIcon::icon (":icons/document-open.svg"));
     openBtn->setToolTip (tr ("Open image"));
@@ -4394,7 +4394,7 @@ void FN::embedImage()
     connect (okButton, &QAbstractButton::clicked, dialog, &QDialog::accept);
 
     /* make the widgets fit in the grid */
-    grid->addWidget (ImagePathEntry_, 0, 0, 1, 4);
+    grid->addWidget (imagePathEntry_, 0, 0, 1, 4);
     grid->addWidget (openBtn, 0, 4, Qt::AlignCenter);
     grid->addWidget (label, 1, 0, Qt::AlignRight);
     grid->addWidget (spinBox, 1, 1, Qt::AlignLeft);
@@ -4408,8 +4408,8 @@ void FN::embedImage()
 
     dialog->open();
     connect (dialog, &QDialog::finished, this, [this, spinBox] (int res) {
-        lastImgPath_ = ImagePathEntry_->text();
-        ImagePathEntry_ = nullptr;
+        if (imagePathEntry_ != nullptr)
+            lastImgPath_ = imagePathEntry_->text();
         if (res == QDialog::Accepted)
         {
             imgScale_ = spinBox->value();
@@ -4500,8 +4500,8 @@ void FN::setImagePath (bool)
             imagePath = files.at (0);
     }
 
-    if (!imagePath.isEmpty())
-        ImagePathEntry_->setText (imagePath);
+    if (!imagePath.isEmpty() && imagePathEntry_ != nullptr)
+        imagePathEntry_->setText (imagePath);
 }
 /*************************/
 bool FN::isImageSelected()
@@ -5796,7 +5796,8 @@ void FN::exportHTML()
                 sel = 2;
             else
                 sel = 0;
-            fname = htmlPahEntry_->text();
+            if (htmlPahEntry_ != nullptr)
+                fname = htmlPahEntry_->text();
             if (QFile::exists (fname))
             {
                 prompt = QMessageBox::No == QMessageBox::question (this,
@@ -5808,7 +5809,6 @@ void FN::exportHTML()
 
             QApplication::setOverrideCursor (QCursor(Qt::WaitCursor));
             delete dialog;
-            htmlPahEntry_ = nullptr;
             break;
         case QDialog::Rejected:
         default:
@@ -5816,7 +5816,6 @@ void FN::exportHTML()
                 QApplication::restoreOverrideCursor();
             prompt = false;
             delete dialog;
-            htmlPahEntry_ = nullptr;
             return;
         }
     }
@@ -5917,7 +5916,8 @@ QString FN::nodeAddress (QModelIndex index)
 /*************************/
 void FN::setHTMLName (bool checked)
 {
-    if (!checked) return;
+    if (!checked || htmlPahEntry_ == nullptr)
+        return;
     QList<QDialog *> list = findChildren<QDialog*>();
     if (list.isEmpty()) return;
     QList<QRadioButton *> list1;
@@ -5968,6 +5968,7 @@ void FN::setHTMLName (bool checked)
 /*************************/
 void FN::setHTMLPath (bool)
 {
+    if (htmlPahEntry_ == nullptr) return;
     QString path;
     if ((path = htmlPahEntry_->text()).isEmpty())
         path = QDir::home().filePath (tr ("Untitled") + ".html");
@@ -5989,7 +5990,8 @@ void FN::setHTMLPath (bool)
     }
     else return;
 
-    htmlPahEntry_->setText (HTMLPath);
+    if (htmlPahEntry_ != nullptr)
+        htmlPahEntry_->setText (HTMLPath);
 }
 /*************************/
 void FN::setPswd()

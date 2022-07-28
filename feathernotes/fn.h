@@ -19,6 +19,7 @@
 #define FN_H
 
 //#include <QtGui> // too much
+#include <QPointer>
 #include <QListWidgetItem>
 #include <QSystemTrayIcon>
 #include <QMainWindow>
@@ -411,7 +412,7 @@ private:
     QColor lastTxtColor_, lastBgColor_;
     DomModel *model_;
     QString xmlPath_;
-    LineEdit *ImagePathEntry_, *htmlPahEntry_;
+    QPointer<LineEdit> imagePathEntry_, htmlPahEntry_;
     /* By pairing each widget with a DOM item, we won't need to worry
        about keeping the correspondence between widgets and nodes: */
     QHash<DomItem*, TextEdit*> widgets_;

@@ -13,9 +13,9 @@ V1.0.0
  * When inserting a link, choose a blue color based on the background color.
  * Scroll to the clicked node without delay.
  * Fixed node renaming with transparent tree view.
- * Reduced the wait for systray to 20 sec. Also, show a warning dialog if there's no tray and the app was supposed to minimize into tray.
+ * Reduced the wait for systray to 20 sec. Also, show a warning if there's no tray.
  * Made toolbar icons small by default.
- * Removed the workaround for Enlightenment.
+ * Removed the workaround for Enlightenment (it cluttered the code for no good reason).
 
 V0.10.0
 ---------
