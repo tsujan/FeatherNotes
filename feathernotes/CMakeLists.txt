@@ -110,6 +110,7 @@ set(feathernotes_SRCS
     textedit.cpp
     simplecrypt.cpp
     vscrollbar.cpp
+    printing.cpp
     svgicons.cpp)
 
 if(WITH_HUNSPELL)

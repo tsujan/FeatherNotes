@@ -30,6 +30,7 @@
 #include "svgicons.h"
 #include "pref.h"
 #include "colorLabel.h"
+#include "printing.h"
 
 #ifdef HAS_HUNSPELL
 #include "spellChecker.h"
@@ -5595,6 +5596,8 @@ void FN::writeConfig()
     settings.endGroup();
 }
 /*************************/
+// NOTE: Because of a bug in Qt, if printing is done in this thread, it'll interfere with how
+// emojis are shown. Printing in a separate thread is also good for not blocking windows.
 void FN::txtPrint()
 {
     QWidget *cw = ui->stackedWidget->currentWidget();
@@ -5623,15 +5626,7 @@ void FN::txtPrint()
     else if ((fname = model_->data (indx, Qt::DisplayRole).toString()).isEmpty())
             fname = tr ("Untitled");
     fname = dir.filePath (fname);
-
-    QPrinter printer (QPrinter::HighResolution);
-    if (printer.outputFormat() == QPrinter::PdfFormat)
-        printer.setOutputFileName (fname.append (".pdf"));
-    /*else if (printer.outputFormat() == QPrinter::PostScriptFormat)
-        printer.setOutputFileName (fname.append (".ps"));*/
-
-    QPrintDialog *dlg = new QPrintDialog (&printer, this);
-    dlg->setWindowTitle (tr ("Print Document"));
+    fname.append (".pdf");
 
     QTextDocument *doc = nullptr;
     bool newDocCreated = false;
@@ -5697,13 +5692,31 @@ void FN::txtPrint()
             QApplication::restoreOverrideCursor();
     });
 
-    if (dlg->exec() == QDialog::Accepted)
-    {
-        QApplication::setOverrideCursor (QCursor(Qt::WaitCursor));
-        doc->print (&printer);
-    }
-    delete dlg;
+    bool Use96Dpi = QCoreApplication::instance()->testAttribute (Qt::AA_Use96Dpi);
+    QScreen *screen = QGuiApplication::primaryScreen();
+    qreal sourceDpiX = Use96Dpi ? 96 : screen ? screen->logicalDotsPerInchX() : 100;
+    qreal sourceDpiY = Use96Dpi ? 96 : screen ? screen->logicalDotsPerInchY() : 100;
+    Printing *thread = new Printing (doc,
+                                     fname,
+                                     sourceDpiX,
+                                     sourceDpiY,
+                                     fgColor_);
     if (newDocCreated) delete doc;
+
+    QPrintDialog dlg (thread->printer(), this);
+    dlg.setWindowTitle (tr ("Print Document"));
+    if (dlg.exec() == QDialog::Accepted)
+    {
+        connect (thread, &QThread::finished, thread, &QObject::deleteLater);
+        connect (thread, &QThread::finished, this, [this] {
+            // this also closes the permanent bar below
+            showWarningBar ("<center><b><big>" + tr ("Printing completed.") + "</big></b></center>", 10);
+        });
+        showWarningBar ("<center><b><big>" + tr ("Printing in progress...") + "</big></b></center>", -1);
+        thread->start();
+    }
+    else
+        delete thread;
 
     if (QGuiApplication::overrideCursor() != nullptr)
         QApplication::restoreOverrideCursor();

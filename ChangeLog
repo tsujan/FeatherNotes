@@ -3,6 +3,7 @@ V1.0.0
  * Now FeatherNotes is a single-instance app, that doesn't open the same document twice when launched. Qt D-Bus is used for this purpose.
  * Removed the qmake compilation (have no time to maintain it, especially with Qt D-Bus).
  * Added a warning-bar for some messages.
+ * Do printing in a separate thread, so that, if it takes a long time, the app could still be used.
  * Select the text between spaces with Ctrl + double click.
  * Added an option for remembering the expanded state of each node.
  * Require Qt5.15.
