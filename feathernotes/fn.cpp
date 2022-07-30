@@ -5912,17 +5912,25 @@ QString FN::nodeAddress (QModelIndex index)
     QString res;
     if (!index.isValid()) return res;
 
-    res.prepend (model_->data (index, Qt::DisplayRole).toString());
+    QStringList l;
+    l.prepend (model_->data (index, Qt::DisplayRole).toString());
     QModelIndex indx = model_->parent (index);
     while (indx.isValid())
     {
-        res.prepend (QString ("%1 > ").arg (model_->data (indx, Qt::DisplayRole).toString()));
+        l.prepend (model_->data (indx, Qt::DisplayRole).toString());
         indx = model_->parent (indx);
     }
-    if (fgColor_ != QColor (Qt::black))
-        res = QString ("<br><center><h2><font color=%1>%2</font></h2></center><br>").arg (fgColor_.name(), res);
+    bool rtl = l.join (" ").isRightToLeft();
+    if (rtl)
+        res = l.join (" ← ");
     else
-        res = QString ("<br><center><h2>%1</h2></center><br>").arg (res);
+        res = l.join (" → ");
+    if (fgColor_ != QColor (Qt::black))
+        res = QString ("<br><center><h2><p dir='%1' style=\"font-family:'%2'; color:%3\">%4</p></h2></center><hr>")
+              .arg (rtl ? "rtl" : "ltr", nodeFont_.family(), fgColor_.name(), res);
+    else
+        res = QString ("<br><center><h2><p dir='%1' style=\"font-family:'%2';\">%3</p></h2></center><hr>")
+              .arg (rtl ? "rtl" : "ltr", nodeFont_.family(), res);
 
     return res;
 }

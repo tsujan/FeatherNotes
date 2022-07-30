@@ -1056,8 +1056,8 @@
         <location filename="../../fn.cpp" line="4567"/>
         <location filename="../../fn.cpp" line="4830"/>
         <location filename="../../fn.cpp" line="5777"/>
-        <location filename="../../fn.cpp" line="6050"/>
-        <location filename="../../fn.cpp" line="6146"/>
+        <location filename="../../fn.cpp" line="6058"/>
+        <location filename="../../fn.cpp" line="6154"/>
         <source>Cancel</source>
         <translation>취소</translation>
     </message>
@@ -1109,8 +1109,8 @@
         <location filename="../../fn.cpp" line="4568"/>
         <location filename="../../fn.cpp" line="4831"/>
         <location filename="../../fn.cpp" line="5779"/>
-        <location filename="../../fn.cpp" line="6051"/>
-        <location filename="../../fn.cpp" line="6147"/>
+        <location filename="../../fn.cpp" line="6059"/>
+        <location filename="../../fn.cpp" line="6155"/>
         <source>OK</source>
         <translation>확인</translation>
     </message>
@@ -1220,9 +1220,9 @@ Please disable tray in Preferences.</source>
         <location filename="../../fn.cpp" line="5618"/>
         <location filename="../../fn.cpp" line="5627"/>
         <location filename="../../fn.cpp" line="5766"/>
-        <location filename="../../fn.cpp" line="5951"/>
-        <location filename="../../fn.cpp" line="5960"/>
-        <location filename="../../fn.cpp" line="5987"/>
+        <location filename="../../fn.cpp" line="5959"/>
+        <location filename="../../fn.cpp" line="5968"/>
+        <location filename="../../fn.cpp" line="5995"/>
         <source>Untitled</source>
         <translation>제목 없음</translation>
     </message>
@@ -1426,106 +1426,106 @@ Do you want to replace it?
 </translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5992"/>
+        <location filename="../../fn.cpp" line="6000"/>
         <source>Save HTML As...</source>
         <translation>다른 이름으로 HTML 저장 ...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5994"/>
+        <location filename="../../fn.cpp" line="6002"/>
         <source>HTML Files (*.html *.htm)</source>
         <translation>HTML 파일 (*.html *.htm)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6018"/>
+        <location filename="../../fn.cpp" line="6026"/>
         <source>Set Password</source>
         <translation>비밀번호 설정</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6027"/>
+        <location filename="../../fn.cpp" line="6035"/>
         <source>Type password</source>
         <translation>비밀번호 입력</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6039"/>
+        <location filename="../../fn.cpp" line="6047"/>
         <source>Retype password</source>
         <translation>비밀번호 재 입력</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6110"/>
+        <location filename="../../fn.cpp" line="6118"/>
         <source>&lt;center&gt;Passwords were different. Retry!&lt;/center&gt;</source>
         <translation>&lt;center&gt;비밀번호가 다릅니다. 다시 시도하세요!&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6130"/>
         <location filename="../../fn.cpp" line="6138"/>
+        <location filename="../../fn.cpp" line="6146"/>
         <source>Enter Password</source>
         <translation>비밀번호 입력</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6210"/>
+        <location filename="../../fn.cpp" line="6218"/>
         <source>&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</source>
         <translation>&lt;center&gt;잘못된 비밀번호 입니다. 다시 시도하세요!&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6252"/>
+        <location filename="../../fn.cpp" line="6260"/>
         <source>A lightweight notes manager</source>
         <translation>가벼운 메모 관리자</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6253"/>
+        <location filename="../../fn.cpp" line="6261"/>
         <source>based on Qt</source>
         <translation>Qt기반으로 작성됨</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6254"/>
+        <location filename="../../fn.cpp" line="6262"/>
         <source>Author</source>
         <translation>작성자</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6256"/>
-        <location filename="../../fn.cpp" line="6257"/>
+        <location filename="../../fn.cpp" line="6264"/>
+        <location filename="../../fn.cpp" line="6265"/>
         <source>About FeatherNotes</source>
         <translation>FeatherNotes 정보</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6256"/>
+        <location filename="../../fn.cpp" line="6264"/>
         <source>Translators</source>
         <translation>번역자</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6440"/>
+        <location filename="../../fn.cpp" line="6448"/>
         <source>See Preferences → Text → Spell Checking!</source>
         <translation>기본 설정 → 텍스트 → 맞춤법 검사를 참조하십시오!</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6456"/>
+        <location filename="../../fn.cpp" line="6464"/>
         <source>You need to add a Hunspell dictionary.</source>
         <translation>Hunspell 사전을 추가해야합니다.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6461"/>
+        <location filename="../../fn.cpp" line="6469"/>
         <source>The Hunspell dictionary does not exist.</source>
         <translation>Hunspell 사전이 없습니다.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6469"/>
+        <location filename="../../fn.cpp" line="6477"/>
         <source>The Hunspell dictionary is not accompanied by an affix file.</source>
         <translation>Hunspell 사전에는 접사 파일이 포함되어 있지 않습니다.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6487"/>
-        <location filename="../../fn.cpp" line="6502"/>
-        <location filename="../../fn.cpp" line="6514"/>
+        <location filename="../../fn.cpp" line="6495"/>
+        <location filename="../../fn.cpp" line="6510"/>
+        <location filename="../../fn.cpp" line="6522"/>
         <source>No misspelling from text cursor.</source>
         <translation>텍스트 커서에서 맞춤법 오류가 없습니다.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6526"/>
+        <location filename="../../fn.cpp" line="6534"/>
         <source>Spell Checking</source>
         <translation>맞춤법 검사</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6255"/>
+        <location filename="../../fn.cpp" line="6263"/>
         <source>aka.</source>
         <translation>별명.</translation>
     </message>

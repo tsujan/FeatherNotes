@@ -1056,8 +1056,8 @@
         <location filename="../../fn.cpp" line="4567"/>
         <location filename="../../fn.cpp" line="4830"/>
         <location filename="../../fn.cpp" line="5777"/>
-        <location filename="../../fn.cpp" line="6050"/>
-        <location filename="../../fn.cpp" line="6146"/>
+        <location filename="../../fn.cpp" line="6058"/>
+        <location filename="../../fn.cpp" line="6154"/>
         <source>Cancel</source>
         <translation>لغو</translation>
     </message>
@@ -1109,8 +1109,8 @@
         <location filename="../../fn.cpp" line="4568"/>
         <location filename="../../fn.cpp" line="4831"/>
         <location filename="../../fn.cpp" line="5779"/>
-        <location filename="../../fn.cpp" line="6051"/>
-        <location filename="../../fn.cpp" line="6147"/>
+        <location filename="../../fn.cpp" line="6059"/>
+        <location filename="../../fn.cpp" line="6155"/>
         <source>OK</source>
         <translation>تاييد</translation>
     </message>
@@ -1222,9 +1222,9 @@ Please disable tray in Preferences.</source>
         <location filename="../../fn.cpp" line="5618"/>
         <location filename="../../fn.cpp" line="5627"/>
         <location filename="../../fn.cpp" line="5766"/>
-        <location filename="../../fn.cpp" line="5951"/>
-        <location filename="../../fn.cpp" line="5960"/>
-        <location filename="../../fn.cpp" line="5987"/>
+        <location filename="../../fn.cpp" line="5959"/>
+        <location filename="../../fn.cpp" line="5968"/>
+        <location filename="../../fn.cpp" line="5995"/>
         <source>Untitled</source>
         <translation>بی‌نام</translation>
     </message>
@@ -1428,106 +1428,106 @@ Do you want to replace it?
 </translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5992"/>
+        <location filename="../../fn.cpp" line="6000"/>
         <source>Save HTML As...</source>
         <translation>ذخيره‌سازی HTML به عنوان...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5994"/>
+        <location filename="../../fn.cpp" line="6002"/>
         <source>HTML Files (*.html *.htm)</source>
         <translation>فايلهای HTML (*.html *.htm)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6018"/>
+        <location filename="../../fn.cpp" line="6026"/>
         <source>Set Password</source>
         <translation>انتخاب گذرواژه</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6027"/>
+        <location filename="../../fn.cpp" line="6035"/>
         <source>Type password</source>
         <translation>گذرواژه را تايپ کنيد</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6039"/>
+        <location filename="../../fn.cpp" line="6047"/>
         <source>Retype password</source>
         <translation>گذرواژه را دوباره تايپ کنيد</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6110"/>
+        <location filename="../../fn.cpp" line="6118"/>
         <source>&lt;center&gt;Passwords were different. Retry!&lt;/center&gt;</source>
         <translation>&lt;center&gt;گذرواژه‌ها فرق داشتند. امتحان مجدد؟&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6130"/>
         <location filename="../../fn.cpp" line="6138"/>
+        <location filename="../../fn.cpp" line="6146"/>
         <source>Enter Password</source>
         <translation>ورود گذرواژه</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6210"/>
+        <location filename="../../fn.cpp" line="6218"/>
         <source>&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</source>
         <translation>&lt;center&gt;گذرواژه نادرست بود. امتحان مجدد؟&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6252"/>
+        <location filename="../../fn.cpp" line="6260"/>
         <source>A lightweight notes manager</source>
         <translation>يک دفتر يادداشت سبک</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6253"/>
+        <location filename="../../fn.cpp" line="6261"/>
         <source>based on Qt</source>
         <translation>بر پايه‌ی Qt</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6254"/>
+        <location filename="../../fn.cpp" line="6262"/>
         <source>Author</source>
         <translation>نگارنده</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6256"/>
-        <location filename="../../fn.cpp" line="6257"/>
+        <location filename="../../fn.cpp" line="6264"/>
+        <location filename="../../fn.cpp" line="6265"/>
         <source>About FeatherNotes</source>
         <translation>درباره‌ی FeatherNotes</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6256"/>
+        <location filename="../../fn.cpp" line="6264"/>
         <source>Translators</source>
         <translation>مترجمان</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6440"/>
+        <location filename="../../fn.cpp" line="6448"/>
         <source>See Preferences → Text → Spell Checking!</source>
         <translation>تنظيمها ← متن ← بررسی تلفظ را مشاهده کنيد!</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6456"/>
+        <location filename="../../fn.cpp" line="6464"/>
         <source>You need to add a Hunspell dictionary.</source>
         <translation>نياز به افزودن لغتنامه‌ی Hunspell داريد.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6461"/>
+        <location filename="../../fn.cpp" line="6469"/>
         <source>The Hunspell dictionary does not exist.</source>
         <translation>لغتنامه‌ی Hunspell وجود ندارد.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6469"/>
+        <location filename="../../fn.cpp" line="6477"/>
         <source>The Hunspell dictionary is not accompanied by an affix file.</source>
         <translation>لغتنامه‌ی Hunspell همراه فايل ضميمه نيست.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6487"/>
-        <location filename="../../fn.cpp" line="6502"/>
-        <location filename="../../fn.cpp" line="6514"/>
+        <location filename="../../fn.cpp" line="6495"/>
+        <location filename="../../fn.cpp" line="6510"/>
+        <location filename="../../fn.cpp" line="6522"/>
         <source>No misspelling from text cursor.</source>
         <translation>لفظ نادرستی با شروع از نشانگر متنی وجود ندارد.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6526"/>
+        <location filename="../../fn.cpp" line="6534"/>
         <source>Spell Checking</source>
         <translation>بررسی تلفظ</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6255"/>
+        <location filename="../../fn.cpp" line="6263"/>
         <source>aka.</source>
         <translation></translation>
     </message>
