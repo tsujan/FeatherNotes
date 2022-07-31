@@ -59,7 +59,9 @@ public:
         setAutoFillBackground (true);
         QPalette p = palette();
         p.setColor (foregroundRole(), Qt::white);
-        p.setColor (backgroundRole(), timeout > 0 ? QColor (125, 0, 0, 200) : QColor (0, 70, 0, 210));
+        p.setColor (backgroundRole(), timeout > 0 ? QColor (125, 0, 0, 200)
+                                                  : timeout == 0 ? QColor (0, 70, 0, 210)
+                                                                 : QColor (0, 0, 90, 200));
         setPalette (p);
 
         grid_ = new QGridLayout;

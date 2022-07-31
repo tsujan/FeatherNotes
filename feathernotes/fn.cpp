@@ -5712,7 +5712,7 @@ void FN::txtPrint()
             // this also closes the permanent bar below
             showWarningBar ("<center><b><big>" + tr ("Printing completed.") + "</big></b></center>", 10);
         });
-        showWarningBar ("<center><b><big>" + tr ("Printing in progress...") + "</big></b></center>", -1);
+        showWarningBar ("<center><b><big>" + tr ("Printing in progress...") + "</big></b></center>", 0);
         thread->start();
     }
     else
@@ -6448,7 +6448,7 @@ void FN::spellingCheckingMsg (const QString &msg, bool hasInfo)
                         + "\n<center><i>" + tr ("See Preferences → Text → Spell Checking!") + "</i></center>", 20);
     }
     else
-        showWarningBar ("<center>" + msg + "</center>", 15);
+        showWarningBar ("<center><b><big>" + msg + "</big></b></center>", 10);
 }
 
 void FN::checkSpelling()
