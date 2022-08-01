@@ -389,7 +389,7 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
             trayTimer->start();
             ++trayCounter_;
         }
-        else show();
+        else activateFNWindow (true);
     }
 
     QShortcut *focusView = new QShortcut (QKeySequence (Qt::Key_Escape), this);
@@ -419,7 +419,7 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     if (message.isEmpty())
     {
         if (!hasTray_ || !minToTray_)
-            show();
+            activateFNWindow (true);
     }
     else
     {
@@ -427,7 +427,7 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
             && message.at (0) != "--tray" && message.at (0) != "-t")
         {
             if (!hasTray_ || !minToTray_)
-                show();
+                activateFNWindow (true);
             filePath = message.at (0);
         }
         else
@@ -435,7 +435,7 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
             if (message.at (0) == "--min" || message.at (0) == "-m")
                 showMinimized();
             else if (!hasTray_)
-                show();
+                activateFNWindow (true);
             if (message.count() > 1)
                 filePath = message.at (1);
         }
@@ -614,7 +614,7 @@ void FN::checkTray()
         {
             static_cast<FNSingleton*>(qApp)->setTrayChecked();
             trayTimer->deleteLater();
-            show();
+            activateFNWindow (true);
             showWarningBar ("<center><b><big>"
                             + tr ("System tray is not available.\nPlease disable tray in Preferences.")
                             + "</big></b></center>", -1);
