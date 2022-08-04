@@ -1196,7 +1196,8 @@
         <location filename="../../fn.cpp" line="619"/>
         <source>System tray is not available.
 Please disable tray in Preferences.</source>
-        <translation type="unfinished"></translation>
+        <translation>시스템 트레이를 사용할 수 없습니다.
+환경 설정에서 트레이를 비활성화하세요.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="937"/>
@@ -1606,7 +1607,11 @@ this dialog and also on exit.
 
 This may not work correctly
 with some window managers.</source>
-        <translation type="unfinished"></translation>
+        <translation>닫기 후 위치 저장
+이 대화 상자 및 나갈 때도 포함합니다.
+
+일부 창 관리자에서는 
+제대로 작동하지 않을 수 있습니다.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>
@@ -1757,12 +1762,14 @@ Takes effect after closing this dialog.</source>
         <source>If this option is checked, the opened document will
 be saved on exiting without prompt and without
 showing a warning if saving is not possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>이 옵션을 선택하면 열린 문서가
+프롬프트 없이 나갈 때 저장됩니다.
+저장할 수 없는 경우 경고를 표시합니다.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="353"/>
         <source>Save opened document on exiting</source>
-        <translation type="unfinished"></translation>
+        <translation>나갈 때 열린 문서 저장하기</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="376"/>

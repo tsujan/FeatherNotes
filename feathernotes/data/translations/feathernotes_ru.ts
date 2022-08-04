@@ -1196,7 +1196,8 @@
         <location filename="../../fn.cpp" line="619"/>
         <source>System tray is not available.
 Please disable tray in Preferences.</source>
-        <translation type="unfinished"></translation>
+        <translation>Системный трей недоступен.
+Пожалуйста, отключите трей в параметрах.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="937"/>
@@ -1606,7 +1607,11 @@ this dialog and also on exit.
 
 This may not work correctly
 with some window managers.</source>
-        <translation type="unfinished"></translation>
+        <translation>Сохраняет позицию после закрытия
+этого диалога и на выходе.
+
+Может работать некорректно с
+некоторыми оконными менеджерами.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>
@@ -1756,12 +1761,14 @@ Takes effect after closing this dialog.</source>
         <source>If this option is checked, the opened document will
 be saved on exiting without prompt and without
 showing a warning if saving is not possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Если эта опция выбрана, документ будет сохранён
+при закрытии без предупреждения и без
+отображения ошибки если сохранение невозможно.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="353"/>
         <source>Save opened document on exiting</source>
-        <translation type="unfinished"></translation>
+        <translation>Сохранять открытый документ при выходе</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="376"/>
@@ -1812,12 +1819,12 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../prefDialog.ui" line="503"/>
         <source>By default, all nodes are expanded on opening a document.</source>
-        <translation type="unfinished"></translation>
+        <translation>Все элементы отображаются по умолчанию при открытии документа.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="506"/>
         <source>Remember expanded states of nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Сохранить состояния отображаемых элементов</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="530"/>
