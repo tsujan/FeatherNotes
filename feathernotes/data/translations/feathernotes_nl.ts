@@ -760,7 +760,7 @@
     <message>
         <location filename="../../fn.ui" line="1126"/>
         <source>Move &amp;Left</source>
-        <translation>Naar &amp;links verplaatsen</translation>
+        <translation>Inspringen ophe&amp;ffen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1129"/>
@@ -770,7 +770,7 @@
     <message>
         <location filename="../../fn.ui" line="1137"/>
         <source>Move &amp;Right</source>
-        <translation>Naar &amp;rechts verplaatsen</translation>
+        <translation>Insp&amp;ringen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1140"/>
