@@ -151,842 +151,842 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="341"/>
-        <location filename="../../fn.ui" line="989"/>
+        <location filename="../../fn.ui" line="987"/>
         <source>&amp;Help</source>
         <translation>راهنما</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="438"/>
+        <location filename="../../fn.ui" line="436"/>
         <source>Find:</source>
         <translation>يافتن:</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="445"/>
+        <location filename="../../fn.ui" line="443"/>
         <source>Replace with:</source>
         <translation>جايگزينی با:</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="458"/>
+        <location filename="../../fn.ui" line="456"/>
         <source>To be replaced</source>
         <translation>جايگزين شود</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="471"/>
+        <location filename="../../fn.ui" line="469"/>
         <source>Replacing text</source>
         <translation>متن جايگزين</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="481"/>
+        <location filename="../../fn.ui" line="479"/>
         <source>Previous (F9)</source>
         <translation>قبلی (F9)</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="484"/>
+        <location filename="../../fn.ui" line="482"/>
         <source>F9</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="497"/>
+        <location filename="../../fn.ui" line="495"/>
         <source>Next (F8)</source>
         <translation>بعدی (F8)</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="500"/>
+        <location filename="../../fn.ui" line="498"/>
         <source>F8</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="513"/>
+        <location filename="../../fn.ui" line="511"/>
         <source>Replace all (F10)</source>
         <translation>جايگزينی همه (F10)</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="516"/>
+        <location filename="../../fn.ui" line="514"/>
         <source>F10</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="533"/>
+        <location filename="../../fn.ui" line="531"/>
         <source>&amp;Save</source>
         <translation>ذخيره‌سازی</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="536"/>
+        <location filename="../../fn.ui" line="534"/>
         <location filename="../../fn.cpp" line="990"/>
         <source>Save</source>
         <translation>ذخيره‌سازی</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="539"/>
+        <location filename="../../fn.ui" line="537"/>
         <source>Ctrl+S</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="544"/>
+        <location filename="../../fn.ui" line="542"/>
         <location filename="../../fn.cpp" line="648"/>
         <source>&amp;Open</source>
         <translation>بازکردن</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="547"/>
+        <location filename="../../fn.ui" line="545"/>
         <source>Open a file</source>
         <translation>بازکردن فايل</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="550"/>
+        <location filename="../../fn.ui" line="548"/>
         <source>Ctrl+O</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="558"/>
+        <location filename="../../fn.ui" line="556"/>
         <source>&amp;Undo</source>
         <translation>بازگشت</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="561"/>
+        <location filename="../../fn.ui" line="559"/>
         <source>Undo</source>
         <translation>بازگشت</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="564"/>
+        <location filename="../../fn.ui" line="562"/>
         <source>Ctrl+Z</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="572"/>
+        <location filename="../../fn.ui" line="570"/>
         <source>&amp;Redo</source>
         <translation>تکرار</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="575"/>
+        <location filename="../../fn.ui" line="573"/>
         <source>Redo</source>
         <translation>تکرار</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="578"/>
+        <location filename="../../fn.ui" line="576"/>
         <source>Ctrl+Shift+Z</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="586"/>
+        <location filename="../../fn.ui" line="584"/>
         <source>&amp;Find</source>
         <translation>يافتن</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="589"/>
+        <location filename="../../fn.ui" line="587"/>
         <source>Show/hide searchbar</source>
         <translation>آشکار يا پنهان کردن قسمت جستجو</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="592"/>
+        <location filename="../../fn.ui" line="590"/>
         <source>Ctrl+F</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="600"/>
+        <location filename="../../fn.ui" line="598"/>
         <source>&amp;Clear All Formats</source>
         <translation>پاک کردن همه‌ی قالبها</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="603"/>
+        <location filename="../../fn.ui" line="601"/>
         <source>Clear all formats</source>
         <translation>پاک کردن همه‌ی قالبها</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="606"/>
+        <location filename="../../fn.ui" line="604"/>
         <source>Ctrl+E</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="617"/>
+        <location filename="../../fn.ui" line="615"/>
         <source>&amp;Bold</source>
         <translation>ضخيم</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="620"/>
+        <location filename="../../fn.ui" line="618"/>
         <source>Bold</source>
         <translation>ضخيم</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="623"/>
+        <location filename="../../fn.ui" line="621"/>
         <source>Ctrl+B</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="634"/>
+        <location filename="../../fn.ui" line="632"/>
         <source>&amp;Italic</source>
         <translation>مورب</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="637"/>
+        <location filename="../../fn.ui" line="635"/>
         <source>Italic</source>
         <translation>مورب</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="640"/>
+        <location filename="../../fn.ui" line="638"/>
         <source>Ctrl+I</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="651"/>
+        <location filename="../../fn.ui" line="649"/>
         <source>&amp;Underline</source>
         <translation>خط زيرين</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="654"/>
+        <location filename="../../fn.ui" line="652"/>
         <source>Underline</source>
         <translation>خط زيرين</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="657"/>
+        <location filename="../../fn.ui" line="655"/>
         <source>Ctrl+U</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="668"/>
+        <location filename="../../fn.ui" line="666"/>
         <source>&amp;Strike Through</source>
         <translation>خط ميانی</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="671"/>
+        <location filename="../../fn.ui" line="669"/>
         <source>Strike through</source>
         <translation>خط ميانی</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="674"/>
+        <location filename="../../fn.ui" line="672"/>
         <source>Ctrl+T</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="682"/>
+        <location filename="../../fn.ui" line="680"/>
         <source>Te&amp;xt Color</source>
         <translation>رنگ متن</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="685"/>
+        <location filename="../../fn.ui" line="683"/>
         <source>Text color</source>
         <translation>رنگ متن</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="688"/>
+        <location filename="../../fn.ui" line="686"/>
         <source>Alt+Shift+T</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="696"/>
+        <location filename="../../fn.ui" line="694"/>
         <source>Back&amp;ground Color</source>
         <translation>رنگ پسزمينه</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="699"/>
+        <location filename="../../fn.ui" line="697"/>
         <source>Background color</source>
         <translation>رنگ پسزمينه</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="702"/>
+        <location filename="../../fn.ui" line="700"/>
         <source>Alt+Shift+B</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="707"/>
+        <location filename="../../fn.ui" line="705"/>
         <source>Options</source>
         <translation>گزينه‌ها</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="712"/>
+        <location filename="../../fn.ui" line="710"/>
         <location filename="../../fn.cpp" line="647"/>
         <source>&amp;New Note</source>
         <translation>شاخه‌ی نو</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="715"/>
+        <location filename="../../fn.ui" line="713"/>
         <source>Ctrl+Alt+Shift+N</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="723"/>
+        <location filename="../../fn.ui" line="721"/>
         <source>Save &amp;As</source>
         <translation>ذخيره‌سازی به عنوان</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="726"/>
+        <location filename="../../fn.ui" line="724"/>
         <source>Ctrl+Shift+S</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="734"/>
+        <location filename="../../fn.ui" line="732"/>
         <source>&amp;Print</source>
         <translation>چاپ</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="737"/>
+        <location filename="../../fn.ui" line="735"/>
         <source>Ctrl+P</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="745"/>
+        <location filename="../../fn.ui" line="743"/>
         <source>P&amp;rint with Sub-Nodes</source>
         <translation>چاپ با زيرشاخه‌ها</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="753"/>
+        <location filename="../../fn.ui" line="751"/>
         <source>Set Pass&amp;word</source>
         <translation>انتخاب گذرواژه</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="758"/>
+        <location filename="../../fn.ui" line="756"/>
         <location filename="../../fn.cpp" line="650"/>
         <source>&amp;Quit</source>
         <translation>خروج</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="761"/>
+        <location filename="../../fn.ui" line="759"/>
         <source>Ctrl+Q</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="769"/>
+        <location filename="../../fn.ui" line="767"/>
         <source>&amp;Cut</source>
         <translation>بريدن</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="772"/>
+        <location filename="../../fn.ui" line="770"/>
         <source>Ctrl+X</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="780"/>
+        <location filename="../../fn.ui" line="778"/>
         <source>C&amp;opy</source>
         <translation>رونوشت</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="783"/>
+        <location filename="../../fn.ui" line="781"/>
         <source>Ctrl+C</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="791"/>
+        <location filename="../../fn.ui" line="789"/>
         <source>&amp;Paste</source>
         <translation>چسباندن</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="794"/>
+        <location filename="../../fn.ui" line="792"/>
         <source>Ctrl+V</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="802"/>
+        <location filename="../../fn.ui" line="800"/>
         <source>&amp;Delete</source>
         <translation>حذف</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="810"/>
+        <location filename="../../fn.ui" line="808"/>
         <source>&amp;Select All</source>
         <translation>انتخاب همه</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="813"/>
+        <location filename="../../fn.ui" line="811"/>
         <source>Ctrl+A</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="821"/>
+        <location filename="../../fn.ui" line="819"/>
         <source>E&amp;mbed Image</source>
         <translation>گذاشتن تصوير</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="824"/>
+        <location filename="../../fn.ui" line="822"/>
         <location filename="../../fn.cpp" line="4368"/>
         <source>Embed Image</source>
         <translation>گذاشتن تصوير</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="827"/>
+        <location filename="../../fn.ui" line="825"/>
         <source>Ctrl+Alt+Shift+I</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="835"/>
+        <location filename="../../fn.ui" line="833"/>
         <source>E&amp;xpand All</source>
         <translation>باز کردن شاخه‌ها</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="838"/>
+        <location filename="../../fn.ui" line="836"/>
         <source>Ctrl+Shift+Down</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="846"/>
+        <location filename="../../fn.ui" line="844"/>
         <source>Collap&amp;se All</source>
         <translation>بستن شاخه‌ها</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="849"/>
+        <location filename="../../fn.ui" line="847"/>
         <source>Ctrl+Shift+Up</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="857"/>
+        <location filename="../../fn.ui" line="855"/>
         <source>&amp;Append Sibling</source>
         <translation>افزودن شاخه‌ی موازی</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="860"/>
+        <location filename="../../fn.ui" line="858"/>
         <source>Ctrl+N</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="868"/>
+        <location filename="../../fn.ui" line="866"/>
         <source>Append &amp;Child</source>
         <translation>افزودن زيرشاخه</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="871"/>
+        <location filename="../../fn.ui" line="869"/>
         <source>Ctrl+Shift+N</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="879"/>
+        <location filename="../../fn.ui" line="877"/>
         <source>&amp;Delete Node</source>
         <translation>حذف شاخه</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="882"/>
+        <location filename="../../fn.ui" line="880"/>
         <source>Ctrl+D</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="890"/>
+        <location filename="../../fn.ui" line="888"/>
         <source>Move &amp;Up</source>
         <translation>بالا بردن</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="893"/>
+        <location filename="../../fn.ui" line="891"/>
         <source>Alt+Up</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="901"/>
+        <location filename="../../fn.ui" line="899"/>
         <source>Move Do&amp;wn</source>
         <translation>پايين آوردن</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="904"/>
+        <location filename="../../fn.ui" line="902"/>
         <source>Alt+Down</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="912"/>
+        <location filename="../../fn.ui" line="910"/>
         <source>Re&amp;name Node</source>
         <translation>تغيير نام</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="915"/>
+        <location filename="../../fn.ui" line="913"/>
         <source>Ctrl+Shift+R</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="920"/>
+        <location filename="../../fn.ui" line="918"/>
         <source>Tree Pr&amp;operties</source>
         <translation>ويژگی‌های شاخه‌ها</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="923"/>
+        <location filename="../../fn.ui" line="921"/>
         <source>Ctrl+Shift+D</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="931"/>
+        <location filename="../../fn.ui" line="929"/>
         <source>Document &amp;Font</source>
         <translation>قلم سند</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="945"/>
+        <location filename="../../fn.ui" line="943"/>
         <source>&amp;Wrap Lines</source>
         <translation>قالب‌بندی خطها</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="948"/>
+        <location filename="../../fn.ui" line="946"/>
         <source>Ctrl+W</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="962"/>
+        <location filename="../../fn.ui" line="960"/>
         <source>&amp;Auto-Indentation</source>
         <translation>دندانه‌گذاری خودکار</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="965"/>
+        <location filename="../../fn.ui" line="963"/>
         <source>Ctrl+Shift+I</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="970"/>
+        <location filename="../../fn.ui" line="968"/>
         <source>&amp;Preferences</source>
         <translation>تنظيمها</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="973"/>
+        <location filename="../../fn.ui" line="971"/>
         <source>Ctrl+Shift+P</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="981"/>
+        <location filename="../../fn.ui" line="979"/>
         <source>Find and &amp;Replace</source>
         <translation>يافتن و جايگزينی</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="984"/>
+        <location filename="../../fn.ui" line="982"/>
         <source>Ctrl+R</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="992"/>
+        <location filename="../../fn.ui" line="990"/>
         <source>Ctrl+H</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="997"/>
+        <location filename="../../fn.ui" line="995"/>
         <source>&amp;About</source>
         <translation>درباره</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1005"/>
+        <location filename="../../fn.ui" line="1003"/>
         <source>Pr&amp;int All Nodes</source>
         <translation>چاپ همه‌ی شاخه‌ها</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1016"/>
+        <location filename="../../fn.ui" line="1014"/>
         <source>Superscrip&amp;t</source>
         <translation>بالانويس</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1019"/>
+        <location filename="../../fn.ui" line="1017"/>
         <source>Superscript</source>
         <translation>بالانويس</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1022"/>
+        <location filename="../../fn.ui" line="1020"/>
         <source>Alt+Shift+U</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1033"/>
+        <location filename="../../fn.ui" line="1031"/>
         <source>Subscri&amp;pt</source>
         <translation>زيرنويس</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1036"/>
+        <location filename="../../fn.ui" line="1034"/>
         <source>Subscript</source>
         <translation>زيرنويس</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1039"/>
+        <location filename="../../fn.ui" line="1037"/>
         <source>Alt+Shift+S</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1050"/>
+        <location filename="../../fn.ui" line="1048"/>
         <source>C&amp;enter</source>
         <translation>وسط</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1053"/>
+        <location filename="../../fn.ui" line="1051"/>
         <source>Align center</source>
         <translation>تراز کردن در وسط</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1056"/>
+        <location filename="../../fn.ui" line="1054"/>
         <source>Alt+Shift+Down</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1067"/>
+        <location filename="../../fn.ui" line="1065"/>
         <location filename="../../fn.cpp" line="2190"/>
         <source>&amp;Right</source>
         <translation>راست</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1070"/>
+        <location filename="../../fn.ui" line="1068"/>
         <source>Align right</source>
         <translation>تراز کردن به راست</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1073"/>
+        <location filename="../../fn.ui" line="1071"/>
         <source>Alt+Shift+Right</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1084"/>
+        <location filename="../../fn.ui" line="1082"/>
         <location filename="../../fn.cpp" line="2184"/>
         <source>&amp;Left</source>
         <translation>چپ</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1087"/>
+        <location filename="../../fn.ui" line="1085"/>
         <source>Align left</source>
         <translation>تراز کردن به چپ</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1090"/>
+        <location filename="../../fn.ui" line="1088"/>
         <source>Alt+Shift+Left</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1101"/>
+        <location filename="../../fn.ui" line="1099"/>
         <source>&amp;Justify</source>
         <translation>تراز کردن دوسويه</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1104"/>
+        <location filename="../../fn.ui" line="1102"/>
         <source>Justify</source>
         <translation>تراز کردن دوسويه</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1107"/>
+        <location filename="../../fn.ui" line="1105"/>
         <source>Alt+Shift+Up</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1115"/>
+        <location filename="../../fn.ui" line="1113"/>
         <source>&amp;Prepend Sibling</source>
         <translation>افزودن شاخه‌ی موازی از بالا</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1118"/>
+        <location filename="../../fn.ui" line="1116"/>
         <source>Ctrl+M</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1126"/>
+        <location filename="../../fn.ui" line="1124"/>
         <source>Move &amp;Left</source>
         <translation>جابجايی به چپ</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1129"/>
+        <location filename="../../fn.ui" line="1127"/>
         <source>Alt+Left</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1137"/>
+        <location filename="../../fn.ui" line="1135"/>
         <source>Move &amp;Right</source>
         <translation>جابجايی به راست</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1140"/>
+        <location filename="../../fn.ui" line="1138"/>
         <source>Alt+Right</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1148"/>
+        <location filename="../../fn.ui" line="1146"/>
         <source>h&amp;2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1151"/>
+        <location filename="../../fn.ui" line="1149"/>
         <source>Header 2</source>
         <translation>سرخط ۲</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1154"/>
+        <location filename="../../fn.ui" line="1152"/>
         <source>Ctrl+2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1162"/>
+        <location filename="../../fn.ui" line="1160"/>
         <source>h&amp;1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1165"/>
+        <location filename="../../fn.ui" line="1163"/>
         <source>Header 1</source>
         <translation>سرخط ۱</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1168"/>
+        <location filename="../../fn.ui" line="1166"/>
         <source>Ctrl+1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1176"/>
+        <location filename="../../fn.ui" line="1174"/>
         <source>h&amp;3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1179"/>
+        <location filename="../../fn.ui" line="1177"/>
         <source>Header 3</source>
         <translation>سرخط ۳</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1182"/>
+        <location filename="../../fn.ui" line="1180"/>
         <source>Ctrl+3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1190"/>
+        <location filename="../../fn.ui" line="1188"/>
         <source>&amp;Node Font</source>
         <translation>قلم شاخه</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1193"/>
+        <location filename="../../fn.ui" line="1191"/>
         <source>Node Font</source>
         <translation>قلم شاخه</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1198"/>
+        <location filename="../../fn.ui" line="1196"/>
         <source>Scale I&amp;mage(s)</source>
         <translation>تغيير اندازه‌ی تصوير(ها)</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1206"/>
+        <location filename="../../fn.ui" line="1204"/>
         <source>Paste &amp;HTML</source>
         <translation>چسباندن HTML</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1209"/>
+        <location filename="../../fn.ui" line="1207"/>
         <source>Ctrl+Shift+V</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1217"/>
+        <location filename="../../fn.ui" line="1215"/>
         <source>&amp;Tags</source>
         <translation>برچسبها</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1220"/>
+        <location filename="../../fn.ui" line="1218"/>
         <source>Ctrl+Shift+T</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1228"/>
+        <location filename="../../fn.ui" line="1226"/>
         <source>Insert Lin&amp;k</source>
         <translation>گذاشتن پيوند</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1231"/>
+        <location filename="../../fn.ui" line="1229"/>
         <source>Ctrl+L</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1236"/>
+        <location filename="../../fn.ui" line="1234"/>
         <source>C&amp;opy Link</source>
         <translation>رونويسی از پيوند</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1244"/>
+        <location filename="../../fn.ui" line="1242"/>
         <source>I&amp;nsert Table</source>
         <translation>گذاشتن جدول</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1247"/>
+        <location filename="../../fn.ui" line="1245"/>
         <source>Ctrl+Alt+Shift+T</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1252"/>
+        <location filename="../../fn.ui" line="1250"/>
         <source>Append Row</source>
         <translation>افزودن رديف</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1257"/>
+        <location filename="../../fn.ui" line="1255"/>
         <source>Delete Row</source>
         <translation>حذف رديف</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1262"/>
+        <location filename="../../fn.ui" line="1260"/>
         <source>Append Column</source>
         <translation>افزودن ستون</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1267"/>
+        <location filename="../../fn.ui" line="1265"/>
         <source>Delete Column</source>
         <translation>حذف ستون</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1272"/>
+        <location filename="../../fn.ui" line="1270"/>
         <source>Merge Cells</source>
         <translation>ادغام خانه‌ها</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1277"/>
+        <location filename="../../fn.ui" line="1275"/>
         <source>Prepend Row</source>
         <translation>افزودن رديف از بالا</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1282"/>
+        <location filename="../../fn.ui" line="1280"/>
         <source>Prepend Column</source>
         <translation>افزودن ستون از پس</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1290"/>
+        <location filename="../../fn.ui" line="1288"/>
         <source>Export &amp;HTML</source>
         <translation>صدور به HTML</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1295"/>
+        <location filename="../../fn.ui" line="1293"/>
         <source>Save Ima&amp;ge(s)</source>
         <translation>ذخيره‌سازی تصوير(ها)</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1306"/>
+        <location filename="../../fn.ui" line="1304"/>
         <source>RTL</source>
         <translation>راست به چپ</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1309"/>
+        <location filename="../../fn.ui" line="1307"/>
         <source>Ctrl+Alt+Shift+Left</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1320"/>
+        <location filename="../../fn.ui" line="1318"/>
         <source>LTR</source>
         <translation>چپ به راست</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1323"/>
+        <location filename="../../fn.ui" line="1321"/>
         <source>Ctrl+Alt+Shift+Right</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1328"/>
-        <location filename="../../fn.ui" line="1331"/>
+        <location filename="../../fn.ui" line="1326"/>
+        <location filename="../../fn.ui" line="1329"/>
         <source>Menu</source>
         <translation>منو</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1339"/>
+        <location filename="../../fn.ui" line="1337"/>
         <source>Node &amp;Icon</source>
         <translation>شمايل شاخه</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1342"/>
+        <location filename="../../fn.ui" line="1340"/>
         <source>Ctrl+Shift+C</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1347"/>
-        <location filename="../../fn.ui" line="1350"/>
+        <location filename="../../fn.ui" line="1345"/>
+        <location filename="../../fn.ui" line="1348"/>
         <source>Check Spelling</source>
         <translation>بررسی تلفظ</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1353"/>
+        <location filename="../../fn.ui" line="1351"/>
         <source>F2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1358"/>
+        <location filename="../../fn.ui" line="1356"/>
         <source>Document &amp;Colors</source>
         <translation>رنگهای سند</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1366"/>
-        <location filename="../../fn.ui" line="1369"/>
+        <location filename="../../fn.ui" line="1364"/>
+        <location filename="../../fn.ui" line="1367"/>
         <source>Paste Date and Time</source>
         <translation>چسباندن تاريخ و زمان</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1374"/>
+        <location filename="../../fn.ui" line="1372"/>
         <source>&amp;Clear</source>
         <translation>پاکسازی</translation>
     </message>

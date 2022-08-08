@@ -151,842 +151,842 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="341"/>
-        <location filename="../../fn.ui" line="989"/>
+        <location filename="../../fn.ui" line="987"/>
         <source>&amp;Help</source>
         <translation>&amp;Abiteave</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="438"/>
+        <location filename="../../fn.ui" line="436"/>
         <source>Find:</source>
         <translation>Otsi:</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="445"/>
+        <location filename="../../fn.ui" line="443"/>
         <source>Replace with:</source>
         <translation>Asenda:</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="458"/>
+        <location filename="../../fn.ui" line="456"/>
         <source>To be replaced</source>
         <translation>Sisu, mida kavatsed asendada</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="471"/>
+        <location filename="../../fn.ui" line="469"/>
         <source>Replacing text</source>
         <translation>Asenda selle sisuga</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="481"/>
+        <location filename="../../fn.ui" line="479"/>
         <source>Previous (F9)</source>
         <translation>Eelmine (F9)</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="484"/>
+        <location filename="../../fn.ui" line="482"/>
         <source>F9</source>
         <translation>F9</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="497"/>
+        <location filename="../../fn.ui" line="495"/>
         <source>Next (F8)</source>
         <translation>Järgmine (F8)</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="500"/>
+        <location filename="../../fn.ui" line="498"/>
         <source>F8</source>
         <translation>F8</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="513"/>
+        <location filename="../../fn.ui" line="511"/>
         <source>Replace all (F10)</source>
         <translation>Asenda kõik (F10)</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="516"/>
+        <location filename="../../fn.ui" line="514"/>
         <source>F10</source>
         <translation>F10</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="533"/>
+        <location filename="../../fn.ui" line="531"/>
         <source>&amp;Save</source>
         <translation>&amp;Salvesta</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="536"/>
+        <location filename="../../fn.ui" line="534"/>
         <location filename="../../fn.cpp" line="990"/>
         <source>Save</source>
         <translation>Salvesta</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="539"/>
+        <location filename="../../fn.ui" line="537"/>
         <source>Ctrl+S</source>
         <translation>Ctrl+S</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="544"/>
+        <location filename="../../fn.ui" line="542"/>
         <location filename="../../fn.cpp" line="648"/>
         <source>&amp;Open</source>
         <translation>&amp;Ava</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="547"/>
+        <location filename="../../fn.ui" line="545"/>
         <source>Open a file</source>
         <translation>Ava fail</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="550"/>
+        <location filename="../../fn.ui" line="548"/>
         <source>Ctrl+O</source>
         <translation>Ctrl+O</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="558"/>
+        <location filename="../../fn.ui" line="556"/>
         <source>&amp;Undo</source>
         <translation>&amp;Võta tagasi</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="561"/>
+        <location filename="../../fn.ui" line="559"/>
         <source>Undo</source>
         <translation>Võta viimane tegevus tagasi</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="564"/>
+        <location filename="../../fn.ui" line="562"/>
         <source>Ctrl+Z</source>
         <translation>Ctrl+Z</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="572"/>
+        <location filename="../../fn.ui" line="570"/>
         <source>&amp;Redo</source>
         <translation>&amp;Tee uuesti</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="575"/>
+        <location filename="../../fn.ui" line="573"/>
         <source>Redo</source>
         <translation>Korda viimast tegevust uuesti</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="578"/>
+        <location filename="../../fn.ui" line="576"/>
         <source>Ctrl+Shift+Z</source>
         <translation>Ctrl+Shift+Z</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="586"/>
+        <location filename="../../fn.ui" line="584"/>
         <source>&amp;Find</source>
         <translation>&amp;Otsi</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="589"/>
+        <location filename="../../fn.ui" line="587"/>
         <source>Show/hide searchbar</source>
         <translation>Näita või peida otsinguriba</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="592"/>
+        <location filename="../../fn.ui" line="590"/>
         <source>Ctrl+F</source>
         <translation>Ctrl+F</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="600"/>
+        <location filename="../../fn.ui" line="598"/>
         <source>&amp;Clear All Formats</source>
         <translation>&amp;Eemalda kõik vormingud</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="603"/>
+        <location filename="../../fn.ui" line="601"/>
         <source>Clear all formats</source>
         <translation>Eemalda kõik vormingud</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="606"/>
+        <location filename="../../fn.ui" line="604"/>
         <source>Ctrl+E</source>
         <translation>Ctrl+E</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="617"/>
+        <location filename="../../fn.ui" line="615"/>
         <source>&amp;Bold</source>
         <translation>&amp;Paks kiri</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="620"/>
+        <location filename="../../fn.ui" line="618"/>
         <source>Bold</source>
         <translation>Paks kiri</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="623"/>
+        <location filename="../../fn.ui" line="621"/>
         <source>Ctrl+B</source>
         <translation>Ctrl+B</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="634"/>
+        <location filename="../../fn.ui" line="632"/>
         <source>&amp;Italic</source>
         <translation>&amp;Kaldkiri</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="637"/>
+        <location filename="../../fn.ui" line="635"/>
         <source>Italic</source>
         <translation>Kaldkiri</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="640"/>
+        <location filename="../../fn.ui" line="638"/>
         <source>Ctrl+I</source>
         <translation>Ctrl+I</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="651"/>
+        <location filename="../../fn.ui" line="649"/>
         <source>&amp;Underline</source>
         <translation>&amp;Allakriipsutus</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="654"/>
+        <location filename="../../fn.ui" line="652"/>
         <source>Underline</source>
         <translation>Allakriipsutus</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="657"/>
+        <location filename="../../fn.ui" line="655"/>
         <source>Ctrl+U</source>
         <translation>Ctrl+U</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="668"/>
+        <location filename="../../fn.ui" line="666"/>
         <source>&amp;Strike Through</source>
         <translation>&amp;Läbikriipsutus</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="671"/>
+        <location filename="../../fn.ui" line="669"/>
         <source>Strike through</source>
         <translation>Läbikriipsutus</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="674"/>
+        <location filename="../../fn.ui" line="672"/>
         <source>Ctrl+T</source>
         <translation>Ctrl+T</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="682"/>
+        <location filename="../../fn.ui" line="680"/>
         <source>Te&amp;xt Color</source>
         <translation>Teksti &amp;värv</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="685"/>
+        <location filename="../../fn.ui" line="683"/>
         <source>Text color</source>
         <translation>Teksti värv</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="688"/>
+        <location filename="../../fn.ui" line="686"/>
         <source>Alt+Shift+T</source>
         <translation>Alt+Shift+T</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="696"/>
+        <location filename="../../fn.ui" line="694"/>
         <source>Back&amp;ground Color</source>
         <translation>Ta&amp;ustavärv</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="699"/>
+        <location filename="../../fn.ui" line="697"/>
         <source>Background color</source>
         <translation>Taustavärv</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="702"/>
+        <location filename="../../fn.ui" line="700"/>
         <source>Alt+Shift+B</source>
         <translation>Alt+Shift+B</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="707"/>
+        <location filename="../../fn.ui" line="705"/>
         <source>Options</source>
         <translation>Eelistused</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="712"/>
+        <location filename="../../fn.ui" line="710"/>
         <location filename="../../fn.cpp" line="647"/>
         <source>&amp;New Note</source>
         <translation>&amp;Uus märge</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="715"/>
+        <location filename="../../fn.ui" line="713"/>
         <source>Ctrl+Alt+Shift+N</source>
         <translation>Ctrl+Alt+Shift+N</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="723"/>
+        <location filename="../../fn.ui" line="721"/>
         <source>Save &amp;As</source>
         <translation>Salvesta &amp;kui</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="726"/>
+        <location filename="../../fn.ui" line="724"/>
         <source>Ctrl+Shift+S</source>
         <translation>Ctrl+Shift+S</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="734"/>
+        <location filename="../../fn.ui" line="732"/>
         <source>&amp;Print</source>
         <translation>&amp;Trüki</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="737"/>
+        <location filename="../../fn.ui" line="735"/>
         <source>Ctrl+P</source>
         <translation>Ctrl+P</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="745"/>
+        <location filename="../../fn.ui" line="743"/>
         <source>P&amp;rint with Sub-Nodes</source>
         <translation>Trüki koos ala&amp;msõlmedega</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="753"/>
+        <location filename="../../fn.ui" line="751"/>
         <source>Set Pass&amp;word</source>
         <translation>Seadista salas&amp;õna</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="758"/>
+        <location filename="../../fn.ui" line="756"/>
         <location filename="../../fn.cpp" line="650"/>
         <source>&amp;Quit</source>
         <translation>&amp;Välju</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="761"/>
+        <location filename="../../fn.ui" line="759"/>
         <source>Ctrl+Q</source>
         <translation>Ctrl+Q</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="769"/>
+        <location filename="../../fn.ui" line="767"/>
         <source>&amp;Cut</source>
         <translation>L&amp;õika</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="772"/>
+        <location filename="../../fn.ui" line="770"/>
         <source>Ctrl+X</source>
         <translation>Ctrl+X</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="780"/>
+        <location filename="../../fn.ui" line="778"/>
         <source>C&amp;opy</source>
         <translation>K&amp;opeeri</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="783"/>
+        <location filename="../../fn.ui" line="781"/>
         <source>Ctrl+C</source>
         <translation>Ctrl+C</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="791"/>
+        <location filename="../../fn.ui" line="789"/>
         <source>&amp;Paste</source>
         <translation>&amp;Aseta</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="794"/>
+        <location filename="../../fn.ui" line="792"/>
         <source>Ctrl+V</source>
         <translation>Ctrl+V</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="802"/>
+        <location filename="../../fn.ui" line="800"/>
         <source>&amp;Delete</source>
         <translation>&amp;Kustuta</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="810"/>
+        <location filename="../../fn.ui" line="808"/>
         <source>&amp;Select All</source>
         <translation>&amp;Vali kõik</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="813"/>
+        <location filename="../../fn.ui" line="811"/>
         <source>Ctrl+A</source>
         <translation>Ctrl+A</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="821"/>
+        <location filename="../../fn.ui" line="819"/>
         <source>E&amp;mbed Image</source>
         <translation>Lõi&amp;mi pilt</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="824"/>
+        <location filename="../../fn.ui" line="822"/>
         <location filename="../../fn.cpp" line="4368"/>
         <source>Embed Image</source>
         <translation>Lõimi pilt</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="827"/>
+        <location filename="../../fn.ui" line="825"/>
         <source>Ctrl+Alt+Shift+I</source>
         <translation>Ctrl+Alt+Shift+I</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="835"/>
+        <location filename="../../fn.ui" line="833"/>
         <source>E&amp;xpand All</source>
         <translation>&amp;Ava kõik lõimed</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="838"/>
+        <location filename="../../fn.ui" line="836"/>
         <source>Ctrl+Shift+Down</source>
         <translation>Ctrl+Shift+Down</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="846"/>
+        <location filename="../../fn.ui" line="844"/>
         <source>Collap&amp;se All</source>
         <translation>Pane kõik lõimed &amp;kokku</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="849"/>
+        <location filename="../../fn.ui" line="847"/>
         <source>Ctrl+Shift+Up</source>
         <translation>Ctrl+Shift+Up</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="857"/>
+        <location filename="../../fn.ui" line="855"/>
         <source>&amp;Append Sibling</source>
         <translation>Lisa sama taseme sõlm &amp;tahapoole</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="860"/>
+        <location filename="../../fn.ui" line="858"/>
         <source>Ctrl+N</source>
         <translation>Ctrl+N</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="868"/>
+        <location filename="../../fn.ui" line="866"/>
         <source>Append &amp;Child</source>
         <translation>Lisa &amp;alamtaseme sõlm</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="871"/>
+        <location filename="../../fn.ui" line="869"/>
         <source>Ctrl+Shift+N</source>
         <translation>Ctrl+Shift+N</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="879"/>
+        <location filename="../../fn.ui" line="877"/>
         <source>&amp;Delete Node</source>
         <translation>&amp;Kustuta sõlm</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="882"/>
+        <location filename="../../fn.ui" line="880"/>
         <source>Ctrl+D</source>
         <translation>Ctrl+D</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="890"/>
+        <location filename="../../fn.ui" line="888"/>
         <source>Move &amp;Up</source>
         <translation>Liiguta &amp;üles</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="893"/>
+        <location filename="../../fn.ui" line="891"/>
         <source>Alt+Up</source>
         <translation>Alt+Up</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="901"/>
+        <location filename="../../fn.ui" line="899"/>
         <source>Move Do&amp;wn</source>
         <translation>Liiguta a&amp;lla</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="904"/>
+        <location filename="../../fn.ui" line="902"/>
         <source>Alt+Down</source>
         <translation>Alt+Down</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="912"/>
+        <location filename="../../fn.ui" line="910"/>
         <source>Re&amp;name Node</source>
         <translation>Muuda sõlme &amp;nime</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="915"/>
+        <location filename="../../fn.ui" line="913"/>
         <source>Ctrl+Shift+R</source>
         <translation>Ctrl+Shift+R</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="920"/>
+        <location filename="../../fn.ui" line="918"/>
         <source>Tree Pr&amp;operties</source>
         <translation>Märkmepuu &amp;teave</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="923"/>
+        <location filename="../../fn.ui" line="921"/>
         <source>Ctrl+Shift+D</source>
         <translation>Ctrl+Shift+D</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="931"/>
+        <location filename="../../fn.ui" line="929"/>
         <source>Document &amp;Font</source>
         <translation>Dokumendi &amp;font</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="945"/>
+        <location filename="../../fn.ui" line="943"/>
         <source>&amp;Wrap Lines</source>
         <translation>&amp;Murra ridu</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="948"/>
+        <location filename="../../fn.ui" line="946"/>
         <source>Ctrl+W</source>
         <translation>Ctrl+W</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="962"/>
+        <location filename="../../fn.ui" line="960"/>
         <source>&amp;Auto-Indentation</source>
         <translation>&amp;Automaatsed taandread</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="965"/>
+        <location filename="../../fn.ui" line="963"/>
         <source>Ctrl+Shift+I</source>
         <translation>Ctrl+Shift+I</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="970"/>
+        <location filename="../../fn.ui" line="968"/>
         <source>&amp;Preferences</source>
         <translation>&amp;Eelistused</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="973"/>
+        <location filename="../../fn.ui" line="971"/>
         <source>Ctrl+Shift+P</source>
         <translation>Ctrl+Shift+P</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="981"/>
+        <location filename="../../fn.ui" line="979"/>
         <source>Find and &amp;Replace</source>
         <translation>Otsi ja &amp;asenda</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="984"/>
+        <location filename="../../fn.ui" line="982"/>
         <source>Ctrl+R</source>
         <translation>Ctrl+R</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="992"/>
+        <location filename="../../fn.ui" line="990"/>
         <source>Ctrl+H</source>
         <translation>Ctrl+H</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="997"/>
+        <location filename="../../fn.ui" line="995"/>
         <source>&amp;About</source>
         <translation>&amp;Rakenduse teave</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1005"/>
+        <location filename="../../fn.ui" line="1003"/>
         <source>Pr&amp;int All Nodes</source>
         <translation>Trüki &amp;kõik sõlmed</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1016"/>
+        <location filename="../../fn.ui" line="1014"/>
         <source>Superscrip&amp;t</source>
         <translation>&amp;Ülaindeks</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1019"/>
+        <location filename="../../fn.ui" line="1017"/>
         <source>Superscript</source>
         <translation>Ülaindeks</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1022"/>
+        <location filename="../../fn.ui" line="1020"/>
         <source>Alt+Shift+U</source>
         <translation>Alt+Shift+U</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1033"/>
+        <location filename="../../fn.ui" line="1031"/>
         <source>Subscri&amp;pt</source>
         <translation>A&amp;laindeks</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1036"/>
+        <location filename="../../fn.ui" line="1034"/>
         <source>Subscript</source>
         <translation>Alaindeks</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1039"/>
+        <location filename="../../fn.ui" line="1037"/>
         <source>Alt+Shift+S</source>
         <translation>Alt+Shift+S</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1050"/>
+        <location filename="../../fn.ui" line="1048"/>
         <source>C&amp;enter</source>
         <translation>K&amp;eskele</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1053"/>
+        <location filename="../../fn.ui" line="1051"/>
         <source>Align center</source>
         <translation>Joonda keskele</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1056"/>
+        <location filename="../../fn.ui" line="1054"/>
         <source>Alt+Shift+Down</source>
         <translation>Alt+Shift+Down</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1067"/>
+        <location filename="../../fn.ui" line="1065"/>
         <location filename="../../fn.cpp" line="2190"/>
         <source>&amp;Right</source>
         <translation>&amp;Paremale</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1070"/>
+        <location filename="../../fn.ui" line="1068"/>
         <source>Align right</source>
         <translation>Joonda paremale</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1073"/>
+        <location filename="../../fn.ui" line="1071"/>
         <source>Alt+Shift+Right</source>
         <translation>Alt+Shift+Right</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1084"/>
+        <location filename="../../fn.ui" line="1082"/>
         <location filename="../../fn.cpp" line="2184"/>
         <source>&amp;Left</source>
         <translation>&amp;Vasakule</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1087"/>
+        <location filename="../../fn.ui" line="1085"/>
         <source>Align left</source>
         <translation>Joonda vasakule</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1090"/>
+        <location filename="../../fn.ui" line="1088"/>
         <source>Alt+Shift+Left</source>
         <translation>Alt+Shift+Left</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1101"/>
+        <location filename="../../fn.ui" line="1099"/>
         <source>&amp;Justify</source>
         <translation>&amp;Rööpselt</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1104"/>
+        <location filename="../../fn.ui" line="1102"/>
         <source>Justify</source>
         <translation>Joonda rööpselt</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1107"/>
+        <location filename="../../fn.ui" line="1105"/>
         <source>Alt+Shift+Up</source>
         <translation>Alt+Shift+Up</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1115"/>
+        <location filename="../../fn.ui" line="1113"/>
         <source>&amp;Prepend Sibling</source>
         <translation>Lisa sama taseme sõlm &amp;ettepoole</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1118"/>
+        <location filename="../../fn.ui" line="1116"/>
         <source>Ctrl+M</source>
         <translation>Ctrl+M</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1126"/>
+        <location filename="../../fn.ui" line="1124"/>
         <source>Move &amp;Left</source>
         <translation>Liiguta &amp;vasakule</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1129"/>
+        <location filename="../../fn.ui" line="1127"/>
         <source>Alt+Left</source>
         <translation>Alt+Left</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1137"/>
+        <location filename="../../fn.ui" line="1135"/>
         <source>Move &amp;Right</source>
         <translation>Liiguta &amp;paremale</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1140"/>
+        <location filename="../../fn.ui" line="1138"/>
         <source>Alt+Right</source>
         <translation>Alt+Right</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1148"/>
+        <location filename="../../fn.ui" line="1146"/>
         <source>h&amp;2</source>
         <translation>h&amp;2 (teise taseme pealkiri)</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1151"/>
+        <location filename="../../fn.ui" line="1149"/>
         <source>Header 2</source>
         <translation>Header 2 (teise taseme pealkiri)</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1154"/>
+        <location filename="../../fn.ui" line="1152"/>
         <source>Ctrl+2</source>
         <translation>Ctrl+2</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1162"/>
+        <location filename="../../fn.ui" line="1160"/>
         <source>h&amp;1</source>
         <translation>h&amp;1 (esimese taseme pealkiri)</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1165"/>
+        <location filename="../../fn.ui" line="1163"/>
         <source>Header 1</source>
         <translation>Header 1 (esimese taseme pealkiri)</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1168"/>
+        <location filename="../../fn.ui" line="1166"/>
         <source>Ctrl+1</source>
         <translation>Ctrl+1</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1176"/>
+        <location filename="../../fn.ui" line="1174"/>
         <source>h&amp;3</source>
         <translation>h&amp;3 (kolmanda taseme pealkiri)</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1179"/>
+        <location filename="../../fn.ui" line="1177"/>
         <source>Header 3</source>
         <translation>Header 3 (kolmanda taseme pealkiri)</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1182"/>
+        <location filename="../../fn.ui" line="1180"/>
         <source>Ctrl+3</source>
         <translation>Ctrl+3</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1190"/>
+        <location filename="../../fn.ui" line="1188"/>
         <source>&amp;Node Font</source>
         <translation>&amp;Sõlme font</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1193"/>
+        <location filename="../../fn.ui" line="1191"/>
         <source>Node Font</source>
         <translation>Sõlme font</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1198"/>
+        <location filename="../../fn.ui" line="1196"/>
         <source>Scale I&amp;mage(s)</source>
         <translation>Skalee&amp;ri pilt(e)</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1206"/>
+        <location filename="../../fn.ui" line="1204"/>
         <source>Paste &amp;HTML</source>
         <translation>Aseta &amp;HTML</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1209"/>
+        <location filename="../../fn.ui" line="1207"/>
         <source>Ctrl+Shift+V</source>
         <translation>Ctrl+Shift+V</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1217"/>
+        <location filename="../../fn.ui" line="1215"/>
         <source>&amp;Tags</source>
         <translation>&amp;Sildid</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1220"/>
+        <location filename="../../fn.ui" line="1218"/>
         <source>Ctrl+Shift+T</source>
         <translation>Ctrl+Shift+T</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1228"/>
+        <location filename="../../fn.ui" line="1226"/>
         <source>Insert Lin&amp;k</source>
         <translation>Lisa &amp;viide</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1231"/>
+        <location filename="../../fn.ui" line="1229"/>
         <source>Ctrl+L</source>
         <translation>Ctrl+L</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1236"/>
+        <location filename="../../fn.ui" line="1234"/>
         <source>C&amp;opy Link</source>
         <translation>K&amp;opeeri viide</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1244"/>
+        <location filename="../../fn.ui" line="1242"/>
         <source>I&amp;nsert Table</source>
         <translation>Lisa &amp;tabel</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1247"/>
+        <location filename="../../fn.ui" line="1245"/>
         <source>Ctrl+Alt+Shift+T</source>
         <translation>Ctrl+Alt+Shift+T</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1252"/>
+        <location filename="../../fn.ui" line="1250"/>
         <source>Append Row</source>
         <translation>Lisa järgi üks rida</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1257"/>
+        <location filename="../../fn.ui" line="1255"/>
         <source>Delete Row</source>
         <translation>Kustuta rida</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1262"/>
+        <location filename="../../fn.ui" line="1260"/>
         <source>Append Column</source>
         <translation>Lisa järgi üks veerg</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1267"/>
+        <location filename="../../fn.ui" line="1265"/>
         <source>Delete Column</source>
         <translation>Kustuta veerg</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1272"/>
+        <location filename="../../fn.ui" line="1270"/>
         <source>Merge Cells</source>
         <translation>Liida tabeliväljad</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1277"/>
+        <location filename="../../fn.ui" line="1275"/>
         <source>Prepend Row</source>
         <translation>Lisa ette üks rida</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1282"/>
+        <location filename="../../fn.ui" line="1280"/>
         <source>Prepend Column</source>
         <translation>Lisa ette üks veerg</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1290"/>
+        <location filename="../../fn.ui" line="1288"/>
         <source>Export &amp;HTML</source>
         <translation>Ekspordi &amp;HTML&apos;ina</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1295"/>
+        <location filename="../../fn.ui" line="1293"/>
         <source>Save Ima&amp;ge(s)</source>
         <translation>Salvesta p&amp;ilt</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1306"/>
+        <location filename="../../fn.ui" line="1304"/>
         <source>RTL</source>
         <translation>Paremalt vasakule</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1309"/>
+        <location filename="../../fn.ui" line="1307"/>
         <source>Ctrl+Alt+Shift+Left</source>
         <translation>Ctrl+Alt+Shift+Left</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1320"/>
+        <location filename="../../fn.ui" line="1318"/>
         <source>LTR</source>
         <translation>Vasakult paremale</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1323"/>
+        <location filename="../../fn.ui" line="1321"/>
         <source>Ctrl+Alt+Shift+Right</source>
         <translation>Ctrl+Alt+Shift+Right</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1328"/>
-        <location filename="../../fn.ui" line="1331"/>
+        <location filename="../../fn.ui" line="1326"/>
+        <location filename="../../fn.ui" line="1329"/>
         <source>Menu</source>
         <translation>Menüü</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1339"/>
+        <location filename="../../fn.ui" line="1337"/>
         <source>Node &amp;Icon</source>
         <translation>Sõlme &amp;ikoon</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1342"/>
+        <location filename="../../fn.ui" line="1340"/>
         <source>Ctrl+Shift+C</source>
         <translation>Ctrl+Shift+C</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1347"/>
-        <location filename="../../fn.ui" line="1350"/>
+        <location filename="../../fn.ui" line="1345"/>
+        <location filename="../../fn.ui" line="1348"/>
         <source>Check Spelling</source>
         <translation>Kontrolli õigekirja</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1353"/>
+        <location filename="../../fn.ui" line="1351"/>
         <source>F2</source>
         <translation>F2</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1358"/>
+        <location filename="../../fn.ui" line="1356"/>
         <source>Document &amp;Colors</source>
         <translation>Dokumendi &amp;värvid</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1366"/>
-        <location filename="../../fn.ui" line="1369"/>
+        <location filename="../../fn.ui" line="1364"/>
+        <location filename="../../fn.ui" line="1367"/>
         <source>Paste Date and Time</source>
         <translation>Aseta kuupäev ja kellaaeg</translation>
     </message>
     <message>
-        <location filename="../../fn.ui" line="1374"/>
+        <location filename="../../fn.ui" line="1372"/>
         <source>&amp;Clear</source>
         <translation>&amp;Eemalda</translation>
     </message>

@@ -1,3 +1,7 @@
+V1.0.1
+---------
+ * Removed "Embed Image" from the toolbar to make it uncluttered.
+
 V1.0.0
 ---------
  * Now FeatherNotes is a single-instance app, that doesn't open the same document twice when launched. Qt D-Bus is used for this purpose.

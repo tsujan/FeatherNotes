@@ -392,8 +392,6 @@
    <addaction name="separator"/>
    <addaction name="actionLTR"/>
    <addaction name="actionRTL"/>
-   <addaction name="separator"/>
-   <addaction name="actionEmbedImage"/>
    <addaction name="actionMenu"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
