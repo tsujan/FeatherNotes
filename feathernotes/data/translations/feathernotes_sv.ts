@@ -1196,7 +1196,8 @@
         <location filename="../../fn.cpp" line="619"/>
         <source>System tray is not available.
 Please disable tray in Preferences.</source>
-        <translation type="unfinished"></translation>
+        <translation>Systemfältet är inte tillgängligt
+Inaktivera systemfältet i inställningar.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="937"/>
@@ -1606,7 +1607,11 @@ this dialog and also on exit.
 
 This may not work correctly
 with some window managers.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sparar position efter stängning
+denna dialog och även vid avslut.
+
+Detta kanske inte fungerar korrekt
+med några fönsterhanterare.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>
@@ -1749,12 +1754,14 @@ Takes effect after closing this dialog.</source>
         <source>If this option is checked, the opened document will
 be saved on exiting without prompt and without
 showing a warning if saving is not possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Om det här alternativet är markerat kommer det öppnade dokumentet att
+sparas vid avslutande utan uppmaning och utan
+visar en varning om det inte går att spara.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="353"/>
         <source>Save opened document on exiting</source>
-        <translation type="unfinished"></translation>
+        <translation>Spara öppnade dokument vid avslut</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="376"/>
@@ -1805,12 +1812,12 @@ namn men slutar med &quot;.aff&quot;.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="503"/>
         <source>By default, all nodes are expanded on opening a document.</source>
-        <translation type="unfinished"></translation>
+        <translation>Som standard utökas alla noder när ett dokument öppnas.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="506"/>
         <source>Remember expanded states of nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Kom ihåg expanderat tillstånd för noder</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="530"/>
