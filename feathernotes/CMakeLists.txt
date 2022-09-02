@@ -100,6 +100,7 @@ endif()
 set(feathernotes_SRCS
     main.cpp
     singleton.cpp
+    signalDaemon.cpp
     colorLabel.cpp
     fn.cpp
     find.cpp

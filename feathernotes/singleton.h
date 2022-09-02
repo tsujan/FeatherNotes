@@ -54,15 +54,20 @@ public:
     void setTrayChecked() {
         trayChecked_ = true;
     }
+    bool isQuitSignalReceived() const {
+        return quitSignalReceived_;
+    }
 
     void setLastFile (const QString &lastFile) {
         lastFile_ = lastFile;
     }
 
 public slots:
+    void quitSignalReceived();
     void quitting();
 
 private:
+    bool quitSignalReceived_;
     bool isPrimaryInstance_;
     bool isX11_;
     bool isWayland_;

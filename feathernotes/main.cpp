@@ -17,21 +17,49 @@
 
 #include <QTextStream>
 #include "singleton.h"
-
-#include <csignal> // signal.h in C
+#if not defined (Q_OS_WIN)
+#include "signalDaemon.h"
+#include <signal.h>
+#endif
 #include <QLibraryInfo>
 #include <QTranslator>
 
-void handleQuitSignals (const std::vector<int>& quitSignals)
+#if not defined (Q_OS_WIN)
+static bool setup_unix_signal_handlers()
 {
-    auto handler = [](int sig) ->void {
-        Q_UNUSED (sig);
-        QCoreApplication::quit();
-    };
+    struct sigaction hupA, termA, intA, quitA;
 
-    for (int sig : quitSignals )
-        signal (sig, handler); // handle these signals by quitting gracefully
+    hupA.sa_handler = FeatherNotes::signalDaemon::hupSignalHandler;
+    sigemptyset (&hupA.sa_mask);
+    hupA.sa_flags = 0;
+    hupA.sa_flags |= SA_RESTART;
+    if (sigaction (SIGHUP, &hupA, nullptr) != 0)
+       return false;
+
+    termA.sa_handler = FeatherNotes::signalDaemon::termSignalHandler;
+    sigemptyset (&termA.sa_mask);
+    termA.sa_flags = 0;
+    termA.sa_flags |= SA_RESTART;
+    if (sigaction (SIGTERM, &termA, nullptr) != 0)
+       return false;
+
+    intA.sa_handler = FeatherNotes::signalDaemon::intSignalHandler;
+    sigemptyset (&intA.sa_mask);
+    intA.sa_flags = 0;
+    intA.sa_flags |= SA_RESTART;
+    if (sigaction (SIGINT, &intA, nullptr) != 0)
+       return false;
+
+    quitA.sa_handler = FeatherNotes::signalDaemon::quitSignalHandler;
+    sigemptyset (&quitA.sa_mask);
+    quitA.sa_flags = 0;
+    quitA.sa_flags |= SA_RESTART;
+    if (sigaction (SIGQUIT, &quitA, nullptr) != 0)
+       return false;
+
+    return true;
 }
+#endif
 
 int main(int argc, char *argv[])
 {
@@ -60,10 +88,6 @@ int main(int argc, char *argv[])
     FeatherNotes::FNSingleton singleton (argc, argv);
     singleton.setApplicationName (name);
     singleton.setApplicationVersion (version);
-
-#if not defined (Q_OS_WIN)
-    handleQuitSignals ({SIGQUIT, SIGINT, SIGTERM, SIGHUP}); // -> https://en.wikipedia.org/wiki/Unix_signal
-#endif
 
 #if (QT_VERSION < QT_VERSION_CHECK(6,0,0))
     singleton.setAttribute (Qt::AA_UseHighDpiPixmaps, true);
@@ -121,6 +145,22 @@ int main(int argc, char *argv[])
         singleton.sendInfo (info); // is sent to the primary instance
         return 0;
     }
+
+#if not defined (Q_OS_WIN)
+    // Handle SIGQUIT, SIGINT, SIGTERM and SIGHUP (-> https://en.wikipedia.org/wiki/Unix_signal).
+    FeatherNotes::signalDaemon D;
+    if (setup_unix_signal_handlers())
+    {
+        QObject::connect (&D, &FeatherNotes::signalDaemon::sigHUP,
+                          &singleton, &FeatherNotes::FNSingleton::quitSignalReceived);
+        QObject::connect (&D, &FeatherNotes::signalDaemon::sigTERM,
+                          &singleton, &FeatherNotes::FNSingleton::quitSignalReceived);
+        QObject::connect (&D, &FeatherNotes::signalDaemon::sigINT,
+                          &singleton, &FeatherNotes::FNSingleton::quitSignalReceived);
+        QObject::connect (&D, &FeatherNotes::signalDaemon::sigQUIT,
+                          &singleton, &FeatherNotes::FNSingleton::quitSignalReceived);
+    }
+#endif
 
     QObject::connect (&singleton, &QCoreApplication::aboutToQuit, &singleton, &FeatherNotes::FNSingleton::quitting);
     singleton.openFile (info);

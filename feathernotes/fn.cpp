@@ -84,7 +84,6 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     ui->setupUi (this);
 
     closed_ = false;
-    closeInteractively_ = false;
     imgScale_ = 100;
 
     /* use our delegate with opaque editor */
@@ -485,17 +484,17 @@ bool FN::close()
     }
 
     quitting_ = true;
-    closeInteractively_ = true;
     return QWidget::close();
 }
 /*************************/
 void FN::closeEvent (QCloseEvent *event)
 {
+    FNSingleton *singleton = static_cast<FNSingleton*>(qApp);
     /* NOTE: With Qt6, "QCoreApplication::quit()" calls "closeEvent()" when the window is
              visible. But we want the app to quit without any prompt when receiving SIGTERM
-             and similar signals. Here, we handle the situation by checking if the event is
-             sent by us without calling "FN::close()". This is also safe with Qt5. */
-    if (!event->spontaneous() && !closeInteractively_)
+             and similar signals. Here, we handle the situation by checking if a quit signal
+             is received. This is also safe with Qt5. */
+    if (singleton->isQuitSignalReceived())
     {
         event->accept();
         return;
@@ -505,7 +504,7 @@ void FN::closeEvent (QCloseEvent *event)
     {
         closeNonModalDialogs();
         event->ignore();
-        if (!isMaximized() && !isFullScreen() && !static_cast<FNSingleton*>(qApp)->isWayland())
+        if (!isMaximized() && !isFullScreen() && !singleton->isWayland())
         {
             position_.setX (geometry().x());
             position_.setY (geometry().y());
@@ -564,7 +563,6 @@ void FN::closeEvent (QCloseEvent *event)
         writeGeometryConfig();
         delete tray_; // otherwise the app might not quit under KDE
         tray_ = nullptr;
-        FNSingleton *singleton = static_cast<FNSingleton*>(qApp);
         singleton->removeWin (this);
         closed_ = true; // window info shouldn't be saved after closing
         event->accept();
@@ -4177,8 +4175,27 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
         showAndFocus();
     }
 #ifdef HAS_X11
-    else if (!singleton->isX11() || onWhichDesktop (winId()) == fromDesktop())
+    else if (!singleton->isX11())
     {
+        if (!isActiveWindow())
+        {
+            closeNonModalDialogs();
+            hide();
+            QTimer::singleShot (0, this, &FN::showAndFocus);
+        }
+        else
+        {
+            closeNonModalDialogs();
+            if (!isMaximized() && !isFullScreen() && !singleton->isWayland())
+            {
+                position_.setX (geometry().x());
+                position_.setY (geometry().y());
+            }
+            QTimer::singleShot (0, this, &QWidget::hide);
+        }
+    }
+    else if (onWhichDesktop (winId()) == fromDesktop())
+    { // under X11 and on this desktop
         QRect sr;
         if (QWindow *win = windowHandle())
         {
@@ -4193,10 +4210,10 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
         QRect g = geometry();
         if (g.x() >= sr.left() && g.x() + g.width() <= sr.left() + sr.width()
             && g.y() >= sr.top() && g.y() + g.height() <= sr.top() + sr.height())
-        {
+        { // inside the screen borders
             if (isActiveWindow())
             {
-                if (!isMaximized() && !isFullScreen() && !singleton->isWayland())
+                if (!isMaximized() && !isFullScreen())
                 {
                     position_.setX (g.x());
                     position_.setY (g.y());
@@ -4206,22 +4223,13 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
             }
             else
             {
-                if (singleton->isX11())
-                {
-                    if (isMinimized())
-                        showNormal();
-                    showAndFocus();
-                }
-                else
-                {
-                    closeNonModalDialogs();
-                    hide();
-                    QTimer::singleShot (0, this, &FN::showAndFocus);
-                }
+                if (isMinimized())
+                    showNormal();
+                showAndFocus();
             }
         }
         else
-        {
+        { // partially offscreen
             closeNonModalDialogs();
             hide();
             if (!singleton->isWayland())
@@ -4230,7 +4238,7 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
         }
     }
     else
-    {
+    { // under X11, visible and on another desktop
         closeNonModalDialogs();
         moveToCurrentDesktop (winId());
         if (isMinimized())
@@ -4238,6 +4246,7 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
         showAndFocus();
     }
 #else
+    // visible and without X11
     else if (!isActiveWindow())
     {
         closeNonModalDialogs();
@@ -4247,7 +4256,7 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
     else
     {
         closeNonModalDialogs();
-        if (!isMaximized() && !isFullScreen())
+        if (!isMaximized() && !isFullScreen() && !singleton->isWayland())
         {
             position_.setX (geometry().x());
             position_.setY (geometry().y());

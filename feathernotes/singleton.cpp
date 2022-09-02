@@ -47,6 +47,7 @@ FNSingleton::FNSingleton (int &argc, char **argv) : QApplication (argc, argv)
     else
         isWayland_ = (QString::compare (QGuiApplication::platformName(), "wayland", Qt::CaseInsensitive) == 0);
 
+    quitSignalReceived_ = false;
     trayChecked_ = false;
 
     isPrimaryInstance_ = false;
@@ -70,6 +71,12 @@ void FNSingleton::quitting()
 {
     for (int i = 0; i < Wins.size(); ++i)
         Wins.at (i)->quitting();
+}
+/*************************/
+void FNSingleton::quitSignalReceived()
+{
+    quitSignalReceived_ = true;
+    quit();
 }
 /*************************/
 void FNSingleton::sendInfo (const QStringList &info)

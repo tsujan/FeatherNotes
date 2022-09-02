@@ -401,7 +401,6 @@ private:
 
     Ui::FN *ui;
     bool closed_; // Whether FN::closeEvent() is called before quitting.
-    bool closeInteractively_; // See the note inside "FN::closeEvent()".
     //QWidget *dummyWidget; // For hiding the main window while keeping all its state info.
     QSystemTrayIcon *tray_;
     bool quitting_;
