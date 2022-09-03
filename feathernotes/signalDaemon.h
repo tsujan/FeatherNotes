@@ -29,35 +29,42 @@ public:
     signalDaemon (QObject *parent = nullptr);
     ~signalDaemon();
 
+    // Should be called for watching the supported Unix signals.
+    void watchUnixSignals();
+
     // Unix signal handlers (for SIGHUP, SIGTERM, SIGINT and SIGQUIT).
     static void hupSignalHandler (int unused);
     static void termSignalHandler (int unused);
     static void intSignalHandler (int unused);
     static void quitSignalHandler (int unused);
 
-public slots:
+signals:
+    //void sigTERM();
+    //void sigHUP();
+    //void sigINT();
+    void sigQUIT(); // We don't need different signals.
+
+private slots:
     // Qt signal handlers.
     void handleSigHup();
     void handleSigTerm();
     void handleSigINT();
     void handleSigQUIT();
 
-signals:
-    void sigTERM();
-    void sigHUP();
-    void sigINT();
-    void sigQUIT();
-
 private:
+    // Returns true if the signal can be watched,
+    // although the returned value isn't used.
+    bool watchSignal (int sig);
+
     static int sighupFd[2];
     static int sigtermFd[2];
     static int sigintFd[2];
     static int sigquitFd[2];
 
-    QSocketNotifier *snHup;
-    QSocketNotifier *snTerm;
-    QSocketNotifier *snInt;
-    QSocketNotifier *snQuit;
+    QSocketNotifier *snHup_;
+    QSocketNotifier *snTerm_;
+    QSocketNotifier *snInt_;
+    QSocketNotifier *snQuit_;
 };
 
 }
