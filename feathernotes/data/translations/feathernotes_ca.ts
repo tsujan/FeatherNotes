@@ -1196,7 +1196,8 @@
         <location filename="../../fn.cpp" line="617"/>
         <source>System tray is not available.
 Please disable tray in Preferences.</source>
-        <translation type="unfinished"></translation>
+        <translation>La safata del sistema no està disponible
+Desactiveu la safata en Preferències.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="935"/>
@@ -1495,7 +1496,7 @@ Voleu reemplaçar-lo?
     <message>
         <location filename="../../fn.cpp" line="6457"/>
         <source>See Preferences → Text → Spell Checking!</source>
-        <translation type="unfinished">Vegeu Preferències ! → Text → Comprovació ortogràfica!</translation>
+        <translation>Vegeu Preferències → Text → Comprovació ortogràfica.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6473"/>
@@ -1641,7 +1642,7 @@ la línia d&apos;ordres en lloc d&apos;això.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="160"/>
         <source>Start i&amp;conified to tray</source>
-        <translation type="unfinished">Iniciar minimitzat a la safata</translation>
+        <translation>Ini&amp;ciar minimitzat a la safata</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="169"/>
@@ -1685,7 +1686,7 @@ a la barra d&apos;eines apareix un botó de menú.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="228"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Text</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="237"/>
@@ -1714,7 +1715,9 @@ Needs restarting of FeatherNotes to take effect.</source>
         <source>A triple period is replaced with an ellipsis,
 a double hyphen with a long dash, etc. while
 the user is typing and under proper circumstances.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mentre escriviu, i en les condiciones adients,
+tres punts es reemplacen per punts suspensius,
+dos guions per un guionet, etc.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="268"/>
@@ -1733,7 +1736,7 @@ Takes effect after closing this dialog.</source>
     <message>
         <location filename="../../prefDialog.ui" line="283"/>
         <source>Date and time format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Format de data i hora:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="307"/>
@@ -1743,7 +1746,7 @@ Takes effect after closing this dialog.</source>
     <message>
         <location filename="../../prefDialog.ui" line="314"/>
         <source> minute(s)</source>
-        <translation type="unfinished"></translation>
+        <translation> minut(s)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="348"/>
