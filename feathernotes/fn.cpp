@@ -372,7 +372,7 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
 
     /* Once the tray icon is created, it'll persist even if the systray
        disappears temporarily. But for the tray icon to be created, the
-       systray should exist. Hence, we wait 30 sec for the systray at startup. */
+       systray should exist. Hence, we wait 20 sec for the systray at startup. */
     tray_ = nullptr;
     trayCounter_ = 0;
     if (hasTray_)
