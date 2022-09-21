@@ -396,7 +396,7 @@
         <location filename="../../fn.ui" line="710"/>
         <location filename="../../fn.cpp" line="645"/>
         <source>&amp;New Note</source>
-        <translation>&amp;Nieuwe notitie</translation>
+        <translation>&amp;Nieuw notitieboek</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="713"/>
@@ -1003,7 +1003,7 @@
     <message>
         <location filename="../../fn.cpp" line="884"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;New note?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Nieuwe notitie?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Nieuw notitieboek aanmaken?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="885"/>
