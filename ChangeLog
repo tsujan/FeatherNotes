@@ -5,6 +5,7 @@ V1.0.1
  * Removed "Embed Image" from the toolbar to make it uncluttered.
  * Better window placement on tray activation without X11.
  * Simplified finding of Qt modules with cmake.
+ * Silenced the compilation warnings with Qt ≥ 6.4.
 
 V1.0.0
 ---------

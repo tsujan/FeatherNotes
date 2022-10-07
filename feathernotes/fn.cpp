@@ -4786,16 +4786,16 @@ void FN::saveImage()
                     QFileInfo info = QFileInfo (lastImgPath_);
                     QString shownName = info.fileName();
                     extension = shownName.split (".").last();
-                    shownName.chop (extension.count() + 1);
+                    shownName.chop (extension.size() + 1);
                     /* if the name ends with a number following a dash,
                        use it; otherwise, increase the number by one */
                     int m = 0;
                     QRegularExpression exp ("-[1-9]+[0-9]*");
                     indx = shownName.lastIndexOf (QRegularExpression ("-[1-9]+[0-9]*"), -1, &match);
-                    if (indx > -1 && indx == shownName.count() - match.capturedLength())
+                    if (indx > -1 && indx == shownName.size() - match.capturedLength())
                     {
                         QString number = shownName.split ("-").last();
-                        shownName.chop (number.count() + 1);
+                        shownName.chop (number.size() + 1);
                         m = number.toInt() + 1;
                     }
                     n = m > n ? m : n + 1;
@@ -5990,7 +5990,7 @@ void FN::setHTMLName (bool checked)
     {
         QString last = strList.last();
         int lstIndex = str.lastIndexOf (last);
-        fname = str.replace (lstIndex, last.count(), fname);
+        fname = str.replace (lstIndex, last.size(), fname);
     }
 
     htmlPahEntry_->setText (fname);

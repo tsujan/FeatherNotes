@@ -187,7 +187,7 @@ QTextCursor FN::finding (const QString &str,
                             i = 0;
                             continue;
                         }
-                        cursor.setPosition (cursor.anchor() + subStr.count());
+                        cursor.setPosition (cursor.anchor() + subStr.size());
                         break;
                     }
                     else
@@ -234,7 +234,7 @@ QTextCursor FN::finding (const QString &str,
                         while (cursor.anchor() > cursor.block().position())
                         {
                             /* ... move the cursor to left and search backward until a match is found */
-                            cursor.setPosition (cursor.block().position() + subStr.count());
+                            cursor.setPosition (cursor.block().position() + subStr.size());
                             if (!findBackward (txtdoc, subStr, cursor, flags))
                                 return QTextCursor();
                         }
@@ -280,7 +280,7 @@ QTextCursor FN::finding (const QString &str,
                             i = 0;
                             continue;
                         }
-                        cursor.setPosition (cursor.anchor() - subStr.count());
+                        cursor.setPosition (cursor.anchor() - subStr.size());
                         break;
                     }
                     else

@@ -76,8 +76,8 @@ QString TextEdit::remainingSpaces (const QString& spaceTab, const QTextCursor& c
         n += qMax (qRound (qAbs (x) / spaceL) - 1, 0); // x is negative for RTL
         ++i;
     }
-    n += txt.count();
-    n = spaceTab.count() - n % spaceTab.count();
+    n += txt.size();
+    n = spaceTab.size() - n % spaceTab.size();
     QString res;
     for (int i = 0 ; i < n; ++i)
         res += " ";
@@ -113,9 +113,9 @@ QTextCursor TextEdit::backTabCursor (const QTextCursor& cursor, bool twoSpace) c
         n += qMax (qRound (qAbs (x) / spaceL) - 1, 0);
         ++i;
     }
-    n += txt.count();
-    n = n % textTab_.count();
-    if (n == 0) n = textTab_.count();
+    n += txt.size();
+    n = n % textTab_.size();
+    if (n == 0) n = textTab_.size();
 
     if (twoSpace) n = qMin (n, 2);
 
