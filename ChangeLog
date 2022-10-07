@@ -1,5 +1,6 @@
 V1.0.1
 ---------
+ * Fixed crash on pasting with empty clipboard.
  * Added a real Unix signal handler.
  * Removed "Embed Image" from the toolbar to make it uncluttered.
  * Better window placement on tray activation without X11.

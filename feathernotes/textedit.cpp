@@ -776,6 +776,7 @@ QMimeData* TextEdit::createMimeDataFromSelection() const
 /*************************/
 bool TextEdit::canInsertFromMimeData (const QMimeData *source) const
 {
+    if (source == nullptr) return false;
     if (source->hasImage() || source->hasUrls())
         return true;
     else
@@ -784,6 +785,7 @@ bool TextEdit::canInsertFromMimeData (const QMimeData *source) const
 /*************************/
 void TextEdit::insertFromMimeData (const QMimeData *source)
 {
+    if (source == nullptr) return;
     if (source->hasImage())
     {
         QImage image = qvariant_cast<QImage>(source->imageData());
@@ -822,7 +824,7 @@ void TextEdit::insertFromMimeData (const QMimeData *source)
             }
         }
     }
-    else
+    else if (source->hasText())
         QTextEdit::insertFromMimeData (source);
 }
 /*************************/
