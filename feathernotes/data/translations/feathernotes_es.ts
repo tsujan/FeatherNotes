@@ -1196,7 +1196,8 @@
         <location filename="../../fn.cpp" line="617"/>
         <source>System tray is not available.
 Please disable tray in Preferences.</source>
-        <translation type="unfinished"></translation>
+        <translation>La bandeja del sistema no está disponible.
+Desactive la bandeja en las preferencias.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="935"/>
@@ -1369,7 +1370,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="5722"/>
         <source>Printing completed.</source>
-        <translation>Printing completed.</translation>
+        <translation>Impresión finalizada.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5724"/>
@@ -1495,7 +1496,7 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="6457"/>
         <source>See Preferences → Text → Spell Checking!</source>
-        <translation>Vea Preferencias&#xa0;▸ Texto&#xa0;▸ Revisar ortografía.</translation>
+        <translation>Vea Preferencias ▸ Texto ▸ Revisar ortografía.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6473"/>
@@ -1605,7 +1606,11 @@ this dialog and also on exit.
 
 This may not work correctly
 with some window managers.</source>
-        <translation type="unfinished"></translation>
+        <translation>Guarda la posición al cerrar
+este diálogo y también al salir.
+
+Esto puede no funcionar correctamente
+con algunos gestores de ventanas.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>
@@ -1757,12 +1762,14 @@ Surte efecto tras cerrar este cuadro de diálogo.</translation>
         <source>If this option is checked, the opened document will
 be saved on exiting without prompt and without
 showing a warning if saving is not possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Si esta opción está marcada, el documento abierto
+se guardará al salir sin preguntar y sin mostrar una
+advertencia si no es posible guardarlo.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="353"/>
         <source>Save opened document on exiting</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar el documento abierto al salir</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="376"/>
@@ -1813,12 +1820,12 @@ sea igual, pero finalizado en «.aff».</translation>
     <message>
         <location filename="../../prefDialog.ui" line="503"/>
         <source>By default, all nodes are expanded on opening a document.</source>
-        <translation type="unfinished"></translation>
+        <translation>Por defecto, todos los nodos se expanden al abrir un documento.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="506"/>
         <source>Remember expanded states of nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Recordar los estados expandidos de los nodos</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="530"/>
