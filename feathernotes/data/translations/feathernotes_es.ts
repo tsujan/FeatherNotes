@@ -1496,7 +1496,7 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="6457"/>
         <source>See Preferences → Text → Spell Checking!</source>
-        <translation>Vea Preferencias ▸ Texto ▸ Revisar ortografía.</translation>
+        <translation>Vea Preferencias → Texto → Revisar ortografía.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6473"/>

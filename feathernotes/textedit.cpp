@@ -761,7 +761,7 @@ QMimeData* TextEdit::createMimeDataFromSelection() const
     /* this is for giving only plain text to the selection clipboard
        and leaving the main clipboard to QTextEdit */
 #if (QT_VERSION >= QT_VERSION_CHECK(6,0,0))
-    /* WARNING: Qt6 ha a bug that doesn't include newlines in the
+    /* WARNING: Qt6 has a bug that doesn't include newlines in the
                 plain-text data of "QTextEdit::createMimeDataFromSelection()". */
     QTextCursor cursor = textCursor();
     if (cursor.hasSelection())
