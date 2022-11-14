@@ -1196,7 +1196,8 @@
         <location filename="../../fn.cpp" line="617"/>
         <source>System tray is not available.
 Please disable tray in Preferences.</source>
-        <translation type="unfinished"></translation>
+        <translation>系统托盘不可用.
+请在设置中禁用托盘.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="935"/>
@@ -1606,7 +1607,9 @@ this dialog and also on exit.
 
 This may not work correctly
 with some window managers.</source>
-        <translation type="unfinished"></translation>
+        <translation>当关闭会话或退出时保存当前位置.
+
+这或许在某些窗口管理器下无法正常工作.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>

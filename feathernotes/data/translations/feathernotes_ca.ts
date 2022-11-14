@@ -426,7 +426,7 @@
     <message>
         <location filename="../../fn.ui" line="743"/>
         <source>P&amp;rint with Sub-Nodes</source>
-        <translation type="unfinished">Imprimeix amb subnodes</translation>
+        <translation>Imprimir amb sub-nodes</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="751"/>
@@ -1511,7 +1511,7 @@ Voleu reemplaçar-lo?
     <message>
         <location filename="../../fn.cpp" line="6486"/>
         <source>The Hunspell dictionary is not accompanied by an affix file.</source>
-        <translation type="unfinished">El diccionari Hunspell no està acompanyat per un fitxer affix.</translation>
+        <translation>El diccionari Hunspell no està acompanyat per un fitxer d&apos;afix.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6504"/>
@@ -1607,7 +1607,11 @@ this dialog and also on exit.
 
 This may not work correctly
 with some window managers.</source>
-        <translation type="unfinished"></translation>
+        <translation>Desa la posició al tancar
+el diàleg i també al sortir.
+
+Pot no funcionar correctament
+amb alguns gestors de finestres.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>
