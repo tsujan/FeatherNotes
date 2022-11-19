@@ -1607,11 +1607,11 @@ this dialog and also on exit.
 
 This may not work correctly
 with some window managers.</source>
-        <translation>Desa la posició al tancar
-el diàleg i també al sortir.
+        <translation>Recorda la posició en tancar
+aquest diàleg o l&apos;aplicació.
 
 Pot no funcionar correctament
-amb alguns gestors de finestres.</translation>
+en alguns gestors de finestres.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>
@@ -1673,7 +1673,7 @@ la mida de les icones de la barra d&apos;eines.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="190"/>
         <source>Do not show t&amp;oolbar</source>
-        <translation type="unfinished">No mostris la &amp;barra d&apos;eines</translation>
+        <translation>No mostrar la &amp;barra d&apos;eines</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="197"/>
@@ -1695,24 +1695,26 @@ a la barra d&apos;eines apareix un botó de menú.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="237"/>
         <source>&amp;Wrap lines by default</source>
-        <translation type="unfinished"></translation>
+        <translation>A&amp;justa les línies per defecte</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="244"/>
         <source>Auto-&amp;indent by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Sa&amp;gnat automàtic per defecte</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="251"/>
         <source>This covers parentheses, braces, brackets and quotes.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Inclou parèntesis, claudàtors, claus i cometes dobles.
+
+Cal reiniciar l&apos;aplicació perquè els canvis tinguin efecte.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="256"/>
         <source>Auto-&amp;bracket</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Parèntesis automàtics</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="263"/>
@@ -1726,7 +1728,7 @@ dos guions per un guionet, etc.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="268"/>
         <source>&amp;Replace some characters while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>Reemplaça alguns caracters mentre escric</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="277"/>
@@ -1735,7 +1737,10 @@ dos guions per un guionet, etc.</translation>
 Leave empty for the system default.
 
 Takes effect after closing this dialog.</source>
-        <translation type="unfinished"></translation>
+        <translation>S&apos;utilitza per enganxar la data i l&apos;hora.
+Deixeu-ho buit per al valor predeterminat del sistema.
+
+Té efecte després de tancar aquest diàleg.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="283"/>
@@ -1745,7 +1750,7 @@ Takes effect after closing this dialog.</source>
     <message>
         <location filename="../../prefDialog.ui" line="307"/>
         <source>&amp;Auto-save every</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Desat automàtic cada</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="314"/>
@@ -1757,17 +1762,19 @@ Takes effect after closing this dialog.</source>
         <source>If this option is checked, the opened document will
 be saved on exiting without prompt and without
 showing a warning if saving is not possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Si aquesta opció està marcada, el document obert 
+es desarà en sortir sense preguntar i sense 
+mostrar un avís si no és possible desar.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="353"/>
         <source>Save opened document on exiting</source>
-        <translation type="unfinished"></translation>
+        <translation>Desa el document obert en sortir</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="376"/>
         <source>Spell Checking</source>
-        <translation type="unfinished">Comprovació ortogràfica</translation>
+        <translation>Verificació ortogràfica</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="384"/>
@@ -1775,89 +1782,91 @@ showing a warning if saving is not possible.</source>
         <source>A Hunspell dictionary has a name that ends with &quot;.dic&quot;
 and should be alongside an affix file with the same
 name but ending with &quot;.aff&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Un diccionari Hunspell té un nom que acaba amb «.dic» 
+i ha d&apos;estar al costat d&apos;un fitxer d&apos;afix amb el mateix
+nom però que acabi amb «.aff».</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="389"/>
         <source>Hunspell dictionary path:</source>
-        <translation type="unfinished"></translation>
+        <translation>Camí al diccionari de l&apos;Hunspell:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="408"/>
         <location filename="../../pref.cpp" line="647"/>
         <source>Add dictionary...</source>
-        <translation type="unfinished"></translation>
+        <translation>Afegir diccionari...</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="443"/>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Fitxers</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="452"/>
         <source>Start with the last opened file</source>
-        <translation type="unfinished"></translation>
+        <translation>Inicia amb l&apos;últim fitxer obert</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="464"/>
         <source>Number of recent files:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nombre de fitxers recents:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="496"/>
         <source>Open recent files separately</source>
-        <translation type="unfinished"></translation>
+        <translation>Obre els fitxers recents per separat</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="503"/>
         <source>By default, all nodes are expanded on opening a document.</source>
-        <translation type="unfinished"></translation>
+        <translation>Per defecte, tots els nodes s&apos;expandeixen en obrir un document.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="506"/>
         <source>Remember expanded states of nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Recorda els estats expandits dels nodes</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="530"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Dreceres</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="549"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Acció</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="554"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>Drecera</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="562"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Per defecte</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="340"/>
         <location filename="../../pref.cpp" line="520"/>
         <source>Warning: Ambiguous shortcut detected!</source>
-        <translation type="unfinished"></translation>
+        <translation>Avís: S&apos;ha detectat una drecera ambigua!</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="503"/>
         <source>The typed shortcut was reserved.</source>
-        <translation type="unfinished"></translation>
+        <translation>La drecera escrita està reservada.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="618"/>
         <source>Application restart is needed for changes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cal reiniciar l&apos;aplicació perquè els canvis tinguin efecte.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="649"/>
         <source>Hunspell Dictionary Files (*.dic)</source>
-        <translation type="unfinished"></translation>
+        <translation>Fitxers de diccionari Hunspell (*.dic)</translation>
     </message>
 </context>
 <context>
@@ -1865,37 +1874,37 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../spellDialog.ui" line="25"/>
         <source>Unknown word:</source>
-        <translation type="unfinished"></translation>
+        <translation>Paraula desconeguda:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="51"/>
         <source>Add To Dictionary</source>
-        <translation type="unfinished"></translation>
+        <translation>Afegeix al diccionari</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="62"/>
         <source>Replace with:</source>
-        <translation type="unfinished">Reemplaça per:</translation>
+        <translation>Substitueix per:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="87"/>
         <source>Ignore Once</source>
-        <translation type="unfinished"></translation>
+        <translation>Ignora una vegada</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="100"/>
         <source>Ignore All</source>
-        <translation type="unfinished"></translation>
+        <translation>Ignora tot</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="129"/>
         <source>Correct Once</source>
-        <translation type="unfinished"></translation>
+        <translation>Corregeix una vegada</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="142"/>
         <source>Correct All</source>
-        <translation type="unfinished"></translation>
+        <translation>Corregeix tot</translation>
     </message>
 </context>
 <context>
@@ -1903,7 +1912,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../helpDialog.ui" line="14"/>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajuda</translation>
     </message>
 </context>
 <context>
@@ -1912,7 +1921,7 @@ name but ending with &quot;.aff&quot;.</source>
         <location filename="../../domitem.cpp" line="100"/>
         <location filename="../../domitem.cpp" line="137"/>
         <source>New Node</source>
-        <translation type="unfinished">Nou node</translation>
+        <translation>Node nou</translation>
     </message>
 </context>
 </TS>
