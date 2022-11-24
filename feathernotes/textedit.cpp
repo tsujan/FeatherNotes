@@ -739,12 +739,12 @@ void TextEdit::resizeEvent (QResizeEvent *e)
 bool TextEdit::event (QEvent *e)
 {
     if (e->type() == QEvent::ToolTip)
-    {
+    { // "this" is for Wayland, when the window isn't active
         QHelpEvent *helpEvent = static_cast<QHelpEvent *>(e);
         QString str = anchorAt (helpEvent->pos());
         if (!str.isEmpty())
             QToolTip::showText (helpEvent->globalPos(),
-                                "<p style='white-space:pre'>" + str + "</p>");
+                                "<p style='white-space:pre'>" + str + "</p>", this);
         else
         {
             QToolTip::hideText();

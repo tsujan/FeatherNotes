@@ -785,7 +785,7 @@
     <message>
         <location filename="../../fn.ui" line="1149"/>
         <source>Header 2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Header 2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1152"/>
@@ -795,7 +795,7 @@
     <message>
         <location filename="../../fn.ui" line="1160"/>
         <source>h&amp;1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">h&amp;1</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1163"/>
@@ -810,7 +810,7 @@
     <message>
         <location filename="../../fn.ui" line="1174"/>
         <source>h&amp;3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">h&amp;3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1177"/>
@@ -972,7 +972,7 @@
     <message>
         <location filename="../../fn.ui" line="1351"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">F2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1356"/>
@@ -1850,7 +1850,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../spellDialog.ui" line="62"/>
         <source>Replace with:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Erstat med:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="87"/>

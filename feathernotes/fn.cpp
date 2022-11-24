@@ -662,7 +662,7 @@ void FN::showContextMenu (const QPoint &p)
     QModelIndex index = ui->treeView->indexAt (p);
     if (!index.isValid()) return;
 
-    QMenu menu;
+    QMenu menu (this); // "this" is for Wayland, when the window isn't active
     menu.addAction (ui->actionPrepSibling);
     menu.addAction (ui->actionNewSibling);
     menu.addAction (ui->actionNewChild);

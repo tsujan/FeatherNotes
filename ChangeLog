@@ -7,6 +7,7 @@ V1.0.1
  * Simplified finding of Qt modules with cmake.
  * Added a workaround for a Qt6 bug that doesn't include newlines in the plain-text data of the copied text.
  * Silenced the compilation warnings with Qt 6.4.
+ * Corrected context menus on Wayland, by specifying their parent widgets.
 
 V1.0.0
 ---------
