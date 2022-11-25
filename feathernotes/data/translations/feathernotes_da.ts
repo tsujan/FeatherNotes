@@ -137,7 +137,7 @@
     <message>
         <location filename="../../fn.ui" line="296"/>
         <source>&amp;Tree</source>
-        <translation>&amp;Træ</translation>
+        <translation>&amp;Træstruktur</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="320"/>
@@ -270,7 +270,7 @@
     <message>
         <location filename="../../fn.ui" line="584"/>
         <source>&amp;Find</source>
-        <translation>&amp;Finde</translation>
+        <translation>&amp;Find</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="587"/>
@@ -406,7 +406,7 @@
     <message>
         <location filename="../../fn.ui" line="721"/>
         <source>Save &amp;As</source>
-        <translation>Gem&amp;som</translation>
+        <translation>Gem &amp;som</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="724"/>
@@ -426,7 +426,7 @@
     <message>
         <location filename="../../fn.ui" line="743"/>
         <source>P&amp;rint with Sub-Nodes</source>
-        <translation>U&amp;dskriv med undernoder</translation>
+        <translation>U&amp;dskriv med undernoter</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="751"/>
@@ -447,7 +447,7 @@
     <message>
         <location filename="../../fn.ui" line="767"/>
         <source>&amp;Cut</source>
-        <translation>&amp;Klippe</translation>
+        <translation>&amp;Klip</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="770"/>
@@ -508,12 +508,12 @@
     <message>
         <location filename="../../fn.ui" line="833"/>
         <source>E&amp;xpand All</source>
-        <translation>U&amp;dvid alt</translation>
+        <translation>Ud&amp;vid alt</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="836"/>
         <source>Ctrl+Shift+Down</source>
-        <translation>Ctrl+Shift+Down</translation>
+        <translation>Ctrl+Shift+Ned</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="844"/>
@@ -523,7 +523,7 @@
     <message>
         <location filename="../../fn.ui" line="847"/>
         <source>Ctrl+Shift+Up</source>
-        <translation>Ctrl+Shift+Up</translation>
+        <translation>Ctrl+Shift+Op</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="855"/>
@@ -538,7 +538,7 @@
     <message>
         <location filename="../../fn.ui" line="866"/>
         <source>Append &amp;Child</source>
-        <translation>Tilføj &amp; Andre</translation>
+        <translation>Tilføj &amp;Andre</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="869"/>
@@ -548,7 +548,7 @@
     <message>
         <location filename="../../fn.ui" line="877"/>
         <source>&amp;Delete Node</source>
-        <translation>&amp;Slet node</translation>
+        <translation>&amp;Slet note</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="880"/>
@@ -563,7 +563,7 @@
     <message>
         <location filename="../../fn.ui" line="891"/>
         <source>Alt+Up</source>
-        <translation>Alt+Up</translation>
+        <translation>Alt+Op</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="899"/>
@@ -573,12 +573,12 @@
     <message>
         <location filename="../../fn.ui" line="902"/>
         <source>Alt+Down</source>
-        <translation>Alt+Down</translation>
+        <translation>Alt+Ned</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="910"/>
         <source>Re&amp;name Node</source>
-        <translation>Om&amp;døb node</translation>
+        <translation>Om&amp;døb note</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="913"/>
@@ -598,7 +598,7 @@
     <message>
         <location filename="../../fn.ui" line="929"/>
         <source>Document &amp;Font</source>
-        <translation>Dokument &amp; skrifttype</translation>
+        <translation>Dokument &amp;skrifttype</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="943"/>
@@ -653,7 +653,7 @@
     <message>
         <location filename="../../fn.ui" line="1003"/>
         <source>Pr&amp;int All Nodes</source>
-        <translation>Ud&amp;skriv alle noder</translation>
+        <translation>Ud&amp;skriv alle noter</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1014"/>
@@ -663,7 +663,7 @@
     <message>
         <location filename="../../fn.ui" line="1017"/>
         <source>Superscript</source>
-        <translation>Overskrift&amp;t</translation>
+        <translation>Overskrift</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1020"/>
@@ -698,7 +698,7 @@
     <message>
         <location filename="../../fn.ui" line="1054"/>
         <source>Alt+Shift+Down</source>
-        <translation>Alt+Shift+Down</translation>
+        <translation>Alt+Shift+Ned</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1065"/>
@@ -714,7 +714,7 @@
     <message>
         <location filename="../../fn.ui" line="1071"/>
         <source>Alt+Shift+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+Højre</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1082"/>
@@ -725,12 +725,12 @@
     <message>
         <location filename="../../fn.ui" line="1085"/>
         <source>Align left</source>
-        <translation type="unfinished"></translation>
+        <translation>Juster til venstre</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1088"/>
         <source>Alt+Shift+Left</source>
-        <translation>Alt+Shift+Left</translation>
+        <translation>Alt+Shift+Venstre</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1099"/>
@@ -740,17 +740,17 @@
     <message>
         <location filename="../../fn.ui" line="1102"/>
         <source>Justify</source>
-        <translation type="unfinished"></translation>
+        <translation>Juster centeret</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1105"/>
         <source>Alt+Shift+Up</source>
-        <translation>Alt+Shift+Up</translation>
+        <translation>Alt+Shift+Op</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1113"/>
         <source>&amp;Prepend Sibling</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Forsæt enslydende</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1116"/>
@@ -760,12 +760,12 @@
     <message>
         <location filename="../../fn.ui" line="1124"/>
         <source>Move &amp;Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Flyt til &amp;venstre</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1127"/>
         <source>Alt+Left</source>
-        <translation>Alt+Left</translation>
+        <translation>Alt+Venstre</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1135"/>
@@ -775,7 +775,7 @@
     <message>
         <location filename="../../fn.ui" line="1138"/>
         <source>Alt+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Højre</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1146"/>
@@ -785,7 +785,7 @@
     <message>
         <location filename="../../fn.ui" line="1149"/>
         <source>Header 2</source>
-        <translation type="unfinished">Header 2</translation>
+        <translation>Overskrift 2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1152"/>
@@ -795,12 +795,12 @@
     <message>
         <location filename="../../fn.ui" line="1160"/>
         <source>h&amp;1</source>
-        <translation type="unfinished">h&amp;1</translation>
+        <translation>h&amp;1</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1163"/>
         <source>Header 1</source>
-        <translation>Header 1</translation>
+        <translation>Overskrift 1</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1166"/>
@@ -810,12 +810,12 @@
     <message>
         <location filename="../../fn.ui" line="1174"/>
         <source>h&amp;3</source>
-        <translation type="unfinished">h&amp;3</translation>
+        <translation>h&amp;3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1177"/>
         <source>Header 3</source>
-        <translation>Header 3</translation>
+        <translation>Overskrift 3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1180"/>
@@ -825,225 +825,226 @@
     <message>
         <location filename="../../fn.ui" line="1188"/>
         <source>&amp;Node Font</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Note font</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1191"/>
         <source>Node Font</source>
-        <translation>Node skrifttype</translation>
+        <translation>Note skrifttype</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1196"/>
         <source>Scale I&amp;mage(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Skala bil&amp;lede(r)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1204"/>
         <source>Paste &amp;HTML</source>
-        <translation type="unfinished"></translation>
+        <translation>Indsæt &amp;HTML</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1207"/>
         <source>Ctrl+Shift+V</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+V</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1215"/>
         <source>&amp;Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tags</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1218"/>
         <source>Ctrl+Shift+T</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1226"/>
         <source>Insert Lin&amp;k</source>
-        <translation type="unfinished"></translation>
+        <translation>Indsæt Lin&amp;k</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1229"/>
         <source>Ctrl+L</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+L</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1234"/>
         <source>C&amp;opy Link</source>
-        <translation type="unfinished"></translation>
+        <translation>Ko&amp;pier link</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1242"/>
         <source>I&amp;nsert Table</source>
-        <translation type="unfinished"></translation>
+        <translation>Ind&amp;sæt tabel</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1245"/>
         <source>Ctrl+Alt+Shift+T</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Alt+Shift+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1250"/>
         <source>Append Row</source>
-        <translation type="unfinished"></translation>
+        <translation>Tilføj række</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1255"/>
         <source>Delete Row</source>
-        <translation type="unfinished"></translation>
+        <translation>Slet række</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1260"/>
         <source>Append Column</source>
-        <translation type="unfinished"></translation>
+        <translation>Tilføj kolonne</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1265"/>
         <source>Delete Column</source>
-        <translation type="unfinished"></translation>
+        <translation>Slet kolonne</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1270"/>
         <source>Merge Cells</source>
-        <translation type="unfinished"></translation>
+        <translation>Flet celler</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1275"/>
         <source>Prepend Row</source>
-        <translation type="unfinished"></translation>
+        <translation>Sæt række foran</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1280"/>
         <source>Prepend Column</source>
-        <translation type="unfinished"></translation>
+        <translation>Foretag kolonne</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1288"/>
         <source>Export &amp;HTML</source>
-        <translation type="unfinished"></translation>
+        <translation>Eksporter &amp;HTML</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1293"/>
         <source>Save Ima&amp;ge(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Gem bil&amp;lede(r)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1304"/>
         <source>RTL</source>
-        <translation type="unfinished"></translation>
+        <translation>RTL</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1307"/>
         <source>Ctrl+Alt+Shift+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Alt+Shift+Venstre</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1318"/>
         <source>LTR</source>
-        <translation type="unfinished"></translation>
+        <translation>LTR</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1321"/>
         <source>Ctrl+Alt+Shift+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Alt+Shift+Højre</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1326"/>
         <location filename="../../fn.ui" line="1329"/>
         <source>Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Menu</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1337"/>
         <source>Node &amp;Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Note &amp;ikon</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1340"/>
         <source>Ctrl+Shift+C</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+C</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1345"/>
         <location filename="../../fn.ui" line="1348"/>
         <source>Check Spelling</source>
-        <translation type="unfinished"></translation>
+        <translation>Kontroller stavning</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1351"/>
         <source>F2</source>
-        <translation type="unfinished">F2</translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1356"/>
         <source>Document &amp;Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Dokument &amp;farver</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1364"/>
         <location filename="../../fn.ui" line="1367"/>
         <source>Paste Date and Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Indsæt dato og tid</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1372"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ryd</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2960"/>
         <source>Node Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Note ikon</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="642"/>
         <source>&amp;Raise/Hide</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hæv/skjul</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="884"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;New note?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Ny note?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="885"/>
         <source>&lt;center&gt;&lt;i&gt;Do you really want to leave this document&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;and create an empty one?&lt;/i&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;i&gt;Vil du virkelig forlade dette dokument&lt;/i&gt;&lt;/center&gt;
+&lt;center&gt;&lt;i&gt;og oprette et nyt?&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="888"/>
         <location filename="../../fn.cpp" line="2791"/>
         <location filename="../../fn.cpp" line="4737"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Ja</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="889"/>
         <location filename="../../fn.cpp" line="2792"/>
         <location filename="../../fn.cpp" line="4738"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Nej</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="980"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Save changes?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Gem ændringer?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="982"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been modified.&lt;/i&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;i&gt;Dokumentet er blevet ændret.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="984"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been removed.&lt;/i&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;i&gt;Dokumentet er blevet fjernet.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="989"/>
         <source>Discard changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Kasser ændringer</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="990"/>
@@ -1058,45 +1059,46 @@
         <location filename="../../fn.cpp" line="6067"/>
         <location filename="../../fn.cpp" line="6163"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Annuller</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1454"/>
         <source>Open file...</source>
-        <translation type="unfinished"></translation>
+        <translation>Åben fil...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1631"/>
         <location filename="../../fn.cpp" line="5914"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be saved!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Kan ikke gemmes!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3574"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Luk</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1731"/>
         <location filename="../../fn.cpp" line="1754"/>
         <source>Save As...</source>
-        <translation type="unfinished"></translation>
+        <translation>Gem som...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2788"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Delete this node?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Slet denne note?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2789"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;i&gt;Warning!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
 &lt;center&gt;This action cannot be undone.&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>center&gt;&lt;b&gt;&lt;i&gt;Advarsel!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
+&lt;center&gt;Denne handling kan ikke fortrydes.&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2895"/>
         <source>Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Tags</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2910"/>
@@ -1110,108 +1112,109 @@
         <location filename="../../fn.cpp" line="6068"/>
         <location filename="../../fn.cpp" line="6164"/>
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation>OK</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3084"/>
         <location filename="../../fn.cpp" line="3117"/>
         <source>&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Hoved noter:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Alle noter:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3090"/>
         <location filename="../../fn.cpp" line="3123"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Note:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Hoved noter:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Alle noter:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3561"/>
         <source>%1 Matches</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 matcher</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3563"/>
         <source>One Match</source>
-        <translation type="unfinished"></translation>
+        <translation>Et match</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3565"/>
         <location filename="../../fn.cpp" line="3934"/>
         <source>No Match</source>
-        <translation type="unfinished"></translation>
+        <translation>Ingen match</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3733"/>
         <location filename="../../fn.cpp" line="3786"/>
         <source>Replacement</source>
-        <translation type="unfinished"></translation>
+        <translation>Erstatning</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4041"/>
         <source>No Replacement</source>
-        <translation type="unfinished"></translation>
+        <translation>Ingen erstatning</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4043"/>
         <source>One Replacement</source>
-        <translation type="unfinished"></translation>
+        <translation>En erstatning</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4046"/>
         <source>%1 Replacements</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Erstatninger</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4304"/>
         <source>Insert Link</source>
-        <translation type="unfinished"></translation>
+        <translation>Indsæt link</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2968"/>
         <location filename="../../fn.cpp" line="4386"/>
         <source>Image path</source>
-        <translation type="unfinished"></translation>
+        <translation>Billedsti</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2972"/>
         <location filename="../../fn.cpp" line="4390"/>
         <source>Open image</source>
-        <translation type="unfinished"></translation>
+        <translation>Åbn billede</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4398"/>
         <location filename="../../fn.cpp" line="4573"/>
         <source>Scaling percentage</source>
-        <translation type="unfinished"></translation>
+        <translation>Skaleringsprocent</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2990"/>
         <location filename="../../fn.cpp" line="4495"/>
         <source>Open Image...</source>
-        <translation type="unfinished"></translation>
+        <translation>Åbn billede...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="617"/>
         <source>System tray is not available.
 Please disable tray in Preferences.</source>
-        <translation type="unfinished"></translation>
+        <translation>Systembakken er ikke tilgængelig.
+Deaktiver venligst bakke i Præferencer.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="935"/>
         <source>New Node</source>
-        <translation type="unfinished"></translation>
+        <translation>Nt note</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1456"/>
         <location filename="../../fn.cpp" line="1733"/>
         <location filename="../../fn.cpp" line="1756"/>
         <source>FeatherNotes documents (*.fnx);;All Files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>FeatherNotes dokumenter (*.fnx);;Alle Filer (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1632"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be opened!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Kan ikke åbnes!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1713"/>
@@ -1222,110 +1225,110 @@ Please disable tray in Preferences.</source>
         <location filename="../../fn.cpp" line="5977"/>
         <location filename="../../fn.cpp" line="6004"/>
         <source>Untitled</source>
-        <translation type="unfinished"></translation>
+        <translation>Uden titel</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2181"/>
         <source>Align Table</source>
-        <translation type="unfinished"></translation>
+        <translation>Juster tabel</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2194"/>
         <source>&amp;Center</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Centrer</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2621"/>
         <source>Select Text Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Vælg tekstfarve</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2653"/>
         <source>Select Background Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Vælg Baggrundsfarve</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2787"/>
         <source>Deletion</source>
-        <translation type="unfinished"></translation>
+        <translation>Sletning</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2905"/>
         <source>Tag(s) for this node</source>
-        <translation type="unfinished"></translation>
+        <translation>Tag(s) for denne note</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2992"/>
         <location filename="../../fn.cpp" line="4497"/>
         <source>Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Billedfiler (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Filer (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3161"/>
         <source>Select Document Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Vælg Dokumentskrifttype</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3225"/>
         <source>Select Node Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Vælg Note Font</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3250"/>
         <source>Set Document Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Indstil dokumentfarver</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3260"/>
         <source>These colors will be applied to new nodes.&lt;br&gt;They may or may not affect existing nodes&lt;br&gt;but document reopening is recommended.</source>
-        <translation type="unfinished"></translation>
+        <translation>Disse farver vil blive anvendt på nye noter.&lt;br&gt;De påvirker muligvis eksisterende noter&lt;br&gt;men genåbning af dokumenter anbefales.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3263"/>
         <source>Background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Baggrundsfarve:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3269"/>
         <source>Text color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekstfarve:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4051"/>
         <source>The first 1000 replacements are highlighted.</source>
-        <translation type="unfinished"></translation>
+        <translation>De første 1000 udskiftninger er fremhævet.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4393"/>
         <location filename="../../fn.cpp" line="4569"/>
         <source>Scale to</source>
-        <translation type="unfinished"></translation>
+        <translation>Skala til</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4397"/>
         <location filename="../../fn.cpp" line="4572"/>
         <source>%</source>
-        <translation type="unfinished"></translation>
+        <translation>%</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4563"/>
         <source>Scale Image(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Skaler billede(r)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4700"/>
         <source>untitled</source>
-        <translation type="unfinished"></translation>
+        <translation>uden titel</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4732"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Fejl</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4733"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Image cannot be saved! Retry?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Billedet kan ikke gemmes! Prøv igen?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4734"/>
