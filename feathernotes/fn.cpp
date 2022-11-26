@@ -2332,7 +2332,7 @@ void FN::selChanged (const QItemSelection &selected, const QItemSelection &desel
         DomItem *item = static_cast<DomItem*>(index.internalPointer());
         QDomNodeList list = item->node().childNodes();
         text = list.item (0).nodeValue();
-        /* this is needed for text zooming */
+        /* NOTE: This is needed for text zooming. */
         static const QString htmlStr ("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
                                       "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
                                       "p, li { white-space: pre-wrap; }\n"
@@ -2341,7 +2341,7 @@ void FN::selChanged (const QItemSelection &selected, const QItemSelection &desel
         bool defaultDocColor (bgColor_ == QColor (Qt::white) && fgColor_ == QColor (Qt::black));
         if (defaultDocColor)
         {
-            static const QRegularExpression htmlRegex (R"(^<!DOCTYPE[A-Za-z0-9/<>,;.:\-={}\s"]+</style></head><body\sstyle=[A-Za-z0-9/<>;:\-\s"']+>)");
+            static const QRegularExpression htmlRegex (R"(^<!DOCTYPE[A-Za-z0-9/<>,;.:\-={}\s"\\]+</style></head><body\sstyle=[A-Za-z0-9/<>;:\-\s"']+>)");
             if (text.indexOf (htmlRegex, 0, &match) > -1)
                 text.replace (0, match.capturedLength(), htmlStr);
         }
@@ -2352,7 +2352,7 @@ void FN::selChanged (const QItemSelection &selected, const QItemSelection &desel
             /* To enable the default stylesheet, we should set the HTML text of the document.
                Setting the HTML text of the editor above is needed for empty nodes. */
             QString str = textEdit->document()->toHtml();
-            static const QRegularExpression htmlRegex1 (R"(^<!DOCTYPE[A-Za-z0-9/<>,;.:\-={}\s"]+</style></head><body\sstyle=[A-Za-z0-9/;:\-\s"'#=]+>(<br\s*/>(</p>)?)?)");
+            static const QRegularExpression htmlRegex1 (R"(^<!DOCTYPE[A-Za-z0-9/<>,;.:\-={}\s"\\]+</style></head><body\sstyle=[A-Za-z0-9/;:\-\s"'#=]+>(<br\s*/>(</p>)?)?)");
             if (str.indexOf (htmlRegex1, 0, &match) > -1)
                 str.replace (0, match.capturedLength(), htmlStr);
             textEdit->document()->setHtml (str);
