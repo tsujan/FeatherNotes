@@ -3582,8 +3582,6 @@ void FN::findInTags()
     grid->addWidget (closeButton, 1, 0, Qt::AlignRight);
 
     TagsDialog->setLayout (grid);
-    /*TagsDialog->resize (TagsDialog->minimumWidth(),
-                        TagsDialog->minimumHeight());*/
     TagsDialog->show();
     /*TagsDialog->move (x() + width()/2 - TagsDialog->width(),
                       y() + height()/2 - TagsDialog->height());*/
@@ -4842,9 +4840,9 @@ void FN::addTable()
     connect (okButton, &QAbstractButton::clicked, dialog, &QDialog::accept);
 
     grid->addWidget (labelRow, 0, 0, Qt::AlignRight);
-    grid->addWidget (spinBoxRow, 0, 1, 1, 2, Qt::AlignLeft);
+    grid->addWidget (spinBoxRow, 0, 1, 1, 2);
     grid->addWidget (labelCol, 1, 0, Qt::AlignRight);
-    grid->addWidget (spinBoxCol, 1, 1, 1, 2, Qt::AlignLeft);
+    grid->addWidget (spinBoxCol, 1, 1, 1, 2);
     grid->addItem (spacer, 2, 0);
     grid->addWidget (cancelButton, 3, 0, 1, 2, Qt::AlignRight);
     grid->addWidget (okButton, 3, 2, Qt::AlignLeft);
@@ -4852,6 +4850,7 @@ void FN::addTable()
     grid->setRowStretch (2, 1);
 
     dialog->setLayout (grid);
+    dialog->resize (dialog->size().expandedTo (QSize (300, 0)));
 
     dialog->open();
     connect (dialog, &QDialog::finished, cw, [this, cw, spinBoxRow, spinBoxCol] (int res) {
@@ -5800,8 +5799,6 @@ void FN::exportHTML()
     grid->setRowStretch (2, 1);
 
     dialog->setLayout (grid);
-    /*dialog->resize (dialog->minimumWidth(),
-                    dialog->minimumHeight());*/
     /*dialog->show();
     dialog->move (x() + width()/2 - dialog->width(),
                   y() + height()/2 - dialog->height());*/
@@ -6087,6 +6084,7 @@ void FN::setPswd()
     label->setVisible (false);
 
     dialog->setLayout (grid);
+    dialog->resize (dialog->size().expandedTo (QSize (300, 0)));
 
     dialog->open();
 }
@@ -6155,6 +6153,7 @@ bool FN::isPswrdCorrect (const QString &file)
     lineEdit->setPlaceholderText (tr ("Enter Password"));
     connect (lineEdit, &QLineEdit::returnPressed, this, &FN::checkPswrd);
     QLabel *pathLabel = new QLabel(file);
+    pathLabel->setSizePolicy (QSizePolicy::Preferred, QSizePolicy::MinimumExpanding);
     pathLabel->setWordWrap (true);
     pathLabel->setAlignment (Qt::AlignCenter);
     QLabel *label = new QLabel();
@@ -6177,8 +6176,7 @@ bool FN::isPswrdCorrect (const QString &file)
     label->setVisible (false);
 
     dialog->setLayout (grid);
-    /*dialog->resize (dialog->minimumWidth(),
-                    dialog->minimumHeight());*/
+    dialog->resize (dialog->size().expandedTo (QSize (300, 0)));
     /*dialog->show();
     dialog->move (x() + width()/2 - dialog->width(),
                   y() + height()/2 - dialog->height());*/
