@@ -2230,15 +2230,18 @@ void FN::selChanged (const QItemSelection &selected, const QItemSelection &desel
 {
     closeWarningBar();
 
-    if (selected.isEmpty()) // if the last node is closed
+    if (selected.isEmpty())
     {
-        if (ui->lineEdit->isVisible())
-            showHideSearch();
-        if (ui->dockReplace->isVisible())
-            replaceDock();
-        enableActions (false);
-        /*if (QWidget *widget = ui->stackedWidget->currentWidget())
-            widget->setVisible (false);*/
+        if (model_->rowCount() == 0) // if the last node is closed
+        {
+            if (ui->lineEdit->isVisible())
+                showHideSearch();
+            if (ui->dockReplace->isVisible())
+                replaceDock();
+            enableActions (false);
+            /*if (QWidget *widget = ui->stackedWidget->currentWidget())
+                widget->setVisible (false);*/
+        }
         return;
     }
     /*else if (deselected.isEmpty()) // a row is selected after Ctrl + left click
@@ -2358,6 +2361,14 @@ void FN::selChanged (const QItemSelection &selected, const QItemSelection &desel
             textEdit->setTextCursor (cur);
             textEdit->document()->setModified (false);
         }
+        else
+        {
+            /* because of a Qt bug, this is needed for
+               QTextEdit::currentCharFormat() to be correct */
+            QTextCursor cur = textEdit->textCursor();
+            cur.clearSelection ();
+            textEdit->setTextCursor (cur);
+        }
 
         connect (textEdit->document(), &QTextDocument::modificationChanged, this, &FN::setSaveEnabled);
         connect (textEdit->document(), &QTextDocument::undoAvailable, this, &FN::setUndoEnabled);
@@ -2365,7 +2376,8 @@ void FN::selChanged (const QItemSelection &selected, const QItemSelection &desel
         connect (textEdit, &QTextEdit::currentCharFormatChanged, this, &FN::formatChanged);
         connect (textEdit, &QTextEdit::cursorPositionChanged, this, &FN::alignmentChanged);
         connect (textEdit, &QTextEdit::cursorPositionChanged, this, &FN::directionChanged);
-        connect (textEdit->document(), &QTextDocument::contentsChange, [this] (int/* pos*/, int charsRemoved, int charsAdded) {
+        connect (textEdit->document(), &QTextDocument::contentsChange,
+                 [this] (int/* pos*/, int charsRemoved, int charsAdded) {
             if (charsRemoved == charsAdded)
             { // a special case, where the following slots aren't called automatically
                 alignmentChanged();
@@ -2447,7 +2459,7 @@ void FN::formatChanged (const QTextCharFormat &format)
     ui->actionSub->setChecked (format.verticalAlignment() == QTextCharFormat::AlignSubScript ?
                                true : false);
 
-    if (format.fontWeight() == QFont::Bold)
+    if (format.fontWeight() > QFont::Medium) // who knows what will happen after Qt upgrades?
         ui->actionBold->setChecked (true);
     else
         ui->actionBold->setChecked (false);

@@ -1,11 +1,14 @@
 V1.0.1
 ---------
  * Fixed crash on pasting with empty clipboard.
+ * Fixed a bug in updating widget states after deleting a node.
+ * Added a workaround for a Qt bug related to the current character format.
  * Added a real Unix signal handler.
  * Removed "Embed Image" from the toolbar to make it uncluttered.
  * Better window placement on tray activation without X11.
  * Simplified finding of Qt modules with cmake.
  * Added a workaround for a Qt6 bug that doesn't include newlines in the plain-text data of the copied text.
+ * Prevented total node deselection with Qt6.
  * Silenced the compilation warnings with Qt 6.4.
  * Corrected the context menus and tooltips on Wayland, by specifying their parent widgets.
  * Better sizes for some dialogs.

@@ -83,6 +83,7 @@ signals:
 protected:
     /* see Qt -> "qabstractitemview.cpp" */
     QItemSelectionModel::SelectionFlags selectionCommand (const QModelIndex &index, const QEvent *event = nullptr) const override {
+#if (QT_VERSION < QT_VERSION_CHECK(6,0,0))
         Qt::KeyboardModifiers keyModifiers = Qt::NoModifier;
         if (event)
         {
@@ -99,11 +100,21 @@ protected:
                     keyModifiers = QApplication::keyboardModifiers();
             }
         }
-        if (selectionMode() == QAbstractItemView::SingleSelection
-            && (keyModifiers & Qt::ControlModifier)
-            && selectionModel()->isSelected (index))
+#else
+        Qt::KeyboardModifiers keyModifiers = event != nullptr && event->isInputEvent()
+                                                 ? (static_cast<const QInputEvent*>(event))->modifiers()
+                                                 : Qt::NoModifier;
+
+#endif
+        if (selectionMode() == QAbstractItemView::SingleSelection)
         {
-            return QItemSelectionModel::ClearAndSelect | QItemSelectionModel::Rows;
+            if (!index.isValid())
+                return QItemSelectionModel::NoUpdate;
+            if ((keyModifiers & Qt::ControlModifier)
+                && selectionModel()->isSelected (index))
+            {
+                return QItemSelectionModel::ClearAndSelect | QItemSelectionModel::Rows;
+            }
         }
         return QTreeView::selectionCommand (index, event);
     }
