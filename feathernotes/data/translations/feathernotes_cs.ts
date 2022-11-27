@@ -212,7 +212,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="534"/>
-        <location filename="../../fn.cpp" line="988"/>
+        <location filename="../../fn.cpp" line="991"/>
         <source>Save</source>
         <translation>Uložit</translation>
     </message>
@@ -496,7 +496,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="822"/>
-        <location filename="../../fn.cpp" line="4387"/>
+        <location filename="../../fn.cpp" line="4390"/>
         <source>Embed Image</source>
         <translation>Zapouzdřit obrázek</translation>
     </message>
@@ -702,7 +702,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="1065"/>
-        <location filename="../../fn.cpp" line="2188"/>
+        <location filename="../../fn.cpp" line="2191"/>
         <source>&amp;Right</source>
         <translation>Vp&amp;ravo</translation>
     </message>
@@ -718,7 +718,7 @@
     </message>
     <message>
         <location filename="../../fn.ui" line="1082"/>
-        <location filename="../../fn.cpp" line="2182"/>
+        <location filename="../../fn.cpp" line="2185"/>
         <source>&amp;Left</source>
         <translation>V&amp;levo</translation>
     </message>
@@ -991,7 +991,7 @@
         <translation>&amp;Vyprázdnit</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2972"/>
+        <location filename="../../fn.cpp" line="2975"/>
         <source>Node Icon</source>
         <translation>Ikona uzlu</translation>
     </message>
@@ -1001,194 +1001,194 @@
         <translation>&amp;Vyzdvihnout/skrýt</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="884"/>
+        <location filename="../../fn.cpp" line="887"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;New note?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Nová poznámka?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="885"/>
+        <location filename="../../fn.cpp" line="888"/>
         <source>&lt;center&gt;&lt;i&gt;Do you really want to leave this document&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;and create an empty one?&lt;/i&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;i&gt;Opravdu chcete tento dokument opustit&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;a vytvořit nový prázdný?&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="888"/>
-        <location filename="../../fn.cpp" line="2803"/>
-        <location filename="../../fn.cpp" line="4747"/>
+        <location filename="../../fn.cpp" line="891"/>
+        <location filename="../../fn.cpp" line="2806"/>
+        <location filename="../../fn.cpp" line="4750"/>
         <source>Yes</source>
         <translation>Ano</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="889"/>
-        <location filename="../../fn.cpp" line="2804"/>
-        <location filename="../../fn.cpp" line="4748"/>
+        <location filename="../../fn.cpp" line="892"/>
+        <location filename="../../fn.cpp" line="2807"/>
+        <location filename="../../fn.cpp" line="4751"/>
         <source>No</source>
         <translation>Ne</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="980"/>
+        <location filename="../../fn.cpp" line="983"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Save changes?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Uložit změny?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="982"/>
+        <location filename="../../fn.cpp" line="985"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been modified.&lt;/i&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;i&gt;Dokument byl změněn.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="984"/>
+        <location filename="../../fn.cpp" line="987"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been removed.&lt;/i&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;i&gt;Dokument byl odebrán.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="989"/>
+        <location filename="../../fn.cpp" line="992"/>
         <source>Discard changes</source>
         <translation>Zahodit změny</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="990"/>
-        <location filename="../../fn.cpp" line="2921"/>
-        <location filename="../../fn.cpp" line="3015"/>
-        <location filename="../../fn.cpp" line="3290"/>
-        <location filename="../../fn.cpp" line="4326"/>
-        <location filename="../../fn.cpp" line="4411"/>
-        <location filename="../../fn.cpp" line="4586"/>
-        <location filename="../../fn.cpp" line="4849"/>
-        <location filename="../../fn.cpp" line="5797"/>
-        <location filename="../../fn.cpp" line="6076"/>
-        <location filename="../../fn.cpp" line="6174"/>
+        <location filename="../../fn.cpp" line="993"/>
+        <location filename="../../fn.cpp" line="2924"/>
+        <location filename="../../fn.cpp" line="3018"/>
+        <location filename="../../fn.cpp" line="3293"/>
+        <location filename="../../fn.cpp" line="4329"/>
+        <location filename="../../fn.cpp" line="4414"/>
+        <location filename="../../fn.cpp" line="4589"/>
+        <location filename="../../fn.cpp" line="4852"/>
+        <location filename="../../fn.cpp" line="5800"/>
+        <location filename="../../fn.cpp" line="6079"/>
+        <location filename="../../fn.cpp" line="6177"/>
         <source>Cancel</source>
         <translation>Storno</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1454"/>
+        <location filename="../../fn.cpp" line="1457"/>
         <source>Open file...</source>
         <translation>Otevřít soubor…</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1631"/>
-        <location filename="../../fn.cpp" line="5923"/>
+        <location filename="../../fn.cpp" line="1634"/>
+        <location filename="../../fn.cpp" line="5926"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be saved!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Není možné uložit!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3586"/>
+        <location filename="../../fn.cpp" line="3589"/>
         <source>Close</source>
         <translation>Zavřít</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1731"/>
-        <location filename="../../fn.cpp" line="1754"/>
+        <location filename="../../fn.cpp" line="1734"/>
+        <location filename="../../fn.cpp" line="1757"/>
         <source>Save As...</source>
         <translation>Uložit jako…</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2800"/>
+        <location filename="../../fn.cpp" line="2803"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Delete this node?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Smazat tento uzel?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2801"/>
+        <location filename="../../fn.cpp" line="2804"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;i&gt;Warning!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
 &lt;center&gt;This action cannot be undone.&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;i&gt;Varování!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
 &lt;center&gt;Tuto akci nelze vzít zpět.&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2907"/>
+        <location filename="../../fn.cpp" line="2910"/>
         <source>Tags</source>
         <translation>Štítky</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2922"/>
-        <location filename="../../fn.cpp" line="3016"/>
-        <location filename="../../fn.cpp" line="3291"/>
-        <location filename="../../fn.cpp" line="4328"/>
-        <location filename="../../fn.cpp" line="4412"/>
-        <location filename="../../fn.cpp" line="4587"/>
-        <location filename="../../fn.cpp" line="4850"/>
-        <location filename="../../fn.cpp" line="5799"/>
-        <location filename="../../fn.cpp" line="6077"/>
-        <location filename="../../fn.cpp" line="6175"/>
+        <location filename="../../fn.cpp" line="2925"/>
+        <location filename="../../fn.cpp" line="3019"/>
+        <location filename="../../fn.cpp" line="3294"/>
+        <location filename="../../fn.cpp" line="4331"/>
+        <location filename="../../fn.cpp" line="4415"/>
+        <location filename="../../fn.cpp" line="4590"/>
+        <location filename="../../fn.cpp" line="4853"/>
+        <location filename="../../fn.cpp" line="5802"/>
+        <location filename="../../fn.cpp" line="6080"/>
+        <location filename="../../fn.cpp" line="6178"/>
         <source>OK</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3096"/>
-        <location filename="../../fn.cpp" line="3129"/>
+        <location filename="../../fn.cpp" line="3099"/>
+        <location filename="../../fn.cpp" line="3132"/>
         <source>&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</source>
         <translation>&lt;b&gt;Hlavní uzly:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Všechny uzly:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3102"/>
-        <location filename="../../fn.cpp" line="3135"/>
+        <location filename="../../fn.cpp" line="3105"/>
+        <location filename="../../fn.cpp" line="3138"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</source>
         <translation>&lt;b&gt;Poznámka:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Hlavní uzly:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Všechny uzly:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3573"/>
+        <location filename="../../fn.cpp" line="3576"/>
         <source>%1 Matches</source>
         <translation>%1 shod</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3575"/>
+        <location filename="../../fn.cpp" line="3578"/>
         <source>One Match</source>
         <translation>Jedna shoda</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3577"/>
-        <location filename="../../fn.cpp" line="3944"/>
+        <location filename="../../fn.cpp" line="3580"/>
+        <location filename="../../fn.cpp" line="3947"/>
         <source>No Match</source>
         <translation>Žádná shoda</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3743"/>
-        <location filename="../../fn.cpp" line="3796"/>
+        <location filename="../../fn.cpp" line="3746"/>
+        <location filename="../../fn.cpp" line="3799"/>
         <source>Replacement</source>
         <translation>Nahrazení</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4051"/>
+        <location filename="../../fn.cpp" line="4054"/>
         <source>No Replacement</source>
         <translation>Žádné nahrazení</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4053"/>
+        <location filename="../../fn.cpp" line="4056"/>
         <source>One Replacement</source>
         <translation>Jedno nahrazení</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4056"/>
+        <location filename="../../fn.cpp" line="4059"/>
         <source>%1 Replacements</source>
         <translation>%1 nahrazení</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4314"/>
+        <location filename="../../fn.cpp" line="4317"/>
         <source>Insert Link</source>
         <translation>Vložit odkaz</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2980"/>
-        <location filename="../../fn.cpp" line="4396"/>
+        <location filename="../../fn.cpp" line="2983"/>
+        <location filename="../../fn.cpp" line="4399"/>
         <source>Image path</source>
         <translation>Umístění obrázku</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2984"/>
-        <location filename="../../fn.cpp" line="4400"/>
+        <location filename="../../fn.cpp" line="2987"/>
+        <location filename="../../fn.cpp" line="4403"/>
         <source>Open image</source>
         <translation>Otevřít obrázek</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4408"/>
-        <location filename="../../fn.cpp" line="4583"/>
+        <location filename="../../fn.cpp" line="4411"/>
+        <location filename="../../fn.cpp" line="4586"/>
         <source>Scaling percentage</source>
         <translation>Procento měřítka</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3002"/>
-        <location filename="../../fn.cpp" line="4505"/>
+        <location filename="../../fn.cpp" line="3005"/>
+        <location filename="../../fn.cpp" line="4508"/>
         <source>Open Image...</source>
         <translation>Otevřít obrázek…</translation>
     </message>
@@ -1200,225 +1200,225 @@ Please disable tray in Preferences.</source>
 Vypněte panel v Předvolbách.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="935"/>
+        <location filename="../../fn.cpp" line="938"/>
         <source>New Node</source>
         <translation>Nový uzel</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1456"/>
-        <location filename="../../fn.cpp" line="1733"/>
-        <location filename="../../fn.cpp" line="1756"/>
+        <location filename="../../fn.cpp" line="1459"/>
+        <location filename="../../fn.cpp" line="1736"/>
+        <location filename="../../fn.cpp" line="1759"/>
         <source>FeatherNotes documents (*.fnx);;All Files (*)</source>
         <translation>Dokumenty FeatherNotes (*.fnx);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1632"/>
+        <location filename="../../fn.cpp" line="1635"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be opened!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Nelze otevřít!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="1713"/>
-        <location filename="../../fn.cpp" line="5638"/>
-        <location filename="../../fn.cpp" line="5647"/>
-        <location filename="../../fn.cpp" line="5786"/>
-        <location filename="../../fn.cpp" line="5977"/>
-        <location filename="../../fn.cpp" line="5986"/>
-        <location filename="../../fn.cpp" line="6013"/>
+        <location filename="../../fn.cpp" line="1716"/>
+        <location filename="../../fn.cpp" line="5641"/>
+        <location filename="../../fn.cpp" line="5650"/>
+        <location filename="../../fn.cpp" line="5789"/>
+        <location filename="../../fn.cpp" line="5980"/>
+        <location filename="../../fn.cpp" line="5989"/>
+        <location filename="../../fn.cpp" line="6016"/>
         <source>Untitled</source>
         <translation>Bez názvu</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2181"/>
+        <location filename="../../fn.cpp" line="2184"/>
         <source>Align Table</source>
         <translation>Zarovnat tabulku</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2194"/>
+        <location filename="../../fn.cpp" line="2197"/>
         <source>&amp;Center</source>
         <translation>&amp;Na střed</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2633"/>
+        <location filename="../../fn.cpp" line="2636"/>
         <source>Select Text Color</source>
         <translation>Vybrat barvu textu</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2665"/>
+        <location filename="../../fn.cpp" line="2668"/>
         <source>Select Background Color</source>
         <translation>Vybrat barvu pozadí</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2799"/>
+        <location filename="../../fn.cpp" line="2802"/>
         <source>Deletion</source>
         <translation>Smazání</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="2917"/>
+        <location filename="../../fn.cpp" line="2920"/>
         <source>Tag(s) for this node</source>
         <translation>Štítky pro tento uzel</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3004"/>
-        <location filename="../../fn.cpp" line="4507"/>
+        <location filename="../../fn.cpp" line="3007"/>
+        <location filename="../../fn.cpp" line="4510"/>
         <source>Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)</source>
         <translation>Soubory s obrázky (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3173"/>
+        <location filename="../../fn.cpp" line="3176"/>
         <source>Select Document Font</source>
         <translation>Vybrat písmo pro dokument</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3237"/>
+        <location filename="../../fn.cpp" line="3240"/>
         <source>Select Node Font</source>
         <translation>Vybrat písmo uzlu</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3262"/>
+        <location filename="../../fn.cpp" line="3265"/>
         <source>Set Document Colors</source>
         <translation>Nastavit barvy dokumentu</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3272"/>
+        <location filename="../../fn.cpp" line="3275"/>
         <source>These colors will be applied to new nodes.&lt;br&gt;They may or may not affect existing nodes&lt;br&gt;but document reopening is recommended.</source>
         <translation>Tyto barvy budou uplatněny na nové uzly.&lt;br&gt;Mohou a nemusí postihnout stávající uzly&lt;br&gt;ale je doporučeno znovuotevření dokumentu.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3275"/>
+        <location filename="../../fn.cpp" line="3278"/>
         <source>Background color:</source>
         <translation>Barva pozadí:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="3281"/>
+        <location filename="../../fn.cpp" line="3284"/>
         <source>Text color:</source>
         <translation>Barva textu:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4061"/>
+        <location filename="../../fn.cpp" line="4064"/>
         <source>The first 1000 replacements are highlighted.</source>
         <translation>Je zvýrazněno prvních 1000 nahrazení.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4403"/>
-        <location filename="../../fn.cpp" line="4579"/>
+        <location filename="../../fn.cpp" line="4406"/>
+        <location filename="../../fn.cpp" line="4582"/>
         <source>Scale to</source>
         <translation>Změnit měřítko na</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4407"/>
-        <location filename="../../fn.cpp" line="4582"/>
+        <location filename="../../fn.cpp" line="4410"/>
+        <location filename="../../fn.cpp" line="4585"/>
         <source>%</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4573"/>
+        <location filename="../../fn.cpp" line="4576"/>
         <source>Scale Image(s)</source>
         <translation>Změnit měřítko obrázků</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4710"/>
+        <location filename="../../fn.cpp" line="4713"/>
         <source>untitled</source>
         <translation>bez názvu</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4742"/>
+        <location filename="../../fn.cpp" line="4745"/>
         <source>Error</source>
         <translation>Chyba</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4743"/>
+        <location filename="../../fn.cpp" line="4746"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Image cannot be saved! Retry?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Obrázek se nepodařilo uložit! Zkusit znovu?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4744"/>
+        <location filename="../../fn.cpp" line="4747"/>
         <source>&lt;center&gt;Maybe you did not choose a proper extension&lt;/center&gt;
 &lt;center&gt;or do not have write permission.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</source>
         <translation>&lt;center&gt;Nejspíš jste nezvolili správnou příponu&lt;/center&gt;
 &lt;center&gt;nebo nemáte oprávnění zapisovat do daného umístění.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4776"/>
+        <location filename="../../fn.cpp" line="4779"/>
         <source>Save Image As...</source>
         <translation>Uložit obrázek jako…</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4778"/>
+        <location filename="../../fn.cpp" line="4781"/>
         <source>Image Files (*.png *.jpg *.jpeg *.bmp);;All Files (*)</source>
         <translation>Soubory s obrázky (*.png *.jpg *.jpeg *.bmp);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4831"/>
+        <location filename="../../fn.cpp" line="4834"/>
         <source>Insert Table</source>
         <translation>Vložit tabulku</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4837"/>
+        <location filename="../../fn.cpp" line="4840"/>
         <source>Rows:</source>
         <translation>Řádky:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="4843"/>
+        <location filename="../../fn.cpp" line="4846"/>
         <source>Columns:</source>
         <translation>Sloupce:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5727"/>
+        <location filename="../../fn.cpp" line="5730"/>
         <source>Print Document</source>
         <translation>Vytisknout dokument</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5733"/>
+        <location filename="../../fn.cpp" line="5736"/>
         <source>Printing completed.</source>
         <translation>Tisk dokončen.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5735"/>
+        <location filename="../../fn.cpp" line="5738"/>
         <source>Printing in progress...</source>
         <translation>Tiskne se…</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5754"/>
+        <location filename="../../fn.cpp" line="5757"/>
         <source>Export HTML</source>
         <translation>Exportovat HTML</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5759"/>
+        <location filename="../../fn.cpp" line="5762"/>
         <source>Export:</source>
         <translation>Exportovat:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5760"/>
+        <location filename="../../fn.cpp" line="5763"/>
         <source>&amp;Current node</source>
         <translation>&amp;Stávající uzel</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5762"/>
+        <location filename="../../fn.cpp" line="5765"/>
         <source>With all &amp;sub-nodes</source>
         <translation>&amp;Se všemi dílčími uzly</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5763"/>
+        <location filename="../../fn.cpp" line="5766"/>
         <source>&amp;All nodes</source>
         <translation>&amp;Všechny uzly</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5775"/>
+        <location filename="../../fn.cpp" line="5778"/>
         <source>Output file:</source>
         <translation>Výstupní soubor:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5794"/>
+        <location filename="../../fn.cpp" line="5797"/>
         <source>Select path</source>
         <translation>Vyberte umístění</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5835"/>
+        <location filename="../../fn.cpp" line="5838"/>
         <source>Question</source>
         <translation>Dotaz</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5836"/>
+        <location filename="../../fn.cpp" line="5839"/>
         <source>The file already exists.
 Do you want to replace it?
 </source>
@@ -1427,106 +1427,106 @@ Chcete ho nahradit?
 </translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6018"/>
+        <location filename="../../fn.cpp" line="6021"/>
         <source>Save HTML As...</source>
         <translation>Uložit HTML jako…</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6020"/>
+        <location filename="../../fn.cpp" line="6023"/>
         <source>HTML Files (*.html *.htm)</source>
         <translation>HTML soubory (*.html *.htm)</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6044"/>
+        <location filename="../../fn.cpp" line="6047"/>
         <source>Set Password</source>
         <translation>Nastavit heslo</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6053"/>
+        <location filename="../../fn.cpp" line="6056"/>
         <source>Type password</source>
         <translation>Zadejte heslo</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6065"/>
+        <location filename="../../fn.cpp" line="6068"/>
         <source>Retype password</source>
         <translation>Zopakujte zadání hesla</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6137"/>
+        <location filename="../../fn.cpp" line="6140"/>
         <source>&lt;center&gt;Passwords were different. Retry!&lt;/center&gt;</source>
         <translation>&lt;center&gt;Zadání hesla se neshodují. Zkuste to znovu!&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6157"/>
-        <location filename="../../fn.cpp" line="6165"/>
+        <location filename="../../fn.cpp" line="6160"/>
+        <location filename="../../fn.cpp" line="6168"/>
         <source>Enter Password</source>
         <translation>Zadejte heslo</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6237"/>
+        <location filename="../../fn.cpp" line="6240"/>
         <source>&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</source>
         <translation>&lt;center&gt;Nesprávné heslo. Zkuste to znovu!&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6279"/>
+        <location filename="../../fn.cpp" line="6282"/>
         <source>A lightweight notes manager</source>
         <translation>Nenáročný správce poznámek</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6280"/>
+        <location filename="../../fn.cpp" line="6283"/>
         <source>based on Qt</source>
         <translation>založeno na Qt</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6281"/>
+        <location filename="../../fn.cpp" line="6284"/>
         <source>Author</source>
         <translation>Autor</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6283"/>
-        <location filename="../../fn.cpp" line="6284"/>
+        <location filename="../../fn.cpp" line="6286"/>
+        <location filename="../../fn.cpp" line="6287"/>
         <source>About FeatherNotes</source>
         <translation>O aplikaci FeatherNotes</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6283"/>
+        <location filename="../../fn.cpp" line="6286"/>
         <source>Translators</source>
         <translation>Překladatelé</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6467"/>
+        <location filename="../../fn.cpp" line="6470"/>
         <source>See Preferences → Text → Spell Checking!</source>
         <translation>Viz předvolby → Text → Kontrola pravopisu!</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6483"/>
+        <location filename="../../fn.cpp" line="6486"/>
         <source>You need to add a Hunspell dictionary.</source>
         <translation>Je třeba přidat Hunspell slovník.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6488"/>
+        <location filename="../../fn.cpp" line="6491"/>
         <source>The Hunspell dictionary does not exist.</source>
         <translation>Hunspell slovník není k dispozici.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6496"/>
+        <location filename="../../fn.cpp" line="6499"/>
         <source>The Hunspell dictionary is not accompanied by an affix file.</source>
         <translation>Hunspell slovník není doprovázen affix souborem.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6514"/>
-        <location filename="../../fn.cpp" line="6529"/>
-        <location filename="../../fn.cpp" line="6541"/>
+        <location filename="../../fn.cpp" line="6517"/>
+        <location filename="../../fn.cpp" line="6532"/>
+        <location filename="../../fn.cpp" line="6544"/>
         <source>No misspelling from text cursor.</source>
         <translation>Od pozice kurzoru dále nejsou žádné překlepy.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6553"/>
+        <location filename="../../fn.cpp" line="6556"/>
         <source>Spell Checking</source>
         <translation>Kontrola pravopisu</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6282"/>
+        <location filename="../../fn.cpp" line="6285"/>
         <source>aka.</source>
         <translation>alias</translation>
     </message>

@@ -1108,7 +1108,7 @@ void TextEdit::zooming (float range)
     if (newSize <= 0) return;
     f.setPointSizeF (static_cast<qreal>(newSize));
     setFont (f);
-    QFontMetricsF metrics (f);
+    QFontMetricsF metrics (font()); // see FN::unZooming()
     setTabStopDistance (4 * metrics.horizontalAdvance (' '));
 
     /* if this is a zoom-out, the text will need

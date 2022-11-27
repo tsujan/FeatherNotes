@@ -783,7 +783,10 @@ void FN::unZooming()
 
     TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
     textEdit->setFont (defaultFont_);
-    QFontMetricsF metrics (defaultFont_);
+    /* WARNING: defaultFont_ shouldn't be used below because, as Qt doc explains,
+                the properties of defaultFont_ are combined with the widget's
+                default font to form the widget's final font. */
+    QFontMetricsF metrics (textEdit->font());
     textEdit->setTabStopDistance (4 * metrics.horizontalAdvance (' '));
 
     /* this may be a zoom-out */
@@ -2033,7 +2036,7 @@ TextEdit *FN::newWidget()
     /* we want consistent widgets */
     textEdit->setFont (defaultFont_); // needed when the application font changes
     textEdit->document()->setDefaultFont (defaultFont_);
-    QFontMetricsF metrics (defaultFont_);
+    QFontMetricsF metrics (textEdit->font()); // see unZooming()
     textEdit->setTabStopDistance (4 * metrics.horizontalAdvance (' '));
 
     int index = ui->stackedWidget->currentIndex();
@@ -3196,7 +3199,7 @@ void FN::textFontDialog()
                     QTextCursor cursor = it.value()->textCursor();
                     cursor.select (QTextCursor::Document);
                     cursor.mergeCharFormat (fmt);
-                    QFontMetricsF metrics (defaultFont_);
+                    QFontMetricsF metrics (it.value()->font()); // see unZooming()
                     it.value()->setTabStopDistance (4 * metrics.horizontalAdvance (' '));
                 }
 

@@ -3,6 +3,7 @@ V1.1.0
  * Fixed crash on pasting with empty clipboard.
  * Fixed a bug in updating widget states after deleting a node.
  * Fixed text zooming for documents that are saved by the Qt6 version.
+ * Corrected the tab stop distance.
  * Added a workaround for a Qt bug related to the current character format.
  * Added a real Unix signal handler.
  * Removed "Embed Image" from the toolbar to make it uncluttered.
