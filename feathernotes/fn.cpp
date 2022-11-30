@@ -364,6 +364,25 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     connect (ui->menuOpenRecently, &QMenu::aboutToShow, this, &FN::updateRecenMenu);
     connect (ui->actionClearRecent, &QAction::triggered, this, &FN::clearRecentMenu);
 
+    /* enable/disable paste actions appropriately */
+    connect (ui->menuEdit, &QMenu::aboutToShow, this, [this] {
+        if (QWidget *cw = ui->stackedWidget->currentWidget())
+        {
+            bool enablePaste = qobject_cast<TextEdit*>(cw)->canPaste();
+            ui->actionPaste->setEnabled (enablePaste);
+            ui->actionPasteHTML->setEnabled (enablePaste);
+        }
+        else
+        {
+            ui->actionPaste->setEnabled (false);
+            ui->actionPasteHTML->setEnabled (false);
+        }
+    });
+    connect (ui->menuEdit, &QMenu::aboutToHide, this, [this] {
+        ui->actionPaste->setEnabled (true);
+        ui->actionPasteHTML->setEnabled (true);
+    });
+
 #ifdef HAS_HUNSPELL
     connect (ui->actionCheckSpelling, &QAction::triggered, this, &FN::checkSpelling);
 #else
@@ -2150,6 +2169,7 @@ void FN::txtContextMenu (const QPoint &p)
         menu->addSeparator();
         sepAdded = true;
     }
+    ui->actionPasteHTML->setEnabled (textEdit->canPaste());
 
     if (hasSel)
     {
@@ -3768,8 +3788,8 @@ void FN::closeReplaceDock (bool visible)
     hlight();
 
     /* return focus to the document */
-    if (ui->stackedWidget->count() > 0)
-        qobject_cast<TextEdit*>(ui->stackedWidget->currentWidget())->setFocus();
+    if (QWidget *cw = ui->stackedWidget->currentWidget())
+        cw->setFocus();
 }
 /*************************/
 // Resize the floating dock widget to its minimum size.
@@ -4087,8 +4107,8 @@ void FN::showAndFocus()
 {
     show();
     raise();
-    if (ui->stackedWidget->count() > 0)
-        qobject_cast<TextEdit*>(ui->stackedWidget->currentWidget())->setFocus();
+    if (QWidget *cw = ui->stackedWidget->currentWidget())
+        cw->setFocus();
     if (!static_cast<FNSingleton*>(qApp)->isWayland())
     { // to bypass focus stealing prevention
         activateWindow();
