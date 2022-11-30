@@ -2,6 +2,7 @@ V1.1.1
 ---------
  * Simplified the code for setting the editor font.
  * Enable/disable the Paste actions appropriately.
+ * Separate the inserted URLs with newline.
 
 V1.1.0
 ---------

@@ -802,7 +802,7 @@ void TextEdit::insertFromMimeData (const QMimeData *source)
 {
     if (source == nullptr) return;
     if (source->hasImage())
-    {
+    { // an image is copied directly
         QImage image = qvariant_cast<QImage>(source->imageData());
         if (!image.isNull())
         {
@@ -814,30 +814,54 @@ void TextEdit::insertFromMimeData (const QMimeData *source)
 
             insertHtml (QString ("<img src=\"data:image;base64,%1\" />")
                         .arg (QString (rawarray.toBase64())));
+            ensureCursorVisible();
         }
     }
     else if (source->hasUrls())
     {
+        bool imageInserted = false;
         const auto urls = source->urls();
+        bool multiple (urls.count() > 1);
+        QTextCursor cur = textCursor();
+        cur.beginEditBlock();
         for (const QUrl &url : urls)
         {
             QMimeDatabase mimeDatabase;
             QMimeType mimeType = mimeDatabase.mimeTypeForFile (QFileInfo (url.toLocalFile()));
             QByteArray ba = mimeType.name().toUtf8();
             if (QImageReader::supportedMimeTypes().contains (ba))
+            {
                 emit imageDropped (url.path());
+                imageInserted = true;
+            }
             else
             {
                 if (url.fileName().endsWith (".fnx")
                     || mimeType.name() == "text/feathernotes-fnx")
                 {
-                    emit FNDocDropped (url.path());
+                    cur.endEditBlock();
+                    ensureCursorVisible();
+                    /* use a timer to allow the app to process the inserted URls/images */
+                    QTimer::singleShot (0, this, [this, url] () {
+                        emit FNDocDropped (url.path());
+                    });
                     return; // only open the first file
                 }
                 else
-                    textCursor().insertText (url.toString());
+                {
+                    if (imageInserted)
+                    {
+                        cur.insertText ("\n");
+                        imageInserted = false;
+                    }
+                    cur.insertText (url.toString());
+                    if (multiple)
+                        cur.insertText ("\n");
+                }
             }
         }
+        cur.endEditBlock();
+        ensureCursorVisible();
     }
     else if (source->hasText())
         QTextEdit::insertFromMimeData (source);
