@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2021 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2022 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -41,7 +41,7 @@ TextEdit::TextEdit (QWidget *parent) : QTextEdit (parent)
     autoBracket = false;
     autoReplace = false;
     textTab_ = "    "; // the default text tab is four spaces
-    pressPoint = QPoint();
+    pressPoint_ = QPoint();
     scrollTimer_ = nullptr;
     isCopyOrCut_ = false;
 
@@ -65,7 +65,7 @@ QString TextEdit::remainingSpaces (const QString& spaceTab, const QTextCursor& c
     QTextCursor tmp = cursor;
     QString txt = cursor.block().text().left (cursor.positionInBlock());
     QFontMetricsF fm = QFontMetricsF (document()->defaultFont());
-    qreal spaceL = fm.horizontalAdvance (" ");
+    qreal spaceL = fm.horizontalAdvance (' ');
     int n = 0, i = 0;
     while ((i = txt.indexOf("\t", i)) != -1)
     { // find tab widths in terms of spaces
@@ -102,7 +102,7 @@ QTextCursor TextEdit::backTabCursor (const QTextCursor& cursor, bool twoSpace) c
 
     QString txt = blockText.left (indx);
     QFontMetricsF fm = QFontMetricsF (document()->defaultFont());
-    qreal spaceL = fm.horizontalAdvance (" ");
+    qreal spaceL = fm.horizontalAdvance (' ');
     int n = 0, i = 0;
     while ((i = txt.indexOf("\t", i)) != -1)
     { // find tab widths in terms of spaces
@@ -904,7 +904,7 @@ void TextEdit::mousePressEvent (QMouseEvent *e)
     QTextEdit::mousePressEvent (e);
 
     if (e->button() == Qt::LeftButton)
-        pressPoint = e->pos();
+        pressPoint_ = e->pos();
 }
 
 /*************************/
@@ -916,7 +916,7 @@ void TextEdit::mouseReleaseEvent (QMouseEvent *e)
 
     QString str = anchorAt (e->pos());
     if (!str.isEmpty()
-        && cursorForPosition (e->pos()) == cursorForPosition (pressPoint))
+        && cursorForPosition (e->pos()) == cursorForPosition (pressPoint_))
     {
         QUrl url (str);
         if (url.isRelative()) // treat relative URLs as local paths
@@ -926,7 +926,7 @@ void TextEdit::mouseReleaseEvent (QMouseEvent *e)
         if (!QProcess::startDetached ("gio", QStringList() << "open" << url.toString()))
             QDesktopServices::openUrl (url);
     }
-    pressPoint = QPoint();
+    pressPoint_ = QPoint();
 }
 /*************************/
 void TextEdit::mouseDoubleClickEvent (QMouseEvent *e)
@@ -1100,6 +1100,16 @@ void TextEdit::scrollSmoothly()
         scrollTimer_->stop();
 }
 /*************************/
+void TextEdit::setEditorFont (const QFont &f)
+{
+    setFont (f);
+    /* WARNING: The font given to setFont() shouldn't be used directly because,
+                as Qt doc explains, its properties are combined with the widget's
+                default font to form the widget's final font. */
+    QFontMetricsF metrics (font()); // see FN::unZooming()
+    setTabStopDistance (metrics.horizontalAdvance (textTab_));
+}
+/*************************/
 void TextEdit::zooming (float range)
 {
     if (range == 0.f) return;
@@ -1107,9 +1117,7 @@ void TextEdit::zooming (float range)
     const float newSize = static_cast<float>(f.pointSizeF()) + range;
     if (newSize <= 0) return;
     f.setPointSizeF (static_cast<qreal>(newSize));
-    setFont (f);
-    QFontMetricsF metrics (font()); // see FN::unZooming()
-    setTabStopDistance (4 * metrics.horizontalAdvance (' '));
+    setEditorFont (f);
 
     /* if this is a zoom-out, the text will need
        to be formatted and/or highlighted again */

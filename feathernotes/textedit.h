@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2021 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2022 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -29,10 +29,6 @@
 
 namespace FeatherNotes {
 
-/* Here, I subclassed QTextEdit to gain control
-   over pressing Enter and have auto-indentation.
-   I also replaced its vertical scrollbar for faster
-   wheel scrolling when the mouse cursor is on the scrollbar. */
 class TextEdit : public QTextEdit
 {
     Q_OBJECT
@@ -41,6 +37,7 @@ public:
     TextEdit (QWidget *parent = nullptr);
     ~TextEdit();
 
+    void setEditorFont (const QFont &f); // also sets tab stop distance
     void zooming (float range);
 
     bool autoIndentation;
@@ -79,7 +76,7 @@ private:
     QTextCursor backTabCursor(const QTextCursor& cursor, bool twoSpace) const;
 
     QString textTab_; // text tab in terms of spaces
-    QPoint pressPoint;
+    QPoint pressPoint_;
     QElapsedTimer tripleClickTimer_;
     bool isCopyOrCut_; // to distinguish the selection clipboard
     /****************************

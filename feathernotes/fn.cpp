@@ -782,12 +782,7 @@ void FN::unZooming()
     if (!cw) return;
 
     TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
-    textEdit->setFont (defaultFont_);
-    /* WARNING: defaultFont_ shouldn't be used below because, as Qt doc explains,
-                the properties of defaultFont_ are combined with the widget's
-                default font to form the widget's final font. */
-    QFontMetricsF metrics (textEdit->font());
-    textEdit->setTabStopDistance (4 * metrics.horizontalAdvance (' '));
+    textEdit->setEditorFont (defaultFont_);
 
     /* this may be a zoom-out */
     rehighlight (textEdit);
@@ -2034,10 +2029,8 @@ TextEdit *FN::newWidget()
     textEdit->viewport()->setMouseTracking (true);
     textEdit->setContextMenuPolicy (Qt::CustomContextMenu);
     /* we want consistent widgets */
-    textEdit->setFont (defaultFont_); // needed when the application font changes
+    textEdit->setEditorFont (defaultFont_); // needed when the application font changes
     textEdit->document()->setDefaultFont (defaultFont_);
-    QFontMetricsF metrics (textEdit->font()); // see unZooming()
-    textEdit->setTabStopDistance (4 * metrics.horizontalAdvance (' '));
 
     int index = ui->stackedWidget->currentIndex();
     ui->stackedWidget->insertWidget (index + 1, textEdit);
@@ -3194,13 +3187,11 @@ void FN::textFontDialog()
                 QHash<DomItem*, TextEdit*>::iterator it;
                 for (it = widgets_.begin(); it != widgets_.end(); ++it)
                 {
-                    it.value()->setFont (defaultFont_); // needed when the application font changes
+                    it.value()->setEditorFont (defaultFont_); // needed when the application font changes
                     it.value()->document()->setDefaultFont (defaultFont_);
                     QTextCursor cursor = it.value()->textCursor();
                     cursor.select (QTextCursor::Document);
                     cursor.mergeCharFormat (fmt);
-                    QFontMetricsF metrics (it.value()->font()); // see unZooming()
-                    it.value()->setTabStopDistance (4 * metrics.horizontalAdvance (' '));
                 }
 
                 /* also, change the font for all nodes that aren't shown yet */
