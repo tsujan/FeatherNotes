@@ -31,9 +31,11 @@
 
 #define SCROLL_FRAMES_PER_SEC 50
 #define SCROLL_DURATION 200 // in ms
-static const int scrollAnimFrames = SCROLL_FRAMES_PER_SEC * SCROLL_DURATION / 1000;
 
 namespace FeatherNotes {
+
+static const int scrollAnimFrames = SCROLL_FRAMES_PER_SEC * SCROLL_DURATION / 1000;
+static const QRegularExpression startingSpaces (R"(^\s+)");
 
 TextEdit::TextEdit (QWidget *parent) : QTextEdit (parent)
 {
@@ -94,7 +96,7 @@ QTextCursor TextEdit::backTabCursor (const QTextCursor& cursor, bool twoSpace) c
     const QString blockText = cursor.block().text();
     int indx = 0;
     QRegularExpressionMatch match;
-    if (blockText.indexOf (QRegularExpression (R"(^\s+)"), 0, &match) > -1)
+    if (blockText.indexOf (startingSpaces, 0, &match) > -1)
         indx = match.capturedLength();
     else
         return tmp;
@@ -529,7 +531,7 @@ void TextEdit::keyPressEvent (QKeyEvent *event)
                 /* skip all spaces to align the real text */
                 int indx = 0;
                 QRegularExpressionMatch match;
-                if (cursor.block().text().indexOf (QRegularExpression (R"(^\s+)"), 0, &match) > -1)
+                if (cursor.block().text().indexOf (startingSpaces, 0, &match) > -1)
                     indx = match.capturedLength();
                 cursor.setPosition (cursor.block().position() + indx);
                 if (event->modifiers() & Qt::ControlModifier)
@@ -670,7 +672,7 @@ void TextEdit::keyPressEvent (QKeyEvent *event)
             int p = cur.positionInBlock();
             int indx = 0;
             QRegularExpressionMatch match;
-            if (cur.block().text().indexOf (QRegularExpression ("^\\s+"), 0, &match) > -1)
+            if (cur.block().text().indexOf (startingSpaces, 0, &match) > -1)
                 indx = match.capturedLength();
             if (p > 0)
             {

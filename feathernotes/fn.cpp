@@ -3246,7 +3246,7 @@ void FN::nodeFontDialog()
 {
     closeWinDialogs();
 
-    auto dlg = new QFontDialog (defaultFont_, this);
+    auto dlg = new QFontDialog (nodeFont_, this);
     dlg->setAttribute (Qt::WA_DeleteOnClose, true);
     dlg->setWindowTitle (tr ("Select Node Font"));
     dlg->open();
