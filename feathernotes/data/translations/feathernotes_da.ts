@@ -1853,7 +1853,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../spellDialog.ui" line="62"/>
         <source>Replace with:</source>
-        <translation type="unfinished">Erstat med:</translation>
+        <translation>Erstat med:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="87"/>
@@ -1890,7 +1890,7 @@ name but ending with &quot;.aff&quot;.</source>
         <location filename="../../domitem.cpp" line="100"/>
         <location filename="../../domitem.cpp" line="137"/>
         <source>New Node</source>
-        <translation type="unfinished">Nt note</translation>
+        <translation>Ny note</translation>
     </message>
 </context>
 </TS>
