@@ -1196,7 +1196,8 @@
         <location filename="../../fn.cpp" line="636"/>
         <source>System tray is not available.
 Please disable tray in Preferences.</source>
-        <translation type="unfinished"></translation>
+        <translation>Областта за уведомяване не е налична.
+Моля, деактивирайте таблото в Предпочитания.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="952"/>
@@ -1606,7 +1607,11 @@ this dialog and also on exit.
 
 This may not work correctly
 with some window managers.</source>
-        <translation type="unfinished"></translation>
+        <translation>Запазва позиция след затваряне
+на този диалогов прозорец, а също и при излизане.
+
+Това може да не работи правилно
+с някои мениджъри на прозорци.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>
@@ -1756,12 +1761,14 @@ Takes effect after closing this dialog.</source>
         <source>If this option is checked, the opened document will
 be saved on exiting without prompt and without
 showing a warning if saving is not possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ако тази опция е отметната, отвореният документ ще
+се запазва при излизане без подкана и без
+показване на предупреждение, ако запазването не е възможно.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="353"/>
         <source>Save opened document on exiting</source>
-        <translation type="unfinished"></translation>
+        <translation>Запазване на отворения документ при излизане</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="376"/>
