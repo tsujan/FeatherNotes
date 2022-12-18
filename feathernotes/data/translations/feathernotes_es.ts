@@ -14,12 +14,12 @@
     <message>
         <location filename="../../colorLabel.cpp" line="31"/>
         <source>Click to change color.</source>
-        <translation>Pulse para cambiar el color.</translation>
+        <translation>Haga clic para cambiar de color.</translation>
     </message>
     <message>
         <location filename="../../colorLabel.cpp" line="53"/>
         <source>Select Color</source>
-        <translation>Seleccionar color</translation>
+        <translation>Seleccionar el color</translation>
     </message>
 </context>
 <context>
