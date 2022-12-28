@@ -214,7 +214,7 @@
         <location filename="../../fn.ui" line="534"/>
         <location filename="../../fn.cpp" line="1005"/>
         <source>Save</source>
-        <translation>Sla het bestand op</translation>
+        <translation>Wijzigingen opslaan</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="537"/>
