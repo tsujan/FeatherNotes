@@ -890,7 +890,7 @@ void TextEdit::mousePressEvent (QMouseEvent *e)
             && e->buttons() == Qt::LeftButton)
         {
             tripleClickTimer_.invalidate();
-            if (!(qApp->keyboardModifiers() & Qt::ControlModifier))
+            if (e->modifiers() != Qt::ControlModifier)
             {
                 QTextCursor txtCur = textCursor();
                 const QString blockText = txtCur.block().text();
@@ -963,7 +963,7 @@ void TextEdit::mouseDoubleClickEvent (QMouseEvent *e)
     /* Select the text between spaces with Ctrl.
        NOTE: QTextEdit should process the event before this. */
     if (e->button() == Qt::LeftButton
-        && (qApp->keyboardModifiers() & Qt::ControlModifier))
+        && e->modifiers() == Qt::ControlModifier)
     {
         QTextCursor txtCur = textCursor();
         const int blockPos = txtCur.block().position();
@@ -997,7 +997,7 @@ void TextEdit::mouseDoubleClickEvent (QMouseEvent *e)
 void TextEdit::wheelEvent (QWheelEvent *e)
 {
     QPoint deltaPoint = e->angleDelta();
-    if (e->modifiers() & Qt::ControlModifier)
+    if (e->modifiers() == Qt::ControlModifier)
     {
         float delta = deltaPoint.y() / 120.f;
         zooming (delta);
