@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2022 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2023 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -791,15 +791,29 @@ QMimeData* TextEdit::createMimeDataFromSelection() const
 #endif
 }
 /*************************/
+static bool containsPlainText (const QStringList &list)
+{
+    for (const auto &str : list)
+    {
+        if (str.compare ("text/plain", Qt::CaseInsensitive) == 0
+            || str.startsWith ("text/plain;charset=", Qt::CaseInsensitive))
+        {
+            return true;
+        }
+    }
+    return false;
+}
 bool TextEdit::canInsertFromMimeData (const QMimeData *source) const
 {
     if (source == nullptr) return false;
     if (source->hasImage() || source->hasUrls())
         return true;
     else
-        return QTextEdit::canInsertFromMimeData (source);
+    {
+        return QTextEdit::canInsertFromMimeData (source)
+               || (containsPlainText (source->formats()) && !source->text().isEmpty());
+    }
 }
-/*************************/
 void TextEdit::insertFromMimeData (const QMimeData *source)
 {
     if (source == nullptr) return;
@@ -865,7 +879,7 @@ void TextEdit::insertFromMimeData (const QMimeData *source)
         cur.endEditBlock();
         ensureCursorVisible();
     }
-    else if (source->hasText())
+    else if (containsPlainText (source->formats()) && !source->text().isEmpty())
         QTextEdit::insertFromMimeData (source);
 }
 /*************************/

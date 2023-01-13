@@ -4,6 +4,7 @@ V1.1.1
  * Enable/disable the Paste actions appropriately.
  * Separate the inserted URLs with newline.
  * Fixed the initial font of the node font dialog.
+ * Recognize `text/plain;charset=…` as plain text (Qt doesn't).
 
 V1.1.0
 ---------
