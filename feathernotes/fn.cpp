@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2022 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2023 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -391,7 +391,7 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
 
     /* Once the tray icon is created, it'll persist even if the systray
        disappears temporarily. But for the tray icon to be created, the
-       systray should exist. Hence, we wait 20 sec for the systray at startup. */
+       systray should exist. Hence, we wait 60 sec for the systray at startup. */
     tray_ = nullptr;
     trayCounter_ = 0;
     if (hasTray_)
@@ -622,8 +622,10 @@ void FN::checkTray()
             createTrayIcon();
             trayCounter_ = 0; // not needed
         }
-        else if (trayCounter_ < 4)
+        else if (trayCounter_ < 12)
         {
+            if (trayCounter_ == 4) // show the window if the systray isn't found after 20 sec
+                activateFNWindow (true);
             trayTimer->start();
             ++trayCounter_;
         }
@@ -4124,7 +4126,7 @@ void FN::activateFNWindow (bool noDelay)
     FNSingleton *singleton = static_cast<FNSingleton*>(qApp);
     if (noDelay || !findChildren<QDialog*>().isEmpty() || hasBlockingDialog())
     {
-        show();
+        showNormal();
         raise();
         if (!singleton->isWayland())
             activateWindow();
