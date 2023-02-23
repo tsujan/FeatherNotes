@@ -32,27 +32,27 @@
     <message>
         <location filename="../../fn.ui" line="65"/>
         <source>Next (F3)</source>
-        <translation type="unfinished"></translation>
+        <translation>Επόμενο (F3)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="68"/>
         <source>F3</source>
-        <translation type="unfinished"></translation>
+        <translation>F3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="81"/>
         <source>Previous (F4)</source>
-        <translation type="unfinished"></translation>
+        <translation>Προηγούμενο (F4)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="84"/>
         <source>F4</source>
-        <translation type="unfinished"></translation>
+        <translation>F4</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="100"/>
         <source>Search...</source>
-        <translation type="unfinished"></translation>
+        <translation>Αναζήτηση...</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="115"/>

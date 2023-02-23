@@ -14,12 +14,12 @@
     <message>
         <location filename="../../colorLabel.cpp" line="31"/>
         <source>Click to change color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kliknij aby zmienić kolor.</translation>
     </message>
     <message>
         <location filename="../../colorLabel.cpp" line="53"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Wybierz kolor</translation>
     </message>
 </context>
 <context>
@@ -122,7 +122,7 @@
     <message>
         <location filename="../../fn.ui" line="223"/>
         <source>Recenl&amp;y Opened</source>
-        <translation type="unfinished"></translation>
+        <translation>Ostatnio otwierane (&amp;y)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="245"/>
@@ -967,28 +967,28 @@
         <location filename="../../fn.ui" line="1345"/>
         <location filename="../../fn.ui" line="1348"/>
         <source>Check Spelling</source>
-        <translation type="unfinished"></translation>
+        <translation>Sprawdzanie pisowni</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1351"/>
         <source>F2</source>
-        <translation type="unfinished">F2</translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1356"/>
         <source>Document &amp;Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolory dokumentu (&amp;C)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1364"/>
         <location filename="../../fn.ui" line="1367"/>
         <source>Paste Date and Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Wklej datę i czas</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1372"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>Wy&amp;czyść</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2990"/>
@@ -1196,7 +1196,8 @@
         <location filename="../../fn.cpp" line="638"/>
         <source>System tray is not available.
 Please disable tray in Preferences.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tacka systemowa nie jest dostępna.
+Proszę wyłączyć tackę w Preferencjach.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="954"/>
@@ -1213,7 +1214,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="1651"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be opened!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Nie można otworzyć!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1732"/>
@@ -1234,17 +1235,17 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="2212"/>
         <source>&amp;Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyśrodkuj (&amp;C)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2651"/>
         <source>Select Text Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Wybierz kolor tekstu</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2683"/>
         <source>Select Background Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Wybierz kolor tła</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2817"/>
@@ -1859,7 +1860,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../spellDialog.ui" line="62"/>
         <source>Replace with:</source>
-        <translation type="unfinished">Zastąp z:</translation>
+        <translation>Zastąp na:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="87"/>
