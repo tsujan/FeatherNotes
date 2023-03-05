@@ -1196,7 +1196,8 @@
         <location filename="../../fn.cpp" line="638"/>
         <source>System tray is not available.
 Please disable tray in Preferences.</source>
-        <translation type="unfinished"></translation>
+        <translation>A bandeja do sistema não está disponível.
+Por favor, desative a bandeja em Preferências.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="954"/>
