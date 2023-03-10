@@ -7,6 +7,7 @@ V1.1.1
  * Recognize `text/plain;charset=…` as plain text (Qt doesn't).
  * Wait 60 sec for systray, but show the window after 20 sec if the tray isn't available.
  * Protect the file type filters of file dialogs from bad translations.
+ * Don't insert garbage when an image can't be loaded.
 
 V1.1.0
 ---------

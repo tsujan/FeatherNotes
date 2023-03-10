@@ -4458,6 +4458,11 @@ void FN::imageEmbed (const QString &path)
 {
     if (path.isEmpty()) return;
 
+    QImage img = QImage (path);
+    if (img.isNull()) return;
+    QSize imgSize = img.size();
+    if (imgSize.isEmpty()) return;
+
     QFile file (path);
     if (!file.open (QIODevice::ReadOnly))
         return;
@@ -4472,8 +4477,6 @@ void FN::imageEmbed (const QString &path)
     file.close();
     QByteArray base64array = rawarray.toBase64();
 
-    QImage img = QImage (path);
-    QSize imgSize = img.size();
     int w, h;
     if (qobject_cast<QDialog*>(QObject::sender())) // from embedImage()
     {
