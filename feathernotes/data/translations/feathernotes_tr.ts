@@ -1084,6 +1084,23 @@
         <translation>Farklı Kaydet...</translation>
     </message>
     <message>
+        <location filename="../../fn.cpp" line="1475"/>
+        <location filename="../../fn.cpp" line="1752"/>
+        <location filename="../../fn.cpp" line="1775"/>
+        <source>FeatherNotes documents</source>
+        <translation>FeatherNotes belgeler</translation>
+    </message>
+    <message>
+        <location filename="../../fn.cpp" line="1475"/>
+        <location filename="../../fn.cpp" line="1752"/>
+        <location filename="../../fn.cpp" line="1775"/>
+        <location filename="../../fn.cpp" line="3022"/>
+        <location filename="../../fn.cpp" line="4523"/>
+        <location filename="../../fn.cpp" line="4794"/>
+        <source>All Files</source>
+        <translation>tüm dosyalar</translation>
+    </message>
+    <message>
         <location filename="../../fn.cpp" line="2818"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Delete this node?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Bu düğüm silinsin mi?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
@@ -1113,6 +1130,13 @@
         <location filename="../../fn.cpp" line="6191"/>
         <source>OK</source>
         <translation>Tamam</translation>
+    </message>
+    <message>
+        <location filename="../../fn.cpp" line="3022"/>
+        <location filename="../../fn.cpp" line="4523"/>
+        <location filename="../../fn.cpp" line="4794"/>
+        <source>Image Files</source>
+        <translation>Resim Dosyaları</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3114"/>
@@ -1169,6 +1193,11 @@
         <translation>Bağlantı Ekle</translation>
     </message>
     <message>
+        <location filename="../../fn.cpp" line="6036"/>
+        <source>HTML Files</source>
+        <translation>HTML Dosyaları</translation>
+    </message>
+    <message>
         <location filename="../../fn.cpp" line="2998"/>
         <location filename="../../fn.cpp" line="4412"/>
         <source>Image path</source>
@@ -1203,13 +1232,6 @@ Lütfen Tercihler&apos;den sistem çekmecesini kapatın.</translation>
         <location filename="../../fn.cpp" line="954"/>
         <source>New Node</source>
         <translation>Yeni düğüm</translation>
-    </message>
-    <message>
-        <location filename="../../fn.cpp" line="1475"/>
-        <location filename="../../fn.cpp" line="1752"/>
-        <location filename="../../fn.cpp" line="1775"/>
-        <source>FeatherNotes documents (*.fnx);;All Files (*)</source>
-        <translation>FeatherNotes belgeler(*.fnx);;tüm dosyalar (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1651"/>
@@ -1256,12 +1278,6 @@ Lütfen Tercihler&apos;den sistem çekmecesini kapatın.</translation>
         <location filename="../../fn.cpp" line="2935"/>
         <source>Tag(s) for this node</source>
         <translation>Bu düğüm için etiketler</translation>
-    </message>
-    <message>
-        <location filename="../../fn.cpp" line="3022"/>
-        <location filename="../../fn.cpp" line="4523"/>
-        <source>Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)</source>
-        <translation>Resim Dosyaları (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;Tüm Dosyalar (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3191"/>
@@ -1341,11 +1357,6 @@ Lütfen Tercihler&apos;den sistem çekmecesini kapatın.</translation>
         <location filename="../../fn.cpp" line="4792"/>
         <source>Save Image As...</source>
         <translation>Görüntüyü Farklı Kaydet...</translation>
-    </message>
-    <message>
-        <location filename="../../fn.cpp" line="4794"/>
-        <source>Image Files (*.png *.jpg *.jpeg *.bmp);;All Files (*)</source>
-        <translation>Görüntü Dosyaları (*.png *.jpg *.jpeg *.bmp);;Tüm Dosyalar (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4847"/>
@@ -1430,11 +1441,6 @@ Değiştirmek istiyor musun?
         <location filename="../../fn.cpp" line="6034"/>
         <source>Save HTML As...</source>
         <translation>HTML&apos;yi Farklı Kaydet...</translation>
-    </message>
-    <message>
-        <location filename="../../fn.cpp" line="6036"/>
-        <source>HTML Files (*.html *.htm)</source>
-        <translation>HTML Dosyaları (*.html *.htm)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6060"/>
@@ -1860,8 +1866,8 @@ ek bir dosya olmalıdır.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="649"/>
-        <source>Hunspell Dictionary Files (*.dic)</source>
-        <translation>Hunspell Sözlük Dosyaları (* .dic)</translation>
+        <source>Hunspell Dictionary Files</source>
+        <translation>Hunspell Sözlük Dosyaları</translation>
     </message>
 </context>
 <context>

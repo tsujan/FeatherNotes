@@ -1084,6 +1084,23 @@
         <translation>Konservi Kiel...</translation>
     </message>
     <message>
+        <location filename="../../fn.cpp" line="1475"/>
+        <location filename="../../fn.cpp" line="1752"/>
+        <location filename="../../fn.cpp" line="1775"/>
+        <source>FeatherNotes documents</source>
+        <translation>Dokumentoj de FeatherNotes</translation>
+    </message>
+    <message>
+        <location filename="../../fn.cpp" line="1475"/>
+        <location filename="../../fn.cpp" line="1752"/>
+        <location filename="../../fn.cpp" line="1775"/>
+        <location filename="../../fn.cpp" line="3022"/>
+        <location filename="../../fn.cpp" line="4523"/>
+        <location filename="../../fn.cpp" line="4794"/>
+        <source>All Files</source>
+        <translation>Ĉiuj Dosieroj</translation>
+    </message>
+    <message>
         <location filename="../../fn.cpp" line="2818"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Delete this node?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Forviŝi la nodon?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
@@ -1113,6 +1130,13 @@
         <location filename="../../fn.cpp" line="6191"/>
         <source>OK</source>
         <translation>Bone</translation>
+    </message>
+    <message>
+        <location filename="../../fn.cpp" line="3022"/>
+        <location filename="../../fn.cpp" line="4523"/>
+        <location filename="../../fn.cpp" line="4794"/>
+        <source>Image Files</source>
+        <translation>Bild-Dosieroj</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3114"/>
@@ -1169,6 +1193,11 @@
         <translation>Enmeti Ligilon</translation>
     </message>
     <message>
+        <location filename="../../fn.cpp" line="6036"/>
+        <source>HTML Files</source>
+        <translation>HTML-Dosieroj</translation>
+    </message>
+    <message>
         <location filename="../../fn.cpp" line="2998"/>
         <location filename="../../fn.cpp" line="4412"/>
         <source>Image path</source>
@@ -1203,13 +1232,6 @@ Bonvole malebligu la taskopleton en Agordoj.</translation>
         <location filename="../../fn.cpp" line="954"/>
         <source>New Node</source>
         <translation>Nova Nodo</translation>
-    </message>
-    <message>
-        <location filename="../../fn.cpp" line="1475"/>
-        <location filename="../../fn.cpp" line="1752"/>
-        <location filename="../../fn.cpp" line="1775"/>
-        <source>FeatherNotes documents (*.fnx);;All Files (*)</source>
-        <translation>Dokumentoj de FeatherNotes (*.fnx);;Ĉiuj Dosieroj (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1651"/>
@@ -1256,12 +1278,6 @@ Bonvole malebligu la taskopleton en Agordoj.</translation>
         <location filename="../../fn.cpp" line="2935"/>
         <source>Tag(s) for this node</source>
         <translation>Etikedo(j) por ĉi tiu nodo</translation>
-    </message>
-    <message>
-        <location filename="../../fn.cpp" line="3022"/>
-        <location filename="../../fn.cpp" line="4523"/>
-        <source>Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)</source>
-        <translation>Bild-Dosieroj (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;Ĉiuj Dosieroj (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3191"/>
@@ -1341,11 +1357,6 @@ Bonvole malebligu la taskopleton en Agordoj.</translation>
         <location filename="../../fn.cpp" line="4792"/>
         <source>Save Image As...</source>
         <translation>Konservi Bildon Kiel...</translation>
-    </message>
-    <message>
-        <location filename="../../fn.cpp" line="4794"/>
-        <source>Image Files (*.png *.jpg *.jpeg *.bmp);;All Files (*)</source>
-        <translation>Bild-Dosieroj (*png *.jpg *.jpeg *.bmp);;Ĉiuj Dosieroj (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4847"/>
@@ -1430,11 +1441,6 @@ Do you want to replace it?
         <location filename="../../fn.cpp" line="6034"/>
         <source>Save HTML As...</source>
         <translation>Konservi HTML Kiel...</translation>
-    </message>
-    <message>
-        <location filename="../../fn.cpp" line="6036"/>
-        <source>HTML Files (*.html *.htm)</source>
-        <translation>HTML-Dosieroj (*.html *.htm)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6060"/>
@@ -1867,8 +1873,8 @@ nomon se kun la finaĵo &quot;.aff&quot;.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="649"/>
-        <source>Hunspell Dictionary Files (*.dic)</source>
-        <translation>Hunspell-Vortaraj Dosieroj (*.dic)</translation>
+        <source>Hunspell Dictionary Files</source>
+        <translation>Hunspell-Vortaraj Dosieroj</translation>
     </message>
 </context>
 <context>

@@ -1084,6 +1084,23 @@
         <translation>Salvesta kui...</translation>
     </message>
     <message>
+        <location filename="../../fn.cpp" line="1475"/>
+        <location filename="../../fn.cpp" line="1752"/>
+        <location filename="../../fn.cpp" line="1775"/>
+        <source>FeatherNotes documents</source>
+        <translation>FeatherNotes dokumendid</translation>
+    </message>
+    <message>
+        <location filename="../../fn.cpp" line="1475"/>
+        <location filename="../../fn.cpp" line="1752"/>
+        <location filename="../../fn.cpp" line="1775"/>
+        <location filename="../../fn.cpp" line="3022"/>
+        <location filename="../../fn.cpp" line="4523"/>
+        <location filename="../../fn.cpp" line="4794"/>
+        <source>All Files</source>
+        <translation>Kõik failid</translation>
+    </message>
+    <message>
         <location filename="../../fn.cpp" line="2818"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Delete this node?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Kas kustutame selle sõlme?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
@@ -1113,6 +1130,13 @@
         <location filename="../../fn.cpp" line="6191"/>
         <source>OK</source>
         <translation>Sobib</translation>
+    </message>
+    <message>
+        <location filename="../../fn.cpp" line="3022"/>
+        <location filename="../../fn.cpp" line="4523"/>
+        <location filename="../../fn.cpp" line="4794"/>
+        <source>Image Files</source>
+        <translation>Pildifailid</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3114"/>
@@ -1169,6 +1193,11 @@
         <translation>Lisa viide</translation>
     </message>
     <message>
+        <location filename="../../fn.cpp" line="6036"/>
+        <source>HTML Files</source>
+        <translation>HTML-failid</translation>
+    </message>
+    <message>
         <location filename="../../fn.cpp" line="2998"/>
         <location filename="../../fn.cpp" line="4412"/>
         <source>Image path</source>
@@ -1203,13 +1232,6 @@ Palun lülita kõik sellega seonduv seadistustes välja.</translation>
         <location filename="../../fn.cpp" line="954"/>
         <source>New Node</source>
         <translation>Uus sõlm</translation>
-    </message>
-    <message>
-        <location filename="../../fn.cpp" line="1475"/>
-        <location filename="../../fn.cpp" line="1752"/>
-        <location filename="../../fn.cpp" line="1775"/>
-        <source>FeatherNotes documents (*.fnx);;All Files (*)</source>
-        <translation>FeatherNotes dokumendid (*.fnx);;Kõik failid (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1651"/>
@@ -1256,12 +1278,6 @@ Palun lülita kõik sellega seonduv seadistustes välja.</translation>
         <location filename="../../fn.cpp" line="2935"/>
         <source>Tag(s) for this node</source>
         <translation>Selle sõlme silt või sildid</translation>
-    </message>
-    <message>
-        <location filename="../../fn.cpp" line="3022"/>
-        <location filename="../../fn.cpp" line="4523"/>
-        <source>Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)</source>
-        <translation>Pildifailid (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;Kõik failid (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3191"/>
@@ -1341,11 +1357,6 @@ Palun lülita kõik sellega seonduv seadistustes välja.</translation>
         <location filename="../../fn.cpp" line="4792"/>
         <source>Save Image As...</source>
         <translation>Salvesta pilt kui...</translation>
-    </message>
-    <message>
-        <location filename="../../fn.cpp" line="4794"/>
-        <source>Image Files (*.png *.jpg *.jpeg *.bmp);;All Files (*)</source>
-        <translation>Pildifailie (*.png *.jpg *.jpeg *.bmp);;Kõik failid (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4847"/>
@@ -1430,11 +1441,6 @@ Kas sa soovid selle asendada?
         <location filename="../../fn.cpp" line="6034"/>
         <source>Save HTML As...</source>
         <translation>Salvesta HTML kui...</translation>
-    </message>
-    <message>
-        <location filename="../../fn.cpp" line="6036"/>
-        <source>HTML Files (*.html *.htm)</source>
-        <translation>HTML-failid (*.html *.htm)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6060"/>
@@ -1866,8 +1872,8 @@ failis ning tema kõrval peab olema sama nimega ja
     </message>
     <message>
         <location filename="../../pref.cpp" line="649"/>
-        <source>Hunspell Dictionary Files (*.dic)</source>
-        <translation>Hunspell&apos;i sõnastikufailid (*.dic)</translation>
+        <source>Hunspell Dictionary Files</source>
+        <translation>Hunspell&apos;i sõnastikufailid</translation>
     </message>
 </context>
 <context>

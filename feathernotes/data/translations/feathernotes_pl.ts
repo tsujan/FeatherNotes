@@ -1084,6 +1084,23 @@
         <translation>Zapisz jako…</translation>
     </message>
     <message>
+        <location filename="../../fn.cpp" line="1475"/>
+        <location filename="../../fn.cpp" line="1752"/>
+        <location filename="../../fn.cpp" line="1775"/>
+        <source>FeatherNotes documents</source>
+        <translation>Dokumenty FeatherNotes</translation>
+    </message>
+    <message>
+        <location filename="../../fn.cpp" line="1475"/>
+        <location filename="../../fn.cpp" line="1752"/>
+        <location filename="../../fn.cpp" line="1775"/>
+        <location filename="../../fn.cpp" line="3022"/>
+        <location filename="../../fn.cpp" line="4523"/>
+        <location filename="../../fn.cpp" line="4794"/>
+        <source>All Files</source>
+        <translation>Wszystkie pliki</translation>
+    </message>
+    <message>
         <location filename="../../fn.cpp" line="2818"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Delete this node?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Usunąć ten węzeł?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
@@ -1113,6 +1130,13 @@
         <location filename="../../fn.cpp" line="6191"/>
         <source>OK</source>
         <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../fn.cpp" line="3022"/>
+        <location filename="../../fn.cpp" line="4523"/>
+        <location filename="../../fn.cpp" line="4794"/>
+        <source>Image Files</source>
+        <translation>Pliki obrazów</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3114"/>
@@ -1169,6 +1193,11 @@
         <translation>Wstaw odnośnik</translation>
     </message>
     <message>
+        <location filename="../../fn.cpp" line="6036"/>
+        <source>HTML Files</source>
+        <translation>Pliki HTML</translation>
+    </message>
+    <message>
         <location filename="../../fn.cpp" line="2998"/>
         <location filename="../../fn.cpp" line="4412"/>
         <source>Image path</source>
@@ -1203,13 +1232,6 @@ Proszę wyłączyć tackę w Preferencjach.</translation>
         <location filename="../../fn.cpp" line="954"/>
         <source>New Node</source>
         <translation>Nowa gałąź</translation>
-    </message>
-    <message>
-        <location filename="../../fn.cpp" line="1475"/>
-        <location filename="../../fn.cpp" line="1752"/>
-        <location filename="../../fn.cpp" line="1775"/>
-        <source>FeatherNotes documents (*.fnx);;All Files (*)</source>
-        <translation>Dokumenty FeatherNotes (*.fnx);;Wszystkie pliki (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1651"/>
@@ -1256,12 +1278,6 @@ Proszę wyłączyć tackę w Preferencjach.</translation>
         <location filename="../../fn.cpp" line="2935"/>
         <source>Tag(s) for this node</source>
         <translation>Tag(i) dla tego węzła</translation>
-    </message>
-    <message>
-        <location filename="../../fn.cpp" line="3022"/>
-        <location filename="../../fn.cpp" line="4523"/>
-        <source>Image Files (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;All Files (*)</source>
-        <translation>Pliki obrazów (*.svg *.png *.jpg *.jpeg *.bmp *.gif);;Wszystkie pliki (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3191"/>
@@ -1341,11 +1357,6 @@ Proszę wyłączyć tackę w Preferencjach.</translation>
         <location filename="../../fn.cpp" line="4792"/>
         <source>Save Image As...</source>
         <translation>Zapisz obraz jako…</translation>
-    </message>
-    <message>
-        <location filename="../../fn.cpp" line="4794"/>
-        <source>Image Files (*.png *.jpg *.jpeg *.bmp);;All Files (*)</source>
-        <translation>Pliki obrazów (*.png *.jpg *.jpeg *.bmp);;Wszystkie pliki (*)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4847"/>
@@ -1428,11 +1439,6 @@ Do you want to replace it?
         <location filename="../../fn.cpp" line="6034"/>
         <source>Save HTML As...</source>
         <translation>Zapisz HTML jako…</translation>
-    </message>
-    <message>
-        <location filename="../../fn.cpp" line="6036"/>
-        <source>HTML Files (*.html *.htm)</source>
-        <translation>Pliki HTML (*.html *.htm)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6060"/>
@@ -1841,7 +1847,7 @@ name but ending with &quot;.aff&quot;.</source>
     </message>
     <message>
         <location filename="../../pref.cpp" line="649"/>
-        <source>Hunspell Dictionary Files (*.dic)</source>
+        <source>Hunspell Dictionary Files</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

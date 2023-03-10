@@ -646,7 +646,7 @@ void PrefDialog::addDict()
     dialog.setAcceptMode (QFileDialog::AcceptOpen);
     dialog.setWindowTitle (tr ("Add dictionary..."));
     dialog.setFileMode (QFileDialog::ExistingFile);
-    dialog.setNameFilter (tr ("Hunspell Dictionary Files (*.dic)"));
+    dialog.setNameFilter (tr ("Hunspell Dictionary Files") + " (*.dic)");
     QString path = ui->dictEdit->text();
     if (path.isEmpty())
     {

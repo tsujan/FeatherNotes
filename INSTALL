@@ -47,6 +47,8 @@ Then, open a terminal inside this folder and issue the following commands:
 	make
 	sudo make install
 
+In some distros, you may need to be more explicit and use `cmake .. -DCMAKE_INSTALL_PREFIX=/usr` for installing FeatherNotes under `/usr`, in contrast to `/usr/local`. The latter place may not be good in Linux distros and could cause troubles later.
+
 NOTE: Experimental compilation against Qt6 can be done with `cmake .. -DENABLE_QT5=OFF`. When Qt6 becomes the default version of Qt in some distros, that compilation option will be set to `OFF` by default.
 
 ************************************
