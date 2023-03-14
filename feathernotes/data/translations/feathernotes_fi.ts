@@ -77,7 +77,7 @@
     <message>
         <location filename="../../fn.ui" line="144"/>
         <source>Search in all nodes (F7)</source>
-        <translation>Hae kaikista nodeista (F7)</translation>
+        <translation>Hae kaikista solmuista (F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="147"/>
@@ -548,7 +548,7 @@
     <message>
         <location filename="../../fn.ui" line="877"/>
         <source>&amp;Delete Node</source>
-        <translation>Poista Solmu</translation>
+        <translation>Poista solmu</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="880"/>
@@ -578,7 +578,7 @@
     <message>
         <location filename="../../fn.ui" line="910"/>
         <source>Re&amp;name Node</source>
-        <translation>Muuta Solmun Nimeä</translation>
+        <translation>Muuta solmun nimeä</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="913"/>
@@ -653,7 +653,7 @@
     <message>
         <location filename="../../fn.ui" line="1003"/>
         <source>Pr&amp;int All Nodes</source>
-        <translation>Tulosta Kaikki Solmut</translation>
+        <translation>Tulosta kaikki solmut</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1014"/>
@@ -825,12 +825,12 @@
     <message>
         <location filename="../../fn.ui" line="1188"/>
         <source>&amp;Node Font</source>
-        <translation>Solmun Fontti</translation>
+        <translation>Solmun fontti</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1191"/>
         <source>Node Font</source>
-        <translation>Solmun Fontti</translation>
+        <translation>Solmun fontti</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1196"/>
@@ -993,7 +993,7 @@
     <message>
         <location filename="../../fn.cpp" line="2990"/>
         <source>Node Icon</source>
-        <translation>Solmu Ikoni</translation>
+        <translation>Solmun kuvake</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="663"/>
@@ -1225,12 +1225,13 @@
         <location filename="../../fn.cpp" line="638"/>
         <source>System tray is not available.
 Please disable tray in Preferences.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ilmoitusalue ei ole saatavilla.
+Ota pois käytöstä asetuksissa.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="954"/>
         <source>New Node</source>
-        <translation>Uusi Solmu</translation>
+        <translation>Uusi solmu</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1651"/>
@@ -1286,7 +1287,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="3253"/>
         <source>Select Node Font</source>
-        <translation>Valitse Solmun Fontti</translation>
+        <translation>Valitse solmun fontti</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3278"/>
@@ -1405,7 +1406,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="5781"/>
         <source>With all &amp;sub-nodes</source>
-        <translation>Kaikki &amp;alisolmut mukaanlukien</translation>
+        <translation>Kaikki &amp;alisolmut mukaan lukien</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5782"/>
@@ -1613,7 +1614,11 @@ this dialog and also on exit.
 
 This may not work correctly
 with some window managers.</source>
-        <translation type="unfinished"></translation>
+        <translation>Muistaa ikkunan sijainnin kun
+tämä ikkuna ja ohjelma suljetaan.
+
+Ei välttämättä toimi joidenkin
+ikkunointiohjelmien kanssa.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>
@@ -1769,7 +1774,7 @@ showing a warning if saving is not possible.</source>
     <message>
         <location filename="../../prefDialog.ui" line="353"/>
         <source>Save opened document on exiting</source>
-        <translation type="unfinished"></translation>
+        <translation>Tallenna avattu asiakirja poistuessasi</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="376"/>
@@ -1825,7 +1830,7 @@ jonka pääte on &quot;.aff&quot;.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="506"/>
         <source>Remember expanded states of nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Muista laajennetut solmut</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="530"/>
@@ -1921,7 +1926,7 @@ jonka pääte on &quot;.aff&quot;.</translation>
         <location filename="../../domitem.cpp" line="100"/>
         <location filename="../../domitem.cpp" line="137"/>
         <source>New Node</source>
-        <translation>Uusi Solmu</translation>
+        <translation>Uusi solmu</translation>
     </message>
 </context>
 </TS>
