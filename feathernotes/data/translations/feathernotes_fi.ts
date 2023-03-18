@@ -1825,7 +1825,7 @@ jonka pääte on &quot;.aff&quot;.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="503"/>
         <source>By default, all nodes are expanded on opening a document.</source>
-        <translation type="unfinished"></translation>
+        <translation>Oletuksena kaikki solmut laajennetaan avattaessa dokumenttia.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="506"/>
