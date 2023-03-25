@@ -1686,8 +1686,8 @@ määrittelee työkalupalkin ikonien koon.</translation>
         <location filename="../../prefDialog.ui" line="197"/>
         <source>If the menubar is hidden,
 a menu button appears on the toolbar.</source>
-        <translation>Jos valikkopalkki on piilotettu,
-valikkonappi ilmestyy työkalupalkkiin.</translation>
+        <translation>Jos valikkorivi on piilotettu,
+valikkonappi ilmestyy työkaluriviin.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="201"/>
