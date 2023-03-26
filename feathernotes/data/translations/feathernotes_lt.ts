@@ -1225,7 +1225,8 @@
         <location filename="../../fn.cpp" line="638"/>
         <source>System tray is not available.
 Please disable tray in Preferences.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sistemos dėklas yra neprieinamas.
+Išjunkite nuostatose dėklą.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="954"/>
@@ -1614,7 +1615,11 @@ this dialog and also on exit.
 
 This may not work correctly
 with some window managers.</source>
-        <translation type="unfinished"></translation>
+        <translation>Įrašo poziciją užvėrus šį dialogą,
+o taip pat išėjus.
+
+Tai gali tinkamai neveikti su
+kai kuriomis langų tvarkytuvėmis.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>
@@ -1767,12 +1772,14 @@ sistemos numatytąsias reikšmes.
         <source>If this option is checked, the opened document will
 be saved on exiting without prompt and without
 showing a warning if saving is not possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Jei ši parinktis pažymėta, išeinant iš programos, atvertas dokumentas bus
+įrašytas be jokio paklausimo, o jei įrašymas yra neįmanomas,
+nebus rodoma jokio įspėjimo.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="353"/>
         <source>Save opened document on exiting</source>
-        <translation type="unfinished"></translation>
+        <translation>Išeinant iš programos įrašyti atvertą dokumentą</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="376"/>
@@ -1823,12 +1830,12 @@ tačiau turinčiu &quot;.aff&quot; prievardį.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="503"/>
         <source>By default, all nodes are expanded on opening a document.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pagal numatymą, atveriant dokumentą visi mazgai yra išskleidžiami.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="506"/>
         <source>Remember expanded states of nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Prisiminti išskleistas mazgų būsenas</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="530"/>
