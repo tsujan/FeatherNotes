@@ -1769,7 +1769,9 @@ Otetaan käyttöön kun tämä dialogi suljetaan.</translation>
         <source>If this option is checked, the opened document will
 be saved on exiting without prompt and without
 showing a warning if saving is not possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Avattu tiedosto tallennetaan kysymättä
+ohjelmaa suljettaessa ja epäonnistuneesta
+tallennuksesta ei varoiteta.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="353"/>
