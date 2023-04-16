@@ -1225,7 +1225,8 @@
         <location filename="../../fn.cpp" line="638"/>
         <source>System tray is not available.
 Please disable tray in Preferences.</source>
-        <translation type="unfinished"></translation>
+        <translation>מגש המערכת אינו זמין.
+נא להשבית את המגש בהעדפות.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="954"/>
@@ -1612,7 +1613,11 @@ this dialog and also on exit.
 
 This may not work correctly
 with some window managers.</source>
-        <translation type="unfinished"></translation>
+        <translation>שומר את המיקום לאחר סגירת
+החלונית הזאת וכן ביציאה.
+
+יכול להיות שזה לא יעבוד כראוי
+עם חלק ממנהלי החלונות.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>
@@ -1763,12 +1768,13 @@ Takes effect after closing this dialog.</source>
         <source>If this option is checked, the opened document will
 be saved on exiting without prompt and without
 showing a warning if saving is not possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>אם האפשרות הזאת מסומנת, המסמך הפתוח יישמר
+עם היציאה בלי הודעה ובלי אזהרה אם לא ניתן לשמור.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="353"/>
         <source>Save opened document on exiting</source>
-        <translation type="unfinished"></translation>
+        <translation>שמירת המסמך הפתוח עם היציאה</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="376"/>
@@ -1819,12 +1825,12 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../prefDialog.ui" line="503"/>
         <source>By default, all nodes are expanded on opening a document.</source>
-        <translation type="unfinished"></translation>
+        <translation>כברירת מחדל, כל הצמתים מורחבים עם פתיחת מסמך.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="506"/>
         <source>Remember expanded states of nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>שמירת המצב המורחב של צמתים</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="530"/>
