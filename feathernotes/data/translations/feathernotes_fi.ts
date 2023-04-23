@@ -603,7 +603,7 @@
     <message>
         <location filename="../../fn.ui" line="943"/>
         <source>&amp;Wrap Lines</source>
-        <translation>Kiedo Rivit</translation>
+        <translation>&amp;Rivitä automaattisesti</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="946"/>
@@ -1702,7 +1702,7 @@ valikkonappi ilmestyy työkaluriviin.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="237"/>
         <source>&amp;Wrap lines by default</source>
-        <translation>&amp;Kiedo rivit oletuksena</translation>
+        <translation>&amp;Rivitä automaattisesti oletuksena</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="244"/>
@@ -1896,12 +1896,12 @@ jonka pääte on &quot;.aff&quot;.</translation>
     <message>
         <location filename="../../spellDialog.ui" line="87"/>
         <source>Ignore Once</source>
-        <translation>Ohita Kerran</translation>
+        <translation>Ohita kerran</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="100"/>
         <source>Ignore All</source>
-        <translation>Ohita Kaikki</translation>
+        <translation>Ohita kaikki</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="129"/>

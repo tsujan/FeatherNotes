@@ -730,7 +730,7 @@
     <message>
         <location filename="../../fn.ui" line="1088"/>
         <source>Alt+Shift+Left</source>
-        <translation>Alt+Shift+Left</translation>
+        <translation>Alt+Shift+Vänster</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1099"/>
@@ -1257,7 +1257,7 @@ Inaktivera systemfältet i inställningar.</translation>
     <message>
         <location filename="../../fn.cpp" line="2212"/>
         <source>&amp;Center</source>
-        <translation>&amp;Center</translation>
+        <translation>&amp;Mitten</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2651"/>
@@ -1656,7 +1656,7 @@ can be used instead of this.</source>
     <message>
         <location filename="../../prefDialog.ui" line="169"/>
         <source>Merge the tree view with its surroundings?</source>
-        <translation>Sammafoga trädvy med dess omgivning</translation>
+        <translation>Slå samman trädvyn med dess omgivning?</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="172"/>
@@ -1710,7 +1710,9 @@ a menu button appears on the toolbar.</source>
         <source>This covers parentheses, braces, brackets and quotes.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation>Detta täcker paranteser, krullparenteser, vinkelparenteser och citationstecken. Krävs en omstart av programmet för att detta ska träda i kraft</translation>
+        <translation>Detta täcker paranteser, krullparenteser, vinkelparenteser och citationstecken.
+
+Kräver en omstart av FeatherNotes för att detta ska träda i kraft.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="256"/>
