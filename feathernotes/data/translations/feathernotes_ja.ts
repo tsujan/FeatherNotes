@@ -1225,7 +1225,8 @@
         <location filename="../../fn.cpp" line="638"/>
         <source>System tray is not available.
 Please disable tray in Preferences.</source>
-        <translation type="unfinished"></translation>
+        <translation>システムトレイがありません。
+設定でトレイを無効にして下さい。</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="954"/>
@@ -1612,7 +1613,11 @@ this dialog and also on exit.
 
 This may not work correctly
 with some window managers.</source>
-        <translation type="unfinished"></translation>
+        <translation>このダイアログを閉じた後と終了時に
+位置を保存します。
+
+一部のウィンドウマネージャーでは
+正しく動作しない場合があります。</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>
@@ -1767,7 +1772,7 @@ showing a warning if saving is not possible.</source>
     <message>
         <location filename="../../prefDialog.ui" line="353"/>
         <source>Save opened document on exiting</source>
-        <translation type="unfinished"></translation>
+        <translation>終了時に開いているファイルを保存する</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="376"/>
@@ -1823,7 +1828,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../prefDialog.ui" line="506"/>
         <source>Remember expanded states of nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>ノードの展開状態を記憶する</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="530"/>
