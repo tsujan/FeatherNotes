@@ -730,7 +730,7 @@
     <message>
         <location filename="../../fn.ui" line="1088"/>
         <source>Alt+Shift+Left</source>
-        <translation>Alt+Shift+Left</translation>
+        <translation>Alt+Shift+vasen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1099"/>
@@ -765,7 +765,7 @@
     <message>
         <location filename="../../fn.ui" line="1127"/>
         <source>Alt+Left</source>
-        <translation>Alt+Left</translation>
+        <translation>Alt+vasen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1135"/>
@@ -935,7 +935,7 @@
     <message>
         <location filename="../../fn.ui" line="1307"/>
         <source>Ctrl+Alt+Shift+Left</source>
-        <translation>Ctrl+Alt+Shift+Left</translation>
+        <translation>Ctrl+Alt+Shift+vasen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1318"/>
