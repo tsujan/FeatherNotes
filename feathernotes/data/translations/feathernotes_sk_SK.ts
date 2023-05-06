@@ -1087,7 +1087,7 @@
         <location filename="../../fn.cpp" line="1752"/>
         <location filename="../../fn.cpp" line="1775"/>
         <source>FeatherNotes documents</source>
-        <translation type="unfinished"></translation>
+        <translation>Dokumenty FeatherNotes</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1475"/>
@@ -1097,7 +1097,7 @@
         <location filename="../../fn.cpp" line="4526"/>
         <location filename="../../fn.cpp" line="4797"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Všetky súbory</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2818"/>
@@ -1134,7 +1134,7 @@
         <location filename="../../fn.cpp" line="4526"/>
         <location filename="../../fn.cpp" line="4797"/>
         <source>Image Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Súbory obrázkov</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3114"/>
@@ -1193,7 +1193,7 @@
     <message>
         <location filename="../../fn.cpp" line="6039"/>
         <source>HTML Files</source>
-        <translation type="unfinished"></translation>
+        <translation>HTML súbory</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2998"/>
@@ -1223,7 +1223,8 @@
         <location filename="../../fn.cpp" line="638"/>
         <source>System tray is not available.
 Please disable tray in Preferences.</source>
-        <translation type="unfinished"></translation>
+        <translation>Systémová lišta nie je k dispozícii.
+Zakážte lištu v sekcii Predvoľby.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="954"/>
@@ -1377,12 +1378,12 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="5752"/>
         <source>Printing completed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tlač dokončená.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5754"/>
         <source>Printing in progress...</source>
-        <translation type="unfinished"></translation>
+        <translation>Prebieha tlač...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5773"/>
@@ -1513,19 +1514,19 @@ Prajete si ho nahradiť?
     <message>
         <location filename="../../fn.cpp" line="6515"/>
         <source>The Hunspell dictionary is not accompanied by an affix file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Slovník Hunspell nie je sprevádzaný súborom s príponou.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6533"/>
         <location filename="../../fn.cpp" line="6548"/>
         <location filename="../../fn.cpp" line="6560"/>
         <source>No misspelling from text cursor.</source>
-        <translation type="unfinished"></translation>
+        <translation>Žiadne preklepy z textového kurzora.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6572"/>
         <source>Spell Checking</source>
-        <translation type="unfinished"></translation>
+        <translation>Kontrola pravopisu</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6301"/>
@@ -1603,7 +1604,11 @@ this dialog and also on exit.
 
 This may not work correctly
 with some window managers.</source>
-        <translation type="unfinished"></translation>
+        <translation>Po zatvorení uloží pozíciu
+tento dialóg a tiež pri ukončení.
+
+Toto nemusí fungovať správne
+s niektorými správcami okien.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>
