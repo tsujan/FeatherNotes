@@ -508,7 +508,7 @@
     <message>
         <location filename="../../fn.ui" line="833"/>
         <source>E&amp;xpand All</source>
-        <translation type="unfinished">&amp;Laajenna kaikki</translation>
+        <translation>&amp;Laajenna kaikki</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="836"/>
@@ -518,7 +518,7 @@
     <message>
         <location filename="../../fn.ui" line="844"/>
         <source>Collap&amp;se All</source>
-        <translation type="unfinished">&amp;Pienennä kaikki</translation>
+        <translation>&amp;Pienennä kaikki</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="847"/>
