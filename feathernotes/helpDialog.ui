@@ -160,6 +160,12 @@ The background and text colors are respected when a &lt;span style=&quot; font-w
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(Un-)Fullscreen&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Slash&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;If it is pressed inside side pane, start searching in node names&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Shift+Mouse Wheel&lt;/p&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;

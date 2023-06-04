@@ -79,6 +79,7 @@ public:
 
 signals:
     void FNDocDropped (const QString &path);
+    void searchRequest();
 
 protected:
     /* see Qt -> "qabstractitemview.cpp" */
@@ -206,6 +207,16 @@ protected:
 #endif
             return;
         QTreeView::mouseMoveEvent (event);
+    }
+
+    void keyPressEvent (QKeyEvent *event) override {
+        if (event->key() == Qt::Key_Slash)
+        {
+            emit searchRequest();
+            event->accept();
+            return;
+        }
+        QTreeView::keyPressEvent (event);
     }
 
 private:

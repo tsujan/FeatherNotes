@@ -248,6 +248,17 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     connect (ui->treeView, &QTreeView::collapsed, this, &FN::indexCollapsed);
     connect (ui->treeView, &TreeView::FNDocDropped, this, &FN::openFNDoc);
 
+    connect (ui->treeView, &TreeView::searchRequest, this, [this] {
+        if (!ui->lineEdit->isVisible())
+            showHideSearch();
+        else
+        {
+            ui->lineEdit->setFocus();
+            ui->lineEdit->selectAll();
+        }
+        ui->namesButton->setChecked (true);
+    });
+
     connect (ui->actionNew, &QAction::triggered, this, &FN::newNote);
     connect (ui->actionOpen, &QAction::triggered, this, &FN::openFile);
     connect (ui->actionSave, &QAction::triggered, this, &FN::saveFile);
