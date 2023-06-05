@@ -247,8 +247,8 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     connect (ui->treeView, &QTreeView::expanded, this, &FN::indexExpanded);
     connect (ui->treeView, &QTreeView::collapsed, this, &FN::indexCollapsed);
     connect (ui->treeView, &TreeView::FNDocDropped, this, &FN::openFNDoc);
-
     connect (ui->treeView, &TreeView::searchRequest, this, [this] {
+        if (model_->rowCount() == 0) return;
         if (!ui->lineEdit->isVisible())
             showHideSearch();
         else
