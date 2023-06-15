@@ -77,7 +77,7 @@
     <message>
         <location filename="../../fn.ui" line="144"/>
         <source>Search in all nodes (F7)</source>
-        <translation type="unfinished"></translation>
+        <translation>Αναζήτηση σε όλους τους κόμβους (F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="147"/>
@@ -102,12 +102,12 @@
     <message>
         <location filename="../../fn.ui" line="167"/>
         <source>Match Case (F5)</source>
-        <translation type="unfinished"></translation>
+        <translation>Διάκριση πεζών κεφαλαίων (F5)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="170"/>
         <source>Match Case</source>
-        <translation type="unfinished"></translation>
+        <translation>Διάκριση πεζών κεφαλαίων</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="173"/>
@@ -122,7 +122,7 @@
     <message>
         <location filename="../../fn.ui" line="223"/>
         <source>Recenl&amp;y Opened</source>
-        <translation type="unfinished"></translation>
+        <translation>Ανοιγμένα &amp;πρόσφατα</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="245"/>
@@ -132,7 +132,7 @@
     <message>
         <location filename="../../fn.ui" line="264"/>
         <source>For&amp;mat</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Μορφή</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="296"/>
@@ -153,52 +153,52 @@
         <location filename="../../fn.ui" line="341"/>
         <location filename="../../fn.ui" line="987"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Βοήθεια</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="436"/>
         <source>Find:</source>
-        <translation type="unfinished"></translation>
+        <translation>Αναζήτηση:</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="443"/>
         <source>Replace with:</source>
-        <translation type="unfinished"></translation>
+        <translation>Αντικατάσταση με:</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="456"/>
         <source>To be replaced</source>
-        <translation type="unfinished"></translation>
+        <translation>Να αντικατασταθεί</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="469"/>
         <source>Replacing text</source>
-        <translation type="unfinished"></translation>
+        <translation>Κείμενο αντικατάστασης</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="479"/>
         <source>Previous (F9)</source>
-        <translation type="unfinished">Προηγούμενο (F4) {9)?}</translation>
+        <translation>Προηγούμενο (F9)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="482"/>
         <source>F9</source>
-        <translation type="unfinished">F9</translation>
+        <translation>F9</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="495"/>
         <source>Next (F8)</source>
-        <translation type="unfinished">Επόμενο (F3) {8)?}</translation>
+        <translation>Επόμενο (F8)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="498"/>
         <source>F8</source>
-        <translation type="unfinished">F8</translation>
+        <translation>F8</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="511"/>
         <source>Replace all (F10)</source>
-        <translation type="unfinished"></translation>
+        <translation>Αντικατάσταση όλων (F10)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="514"/>
