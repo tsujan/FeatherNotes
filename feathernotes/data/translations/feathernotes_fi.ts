@@ -52,27 +52,27 @@
     <message>
         <location filename="../../fn.ui" line="100"/>
         <source>Search...</source>
-        <translation>Etsi...</translation>
+        <translation>Etsittävä...</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="115"/>
         <source>Search only in names (Ctrl+Shift+F7)</source>
-        <translation>Hae vain nimistä (Ctrl+Shift+F7)</translation>
+        <translation>Hae vain nimistä (Ctrl+Vaihto+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="118"/>
         <source>Ctrl+Shift+F7</source>
-        <translation>Ctrl+Shift+F7</translation>
+        <translation>Ctrl+Vaihto+F7</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="128"/>
         <source>Search only in tags (Shift+F7)</source>
-        <translation>Hae vain tageistä (Shift+F7)</translation>
+        <translation>Hae vain tageistä (Vaihto+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="131"/>
         <source>Shift+F7</source>
-        <translation>Shift+F7</translation>
+        <translation>Vaihto+F7</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="144"/>
@@ -142,7 +142,7 @@
     <message>
         <location filename="../../fn.ui" line="320"/>
         <source>&amp;Options</source>
-        <translation>&amp;Asetukset</translation>
+        <translation>&amp;Valinnat</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="334"/>
