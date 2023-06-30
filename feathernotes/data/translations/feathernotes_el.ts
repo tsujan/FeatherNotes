@@ -203,29 +203,29 @@
     <message>
         <location filename="../../fn.ui" line="514"/>
         <source>F10</source>
-        <translation type="unfinished">F10</translation>
+        <translation>F10</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="531"/>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Αποθήκευση</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="534"/>
         <location filename="../../fn.cpp" line="1018"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Αποθήκευση</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="537"/>
         <source>Ctrl+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+S</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="542"/>
         <location filename="../../fn.cpp" line="678"/>
         <source>&amp;Open</source>
-        <translation type="unfinished"></translation>
+        <translation>Ά&amp;νοιγμα</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="545"/>
