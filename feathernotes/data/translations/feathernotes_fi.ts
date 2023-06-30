@@ -578,7 +578,7 @@
     <message>
         <location filename="../../fn.ui" line="910"/>
         <source>Re&amp;name Node</source>
-        <translation>Muuta solmun nimeä</translation>
+        <translation>&amp;Nimeä solmu uudelleen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="913"/>
@@ -603,7 +603,7 @@
     <message>
         <location filename="../../fn.ui" line="943"/>
         <source>&amp;Wrap Lines</source>
-        <translation>&amp;Rivitä automaattisesti</translation>
+        <translation type="unfinished">&amp;Rivitä automaattisesti</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="946"/>
@@ -653,7 +653,7 @@
     <message>
         <location filename="../../fn.ui" line="1003"/>
         <source>Pr&amp;int All Nodes</source>
-        <translation>Tulosta kaikki solmut</translation>
+        <translation>&amp;Tulosta kaikki solmut</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1014"/>
