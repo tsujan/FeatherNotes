@@ -760,7 +760,7 @@
     <message>
         <location filename="../../fn.ui" line="1124"/>
         <source>Move &amp;Left</source>
-        <translation>Siirrä &amp;vasemmalle</translation>
+        <translation type="unfinished">Siirrä &amp;vasemmalle</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1127"/>
@@ -770,7 +770,7 @@
     <message>
         <location filename="../../fn.ui" line="1135"/>
         <source>Move &amp;Right</source>
-        <translation>Siirrä &amp;oikealle</translation>
+        <translation type="unfinished">Siirrä &amp;oikealle</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1138"/>
