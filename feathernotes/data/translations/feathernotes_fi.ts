@@ -603,7 +603,7 @@
     <message>
         <location filename="../../fn.ui" line="943"/>
         <source>&amp;Wrap Lines</source>
-        <translation type="unfinished">&amp;Rivitä automaattisesti</translation>
+        <translation type="unfinished">&amp;Rivitä teksti</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="946"/>
@@ -930,7 +930,7 @@
     <message>
         <location filename="../../fn.ui" line="1304"/>
         <source>RTL</source>
-        <translation>Oikealta vasemmalle</translation>
+        <translation>Luku oikealta vasemmalle</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1307"/>
@@ -940,7 +940,7 @@
     <message>
         <location filename="../../fn.ui" line="1318"/>
         <source>LTR</source>
-        <translation>Vasemmalta oikealle</translation>
+        <translation>Luku vasemmalta oikealle</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1321"/>
@@ -956,7 +956,7 @@
     <message>
         <location filename="../../fn.ui" line="1337"/>
         <source>Node &amp;Icon</source>
-        <translation>Solmun &amp;kuvake</translation>
+        <translation type="unfinished">Solmun &amp;kuvake</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1340"/>
@@ -977,13 +977,13 @@
     <message>
         <location filename="../../fn.ui" line="1356"/>
         <source>Document &amp;Colors</source>
-        <translation>Asiakirjan &amp;Värit</translation>
+        <translation>Asiakirjan &amp;värit</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1364"/>
         <location filename="../../fn.ui" line="1367"/>
         <source>Paste Date and Time</source>
-        <translation>Liitä päiväys ja aika</translation>
+        <translation>Lisää päiväys ja aika</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1372"/>
@@ -998,7 +998,7 @@
     <message>
         <location filename="../../fn.cpp" line="674"/>
         <source>&amp;Raise/Hide</source>
-        <translation>&amp;Nosta/Piilota</translation>
+        <translation>&amp;Nosta/piilota</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="914"/>
@@ -1129,7 +1129,7 @@
         <location filename="../../fn.cpp" line="6107"/>
         <location filename="../../fn.cpp" line="6205"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>Ok</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3033"/>
@@ -1148,7 +1148,7 @@
         <location filename="../../fn.cpp" line="3131"/>
         <location filename="../../fn.cpp" line="3164"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</source>
-        <translation>&lt;b&gt;Huomio:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Ensisijaiset solmut:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Kaikki solmut:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</translation>
+        <translation>&lt;b&gt;Muistiinpano:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Ensisijaiset solmut:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Kaikki solmut:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3600"/>
@@ -1267,7 +1267,7 @@ Ota pois käytöstä asetuksissa.</translation>
     <message>
         <location filename="../../fn.cpp" line="2694"/>
         <source>Select Background Color</source>
-        <translation>Valitse taustan väri</translation>
+        <translation>Valitse taustaväri</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2828"/>
@@ -1376,7 +1376,7 @@ Ota pois käytöstä asetuksissa.</translation>
     <message>
         <location filename="../../fn.cpp" line="5757"/>
         <source>Print Document</source>
-        <translation>Tulosta Asiakirja</translation>
+        <translation>Tulosta asiakirja</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5763"/>
@@ -1702,7 +1702,7 @@ valikkonappi ilmestyy työkaluriviin.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="237"/>
         <source>&amp;Wrap lines by default</source>
-        <translation>&amp;Rivitä automaattisesti oletuksena</translation>
+        <translation>&amp;Rivitä teksti oletuksena</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="244"/>
