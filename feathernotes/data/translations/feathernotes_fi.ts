@@ -825,7 +825,7 @@
     <message>
         <location filename="../../fn.ui" line="1188"/>
         <source>&amp;Node Font</source>
-        <translation>Solmun fontti</translation>
+        <translation>&amp;Solmun fontti</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1191"/>
@@ -835,12 +835,12 @@
     <message>
         <location filename="../../fn.ui" line="1196"/>
         <source>Scale I&amp;mage(s)</source>
-        <translation>Muuta kuvakokoa</translation>
+        <translation type="unfinished">Muuta kuvakokoa</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1204"/>
         <source>Paste &amp;HTML</source>
-        <translation>Liitä HTML</translation>
+        <translation type="unfinished">Liitä &amp;HTML</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1207"/>
