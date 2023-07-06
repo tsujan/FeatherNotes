@@ -1315,6 +1315,9 @@ void FN::fileOpen (const QString &filePath, bool startup, bool startWithLastFile
         if (file.open (QIODevice::ReadOnly))
         {
             QTextStream in (&file);
+#ifdef __OS2__
+            in.setCodec(QTextCodec::codecForName("UTF-8"));
+#endif
             QString cntnt = in.readAll();
             file.close();
             SimpleCrypt crypto (Q_UINT64_C(0xc9a25eb1610eb104));
