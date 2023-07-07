@@ -875,7 +875,7 @@
     <message>
         <location filename="../../fn.ui" line="1242"/>
         <source>I&amp;nsert Table</source>
-        <translation>Lisää &amp;taulukko</translation>
+        <translation type="unfinished">Lisää &amp;taulukko</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1245"/>
