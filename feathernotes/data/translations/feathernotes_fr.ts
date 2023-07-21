@@ -492,13 +492,13 @@
     <message>
         <location filename="../../fn.ui" line="819"/>
         <source>E&amp;mbed Image</source>
-        <translation>In&amp;tégrer l&apos;image</translation>
+        <translation>In&amp;tégrer l’image</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="822"/>
         <location filename="../../fn.cpp" line="4414"/>
         <source>Embed Image</source>
-        <translation>Intégrer l&apos;image</translation>
+        <translation>Intégrer l’image</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="825"/>
@@ -588,7 +588,7 @@
     <message>
         <location filename="../../fn.ui" line="918"/>
         <source>Tree Pr&amp;operties</source>
-        <translation>Pr&amp;opriétés de l&apos;arbre</translation>
+        <translation>Pr&amp;opriétés de l’arbre</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="921"/>
@@ -835,7 +835,7 @@
     <message>
         <location filename="../../fn.ui" line="1196"/>
         <source>Scale I&amp;mage(s)</source>
-        <translation>Image(s) d&apos;échelle</translation>
+        <translation>Image(s) d’échelle</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1204"/>
@@ -967,7 +967,7 @@
         <location filename="../../fn.ui" line="1345"/>
         <location filename="../../fn.ui" line="1348"/>
         <source>Check Spelling</source>
-        <translation>Vérifier l&apos;orthographe</translation>
+        <translation>Vérifier l’orthographe</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1351"/>
@@ -983,7 +983,7 @@
         <location filename="../../fn.ui" line="1364"/>
         <location filename="../../fn.ui" line="1367"/>
         <source>Paste Date and Time</source>
-        <translation>Coller la date et l&apos;heure</translation>
+        <translation>Coller la date et l’heure</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1372"/>
@@ -1136,7 +1136,7 @@
         <location filename="../../fn.cpp" line="4537"/>
         <location filename="../../fn.cpp" line="4808"/>
         <source>Image Files</source>
-        <translation>Fichiers d&apos;image</translation>
+        <translation>Fichiers d’image</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3125"/>
@@ -1201,32 +1201,32 @@
         <location filename="../../fn.cpp" line="3009"/>
         <location filename="../../fn.cpp" line="4423"/>
         <source>Image path</source>
-        <translation>Chemin de l&apos;image</translation>
+        <translation>Chemin de l’image</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3013"/>
         <location filename="../../fn.cpp" line="4427"/>
         <source>Open image</source>
-        <translation>Ouvrir l&apos;image</translation>
+        <translation>Ouvrir l’image</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4435"/>
         <location filename="../../fn.cpp" line="4613"/>
         <source>Scaling percentage</source>
-        <translation>Pourcentage de l&apos;échelle</translation>
+        <translation>Pourcentage de l’échelle</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3031"/>
         <location filename="../../fn.cpp" line="4535"/>
         <source>Open Image...</source>
-        <translation>Ouvrir l&apos;Image...</translation>
+        <translation>Ouvrir l’image...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="649"/>
         <source>System tray is not available.
 Please disable tray in Preferences.</source>
-        <translation>La barre d&apos;état système n&apos;est pas disponible.
-Veuillez désactiver la barre d&apos;état système dans les Préférences.</translation>
+        <translation>La barre d’état système n’est pas disponible.
+Veuillez désactiver la barre d’état système dans les Préférences.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="965"/>
@@ -1267,7 +1267,7 @@ Veuillez désactiver la barre d&apos;état système dans les Préférences.</tra
     <message>
         <location filename="../../fn.cpp" line="2694"/>
         <source>Select Background Color</source>
-        <translation>Sélectionner la couleur d&apos;arrière-plan</translation>
+        <translation>Sélectionner la couleur d’arrière-plan</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2828"/>
@@ -1302,7 +1302,7 @@ Veuillez désactiver la barre d&apos;état système dans les Préférences.</tra
     <message>
         <location filename="../../fn.cpp" line="3302"/>
         <source>Background color:</source>
-        <translation>Couleur de l&apos;arrière plan :</translation>
+        <translation>Couleur de l’arrière plan :</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3308"/>
@@ -1344,19 +1344,19 @@ Veuillez désactiver la barre d&apos;état système dans les Préférences.</tra
     <message>
         <location filename="../../fn.cpp" line="4773"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Image cannot be saved! Retry?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;L&apos;image ne peut pas être enregistrée ! Réessayer ?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;L’image ne peut pas être enregistrée ! Réessayer ?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4774"/>
         <source>&lt;center&gt;Maybe you did not choose a proper extension&lt;/center&gt;
 &lt;center&gt;or do not have write permission.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</source>
-        <translation>&lt;center&gt;Peut-être que vous n&apos;avez pas choisi une extension adéquate&lt;/center&gt;
-&lt;center&gt;ou que vous n&apos;avez pas l&apos;autorisation d&apos;écriture.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</translation>
+        <translation>&lt;center&gt;Peut-être que vous n’avez pas choisi une extension adéquate&lt;/center&gt;
+&lt;center&gt;ou que vous n’avez pas l’autorisation d’écriture.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4806"/>
         <source>Save Image As...</source>
-        <translation>Enregistrer l&apos;image sous...</translation>
+        <translation>Enregistrer l’image sous...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4861"/>
@@ -1512,19 +1512,19 @@ Voulez-vous le remplacer ?
     <message>
         <location filename="../../fn.cpp" line="6518"/>
         <source>The Hunspell dictionary does not exist.</source>
-        <translation>Ce dictionaire Hunspell n&apos;éxiste pas.</translation>
+        <translation>Ce dictionnaire Hunspell n’existe pas.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6526"/>
         <source>The Hunspell dictionary is not accompanied by an affix file.</source>
-        <translation>Le dictionnaire Hunspell n&apos;est pas accompagné d&apos;un fichier d&apos;affixe.</translation>
+        <translation>Le dictionnaire Hunspell n’est pas accompagné d’un fichier affix.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6544"/>
         <location filename="../../fn.cpp" line="6559"/>
         <location filename="../../fn.cpp" line="6571"/>
         <source>No misspelling from text cursor.</source>
-        <translation>Aucune faute d&apos;orthographe au curseur de texte.</translation>
+        <translation>Aucune faute d’orthographe au curseur de texte.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6583"/>
@@ -1604,7 +1604,7 @@ Décocher la case pour un rapport de largeur de 170/530.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="103"/>
         <source>Remember &amp;tree width</source>
-        <translation>Se rappeler de la largeur de l&apos;&amp;arbre</translation>
+        <translation>Se rappeler de la largeur de l’&amp;arbre</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="110"/>
@@ -1646,7 +1646,7 @@ Nécessite de redémarrer FeatherNotes pour prendre effet.</translation>
         <location filename="../../prefDialog.ui" line="156"/>
         <source>The command line option --tray
 can be used instead of this.</source>
-        <translation>L&apos;option de ligne de commande --tray
+        <translation>L’option de ligne de commande --tray
 peut être utilisé à la place de cela.</translation>
     </message>
     <message>
@@ -1657,36 +1657,36 @@ peut être utilisé à la place de cela.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="169"/>
         <source>Merge the tree view with its surroundings?</source>
-        <translation>Fusionner la vue de l&apos;arbre avec ses environs ?</translation>
+        <translation>Fusionner la vue de l’arbre avec ses environs ?</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="172"/>
         <source>Transparent t&amp;ree view</source>
-        <translation>Vue transparente de l&apos;&amp;arbre</translation>
+        <translation>Vue transparente de l’&amp;arbre</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="179"/>
         <source>By default, the active widget style determines
 the size of toolbar icons.</source>
         <translation>Par défaut, le style de widget actif détermine
-la taille des icônes de la barre d&apos;outils.</translation>
+la taille des icônes de la barre d’outils.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="183"/>
         <source>Small toolbar icons</source>
-        <translation>Petites icônes de la barre d&apos;outils</translation>
+        <translation>Petites icônes de la barre d’outils</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="190"/>
         <source>Do not show t&amp;oolbar</source>
-        <translation>Ne pas afficher la barre d&apos;&amp;outils</translation>
+        <translation>Ne pas afficher la barre d’&amp;outils</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="197"/>
         <source>If the menubar is hidden,
 a menu button appears on the toolbar.</source>
         <translation>Si la barre de menu est masquée,
-un bouton de menu apparaît dans la barre d&apos;outils.</translation>
+un bouton de menu apparaît dans la barre d’outils.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="201"/>
@@ -1728,8 +1728,8 @@ Nécessite de redémarrer FeatherNotes pour prendre effet.</translation>
 a double hyphen with a long dash, etc. while
 the user is typing and under proper circumstances.</source>
         <translation>Une période triple est remplacée par une ellipse,
-un trait d&apos;union double par un long tiret, etc.
-l&apos;utilisateur tape dans des circonstances appropriées.</translation>
+un trait d’union double par un long tiret, etc.
+l’utilisateur tape dans des circonstances appropriées.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="268"/>
@@ -1743,7 +1743,7 @@ l&apos;utilisateur tape dans des circonstances appropriées.</translation>
 Leave empty for the system default.
 
 Takes effect after closing this dialog.</source>
-        <translation>Utilisé pour coller la date et l&apos;heure.
+        <translation>Utilisé pour coller la date et l’heure.
 Laissez vide pour la valeur par défaut du système.
 
 Prend effet après la fermeture de cette boîte de dialogue.</translation>
@@ -1770,7 +1770,7 @@ be saved on exiting without prompt and without
 showing a warning if saving is not possible.</source>
         <translation>Si cette option est cochée, le document ouvert sera
 sauvegardé en quittant sans invite et sans
-afficher un avertissement si l&apos;enregistrement n&apos;est pas possible.</translation>
+afficher un avertissement si l’enregistrement n’est pas possible.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="353"/>
@@ -1789,7 +1789,7 @@ afficher un avertissement si l&apos;enregistrement n&apos;est pas possible.</tra
 and should be alongside an affix file with the same
 name but ending with &quot;.aff&quot;.</source>
         <translation>Un dictionnaire Hunspell a un nom qui se termine par &quot;.dic&quot;
-et devrait être à côté d&apos;un fichier d&apos;affixe avec le même
+et devrait être à côté d’un fichier affix avec le même
 nom mais se terminant par &quot;.aff&quot;.</translation>
     </message>
     <message>
@@ -1826,7 +1826,7 @@ nom mais se terminant par &quot;.aff&quot;.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="503"/>
         <source>By default, all nodes are expanded on opening a document.</source>
-        <translation>Par défaut, tous les nœuds sont développés à l&apos;ouverture d&apos;un document.</translation>
+        <translation>Par défaut, tous les nœuds sont développés à l’ouverture d’un document.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="506"/>
@@ -1857,7 +1857,7 @@ nom mais se terminant par &quot;.aff&quot;.</translation>
         <location filename="../../pref.cpp" line="340"/>
         <location filename="../../pref.cpp" line="520"/>
         <source>Warning: Ambiguous shortcut detected!</source>
-        <translation>Attention&#xa0;: raccourci ambigu détecté&#xa0;!</translation>
+        <translation>Attention : raccourci ambigu détecté !</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="503"/>
