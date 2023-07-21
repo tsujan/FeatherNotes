@@ -1856,7 +1856,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../spellDialog.ui" line="62"/>
         <source>Replace with:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Αντικατάσταση με:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="87"/>
