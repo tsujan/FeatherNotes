@@ -1767,7 +1767,7 @@ Takes effect after closing this dialog.</source>
         <source>If this option is checked, the opened document will
 be saved on exiting without prompt and without
 showing a warning if saving is not possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>このオプションをチェックすると、開いたドキュメントは終了時に保存され、保存できない場合はプロンプトも警告も表示されません。</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="353"/>
@@ -1823,7 +1823,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../prefDialog.ui" line="503"/>
         <source>By default, all nodes are expanded on opening a document.</source>
-        <translation type="unfinished"></translation>
+        <translation>デフォルトで文章を開く時すべてのノードを展開する。</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="506"/>
