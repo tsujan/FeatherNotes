@@ -730,7 +730,7 @@
     <message>
         <location filename="../../fn.ui" line="1088"/>
         <source>Alt+Shift+Left</source>
-        <translation>Alt+Shift+Left</translation>
+        <translation>Alt+Shift+W lewo</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1099"/>
@@ -765,7 +765,7 @@
     <message>
         <location filename="../../fn.ui" line="1127"/>
         <source>Alt+Left</source>
-        <translation>Alt+Left</translation>
+        <translation>Alt+W lewo</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1135"/>
@@ -935,7 +935,7 @@
     <message>
         <location filename="../../fn.ui" line="1307"/>
         <source>Ctrl+Alt+Shift+Left</source>
-        <translation>Ctrl+Alt+Shift+Left</translation>
+        <translation>Ctrl+Alt+Shift+W lewo</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1318"/>
@@ -1252,7 +1252,7 @@ Proszę wyłączyć tackę w Preferencjach.</translation>
     <message>
         <location filename="../../fn.cpp" line="2210"/>
         <source>Align Table</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyrównaj tabelę</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2223"/>
@@ -1282,37 +1282,37 @@ Proszę wyłączyć tackę w Preferencjach.</translation>
     <message>
         <location filename="../../fn.cpp" line="3202"/>
         <source>Select Document Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Wybierz czcionkę dokumentu</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3264"/>
         <source>Select Node Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Wybierz czcionkę węzła</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3289"/>
         <source>Set Document Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Ustaw kolory dokumentu</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3299"/>
         <source>These colors will be applied to new nodes.&lt;br&gt;They may or may not affect existing nodes&lt;br&gt;but document reopening is recommended.</source>
-        <translation type="unfinished"></translation>
+        <translation>Te kolory zostaną zastosowane do nowych węzłów.&lt;br&gt;Mogą mieć wpływ na istniejące węzły lub nie,&lt;br&gt;ale zalecane jest ponowne otwarcie dokumentu.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3302"/>
         <source>Background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolor tła:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3308"/>
         <source>Text color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolor tekstu:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4088"/>
         <source>The first 1000 replacements are highlighted.</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyróżniono pierwszych 1000 zamienników.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4430"/>
@@ -1339,7 +1339,7 @@ Proszę wyłączyć tackę w Preferencjach.</translation>
     <message>
         <location filename="../../fn.cpp" line="4772"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Błąd</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4773"/>
@@ -1426,14 +1426,16 @@ Proszę wyłączyć tackę w Preferencjach.</translation>
     <message>
         <location filename="../../fn.cpp" line="5865"/>
         <source>Question</source>
-        <translation type="unfinished"></translation>
+        <translation>Pytanie</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5866"/>
         <source>The file already exists.
 Do you want to replace it?
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Plik już istnieje.
+Czy chcesz go zamienić?
+</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6048"/>
@@ -1500,34 +1502,34 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="6497"/>
         <source>See Preferences → Text → Spell Checking!</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobacz Preferencje → Tekst → Sprawdzanie pisowni!</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6513"/>
         <source>You need to add a Hunspell dictionary.</source>
-        <translation type="unfinished"></translation>
+        <translation>Musisz dodać słownik Hunspell.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6518"/>
         <source>The Hunspell dictionary does not exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>Słownik Hunspell nie istnieje.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6526"/>
         <source>The Hunspell dictionary is not accompanied by an affix file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Słownikowi Hunspell nie towarzyszy plik afiksowy.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6544"/>
         <location filename="../../fn.cpp" line="6559"/>
         <location filename="../../fn.cpp" line="6571"/>
         <source>No misspelling from text cursor.</source>
-        <translation type="unfinished"></translation>
+        <translation>Brak błędów ortograficznych z kursora tekstowego.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6583"/>
         <source>Spell Checking</source>
-        <translation type="unfinished"></translation>
+        <translation>Sprawdzanie pisowni</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6312"/>
@@ -1586,7 +1588,7 @@ Odznacz, aby pozostawić stały rozmiar!</translation>
         <location filename="../../prefDialog.ui" line="58"/>
         <location filename="../../prefDialog.ui" line="72"/>
         <source> px</source>
-        <translation>piks.</translation>
+        <translation> px</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="97"/>
@@ -1594,7 +1596,10 @@ Odznacz, aby pozostawić stały rozmiar!</translation>
 this dialog and also on exit.
 
 Uncheck for a width ratio of 170/530.</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapisuje szerokość drzewa po zamknięciu
+tego okna dialogowego, a także przy wyjściu.
+
+Odznacz dla współczynnika szerokości 170/530.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="103"/>
@@ -1608,7 +1613,11 @@ this dialog and also on exit.
 
 This may not work correctly
 with some window managers.</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapisuje pozycję po zamknięciu tego
+okna dialogowego, a także przy wyjściu.
+
+To może nie działać poprawnie
+z niektórymi menedżerami okien.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>
@@ -1622,7 +1631,12 @@ If checked, the titlebar close button iconifies
 the window to the systray instead of quitting.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Decyduje, czy ma być używana ikona na pasku zadań.
+Jeśli zaznaczono, przycisk zamykania paska tytułowego
+zamiast zamykania wyświetla ikonę okna na pasku zadań.
+
+Wymaga ponownego uruchomienia programu FeatherNotes,
+aby zaczęło obowiązywać.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="131"/>
@@ -1644,23 +1658,24 @@ z opcji wiersza poleceń --tray.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="169"/>
         <source>Merge the tree view with its surroundings?</source>
-        <translation type="unfinished"></translation>
+        <translation>Połączyć widok drzewa z jego otoczeniem?</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="172"/>
         <source>Transparent t&amp;ree view</source>
-        <translation type="unfinished"></translation>
+        <translation>Przejrzysty wi&amp;dok drzewa</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="179"/>
         <source>By default, the active widget style determines
 the size of toolbar icons.</source>
-        <translation type="unfinished"></translation>
+        <translation>Domyślnie aktywny styl widżetu określa rozmiar
+ikon paska narzędzi.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="183"/>
         <source>Small toolbar icons</source>
-        <translation type="unfinished"></translation>
+        <translation>Małe ikony paska narzędzi</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="190"/>
@@ -1712,12 +1727,14 @@ Musisz uruchomić ponownie FeatherNotes, aby uzyskać efekt.</translation>
         <source>A triple period is replaced with an ellipsis,
 a double hyphen with a long dash, etc. while
 the user is typing and under proper circumstances.</source>
-        <translation type="unfinished"></translation>
+        <translation>Potrójna kropka jest zastępowana wielokropkiem,
+podwójny myślnik długą kreską itp. Podczas pisania
+przez użytkownika i w odpowiednich okolicznościach.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="268"/>
         <source>&amp;Replace some characters while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zastąp niektóre znaki podczas pisania</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="277"/>
@@ -1726,12 +1743,16 @@ the user is typing and under proper circumstances.</source>
 Leave empty for the system default.
 
 Takes effect after closing this dialog.</source>
-        <translation type="unfinished"></translation>
+        <translation>Służy do wklejania daty i godziny.
+Pozostaw puste dla wartości domyślnej systemu.
+
+Zaczyna obowiązywać po zamknięciu tego okna
+dialogowego.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="283"/>
         <source>Date and time format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Format daty i godziny:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="307"/>
@@ -1741,24 +1762,26 @@ Takes effect after closing this dialog.</source>
     <message>
         <location filename="../../prefDialog.ui" line="314"/>
         <source> minute(s)</source>
-        <translation>minut(y)</translation>
+        <translation> minut(y)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="348"/>
         <source>If this option is checked, the opened document will
 be saved on exiting without prompt and without
 showing a warning if saving is not possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Jeśli ta opcja jest zaznaczona, otwarty dokument zostanie
+zapisany przy wyjściu bez monitu i bez wyświetlenia ostrzeżenia,
+jeśli zapisanie nie jest możliwe.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="353"/>
         <source>Save opened document on exiting</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapisz otwarty dokument przy wychodzeniu</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="376"/>
         <source>Spell Checking</source>
-        <translation type="unfinished"></translation>
+        <translation>Sprawdzanie pisowni</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="384"/>
@@ -1766,89 +1789,91 @@ showing a warning if saving is not possible.</source>
         <source>A Hunspell dictionary has a name that ends with &quot;.dic&quot;
 and should be alongside an affix file with the same
 name but ending with &quot;.aff&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Słownik Hunspell ma nazwę kończącą się na „.dic”
+i powinien znajdować się obok pliku przyrostka o tej
+samej nazwie, ale kończącego się na „.aff”.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="389"/>
         <source>Hunspell dictionary path:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ścieżka słownika Hunspell:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="408"/>
         <location filename="../../pref.cpp" line="647"/>
         <source>Add dictionary...</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj słownik...</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="443"/>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Pliki</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="452"/>
         <source>Start with the last opened file</source>
-        <translation type="unfinished"></translation>
+        <translation>Zacznij od ostatnio otwartego pliku</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="464"/>
         <source>Number of recent files:</source>
-        <translation type="unfinished"></translation>
+        <translation>Liczba ostatnich plików:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="496"/>
         <source>Open recent files separately</source>
-        <translation type="unfinished"></translation>
+        <translation>Otwórz ostatnie pliki osobno</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="503"/>
         <source>By default, all nodes are expanded on opening a document.</source>
-        <translation type="unfinished"></translation>
+        <translation>Domyślnie wszystkie węzły są rozwijane podczas otwierania dokumentu.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="506"/>
         <source>Remember expanded states of nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapamiętaj rozszerzone stany węzłów</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="530"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Skróty</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="549"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Działanie</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="554"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>Skrót</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="562"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Domyślne</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="340"/>
         <location filename="../../pref.cpp" line="520"/>
         <source>Warning: Ambiguous shortcut detected!</source>
-        <translation type="unfinished"></translation>
+        <translation>Ostrzeżenie: Wykryto niejednoznaczny skrót!</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="503"/>
         <source>The typed shortcut was reserved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Wprowadzony skrót został zarejestrowany.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="618"/>
         <source>Application restart is needed for changes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Aby uzyskać efekt, musisz uruchomić aplikację ponownie.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="649"/>
         <source>Hunspell Dictionary Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Pliki słownika Hunspell</translation>
     </message>
 </context>
 <context>
@@ -1856,12 +1881,12 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../spellDialog.ui" line="25"/>
         <source>Unknown word:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nieznane słowo:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="51"/>
         <source>Add To Dictionary</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj do katalogu</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="62"/>
@@ -1871,22 +1896,22 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../spellDialog.ui" line="87"/>
         <source>Ignore Once</source>
-        <translation type="unfinished"></translation>
+        <translation>Zignoruj raz</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="100"/>
         <source>Ignore All</source>
-        <translation type="unfinished"></translation>
+        <translation>Ignoruj wszystkie</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="129"/>
         <source>Correct Once</source>
-        <translation type="unfinished"></translation>
+        <translation>Popraw raz</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="142"/>
         <source>Correct All</source>
-        <translation type="unfinished"></translation>
+        <translation>Popraw wszystko</translation>
     </message>
 </context>
 <context>
