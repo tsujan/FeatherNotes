@@ -1767,7 +1767,9 @@ Takes effect after closing this dialog.</source>
         <source>If this option is checked, the opened document will
 be saved on exiting without prompt and without
 showing a warning if saving is not possible.</source>
-        <translation>このオプションをチェックすると、開いたドキュメントは終了時に保存され、保存できない場合はプロンプトも警告も表示されません。</translation>
+        <translation>このオプションをチェックすると、
+開いたドキュメントは終了時に保存され
+保存できない場合はプロンプトも警告も表示されません。</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="353"/>
