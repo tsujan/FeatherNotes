@@ -7,7 +7,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0</project_license>
   <description>
-    <p>FeatherNotes is a lightweight Qt5 hierarchical notes-manager for Linux. It is independent of any desktop environment and has:</p>
+    <p>FeatherNotes is a lightweight Qt hierarchical notes-manager for Linux. It is independent of any desktop environment and has:</p>
     <ul>
       <li>Support for rich text formatting, image embedding and inserting editable tables</li>
       <li>Drag-and-drop capability for moving nodes and also for embedding images</li>
