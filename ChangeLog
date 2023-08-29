@@ -9,6 +9,7 @@ V1.1.1
  * Protect the file type filters of file dialogs from bad translations.
  * Don't insert garbage when an image can't be loaded.
  * Start searching in node names when Slash is pressed inside the side-pane.
+ * Fixed a rare issue in the geometry of a warning bar animated during window resizing.
  * Changed "Qt5" to "Qt" in the meta-info file (the Qt5 support cannot last indefinitely).
 
 V1.1.0
