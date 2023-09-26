@@ -654,10 +654,8 @@ void FN::checkTray()
 /*************************/
 void FN::createTrayIcon()
 {
-    QIcon icn = QIcon::fromTheme ("feathernotes");
-    if (icn.isNull())
-        icn = QIcon (":icons/feathernotes.svg");
-    tray_ = new QSystemTrayIcon (icn, this);
+    tray_ = new QSystemTrayIcon (QIcon::fromTheme ("feathernotes",
+                                                   QIcon (":icons/feathernotes.svg")), this);
     if (xmlPath_.isEmpty())
         tray_->setToolTip ("FeatherNotes");
     else
@@ -5375,10 +5373,7 @@ void FN::readAndApplyConfig (bool startup)
         ui->wholeButton->setIcon (symbolicIcon::icon (":icons/whole.svg"));
         ui->caseButton->setIcon (symbolicIcon::icon (":icons/case.svg"));
 
-        icn = QIcon::fromTheme ("feathernotes");
-        if (icn.isNull())
-            icn = QIcon (":icons/feathernotes.svg");
-        setWindowIcon (icn);
+        setWindowIcon (QIcon::fromTheme ("feathernotes", QIcon (":icons/feathernotes.svg")));
     }
 
     settings.endGroup();
@@ -6301,10 +6296,7 @@ void FN::aboutDialog()
     auto dialog = new AboutDialog (this);
     dialog->setAttribute (Qt::WA_DeleteOnClose, true);
 
-    QIcon FPIcon = QIcon::fromTheme ("feathernotes");
-    if (FPIcon.isNull())
-        FPIcon = QIcon (":icons/feathernotes.svg");
-    dialog->setMainIcon (FPIcon);
+    dialog->setMainIcon (QIcon::fromTheme ("feathernotes", QIcon (":icons/feathernotes.svg")));
     dialog->settMainTitle (QString ("<center><b><big>%1 %2</big></b></center><br>").arg (qApp->applicationName()).arg (qApp->applicationVersion()));
     dialog->setMainText ("<center> " + tr ("A lightweight notes manager") + " </center>\n<center> "
                          + tr ("based on Qt") + " </center><br><center> "
