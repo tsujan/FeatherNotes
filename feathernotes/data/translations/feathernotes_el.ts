@@ -230,102 +230,102 @@
     <message>
         <location filename="../../fn.ui" line="545"/>
         <source>Open a file</source>
-        <translation type="unfinished"></translation>
+        <translation>Άνοιγμα ενός αρχείου</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="548"/>
         <source>Ctrl+O</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+O</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="556"/>
         <source>&amp;Undo</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Αναίρεση</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="559"/>
         <source>Undo</source>
-        <translation type="unfinished"></translation>
+        <translation>Αναίρεση</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="562"/>
         <source>Ctrl+Z</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Z</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="570"/>
         <source>&amp;Redo</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Επανάληψη</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="573"/>
         <source>Redo</source>
-        <translation type="unfinished"></translation>
+        <translation>Επανάληψη</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="576"/>
         <source>Ctrl+Shift+Z</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+Z</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="584"/>
         <source>&amp;Find</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Αναζήτηση</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="587"/>
         <source>Show/hide searchbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Εμφάνιση/απόκρυψη της γραμμής αναζήτησης</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="590"/>
         <source>Ctrl+F</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+F</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="598"/>
         <source>&amp;Clear All Formats</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Εκκαθάριση όλων των μορφοποιήσεων</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="601"/>
         <source>Clear all formats</source>
-        <translation type="unfinished"></translation>
+        <translation>Εκκαθάριση όλων των μορφοποιήσεων</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="604"/>
         <source>Ctrl+E</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+E</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="615"/>
         <source>&amp;Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>Έ&amp;ντονα</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="618"/>
         <source>Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>Έντονα</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="621"/>
         <source>Ctrl+B</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+B</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="632"/>
         <source>&amp;Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Πλάγια</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="635"/>
         <source>Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>Πλάγια</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="638"/>
         <source>Ctrl+I</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+I</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="649"/>
@@ -340,7 +340,7 @@
     <message>
         <location filename="../../fn.ui" line="655"/>
         <source>Ctrl+U</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+U</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="666"/>
