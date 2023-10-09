@@ -330,7 +330,7 @@
     <message>
         <location filename="../../fn.ui" line="649"/>
         <source>&amp;Underline</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Υπογράμμιση</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="652"/>
