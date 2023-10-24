@@ -1792,9 +1792,9 @@ nebus rodoma jokio įspėjimo.</translation>
         <source>A Hunspell dictionary has a name that ends with &quot;.dic&quot;
 and should be alongside an affix file with the same
 name but ending with &quot;.aff&quot;.</source>
-        <translation>Hunspell žodynas turi pavadinimą su prievardžiu &quot;.dic&quot;
+        <translation>Hunspell žodynas turi pavadinimą su prievardžiu „.dic“
 ir turėtų būti kartu su pridedamu tokio pačio pavadinimo failu,
-tačiau turinčiu &quot;.aff&quot; prievardį.</translation>
+tačiau turinčiu „.aff“ prievardį.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="389"/>
