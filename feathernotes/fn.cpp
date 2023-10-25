@@ -2724,8 +2724,10 @@ void FN::clearFormat()
         textEdit->setCurrentCharFormat (QTextCharFormat()); // allows to type without format
     else
     {
+        cur.beginEditBlock();
         cur.setCharFormat (QTextCharFormat());
         cur.setBlockFormat (QTextBlockFormat());
+        cur.endEditBlock();
     }
 }
 /*************************/
