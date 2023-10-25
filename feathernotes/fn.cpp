@@ -2711,8 +2711,6 @@ void FN::clearFormat()
     QWidget *cw = ui->stackedWidget->currentWidget();
     if (!cw) return;
 
-    QTextCharFormat fmt;
-
     TextEdit *textEdit = qobject_cast<TextEdit*>(cw);
     QTextCursor cur = textEdit->textCursor();
     if (!cur.hasSelection())
@@ -2723,9 +2721,12 @@ void FN::clearFormat()
             cur.select (QTextCursor::WordUnderCursor);
     }
     if (!cur.hasSelection())
-        textEdit->setCurrentCharFormat (fmt); // alows to type without format
+        textEdit->setCurrentCharFormat (QTextCharFormat()); // allows to type without format
     else
-        cur.setCharFormat (fmt);
+    {
+        cur.setCharFormat (QTextCharFormat());
+        cur.setBlockFormat (QTextBlockFormat());
+    }
 }
 /*************************/
 void FN::textAlign (QAction *a)

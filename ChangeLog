@@ -1,3 +1,8 @@
+V1.1.2
+---------
+ * Also remove the block format on clearing formats.
+ * Added an icon for macOS (thanks to Iván Ávalos — ivan-avalos at GitHub).
+
 V1.1.1
 ---------
  * Simplified the code for setting the editor font.
