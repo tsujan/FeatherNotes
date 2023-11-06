@@ -1817,12 +1817,12 @@ jonka pääte on &quot;.aff&quot;.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="464"/>
         <source>Number of recent files:</source>
-        <translation>Viimeksi käytettyjen tiedostojen määrä:</translation>
+        <translation>Viimeaikaisten tiedostojen määrä:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="496"/>
         <source>Open recent files separately</source>
-        <translation>Avaa viimeksi käytetyt tiedostot erikseen</translation>
+        <translation>Avaa viimeaikaiset tiedostot erikseen</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="503"/>
