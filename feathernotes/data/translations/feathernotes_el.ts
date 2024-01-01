@@ -345,52 +345,52 @@
     <message>
         <location filename="../../fn.ui" line="666"/>
         <source>&amp;Strike Through</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Μεσογράμμιση</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="669"/>
         <source>Strike through</source>
-        <translation type="unfinished"></translation>
+        <translation>Μεσογράμμιση</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="672"/>
         <source>Ctrl+T</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="680"/>
         <source>Te&amp;xt Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Χρώμα &amp;κειμένου</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="683"/>
         <source>Text color</source>
-        <translation type="unfinished"></translation>
+        <translation>Χρώμα κειμένου</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="686"/>
         <source>Alt+Shift+T</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="694"/>
         <source>Back&amp;ground Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Χρώμα &amp;παρασκηνίου</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="697"/>
         <source>Background color</source>
-        <translation type="unfinished"></translation>
+        <translation>Χρώμα παρασκηνίου</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="700"/>
         <source>Alt+Shift+B</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+B</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="705"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Επιλογές</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="710"/>
