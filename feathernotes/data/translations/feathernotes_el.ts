@@ -396,32 +396,32 @@
         <location filename="../../fn.ui" line="710"/>
         <location filename="../../fn.cpp" line="675"/>
         <source>&amp;New Note</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Νέα σημείωση</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="713"/>
         <source>Ctrl+Alt+Shift+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Alt+Shift+N</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="721"/>
         <source>Save &amp;As</source>
-        <translation type="unfinished"></translation>
+        <translation>Αποθήκευση &amp;ως</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="724"/>
         <source>Ctrl+Shift+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+S</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="732"/>
         <source>&amp;Print</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Εκτύπωση</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="735"/>
         <source>Ctrl+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+P</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="743"/>
@@ -431,38 +431,38 @@
     <message>
         <location filename="../../fn.ui" line="751"/>
         <source>Set Pass&amp;word</source>
-        <translation type="unfinished"></translation>
+        <translation>Ορισμός κωδικού &amp;πρόσβασης</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="756"/>
         <location filename="../../fn.cpp" line="678"/>
         <source>&amp;Quit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Έξοδος</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="759"/>
         <source>Ctrl+Q</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Q</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="767"/>
         <source>&amp;Cut</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Αποκοπή</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="770"/>
         <source>Ctrl+X</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+X</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="778"/>
         <source>C&amp;opy</source>
-        <translation type="unfinished"></translation>
+        <translation>Α&amp;ντιγραφή</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="781"/>
         <source>Ctrl+C</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+C</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="789"/>
