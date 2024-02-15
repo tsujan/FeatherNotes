@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2022 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2024 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -28,7 +28,7 @@
 int main(int argc, char *argv[])
 {
     const QString name = "FeatherNotes";
-    const QString version = "1.1.2";
+    const QString version = "1.2.0";
     const QString option = QString::fromUtf8 (argv[1]);
     if (option == "--help" || option == "-h")
     {
@@ -53,35 +53,19 @@ int main(int argc, char *argv[])
     singleton.setApplicationName (name);
     singleton.setApplicationVersion (version);
 
-#if (QT_VERSION < QT_VERSION_CHECK(6,0,0))
-    singleton.setAttribute (Qt::AA_UseHighDpiPixmaps, true);
-#endif
-
     QStringList langs (QLocale::system().uiLanguages());
     QString lang; // bcp47Name() doesn't work under vbox
     if (!langs.isEmpty())
         lang = langs.first().replace ('-', '_');
 
     QTranslator qtTranslator;
-#if (QT_VERSION < QT_VERSION_CHECK(6,0,0))
-    if (qtTranslator.load ("qt_" + lang, QLibraryInfo::location (QLibraryInfo::TranslationsPath)))
-#else
     if (qtTranslator.load ("qt_" + lang, QLibraryInfo::path (QLibraryInfo::TranslationsPath)))
-#endif
-    {
         singleton.installTranslator (&qtTranslator);
-    }
     else if (!langs.isEmpty())
     {
         lang = langs.first().split (QLatin1Char ('_')).first();
-#if (QT_VERSION < QT_VERSION_CHECK(6,0,0))
-        if (qtTranslator.load ("qt_" + lang, QLibraryInfo::location (QLibraryInfo::TranslationsPath)))
-#else
         if (qtTranslator.load ("qt_" + lang, QLibraryInfo::path (QLibraryInfo::TranslationsPath)))
-#endif
-        {
             singleton.installTranslator (&qtTranslator);
-        }
     }
 
     QTranslator FPTranslator;

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2022 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2024 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -16,9 +16,6 @@
  */
 
 #include <QApplication>
-#if (QT_VERSION < QT_VERSION_CHECK(6,0,0))
-#include <QX11Info>
-#endif
 #include "x11.h"
 
 #include <X11/Xatom.h>
@@ -32,13 +29,9 @@ namespace FeatherNotes {
 
 static inline Display* getDisplay()
 {
-#if (QT_VERSION < QT_VERSION_CHECK(6,0,0))
-    return QX11Info::display();
-#else
     if (auto x11NativeInterfce = qApp->nativeInterface<QNativeInterface::QX11Application>())
         return x11NativeInterfce->display();
     return nullptr;
-#endif
 }
 
 // Get the curent virtual desktop.

@@ -1,4 +1,3 @@
-set(QT5_MINIMUM_VERSION "5.15.0")
 set(QT6_MINIMUM_VERSION "6.3.0")
 set(HUNSPELL_MINIMUM_VERSION "1.6")
 
@@ -11,13 +10,7 @@ elseif(OS2)
   set(CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} -lcx")
 endif()
 
-if(NOT ENABLE_QT5)
-  set(QT_VERSION_MAJOR 6)
-  find_package(Qt6 "${QT6_MINIMUM_VERSION}" REQUIRED COMPONENTS Core Gui Widgets Svg Xml Network PrintSupport DBus)
-else()
-  set(QT_VERSION_MAJOR 5)
-  find_package(Qt5 "${QT5_MINIMUM_VERSION}" REQUIRED COMPONENTS Core Gui Widgets Svg Xml Network PrintSupport DBus)
-endif()
+find_package(Qt6 "${QT6_MINIMUM_VERSION}" REQUIRED COMPONENTS Core Gui Widgets Svg Xml Network PrintSupport DBus)
 
 if(WITH_HUNSPELL)
 # for spell checking (see FindHUNSPELL.cmake)
@@ -26,41 +19,26 @@ endif()
 
 # X11 for Linux/Unix
 if(NOT WITHOUT_X11 AND UNIX AND NOT APPLE AND NOT HAIKU)
-  if(QT_VERSION_MAJOR EQUAL 5)
-    find_package(Qt5 "${QT5_MINIMUM_VERSION}" REQUIRED COMPONENTS X11Extras)
-  endif()
   find_package(X11 REQUIRED)
 endif()
 
 # optional localization
-find_package(Qt${QT_VERSION_MAJOR} QUIET COMPONENTS LinguistTools)
+find_package(Qt6 QUIET COMPONENTS LinguistTools)
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-if(QT_VERSION_MAJOR EQUAL 6)
-  include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR}
-                      ${Qt6Core_INCLUDE_DIRS}
-                      ${Qt6Gui_INCLUDE_DIRS}
-                      ${Qt6Widgets_INCLUDE_DIRS}
-                      ${Qt6Svg_INCLUDE_DIRS}
-                      ${Qt6Xml_INCLUDE_DIRS}
-                      ${Qt6Network_INCLUDE_DIRS}
-                      ${Qt6PrintSupport_INCLUDE_DIRS}
-                      ${Qt6DBus_INCLUDE_DIRS})
-else()
-  include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR}
-                      ${Qt5Core_INCLUDE_DIRS}
-                      ${Qt5Gui_INCLUDE_DIRS}
-                      ${Qt5Widgets_INCLUDE_DIRS}
-                      ${Qt5Svg_INCLUDE_DIRS}
-                      ${Qt5Xml_INCLUDE_DIRS}
-                      ${Qt5Network_INCLUDE_DIRS}
-                      ${Qt5PrintSupport_INCLUDE_DIRS}
-                      ${Qt5DBus_INCLUDE_DIRS})
-endif()
+include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR}
+                    ${Qt6Core_INCLUDE_DIRS}
+                    ${Qt6Gui_INCLUDE_DIRS}
+                    ${Qt6Widgets_INCLUDE_DIRS}
+                    ${Qt6Svg_INCLUDE_DIRS}
+                    ${Qt6Xml_INCLUDE_DIRS}
+                    ${Qt6Network_INCLUDE_DIRS}
+                    ${Qt6PrintSupport_INCLUDE_DIRS}
+                    ${Qt6DBus_INCLUDE_DIRS})
 
 if(WITH_HUNSPELL)
   include_directories(${include_directories} ${HUNSPELL_INCLUDE_DIRS})
@@ -68,14 +46,8 @@ if(WITH_HUNSPELL)
 endif()
 
 if(NOT WITHOUT_X11 AND UNIX AND NOT APPLE AND NOT HAIKU)
-  if(QT_VERSION_MAJOR EQUAL 6)
-    include_directories(${include_directories}
-                        ${X11_INCLUDE_DIR})
-  else()
-    include_directories(${include_directories}
-                        ${Qt5X11Extras_INCLUDE_DIRS}
-                        ${X11_INCLUDE_DIR})
-  endif()
+  include_directories(${include_directories}
+                      ${X11_INCLUDE_DIR})
   add_definitions(-DHAS_X11)
 endif()
 
@@ -110,23 +82,13 @@ if(NOT WITHOUT_X11 AND UNIX AND NOT APPLE AND NOT HAIKU)
   set(feathernotes_SRCS ${feathernotes_SRCS} x11.cpp)
 endif()
 
-if(QT_VERSION_MAJOR EQUAL 6)
-  qt6_add_dbus_adaptor(feathernotes_DBUS_SRCS
-      org.feathernotes.Application.xml
-      singleton.h
-      FeatherNotes::FNSingleton
-      feathernotesadaptor
-      FeatherNotesAdaptor
-  )
-else()
-  qt5_add_dbus_adaptor(feathernotes_DBUS_SRCS
-      org.feathernotes.Application.xml
-      singleton.h
-      FeatherNotes::FNSingleton
-      feathernotesadaptor
-      FeatherNotesAdaptor
-  )
-endif()
+qt6_add_dbus_adaptor(feathernotes_DBUS_SRCS
+    org.feathernotes.Application.xml
+    singleton.h
+    FeatherNotes::FNSingleton
+    feathernotesadaptor
+    FeatherNotesAdaptor
+)
 
 set(feathernotes_RESOURCES data/fn.qrc)
 set(DESKTOP_FILE data/feathernotes.desktop)
@@ -146,24 +108,12 @@ else()
   set(feathernotes_SRCS ${feathernotes_SRCS} data/feathernotes_os2.rc)
 endif()
 
-if(QT_VERSION_MAJOR EQUAL 6)
-  set(EXTRA_HEADERS warningbar.h spinbox.h messagebox.h filedialog.h help.h settings.h treeview.h treedelegate.h)
-else()
-  if(CMAKE_VERSION VERSION_LESS "3.10.0") # CMP0071 in 3.10: Let AUTOMOC and AUTOUIC process GENERATED files
-    qt5_wrap_cpp(EXTRA_HEADERS warningbar.h spinbox.h messagebox.h filedialog.h help.h settings.h treeview.h treedelegate.h)
-  else()
-    set(EXTRA_HEADERS warningbar.h spinbox.h messagebox.h filedialog.h help.h settings.h treeview.h treedelegate.h)
-  endif()
-endif()
+set(EXTRA_HEADERS warningbar.h spinbox.h messagebox.h filedialog.h help.h settings.h treeview.h treedelegate.h)
 
 # translations
-if(Qt${QT_VERSION_MAJOR}LinguistTools_FOUND)
+if(Qt6LinguistTools_FOUND)
   file(GLOB TS_FILES data/translations/feathernotes_*.ts)
-  if(QT_VERSION_MAJOR EQUAL 6)
-    qt6_add_translation(QM_FILES ${TS_FILES})
-  else()
-    qt5_add_translation(QM_FILES ${TS_FILES})
-  endif()
+  qt6_add_translation(QM_FILES ${TS_FILES})
   add_executable(feathernotes ${feathernotes_SRCS} ${feathernotes_DBUS_SRCS} ${feathernotes_RESOURCES} ${EXTRA_HEADERS} ${DESKTOP_FILE} ${QM_FILES})
   if(HAIKU)
     install(FILES ${QM_FILES} DESTINATION "${CMAKE_INSTALL_PREFIX}/translations")
@@ -172,41 +122,25 @@ if(Qt${QT_VERSION_MAJOR}LinguistTools_FOUND)
   elseif(UNIX OR OS2)
     install(FILES ${QM_FILES} DESTINATION "${CMAKE_INSTALL_PREFIX}/share/feathernotes/translations")
   endif()
-else(Qt${QT_VERSION_MAJOR}LinguistTools_FOUND)
+else(Qt6LinguistTools_FOUND)
   add_executable(feathernotes ${feathernotes_SRCS} ${feathernotes_DBUS_SRCS} ${feathernotes_RESOURCES} ${EXTRA_HEADERS} ${DESKTOP_FILE})
-endif(Qt${QT_VERSION_MAJOR}LinguistTools_FOUND)
+endif(Qt6LinguistTools_FOUND)
 
-if(QT_VERSION_MAJOR EQUAL 6)
-  target_link_libraries(feathernotes ${Qt6Core_LIBRARIES}
-                                     ${Qt6Gui_LIBRARIES}
-                                     ${Qt6Widgets_LIBRARIES}
-                                     ${Qt6Svg_LIBRARIES}
-                                     ${Qt6Xml_LIBRARIES}
-                                     ${Qt6Network_LIBRARIES}
-                                     ${Qt6PrintSupport_LIBRARIES}
-                                     ${Qt6DBus_LIBRARIES})
-else()
-  target_link_libraries(feathernotes ${Qt5Core_LIBRARIES}
-                                     ${Qt5Gui_LIBRARIES}
-                                     ${Qt5Widgets_LIBRARIES}
-                                     ${Qt5Svg_LIBRARIES}
-                                     ${Qt5Xml_LIBRARIES}
-                                     ${Qt5Network_LIBRARIES}
-                                     ${Qt5PrintSupport_LIBRARIES}
-                                     ${Qt5DBus_LIBRARIES})
-endif()
+target_link_libraries(feathernotes ${Qt6Core_LIBRARIES}
+                                   ${Qt6Gui_LIBRARIES}
+                                   ${Qt6Widgets_LIBRARIES}
+                                   ${Qt6Svg_LIBRARIES}
+                                   ${Qt6Xml_LIBRARIES}
+                                   ${Qt6Network_LIBRARIES}
+                                   ${Qt6PrintSupport_LIBRARIES}
+                                   ${Qt6DBus_LIBRARIES})
 
 if(WITH_HUNSPELL)
   target_link_libraries(feathernotes ${HUNSPELL_LIBRARIES})
 endif()
 
 if(NOT WITHOUT_X11 AND UNIX AND NOT APPLE AND NOT HAIKU)
-  if(QT_VERSION_MAJOR EQUAL 6)
-    target_link_libraries(feathernotes ${X11_LIBRARIES})
-  else()
-    target_link_libraries(feathernotes ${Qt5X11Extras_LIBRARIES}
-                                       ${X11_LIBRARIES})
-  endif()
+  target_link_libraries(feathernotes ${X11_LIBRARIES})
 endif()
 
 # installation

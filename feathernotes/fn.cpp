@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2023 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2024 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -1137,60 +1137,6 @@ void FN::updateNodeActions()
     }
 }
 /*************************/
-// Qt6 has changed "QFont::toString()" in a backward incompatible way, so that,
-// if a document is saved by the Qt6 version, the Qt5 version will show wrong fonts.
-// This function circumvents the problem when it's used instead of "QFont::fromString()".
-static inline void fontFromString (QFont &f, const QString &str)
-{
-#if (QT_VERSION < QT_VERSION_CHECK(6,0,0))
-    const QChar comma (QLatin1Char (','));
-    QStringList l = str.split (comma);
-    if (l.size() <= 10)
-        f.fromString (str);
-    else
-    {
-        l = l.mid (0, 10);
-        int weight = l.at (4).toInt();
-        switch (weight) {
-        case 100:
-            weight = 0;
-            break;
-        case 200:
-            weight = 12;
-            break;
-        case 300:
-            weight = 25;
-            break;
-        case 400:
-            weight = 50;
-            break;
-        case 500:
-            weight = 57;
-            break;
-        case 600:
-            weight = 63;
-            break;
-        case 700:
-            weight = 75;
-            break;
-        case 800:
-            weight = 81;
-            break;
-        case 900:
-            weight = 87;
-            break;
-        default:
-            weight = 50;
-            break;
-        }
-        l[4] = QString::number (weight);
-        f.fromString (l.join (comma));
-    }
-#else
-    f.fromString (str);
-#endif
-}
-/*************************/
 void FN::showDoc (QDomDocument &doc, int node)
 {
     if (saveNeeded_ > 0)
@@ -1217,7 +1163,7 @@ void FN::showDoc (QDomDocument &doc, int node)
     {
         /* since defaultFont_ may have been set in textFontDialog(),
            it needs to be redefined completely */
-        QFont f; fontFromString (f, fontStr);
+        QFont f; f.fromString (fontStr);
         defaultFont_ = f;
     }
     else
@@ -1227,7 +1173,7 @@ void FN::showDoc (QDomDocument &doc, int node)
     }
     fontStr = root.attribute ("nodefont");
     if (!fontStr.isEmpty())
-        fontFromString (nodeFont_, fontStr);
+        nodeFont_.fromString (fontStr);
     else // nodeFont_ may have changed by the user
         nodeFont_ = font();
 

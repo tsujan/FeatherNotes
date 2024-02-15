@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2023 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2024 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -84,29 +84,10 @@ signals:
 protected:
     /* see Qt -> "qabstractitemview.cpp" */
     QItemSelectionModel::SelectionFlags selectionCommand (const QModelIndex &index, const QEvent *event = nullptr) const override {
-#if (QT_VERSION < QT_VERSION_CHECK(6,0,0))
-        Qt::KeyboardModifiers keyModifiers = Qt::NoModifier;
-        if (event)
-        {
-            switch (event->type()) {
-                case QEvent::MouseButtonDblClick:
-                case QEvent::MouseButtonPress:
-                case QEvent::MouseButtonRelease:
-                case QEvent::MouseMove:
-                case QEvent::KeyPress:
-                case QEvent::KeyRelease:
-                    keyModifiers = (static_cast<const QInputEvent*>(event))->modifiers();
-                    break;
-                default:
-                    keyModifiers = QApplication::keyboardModifiers();
-            }
-        }
-#else
         Qt::KeyboardModifiers keyModifiers = event != nullptr && event->isInputEvent()
                                                  ? (static_cast<const QInputEvent*>(event))->modifiers()
                                                  : Qt::NoModifier;
 
-#endif
         if (selectionMode() == QAbstractItemView::SingleSelection)
         {
             if (!index.isValid())
@@ -182,11 +163,7 @@ protected:
             && qApp->keyboardModifiers() == Qt::NoModifier)
         {
             if (index.isValid())
-#if (QT_VERSION < QT_VERSION_CHECK(6,0,0))
-                itemPressPoint_ = event->globalPos();
-#else
                 itemPressPoint_ = event->globalPosition().toPoint();
-#endif
             else itemPressPoint_ = QPoint();
         }
         else itemPressPoint_ = QPoint();
@@ -200,11 +177,7 @@ protected:
 
     void mouseMoveEvent (QMouseEvent *event) override {
         /* prevent dragging if there is no real mouse movement */
-#if (QT_VERSION < QT_VERSION_CHECK(6,0,0))
-        if (event->buttons() == Qt::LeftButton && (event->globalPos() - itemPressPoint_).manhattanLength() < QApplication::startDragDistance())
-#else
         if (event->buttons() == Qt::LeftButton && (event->globalPosition().toPoint() - itemPressPoint_).manhattanLength() < QApplication::startDragDistance())
-#endif
             return;
         QTreeView::mouseMoveEvent (event);
     }
