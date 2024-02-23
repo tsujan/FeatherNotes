@@ -467,27 +467,27 @@
     <message>
         <location filename="../../fn.ui" line="789"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Επικόλληση</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="792"/>
         <source>Ctrl+V</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+V</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="800"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Διαγραφή</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="808"/>
         <source>&amp;Select All</source>
-        <translation type="unfinished"></translation>
+        <translation>Επιλ&amp;ογή όλων</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="811"/>
         <source>Ctrl+A</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+A</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="819"/>
@@ -503,7 +503,7 @@
     <message>
         <location filename="../../fn.ui" line="825"/>
         <source>Ctrl+Alt+Shift+I</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Alt+Shift+I</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="833"/>
