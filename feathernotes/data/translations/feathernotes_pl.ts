@@ -122,7 +122,7 @@
     <message>
         <location filename="../../fn.ui" line="223"/>
         <source>Recenl&amp;y Opened</source>
-        <translation>Ostatnio otwierane (&amp;y)</translation>
+        <translation>Ostatnio o&amp;twierane</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="245"/>
@@ -945,7 +945,7 @@
     <message>
         <location filename="../../fn.ui" line="1321"/>
         <source>Ctrl+Alt+Shift+Right</source>
-        <translation>Ctrl+Alt+Shift+Right</translation>
+        <translation>Ctrl+Alt+Shift+W prawo</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1326"/>
@@ -977,7 +977,7 @@
     <message>
         <location filename="../../fn.ui" line="1356"/>
         <source>Document &amp;Colors</source>
-        <translation>Kolory dokumentu (&amp;C)</translation>
+        <translation>Kolory &amp;dokumentu</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1364"/>
@@ -1257,7 +1257,7 @@ Proszę wyłączyć tackę w Preferencjach.</translation>
     <message>
         <location filename="../../fn.cpp" line="2167"/>
         <source>&amp;Center</source>
-        <translation>Wyśrodkuj (&amp;C)</translation>
+        <translation>Wyśro&amp;dkuj</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2606"/>
@@ -1868,7 +1868,7 @@ samej nazwie, ale kończącego się na „.aff”.</translation>
     <message>
         <location filename="../../pref.cpp" line="618"/>
         <source>Application restart is needed for changes to take effect.</source>
-        <translation>Aby uzyskać efekt, musisz uruchomić aplikację ponownie.</translation>
+        <translation>Konieczne jest ponowne uruchomienie programu, aby zmiany zaczęły obowiązywać.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="649"/>
