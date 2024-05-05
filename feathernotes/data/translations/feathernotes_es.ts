@@ -14,7 +14,7 @@
     <message>
         <location filename="../../colorLabel.cpp" line="31"/>
         <source>Click to change color.</source>
-        <translation>Haga clic para cambiar de color.</translation>
+        <translation>Pulse para cambiar de color.</translation>
     </message>
     <message>
         <location filename="../../colorLabel.cpp" line="53"/>
