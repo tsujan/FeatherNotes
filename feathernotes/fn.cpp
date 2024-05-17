@@ -100,6 +100,8 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     timer_ = new QTimer (this);
     connect (timer_, &QTimer::timeout, this, &FN::autoSaving);
 
+    deactivateTimer_ = nullptr;
+
     /* appearance */
     setAttribute (Qt::WA_AlwaysShowToolTips);
     ui->statusBar->setVisible (false);
@@ -4161,7 +4163,8 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
 #ifdef HAS_X11
     else if (!singleton->isX11())
     {
-        if (!isActiveWindow())
+        if (!isActiveWindow()
+            && (!singleton->isWayland() || !deactivateTimer_ || !deactivateTimer_->isActive()))
         {
             closeNonModalDialogs();
             hide();
@@ -4231,7 +4234,8 @@ void FN::trayActivated (QSystemTrayIcon::ActivationReason r)
     }
 #else
     // visible and without X11
-    else if (!isActiveWindow())
+    else if (!isActiveWindow()
+             && (!singleton->isWayland() || !deactivateTimer_ || !deactivateTimer_->isActive()))
     {
         closeNonModalDialogs();
         hide();
@@ -6633,6 +6637,19 @@ bool FN::event (QEvent *event)
             QPalette p = ui->treeView->palette();
             p.setColor (QPalette::Text, p.color (QPalette::WindowText));
             ui->treeView->setPalette (p);
+        }
+    }
+    else if (event->type() == QEvent::WindowDeactivate)
+    {
+        /* A workaround for window deactivation on clicking the tray icon under Wayland. */
+        if (static_cast<FNSingleton*>(qApp)->isWayland())
+        {
+            if (deactivateTimer_ == nullptr)
+            {
+                deactivateTimer_ = new QTimer (this);
+                deactivateTimer_->setSingleShot (true);
+            }
+            deactivateTimer_->start(500);
         }
     }
     /* NOTE: This is a workaround for an old Qt bug, because of which,
