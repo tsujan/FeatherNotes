@@ -6628,16 +6628,19 @@ void FN::checkSpelling()
 /*************************/
 bool FN::event (QEvent *event)
 {
-    if (event->type() == QEvent::StyleChange)
+    if (event->type() == QEvent::StyleChange || event->type() == QEvent::PaletteChange)
     {
-        /* when the style changes in runtime, the text color of a transparent side pane
-           should be set to its window text color again because the latter may have changed */
-        if (transparentTree_ && ui->treeView->viewport())
-        {
-            QPalette p = ui->treeView->palette();
-            p.setColor (QPalette::Text, p.color (QPalette::WindowText));
-            ui->treeView->setPalette (p);
-        }
+        /* When the style changes in runtime, the text color of a transparent side pane
+           should be set to its window text color again because the latter may have changed.
+           However, at least with Qt6, the color setting needs to be delayed. */
+        QTimer::singleShot (0, this, [this]() {
+            if (transparentTree_ && ui->treeView->viewport())
+            {
+                QPalette p = ui->treeView->palette();
+                p.setColor (QPalette::Text, p.color (QPalette::WindowText));
+                ui->treeView->setPalette (p);
+            }
+        });
     }
     else if (event->type() == QEvent::WindowDeactivate)
     {
