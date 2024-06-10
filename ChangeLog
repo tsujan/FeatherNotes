@@ -2,6 +2,7 @@ V1.2.1
 ---------
  * Added a workaround for window deactivation on clicking the tray icon under Wayland.
  * Added a workaround for on-the-fly style change of Qt6.
+ * Dropped using of "gio" for opening hyperlinks.
 
 V1.2.0
 ---------
