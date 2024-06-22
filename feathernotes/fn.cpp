@@ -5374,7 +5374,7 @@ void FN::readAndApplyConfig (bool startup)
     }
 
     openLastFile_ = settings.value ("openLastFile").toBool(); // false by default
-    if (openLastFile_)
+    if (startup && openLastFile_)
     {
         xmlPath_ = settings.value ("lastOpenedFile").toString();
         static_cast<FNSingleton*>(qApp)->setLastFile (xmlPath_);

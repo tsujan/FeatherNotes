@@ -17,7 +17,7 @@
 
 #include "textedit.h"
 #include <QDesktopServices>
-#include <QProcess>
+//#include <QProcess>
 #include <QToolTip>
 #include <QTimer>
 #include <QTextBlock>
