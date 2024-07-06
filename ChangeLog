@@ -1,3 +1,7 @@
+V1.3.1
+---------
+ * Check the existence of "gio" before using it for opening URLs.
+
 V1.3.0
 ---------
  * Fixed a nasty bug that could cause note overwriting in special cases.
