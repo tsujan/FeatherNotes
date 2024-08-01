@@ -513,7 +513,7 @@
     <message>
         <location filename="../../fn.ui" line="836"/>
         <source>Ctrl+Shift+Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+Κάτω</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="844"/>
@@ -523,7 +523,7 @@
     <message>
         <location filename="../../fn.ui" line="847"/>
         <source>Ctrl+Shift+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+Πάνω</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="855"/>
@@ -533,7 +533,7 @@
     <message>
         <location filename="../../fn.ui" line="858"/>
         <source>Ctrl+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="866"/>
@@ -543,7 +543,7 @@
     <message>
         <location filename="../../fn.ui" line="869"/>
         <source>Ctrl+Shift+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+N</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="877"/>
@@ -553,27 +553,27 @@
     <message>
         <location filename="../../fn.ui" line="880"/>
         <source>Ctrl+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+D</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="888"/>
         <source>Move &amp;Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Μετακίνηση &amp;Πάνω</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="891"/>
         <source>Alt+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Πάνω</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="899"/>
         <source>Move Do&amp;wn</source>
-        <translation type="unfinished"></translation>
+        <translation>Μετακίνηση Κά&amp;τω</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="902"/>
         <source>Alt+Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Κάτω</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="910"/>
@@ -583,7 +583,7 @@
     <message>
         <location filename="../../fn.ui" line="913"/>
         <source>Ctrl+Shift+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+R</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="918"/>
@@ -593,12 +593,12 @@
     <message>
         <location filename="../../fn.ui" line="921"/>
         <source>Ctrl+Shift+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+D</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="929"/>
         <source>Document &amp;Font</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Γραμματοσειρά εγγράφου</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="943"/>
@@ -608,7 +608,7 @@
     <message>
         <location filename="../../fn.ui" line="946"/>
         <source>Ctrl+W</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+W</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="960"/>
@@ -618,37 +618,37 @@
     <message>
         <location filename="../../fn.ui" line="963"/>
         <source>Ctrl+Shift+I</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+I</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="968"/>
         <source>&amp;Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Προτιμήσεις</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="971"/>
         <source>Ctrl+Shift+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+P</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="979"/>
         <source>Find and &amp;Replace</source>
-        <translation type="unfinished"></translation>
+        <translation>Εύρεση και &amp;αντικατάσταση</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="982"/>
         <source>Ctrl+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+R</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="990"/>
         <source>Ctrl+H</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+H</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="995"/>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Σχετικά</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1003"/>
@@ -668,7 +668,7 @@
     <message>
         <location filename="../../fn.ui" line="1020"/>
         <source>Alt+Shift+U</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+U</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1031"/>
@@ -683,7 +683,7 @@
     <message>
         <location filename="../../fn.ui" line="1037"/>
         <source>Alt+Shift+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+S</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1048"/>
@@ -698,13 +698,13 @@
     <message>
         <location filename="../../fn.ui" line="1054"/>
         <source>Alt+Shift+Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+Κάτω</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1065"/>
         <location filename="../../fn.cpp" line="2163"/>
         <source>&amp;Right</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Δεξιά</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1068"/>
@@ -714,13 +714,13 @@
     <message>
         <location filename="../../fn.ui" line="1071"/>
         <source>Alt+Shift+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+Δεξιά</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1082"/>
         <location filename="../../fn.cpp" line="2157"/>
         <source>&amp;Left</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Αριστερά</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1085"/>
@@ -730,7 +730,7 @@
     <message>
         <location filename="../../fn.ui" line="1088"/>
         <source>Alt+Shift+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+Αριστερά</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1099"/>
@@ -745,7 +745,7 @@
     <message>
         <location filename="../../fn.ui" line="1105"/>
         <source>Alt+Shift+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+Πάνω</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1113"/>
@@ -755,7 +755,7 @@
     <message>
         <location filename="../../fn.ui" line="1116"/>
         <source>Ctrl+M</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+M</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1124"/>
@@ -765,7 +765,7 @@
     <message>
         <location filename="../../fn.ui" line="1127"/>
         <source>Alt+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Αριστερά</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1135"/>
@@ -775,7 +775,7 @@
     <message>
         <location filename="../../fn.ui" line="1138"/>
         <source>Alt+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Δεξιά</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1146"/>
@@ -790,7 +790,7 @@
     <message>
         <location filename="../../fn.ui" line="1152"/>
         <source>Ctrl+2</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1160"/>
@@ -805,7 +805,7 @@
     <message>
         <location filename="../../fn.ui" line="1166"/>
         <source>Ctrl+1</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+1</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1174"/>
@@ -820,7 +820,7 @@
     <message>
         <location filename="../../fn.ui" line="1180"/>
         <source>Ctrl+3</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1188"/>
@@ -845,7 +845,7 @@
     <message>
         <location filename="../../fn.ui" line="1207"/>
         <source>Ctrl+Shift+V</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+V</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1215"/>
@@ -855,7 +855,7 @@
     <message>
         <location filename="../../fn.ui" line="1218"/>
         <source>Ctrl+Shift+T</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1226"/>
@@ -865,7 +865,7 @@
     <message>
         <location filename="../../fn.ui" line="1229"/>
         <source>Ctrl+L</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+L</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1234"/>
@@ -880,7 +880,7 @@
     <message>
         <location filename="../../fn.ui" line="1245"/>
         <source>Ctrl+Alt+Shift+T</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Alt+Shift+T</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1250"/>
@@ -935,7 +935,7 @@
     <message>
         <location filename="../../fn.ui" line="1307"/>
         <source>Ctrl+Alt+Shift+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Alt+Shift+Αριστερά</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1318"/>
@@ -945,13 +945,13 @@
     <message>
         <location filename="../../fn.ui" line="1321"/>
         <source>Ctrl+Alt+Shift+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Alt+Shift+Δεξιά</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1326"/>
         <location filename="../../fn.ui" line="1329"/>
         <source>Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Μενού</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1337"/>
@@ -961,7 +961,7 @@
     <message>
         <location filename="../../fn.ui" line="1340"/>
         <source>Ctrl+Shift+C</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+C</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1345"/>
@@ -972,7 +972,7 @@
     <message>
         <location filename="../../fn.ui" line="1351"/>
         <source>F2</source>
-        <translation type="unfinished">F2</translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1356"/>
@@ -1043,7 +1043,7 @@
     <message>
         <location filename="../../fn.cpp" line="1019"/>
         <source>Discard changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Απόρριψη αλλαγών</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1020"/>
@@ -1058,12 +1058,12 @@
         <location filename="../../fn.cpp" line="6054"/>
         <location filename="../../fn.cpp" line="6152"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Ακύρωση</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1430"/>
         <source>Open file...</source>
-        <translation type="unfinished"></translation>
+        <translation>Άνοιγμα αρχείου...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1607"/>
@@ -1074,13 +1074,13 @@
     <message>
         <location filename="../../fn.cpp" line="3562"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Κλείσιμο</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1707"/>
         <location filename="../../fn.cpp" line="1730"/>
         <source>Save As...</source>
-        <translation type="unfinished"></translation>
+        <translation>Αποθήκευση ως...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1432"/>
@@ -1097,7 +1097,7 @@
         <location filename="../../fn.cpp" line="4488"/>
         <location filename="../../fn.cpp" line="4759"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Όλα τα αρχεία</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2778"/>
@@ -1127,7 +1127,7 @@
         <location filename="../../fn.cpp" line="6055"/>
         <location filename="../../fn.cpp" line="6153"/>
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation>Εντάξει</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2982"/>
@@ -1151,18 +1151,18 @@
     <message>
         <location filename="../../fn.cpp" line="3549"/>
         <source>%1 Matches</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 αντιστοιχίες</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3551"/>
         <source>One Match</source>
-        <translation type="unfinished"></translation>
+        <translation>Μία αντιστοιχία</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3553"/>
         <location filename="../../fn.cpp" line="3920"/>
         <source>No Match</source>
-        <translation type="unfinished"></translation>
+        <translation>Καμία αντιστοιχία</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3719"/>
@@ -1188,7 +1188,7 @@
     <message>
         <location filename="../../fn.cpp" line="4292"/>
         <source>Insert Link</source>
-        <translation type="unfinished"></translation>
+        <translation>Εισαγωγή συνδέσμου</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5998"/>
@@ -1269,7 +1269,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="2777"/>
         <source>Deletion</source>
-        <translation type="unfinished"></translation>
+        <translation>Διαγραφή</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2895"/>
@@ -1304,7 +1304,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="3257"/>
         <source>Text color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Χρώμα κειμένου:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4037"/>
@@ -1336,7 +1336,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="4723"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Σφάλμα</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4724"/>
@@ -1377,12 +1377,12 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="5711"/>
         <source>Printing completed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Εκτύπωση ολοκληρωμένη.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5713"/>
         <source>Printing in progress...</source>
-        <translation type="unfinished"></translation>
+        <translation>Εκτύπωση σε εξέλιξη...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5732"/>
@@ -1392,7 +1392,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="5737"/>
         <source>Export:</source>
-        <translation type="unfinished"></translation>
+        <translation>Εξαγωγή:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5738"/>
@@ -1439,7 +1439,7 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="6022"/>
         <source>Set Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Ορισμός κωδικού πρόσβασης</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6031"/>
@@ -1460,7 +1460,7 @@ Do you want to replace it?
         <location filename="../../fn.cpp" line="6135"/>
         <location filename="../../fn.cpp" line="6143"/>
         <source>Enter Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Εισαγωγή κωδικού πρόσβασης</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6215"/>
@@ -1480,18 +1480,18 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="6256"/>
         <source>Author</source>
-        <translation type="unfinished"></translation>
+        <translation>Συντάκτης</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6258"/>
         <location filename="../../fn.cpp" line="6259"/>
         <source>About FeatherNotes</source>
-        <translation type="unfinished"></translation>
+        <translation>Σχετικά με το FeatherNotes</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6258"/>
         <source>Translators</source>
-        <translation type="unfinished"></translation>
+        <translation>Μεταφραστές</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6442"/>
@@ -1536,13 +1536,13 @@ Do you want to replace it?
     <message>
         <location filename="../../lineedit.cpp" line="35"/>
         <source>Clear text (Ctrl+K)</source>
-        <translation type="unfinished"></translation>
+        <translation>Εκκαθάριση κειμένου (Ctrl+K)</translation>
     </message>
     <message>
         <location filename="../../lineedit.cpp" line="81"/>
         <source>Ctrl+K</source>
         <comment>Clear text</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+K</translation>
     </message>
 </context>
 <context>
@@ -1550,12 +1550,12 @@ Do you want to replace it?
     <message>
         <location filename="../../prefDialog.ui" line="14"/>
         <source>Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Προτιμήσεις</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="27"/>
         <source>Window</source>
-        <translation type="unfinished"></translation>
+        <translation>Παράθυρο</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="36"/>
@@ -1579,7 +1579,7 @@ Uncheck to set a fixed size!</source>
         <location filename="../../prefDialog.ui" line="58"/>
         <location filename="../../prefDialog.ui" line="72"/>
         <source> px</source>
-        <translation type="unfinished"></translation>
+        <translation> px</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="97"/>
@@ -1673,7 +1673,7 @@ a menu button appears on the toolbar.</source>
     <message>
         <location filename="../../prefDialog.ui" line="228"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Κείμενο</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="237"/>
