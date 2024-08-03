@@ -603,7 +603,7 @@
     <message>
         <location filename="../../fn.ui" line="943"/>
         <source>&amp;Wrap Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Αναδίπλωση γραμμών</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="946"/>
@@ -760,7 +760,7 @@
     <message>
         <location filename="../../fn.ui" line="1124"/>
         <source>Move &amp;Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Μετακίνηση &amp;Αριστερά</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1127"/>
@@ -770,7 +770,7 @@
     <message>
         <location filename="../../fn.ui" line="1135"/>
         <source>Move &amp;Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Μετακίνηση &amp;Δεξιά</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1138"/>
@@ -840,7 +840,7 @@
     <message>
         <location filename="../../fn.ui" line="1204"/>
         <source>Paste &amp;HTML</source>
-        <translation type="unfinished"></translation>
+        <translation>Επικόλληση &amp;HTML</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1207"/>
@@ -850,7 +850,7 @@
     <message>
         <location filename="../../fn.ui" line="1215"/>
         <source>&amp;Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ετικέτες</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1218"/>
@@ -860,7 +860,7 @@
     <message>
         <location filename="../../fn.ui" line="1226"/>
         <source>Insert Lin&amp;k</source>
-        <translation type="unfinished"></translation>
+        <translation>Εισαγωγή συν&amp;δέσμου</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1229"/>
@@ -870,7 +870,7 @@
     <message>
         <location filename="../../fn.ui" line="1234"/>
         <source>C&amp;opy Link</source>
-        <translation type="unfinished"></translation>
+        <translation>Α&amp;ντιγραφή συνδέσμου</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1242"/>
@@ -905,7 +905,7 @@
     <message>
         <location filename="../../fn.ui" line="1270"/>
         <source>Merge Cells</source>
-        <translation type="unfinished"></translation>
+        <translation>Συγχώνευση κελιών</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1275"/>
@@ -920,7 +920,7 @@
     <message>
         <location filename="../../fn.ui" line="1288"/>
         <source>Export &amp;HTML</source>
-        <translation type="unfinished"></translation>
+        <translation>Εξαγωγή &amp;HTML</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1293"/>
@@ -930,7 +930,7 @@
     <message>
         <location filename="../../fn.ui" line="1304"/>
         <source>RTL</source>
-        <translation type="unfinished"></translation>
+        <translation>RTL</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1307"/>
@@ -940,7 +940,7 @@
     <message>
         <location filename="../../fn.ui" line="1318"/>
         <source>LTR</source>
-        <translation type="unfinished"></translation>
+        <translation>LTR</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1321"/>
@@ -977,23 +977,23 @@
     <message>
         <location filename="../../fn.ui" line="1356"/>
         <source>Document &amp;Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Χρώματα εγγράφου</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1364"/>
         <location filename="../../fn.ui" line="1367"/>
         <source>Paste Date and Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Επικόλληση ημερομηνίας και ώρας</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1372"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Εκκαθάριση</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2950"/>
         <source>Node Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Εικονίδιο κόμβου</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="674"/>
@@ -1016,14 +1016,14 @@
         <location filename="../../fn.cpp" line="2781"/>
         <location filename="../../fn.cpp" line="4728"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Ναι</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="919"/>
         <location filename="../../fn.cpp" line="2782"/>
         <location filename="../../fn.cpp" line="4729"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Όχι</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1010"/>
@@ -1087,7 +1087,7 @@
         <location filename="../../fn.cpp" line="1709"/>
         <location filename="../../fn.cpp" line="1732"/>
         <source>FeatherNotes documents</source>
-        <translation type="unfinished"></translation>
+        <translation>έγγραφα FeatherNotes</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1432"/>
@@ -1102,18 +1102,19 @@
     <message>
         <location filename="../../fn.cpp" line="2778"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Delete this node?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Διαγραφή αυτού του κόμβου;&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2779"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;i&gt;Warning!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
 &lt;center&gt;This action cannot be undone.&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;i&gt;Προειδοποίηση!&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
+&lt;center&gt;Αυτή η ενέργεια δε μπορεί να αναιρεθεί.&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2885"/>
         <source>Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Ετικέτες</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2900"/>
@@ -1168,22 +1169,22 @@
         <location filename="../../fn.cpp" line="3719"/>
         <location filename="../../fn.cpp" line="3772"/>
         <source>Replacement</source>
-        <translation type="unfinished"></translation>
+        <translation>Αντικατάσταση</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4027"/>
         <source>No Replacement</source>
-        <translation type="unfinished"></translation>
+        <translation>Χωρίς αντικατάσταση</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4029"/>
         <source>One Replacement</source>
-        <translation type="unfinished"></translation>
+        <translation>Μία αντικατάσταση</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4032"/>
         <source>%1 Replacements</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 αντικαταστάσεις</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4292"/>
@@ -1193,7 +1194,7 @@
     <message>
         <location filename="../../fn.cpp" line="5998"/>
         <source>HTML Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Αρχεία HTML</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2958"/>
@@ -1228,7 +1229,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="965"/>
         <source>New Node</source>
-        <translation type="unfinished"></translation>
+        <translation>Νέος κόμβος</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1608"/>
@@ -1244,7 +1245,7 @@ Please disable tray in Preferences.</source>
         <location filename="../../fn.cpp" line="5964"/>
         <location filename="../../fn.cpp" line="5991"/>
         <source>Untitled</source>
-        <translation type="unfinished"></translation>
+        <translation>Άτιτλο</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2156"/>
@@ -1259,12 +1260,12 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="2608"/>
         <source>Select Text Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Επιλογή χρώματος κειμένου</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2640"/>
         <source>Select Background Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Επιλογή χρώματος παρασκηνίου</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2777"/>
@@ -1279,7 +1280,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="3151"/>
         <source>Select Document Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Επιλογή γραμματοσειράς εγγράφου</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3213"/>
@@ -1299,7 +1300,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="3251"/>
         <source>Background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Χρώμα παρασκηνίου:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3257"/>
@@ -1321,7 +1322,7 @@ Please disable tray in Preferences.</source>
         <location filename="../../fn.cpp" line="4385"/>
         <location filename="../../fn.cpp" line="4563"/>
         <source>%</source>
-        <translation type="unfinished"></translation>
+        <translation>%</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4554"/>
@@ -1331,7 +1332,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="4691"/>
         <source>untitled</source>
-        <translation type="unfinished"></translation>
+        <translation>άτιτλο</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4723"/>
@@ -1372,7 +1373,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="5705"/>
         <source>Print Document</source>
-        <translation type="unfinished"></translation>
+        <translation>Εκτύπωση εγγράφου</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5711"/>
@@ -1417,24 +1418,26 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="5772"/>
         <source>Select path</source>
-        <translation type="unfinished"></translation>
+        <translation>Επιλογή διαδρομής</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5813"/>
         <source>Question</source>
-        <translation type="unfinished"></translation>
+        <translation>Ερώτηση</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5814"/>
         <source>The file already exists.
 Do you want to replace it?
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Το αρχείο υπάρχει ήδη.
+Θέλετε να το αντικαταστήσετε;
+</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5996"/>
         <source>Save HTML As...</source>
-        <translation type="unfinished"></translation>
+        <translation>Αποθήκευση HTML ως...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6022"/>
@@ -1568,12 +1571,12 @@ Uncheck to set a fixed size!</source>
     <message>
         <location filename="../../prefDialog.ui" line="42"/>
         <source>Remember window &amp;size</source>
-        <translation type="unfinished"></translation>
+        <translation>Απομνημόνευση παραθύρου &amp;μεγέθους</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="51"/>
         <source>Start with this size: </source>
-        <translation type="unfinished"></translation>
+        <translation>Εκκίνηση με αυτό το μέγεθος: </translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="58"/>
@@ -1606,7 +1609,7 @@ with some window managers.</source>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>
         <source>Save &amp;position</source>
-        <translation type="unfinished"></translation>
+        <translation>Αποθήκευση &amp;θέσης</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="124"/>
@@ -1721,7 +1724,7 @@ Takes effect after closing this dialog.</source>
     <message>
         <location filename="../../prefDialog.ui" line="283"/>
         <source>Date and time format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Μορφή ημερομηνίας και ώρας:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="307"/>
@@ -1731,7 +1734,7 @@ Takes effect after closing this dialog.</source>
     <message>
         <location filename="../../prefDialog.ui" line="314"/>
         <source> minute(s)</source>
-        <translation type="unfinished"></translation>
+        <translation> λεπτό(ά)</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="348"/>
@@ -1743,7 +1746,7 @@ showing a warning if saving is not possible.</source>
     <message>
         <location filename="../../prefDialog.ui" line="353"/>
         <source>Save opened document on exiting</source>
-        <translation type="unfinished"></translation>
+        <translation>Αποθήκευση ανοιγμένου εγγράφου κατά την έξοδο</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="376"/>
@@ -1767,12 +1770,12 @@ name but ending with &quot;.aff&quot;.</source>
         <location filename="../../prefDialog.ui" line="408"/>
         <location filename="../../pref.cpp" line="647"/>
         <source>Add dictionary...</source>
-        <translation type="unfinished"></translation>
+        <translation>Προσθήκη λεξικού...</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="443"/>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Αρχεία</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="452"/>
@@ -1782,12 +1785,12 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../prefDialog.ui" line="464"/>
         <source>Number of recent files:</source>
-        <translation type="unfinished"></translation>
+        <translation>Αριθμός πρόσφατων αρχείων:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="496"/>
         <source>Open recent files separately</source>
-        <translation type="unfinished"></translation>
+        <translation>Άνοιγμα πρόσφατων αρχείων χωριστά</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="503"/>
@@ -1802,22 +1805,22 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../prefDialog.ui" line="530"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Συντομεύσεις</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="549"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Ενέργεια</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="554"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>Συντόμευση</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="562"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Προεπιλογή</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="340"/>
@@ -1833,7 +1836,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../pref.cpp" line="618"/>
         <source>Application restart is needed for changes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Χρειάζεται επανεκκίνηση της εφαρμογής για να τεθούν σε ισχύ οι αλλαγές.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="649"/>
@@ -1846,12 +1849,12 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../spellDialog.ui" line="25"/>
         <source>Unknown word:</source>
-        <translation type="unfinished"></translation>
+        <translation>Άγνωστη λέξη:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="51"/>
         <source>Add To Dictionary</source>
-        <translation type="unfinished"></translation>
+        <translation>Προσθήκη στο λεξικό</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="62"/>
@@ -1861,22 +1864,22 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../spellDialog.ui" line="87"/>
         <source>Ignore Once</source>
-        <translation type="unfinished"></translation>
+        <translation>Αγνόηση μια φορά</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="100"/>
         <source>Ignore All</source>
-        <translation type="unfinished"></translation>
+        <translation>Αγνόηση όλων</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="129"/>
         <source>Correct Once</source>
-        <translation type="unfinished"></translation>
+        <translation>Διόρθωση μια φορά</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="142"/>
         <source>Correct All</source>
-        <translation type="unfinished"></translation>
+        <translation>Διόρθωση όλων</translation>
     </message>
 </context>
 <context>
@@ -1884,7 +1887,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../helpDialog.ui" line="14"/>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Βοήθεια</translation>
     </message>
 </context>
 <context>
