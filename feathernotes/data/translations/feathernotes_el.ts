@@ -426,7 +426,7 @@
     <message>
         <location filename="../../fn.ui" line="743"/>
         <source>P&amp;rint with Sub-Nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Ε&amp;κτύπωση με δευτερεύοντες κόμβους</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="751"/>
@@ -548,7 +548,7 @@
     <message>
         <location filename="../../fn.ui" line="877"/>
         <source>&amp;Delete Node</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Διαγραφή κόμβου</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="880"/>
@@ -578,7 +578,7 @@
     <message>
         <location filename="../../fn.ui" line="910"/>
         <source>Re&amp;name Node</source>
-        <translation type="unfinished"></translation>
+        <translation>Μετ&amp;ονομασία κόμβου</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="913"/>
@@ -588,7 +588,7 @@
     <message>
         <location filename="../../fn.ui" line="918"/>
         <source>Tree Pr&amp;operties</source>
-        <translation type="unfinished"></translation>
+        <translation>Ιδ&amp;ιότητες δέντρου</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="921"/>
@@ -653,7 +653,7 @@
     <message>
         <location filename="../../fn.ui" line="1003"/>
         <source>Pr&amp;int All Nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Εκ&amp;τύπωση όλων των κόμβων</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1014"/>
@@ -956,7 +956,7 @@
     <message>
         <location filename="../../fn.ui" line="1337"/>
         <source>Node &amp;Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Εικονίδιο κόμβου</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1340"/>
@@ -1003,7 +1003,7 @@
     <message>
         <location filename="../../fn.cpp" line="914"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;New note?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Νέα σημείωση;&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="915"/>
@@ -1028,17 +1028,17 @@
     <message>
         <location filename="../../fn.cpp" line="1010"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Save changes?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Αποθήκευση αλλαγών;&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1012"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been modified.&lt;/i&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;i&gt;Το έγγραφο έχει τροποποιηθεί.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1014"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been removed.&lt;/i&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;i&gt;Το έγγραφο έχει αφαιρεθεί.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1019"/>
@@ -1069,7 +1069,7 @@
         <location filename="../../fn.cpp" line="1607"/>
         <location filename="../../fn.cpp" line="5901"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be saved!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Αδυναμία αποθήκευσης!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3562"/>
@@ -1141,13 +1141,13 @@
         <location filename="../../fn.cpp" line="3074"/>
         <location filename="../../fn.cpp" line="3107"/>
         <source>&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Κύριοι κόμβοι:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Όλοι οι κόμβοι:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3080"/>
         <location filename="../../fn.cpp" line="3113"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Σημείωση:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Κύριοι κόμβοι:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Όλοι οι κόμβοι:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3549"/>
@@ -1234,7 +1234,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="1608"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be opened!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Αδυναμία ανοίγματος!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1689"/>
@@ -1275,7 +1275,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="2895"/>
         <source>Tag(s) for this node</source>
-        <translation type="unfinished"></translation>
+        <translation>Ετικέτα(ες) για αυτό τον κόμβο</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3151"/>
@@ -1290,7 +1290,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="3238"/>
         <source>Set Document Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Ορισμός χρωμάτων εγγράφου</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3248"/>
@@ -1403,12 +1403,12 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="5740"/>
         <source>With all &amp;sub-nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Με όλους τους &amp;δευτερεύοντες κόμβους</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5741"/>
         <source>&amp;All nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Όλοι οι κόμβοι</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5753"/>
@@ -1457,7 +1457,7 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="6115"/>
         <source>&lt;center&gt;Passwords were different. Retry!&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;Οι κωδικοί πρόσβασης ήταν διαφορετικοί. Ξαναπροσπαθήστε!&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6135"/>
@@ -1468,17 +1468,17 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="6215"/>
         <source>&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;Εσφαλμένος κωδικός πρόσβασης. Ξαναπροσπαθήστε!&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6254"/>
         <source>A lightweight notes manager</source>
-        <translation type="unfinished"></translation>
+        <translation>Ένας ελαφρύς διαχειριστής σημειώσεων</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6255"/>
         <source>based on Qt</source>
-        <translation type="unfinished"></translation>
+        <translation>βασισμένος σε Qt</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6256"/>
@@ -1504,12 +1504,12 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="6458"/>
         <source>You need to add a Hunspell dictionary.</source>
-        <translation type="unfinished"></translation>
+        <translation>Χρειάζεται να προσθέσετε ένα λεξικό Hunspell.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6463"/>
         <source>The Hunspell dictionary does not exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>Το λεξικό Hunspell δεν υπάρχει.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6471"/>
@@ -1531,7 +1531,7 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="6257"/>
         <source>aka.</source>
-        <translation type="unfinished"></translation>
+        <translation>επίσης γνωστό ως</translation>
     </message>
 </context>
 <context>
@@ -1595,7 +1595,7 @@ Uncheck for a width ratio of 170/530.</source>
     <message>
         <location filename="../../prefDialog.ui" line="103"/>
         <source>Remember &amp;tree width</source>
-        <translation type="unfinished"></translation>
+        <translation>Απομνημόνευση πλάτους &amp;δέντρου</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="110"/>
@@ -1655,12 +1655,12 @@ the size of toolbar icons.</source>
     <message>
         <location filename="../../prefDialog.ui" line="183"/>
         <source>Small toolbar icons</source>
-        <translation type="unfinished"></translation>
+        <translation>Μικρά εικονίδια γραμμής εργαλείων</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="190"/>
         <source>Do not show t&amp;oolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Να μην εμφανίζεται η γραμμή ε&amp;ργαλείων</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="197"/>
@@ -1671,7 +1671,7 @@ a menu button appears on the toolbar.</source>
     <message>
         <location filename="../../prefDialog.ui" line="201"/>
         <source>Do not show &amp;menubar</source>
-        <translation type="unfinished"></translation>
+        <translation>Να μην εμφανίζεται η γραμμή &amp;μενού</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="228"/>
@@ -1681,7 +1681,7 @@ a menu button appears on the toolbar.</source>
     <message>
         <location filename="../../prefDialog.ui" line="237"/>
         <source>&amp;Wrap lines by default</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Αναδίπλωση γραμμών από προεπιλογή</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="244"/>
@@ -1764,7 +1764,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../prefDialog.ui" line="389"/>
         <source>Hunspell dictionary path:</source>
-        <translation type="unfinished"></translation>
+        <translation>Διαδρομή λεξικού Hunspell:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="408"/>
@@ -1780,7 +1780,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../prefDialog.ui" line="452"/>
         <source>Start with the last opened file</source>
-        <translation type="unfinished"></translation>
+        <translation>Εκκίνηση με το τελευταία ανοιγμένο αρχείο</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="464"/>
@@ -1841,7 +1841,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../pref.cpp" line="649"/>
         <source>Hunspell Dictionary Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Αρχεία λεξικού Hunspell</translation>
     </message>
 </context>
 <context>
@@ -1859,7 +1859,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../spellDialog.ui" line="62"/>
         <source>Replace with:</source>
-        <translation type="unfinished">Αντικατάσταση με:</translation>
+        <translation>Αντικατάσταση με:</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="87"/>
@@ -1896,7 +1896,7 @@ name but ending with &quot;.aff&quot;.</source>
         <location filename="../../domitem.cpp" line="100"/>
         <location filename="../../domitem.cpp" line="137"/>
         <source>New Node</source>
-        <translation type="unfinished"></translation>
+        <translation>Νέος κόμβος</translation>
     </message>
 </context>
 </TS>
