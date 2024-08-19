@@ -508,7 +508,7 @@
     <message>
         <location filename="../../fn.ui" line="833"/>
         <source>E&amp;xpand All</source>
-        <translation type="unfinished"></translation>
+        <translation>Α&amp;νάπτυξη όλων</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="836"/>
@@ -518,7 +518,7 @@
     <message>
         <location filename="../../fn.ui" line="844"/>
         <source>Collap&amp;se All</source>
-        <translation type="unfinished"></translation>
+        <translation>Σύμπτυ&amp;ξη όλων</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="847"/>
@@ -693,7 +693,7 @@
     <message>
         <location filename="../../fn.ui" line="1051"/>
         <source>Align center</source>
-        <translation type="unfinished"></translation>
+        <translation>Στοίχιση κέντρο</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1054"/>
@@ -709,7 +709,7 @@
     <message>
         <location filename="../../fn.ui" line="1068"/>
         <source>Align right</source>
-        <translation type="unfinished"></translation>
+        <translation>Στοίχιση δεξιά</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1071"/>
@@ -725,7 +725,7 @@
     <message>
         <location filename="../../fn.ui" line="1085"/>
         <source>Align left</source>
-        <translation type="unfinished"></translation>
+        <translation>Στοίχιση αριστερά</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1088"/>
@@ -890,7 +890,7 @@
     <message>
         <location filename="../../fn.ui" line="1255"/>
         <source>Delete Row</source>
-        <translation type="unfinished"></translation>
+        <translation>Διαγραφή γραμμής</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1260"/>
@@ -900,7 +900,7 @@
     <message>
         <location filename="../../fn.ui" line="1265"/>
         <source>Delete Column</source>
-        <translation type="unfinished"></translation>
+        <translation>Διαγραφή στήλης</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1270"/>
@@ -967,7 +967,7 @@
         <location filename="../../fn.ui" line="1345"/>
         <location filename="../../fn.ui" line="1348"/>
         <source>Check Spelling</source>
-        <translation type="unfinished"></translation>
+        <translation>Έλεγχος ορθογραφίας</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1351"/>
@@ -1255,7 +1255,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="2169"/>
         <source>&amp;Center</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Κέντρο</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2608"/>
@@ -1358,17 +1358,17 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="4812"/>
         <source>Insert Table</source>
-        <translation type="unfinished"></translation>
+        <translation>Εισαγωγή πίνακα</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4818"/>
         <source>Rows:</source>
-        <translation type="unfinished"></translation>
+        <translation>Γραμμές:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4824"/>
         <source>Columns:</source>
-        <translation type="unfinished"></translation>
+        <translation>Στήλες:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5705"/>
@@ -1398,7 +1398,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="5738"/>
         <source>&amp;Current node</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Τρέχων κόμβος</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5740"/>
@@ -1413,7 +1413,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="5753"/>
         <source>Output file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Αρχείο εξαγωγής:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5772"/>
@@ -1447,12 +1447,12 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="6031"/>
         <source>Type password</source>
-        <translation type="unfinished"></translation>
+        <translation>Πληκτρολόγηση κωδικού πρόσβασης</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6043"/>
         <source>Retype password</source>
-        <translation type="unfinished"></translation>
+        <translation>Πληκτρολόγηση κωδικού πρόσβασης ξανά</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6115"/>
@@ -1499,7 +1499,7 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="6442"/>
         <source>See Preferences → Text → Spell Checking!</source>
-        <translation type="unfinished"></translation>
+        <translation>Δείτε Προτιμήσεις → Κείμενο → Ορθογραφικός έλεγχος!</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6458"/>
@@ -1526,7 +1526,7 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="6528"/>
         <source>Spell Checking</source>
-        <translation type="unfinished"></translation>
+        <translation>Ορθογραφικός έλεγχος</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6257"/>
@@ -1693,7 +1693,9 @@ a menu button appears on the toolbar.</source>
         <source>This covers parentheses, braces, brackets and quotes.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Αυτό περιλαμβάνει παρενθέσεις, άγκιστρα, αγκύλες και εισαγωγικά.
+
+Χρειάζεται επανεκκίνηση του FeatherNotes για να λάβει χώρα.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="256"/>
@@ -1710,7 +1712,7 @@ the user is typing and under proper circumstances.</source>
     <message>
         <location filename="../../prefDialog.ui" line="268"/>
         <source>&amp;Replace some characters while typing</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Αντικατάσταση ορισμένων χαρακτήρων κατά την πληκτρολόγηση</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="277"/>
@@ -1729,7 +1731,7 @@ Takes effect after closing this dialog.</source>
     <message>
         <location filename="../../prefDialog.ui" line="307"/>
         <source>&amp;Auto-save every</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Αυτόματη αποθήκευση ανά</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="314"/>
@@ -1751,7 +1753,7 @@ showing a warning if saving is not possible.</source>
     <message>
         <location filename="../../prefDialog.ui" line="376"/>
         <source>Spell Checking</source>
-        <translation type="unfinished"></translation>
+        <translation>Ορθογραφικός έλεγχος</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="384"/>
@@ -1795,12 +1797,12 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../prefDialog.ui" line="503"/>
         <source>By default, all nodes are expanded on opening a document.</source>
-        <translation type="unfinished"></translation>
+        <translation>Από προεπιλογή, όλοι οι κόμβοι αναπτύσσονται κατά το άνοιγμα ενός εγγράφου.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="506"/>
         <source>Remember expanded states of nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Απομνημόνευση κατάστασης ανάπτυξης των κόμβων</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="530"/>
