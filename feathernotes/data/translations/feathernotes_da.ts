@@ -1195,7 +1195,7 @@
     <message>
         <location filename="../../fn.cpp" line="5998"/>
         <source>HTML Files</source>
-        <translation type="unfinished"></translation>
+        <translation>HTML-filer</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2958"/>
