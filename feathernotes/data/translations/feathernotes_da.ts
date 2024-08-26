@@ -1350,52 +1350,53 @@ Deaktiver venligst bakke i Præferencer.</translation>
         <location filename="../../fn.cpp" line="4725"/>
         <source>&lt;center&gt;Maybe you did not choose a proper extension&lt;/center&gt;
 &lt;center&gt;or do not have write permission.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;Måske har du ikke valgt en korrekt udvidelse&lt;/center&gt;
+&lt;center&gt;eller har ikke skrivetilladelse.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4757"/>
         <source>Save Image As...</source>
-        <translation type="unfinished"></translation>
+        <translation>Gem billede som...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4812"/>
         <source>Insert Table</source>
-        <translation type="unfinished"></translation>
+        <translation>Indsæt tabel</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4818"/>
         <source>Rows:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rækker:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4824"/>
         <source>Columns:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolonner:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5705"/>
         <source>Print Document</source>
-        <translation type="unfinished"></translation>
+        <translation>Udskriv dokument</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5711"/>
         <source>Printing completed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Udskrift udført.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5713"/>
         <source>Printing in progress...</source>
-        <translation type="unfinished"></translation>
+        <translation>Udskrift i gang...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5732"/>
         <source>Export HTML</source>
-        <translation type="unfinished"></translation>
+        <translation>Eksportér som HTML</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5737"/>
         <source>Export:</source>
-        <translation type="unfinished"></translation>
+        <translation>Eksportér:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5738"/>
@@ -1410,128 +1411,130 @@ Deaktiver venligst bakke i Præferencer.</translation>
     <message>
         <location filename="../../fn.cpp" line="5741"/>
         <source>&amp;All nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Alle knuder</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5753"/>
         <source>Output file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Uddatafil:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5772"/>
         <source>Select path</source>
-        <translation type="unfinished"></translation>
+        <translation>Vælg sti</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5813"/>
         <source>Question</source>
-        <translation type="unfinished"></translation>
+        <translation>Spørgsmål</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5814"/>
         <source>The file already exists.
 Do you want to replace it?
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Filen findes allerede.
+Vil du udskifte den?
+</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5996"/>
         <source>Save HTML As...</source>
-        <translation type="unfinished"></translation>
+        <translation>Gem HTML som...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6022"/>
         <source>Set Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Indstil adgangskode</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6031"/>
         <source>Type password</source>
-        <translation type="unfinished"></translation>
+        <translation>Indtast adgangskode</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6043"/>
         <source>Retype password</source>
-        <translation type="unfinished"></translation>
+        <translation>Indtast adgangskoden igen</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6115"/>
         <source>&lt;center&gt;Passwords were different. Retry!&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;Adgangskoder var forskellige. Prøv igen!&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6135"/>
         <location filename="../../fn.cpp" line="6143"/>
         <source>Enter Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Indtast adgangskode</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6215"/>
         <source>&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;Forkert adgangskode. Prøv igen!&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6254"/>
         <source>A lightweight notes manager</source>
-        <translation type="unfinished"></translation>
+        <translation>En letvægts notehåndteringsprogram</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6255"/>
         <source>based on Qt</source>
-        <translation type="unfinished"></translation>
+        <translation>baseret på Qt</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6256"/>
         <source>Author</source>
-        <translation type="unfinished"></translation>
+        <translation>Udvikler</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6258"/>
         <location filename="../../fn.cpp" line="6259"/>
         <source>About FeatherNotes</source>
-        <translation type="unfinished"></translation>
+        <translation>Om FeatherNotes</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6258"/>
         <source>Translators</source>
-        <translation type="unfinished"></translation>
+        <translation>Oversættere</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6442"/>
         <source>See Preferences → Text → Spell Checking!</source>
-        <translation type="unfinished"></translation>
+        <translation>Se Indstillinger → Tekst → Stavekontrol!</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6458"/>
         <source>You need to add a Hunspell dictionary.</source>
-        <translation type="unfinished"></translation>
+        <translation>Du skal tilføje en Hunspell-ordbog.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6463"/>
         <source>The Hunspell dictionary does not exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hunspell-ordbogen findes ikke.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6471"/>
         <source>The Hunspell dictionary is not accompanied by an affix file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hunspell-ordbogen er ikke ledsaget af en affix-fil.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6489"/>
         <location filename="../../fn.cpp" line="6504"/>
         <location filename="../../fn.cpp" line="6516"/>
         <source>No misspelling from text cursor.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ingen stavefejl i teksten fra markøren.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6528"/>
         <source>Spell Checking</source>
-        <translation type="unfinished"></translation>
+        <translation>Stavekontrol</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6257"/>
         <source>aka.</source>
-        <translation type="unfinished"></translation>
+        <translation>også kendt som</translation>
     </message>
 </context>
 <context>
@@ -1539,13 +1542,13 @@ Do you want to replace it?
     <message>
         <location filename="../../lineedit.cpp" line="35"/>
         <source>Clear text (Ctrl+K)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ryd tekst (Ctrl+K)</translation>
     </message>
     <message>
         <location filename="../../lineedit.cpp" line="81"/>
         <source>Ctrl+K</source>
         <comment>Clear text</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ctrl+K</translation>
     </message>
 </context>
 <context>
@@ -1553,12 +1556,12 @@ Do you want to replace it?
     <message>
         <location filename="../../prefDialog.ui" line="14"/>
         <source>Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Indstillinger</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="27"/>
         <source>Window</source>
-        <translation type="unfinished"></translation>
+        <translation>Vindue</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="36"/>
@@ -1571,18 +1574,18 @@ Uncheck to set a fixed size!</source>
     <message>
         <location filename="../../prefDialog.ui" line="42"/>
         <source>Remember window &amp;size</source>
-        <translation type="unfinished"></translation>
+        <translation>Husk vindues&amp;størrelse</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="51"/>
         <source>Start with this size: </source>
-        <translation type="unfinished"></translation>
+        <translation>Start med denne størrelse: </translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="58"/>
         <location filename="../../prefDialog.ui" line="72"/>
         <source> px</source>
-        <translation type="unfinished"></translation>
+        <translation> px</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="97"/>
