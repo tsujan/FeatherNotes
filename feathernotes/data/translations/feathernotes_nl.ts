@@ -1055,9 +1055,9 @@
         <location filename="../../fn.cpp" line="4389"/>
         <location filename="../../fn.cpp" line="4567"/>
         <location filename="../../fn.cpp" line="4830"/>
-        <location filename="../../fn.cpp" line="5775"/>
-        <location filename="../../fn.cpp" line="6054"/>
-        <location filename="../../fn.cpp" line="6152"/>
+        <location filename="../../fn.cpp" line="5781"/>
+        <location filename="../../fn.cpp" line="6060"/>
+        <location filename="../../fn.cpp" line="6158"/>
         <source>Cancel</source>
         <translation>Annuleren</translation>
     </message>
@@ -1068,7 +1068,7 @@
     </message>
     <message>
         <location filename="../../fn.cpp" line="1607"/>
-        <location filename="../../fn.cpp" line="5901"/>
+        <location filename="../../fn.cpp" line="5907"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be saved!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Opslaan mislukt!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
@@ -1125,9 +1125,9 @@
         <location filename="../../fn.cpp" line="4390"/>
         <location filename="../../fn.cpp" line="4568"/>
         <location filename="../../fn.cpp" line="4831"/>
-        <location filename="../../fn.cpp" line="5777"/>
-        <location filename="../../fn.cpp" line="6055"/>
-        <location filename="../../fn.cpp" line="6153"/>
+        <location filename="../../fn.cpp" line="5783"/>
+        <location filename="../../fn.cpp" line="6061"/>
+        <location filename="../../fn.cpp" line="6159"/>
         <source>OK</source>
         <translation>Oké</translation>
     </message>
@@ -1193,7 +1193,7 @@
         <translation>Link invoegen</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5998"/>
+        <location filename="../../fn.cpp" line="6004"/>
         <source>HTML Files</source>
         <translation>Html-bestanden</translation>
     </message>
@@ -1240,12 +1240,12 @@ Schakel de systeemvakoptie uit in de instellingen.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1689"/>
-        <location filename="../../fn.cpp" line="5616"/>
-        <location filename="../../fn.cpp" line="5625"/>
-        <location filename="../../fn.cpp" line="5764"/>
-        <location filename="../../fn.cpp" line="5955"/>
-        <location filename="../../fn.cpp" line="5964"/>
-        <location filename="../../fn.cpp" line="5991"/>
+        <location filename="../../fn.cpp" line="5622"/>
+        <location filename="../../fn.cpp" line="5631"/>
+        <location filename="../../fn.cpp" line="5770"/>
+        <location filename="../../fn.cpp" line="5961"/>
+        <location filename="../../fn.cpp" line="5970"/>
+        <location filename="../../fn.cpp" line="5997"/>
         <source>Untitled</source>
         <translation>Naamloos</translation>
     </message>
@@ -1374,62 +1374,62 @@ Schakel de systeemvakoptie uit in de instellingen.</translation>
         <translation>Aantal kolommen:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5705"/>
+        <location filename="../../fn.cpp" line="5711"/>
         <source>Print Document</source>
         <translation>Bestand afdrukken</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5711"/>
+        <location filename="../../fn.cpp" line="5717"/>
         <source>Printing completed.</source>
         <translation>Het afdrukken is voltooid.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5713"/>
+        <location filename="../../fn.cpp" line="5719"/>
         <source>Printing in progress...</source>
         <translation>Bezig met afdrukken…</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5732"/>
+        <location filename="../../fn.cpp" line="5738"/>
         <source>Export HTML</source>
         <translation>Exporteren naar html</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5737"/>
+        <location filename="../../fn.cpp" line="5743"/>
         <source>Export:</source>
         <translation>Exporteren:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5738"/>
+        <location filename="../../fn.cpp" line="5744"/>
         <source>&amp;Current node</source>
         <translation>&amp;Huidige notitie</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5740"/>
+        <location filename="../../fn.cpp" line="5746"/>
         <source>With all &amp;sub-nodes</source>
         <translation>Inclu&amp;sief alle onderliggende notities</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5741"/>
+        <location filename="../../fn.cpp" line="5747"/>
         <source>&amp;All nodes</source>
         <translation>&amp;Alle notities</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5753"/>
+        <location filename="../../fn.cpp" line="5759"/>
         <source>Output file:</source>
         <translation>Uitvoerbestand:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5772"/>
+        <location filename="../../fn.cpp" line="5778"/>
         <source>Select path</source>
         <translation>Kies een locatie</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5813"/>
+        <location filename="../../fn.cpp" line="5819"/>
         <source>Question</source>
         <translation>Vraag</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5814"/>
+        <location filename="../../fn.cpp" line="5820"/>
         <source>The file already exists.
 Do you want to replace it?
 </source>
@@ -1438,101 +1438,101 @@ Wilt u het vervangen?
 </translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5996"/>
+        <location filename="../../fn.cpp" line="6002"/>
         <source>Save HTML As...</source>
         <translation>Html opslaan als…</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6022"/>
+        <location filename="../../fn.cpp" line="6028"/>
         <source>Set Password</source>
         <translation>Wachtwoord instellen</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6031"/>
+        <location filename="../../fn.cpp" line="6037"/>
         <source>Type password</source>
         <translation>Typ het gewenste wachtwoord</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6043"/>
+        <location filename="../../fn.cpp" line="6049"/>
         <source>Retype password</source>
         <translation>Typ het wachtwoord opnieuw</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6115"/>
+        <location filename="../../fn.cpp" line="6121"/>
         <source>&lt;center&gt;Passwords were different. Retry!&lt;/center&gt;</source>
         <translation>&lt;center&gt;De wachtwoorden komen niet overeen. Probeer het opnieuw!&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6135"/>
-        <location filename="../../fn.cpp" line="6143"/>
+        <location filename="../../fn.cpp" line="6141"/>
+        <location filename="../../fn.cpp" line="6149"/>
         <source>Enter Password</source>
         <translation>Voer het wachtwoord in</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6215"/>
+        <location filename="../../fn.cpp" line="6221"/>
         <source>&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</source>
         <translation>&lt;center&gt;Het wachtwoord is onjuist. Probeer het opnieuw!&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6254"/>
+        <location filename="../../fn.cpp" line="6260"/>
         <source>A lightweight notes manager</source>
         <translation>Een lichte notitiebeheerder</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6255"/>
+        <location filename="../../fn.cpp" line="6261"/>
         <source>based on Qt</source>
         <translation>gemaakt met Qt</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6256"/>
+        <location filename="../../fn.cpp" line="6262"/>
         <source>Author</source>
         <translation>Maker</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6258"/>
-        <location filename="../../fn.cpp" line="6259"/>
+        <location filename="../../fn.cpp" line="6264"/>
+        <location filename="../../fn.cpp" line="6265"/>
         <source>About FeatherNotes</source>
         <translation>Over FeatherNotes</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6258"/>
+        <location filename="../../fn.cpp" line="6264"/>
         <source>Translators</source>
         <translation>Vertalers</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6442"/>
+        <location filename="../../fn.cpp" line="6448"/>
         <source>See Preferences → Text → Spell Checking!</source>
         <translation>Ga hiervoor naar Alle instellingen → Tekst → Spellingcontrole!</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6458"/>
+        <location filename="../../fn.cpp" line="6464"/>
         <source>You need to add a Hunspell dictionary.</source>
         <translation>U dient een Hunspell-woordenboek toe te voegen.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6463"/>
+        <location filename="../../fn.cpp" line="6469"/>
         <source>The Hunspell dictionary does not exist.</source>
         <translation>Dit Hunspell-woordenboek bestaat niet.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6471"/>
+        <location filename="../../fn.cpp" line="6477"/>
         <source>The Hunspell dictionary is not accompanied by an affix file.</source>
         <translation>Dit Hunspell-woordenboek bevat geen affix-bestand.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6489"/>
-        <location filename="../../fn.cpp" line="6504"/>
-        <location filename="../../fn.cpp" line="6516"/>
+        <location filename="../../fn.cpp" line="6495"/>
+        <location filename="../../fn.cpp" line="6510"/>
+        <location filename="../../fn.cpp" line="6522"/>
         <source>No misspelling from text cursor.</source>
         <translation>Er zijn vanaf de cursorpositie geen spelfouten aangetroffen.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6528"/>
+        <location filename="../../fn.cpp" line="6534"/>
         <source>Spell Checking</source>
         <translation>Spellingcontrole</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6257"/>
+        <location filename="../../fn.cpp" line="6263"/>
         <source>aka.</source>
         <translation>ook bekend als</translation>
     </message>

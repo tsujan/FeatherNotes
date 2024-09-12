@@ -5019,9 +5019,14 @@ void FN::makeTreeTransparent (bool trans)
             {
                 QPalette p = ui->treeView->palette();
                 p.setColor (QPalette::Base, QColor (Qt::transparent));
-                p.setColor (QPalette::Text, p.color (QPalette::WindowText));
+                p.setColor (QPalette::Active, QPalette::Text,
+                            p.color (QPalette::Active, QPalette::WindowText));
+                p.setColor (QPalette::Inactive, QPalette::Text,
+                            p.color (QPalette::Inactive, QPalette::WindowText));
                 ui->treeView->setPalette (p);
                 ui->treeView->viewport()->setAutoFillBackground (false);
+                // for setting the text color after a change in the palette
+                ui->treeView->installEventFilter(this);
             }
         }
     }
@@ -5035,6 +5040,7 @@ void FN::makeTreeTransparent (bool trans)
             {
                 ui->treeView->setPalette (QPalette());
                 ui->treeView->viewport()->setAutoFillBackground (true);
+                ui->treeView->removeEventFilter(this);
             }
         }
     }
@@ -6626,23 +6632,31 @@ void FN::checkSpelling()
 }
 #endif
 /*************************/
-bool FN::event (QEvent *event)
+bool FN::eventFilter(QObject *object, QEvent *event)
 {
-    if (event->type() == QEvent::StyleChange || event->type() == QEvent::PaletteChange)
+    /* When the palette or style changes, the text color of a transparent side pane
+       should be set to its window text color again because the latter may have changed. */
+    if (transparentTree_ && object == ui->treeView
+        && (event->type() == QEvent::PaletteChange || event->type() == QEvent::StyleChange))
     {
-        /* When the style changes in runtime, the text color of a transparent side pane
-           should be set to its window text color again because the latter may have changed.
-           However, at least with Qt6, the color setting needs to be delayed. */
-        QTimer::singleShot (0, this, [this]() {
-            if (transparentTree_ && ui->treeView->viewport())
+        QTimer::singleShot(0, this, [this]() {
+            QPalette p = ui->treeView->palette();
+            if (p.color (QPalette::Text) != p.color (QPalette::WindowText))
             {
-                QPalette p = ui->treeView->palette();
-                p.setColor (QPalette::Text, p.color (QPalette::WindowText));
+                p.setColor (QPalette::Active, QPalette::Text,
+                            p.color (QPalette::Active, QPalette::WindowText));
+                p.setColor (QPalette::Inactive, QPalette::Text,
+                            p.color (QPalette::Inactive, QPalette::WindowText));
                 ui->treeView->setPalette (p);
             }
         });
     }
-    else if (event->type() == QEvent::WindowDeactivate)
+    return QMainWindow::eventFilter (object, event);
+}
+/*************************/
+bool FN::event (QEvent *event)
+{
+    if (event->type() == QEvent::WindowDeactivate)
     {
         /* A workaround for window deactivation on clicking the tray icon under Wayland. */
         if (static_cast<FNSingleton*>(qApp)->isWayland())
@@ -6655,11 +6669,11 @@ bool FN::event (QEvent *event)
             deactivateTimer_->start(500);
         }
     }
-    /* NOTE: This is a workaround for an old Qt bug, because of which,
-             QTimer may not work after resuming from suspend or hibernation. */
     else if (event->type() == QEvent::WindowActivate
              && timer_->isActive() && timer_->remainingTime() <= 0)
     {
+        /*  A workaround for an old Qt bug, because of which, QTimer
+            may not work after resuming from suspend or hibernation. */
         if (autoSave_ >= 1)
         {
             autoSaving();

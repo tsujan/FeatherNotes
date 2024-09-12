@@ -235,6 +235,9 @@ public:
     }
 #endif
 
+protected:
+    bool eventFilter (QObject *object, QEvent *event) override;
+
 private slots:
     bool close();
     void checkTray();

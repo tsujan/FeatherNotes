@@ -1,6 +1,7 @@
 V1.3.1
 ---------
  * Check the existence of "gio" before using it for opening URLs.
+ * Fixed the text color of the side-pane afrer a style change with Qt ≥ 6.7.2.
 
 V1.3.0
 ---------
