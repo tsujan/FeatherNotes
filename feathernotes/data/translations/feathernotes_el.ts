@@ -492,13 +492,13 @@
     <message>
         <location filename="../../fn.ui" line="819"/>
         <source>E&amp;mbed Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Ε&amp;νσωμάτωση εικόνας</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="822"/>
         <location filename="../../fn.cpp" line="4365"/>
         <source>Embed Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Ενσωμάτωση εικόνας</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="825"/>
@@ -613,7 +613,7 @@
     <message>
         <location filename="../../fn.ui" line="960"/>
         <source>&amp;Auto-Indentation</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Αυτοματοποιημένη εσοχή</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="963"/>
@@ -658,12 +658,12 @@
     <message>
         <location filename="../../fn.ui" line="1014"/>
         <source>Superscrip&amp;t</source>
-        <translation type="unfinished"></translation>
+        <translation>Εκθέτη&amp;ς</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1017"/>
         <source>Superscript</source>
-        <translation type="unfinished"></translation>
+        <translation>Εκθέτης</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1020"/>
@@ -673,12 +673,12 @@
     <message>
         <location filename="../../fn.ui" line="1031"/>
         <source>Subscri&amp;pt</source>
-        <translation type="unfinished"></translation>
+        <translation>Δείκτ&amp;ης</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1034"/>
         <source>Subscript</source>
-        <translation type="unfinished"></translation>
+        <translation>Δείκτης</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1037"/>
@@ -688,7 +688,7 @@
     <message>
         <location filename="../../fn.ui" line="1048"/>
         <source>C&amp;enter</source>
-        <translation type="unfinished"></translation>
+        <translation>Κ&amp;έντρο</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1051"/>
@@ -780,12 +780,12 @@
     <message>
         <location filename="../../fn.ui" line="1146"/>
         <source>h&amp;2</source>
-        <translation type="unfinished"></translation>
+        <translation>ε&amp;2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1149"/>
         <source>Header 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Επικεφαλίδα 2</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1152"/>
@@ -795,12 +795,12 @@
     <message>
         <location filename="../../fn.ui" line="1160"/>
         <source>h&amp;1</source>
-        <translation type="unfinished"></translation>
+        <translation>ε&amp;1</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1163"/>
         <source>Header 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Επικεφαλίδα 1</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1166"/>
@@ -810,12 +810,12 @@
     <message>
         <location filename="../../fn.ui" line="1174"/>
         <source>h&amp;3</source>
-        <translation type="unfinished"></translation>
+        <translation>ε&amp;3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1177"/>
         <source>Header 3</source>
-        <translation type="unfinished"></translation>
+        <translation>Επικεφαλίδα 3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1180"/>
@@ -835,7 +835,7 @@
     <message>
         <location filename="../../fn.ui" line="1196"/>
         <source>Scale I&amp;mage(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Κλιμάκωση ε&amp;ικόνας(ων)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1204"/>
@@ -875,7 +875,7 @@
     <message>
         <location filename="../../fn.ui" line="1242"/>
         <source>I&amp;nsert Table</source>
-        <translation type="unfinished"></translation>
+        <translation>Ε&amp;ισαγωγή πίνακα</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1245"/>
@@ -925,7 +925,7 @@
     <message>
         <location filename="../../fn.ui" line="1293"/>
         <source>Save Ima&amp;ge(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Αποθήκευση εικό&amp;νας(ων)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1304"/>
@@ -998,7 +998,7 @@
     <message>
         <location filename="../../fn.cpp" line="674"/>
         <source>&amp;Raise/Hide</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Έγερση/Απόκρυψη</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="914"/>
@@ -1009,7 +1009,8 @@
         <location filename="../../fn.cpp" line="915"/>
         <source>&lt;center&gt;&lt;i&gt;Do you really want to leave this document&lt;/i&gt;&lt;/center&gt;
 &lt;center&gt;&lt;i&gt;and create an empty one?&lt;/i&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;i&gt;Θέλετε πραγματικά να αφήσετε αυτό το έγγραφο&lt;/i&gt;&lt;/center&gt;
+&lt;center&gt;&lt;i&gt;και να δημιουργήσετε ένα κενό;&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="918"/>
@@ -1135,7 +1136,7 @@
         <location filename="../../fn.cpp" line="4488"/>
         <location filename="../../fn.cpp" line="4759"/>
         <source>Image Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Αρχεία εικόνας</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3074"/>
@@ -1200,31 +1201,32 @@
         <location filename="../../fn.cpp" line="2958"/>
         <location filename="../../fn.cpp" line="4374"/>
         <source>Image path</source>
-        <translation type="unfinished"></translation>
+        <translation>Διαδρομή εικόνας</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2962"/>
         <location filename="../../fn.cpp" line="4378"/>
         <source>Open image</source>
-        <translation type="unfinished"></translation>
+        <translation>Άνοιγμα εικόνας</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4386"/>
         <location filename="../../fn.cpp" line="4564"/>
         <source>Scaling percentage</source>
-        <translation type="unfinished"></translation>
+        <translation>Ποσοστό κλιμάκωσης</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2980"/>
         <location filename="../../fn.cpp" line="4486"/>
         <source>Open Image...</source>
-        <translation type="unfinished"></translation>
+        <translation>Άνοιγμα εικόνας...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="651"/>
         <source>System tray is not available.
 Please disable tray in Preferences.</source>
-        <translation type="unfinished"></translation>
+        <translation>Το πλαίσιο συστήματος δεν είναι δαθέσιμο.
+Παρακαλούμε απενεργοποιήστε το πλαίσιο στις Προτιμήσεις.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="965"/>
@@ -1250,7 +1252,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="2156"/>
         <source>Align Table</source>
-        <translation type="unfinished"></translation>
+        <translation>Στοίχιση πίνακα</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2169"/>
@@ -1310,13 +1312,13 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="4037"/>
         <source>The first 1000 replacements are highlighted.</source>
-        <translation type="unfinished"></translation>
+        <translation>Έχουν επισημανθεί οι πρώτες 1000 αντικαταστάσεις.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4381"/>
         <location filename="../../fn.cpp" line="4560"/>
         <source>Scale to</source>
-        <translation type="unfinished"></translation>
+        <translation>Κλιμάκωση σε</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4385"/>
@@ -1327,7 +1329,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="4554"/>
         <source>Scale Image(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Κλιμάκωση εικόνας(ων)</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4691"/>
@@ -1342,18 +1344,19 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="4724"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Image cannot be saved! Retry?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Αδυναμία αποθήκευσης εικόνας! Νέα προσπάθεια;&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4725"/>
         <source>&lt;center&gt;Maybe you did not choose a proper extension&lt;/center&gt;
 &lt;center&gt;or do not have write permission.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;Ίσως δεν επιλέξατε μια κατάλληλη επέκταση&lt;/center&gt;
+&lt;center&gt;ή δεν έχετε άδεια εγγραφής.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4757"/>
         <source>Save Image As...</source>
-        <translation type="unfinished"></translation>
+        <translation>Αποθήκευση εικόνας ως...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4812"/>
@@ -1388,7 +1391,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="5732"/>
         <source>Export HTML</source>
-        <translation type="unfinished"></translation>
+        <translation>Εξαγωγή HTML</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5737"/>
@@ -1521,7 +1524,7 @@ Do you want to replace it?
         <location filename="../../fn.cpp" line="6504"/>
         <location filename="../../fn.cpp" line="6516"/>
         <source>No misspelling from text cursor.</source>
-        <translation type="unfinished"></translation>
+        <translation>Κανένα ορθογραφικό λάθος από το δρομέα κειμένου.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6528"/>
@@ -1604,7 +1607,11 @@ this dialog and also on exit.
 
 This may not work correctly
 with some window managers.</source>
-        <translation type="unfinished"></translation>
+        <translation>Αποθηκεύει τη θέση μετά το κλείσιμο
+αυτού του πλαισίου διαλόγου και επίσης κατά την έξοδο.
+
+Αυτό μπορεί να μη λειτουργήσει σωστά
+με κάποιους διαχειριστές παραθύρων.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>
@@ -1650,7 +1657,8 @@ can be used instead of this.</source>
         <location filename="../../prefDialog.ui" line="179"/>
         <source>By default, the active widget style determines
 the size of toolbar icons.</source>
-        <translation type="unfinished"></translation>
+        <translation>Από προεπιλογή, το ενεργό στυλ γραφικών στοιχείων καθορίζει
+το μέγεθος των εικονιδίων γραμμής εργαλείων.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="183"/>
@@ -1666,7 +1674,8 @@ the size of toolbar icons.</source>
         <location filename="../../prefDialog.ui" line="197"/>
         <source>If the menubar is hidden,
 a menu button appears on the toolbar.</source>
-        <translation type="unfinished"></translation>
+        <translation>Αν η γραμμή μενού είναι κρυμμένη,
+ένα κουμπί μενού εμφανίζεται στη γραμμή εργαλείων.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="201"/>
@@ -1686,7 +1695,7 @@ a menu button appears on the toolbar.</source>
     <message>
         <location filename="../../prefDialog.ui" line="244"/>
         <source>Auto-&amp;indent by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Αυτοματοποίηση &amp;εσοχής από προεπιλογή</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="251"/>
@@ -1700,14 +1709,16 @@ Needs restarting of FeatherNotes to take effect.</source>
     <message>
         <location filename="../../prefDialog.ui" line="256"/>
         <source>Auto-&amp;bracket</source>
-        <translation type="unfinished"></translation>
+        <translation>Αυτοματοποίηση &amp;αγκύλης</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="263"/>
         <source>A triple period is replaced with an ellipsis,
 a double hyphen with a long dash, etc. while
 the user is typing and under proper circumstances.</source>
-        <translation type="unfinished"></translation>
+        <translation>Μια τριπλή τελεία αντικαθίσταται με αποσιωπητικά,
+ένα διπλό ενωτικό με μια μακριά παύλα, κλπ. ενώ
+ο χρήστης πληκτρολογεί και υπό κατάλληλες συνθήκες.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="268"/>
@@ -1721,7 +1732,10 @@ the user is typing and under proper circumstances.</source>
 Leave empty for the system default.
 
 Takes effect after closing this dialog.</source>
-        <translation type="unfinished"></translation>
+        <translation>Χρήση για επικόλληση της ημερομηνίας και ώρας.
+Αφήστε κενό για την προεπιλογή συστήματος.
+
+Τίθεται σε ισχύ μετά το κλείσιμο αυτού του πλαισίου διαλόγου.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="283"/>
@@ -1743,7 +1757,9 @@ Takes effect after closing this dialog.</source>
         <source>If this option is checked, the opened document will
 be saved on exiting without prompt and without
 showing a warning if saving is not possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Αν επιλεγεί αυτή η δυνατότητα, το ανοιγμένο έγγραφο θα
+αποθηκευθεί κατά την έξοδο χωρίς παρακίνηση και χωρίς
+εμφάνιση προειδοποίησης αν δεν είναι δυνατή η αποθήκευση.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="353"/>
@@ -1828,7 +1844,7 @@ name but ending with &quot;.aff&quot;.</source>
         <location filename="../../pref.cpp" line="340"/>
         <location filename="../../pref.cpp" line="520"/>
         <source>Warning: Ambiguous shortcut detected!</source>
-        <translation type="unfinished"></translation>
+        <translation>Προειδοποίηση: Ανιχνεύθηκε αμφίσημη συντόμευση!</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="503"/>
