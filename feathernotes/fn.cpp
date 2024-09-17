@@ -101,6 +101,7 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     connect (timer_, &QTimer::timeout, this, &FN::autoSaving);
 
     deactivateTimer_ = nullptr;
+    winWasActive_ = false;
 
     /* appearance */
     setAttribute (Qt::WA_AlwaysShowToolTips);
@@ -672,7 +673,19 @@ void FN::createTrayIcon()
     QMenu *trayMenu = new QMenu (this);
     /* we don't want shortcuts to be shown here */
     QAction *actionshowMainWindow = trayMenu->addAction (tr ("&Raise/Hide"));
-    connect (actionshowMainWindow, &QAction::triggered, this, &FN::activateTray);
+    if (static_cast<FNSingleton*>(qApp)->isWayland())
+    { // a workaround for window deactivation on clicking the tray icon (see "FN::event")
+        connect (trayMenu, &QMenu::aboutToShow, this, [this] {
+            winWasActive_ = !isActiveWindow() && deactivateTimer_ && deactivateTimer_->isActive();
+        });
+        connect (actionshowMainWindow, &QAction::triggered, this, [this] {
+            if (winWasActive_)
+                deactivateTimer_->start(500);
+            activateTray();
+        });
+    }
+    else
+        connect (actionshowMainWindow, &QAction::triggered, this, &FN::activateTray);
     /* use system icons with the tray menu because it gets its style from the panel */
     QAction *actionNewTray = trayMenu->addAction (QIcon::fromTheme ("document-new"), tr ("&New Note"));
     QAction *actionOpenTray = trayMenu->addAction (QIcon::fromTheme ("document-open"), tr ("&Open"));

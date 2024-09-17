@@ -453,7 +453,8 @@ private:
     QPoint position_; // Excluding the window frame.
     QSize winSize_, startSize_, prefSize_;
     QTimer *timer_;
-    QTimer *deactivateTimer_;
+    QTimer *deactivateTimer_; // For a workaround under Wayland.
+    bool winWasActive_; // For a workaround under Wayland.
     QString pswrd_;
     QHash<QString, QString> customActions_;
     QHash<QAction*, QKeySequence> defaultShortcuts_;
