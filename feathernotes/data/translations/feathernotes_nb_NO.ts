@@ -885,17 +885,17 @@
     <message>
         <location filename="../../fn.ui" line="1250"/>
         <source>Append Row</source>
-        <translation type="unfinished"></translation>
+        <translation>Legg til rekke etter</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1255"/>
         <source>Delete Row</source>
-        <translation type="unfinished"></translation>
+        <translation>Slett rekke</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1260"/>
         <source>Append Column</source>
-        <translation type="unfinished"></translation>
+        <translation>Legg til kolonne etter</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1265"/>
@@ -905,17 +905,17 @@
     <message>
         <location filename="../../fn.ui" line="1270"/>
         <source>Merge Cells</source>
-        <translation type="unfinished"></translation>
+        <translation>Slå sammen celler</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1275"/>
         <source>Prepend Row</source>
-        <translation type="unfinished"></translation>
+        <translation>Legg til rekke før</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1280"/>
         <source>Prepend Column</source>
-        <translation type="unfinished"></translation>
+        <translation>Legg til kolonne før</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1288"/>
@@ -1364,7 +1364,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="4831"/>
         <source>Rows:</source>
-        <translation>Rader:</translation>
+        <translation>Rekker:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4837"/>
