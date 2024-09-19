@@ -998,7 +998,7 @@
     <message>
         <location filename="../../fn.cpp" line="675"/>
         <source>&amp;Raise/Hide</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vis/Skjul</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="927"/>
