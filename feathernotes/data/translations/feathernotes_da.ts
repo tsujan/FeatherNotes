@@ -1401,12 +1401,12 @@ Deaktiver venligst bakke i Præferencer.</translation>
     <message>
         <location filename="../../fn.cpp" line="5757"/>
         <source>&amp;Current node</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Aktuel node</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5759"/>
         <source>With all &amp;sub-nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Med alle &amp;undernoder</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5760"/>
@@ -1548,7 +1548,7 @@ Vil du udskifte den?
         <location filename="../../lineedit.cpp" line="81"/>
         <source>Ctrl+K</source>
         <comment>Clear text</comment>
-        <translation type="unfinished">Ctrl+K</translation>
+        <translation>Ctrl+K</translation>
     </message>
 </context>
 <context>
@@ -1569,7 +1569,10 @@ Vil du udskifte den?
 this dialog and also on exit.
 
 Uncheck to set a fixed size!</source>
-        <translation type="unfinished"></translation>
+        <translation>Gemmer vinduesstørrelse efter lukning af 
+denne dialog og også ved programafslutning.
+
+Fjern markeringen for at indstille en fast størrelse!</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="42"/>
@@ -1593,12 +1596,15 @@ Uncheck to set a fixed size!</source>
 this dialog and also on exit.
 
 Uncheck for a width ratio of 170/530.</source>
-        <translation type="unfinished"></translation>
+        <translation>Gemmer træets bredde efter lukning af denne
+dialog og også ved programafslutning.
+
+Fjern markeringen for et breddeforhold på 170/530.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="103"/>
         <source>Remember &amp;tree width</source>
-        <translation type="unfinished"></translation>
+        <translation>Gem &amp;træets bredde</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="110"/>
@@ -1607,12 +1613,16 @@ this dialog and also on exit.
 
 This may not work correctly
 with some window managers.</source>
-        <translation type="unfinished"></translation>
+        <translation>Gemmer position efter lukning af denne
+dialog og også ved programafslutning.
+
+Dette fungerer muligvis ikke korrekt
+med nogle vindueshåndteringer.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>
         <source>Save &amp;position</source>
-        <translation type="unfinished"></translation>
+        <translation>Gem &amp;position</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="124"/>
@@ -1621,12 +1631,16 @@ If checked, the titlebar close button iconifies
 the window to the systray instead of quitting.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestemmer, om et statusfelt-ikon skal bruges.
+Hvis afkrydset, vil lukkeknappen minimere vinduet
+til statusfeltet i stedet for at afslutte.
+
+FeatherNotes skal genstartes for at dette kan træde i kraft.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="131"/>
         <source>Add to s&amp;ystray</source>
-        <translation type="unfinished"></translation>
+        <translation>Tilføj til stat&amp;usfelt</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="156"/>
