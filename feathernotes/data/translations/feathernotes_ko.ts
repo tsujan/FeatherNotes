@@ -1213,7 +1213,7 @@
         <location filename="../../fn.cpp" line="4399"/>
         <location filename="../../fn.cpp" line="4577"/>
         <source>Scaling percentage</source>
-        <translation>배율 비율</translation>
+        <translation>배율</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2993"/>
