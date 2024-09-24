@@ -1225,12 +1225,13 @@
         <location filename="../../fn.cpp" line="652"/>
         <source>System tray is not available.
 Please disable tray in Preferences.</source>
-        <translation type="unfinished"></translation>
+        <translation>Systemstatusfeltet er ikke tilgjengelig.
+Deaktiver systemstatusfelt i Innstillinger.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="978"/>
         <source>New Node</source>
-        <translation>Ny node</translation>
+        <translation>Nytt notat</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1621"/>
@@ -1251,7 +1252,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="2169"/>
         <source>Align Table</source>
-        <translation type="unfinished"></translation>
+        <translation>Juster tabell</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2182"/>
@@ -1296,7 +1297,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="3261"/>
         <source>These colors will be applied to new nodes.&lt;br&gt;They may or may not affect existing nodes&lt;br&gt;but document reopening is recommended.</source>
-        <translation type="unfinished"></translation>
+        <translation>Disse fargene vil bli brukt på nye notater.&lt;br&gt;De kan påvirke eller ikke påvirke eksisterende notater,&lt;br&gt;men gjenåpning av databasefilen anbefales.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3264"/>
