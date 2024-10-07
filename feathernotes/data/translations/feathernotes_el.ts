@@ -528,7 +528,7 @@
     <message>
         <location filename="../../fn.ui" line="855"/>
         <source>&amp;Append Sibling</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Προσάρτηση αδερφικού στοιχείου</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="858"/>
@@ -538,7 +538,7 @@
     <message>
         <location filename="../../fn.ui" line="866"/>
         <source>Append &amp;Child</source>
-        <translation type="unfinished"></translation>
+        <translation>Προσάρτηση &amp;θυγατρικού στοιχείου</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="869"/>
@@ -750,7 +750,7 @@
     <message>
         <location filename="../../fn.ui" line="1113"/>
         <source>&amp;Prepend Sibling</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Προσάρτηση αδερφικού στοιχείου μπροστά</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1116"/>
@@ -885,7 +885,7 @@
     <message>
         <location filename="../../fn.ui" line="1250"/>
         <source>Append Row</source>
-        <translation type="unfinished"></translation>
+        <translation>Προσάρτηση γραμμής</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1255"/>
@@ -895,7 +895,7 @@
     <message>
         <location filename="../../fn.ui" line="1260"/>
         <source>Append Column</source>
-        <translation type="unfinished"></translation>
+        <translation>Προσάρτηση στήλης</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1265"/>
@@ -910,12 +910,12 @@
     <message>
         <location filename="../../fn.ui" line="1275"/>
         <source>Prepend Row</source>
-        <translation type="unfinished"></translation>
+        <translation>Προσάρτηση γραμμής μπροστά</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1280"/>
         <source>Prepend Column</source>
-        <translation type="unfinished"></translation>
+        <translation>Προσάρτηση στήλης μπροστά</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1288"/>
@@ -1517,7 +1517,7 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="6490"/>
         <source>The Hunspell dictionary is not accompanied by an affix file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Το λεξικό Hunspell δε συνοδεύεται από ένα αρχείο affix.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6508"/>
@@ -1569,7 +1569,10 @@ Do you want to replace it?
 this dialog and also on exit.
 
 Uncheck to set a fixed size!</source>
-        <translation type="unfinished"></translation>
+        <translation>Αποθηκεύει το μέγεθος παραθύρου μετά το κλείσιμο
+αυτού του παραθύρου διαλόγου και επίσης κατά την έξοδο.
+
+Αποεπιλέξτε για να ορίσετε ένα σταθερό μέγεθος!</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="42"/>
@@ -1593,7 +1596,10 @@ Uncheck to set a fixed size!</source>
 this dialog and also on exit.
 
 Uncheck for a width ratio of 170/530.</source>
-        <translation type="unfinished"></translation>
+        <translation>Αποθηκεύει το πλάτος δέντρου μετά το κλείσιμο
+αυτού του παραθύρου διαλόγου και επίσης κατά την έξοδο.
+
+Αποεπιλέξτε για μια αναλογία πλάτους των 170/530.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="103"/>
@@ -1636,7 +1642,8 @@ Needs restarting of FeatherNotes to take effect.</source>
         <location filename="../../prefDialog.ui" line="156"/>
         <source>The command line option --tray
 can be used instead of this.</source>
-        <translation type="unfinished"></translation>
+        <translation>Η επιλογή γραμμής εντολών --tray
+μπορεί να χρησιμοποιηθεί αντί αυτού.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="160"/>
@@ -1651,7 +1658,7 @@ can be used instead of this.</source>
     <message>
         <location filename="../../prefDialog.ui" line="172"/>
         <source>Transparent t&amp;ree view</source>
-        <translation type="unfinished"></translation>
+        <translation>Διάφανη προβολή δ&amp;έντρου</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="179"/>
@@ -1777,7 +1784,9 @@ showing a warning if saving is not possible.</source>
         <source>A Hunspell dictionary has a name that ends with &quot;.dic&quot;
 and should be alongside an affix file with the same
 name but ending with &quot;.aff&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ένα λεξικό Hunspell έχει ένα όνομα που τελειώνει με «.dic»
+και θα έπρεπε να είναι μαζί με ένα αρχείο affix με το ίδιο
+όνομα αλλά να τελειώνει με «.aff».</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="389"/>
@@ -1849,7 +1858,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../pref.cpp" line="503"/>
         <source>The typed shortcut was reserved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Η πληκτρολογηθείσα συντόμευση ήταν δεσμευμένη.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="618"/>
