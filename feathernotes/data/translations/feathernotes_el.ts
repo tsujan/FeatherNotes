@@ -1653,7 +1653,7 @@ can be used instead of this.</source>
     <message>
         <location filename="../../prefDialog.ui" line="169"/>
         <source>Merge the tree view with its surroundings?</source>
-        <translation type="unfinished"></translation>
+        <translation>Συγχώνευση της προβολής δέντρου με τα περίχωρά της;</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="172"/>
