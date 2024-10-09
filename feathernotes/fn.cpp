@@ -1914,9 +1914,9 @@ void FN::insertDate()
 {
     if (QWidget *cw = ui->stackedWidget->currentWidget())
     {
-        qobject_cast<TextEdit*>(cw)->insertPlainText (QDateTime::currentDateTime().toString (dateFormat_.isEmpty()
-                                                          ? locale().dateTimeFormat()
-                                                          : dateFormat_));
+        qobject_cast<TextEdit*>(cw)->insertPlainText (
+            dateFormat_.isEmpty() ? locale().toString(QDateTime::currentDateTime())
+                                  : locale().toString(QDateTime::currentDateTime(), dateFormat_));
     }
 }
 /*************************/
