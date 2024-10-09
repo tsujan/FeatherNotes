@@ -1915,7 +1915,7 @@ void FN::insertDate()
     if (QWidget *cw = ui->stackedWidget->currentWidget())
     {
         qobject_cast<TextEdit*>(cw)->insertPlainText (
-            dateFormat_.isEmpty() ? locale().toString(QDateTime::currentDateTime())
+            dateFormat_.isEmpty() ? locale().toString(QDateTime::currentDateTime(), QLocale::ShortFormat)
                                   : locale().toString(QDateTime::currentDateTime(), dateFormat_));
     }
 }
