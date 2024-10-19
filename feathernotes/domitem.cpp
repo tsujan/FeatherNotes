@@ -97,7 +97,11 @@ void DomItem::addChild (DomItem *item)
         /*QDomElement e = QDomDocument().createElement ("node");
         e.setAttribute ("name", "New Node");*/
         QDomDocument doc;
+#if (QT_VERSION >= QT_VERSION_CHECK(6,8,0))
+        doc.setContent (QString ("<node name=\""+ QObject::tr ("New Node") + "\"></node>").toUtf8());
+#else
         doc.setContent (QString ("<node name=\""+ QObject::tr ("New Node") + "\"></node>"), false);
+#endif
         itemNode = doc.documentElement();
     }
 
@@ -134,7 +138,11 @@ void DomItem::insertAt (int n, DomItem *item)
     else
     {
         QDomDocument doc;
+#if (QT_VERSION >= QT_VERSION_CHECK(6,8,0))
+        doc.setContent (QString ("<node name=\""+ QObject::tr ("New Node") + "\"></node>").toUtf8());
+#else
         doc.setContent (QString ("<node name=\""+ QObject::tr ("New Node") + "\"></node>"), false);
+#endif
         itemNode = doc.documentElement();
     }
 

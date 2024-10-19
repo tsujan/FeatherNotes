@@ -1798,7 +1798,7 @@ name but ending with &quot;.aff&quot;.</source>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="408"/>
-        <location filename="../../pref.cpp" line="647"/>
+        <location filename="../../pref.cpp" line="653"/>
         <source>Add dictionary...</source>
         <translation>הוספת מילון...</translation>
     </message>
@@ -1853,23 +1853,23 @@ name but ending with &quot;.aff&quot;.</source>
         <translation>בררת מחדל</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="340"/>
-        <location filename="../../pref.cpp" line="520"/>
+        <location filename="../../pref.cpp" line="346"/>
+        <location filename="../../pref.cpp" line="526"/>
         <source>Warning: Ambiguous shortcut detected!</source>
         <translation>אזהרה: התגלה קיצור דרך שאינו ייחודי!</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="503"/>
+        <location filename="../../pref.cpp" line="509"/>
         <source>The typed shortcut was reserved.</source>
         <translation>קיצור הדרך שהוקלד נשמר מראש.</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="618"/>
+        <location filename="../../pref.cpp" line="624"/>
         <source>Application restart is needed for changes to take effect.</source>
         <translation>יש להפעיל את היישום מחדש כדי שהשינויים ייכנסו לתוקף.</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="649"/>
+        <location filename="../../pref.cpp" line="655"/>
         <source>Hunspell Dictionary Files</source>
         <translation>קובצי מילון Hunspell‏</translation>
     </message>
@@ -1923,8 +1923,10 @@ name but ending with &quot;.aff&quot;.</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../../domitem.cpp" line="100"/>
-        <location filename="../../domitem.cpp" line="137"/>
+        <location filename="../../domitem.cpp" line="101"/>
+        <location filename="../../domitem.cpp" line="103"/>
+        <location filename="../../domitem.cpp" line="142"/>
+        <location filename="../../domitem.cpp" line="144"/>
         <source>New Node</source>
         <translation>מפרק חדש</translation>
     </message>

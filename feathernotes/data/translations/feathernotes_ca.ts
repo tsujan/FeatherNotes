@@ -1799,7 +1799,7 @@ nom però que acabi amb «.aff».</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="408"/>
-        <location filename="../../pref.cpp" line="647"/>
+        <location filename="../../pref.cpp" line="653"/>
         <source>Add dictionary...</source>
         <translation>Afegir diccionari...</translation>
     </message>
@@ -1854,23 +1854,23 @@ nom però que acabi amb «.aff».</translation>
         <translation>Per defecte</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="340"/>
-        <location filename="../../pref.cpp" line="520"/>
+        <location filename="../../pref.cpp" line="346"/>
+        <location filename="../../pref.cpp" line="526"/>
         <source>Warning: Ambiguous shortcut detected!</source>
         <translation>Avís: S&apos;ha detectat una drecera ambigua!</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="503"/>
+        <location filename="../../pref.cpp" line="509"/>
         <source>The typed shortcut was reserved.</source>
         <translation>La drecera escrita està reservada.</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="618"/>
+        <location filename="../../pref.cpp" line="624"/>
         <source>Application restart is needed for changes to take effect.</source>
         <translation>Cal reiniciar l&apos;aplicació perquè els canvis tinguin efecte.</translation>
     </message>
     <message>
-        <location filename="../../pref.cpp" line="649"/>
+        <location filename="../../pref.cpp" line="655"/>
         <source>Hunspell Dictionary Files</source>
         <translation>Fitxers de diccionari Hunspell</translation>
     </message>
@@ -1924,8 +1924,10 @@ nom però que acabi amb «.aff».</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../../domitem.cpp" line="100"/>
-        <location filename="../../domitem.cpp" line="137"/>
+        <location filename="../../domitem.cpp" line="101"/>
+        <location filename="../../domitem.cpp" line="103"/>
+        <location filename="../../domitem.cpp" line="142"/>
+        <location filename="../../domitem.cpp" line="144"/>
         <source>New Node</source>
         <translation>Node nou</translation>
     </message>

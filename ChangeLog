@@ -1,5 +1,6 @@
 V1.3.1
 ---------
+ * Fixed the printing thread (and removed warning messages).
  * Added a workaround for the "Raise/Hide" action in the tray context menu under Wayland.
  * Check the existence of "gio" before using it for opening URLs.
  * Fixed the text color of the side-pane after a style change with Qt ≥ 6.7.2.

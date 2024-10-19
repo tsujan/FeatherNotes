@@ -30,6 +30,12 @@
 #include <QAction>
 #include <QWhatsThis>
 
+#if (QT_VERSION >= QT_VERSION_CHECK(6,7,0))
+#define CHECKBOX_CHANGED QCheckBox::checkStateChanged
+#else
+#define CHECKBOX_CHANGED QCheckBox::stateChanged
+#endif
+
 namespace FeatherNotes {
 
 static QHash<QString, QString> OBJECT_NAMES;
@@ -136,24 +142,24 @@ PrefDialog::PrefDialog (QWidget *parent)
         }
         connect (ui->winSpinX, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &PrefDialog::prefSize);
         connect (ui->winSpinY, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &PrefDialog::prefSize);
-        connect (ui->winSizeBox, &QCheckBox::stateChanged, this, &PrefDialog::prefSize);
+        connect (ui->winSizeBox, &CHECKBOX_CHANGED, this, &PrefDialog::prefSize);
 
         /* splitter position */
         ui->splitterSizeBox->setChecked (win->isSplitterRem());
-        connect (ui->splitterSizeBox, &QCheckBox::stateChanged, win, [win] (int checked) {
+        connect (ui->splitterSizeBox, &CHECKBOX_CHANGED, win, [win] (int checked) {
             win->remSplitter (checked == Qt::Checked);
         });
 
         /* window position */
         ui->positionBox->setChecked (win->isPositionRem());
-        connect (ui->positionBox, &QCheckBox::stateChanged, win, [this, win] (int checked) {
+        connect (ui->positionBox, &CHECKBOX_CHANGED, win, [this, win] (int checked) {
             win->remPosition (checked == Qt::Checked);
         });
 
         /* use tray */
         ui->hasTrayBox->setChecked (win->hasTray());
         hasTray_ = win->hasTray();
-        connect (ui->hasTrayBox, &QCheckBox::stateChanged, win, [this, win] (int checked) {
+        connect (ui->hasTrayBox, &CHECKBOX_CHANGED, win, [this, win] (int checked) {
             win->useTray (checked == Qt::Checked);
             showPrompt();
         });
@@ -163,26 +169,26 @@ PrefDialog::PrefDialog (QWidget *parent)
         ui->minTrayBox->setChecked (win->doesMinToTray());
         if (!win->hasTray())
             ui->minTrayBox->setDisabled (true);
-        connect (ui->minTrayBox, &QCheckBox::stateChanged, win, [win] (int checked) {
+        connect (ui->minTrayBox, &CHECKBOX_CHANGED, win, [win] (int checked) {
             win->minToTray (checked == Qt::Checked);
         });
 
         /* transparent tree view */
         ui->transparentTree->setChecked (win->hasTransparentTree());
-        connect (ui->transparentTree, &QCheckBox::stateChanged, win, [win] (int checked) {
+        connect (ui->transparentTree, &CHECKBOX_CHANGED, win, [win] (int checked) {
             win->makeTreeTransparent (checked == Qt::Checked);
         });
 
         /* small toolbar icons */
         ui->smallToolbarIcons->setChecked (win->hasSmallToolbarIcons());
-        connect (ui->smallToolbarIcons, &QCheckBox::stateChanged, win, [win] (int checked) {
+        connect (ui->smallToolbarIcons, &CHECKBOX_CHANGED, win, [win] (int checked) {
             win->setToolBarIconSize (checked == Qt::Checked);
         });
 
         /* hide toolbar or menubar */
         ui->noToolbar->setChecked (win->withoutToolbar());
         ui->noMenubar->setChecked (win->withoutMenubar());
-        connect (ui->noToolbar, &QCheckBox::stateChanged, win, [this, win] (int checked) {
+        connect (ui->noToolbar, &CHECKBOX_CHANGED, win, [this, win] (int checked) {
             if (checked == Qt::Checked)
             {
                 win->showToolbar (false);
@@ -191,7 +197,7 @@ PrefDialog::PrefDialog (QWidget *parent)
             else if (checked == Qt::Unchecked)
                 win->showToolbar (true);
         });
-        connect (ui->noMenubar, &QCheckBox::stateChanged, win, [this, win] (int checked) {
+        connect (ui->noMenubar, &CHECKBOX_CHANGED, win, [this, win] (int checked) {
             if (checked == Qt::Checked)
             {
                 win->showMenubar (false);
@@ -207,20 +213,20 @@ PrefDialog::PrefDialog (QWidget *parent)
 
         /* wrapping */
         ui->wrapBox->setChecked (win->isWrappedByDefault());
-        connect (ui->wrapBox, &QCheckBox::stateChanged, win, [win] (int checked) {
+        connect (ui->wrapBox, &CHECKBOX_CHANGED, win, [win] (int checked) {
             win->wrapByDefault (checked == Qt::Checked);
         });
 
         /* indentation */
         ui->indentBox->setChecked (win->isIndentedByDefault());
-        connect (ui->indentBox, &QCheckBox::stateChanged, win, [win] (int checked) {
+        connect (ui->indentBox, &CHECKBOX_CHANGED, win, [win] (int checked) {
             win->indentByDefault (checked == Qt::Checked);
         });
 
         /* auto-bracket */
         ui->autoBracketBox->setChecked (win->hasAutoBracket());
         autoBracket_ = win->hasAutoBracket();
-        connect (ui->autoBracketBox, &QCheckBox::stateChanged, win, [this, win] (int checked) {
+        connect (ui->autoBracketBox, &CHECKBOX_CHANGED, win, [this, win] (int checked) {
             win->autoBracket (checked == Qt::Checked);
             showPrompt();
         });
@@ -228,7 +234,7 @@ PrefDialog::PrefDialog (QWidget *parent)
         /* auto-replace */
         ui->autoReplaceBox->setChecked (win->hasAutoReplace());
         autoReplace_ = win->hasAutoReplace();
-        connect (ui->autoReplaceBox, &QCheckBox::stateChanged, win, [this, win] (int checked) {
+        connect (ui->autoReplaceBox, &CHECKBOX_CHANGED, win, [this, win] (int checked) {
             win->autoReplace (checked == Qt::Checked);
             showPrompt();
         });
@@ -251,7 +257,7 @@ PrefDialog::PrefDialog (QWidget *parent)
         connect (ui->autoSaveSpinBox, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), win, [win] (int value) {
             win->setAutoSave (value); // will take effect at closeEvent()
         });
-        connect (ui->autoSaveBox, &QCheckBox::stateChanged, win, [this, win] (int checked) {
+        connect (ui->autoSaveBox, &CHECKBOX_CHANGED, win, [this, win] (int checked) {
             if (checked == Qt::Checked)
             {
                 ui->autoSaveSpinBox->setEnabled (true);
@@ -266,7 +272,7 @@ PrefDialog::PrefDialog (QWidget *parent)
 
         /* starting with the last opened file */
         ui->lastFileBox->setChecked (win->openLastFile());
-        connect (ui->lastFileBox, &QCheckBox::stateChanged, win, [win] (int checked) {
+        connect (ui->lastFileBox, &CHECKBOX_CHANGED, win, [win] (int checked) {
             win->setOpenLastFile (checked == Qt::Checked);
         });
 
@@ -277,13 +283,13 @@ PrefDialog::PrefDialog (QWidget *parent)
         });
         /* whether recent files should be opened separately */
         ui->recentBox->setChecked (win->getOpenReccentSeparately()); // up-to-date because of FN::getRecentFilesNumber()
-        connect (ui->recentBox, &QCheckBox::stateChanged, win, [win] (int checked) {
+        connect (ui->recentBox, &CHECKBOX_CHANGED, win, [win] (int checked) {
             win->setOpenReccentSeparately (checked == Qt::Checked);
         });
 
         /* whether expanded states of nodes should be remembered */
         ui->expandBox->setChecked (win->getRememberExpanded());
-        connect (ui->expandBox, &QCheckBox::stateChanged, win, [win] (int checked) {
+        connect (ui->expandBox, &CHECKBOX_CHANGED, win, [win] (int checked) {
             win->setRememberExpanded (checked == Qt::Checked);
             if (checked == Qt::Checked)
                 win->setCollapsedStates();
@@ -291,7 +297,7 @@ PrefDialog::PrefDialog (QWidget *parent)
 
         /* saving on exiting */
         ui->exitSaveBox->setChecked (win->getSaveOnExit());
-        connect (ui->exitSaveBox, &QCheckBox::stateChanged, win, [win] (int checked) {
+        connect (ui->exitSaveBox, &CHECKBOX_CHANGED, win, [win] (int checked) {
             win->setSaveOnExit (checked == Qt::Checked);
         });
 

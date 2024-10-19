@@ -40,7 +40,8 @@ public:
 private:
     void run();
 
-    QTextDocument *document_;
+    QTextDocument *origDoc_;
+    QTextDocument *clonedDoc_;
     QPrinter *printer_;
     qreal sourceDpiX_;
     qreal sourceDpiY_;
