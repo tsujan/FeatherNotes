@@ -528,7 +528,7 @@
     <message>
         <location filename="../../fn.ui" line="855"/>
         <source>&amp;Append Sibling</source>
-        <translation>&amp;Προσάρτηση αδερφικού στοιχείου</translation>
+        <translation>&amp;Προσάρτηση αδερφικού στοιχείου μετά</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="858"/>
@@ -538,7 +538,7 @@
     <message>
         <location filename="../../fn.ui" line="866"/>
         <source>Append &amp;Child</source>
-        <translation>Προσάρτηση &amp;θυγατρικού στοιχείου</translation>
+        <translation>Προσάρτηση &amp;θυγατρικού στοιχείου μετά</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="869"/>
@@ -693,7 +693,7 @@
     <message>
         <location filename="../../fn.ui" line="1051"/>
         <source>Align center</source>
-        <translation>Στοίχιση κέντρο</translation>
+        <translation>Στοίχιση στο κέντρο</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1054"/>
@@ -735,12 +735,12 @@
     <message>
         <location filename="../../fn.ui" line="1099"/>
         <source>&amp;Justify</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Στοίχιση</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1102"/>
         <source>Justify</source>
-        <translation type="unfinished"></translation>
+        <translation>Στοίχιση</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1105"/>
@@ -750,7 +750,7 @@
     <message>
         <location filename="../../fn.ui" line="1113"/>
         <source>&amp;Prepend Sibling</source>
-        <translation>&amp;Προσάρτηση αδερφικού στοιχείου μπροστά</translation>
+        <translation>&amp;Προσάρτηση αδερφικού στοιχείου πριν</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1116"/>
@@ -825,12 +825,12 @@
     <message>
         <location filename="../../fn.ui" line="1188"/>
         <source>&amp;Node Font</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Γραμματοσειρά κόμβου</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1191"/>
         <source>Node Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Γραμματοσειρά κόμβου</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1196"/>
@@ -885,7 +885,7 @@
     <message>
         <location filename="../../fn.ui" line="1250"/>
         <source>Append Row</source>
-        <translation>Προσάρτηση γραμμής</translation>
+        <translation>Προσάρτηση γραμμής μετά</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1255"/>
@@ -910,12 +910,12 @@
     <message>
         <location filename="../../fn.ui" line="1275"/>
         <source>Prepend Row</source>
-        <translation>Προσάρτηση γραμμής μπροστά</translation>
+        <translation>Προσάρτηση γραμμής πριν</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1280"/>
         <source>Prepend Column</source>
-        <translation>Προσάρτηση στήλης μπροστά</translation>
+        <translation>Προσάρτηση στήλης πριν</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1288"/>
@@ -1287,7 +1287,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="3226"/>
         <source>Select Node Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Επιλογή γραμματοσειράς κόμβου</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3251"/>
@@ -1297,7 +1297,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="3261"/>
         <source>These colors will be applied to new nodes.&lt;br&gt;They may or may not affect existing nodes&lt;br&gt;but document reopening is recommended.</source>
-        <translation type="unfinished"></translation>
+        <translation>Αυτά τα χρώματα θα εφαρμοστούν σε καινούριους κόμβους.&lt;br&gt;Αυτά μπορεί να ή μπορεί να μην επηρεάσουν υφιστάμενους κόμβους&lt;br&gt;αλλά συνιστάται εκ νέου άνοιγμα του εγγράφου.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3264"/>
@@ -1631,12 +1631,16 @@ If checked, the titlebar close button iconifies
 the window to the systray instead of quitting.
 
 Needs restarting of FeatherNotes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Καθορίζει κατά πόσον θα πρέπει να χρησιμοποιηθεί ένα εικονίδιο περιοχής ειδοποιήσεων.
+Αν επιλεγεί, το κουμπί κλεισίματος στη γραμμή τίτλου εικονιδιοποιεί
+το παράθυρο στην περιοχή ειδοποιήσεων αντί του τερματισμού.
+
+Χρειάζεται επανεκκίνηση του FeatherNotes για να τεθεί σε ισχύ.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="131"/>
         <source>Add to s&amp;ystray</source>
-        <translation type="unfinished"></translation>
+        <translation>Προσθήκη στην περιοχή ε&amp;ιδοποιήσεων</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="156"/>
@@ -1648,7 +1652,7 @@ can be used instead of this.</source>
     <message>
         <location filename="../../prefDialog.ui" line="160"/>
         <source>Start i&amp;conified to tray</source>
-        <translation type="unfinished"></translation>
+        <translation>Εκκίνηση ως ει&amp;κονιδιοποιημένο στην περιοχή ειδοποιήσεων</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="169"/>
