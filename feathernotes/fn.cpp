@@ -674,12 +674,12 @@ void FN::createTrayIcon()
     /* we don't want shortcuts to be shown here */
     QAction *actionshowMainWindow = trayMenu->addAction (tr ("&Raise/Hide"));
     if (static_cast<FNSingleton*>(qApp)->isWayland())
-    { // a workaround for window deactivation on clicking the tray icon (see "FN::event")
+    { // a workaround for window deactivation on pressing the tray icon (see "FN::event")
         connect (trayMenu, &QMenu::aboutToShow, this, [this] {
-            winWasActive_ = !isActiveWindow() && deactivateTimer_ && deactivateTimer_->isActive();
+            winWasActive_ = isActiveWindow() || (deactivateTimer_ && deactivateTimer_->isActive());
         });
         connect (actionshowMainWindow, &QAction::triggered, this, [this] {
-            if (winWasActive_)
+            if (isVisible() && winWasActive_ && !isActiveWindow())
                 deactivateTimer_->start(500);
             activateTray();
         });
@@ -6671,8 +6671,8 @@ bool FN::event (QEvent *event)
 {
     if (event->type() == QEvent::WindowDeactivate)
     {
-        /* A workaround for window deactivation on clicking the tray icon under Wayland. */
-        if (static_cast<FNSingleton*>(qApp)->isWayland())
+        /* A workaround for window deactivation on pressing the tray icon under Wayland. */
+        if (static_cast<FNSingleton*>(qApp)->isWayland() && isVisible())
         {
             if (deactivateTimer_ == nullptr)
             {
