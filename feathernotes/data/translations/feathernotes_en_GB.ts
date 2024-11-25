@@ -6,7 +6,7 @@
     <message>
         <location filename="../../about.ui" line="171"/>
         <source>License</source>
-        <translation type="unfinished"></translation>
+        <translation>Licence</translation>
     </message>
 </context>
 <context>
@@ -14,12 +14,12 @@
     <message>
         <location filename="../../colorLabel.cpp" line="31"/>
         <source>Click to change color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Click to change colour.</translation>
     </message>
     <message>
         <location filename="../../colorLabel.cpp" line="53"/>
         <source>Select Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Select Colour</translation>
     </message>
 </context>
 <context>
@@ -27,37 +27,37 @@
     <message>
         <location filename="../../fn.ui" line="14"/>
         <source>FeatherNotes</source>
-        <translation type="unfinished"></translation>
+        <translation>FeatherNotes</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="65"/>
         <source>Next (F3)</source>
-        <translation type="unfinished"></translation>
+        <translation>Next (F3)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="68"/>
         <source>F3</source>
-        <translation type="unfinished"></translation>
+        <translation>F3</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="81"/>
         <source>Previous (F4)</source>
-        <translation type="unfinished"></translation>
+        <translation>Previous (F4)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="84"/>
         <source>F4</source>
-        <translation type="unfinished"></translation>
+        <translation>F4</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="100"/>
         <source>Search...</source>
-        <translation type="unfinished"></translation>
+        <translation>Search...</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="115"/>
         <source>Search only in names (Ctrl+Shift+F7)</source>
-        <translation type="unfinished"></translation>
+        <translation>Search only in names (Ctrl+Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="118"/>
