@@ -62,32 +62,32 @@
     <message>
         <location filename="../../fn.ui" line="118"/>
         <source>Ctrl+Shift+F7</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+F7</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="128"/>
         <source>Search only in tags (Shift+F7)</source>
-        <translation type="unfinished"></translation>
+        <translation>Search only in tags (Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="131"/>
         <source>Shift+F7</source>
-        <translation type="unfinished"></translation>
+        <translation>Shift+F7</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="144"/>
         <source>Search in all nodes (F7)</source>
-        <translation type="unfinished"></translation>
+        <translation>Search in all nodes (F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="147"/>
         <source>F7</source>
-        <translation type="unfinished"></translation>
+        <translation>F7</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="186"/>
         <source>Whole Word (F6)</source>
-        <translation type="unfinished"></translation>
+        <translation>Whole Word (F6)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="189"/>
