@@ -1824,7 +1824,7 @@ Namen aber endet mit &quot;.aff&quot;.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="506"/>
         <source>Remember expanded states of nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Erweiterte Zustände von Knoten merken</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="530"/>
