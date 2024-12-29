@@ -4868,6 +4868,8 @@ void FN::addTable()
             QTextCursor cur = textEdit->textCursor();
             QTextTableFormat tf;
             tf.setCellPadding (3);
+            tf.setCellSpacing (2);
+            tf.setBorderCollapse (false);
             QTextTable *table = cur.insertTable (rows, columns);
             table->setFormat (tf);
         }
