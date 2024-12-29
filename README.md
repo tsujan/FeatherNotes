@@ -7,7 +7,7 @@ FeatherNotes (by Pedram Pourang, a.k.a. Tsu Jan <tsujan2000@gmail.com>) is a lig
   * Support for rich text formatting, image embedding and inserting editable tables;
   * Drag-and-drop capability for moving nodes and also for embedding images;
   * A tray icon for quick access on any desktop;
-  * Correct position/size saving and restoring with most window managers;
+  * Saving and restoring of size (and also position under X11);
   * Compact but complete search and replacement widgets;
   * The ability to include searchable tags (hidden info on each node);
   * Support for optional node icons;
