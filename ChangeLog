@@ -5,6 +5,8 @@ V1.3.1
  * Check the existence of "gio" before using it for opening URLs.
  * Fixed the text color of the side-pane after a style change with Qt ≥ 6.7.2.
  * Always paste the localized date and time.
+ * Added a workaround for a regression in Qt 6.8 that makes borders of newly created tables invisible.
+ * Replaced the deprecated method QMouseEvent::pos().
 
 V1.3.0
 ---------

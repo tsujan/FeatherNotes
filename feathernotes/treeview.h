@@ -156,7 +156,7 @@ protected:
     }
 
     void mousePressEvent (QMouseEvent *event) override {
-        QModelIndex index = indexAt (event->pos());
+        QModelIndex index = indexAt (event->position().toPoint());
         /* get the global press position if it's inside an item to know
            whether there will be a real mouse movement at mouseMoveEvent() */
         if (event->buttons() == Qt::LeftButton

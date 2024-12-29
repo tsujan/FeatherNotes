@@ -1055,9 +1055,9 @@
         <location filename="../../fn.cpp" line="4402"/>
         <location filename="../../fn.cpp" line="4580"/>
         <location filename="../../fn.cpp" line="4843"/>
-        <location filename="../../fn.cpp" line="5794"/>
-        <location filename="../../fn.cpp" line="6073"/>
-        <location filename="../../fn.cpp" line="6171"/>
+        <location filename="../../fn.cpp" line="5796"/>
+        <location filename="../../fn.cpp" line="6075"/>
+        <location filename="../../fn.cpp" line="6173"/>
         <source>Cancel</source>
         <translation>Ακύρωση</translation>
     </message>
@@ -1068,7 +1068,7 @@
     </message>
     <message>
         <location filename="../../fn.cpp" line="1620"/>
-        <location filename="../../fn.cpp" line="5920"/>
+        <location filename="../../fn.cpp" line="5922"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be saved!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Αδυναμία αποθήκευσης!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
@@ -1125,9 +1125,9 @@
         <location filename="../../fn.cpp" line="4403"/>
         <location filename="../../fn.cpp" line="4581"/>
         <location filename="../../fn.cpp" line="4844"/>
-        <location filename="../../fn.cpp" line="5796"/>
-        <location filename="../../fn.cpp" line="6074"/>
-        <location filename="../../fn.cpp" line="6172"/>
+        <location filename="../../fn.cpp" line="5798"/>
+        <location filename="../../fn.cpp" line="6076"/>
+        <location filename="../../fn.cpp" line="6174"/>
         <source>OK</source>
         <translation>Εντάξει</translation>
     </message>
@@ -1193,7 +1193,7 @@
         <translation>Εισαγωγή συνδέσμου</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6017"/>
+        <location filename="../../fn.cpp" line="6019"/>
         <source>HTML Files</source>
         <translation>Αρχεία HTML</translation>
     </message>
@@ -1240,12 +1240,12 @@ Please disable tray in Preferences.</source>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1702"/>
-        <location filename="../../fn.cpp" line="5635"/>
-        <location filename="../../fn.cpp" line="5644"/>
-        <location filename="../../fn.cpp" line="5783"/>
-        <location filename="../../fn.cpp" line="5974"/>
-        <location filename="../../fn.cpp" line="5983"/>
-        <location filename="../../fn.cpp" line="6010"/>
+        <location filename="../../fn.cpp" line="5637"/>
+        <location filename="../../fn.cpp" line="5646"/>
+        <location filename="../../fn.cpp" line="5785"/>
+        <location filename="../../fn.cpp" line="5976"/>
+        <location filename="../../fn.cpp" line="5985"/>
+        <location filename="../../fn.cpp" line="6012"/>
         <source>Untitled</source>
         <translation>Άτιτλο</translation>
     </message>
@@ -1374,62 +1374,62 @@ Please disable tray in Preferences.</source>
         <translation>Στήλες:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5724"/>
+        <location filename="../../fn.cpp" line="5726"/>
         <source>Print Document</source>
         <translation>Εκτύπωση εγγράφου</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5730"/>
+        <location filename="../../fn.cpp" line="5732"/>
         <source>Printing completed.</source>
         <translation>Εκτύπωση ολοκληρωμένη.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5732"/>
+        <location filename="../../fn.cpp" line="5734"/>
         <source>Printing in progress...</source>
         <translation>Εκτύπωση σε εξέλιξη...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5751"/>
+        <location filename="../../fn.cpp" line="5753"/>
         <source>Export HTML</source>
         <translation>Εξαγωγή HTML</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5756"/>
+        <location filename="../../fn.cpp" line="5758"/>
         <source>Export:</source>
         <translation>Εξαγωγή:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5757"/>
+        <location filename="../../fn.cpp" line="5759"/>
         <source>&amp;Current node</source>
         <translation>&amp;Τρέχων κόμβος</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5759"/>
+        <location filename="../../fn.cpp" line="5761"/>
         <source>With all &amp;sub-nodes</source>
         <translation>Με όλους τους &amp;δευτερεύοντες κόμβους</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5760"/>
+        <location filename="../../fn.cpp" line="5762"/>
         <source>&amp;All nodes</source>
         <translation>&amp;Όλοι οι κόμβοι</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5772"/>
+        <location filename="../../fn.cpp" line="5774"/>
         <source>Output file:</source>
         <translation>Αρχείο εξαγωγής:</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5791"/>
+        <location filename="../../fn.cpp" line="5793"/>
         <source>Select path</source>
         <translation>Επιλογή διαδρομής</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5832"/>
+        <location filename="../../fn.cpp" line="5834"/>
         <source>Question</source>
         <translation>Ερώτηση</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="5833"/>
+        <location filename="../../fn.cpp" line="5835"/>
         <source>The file already exists.
 Do you want to replace it?
 </source>
@@ -1438,101 +1438,101 @@ Do you want to replace it?
 </translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6015"/>
+        <location filename="../../fn.cpp" line="6017"/>
         <source>Save HTML As...</source>
         <translation>Αποθήκευση HTML ως...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6041"/>
+        <location filename="../../fn.cpp" line="6043"/>
         <source>Set Password</source>
         <translation>Ορισμός κωδικού πρόσβασης</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6050"/>
+        <location filename="../../fn.cpp" line="6052"/>
         <source>Type password</source>
         <translation>Πληκτρολόγηση κωδικού πρόσβασης</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6062"/>
+        <location filename="../../fn.cpp" line="6064"/>
         <source>Retype password</source>
         <translation>Πληκτρολόγηση κωδικού πρόσβασης ξανά</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6134"/>
+        <location filename="../../fn.cpp" line="6136"/>
         <source>&lt;center&gt;Passwords were different. Retry!&lt;/center&gt;</source>
         <translation>&lt;center&gt;Οι κωδικοί πρόσβασης ήταν διαφορετικοί. Ξαναπροσπαθήστε!&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6154"/>
-        <location filename="../../fn.cpp" line="6162"/>
+        <location filename="../../fn.cpp" line="6156"/>
+        <location filename="../../fn.cpp" line="6164"/>
         <source>Enter Password</source>
         <translation>Εισαγωγή κωδικού πρόσβασης</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6234"/>
+        <location filename="../../fn.cpp" line="6236"/>
         <source>&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</source>
         <translation>&lt;center&gt;Εσφαλμένος κωδικός πρόσβασης. Ξαναπροσπαθήστε!&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6273"/>
+        <location filename="../../fn.cpp" line="6275"/>
         <source>A lightweight notes manager</source>
         <translation>Ένας ελαφρύς διαχειριστής σημειώσεων</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6274"/>
+        <location filename="../../fn.cpp" line="6276"/>
         <source>based on Qt</source>
         <translation>βασισμένος σε Qt</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6275"/>
+        <location filename="../../fn.cpp" line="6277"/>
         <source>Author</source>
         <translation>Συντάκτης</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6277"/>
-        <location filename="../../fn.cpp" line="6278"/>
+        <location filename="../../fn.cpp" line="6279"/>
+        <location filename="../../fn.cpp" line="6280"/>
         <source>About FeatherNotes</source>
         <translation>Σχετικά με το FeatherNotes</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6277"/>
+        <location filename="../../fn.cpp" line="6279"/>
         <source>Translators</source>
         <translation>Μεταφραστές</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6461"/>
+        <location filename="../../fn.cpp" line="6463"/>
         <source>See Preferences → Text → Spell Checking!</source>
         <translation>Δείτε Προτιμήσεις → Κείμενο → Ορθογραφικός έλεγχος!</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6477"/>
+        <location filename="../../fn.cpp" line="6479"/>
         <source>You need to add a Hunspell dictionary.</source>
         <translation>Χρειάζεται να προσθέσετε ένα λεξικό Hunspell.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6482"/>
+        <location filename="../../fn.cpp" line="6484"/>
         <source>The Hunspell dictionary does not exist.</source>
         <translation>Το λεξικό Hunspell δεν υπάρχει.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6490"/>
+        <location filename="../../fn.cpp" line="6492"/>
         <source>The Hunspell dictionary is not accompanied by an affix file.</source>
         <translation>Το λεξικό Hunspell δε συνοδεύεται από ένα αρχείο affix.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6508"/>
-        <location filename="../../fn.cpp" line="6523"/>
-        <location filename="../../fn.cpp" line="6535"/>
+        <location filename="../../fn.cpp" line="6510"/>
+        <location filename="../../fn.cpp" line="6525"/>
+        <location filename="../../fn.cpp" line="6537"/>
         <source>No misspelling from text cursor.</source>
         <translation>Κανένα ορθογραφικό λάθος από το δρομέα κειμένου.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6547"/>
+        <location filename="../../fn.cpp" line="6549"/>
         <source>Spell Checking</source>
         <translation>Ορθογραφικός έλεγχος</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6276"/>
+        <location filename="../../fn.cpp" line="6278"/>
         <source>aka.</source>
         <translation>επίσης γνωστό ως</translation>
     </message>

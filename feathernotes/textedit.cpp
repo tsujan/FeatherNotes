@@ -888,7 +888,7 @@ void TextEdit::mouseMoveEvent (QMouseEvent *e)
 {
     QTextEdit::mouseMoveEvent (e);
 
-    QString str = anchorAt (e->pos());
+    QString str = anchorAt (e->position().toPoint());
     if (!str.isEmpty())
         viewport()->setCursor (Qt::PointingHandCursor);
     else
@@ -945,7 +945,7 @@ void TextEdit::mousePressEvent (QMouseEvent *e)
     QTextEdit::mousePressEvent (e);
 
     if (e->button() == Qt::LeftButton)
-        pressPoint_ = e->pos();
+        pressPoint_ = e->position().toPoint();
 }
 
 /*************************/
@@ -955,9 +955,9 @@ void TextEdit::mouseReleaseEvent (QMouseEvent *e)
     if (e->button() != Qt::LeftButton)
         return;
 
-    QString str = anchorAt (e->pos());
+    QString str = anchorAt (e->position().toPoint());
     if (!str.isEmpty()
-        && cursorForPosition (e->pos()) == cursorForPosition (pressPoint_))
+        && cursorForPosition (e->position().toPoint()) == cursorForPosition (pressPoint_))
     {
         QUrl url (str);
         if (url.isRelative()) // treat relative URLs as local paths
