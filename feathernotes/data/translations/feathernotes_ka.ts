@@ -27,7 +27,7 @@
     <message>
         <location filename="../../fn.ui" line="14"/>
         <source>FeatherNotes</source>
-        <translation type="unfinished"></translation>
+        <translation>FeatherNotes</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="65"/>
@@ -613,7 +613,7 @@
     <message>
         <location filename="../../fn.ui" line="960"/>
         <source>&amp;Auto-Indentation</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;ავტოშეწევა</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="963"/>
@@ -658,7 +658,7 @@
     <message>
         <location filename="../../fn.ui" line="1014"/>
         <source>Superscrip&amp;t</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;ზედა ინდექსი</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1017"/>
@@ -673,7 +673,7 @@
     <message>
         <location filename="../../fn.ui" line="1031"/>
         <source>Subscri&amp;pt</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;ქვედა ინდექსი</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1034"/>
@@ -998,7 +998,7 @@
     <message>
         <location filename="../../fn.cpp" line="675"/>
         <source>&amp;Raise/Hide</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;ამოწევა/ჩაწევა</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="927"/>
@@ -1528,7 +1528,7 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="6278"/>
         <source>aka.</source>
-        <translation type="unfinished"></translation>
+        <translation>ცნობილი, როგორც.</translation>
     </message>
 </context>
 <context>
@@ -1695,7 +1695,7 @@ Needs restarting of FeatherNotes to take effect.</source>
     <message>
         <location filename="../../prefDialog.ui" line="256"/>
         <source>Auto-&amp;bracket</source>
-        <translation type="unfinished"></translation>
+        <translation>ფრჩხილე&amp;ბის ავტომატური დახურვა</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="263"/>
@@ -1731,7 +1731,7 @@ Takes effect after closing this dialog.</source>
     <message>
         <location filename="../../prefDialog.ui" line="314"/>
         <source> minute(s)</source>
-        <translation type="unfinished"></translation>
+        <translation> წუთი</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="348"/>
