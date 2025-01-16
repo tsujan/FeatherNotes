@@ -42,7 +42,7 @@
     <message>
         <location filename="../../fn.ui" line="81"/>
         <source>Previous (F4)</source>
-        <translation type="unfinished"></translation>
+        <translation>წინა (F4)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="84"/>
@@ -92,7 +92,7 @@
     <message>
         <location filename="../../fn.ui" line="189"/>
         <source>Whole Word</source>
-        <translation type="unfinished"></translation>
+        <translation>მთლიანი სიტყვა</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="192"/>
@@ -122,7 +122,7 @@
     <message>
         <location filename="../../fn.ui" line="223"/>
         <source>Recenl&amp;y Opened</source>
-        <translation type="unfinished"></translation>
+        <translation>ახლახან გა&amp;ხსნილი</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="245"/>
@@ -173,12 +173,12 @@
     <message>
         <location filename="../../fn.ui" line="469"/>
         <source>Replacing text</source>
-        <translation type="unfinished"></translation>
+        <translation>ჩასანაცვლებელი ტექსტი</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="479"/>
         <source>Previous (F9)</source>
-        <translation type="unfinished"></translation>
+        <translation>წინა (F9)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="482"/>
@@ -188,7 +188,7 @@
     <message>
         <location filename="../../fn.ui" line="495"/>
         <source>Next (F8)</source>
-        <translation type="unfinished"></translation>
+        <translation>შემდეგი (F8)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="498"/>
@@ -275,7 +275,7 @@
     <message>
         <location filename="../../fn.ui" line="587"/>
         <source>Show/hide searchbar</source>
-        <translation type="unfinished"></translation>
+        <translation>ძებნის პანელის ჩვენება/დამალვა</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="590"/>
@@ -345,7 +345,7 @@
     <message>
         <location filename="../../fn.ui" line="666"/>
         <source>&amp;Strike Through</source>
-        <translation type="unfinished"></translation>
+        <translation>ხაზი&amp;ს გადასმა</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="669"/>
@@ -360,7 +360,7 @@
     <message>
         <location filename="../../fn.ui" line="680"/>
         <source>Te&amp;xt Color</source>
-        <translation type="unfinished"></translation>
+        <translation>ტე&amp;ქსტის ფერი</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="683"/>
@@ -375,7 +375,7 @@
     <message>
         <location filename="../../fn.ui" line="694"/>
         <source>Back&amp;ground Color</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;ფონის ფერი</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="697"/>
@@ -431,7 +431,7 @@
     <message>
         <location filename="../../fn.ui" line="751"/>
         <source>Set Pass&amp;word</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;პაროლის დაყენება</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="756"/>
@@ -492,13 +492,13 @@
     <message>
         <location filename="../../fn.ui" line="819"/>
         <source>E&amp;mbed Image</source>
-        <translation type="unfinished"></translation>
+        <translation>გამოსახულების ჩაშე&amp;ნება</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="822"/>
         <location filename="../../fn.cpp" line="4378"/>
         <source>Embed Image</source>
-        <translation type="unfinished"></translation>
+        <translation>გამოსახულების ჩაშენება</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="825"/>
@@ -508,7 +508,7 @@
     <message>
         <location filename="../../fn.ui" line="833"/>
         <source>E&amp;xpand All</source>
-        <translation type="unfinished"></translation>
+        <translation>ყველას &amp;აკეცვა</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="836"/>
@@ -518,7 +518,7 @@
     <message>
         <location filename="../../fn.ui" line="844"/>
         <source>Collap&amp;se All</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;ყველას ჩამოშლა</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="847"/>
