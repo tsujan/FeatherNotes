@@ -14,7 +14,7 @@
     <message>
         <location filename="../../colorLabel.cpp" line="31"/>
         <source>Click to change color.</source>
-        <translation type="unfinished"></translation>
+        <translation>დააწკაპუნეთ ფერის შესაცვლელად.</translation>
     </message>
     <message>
         <location filename="../../colorLabel.cpp" line="53"/>
@@ -578,7 +578,7 @@
     <message>
         <location filename="../../fn.ui" line="910"/>
         <source>Re&amp;name Node</source>
-        <translation type="unfinished"></translation>
+        <translation>კვა&amp;ნძის სახელის გადარქმევა</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="913"/>
@@ -588,7 +588,7 @@
     <message>
         <location filename="../../fn.ui" line="918"/>
         <source>Tree Pr&amp;operties</source>
-        <translation type="unfinished"></translation>
+        <translation>ხის თვისებებ&amp;ი</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="921"/>
@@ -598,12 +598,12 @@
     <message>
         <location filename="../../fn.ui" line="929"/>
         <source>Document &amp;Font</source>
-        <translation type="unfinished"></translation>
+        <translation>დოკუმენტის &amp;წინ</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="943"/>
         <source>&amp;Wrap Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;ხაზების გადატანა</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="946"/>
