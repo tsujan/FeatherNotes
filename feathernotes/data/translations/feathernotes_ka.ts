@@ -548,7 +548,7 @@
     <message>
         <location filename="../../fn.ui" line="877"/>
         <source>&amp;Delete Node</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;კვანძის წაშლა</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="880"/>
@@ -568,7 +568,7 @@
     <message>
         <location filename="../../fn.ui" line="899"/>
         <source>Move Do&amp;wn</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;ჩამოტანა</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="902"/>
