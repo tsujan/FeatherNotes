@@ -528,7 +528,7 @@
     <message>
         <location filename="../../fn.ui" line="855"/>
         <source>&amp;Append Sibling</source>
-        <translation type="unfinished"></translation>
+        <translation>შენიშვნის ბოლოში მიწერ&amp;ა</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="858"/>
@@ -538,7 +538,7 @@
     <message>
         <location filename="../../fn.ui" line="866"/>
         <source>Append &amp;Child</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;შვილის ბოლოში მიწერა</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="869"/>
@@ -750,7 +750,7 @@
     <message>
         <location filename="../../fn.ui" line="1113"/>
         <source>&amp;Prepend Sibling</source>
-        <translation type="unfinished"></translation>
+        <translation>შენიშვნის თავში მი&amp;წერა</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1116"/>
@@ -760,7 +760,7 @@
     <message>
         <location filename="../../fn.ui" line="1124"/>
         <source>Move &amp;Left</source>
-        <translation type="unfinished"></translation>
+        <translation>გაწევა მარ&amp;ცხნივ</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1127"/>
@@ -770,7 +770,7 @@
     <message>
         <location filename="../../fn.ui" line="1135"/>
         <source>Move &amp;Right</source>
-        <translation type="unfinished"></translation>
+        <translation>გაწევა მარ&amp;ჯვნივ</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1138"/>
@@ -825,22 +825,22 @@
     <message>
         <location filename="../../fn.ui" line="1188"/>
         <source>&amp;Node Font</source>
-        <translation type="unfinished"></translation>
+        <translation>კვა&amp;ნძის ფონტი</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1191"/>
         <source>Node Font</source>
-        <translation type="unfinished"></translation>
+        <translation>კვანძის ფონტი</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1196"/>
         <source>Scale I&amp;mage(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>გამოსახულებ(ებ)-ის &amp;მასშტაბი</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1204"/>
         <source>Paste &amp;HTML</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;HTML-ის ჩასმა</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1207"/>
@@ -860,7 +860,7 @@
     <message>
         <location filename="../../fn.ui" line="1226"/>
         <source>Insert Lin&amp;k</source>
-        <translation type="unfinished"></translation>
+        <translation>ბმულის &amp;ჩასმა</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1229"/>
@@ -870,12 +870,12 @@
     <message>
         <location filename="../../fn.ui" line="1234"/>
         <source>C&amp;opy Link</source>
-        <translation type="unfinished"></translation>
+        <translation>ბმულის კ&amp;ოპირება</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1242"/>
         <source>I&amp;nsert Table</source>
-        <translation type="unfinished"></translation>
+        <translation>ცხრ&amp;ილის ჩასმა</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1245"/>
@@ -885,7 +885,7 @@
     <message>
         <location filename="../../fn.ui" line="1250"/>
         <source>Append Row</source>
-        <translation type="unfinished"></translation>
+        <translation>მწკრივის მიმატება ბოლოში</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1255"/>
@@ -895,7 +895,7 @@
     <message>
         <location filename="../../fn.ui" line="1260"/>
         <source>Append Column</source>
-        <translation type="unfinished"></translation>
+        <translation>სვეტის მიმატება ბოლოში</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1265"/>
@@ -910,22 +910,22 @@
     <message>
         <location filename="../../fn.ui" line="1275"/>
         <source>Prepend Row</source>
-        <translation type="unfinished"></translation>
+        <translation>მწკრივის მიწერა თავში</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1280"/>
         <source>Prepend Column</source>
-        <translation type="unfinished"></translation>
+        <translation>სვეტის მიწერა თავში</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1288"/>
         <source>Export &amp;HTML</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;HTML-ის გატანა</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1293"/>
         <source>Save Ima&amp;ge(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;გამოსახულებ(ებ)-ის შენახვა</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1304"/>
@@ -956,7 +956,7 @@
     <message>
         <location filename="../../fn.ui" line="1337"/>
         <source>Node &amp;Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>კვანზის &amp;ხატულა</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1340"/>
@@ -977,7 +977,7 @@
     <message>
         <location filename="../../fn.ui" line="1356"/>
         <source>Document &amp;Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>დოკუმენტის &amp;ფერები</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1364"/>
@@ -993,7 +993,7 @@
     <message>
         <location filename="../../fn.cpp" line="2963"/>
         <source>Node Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>კვანძის ხატულა</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="675"/>
@@ -1003,7 +1003,7 @@
     <message>
         <location filename="../../fn.cpp" line="927"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;New note?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;ახალი შენიშვნა?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="928"/>
@@ -1028,7 +1028,7 @@
     <message>
         <location filename="../../fn.cpp" line="1023"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Save changes?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;შევინახო ცვლილებები?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1025"/>
@@ -1087,7 +1087,7 @@
         <location filename="../../fn.cpp" line="1722"/>
         <location filename="../../fn.cpp" line="1745"/>
         <source>FeatherNotes documents</source>
-        <translation type="unfinished"></translation>
+        <translation>FeatherNotes-ის დოკუმენტები</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1445"/>
@@ -1151,18 +1151,18 @@
     <message>
         <location filename="../../fn.cpp" line="3562"/>
         <source>%1 Matches</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 დამთხვევა</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3564"/>
         <source>One Match</source>
-        <translation type="unfinished"></translation>
+        <translation>ერთი დამთხვევა</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3566"/>
         <location filename="../../fn.cpp" line="3933"/>
         <source>No Match</source>
-        <translation type="unfinished"></translation>
+        <translation>დამთხვევების გარეშე</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3732"/>
@@ -1173,17 +1173,17 @@
     <message>
         <location filename="../../fn.cpp" line="4040"/>
         <source>No Replacement</source>
-        <translation type="unfinished"></translation>
+        <translation>ჩანაცვლებების გარეშე</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4042"/>
         <source>One Replacement</source>
-        <translation type="unfinished"></translation>
+        <translation>ერთი ჩანაცვლება</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4045"/>
         <source>%1 Replacements</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 ჩანაცვლება</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4305"/>
@@ -1211,7 +1211,7 @@
         <location filename="../../fn.cpp" line="4399"/>
         <location filename="../../fn.cpp" line="4577"/>
         <source>Scaling percentage</source>
-        <translation type="unfinished"></translation>
+        <translation>მასშტაბის პროცენტულობა</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2993"/>
@@ -1249,7 +1249,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="2169"/>
         <source>Align Table</source>
-        <translation type="unfinished"></translation>
+        <translation>ცხრილის სწორება</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2182"/>
@@ -1315,7 +1315,7 @@ Please disable tray in Preferences.</source>
         <location filename="../../fn.cpp" line="4394"/>
         <location filename="../../fn.cpp" line="4573"/>
         <source>Scale to</source>
-        <translation type="unfinished"></translation>
+        <translation>მასშტაბი</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4398"/>
@@ -1326,7 +1326,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="4567"/>
         <source>Scale Image(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>გამოსახულებების მასშტაბი</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4704"/>
@@ -1387,7 +1387,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="5753"/>
         <source>Export HTML</source>
-        <translation type="unfinished"></translation>
+        <translation>HTML-ის გატანა</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5758"/>
@@ -1397,7 +1397,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="5759"/>
         <source>&amp;Current node</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;მიმდინარე კვანძი</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5761"/>
@@ -1407,7 +1407,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="5762"/>
         <source>&amp;All nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;ყველა კვანძი</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5774"/>
@@ -1444,12 +1444,12 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="6052"/>
         <source>Type password</source>
-        <translation type="unfinished"></translation>
+        <translation>აკრიფეთ პაროლი</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6064"/>
         <source>Retype password</source>
-        <translation type="unfinished"></translation>
+        <translation>თავიდან აკრიფეთ პაროლი</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6136"/>
@@ -1486,7 +1486,7 @@ Do you want to replace it?
         <location filename="../../fn.cpp" line="6279"/>
         <location filename="../../fn.cpp" line="6280"/>
         <source>About FeatherNotes</source>
-        <translation type="unfinished"></translation>
+        <translation>FeatherNotes-ის შესახებ</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6279"/>
@@ -1606,7 +1606,7 @@ with some window managers.</source>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>
         <source>Save &amp;position</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;მდებარეობის შენახვა</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="124"/>
@@ -1726,7 +1726,7 @@ Takes effect after closing this dialog.</source>
     <message>
         <location filename="../../prefDialog.ui" line="307"/>
         <source>&amp;Auto-save every</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;ავტოშენახვა ყოველ</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="314"/>
@@ -1767,7 +1767,7 @@ name but ending with &quot;.aff&quot;.</source>
         <location filename="../../prefDialog.ui" line="408"/>
         <location filename="../../pref.cpp" line="653"/>
         <source>Add dictionary...</source>
-        <translation type="unfinished"></translation>
+        <translation>ლექსიკონის დამატება...</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="443"/>
@@ -1861,7 +1861,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../spellDialog.ui" line="87"/>
         <source>Ignore Once</source>
-        <translation type="unfinished"></translation>
+        <translation>ერთხელ გამოტოვება</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="100"/>
@@ -1871,12 +1871,12 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../spellDialog.ui" line="129"/>
         <source>Correct Once</source>
-        <translation type="unfinished"></translation>
+        <translation>ერთხელ შესწორება</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="142"/>
         <source>Correct All</source>
-        <translation type="unfinished"></translation>
+        <translation>ყველას შესწორება</translation>
     </message>
 </context>
 <context>
