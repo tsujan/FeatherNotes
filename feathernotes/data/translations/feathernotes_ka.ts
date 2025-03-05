@@ -87,7 +87,7 @@
     <message>
         <location filename="../../fn.ui" line="186"/>
         <source>Whole Word (F6)</source>
-        <translation type="unfinished"></translation>
+        <translation>მთლიანი სიტყვა (F6)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="189"/>
@@ -102,7 +102,7 @@
     <message>
         <location filename="../../fn.ui" line="167"/>
         <source>Match Case (F5)</source>
-        <translation type="unfinished"></translation>
+        <translation>რეგისტრის დამთხვევა (F5)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="170"/>
@@ -168,7 +168,7 @@
     <message>
         <location filename="../../fn.ui" line="456"/>
         <source>To be replaced</source>
-        <translation type="unfinished"></translation>
+        <translation>ჩასანაცვლებელი</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="469"/>
@@ -198,7 +198,7 @@
     <message>
         <location filename="../../fn.ui" line="511"/>
         <source>Replace all (F10)</source>
-        <translation type="unfinished"></translation>
+        <translation>ყველას ჩანაცვლება (F10)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="514"/>
@@ -285,7 +285,7 @@
     <message>
         <location filename="../../fn.ui" line="598"/>
         <source>&amp;Clear All Formats</source>
-        <translation type="unfinished"></translation>
+        <translation>ყველა &amp;ფორმატის გასუფთავება</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="601"/>
