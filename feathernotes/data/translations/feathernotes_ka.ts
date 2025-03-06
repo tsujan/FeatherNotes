@@ -426,7 +426,7 @@
     <message>
         <location filename="../../fn.ui" line="743"/>
         <source>P&amp;rint with Sub-Nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>დაბეჭდვა &amp;ქვეკვანძებით</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="751"/>
@@ -633,7 +633,7 @@
     <message>
         <location filename="../../fn.ui" line="979"/>
         <source>Find and &amp;Replace</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;პოვნა და ჩანაცვლება</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="982"/>
@@ -653,7 +653,7 @@
     <message>
         <location filename="../../fn.ui" line="1003"/>
         <source>Pr&amp;int All Nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>ყველა კვანძ&amp;ის დაბეჭდვა</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1014"/>
@@ -1069,7 +1069,7 @@
         <location filename="../../fn.cpp" line="1620"/>
         <location filename="../../fn.cpp" line="5922"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be saved!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;შენახვა შეუძლებელია!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3575"/>
@@ -1102,7 +1102,7 @@
     <message>
         <location filename="../../fn.cpp" line="2791"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Delete this node?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;წავშალო ეს კვანძი?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2792"/>
@@ -1233,7 +1233,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="1621"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be opened!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;გახსნა შეუძლებელია!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1702"/>
@@ -1279,17 +1279,17 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="3164"/>
         <source>Select Document Font</source>
-        <translation type="unfinished"></translation>
+        <translation>აირჩიეთ დოკუმენტის დონტი</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3226"/>
         <source>Select Node Font</source>
-        <translation type="unfinished"></translation>
+        <translation>აირჩიეთ კვანძის ფონტი</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3251"/>
         <source>Set Document Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>დოკუმენტის ფერების დაყენება</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3261"/>
@@ -1382,7 +1382,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="5734"/>
         <source>Printing in progress...</source>
-        <translation type="unfinished"></translation>
+        <translation>მიმდინარეობს ბეჭდვა...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5753"/>
@@ -1402,7 +1402,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="5761"/>
         <source>With all &amp;sub-nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>ყველა ქვეკვანძ&amp;ით</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5762"/>
