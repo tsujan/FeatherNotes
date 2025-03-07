@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2024 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2025 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -1308,7 +1308,17 @@ void FN::fileOpen (const QString &filePath, bool startup, bool startWithLastFile
             if (decrypted.isEmpty())
                 decrypted = cntnt;
             QDomDocument document;
-            if (document.setContent (decrypted))
+            auto res = document.setContent (decrypted);
+            if (!res && filePath.endsWith (".fnx"))
+            {
+                /* WARNING: Unfortunately, Qt6 is not backward compatible in rare cases, as the
+                            following characters were valid with Qt5 but are considered invalid
+                            now. There may be more cases, but these are handled here. */
+                decrypted.remove (QChar (0x000E)).remove (QChar (0x000F))
+                         .remove (QChar (0x0010)).remove (QChar (0x0011));
+                res = document.setContent (decrypted);
+            }
+            if (res)
             {
                 QDomElement root = document.firstChildElement ("feathernotes");
                 if (root.isNull())

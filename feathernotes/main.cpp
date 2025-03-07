@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2024 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2025 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -28,7 +28,7 @@
 int main(int argc, char *argv[])
 {
     const QString name = "FeatherNotes";
-    const QString version = "1.3.1";
+    const QString version = "1.3.2";
     const QString option = QString::fromUtf8 (argv[1]);
     if (option == "--help" || option == "-h")
     {
