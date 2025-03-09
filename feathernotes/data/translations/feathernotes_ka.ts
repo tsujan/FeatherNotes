@@ -290,7 +290,7 @@
     <message>
         <location filename="../../fn.ui" line="601"/>
         <source>Clear all formats</source>
-        <translation type="unfinished"></translation>
+        <translation>ყველა ფორმატის გასუფთავება</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="604"/>
@@ -1434,7 +1434,7 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="6027"/>
         <source>Save HTML As...</source>
-        <translation type="unfinished"></translation>
+        <translation>HTML-ის შენახვა, როგორც...</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6053"/>
@@ -1465,7 +1465,7 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="6246"/>
         <source>&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;პაროლი არასწორია. თავიდან სცადეთ!&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6285"/>
@@ -1475,7 +1475,7 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="6286"/>
         <source>based on Qt</source>
-        <translation type="unfinished"></translation>
+        <translation>დაფუძნებულია Qt-ზე</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6287"/>
@@ -1536,7 +1536,7 @@ Do you want to replace it?
     <message>
         <location filename="../../lineedit.cpp" line="35"/>
         <source>Clear text (Ctrl+K)</source>
-        <translation type="unfinished"></translation>
+        <translation>ტექსტის გასუფთავება (Ctrl+K)</translation>
     </message>
     <message>
         <location filename="../../lineedit.cpp" line="81"/>
@@ -1568,7 +1568,7 @@ Uncheck to set a fixed size!</source>
     <message>
         <location filename="../../prefDialog.ui" line="42"/>
         <source>Remember window &amp;size</source>
-        <translation type="unfinished"></translation>
+        <translation>ფანჯრი&amp;ს ზომის დამახსოვრება</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="51"/>
@@ -1592,7 +1592,7 @@ Uncheck for a width ratio of 170/530.</source>
     <message>
         <location filename="../../prefDialog.ui" line="103"/>
         <source>Remember &amp;tree width</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;ხის სიგანის დამახსოვრება</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="110"/>
@@ -1620,7 +1620,7 @@ Needs restarting of FeatherNotes to take effect.</source>
     <message>
         <location filename="../../prefDialog.ui" line="131"/>
         <source>Add to s&amp;ystray</source>
-        <translation type="unfinished"></translation>
+        <translation>ჩამატება &amp;სისტემურ კუთხეში</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="156"/>
@@ -1641,7 +1641,7 @@ can be used instead of this.</source>
     <message>
         <location filename="../../prefDialog.ui" line="172"/>
         <source>Transparent t&amp;ree view</source>
-        <translation type="unfinished"></translation>
+        <translation>გამჭვირვალე ხ&amp;ის ხედი</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="179"/>
