@@ -67,7 +67,7 @@
     <message>
         <location filename="../../fn.ui" line="128"/>
         <source>Search only in tags (Shift+F7)</source>
-        <translation type="unfinished"></translation>
+        <translation>მხოლოდ ჭდეებში ძებნა (Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="131"/>
@@ -983,7 +983,7 @@
         <location filename="../../fn.ui" line="1364"/>
         <location filename="../../fn.ui" line="1367"/>
         <source>Paste Date and Time</source>
-        <translation type="unfinished"></translation>
+        <translation>თარიღის და დროის ჩასმა</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1372"/>
@@ -1033,7 +1033,7 @@
     <message>
         <location filename="../../fn.cpp" line="1025"/>
         <source>&lt;center&gt;&lt;i&gt;The document has been modified.&lt;/i&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;i&gt;დოკუმენტი შეცვლილია.&lt;/i&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1027"/>
@@ -1140,13 +1140,13 @@
         <location filename="../../fn.cpp" line="3097"/>
         <location filename="../../fn.cpp" line="3130"/>
         <source>&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;მთავარი კვანძები:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;ყველა კვანძი:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3103"/>
         <location filename="../../fn.cpp" line="3136"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;Main nodes:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;All nodes:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;შენიშვნა:&lt;/b&gt; &lt;i&gt;%1&lt;/i&gt;&lt;br&gt;&lt;b&gt;მთავარი კვანძები:&lt;/b&gt; &lt;i&gt;%2&lt;/i&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;ყველა კვანძი:&lt;/b&gt; &lt;i&gt;%3&lt;/i&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3572"/>
@@ -1223,7 +1223,8 @@
         <location filename="../../fn.cpp" line="652"/>
         <source>System tray is not available.
 Please disable tray in Preferences.</source>
-        <translation type="unfinished"></translation>
+        <translation>სისტემის კუთხე ხელმისაწვდომი არაა.
+გამორთეთ ის მორგების ფანჯარაში.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="978"/>
@@ -1454,7 +1455,7 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="6146"/>
         <source>&lt;center&gt;Passwords were different. Retry!&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;პაროლები განსხვავდება. თავიდან სცადეთ!&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6166"/>
@@ -1496,7 +1497,7 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="6473"/>
         <source>See Preferences → Text → Spell Checking!</source>
-        <translation type="unfinished"></translation>
+        <translation>იხილეთ მორგება → ტექსტი → მართლწერის შემოწმება!</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6489"/>
@@ -1506,19 +1507,19 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="6494"/>
         <source>The Hunspell dictionary does not exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hunspell-ის ლექსიკონი არ არსებობს.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6502"/>
         <source>The Hunspell dictionary is not accompanied by an affix file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hunspell-ის ლექსიკონს აფიქსის ფაილი არ მოჰყვება.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6520"/>
         <location filename="../../fn.cpp" line="6535"/>
         <location filename="../../fn.cpp" line="6547"/>
         <source>No misspelling from text cursor.</source>
-        <translation type="unfinished"></translation>
+        <translation>მართლწერის შესამოწმებელი ტექსტი კურსორთან არ არსებობს.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6559"/>
@@ -1573,7 +1574,7 @@ Uncheck to set a fixed size!</source>
     <message>
         <location filename="../../prefDialog.ui" line="51"/>
         <source>Start with this size: </source>
-        <translation type="unfinished"></translation>
+        <translation>დაწყება ამ ზომით: </translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="58"/>
@@ -1626,17 +1627,18 @@ Needs restarting of FeatherNotes to take effect.</source>
         <location filename="../../prefDialog.ui" line="156"/>
         <source>The command line option --tray
 can be used instead of this.</source>
-        <translation type="unfinished"></translation>
+        <translation>ამის მაგიერ შეგიძლიათ გამოიყენოთ
+ბრძანების სტრიქონის პარამეტრი --tray.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="160"/>
         <source>Start i&amp;conified to tray</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;სისტემურ საათთან ჩაკეცილი გაშვება</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="169"/>
         <source>Merge the tree view with its surroundings?</source>
-        <translation type="unfinished"></translation>
+        <translation>შევაერთო ხის ხედი მის გარშემომყოფებთან?</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="172"/>
@@ -1652,23 +1654,24 @@ the size of toolbar icons.</source>
     <message>
         <location filename="../../prefDialog.ui" line="183"/>
         <source>Small toolbar icons</source>
-        <translation type="unfinished"></translation>
+        <translation>პატარა ხელსაწყოს ზოლის ხატულები</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="190"/>
         <source>Do not show t&amp;oolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>არ მაჩვენო ხელსაწყ&amp;ოთა პანელი</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="197"/>
         <source>If the menubar is hidden,
 a menu button appears on the toolbar.</source>
-        <translation type="unfinished"></translation>
+        <translation>თუ მენიუს ზოლი დამალულია,
+ხელსაწყოთა პანელზე მენიუს ღილაკი გამოჩნდება.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="201"/>
         <source>Do not show &amp;menubar</source>
-        <translation type="unfinished"></translation>
+        <translation>არ &amp;მაჩვენო მენიუს ზოლი</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="228"/>
@@ -1678,12 +1681,12 @@ a menu button appears on the toolbar.</source>
     <message>
         <location filename="../../prefDialog.ui" line="237"/>
         <source>&amp;Wrap lines by default</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;ხაზების გადატანა ნაგულისხმევად</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="244"/>
         <source>Auto-&amp;indent by default</source>
-        <translation type="unfinished"></translation>
+        <translation>ავტოშეწევა ნაგულის&amp;ხმევად</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="251"/>
@@ -1721,7 +1724,7 @@ Takes effect after closing this dialog.</source>
     <message>
         <location filename="../../prefDialog.ui" line="283"/>
         <source>Date and time format:</source>
-        <translation type="unfinished"></translation>
+        <translation>თარიღის და დროის ფორმატი:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="307"/>
@@ -1743,7 +1746,7 @@ showing a warning if saving is not possible.</source>
     <message>
         <location filename="../../prefDialog.ui" line="353"/>
         <source>Save opened document on exiting</source>
-        <translation type="unfinished"></translation>
+        <translation>გახსნილი დოკუმენტის შენახვა გასვლისას</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="376"/>
@@ -1761,7 +1764,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../prefDialog.ui" line="389"/>
         <source>Hunspell dictionary path:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hunspell-ის ლექსიკონის ბილიკი:</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="408"/>
@@ -1823,12 +1826,12 @@ name but ending with &quot;.aff&quot;.</source>
         <location filename="../../pref.cpp" line="346"/>
         <location filename="../../pref.cpp" line="526"/>
         <source>Warning: Ambiguous shortcut detected!</source>
-        <translation type="unfinished"></translation>
+        <translation>გაფრთხილება: აღმოჩენილია გაურკვეველი მალსახმობი!</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="509"/>
         <source>The typed shortcut was reserved.</source>
-        <translation type="unfinished"></translation>
+        <translation>აკრეფილი მალსახმობი დაცულია.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="624"/>
@@ -1838,7 +1841,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../pref.cpp" line="655"/>
         <source>Hunspell Dictionary Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Hunspell-ის ლექსიკონის ფაილები</translation>
     </message>
 </context>
 <context>
@@ -1851,7 +1854,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../spellDialog.ui" line="51"/>
         <source>Add To Dictionary</source>
-        <translation type="unfinished"></translation>
+        <translation>ლექსიკონში ჩამატება</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="62"/>
