@@ -1275,7 +1275,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="2918"/>
         <source>Tag(s) for this node</source>
-        <translation type="unfinished"></translation>
+        <translation>ჭდეები ამ კვანძისთვის</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3174"/>
@@ -1471,7 +1471,7 @@ Do you want to replace it?
     <message>
         <location filename="../../fn.cpp" line="6285"/>
         <source>A lightweight notes manager</source>
-        <translation type="unfinished"></translation>
+        <translation>მსუბუქი მმართველი შენიშვნებისთვის</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="6286"/>
@@ -1790,7 +1790,7 @@ name but ending with &quot;.aff&quot;.</source>
     <message>
         <location filename="../../prefDialog.ui" line="496"/>
         <source>Open recent files separately</source>
-        <translation type="unfinished"></translation>
+        <translation>უახლესი ფაილების ცალცალკე გახსნა</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="503"/>
