@@ -1613,7 +1613,11 @@ this dialog and also on exit.
 
 This may not work correctly
 with some window managers.</source>
-        <translation type="unfinished"></translation>
+        <translation>Salva a posição após fechar
+esta janela e também ao sair.
+
+Isto pode não funcionar corretamente
+com alguns gerenciadores de janelas.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="117"/>
@@ -1764,12 +1768,14 @@ Entra em vigor após fechar esta caixa de diálogo.</translation>
         <source>If this option is checked, the opened document will
 be saved on exiting without prompt and without
 showing a warning if saving is not possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Se esta opção for marcada, o documento aberto
+será salvo ao sair sem perguntar e não mostrará
+um aviso se não for possível salvar.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="353"/>
         <source>Save opened document on exiting</source>
-        <translation type="unfinished"></translation>
+        <translation>Salvar documento aberto a sair</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="376"/>
@@ -1820,12 +1826,12 @@ nome, mas terminando com &quot;.aff&quot;.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="503"/>
         <source>By default, all nodes are expanded on opening a document.</source>
-        <translation type="unfinished"></translation>
+        <translation>Por padrão, todos os nós são expandidos ao abrir um documento.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="506"/>
         <source>Remember expanded states of nodes</source>
-        <translation type="unfinished"></translation>
+        <translation>Lembrar estados de expansão dos nós</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="530"/>
