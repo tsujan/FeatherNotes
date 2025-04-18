@@ -1768,7 +1768,7 @@ showing a warning if saving is not possible.</source>
     <message>
         <location filename="../../prefDialog.ui" line="353"/>
         <source>Save opened document on exiting</source>
-        <translation type="unfinished"></translation>
+        <translation>Geöffnetes Dokument beim Beenden speichern</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="376"/>
@@ -1819,7 +1819,7 @@ Namen aber endet mit &quot;.aff&quot;.</translation>
     <message>
         <location filename="../../prefDialog.ui" line="503"/>
         <source>By default, all nodes are expanded on opening a document.</source>
-        <translation type="unfinished"></translation>
+        <translation>Standardmäßig werden beim Öffnen eines Dokuments alle Knoten aufgeklappt.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="506"/>
