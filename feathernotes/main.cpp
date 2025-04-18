@@ -53,11 +53,6 @@ int main(int argc, char *argv[])
     singleton.setApplicationName (name);
     singleton.setApplicationVersion (version);
 
-    QStringList langs (QLocale::system().uiLanguages());
-    QString lang; // bcp47Name() doesn't work under vbox
-    if (!langs.isEmpty())
-        lang = langs.first().replace ('-', '_');
-
     QTranslator qtTranslator;
     if (qtTranslator.load ("qt_" + QLocale::system().name(), QLibraryInfo::path (QLibraryInfo::TranslationsPath)))
         singleton.installTranslator (&qtTranslator);
