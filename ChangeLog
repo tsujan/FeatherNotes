@@ -1,6 +1,7 @@
 V1.3.2
 ---------
  * Workaround for a rare case of backward incompatibility from Qt5 to Qt6.
+ * Removed an old workaround about translations, which prevented some languages from being loaded due to a recent change in Qt.
 
 V1.3.1
 ---------

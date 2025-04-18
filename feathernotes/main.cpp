@@ -59,22 +59,16 @@ int main(int argc, char *argv[])
         lang = langs.first().replace ('-', '_');
 
     QTranslator qtTranslator;
-    if (qtTranslator.load ("qt_" + lang, QLibraryInfo::path (QLibraryInfo::TranslationsPath)))
+    if (qtTranslator.load ("qt_" + QLocale::system().name(), QLibraryInfo::path (QLibraryInfo::TranslationsPath)))
         singleton.installTranslator (&qtTranslator);
-    else if (!langs.isEmpty())
-    {
-        lang = langs.first().split (QLatin1Char ('_')).first();
-        if (qtTranslator.load ("qt_" + lang, QLibraryInfo::path (QLibraryInfo::TranslationsPath)))
-            singleton.installTranslator (&qtTranslator);
-    }
 
     QTranslator FPTranslator;
 #if defined (Q_OS_HAIKU)
-    if (FPTranslator.load ("feathernotes_" + lang, qApp->applicationDirPath() + "/translations"))
+    if (FPTranslator.load ("feathernotes_" + QLocale::system().name(), qApp->applicationDirPath() + "/translations"))
 #elif defined (Q_OS_WIN)
-    if (FPTranslator.load ("feathernotes_" + lang, qApp->applicationDirPath() + "\\..\\data\\translations\\translations"))
+    if (FPTranslator.load ("feathernotes_" + QLocale::system().name(), qApp->applicationDirPath() + "\\..\\data\\translations\\translations"))
 #else
-    if (FPTranslator.load ("feathernotes_" + lang, QStringLiteral (DATADIR) + "/feathernotes/translations"))
+    if (FPTranslator.load ("feathernotes_" + QLocale::system().name(), QStringLiteral (DATADIR) + "/feathernotes/translations"))
 #endif
     {
         singleton.installTranslator (&FPTranslator);
