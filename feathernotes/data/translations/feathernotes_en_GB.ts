@@ -365,7 +365,7 @@
     <message>
         <location filename="../../fn.ui" line="683"/>
         <source>Text color</source>
-        <translation type="unfinished"></translation>
+        <translation>Text colour</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="686"/>
@@ -688,12 +688,12 @@
     <message>
         <location filename="../../fn.ui" line="1048"/>
         <source>C&amp;enter</source>
-        <translation type="unfinished"></translation>
+        <translation>C&amp;entre</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1051"/>
         <source>Align center</source>
-        <translation type="unfinished"></translation>
+        <translation>Align centre</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1054"/>
@@ -977,7 +977,7 @@
     <message>
         <location filename="../../fn.ui" line="1356"/>
         <source>Document &amp;Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Document &amp;Colours</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1364"/>
@@ -1254,17 +1254,17 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="2192"/>
         <source>&amp;Center</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Centre</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2631"/>
         <source>Select Text Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Select Text Colour</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2663"/>
         <source>Select Background Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Select Background Colour</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="2800"/>
@@ -1289,22 +1289,22 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="3261"/>
         <source>Set Document Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Set Document Colours</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3271"/>
         <source>These colors will be applied to new nodes.&lt;br&gt;They may or may not affect existing nodes&lt;br&gt;but document reopening is recommended.</source>
-        <translation type="unfinished"></translation>
+        <translation>These colours will be applied to new nodes.&lt;br&gt;They may or may not affect existing nodes&lt;br&gt;but document reopening is recommended.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3274"/>
         <source>Background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Background colour:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="3280"/>
         <source>Text color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Text colour:</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4060"/>
