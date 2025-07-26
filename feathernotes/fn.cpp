@@ -6342,7 +6342,7 @@ void FN::updateRecenMenu()
     {
         if (i < usableActionsNum)
         {
-            curActions.at (i)->setText (metrics.elidedText (recentFiles.at (i), Qt::ElideMiddle, w));
+            curActions.at (i)->setText (metrics.elidedText (recentFiles.value (i).replace ("&", "&&").replace ('\t', ' '), Qt::ElideMiddle, w));
             curActions.at (i)->setData (recentFiles.at (i));
         }
         else
@@ -6350,7 +6350,7 @@ void FN::updateRecenMenu()
             QAction *newAction = new QAction (this);
             connect (newAction, &QAction::triggered, this, &FN::openRecentFile);
             ui->menuOpenRecently->addAction (newAction);
-            newAction->setText (metrics.elidedText (recentFiles.at (i), Qt::ElideMiddle, w));
+            newAction->setText (metrics.elidedText (recentFiles.value (i).replace ("&", "&&").replace ('\t', ' '), Qt::ElideMiddle, w));
             newAction->setData (recentFiles.at (i));
         }
     }

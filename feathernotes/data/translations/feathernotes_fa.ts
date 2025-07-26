@@ -4,7 +4,7 @@
 <context>
     <name>FeatherNotes::AboutDialog</name>
     <message>
-        <location filename="../../about.ui" line="175"/>
+        <location filename="../../about.ui" line="177"/>
         <source>License</source>
         <translation>مجوز</translation>
     </message>

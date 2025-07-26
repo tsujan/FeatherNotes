@@ -28,7 +28,7 @@
 int main(int argc, char *argv[])
 {
     const QString name = "FeatherNotes";
-    const QString version = "1.3.2";
+    const QString version = "1.3.3";
     const QString option = QString::fromUtf8 (argv[1]);
     if (option == "--help" || option == "-h")
     {

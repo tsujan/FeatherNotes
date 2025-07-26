@@ -1,4 +1,8 @@
-V1.3.2
+VV1.3.3
+---------
+ * Fixed showing of ampersand in the recent files menu.
+
+1.3.2
 ---------
  * Workaround for a rare case of backward incompatibility from Qt5 to Qt6.
  * Removed an old workaround about translations, which prevented some languages from being loaded due to a recent change in Qt.
