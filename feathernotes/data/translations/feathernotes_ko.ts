@@ -1170,17 +1170,17 @@
         <location filename="../../fn.cpp" line="3742"/>
         <location filename="../../fn.cpp" line="3795"/>
         <source>Replacement</source>
-        <translation>대체</translation>
+        <translation>바꾸기</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4050"/>
         <source>No Replacement</source>
-        <translation>대체 안함</translation>
+        <translation>바꾸기 안함</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4052"/>
         <source>One Replacement</source>
-        <translation>한 개 대체</translation>
+        <translation>한 개 바꾸기</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4055"/>
