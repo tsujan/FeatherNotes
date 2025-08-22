@@ -895,7 +895,7 @@
     <message>
         <location filename="../../fn.ui" line="1260"/>
         <source>Append Column</source>
-        <translation>Kolom hieronder invoegen</translation>
+        <translation>Kolom hiernaast invoegen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1265"/>
@@ -915,7 +915,7 @@
     <message>
         <location filename="../../fn.ui" line="1280"/>
         <source>Prepend Column</source>
-        <translation>Kolom hierboven invoegen</translation>
+        <translation>Kolom hiervoor invoegen</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="1288"/>
