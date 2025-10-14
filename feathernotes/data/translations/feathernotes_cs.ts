@@ -998,7 +998,7 @@
     <message>
         <location filename="../../fn.cpp" line="675"/>
         <source>&amp;Raise/Hide</source>
-        <translation>&amp;Vyzdvihnout/skrýt</translation>
+        <translation>Vyzdvihnout/sk&amp;rýt</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="927"/>
@@ -1225,8 +1225,8 @@
         <location filename="../../fn.cpp" line="652"/>
         <source>System tray is not available.
 Please disable tray in Preferences.</source>
-        <translation>Systémová lišta není k dispozici.
-Vypněte panel v Předvolbách.</translation>
+        <translation>Oznamovací oblast systémového panelu není k dispozici.
+Vypněte jeho využívání v Předvolbách.</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="978"/>
@@ -1659,7 +1659,7 @@ volbu příkazového řádku --tray</translation>
     <message>
         <location filename="../../prefDialog.ui" line="160"/>
         <source>Start i&amp;conified to tray</source>
-        <translation>&amp;Spouštět zminimalizované do oznamovací oblasti</translation>
+        <translation>Spouštět zminimalizované do oznamova&amp;cí oblasti</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="169"/>
