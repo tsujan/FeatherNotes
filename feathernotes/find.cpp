@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2021 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2025 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -72,7 +72,7 @@ static bool findBackward (const QTextDocument *txtdoc, const QString &str,
 {
     if (!str.isEmpty() && !cursor.isNull())
     {
-        int pos = cursor.anchor()
+        int pos = cursor.selectionStart()
                   - str.size(); // we don't want a match with the cursor inside it
         if (pos >= 0)
         {

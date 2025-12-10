@@ -1,5 +1,7 @@
 VV1.3.3
 ---------
+ * Fixed an asymmetry between the forward and backward searches/replacements if some text was selected.
+ * Made replacing after searching easier (without needing to clear the selection first).
  * Fixed showing of ampersand in the recent files menu.
 
 1.3.2

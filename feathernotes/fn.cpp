@@ -3816,12 +3816,16 @@ void FN::replace()
     {
         if (rplOtherNode_)
             start.movePosition (QTextCursor::Start, QTextCursor::MoveAnchor);
+        else
+            start.setPosition (qMin (start.anchor(), start.position())); // to replace after searching
     }
     else// if (QObject::sender() == ui->rplPrevButton)
     {
         backwardSearch = true;
         if (rplOtherNode_)
             start.movePosition (QTextCursor::End, QTextCursor::MoveAnchor);
+        else
+            start.setPosition (qMax (start.anchor(), start.position()));
     }
 
     QTextCursor found;
@@ -3862,8 +3866,8 @@ void FN::replace()
         int pos;
         QTextCursor tmp = start;
 
-        start.setPosition (found.anchor());
         pos = found.anchor();
+        start.setPosition (pos);
         start.setPosition (found.position(), QTextCursor::KeepAnchor);
         textEdit->setTextCursor (start);
         textEdit->insertPlainText (txtReplace_);
@@ -3880,7 +3884,7 @@ void FN::replace()
             rplOtherNode_ = false;
         }
 
-        start = textEdit->textCursor(); // at the end of txtReplace_
+        start = textEdit->textCursor(); // now it is at the end of txtReplace_
         tmp.setPosition (pos);
         tmp.setPosition (start.position(), QTextCursor::KeepAnchor);
         QTextEdit::ExtraSelection extra;
