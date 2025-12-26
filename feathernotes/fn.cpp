@@ -22,7 +22,9 @@
 #include "treedelegate.h"
 #include "warningbar.h"
 #include "spinbox.h"
+#ifdef HAS_SIMPLECRYPT
 #include "simplecrypt.h"
+#endif
 #include "settings.h"
 #include "help.h"
 #include "filedialog.h"
@@ -267,7 +269,11 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     connect (ui->actionSave, &QAction::triggered, this, &FN::saveFile);
     connect (ui->actionSaveAs, &QAction::triggered, this, &FN::saveFile);
 
+#ifdef HAS_SIMPLECRYPT
     connect (ui->actionPassword, &QAction::triggered, this, &FN::setPswd);
+#else
+    ui->actionPassword->setVisible (false);
+#endif
 
     connect (ui->actionPrint, &QAction::triggered, this, &FN::txtPrint);
     connect (ui->actionPrintNodes, &QAction::triggered, this, &FN::txtPrint);
@@ -1065,7 +1071,11 @@ void FN::enableActions (bool enable)
     ui->actionPrintNodes->setEnabled (enable);
     ui->actionPrintAll->setEnabled (enable);
     ui->actionExportHTML->setEnabled (enable);
+#ifdef HAS_SIMPLECRYPT
     ui->actionPassword->setEnabled (enable);
+#else
+    ui->actionPassword->setEnabled (false);
+#endif
 
     ui->actionPaste->setEnabled (enable);
     ui->actionPasteHTML->setEnabled (enable);
@@ -1303,20 +1313,26 @@ void FN::fileOpen (const QString &filePath, bool startup, bool startWithLastFile
             QTextStream in (&file);
             QString cntnt = in.readAll();
             file.close();
+
+            QString xmlText = cntnt;
+
+#ifdef HAS_SIMPLECRYPT
             SimpleCrypt crypto (Q_UINT64_C(0xc9a25eb1610eb104));
             QString decrypted = crypto.decryptToString (cntnt);
-            if (decrypted.isEmpty())
-                decrypted = cntnt;
+            if (!decrypted.isEmpty())
+                xmlText = decrypted;
+#endif
+
             QDomDocument document;
-            auto res = document.setContent (decrypted);
+            auto res = document.setContent (xmlText);
             if (!res && filePath.endsWith (".fnx"))
             {
                 /* WARNING: Unfortunately, Qt6 is not backward compatible in rare cases, as the
                             following characters were valid with Qt5 but are considered invalid
                             now. There may be more cases, but these are handled here. */
-                decrypted.remove (QChar (0x000E)).remove (QChar (0x000F))
-                         .remove (QChar (0x0010)).remove (QChar (0x0011));
-                res = document.setContent (decrypted);
+                xmlText.remove (QChar (0x000E)).remove (QChar (0x000F))
+                       .remove (QChar (0x0010)).remove (QChar (0x0011));
+                res = document.setContent (xmlText);
             }
             if (res)
             {
@@ -1334,6 +1350,7 @@ void FN::fileOpen (const QString &filePath, bool startup, bool startWithLastFile
                 }
                 else
                 {
+#ifdef HAS_SIMPLECRYPT
                     QString oldPswrd = pswrd_;
                     pswrd_ = root.attribute ("pswrd");
                     if (!pswrd_.isEmpty() && !isPswrdCorrect (filePath))
@@ -1347,6 +1364,7 @@ void FN::fileOpen (const QString &filePath, bool startup, bool startWithLastFile
                         }
                     }
                     else
+#endif
                     {
                         success = true;
                         if (startup && startWithLastFile && lastNode_ > -1)
@@ -1647,10 +1665,15 @@ void FN::setNodesTexts()
         root.removeAttribute ("bgcolor");
         root.removeAttribute ("fgcolor");
     }
+
+#ifdef HAS_SIMPLECRYPT
     if (!pswrd_.isEmpty())
         root.setAttribute ("pswrd", pswrd_);
     else
         root.removeAttribute ("pswrd");
+#else
+    root.removeAttribute ("pswrd");
+#endif
 
     QHash<DomItem*, TextEdit*>::iterator it;
     for (it = widgets_.begin(); it != widgets_.end(); ++it)
@@ -1781,65 +1804,50 @@ bool FN::saveFile()
 bool FN::fileSave (const QString &filePath)
 {
     QFile outputFile (filePath);
+
+    if (!outputFile.open (QIODevice::WriteOnly))
+        return false;
+
+    /* now, it's the time to set the nodes' texts */
+    setNodesTexts();
+
+#ifdef HAS_SIMPLECRYPT
     if (pswrd_.isEmpty())
     {
-        if (outputFile.open (QIODevice::WriteOnly))
-        {
-            /* now, it's the time to set the nodes' texts */
-            setNodesTexts();
-
-            QTextStream outStream (&outputFile);
-            model_->domDocument.save (outStream, 1);
-            outputFile.close();
-
-            if (xmlPath_ != filePath)
-            {
-                xmlPath_ = filePath;
-                setTitle (xmlPath_);
-            }
-            QHash<DomItem*, TextEdit*>::iterator it;
-            for (it = widgets_.begin(); it != widgets_.end(); ++it)
-                it.value()->document()->setModified (false);
-            if (saveNeeded_ > 0)
-            {
-                saveNeeded_ = 0;
-                ui->actionSave->setEnabled (false);
-                setWindowModified (false);
-            }
-            docProp();
-        }
-        else return false;
+        QTextStream outStream (&outputFile);
+        model_->domDocument.save (outStream, 1);
     }
     else
     {
-        if (outputFile.open (QFile::WriteOnly))
-        {
-            setNodesTexts();
-            SimpleCrypt crypto (Q_UINT64_C (0xc9a25eb1610eb104));
-            QString encrypted = crypto.encryptToString (model_->domDocument.toString());
+        SimpleCrypt crypto (Q_UINT64_C (0xc9a25eb1610eb104));
+        QString encrypted = crypto.encryptToString (model_->domDocument.toString());
 
-            QTextStream out (&outputFile);
-            out << encrypted;
-            outputFile.close();
-
-            if (xmlPath_ != filePath)
-            {
-                xmlPath_ = filePath;
-                setTitle (xmlPath_);
-            }
-            QHash<DomItem*, TextEdit*>::iterator it;
-            for (it = widgets_.begin(); it != widgets_.end(); ++it)
-                it.value()->document()->setModified (false);
-            if (saveNeeded_ > 0)
-            {
-                saveNeeded_ = 0;
-                ui->actionSave->setEnabled (false);
-                setWindowModified (false);
-            }
-            docProp();
-        }
-        else return false;
+        QTextStream out (&outputFile);
+        out << encrypted;
     }
+#else
+    // SimpleCrypt support is disabled: always save unencrypted XML
+    QTextStream outStream (&outputFile);
+    model_->domDocument.save (outStream, 1);
+#endif
+
+    outputFile.close();
+
+    if (xmlPath_ != filePath)
+    {
+        xmlPath_ = filePath;
+        setTitle (xmlPath_);
+    }
+    QHash<DomItem*, TextEdit*>::iterator it;
+    for (it = widgets_.begin(); it != widgets_.end(); ++it)
+        it.value()->document()->setModified (false);
+    if (saveNeeded_ > 0)
+    {
+        saveNeeded_ = 0;
+        ui->actionSave->setEnabled (false);
+        setWindowModified (false);
+    }
+    docProp();
 
     return true;
 }

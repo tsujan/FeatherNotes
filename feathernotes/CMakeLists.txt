@@ -69,10 +69,14 @@ set(feathernotes_SRCS
     lineedit.cpp
     pref.cpp
     textedit.cpp
-    simplecrypt.cpp
     vscrollbar.cpp
     printing.cpp
     svgicons.cpp)
+
+if(WITH_SIMPLECRYPT)
+  list(APPEND feathernotes_SRCS simplecrypt.cpp)
+  add_definitions(-DHAS_SIMPLECRYPT)
+endif()
 
 if(WITH_HUNSPELL)
   set(feathernotes_SRCS ${feathernotes_SRCS} spellChecker.cpp spellDialog.cpp)

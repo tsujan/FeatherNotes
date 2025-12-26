@@ -22,4 +22,6 @@ if (OS2)
   option(WITHOUT_X11 "Compiling without X11..." ON)
 endif()
 
+option(WITH_SIMPLECRYPT "Enable SimpleCrypt-based file encryption support" ON)
+
 add_subdirectory(feathernotes)
