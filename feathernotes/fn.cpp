@@ -62,6 +62,7 @@
 #include <QApplication>
 #include <QMimeDatabase>
 #include <QProcess>
+#include <QCryptographicHash>
 #include <QtMath>
 
 #ifdef HAS_X11
@@ -1300,10 +1301,11 @@ void FN::fileOpen (const QString &filePath, bool startup, bool startWithLastFile
         QFile file (filePath);
         if (file.open (QIODevice::ReadOnly))
         {
+            bool newEncrypt = false;
             QTextStream in (&file);
             QString cntnt = in.readAll();
             file.close();
-            SimpleCrypt crypto (Q_UINT64_C(0xc9a25eb1610eb104));
+            SimpleCrypt crypto (Q_UINT64_C (0xc9a25eb1610eb104)); // for backward compatibility
             QString decrypted = crypto.decryptToString (cntnt);
             if (decrypted.isEmpty())
                 decrypted = cntnt;
@@ -1317,6 +1319,48 @@ void FN::fileOpen (const QString &filePath, bool startup, bool startWithLastFile
                 decrypted.remove (QChar (0x000E)).remove (QChar (0x000F))
                          .remove (QChar (0x0010)).remove (QChar (0x0011));
                 res = document.setContent (decrypted);
+            }
+            if (!res)
+            { // try the new encryption method
+                newEncrypt = true;
+                bool retry = false;
+                QString oldPswrd = pswrd_;
+GETPSWRD:
+                getPswrd (filePath, retry);
+                if (pswrd_.isEmpty())
+                {
+                    pswrd_ = oldPswrd;
+                    if (startup)
+                    {
+                        xmlPath_.clear();
+                        notSavedOrOpened (false);
+                        return;
+                    }
+                }
+                else
+                {
+                    QByteArray hash = QCryptographicHash::hash (pswrd_.toUtf8(),
+                                                                QCryptographicHash::Sha256);
+                    QDataStream stream (hash);
+                    quint64 key; stream >> key;
+                    SimpleCrypt _crypto (key);
+                    QString _decrypted = _crypto.decryptToString (cntnt);
+                    if (_decrypted.isEmpty())
+                    { // the lack of password protection was checked before
+                        retry = true;
+                        goto GETPSWRD;
+                    }
+                    else
+                    {
+                        res = document.setContent (_decrypted);
+                        if (!res && filePath.endsWith (".fnx"))
+                        {
+                            _decrypted.remove (QChar (0x000E)).remove (QChar (0x000F))
+                                      .remove (QChar (0x0010)).remove (QChar (0x0011));
+                            res = document.setContent (_decrypted);
+                        }
+                    }
+                }
             }
             if (res)
             {
@@ -1336,7 +1380,7 @@ void FN::fileOpen (const QString &filePath, bool startup, bool startWithLastFile
                 {
                     QString oldPswrd = pswrd_;
                     pswrd_ = root.attribute ("pswrd");
-                    if (!pswrd_.isEmpty() && !isPswrdCorrect (filePath))
+                    if (!newEncrypt && !pswrd_.isEmpty() && !isPswrdCorrect (filePath))
                     {
                         pswrd_ = oldPswrd;
                         if (startup)
@@ -1815,7 +1859,12 @@ bool FN::fileSave (const QString &filePath)
         if (outputFile.open (QFile::WriteOnly))
         {
             setNodesTexts();
-            SimpleCrypt crypto (Q_UINT64_C (0xc9a25eb1610eb104));
+            QByteArray hash = QCryptographicHash::hash (pswrd_.toUtf8(),
+                                                        QCryptographicHash::Sha256);
+            QDataStream stream (hash);
+            quint64 key; stream >> key;
+            SimpleCrypt crypto (key);
+            //SimpleCrypt crypto (Q_UINT64_C (0xc9a25eb1610eb104));
             QString encrypted = crypto.encryptToString (model_->domDocument.toString());
 
             QTextStream out (&outputFile);
@@ -6252,6 +6301,68 @@ void FN::checkPswrd()
     }
     else
         list.at (i)->accept();
+}
+/*************************/
+void FN::getPswrd (const QString &file, bool retry)
+{
+    if (!isVisible() || !isActiveWindow())
+    {
+        activateFNWindow (true);
+        QCoreApplication::processEvents();
+    }
+    QCoreApplication::processEvents(); // needed when starting iconified
+
+    closeWinDialogs();
+
+    QDialog *dialog = new QDialog (this);
+    dialog->setWindowModality (Qt::WindowModal);
+    dialog->setWindowTitle (tr ("Enter Password"));
+    QGridLayout *grid = new QGridLayout;
+    grid->setSpacing (5);
+    grid->setContentsMargins (5, 5, 5, 5);
+
+    LineEdit *lineEdit = new LineEdit();
+    lineEdit->setMinimumWidth (200);
+    lineEdit->setEchoMode (QLineEdit::Password);
+    lineEdit->setPlaceholderText (tr ("Enter Password"));
+    connect (lineEdit, &QLineEdit::returnPressed, dialog, &QDialog::accept);
+    QLabel *pathLabel = new QLabel(file);
+    pathLabel->setSizePolicy (QSizePolicy::Preferred, QSizePolicy::MinimumExpanding);
+    pathLabel->setWordWrap (true);
+    pathLabel->setAlignment (Qt::AlignCenter);
+    QLabel *label = new QLabel(tr ("<center>Wrong password. Retry!</center>"));
+    QSpacerItem *spacer0 = new QSpacerItem (1, 5);
+    QSpacerItem *spacer1 = new QSpacerItem (1, 5);
+    QPushButton *cancelButton = new QPushButton (symbolicIcon::icon (":icons/dialog-cancel.svg"), tr ("Cancel"));
+    QPushButton *okButton = new QPushButton (symbolicIcon::icon (":icons/dialog-ok.svg"), tr ("OK"));
+    connect (cancelButton, &QAbstractButton::clicked, dialog, &QDialog::reject);
+    connect (okButton, &QAbstractButton::clicked, dialog, &QDialog::accept);
+
+    grid->addWidget (pathLabel, 0, 0, 1, 3);
+    grid->addItem (spacer0, 1, 0);
+    grid->addWidget (lineEdit, 2, 0, 1, 3);
+    grid->addWidget (label, 3, 0, 1, 3);
+    grid->addItem (spacer1, 4, 0);
+    grid->addWidget (cancelButton, 5, 0, 1, 2, Qt::AlignRight);
+    grid->addWidget (okButton, 5, 2, Qt::AlignCenter);
+    grid->setColumnStretch (1, 1);
+    grid->setRowStretch (2, 1);
+    label->setVisible (retry);
+
+    dialog->setLayout (grid);
+    dialog->resize (dialog->size().expandedTo (QSize (300, 0)));
+
+    switch (dialog->exec()) {
+    case QDialog::Accepted:
+        pswrd_ = lineEdit->text();
+        delete dialog;
+        break;
+    case QDialog::Rejected:
+    default:
+        pswrd_.clear();
+        delete dialog;
+        break;
+    }
 }
 /*************************/
 void FN::aboutDialog()

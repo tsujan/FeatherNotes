@@ -386,6 +386,7 @@ private:
     void readAndApplyConfig (bool startup = true);
     QString nodeAddress (QModelIndex index);
     bool isPswrdCorrect (const QString &file);
+    void getPswrd (const QString &file, bool retry);
     void dragMoveEvent (QDragMoveEvent *event);
     void dragEnterEvent (QDragEnterEvent *event);
     void dropEvent (QDropEvent *event);
