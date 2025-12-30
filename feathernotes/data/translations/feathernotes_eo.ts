@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="eo">
+<TS version="2.1" language="eo_001">
 <context>
     <name>FeatherNotes::AboutDialog</name>
     <message>
@@ -57,7 +57,7 @@
     <message>
         <location filename="../../fn.ui" line="115"/>
         <source>Search only in names (Ctrl+Shift+F7)</source>
-        <translation>Serĉi nur la nomojn (Ctrl+Shift+F7)</translation>
+        <translation>Priserĉi nur la nomojn (Ctrl+Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="118"/>
@@ -67,7 +67,7 @@
     <message>
         <location filename="../../fn.ui" line="128"/>
         <source>Search only in tags (Shift+F7)</source>
-        <translation>Serĉi nur la etikedojn (Shift+F7)</translation>
+        <translation>Priserĉi nur la etikedojn (Shift+F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="131"/>
@@ -77,7 +77,7 @@
     <message>
         <location filename="../../fn.ui" line="144"/>
         <source>Search in all nodes (F7)</source>
-        <translation>Serĉi ĉiujn nodojn (F7)</translation>
+        <translation>Priserĉi ĉiujn nodojn (F7)</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="147"/>
@@ -426,7 +426,7 @@
     <message>
         <location filename="../../fn.ui" line="743"/>
         <source>P&amp;rint with Sub-Nodes</source>
-        <translation>P&amp;resi kub Sub-Nodoj</translation>
+        <translation>P&amp;resi Inkluzive Sub-Nodojn</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="751"/>
@@ -1346,14 +1346,14 @@ Bonvole malebligu la taskopleton en Agordoj.</translation>
     <message>
         <location filename="../../fn.cpp" line="4800"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Image cannot be saved! Retry?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;La bildo ne povas esto konservita! Reprovi?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;La bildo ne povas esti konservita! Reprovi?&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4801"/>
         <source>&lt;center&gt;Maybe you did not choose a proper extension&lt;/center&gt;
 &lt;center&gt;or do not have write permission.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</source>
         <translation>&lt;center&gt;Eble vi ne elektis ĝustan dosiertipon&lt;/center&gt;
-&lt;center&gt;aŭ vi ne havas permeson por skribi.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</translation>
+&lt;center&gt;aŭ ne havas permeson por skribi.&lt;/center&gt;&lt;p&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="4833"/>
@@ -1408,7 +1408,7 @@ Bonvole malebligu la taskopleton en Agordoj.</translation>
     <message>
         <location filename="../../fn.cpp" line="5824"/>
         <source>With all &amp;sub-nodes</source>
-        <translation>Kun ĉiuj ĝiaj &amp;subnodoj</translation>
+        <translation>Inkluzive ĉiujn &amp;subnodojn</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="5825"/>
@@ -1776,8 +1776,8 @@ Efektiviĝos post kiam ĉi tiu dialogo estas fermita.</translation>
 be saved on exiting without prompt and without
 showing a warning if saving is not possible.</source>
         <translation>Se ĉi tiu opcio estus markita, la malfermita dokumento
-estus konservita forlasante, sen averti antaŭ ol
-konservi kaj sen averto pri malsukcesa konservado.</translation>
+estus konservita sen averto antaŭ ol forlasado kaj sen
+averto pri malsukcesa konservado.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="353"/>
@@ -1797,7 +1797,7 @@ and should be alongside an affix file with the same
 name but ending with &quot;.aff&quot;.</source>
         <translation>La Hunspell-vortaro havas nomon, kies finaĵo estas &quot;.dic&quot;,
 kaj devas akompani afiksan dosieron, kiu havas la saman
-nomon se kun la finaĵo &quot;.aff&quot;.</translation>
+nomon sed kun la finaĵo &quot;.aff&quot;.</translation>
     </message>
     <message>
         <location filename="../../prefDialog.ui" line="389"/>
