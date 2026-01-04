@@ -1311,13 +1311,13 @@ void FN::fileOpen (const QString &filePath, bool startup, bool startWithLastFile
                 decrypted = cntnt;
             QDomDocument document;
             auto res = document.setContent (decrypted);
-            if (!res && filePath.endsWith (".fnx"))
+            if (!res && (res.errorLine != 1 || res.errorColumn != 1) && filePath.endsWith (".fnx"))
             {
                 /* WARNING: Unfortunately, Qt6 is not backward compatible in rare cases, as the
-                            following characters were valid with Qt5 but are considered invalid
-                            now. There may be more cases, but these are handled here. */
-                decrypted.remove (QChar (0x000E)).remove (QChar (0x000F))
-                         .remove (QChar (0x0010)).remove (QChar (0x0011));
+                            control characters were valid with Qt5 but are considered invalid
+                            now. C0 controls (U+0000-U+001F) are handled here. */
+                for (int i = 0; i < 32; ++i)
+                    decrypted.remove (QChar (i));
                 res = document.setContent (decrypted);
             }
             if (!res)
@@ -1353,10 +1353,10 @@ GETPSWRD:
                     else
                     {
                         res = document.setContent (_decrypted);
-                        if (!res && filePath.endsWith (".fnx"))
+                        if (!res && (res.errorLine != 1 || res.errorColumn != 1) && filePath.endsWith (".fnx"))
                         {
-                            _decrypted.remove (QChar (0x000E)).remove (QChar (0x000F))
-                                      .remove (QChar (0x0010)).remove (QChar (0x0011));
+                            for (int i = 0; i < 32; ++i)
+                                _decrypted.remove (QChar (i));
                             res = document.setContent (_decrypted);
                         }
                     }
