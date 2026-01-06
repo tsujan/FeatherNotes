@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2025 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2026 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -1311,7 +1311,7 @@ void FN::fileOpen (const QString &filePath, bool startup, bool startWithLastFile
                 decrypted = cntnt;
             QDomDocument document;
             auto res = document.setContent (decrypted);
-            if (!res && (res.errorLine != 1 || res.errorColumn != 1) && filePath.endsWith (".fnx"))
+            if (!res && !decrypted.isEmpty() && res.errorLine > 1 && filePath.endsWith (".fnx"))
             {
                 /* WARNING: Unfortunately, Qt6 is not backward compatible in rare cases, as the
                             control characters were valid with Qt5 but are considered invalid
@@ -1320,7 +1320,7 @@ void FN::fileOpen (const QString &filePath, bool startup, bool startWithLastFile
                     decrypted.remove (QChar (i));
                 res = document.setContent (decrypted);
             }
-            if (!res)
+            if (!res && !decrypted.isEmpty())
             { // try the new encryption method
                 newEncrypt = true;
                 bool retry = false;
@@ -1353,7 +1353,7 @@ GETPSWRD:
                     else
                     {
                         res = document.setContent (_decrypted);
-                        if (!res && (res.errorLine != 1 || res.errorColumn != 1) && filePath.endsWith (".fnx"))
+                        if (!res && res.errorLine > 1 && filePath.endsWith (".fnx"))
                         {
                             for (int i = 0; i < 32; ++i)
                                 _decrypted.remove (QChar (i));
