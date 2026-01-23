@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2016-2026 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -62,9 +62,13 @@ QVariant DomModel::data (const QModelIndex &indx, int role) const
             QString str = attributeMap.namedItem ("icon").nodeValue();
             if (str.isEmpty())
                 return QVariant();
+            auto icn = QIcon::fromTheme (str);
+            if (!icn.isNull())
+                return QVariant (icn);
             QImage image;
-            image.loadFromData (QByteArray::fromBase64 (str.toUtf8()));
-            return QVariant (QIcon (QPixmap::fromImage (image)));
+            if (image.loadFromData (QByteArray::fromBase64 (str.toUtf8())))
+                return QVariant (QIcon (QPixmap::fromImage (image)));
+            return QVariant();
         }
         return attributeMap.namedItem ("name").nodeValue();
     }

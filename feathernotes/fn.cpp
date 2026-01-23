@@ -3091,6 +3091,15 @@ void FN::nodeIcon()
             }
             else
             {
+                if (!imagePath.contains ("/"))
+                { // icon name
+                    if (curIcn != imagePath)
+                    {
+                        node.toElement().setAttribute ("icon", imagePath);
+                        emit model_->dataChanged (index, index);
+                    }
+                    return;
+                }
                 QFile file (imagePath);
                 if (file.open (QIODevice::ReadOnly))
                 {
@@ -3103,7 +3112,6 @@ void FN::nodeIcon()
                     file.close();
                     QByteArray base64array = rawarray.toBase64();
                     const QString icn = QString (base64array);
-
                     if (curIcn != icn)
                     {
                         node.toElement().setAttribute ("icon", icn);
