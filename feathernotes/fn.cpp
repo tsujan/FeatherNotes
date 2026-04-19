@@ -3061,15 +3061,64 @@ void FN::nodeIcon()
         }
         ImagePathEntry->setText (file);
     });
+
     QSpacerItem *spacer = new QSpacerItem (1, 10, QSizePolicy::Minimum, QSizePolicy::MinimumExpanding);
     QPushButton *cancelButton = new QPushButton (symbolicIcon::icon (":icons/dialog-cancel.svg"), tr ("Cancel"));
     QPushButton *okButton = new QPushButton (symbolicIcon::icon (":icons/dialog-ok.svg"), tr ("OK"));
     connect (cancelButton, &QAbstractButton::clicked, dlg, &QDialog::reject);
     connect (okButton, &QAbstractButton::clicked, dlg, &QDialog::accept);
 
+    /* if there's an image, add a Save button; otherwise, put the icon name in the entry */
+    QToolButton *saveBtn = nullptr;
+    if (!curIcn.isEmpty())
+    {
+        if (!QIcon::fromTheme (curIcn).isNull()) // icon name
+            ImagePathEntry->setText (curIcn);
+        else
+        {
+            QImage image;
+            if (image.loadFromData (QByteArray::fromBase64 (curIcn.toUtf8())))
+            {
+                saveBtn = new QToolButton();
+                saveBtn->setIcon (symbolicIcon::icon (":icons/document-save.svg"));
+                saveBtn->setToolTip (tr ("Save Image As..."));
+                connect (saveBtn, &QAbstractButton::clicked, dlg, [this, dlg, image] {
+                    dlg->done (QDialog::Rejected);
+
+                    QString fname, path;
+                    if (!xmlPath_.isEmpty())
+                    {
+                        QDir dir = QFileInfo (xmlPath_).absoluteDir();
+                        if (!dir.exists())
+                            dir = QDir::home();
+                        path = dir.path();
+                    }
+                    else
+                    {
+                        QDir dir = QDir::home();
+                        path = dir.path();
+                    }
+                    FileDialog dialog (this);
+                    dialog.setWindowModality (Qt::WindowModal);
+                    dialog.setAcceptMode (QFileDialog::AcceptSave);
+                    dialog.setWindowTitle (tr ("Save Image As..."));
+                    dialog.setFileMode (QFileDialog::AnyFile);
+                    dialog.setNameFilter (tr ("Image Files") + " (*.png *.jpg *.jpeg *.bmp);;" + tr ("All Files") + " (*)");
+                    dialog.setDirectory (path);
+                    if (dialog.exec())
+                        fname = dialog.selectedFiles().at (0);
+                    if (!fname.isEmpty() && !QFileInfo (fname).isDir() && !image.save (fname))
+                        notSavedOrOpened (true);
+                });
+            }
+        }
+    }
+
     grid->addWidget (ImagePathEntry, 0, 0, 1, 4);
     grid->addWidget (openBtn, 0, 4, Qt::AlignCenter);
     grid->addItem (spacer, 1, 0);
+    if (saveBtn != nullptr)
+        grid->addWidget (saveBtn, 2, 0);
     grid->addWidget (cancelButton, 2, 2, Qt::AlignRight);
     grid->addWidget (okButton, 2, 3, 1, 2, Qt::AlignCenter);
     grid->setColumnStretch (1, 1);

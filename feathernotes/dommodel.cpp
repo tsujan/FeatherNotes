@@ -63,7 +63,7 @@ QVariant DomModel::data (const QModelIndex &indx, int role) const
             if (str.isEmpty())
                 return QVariant();
             auto icn = QIcon::fromTheme (str);
-            if (!icn.isNull())
+            if (!icn.isNull()) // icon name
                 return QVariant (icn);
             QImage image;
             if (image.loadFromData (QByteArray::fromBase64 (str.toUtf8())))

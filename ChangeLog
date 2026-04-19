@@ -1,3 +1,7 @@
+V1.4.1
+---------
+ * Allowed saving of node icons if they are imported images.
+
 V1.4.0
 ---------
  * Made the password protection stronger (previously it just obfuscated the document).
