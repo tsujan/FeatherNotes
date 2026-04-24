@@ -1440,7 +1440,7 @@ Please disable tray in Preferences.</source>
 Do you want to replace it?
 </source>
         <translation>Файл уже существует.
-Вы хотите заменить его?
+Хотите заменить его?
 </translation>
     </message>
     <message>
