@@ -1240,7 +1240,7 @@ Please disable tray in Preferences.</source>
     <message>
         <location filename="../../fn.cpp" line="1675"/>
         <source>&lt;center&gt;&lt;b&gt;&lt;big&gt;Cannot be opened!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</source>
-        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Не может быть открыто!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
+        <translation>&lt;center&gt;&lt;b&gt;&lt;big&gt;Невозможно открыть!&lt;/big&gt;&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../../fn.cpp" line="1756"/>
