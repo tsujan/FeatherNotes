@@ -17,6 +17,7 @@ endif()
 
 option(WITH_HUNSPELL "Compiling with Hunspell..." ON)
 option(WITHOUT_X11 "Compiling without X11..." OFF)
+option(WITH_CMARK "Compiling with cmark markdown support..." ON)
 # OS/2 never has X11
 if (OS2)
   option(WITHOUT_X11 "Compiling without X11..." ON)

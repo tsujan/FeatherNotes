@@ -339,6 +339,7 @@ private slots:
     void activateTray();
     void txtPrint();
     void exportHTML();
+    void exportMarkdown();
     void setHTMLName (bool checked);
     void setHTMLPath (bool);
     void setPswd();
@@ -398,6 +399,11 @@ private:
     void closeNonModalDialogs();
     void closeWinDialogs();
     void updateNodeActions();
+    QString sanitizedMdName (const QString &raw) const;
+    QString uniqueMdBaseName (const QString &dirPath, const QString &baseName) const;
+    QString nodeHtmlForExport (const QModelIndex &index) const;
+    bool writeMarkdownFile (const QString &filePath, const QString &html) const;
+    bool exportMarkdownChildren (const QModelIndex &parent, const QString &dirPath) const;
 
 #ifdef HAS_HUNSPELL
     void spellingCheckingMsg (const QString &msg, bool hasInfo);

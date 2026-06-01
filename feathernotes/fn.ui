@@ -235,6 +235,7 @@
     <addaction name="actionPrintNodes"/>
     <addaction name="actionPrintAll"/>
     <addaction name="actionExportHTML"/>
+    <addaction name="actionExportMarkdown"/>
     <addaction name="separator"/>
     <addaction name="actionPassword"/>
     <addaction name="separator"/>
@@ -1286,6 +1287,14 @@
    </property>
    <property name="text">
     <string>Export &amp;HTML</string>
+   </property>
+  </action>
+  <action name="actionExportMarkdown">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Export &amp;Markdown</string>
    </property>
   </action>
   <action name="actionImageSave">

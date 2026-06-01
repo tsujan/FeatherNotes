@@ -31,6 +31,7 @@
 #include "pref.h"
 #include "colorLabel.h"
 #include "printing.h"
+#include "markdownrenderer.h"
 
 #ifdef HAS_HUNSPELL
 #include "spellChecker.h"
@@ -63,6 +64,7 @@
 #include <QMimeDatabase>
 #include <QProcess>
 #include <QCryptographicHash>
+#include <QStringConverter>
 #include <QtMath>
 
 #ifdef HAS_X11
@@ -155,6 +157,7 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     defaultShortcuts_.insert (ui->actionPrintNodes, QKeySequence());
     defaultShortcuts_.insert (ui->actionPrintAll, QKeySequence());
     defaultShortcuts_.insert (ui->actionExportHTML, QKeySequence());
+    defaultShortcuts_.insert (ui->actionExportMarkdown, QKeySequence());
     defaultShortcuts_.insert (ui->actionPassword, QKeySequence());
     defaultShortcuts_.insert (ui->actionDocFont, QKeySequence());
     defaultShortcuts_.insert (ui->actionNodeFont, QKeySequence());
@@ -274,6 +277,7 @@ FN::FN (const QStringList& message, QWidget *parent) : QMainWindow (parent), ui 
     connect (ui->actionPrintNodes, &QAction::triggered, this, &FN::txtPrint);
     connect (ui->actionPrintAll, &QAction::triggered, this, &FN::txtPrint);
     connect (ui->actionExportHTML, &QAction::triggered, this, &FN::exportHTML);
+    connect (ui->actionExportMarkdown, &QAction::triggered, this, &FN::exportMarkdown);
 
     connect (ui->actionUndo, &QAction::triggered, this, &FN::undoing);
     connect (ui->actionRedo, &QAction::triggered, this, &FN::redoing);
@@ -1066,6 +1070,7 @@ void FN::enableActions (bool enable)
     ui->actionPrintNodes->setEnabled (enable);
     ui->actionPrintAll->setEnabled (enable);
     ui->actionExportHTML->setEnabled (enable);
+    ui->actionExportMarkdown->setEnabled (enable);
     ui->actionPassword->setEnabled (enable);
 
     ui->actionPaste->setEnabled (enable);
@@ -6041,6 +6046,328 @@ void FN::exportHTML()
     {
         showWarningBar (tr ("<center><b><big>Cannot be saved!</big></b></center>")
                         + "\n<center>" + writer.device()->errorString() + "</center>", 15);
+    }
+}
+/*************************/
+QString FN::sanitizedMdName (const QString &raw) const
+{
+    QString name = raw.trimmed();
+    if (name.isEmpty())
+        name = QStringLiteral("untitled");
+
+    name.replace (QRegularExpression (QStringLiteral ("[\\\\/:*?\"<>|\\x00-\\x1f]")), QStringLiteral ("_"));
+    name.replace (QRegularExpression (QStringLiteral ("\\s+")), QStringLiteral (" "));
+    name = name.trimmed();
+    if (name.isEmpty())
+        name = QStringLiteral("untitled");
+
+    return name;
+}
+/*************************/
+QString FN::uniqueMdBaseName (const QString &dirPath, const QString &baseName) const
+{
+    QString candidate = baseName;
+    int i = 2;
+    while (QFile::exists (QDir (dirPath).filePath (candidate + ".md"))
+           || QFileInfo::exists (QDir (dirPath).filePath (candidate)))
+    {
+        candidate = baseName + "-" + QString::number (i);
+        ++i;
+    }
+    return candidate;
+}
+/*************************/
+QString FN::nodeHtmlForExport (const QModelIndex &index) const
+{
+    if (!index.isValid())
+        return QString();
+
+    DomItem *item = static_cast<DomItem*>(index.internalPointer());
+    if (TextEdit *thisTextEdit = widgets_.value (item))
+        return thisTextEdit->toHtml();
+
+    QDomNodeList lst = item->node().childNodes();
+    return lst.item (0).nodeValue();
+}
+/*************************/
+bool FN::writeMarkdownFile (const QString &filePath, const QString &html) const
+{
+    QTextDocument doc;
+    doc.setHtml (html);
+    QString md = doc.toMarkdown();
+    md = MarkdownRenderer::normalizeCommonMark (md);
+
+    QFile file (filePath);
+    if (!file.open (QFile::WriteOnly | QFile::Truncate | QFile::Text))
+        return false;
+
+    QTextStream stream (&file);
+    stream.setEncoding (QStringConverter::Utf8);
+    stream << md;
+    return stream.status() == QTextStream::Ok;
+}
+/*************************/
+bool FN::exportMarkdownChildren (const QModelIndex &parent, const QString &dirPath) const
+{
+    bool okAll = true;
+    const int rows = model_->rowCount (parent);
+    for (int row = 0; row < rows; ++row)
+    {
+        QModelIndex child = model_->index (row, 0, parent);
+        QString baseName = sanitizedMdName (model_->data (child, Qt::DisplayRole).toString());
+        baseName = uniqueMdBaseName (dirPath, baseName);
+
+        const QString filePath = QDir (dirPath).filePath (baseName + ".md");
+        if (!writeMarkdownFile (filePath, nodeHtmlForExport (child)))
+            okAll = false;
+
+        if (model_->rowCount (child) > 0)
+        {
+            const QString childDirPath = QDir (dirPath).filePath (baseName);
+            if (!QDir().mkpath (childDirPath)
+                || !exportMarkdownChildren (child, childDirPath))
+            {
+                okAll = false;
+            }
+        }
+    }
+    return okAll;
+}
+/*************************/
+void FN::exportMarkdown()
+{
+    if (!ui->stackedWidget->currentWidget())
+        return;
+
+    closeWinDialogs();
+
+    QDialog *dialog = new QDialog (this);
+    dialog->setWindowModality (Qt::WindowModal);
+    dialog->setWindowTitle (tr ("Export Markdown"));
+    QGridLayout *grid = new QGridLayout;
+    grid->setSpacing (5);
+    grid->setContentsMargins (5, 5, 5, 5);
+
+    QGroupBox *groupBox = new QGroupBox (tr ("Export:"));
+    QRadioButton *radio1 = new QRadioButton (tr ("&Current node"));
+    radio1->setChecked (true);
+    QRadioButton *radio2 = new QRadioButton (tr ("With all &sub-nodes"));
+    QRadioButton *radio3 = new QRadioButton (tr ("&All nodes"));
+    QVBoxLayout *vbox = new QVBoxLayout;
+    vbox->addWidget (radio1);
+    vbox->addWidget (radio2);
+    vbox->addWidget (radio3);
+    vbox->addStretch (1);
+    groupBox->setLayout (vbox);
+
+    QLabel *label = new QLabel (tr ("Root file:"));
+    LineEdit *mdPathEntry = new LineEdit();
+    mdPathEntry->returnOnClear = false;
+    mdPathEntry->setMinimumWidth (150);
+
+    QModelIndex currentIndex = ui->treeView->currentIndex();
+    QModelIndex firstRoot = model_->index (0, 0, QModelIndex());
+    QDir dir = QDir::home();
+    if (!xmlPath_.isEmpty())
+        dir = QFileInfo (xmlPath_).absoluteDir();
+
+    auto suggestedNameForMode = [this, currentIndex, firstRoot] (int mode) {
+        QString suggestedName;
+        if (mode == 2)
+        {
+            suggestedName = QFileInfo (xmlPath_).fileName();
+            if (suggestedName.endsWith (".fnx"))
+                suggestedName.chop (4);
+        }
+        else
+        {
+            QModelIndex idx = currentIndex;
+            if (!idx.isValid())
+                idx = firstRoot;
+            suggestedName = model_->data (idx, Qt::DisplayRole).toString();
+        }
+        if (suggestedName.isEmpty())
+            suggestedName = tr ("Untitled");
+        return suggestedName;
+    };
+
+    auto setSuggestedPath = [mdPathEntry, dir, suggestedNameForMode] (int mode) {
+        const QString name = suggestedNameForMode (mode) + ".md";
+        mdPathEntry->setText (dir.filePath (name));
+    };
+    setSuggestedPath (0);
+
+    connect (radio1, &QAbstractButton::toggled, this, [radio1, setSuggestedPath] (bool checked) {
+        if (checked && radio1->isChecked())
+            setSuggestedPath (0);
+    });
+    connect (radio2, &QAbstractButton::toggled, this, [radio2, setSuggestedPath] (bool checked) {
+        if (checked && radio2->isChecked())
+            setSuggestedPath (1);
+    });
+    connect (radio3, &QAbstractButton::toggled, this, [radio3, setSuggestedPath] (bool checked) {
+        if (checked && radio3->isChecked())
+            setSuggestedPath (2);
+    });
+
+    connect (mdPathEntry, &QLineEdit::returnPressed, dialog, &QDialog::accept);
+
+    QToolButton *openBtn = new QToolButton();
+    openBtn->setIcon (symbolicIcon::icon (":icons/document-open.svg"));
+    openBtn->setToolTip (tr ("Select path"));
+    connect (openBtn, &QAbstractButton::clicked, this, [this, mdPathEntry] {
+        QString path;
+        if ((path = mdPathEntry->text()).isEmpty())
+            path = QDir::home().filePath (tr ("Untitled") + ".md");
+
+        QString mdPath;
+        FileDialog dialog (this);
+        dialog.setAcceptMode (QFileDialog::AcceptSave);
+        dialog.setWindowTitle (tr ("Save Markdown As..."));
+        dialog.setFileMode (QFileDialog::AnyFile);
+        dialog.setNameFilter (tr ("Markdown Files (*.md);;All Files (*)"));
+        dialog.setDirectory (path.section ("/", 0, -2));
+        dialog.selectFile (path);
+        dialog.autoScroll();
+        if (dialog.exec())
+        {
+            mdPath = dialog.selectedFiles().value (0);
+            if (mdPath.isEmpty() || QFileInfo (mdPath).isDir())
+                return;
+        }
+        else return;
+
+        mdPathEntry->setText (mdPath);
+    });
+    QSpacerItem *spacer = new QSpacerItem (1, 5);
+    QPushButton *cancelButton = new QPushButton (symbolicIcon::icon (":icons/dialog-cancel.svg"), tr ("Cancel"));
+    connect (cancelButton, &QAbstractButton::clicked, dialog, &QDialog::reject);
+    QPushButton *okButton = new QPushButton (symbolicIcon::icon (":icons/dialog-ok.svg"), tr ("OK"));
+    connect (okButton, &QAbstractButton::clicked, dialog, &QDialog::accept);
+
+    grid->addWidget (groupBox, 0, 0, 1, 2);
+    grid->addWidget (label, 1, 0);
+    grid->addWidget (mdPathEntry, 1, 1, 1, 3);
+    grid->addWidget (openBtn, 1, 4, Qt::AlignLeft);
+    grid->addItem (spacer, 2, 0);
+    grid->addWidget (cancelButton, 3, 1, Qt::AlignRight);
+    grid->addWidget (okButton, 3, 2, 1, 3, Qt::AlignRight);
+    grid->setColumnStretch (1, 1);
+    grid->setRowStretch (2, 1);
+
+    dialog->setLayout (grid);
+
+    int sel = 0;
+    QString rootMdFile;
+    bool prompt = true;
+    while (prompt)
+    {
+        switch (dialog->exec()) {
+        case QDialog::Accepted:
+            if (radio2->isChecked())
+                sel = 1;
+            else if (radio3->isChecked())
+                sel = 2;
+            else
+                sel = 0;
+
+            rootMdFile = mdPathEntry->text().trimmed();
+            if (rootMdFile.isEmpty())
+            {
+                setSuggestedPath (sel);
+                continue;
+            }
+            if (!rootMdFile.endsWith (".md", Qt::CaseInsensitive))
+                rootMdFile += ".md";
+
+            if (QFile::exists (rootMdFile))
+            {
+                prompt = QMessageBox::No == QMessageBox::question (this,
+                                                                   tr ("Question"),
+                                                                   tr ("The file already exists.\nDo you want to replace it?\n"));
+                if (prompt) continue;
+            }
+            prompt = false;
+            QApplication::setOverrideCursor (QCursor(Qt::WaitCursor));
+            delete dialog;
+            break;
+        case QDialog::Rejected:
+        default:
+            if (QGuiApplication::overrideCursor() != nullptr)
+                QApplication::restoreOverrideCursor();
+            delete dialog;
+            return;
+        }
+    }
+
+    QModelIndex startIndex = currentIndex;
+    if (!startIndex.isValid())
+        startIndex = firstRoot;
+
+    if (!startIndex.isValid())
+    {
+        if (QGuiApplication::overrideCursor() != nullptr)
+            QApplication::restoreOverrideCursor();
+        showWarningBar (tr ("<center><b><big>Cannot be saved!</big></b></center>"), 15);
+        return;
+    }
+
+    const QString rootDir = QDir (QFileInfo (rootMdFile).absolutePath()).filePath (QFileInfo (rootMdFile).completeBaseName());
+    if (!QDir().mkpath (rootDir))
+    {
+        if (QGuiApplication::overrideCursor() != nullptr)
+            QApplication::restoreOverrideCursor();
+        showWarningBar (tr ("<center><b><big>Cannot be saved!</big></b></center>"), 15);
+        return;
+    }
+
+    bool rootOk = writeMarkdownFile (rootMdFile, nodeHtmlForExport (startIndex));
+    bool childrenOk = true;
+    if (sel == 1)
+    {
+        childrenOk = exportMarkdownChildren (startIndex, rootDir);
+    }
+    else if (sel == 2)
+    {
+        QModelIndex top = firstRoot;
+        while (top.isValid())
+        {
+            QString baseName = sanitizedMdName (model_->data (top, Qt::DisplayRole).toString());
+            baseName = uniqueMdBaseName (rootDir, baseName);
+
+            const QString filePath = QDir (rootDir).filePath (baseName + ".md");
+            if (!writeMarkdownFile (filePath, nodeHtmlForExport (top)))
+                childrenOk = false;
+
+            if (model_->rowCount (top) > 0)
+            {
+                const QString childDirPath = QDir (rootDir).filePath (baseName);
+                if (!QDir().mkpath (childDirPath)
+                    || !exportMarkdownChildren (top, childDirPath))
+                {
+                    childrenOk = false;
+                }
+            }
+            top = model_->sibling (top.row() + 1, 0, top);
+        }
+    }
+
+    const bool success = rootOk && childrenOk;
+
+    if (QGuiApplication::overrideCursor() != nullptr)
+        QApplication::restoreOverrideCursor();
+
+    if (success)
+    {
+        showWarningBar (tr ("<center><b><big>Markdown export completed.</big></b></center>"), 10);
+    }
+    else if (rootOk || childrenOk)
+    {
+        showWarningBar (tr ("<center><b><big>Markdown export completed with errors.</big></b></center>"), 15);
+    }
+    else
+    {
+        showWarningBar (tr ("<center><b><big>Cannot be saved!</big></b></center>"), 15);
     }
 }
 /*************************/

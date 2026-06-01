@@ -17,6 +17,11 @@ if(WITH_HUNSPELL)
   find_package(HUNSPELL "${HUNSPELL_MINIMUM_VERSION}" REQUIRED)
 endif()
 
+if(WITH_CMARK)
+# optional markdown rendering with cmark (see FindCMARK.cmake)
+  find_package(CMARK QUIET)
+endif()
+
 # X11 for Linux/Unix
 if(NOT WITHOUT_X11 AND UNIX AND NOT APPLE AND NOT HAIKU)
   find_package(X11 REQUIRED)
@@ -45,6 +50,11 @@ if(WITH_HUNSPELL)
   add_definitions(-DHAS_HUNSPELL)
 endif()
 
+if(CMARK_FOUND)
+  include_directories(${include_directories} ${CMARK_INCLUDE_DIRS})
+  add_definitions(-DHAS_CMARK)
+endif()
+
 if(NOT WITHOUT_X11 AND UNIX AND NOT APPLE AND NOT HAIKU)
   include_directories(${include_directories}
                       ${X11_INCLUDE_DIR})
@@ -70,6 +80,7 @@ set(feathernotes_SRCS
     pref.cpp
     textedit.cpp
     simplecrypt.cpp
+    markdownrenderer.cpp
     vscrollbar.cpp
     printing.cpp
     svgicons.cpp)
@@ -137,6 +148,10 @@ target_link_libraries(feathernotes ${Qt6Core_LIBRARIES}
 
 if(WITH_HUNSPELL)
   target_link_libraries(feathernotes ${HUNSPELL_LIBRARIES})
+endif()
+
+if(CMARK_FOUND)
+  target_link_libraries(feathernotes ${CMARK_LIBRARIES})
 endif()
 
 if(NOT WITHOUT_X11 AND UNIX AND NOT APPLE AND NOT HAIKU)
