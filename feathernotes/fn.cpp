@@ -6058,6 +6058,8 @@ QString FN::nodeAddress (QModelIndex index)
         indx = model_->parent (indx);
     }
     bool rtl = l.join (" ").isRightToLeft();
+    for (QString &str : l)
+        str = str.toHtmlEscaped();
     if (rtl)
         res = l.join (" ← ");
     else
