@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2020-2024 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2020-2026 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -21,6 +21,8 @@
 #include <QTextStream>
 #include <QStringList>
 #include <QRegularExpression>
+#include <QStringDecoder>
+#include <QStringEncoder>
 
 #include <hunspell.hxx>
 
@@ -43,7 +45,8 @@ SpellChecker::SpellChecker (const QString& dictionaryPath, const QString& userDi
         QTextStream stream (&_affixFile);
         QRegularExpression encDetector ("^\\s*SET\\s+([A-Z0-9\\-]+)\\s*", QRegularExpression::CaseInsensitiveOption);
         QRegularExpressionMatch match;
-        for (QString line = stream.readLine(); !line.isEmpty(); line = stream.readLine())
+        QString line;
+        while (stream.readLineInto (&line))
         {
             if (line.indexOf (encDetector, 0, &match) > -1)
             {
@@ -53,13 +56,10 @@ SpellChecker::SpellChecker (const QString& dictionaryPath, const QString& userDi
         }
         _affixFile.close();
     }
-    encoder_ = QStringEncoder (encoding.compare ("UTF-8", Qt::CaseInsensitive) == 0 ?
-                                   QStringConverter::Utf8
-                               : encoding.compare ("UTF-16", Qt::CaseInsensitive) == 0 ?
-                                   QStringConverter::Utf16
-                               : encoding.compare ("UTF-32", Qt::CaseInsensitive) == 0 ?
-                                   QStringConverter::Utf32
-                               : QStringConverter::Latin1);
+    encoding_ = encoding.compare ("UTF-8",  Qt::CaseInsensitive) == 0 ? QStringConverter::Utf8 :
+                encoding.compare ("UTF-16", Qt::CaseInsensitive) == 0 ? QStringConverter::Utf16 :
+                encoding.compare ("UTF-32", Qt::CaseInsensitive) == 0 ? QStringConverter::Utf32 :
+                QStringConverter::Latin1;
 
     if (!userDictionary_.isEmpty())
     {
@@ -67,8 +67,12 @@ SpellChecker::SpellChecker (const QString& dictionaryPath, const QString& userDi
         if (userDictonaryFile.open (QIODevice::ReadOnly))
         {
             QTextStream stream (&userDictonaryFile);
-            for (QString word = stream.readLine(); !word.isEmpty(); word = stream.readLine())
-                ignoreWord (word);
+            QString word;
+            while (stream.readLineInto (&word))
+            {
+                if (!word.isEmpty())
+                    ignoreWord (word);
+            }
             userDictonaryFile.close();
         }
     }
@@ -81,22 +85,34 @@ SpellChecker::~SpellChecker()
 /*************************/
 bool SpellChecker::spell (const QString& word)
 {
-    return hunspell_->spell (word.toStdString());
+    return hunspell_->spell (encodedWord (word));
 }
 /*************************/
 QStringList SpellChecker::suggest (const QString& word)
 {
-    const std::vector<std::string> strSuggestions = hunspell_->suggest (word.toStdString());
+    const std::vector<std::string> strSuggestions = hunspell_->suggest (encodedWord (word));
     QStringList suggestions;
     for (const auto &str : strSuggestions)
-        suggestions << QString::fromStdString (str);
+        suggestions << decodedWord (str);
     return suggestions;
 }
 /*************************/
 void SpellChecker::ignoreWord (const QString& word)
 {
-    QByteArray b = encoder_.encode (word);
-    hunspell_->add (b.toStdString());
+    hunspell_->add (encodedWord (word));
+}
+/*************************/
+std::string SpellChecker::encodedWord (const QString &word) const
+{
+    QStringEncoder encoder (encoding_);
+    const QByteArray b = encoder.encode (word);
+    return b.toStdString();
+}
+/*************************/
+QString SpellChecker::decodedWord (const std::string &word) const
+{
+    QStringDecoder decoder (encoding_);
+    return decoder.decode (QByteArray::fromStdString (word));
 }
 /*************************/
 void SpellChecker::addToUserWordlist (const QString& word)

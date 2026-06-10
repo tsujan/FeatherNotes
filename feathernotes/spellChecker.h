@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Pedram Pourang (aka Tsu Jan) 2020-2024 <tsujan2000@gmail.com>
+ * Copyright (C) Pedram Pourang (aka Tsu Jan) 2020-2026 <tsujan2000@gmail.com>
  *
  * FeatherNotes is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -20,7 +20,8 @@
 
 #include <QString>
 #include <QHash>
-#include <QStringEncoder>
+#include <QStringConverter>
+#include <string>
 
 class Hunspell;
 
@@ -44,9 +45,12 @@ public:
     }
 
 private:
+    std::string encodedWord (const QString &word) const;
+    QString decodedWord (const std::string &word) const;
+
     Hunspell *hunspell_;
     QString userDictionary_;
-    QStringEncoder encoder_;
+    QStringConverter::Encoding encoding_;
     QHash<QString, QString> corrections_;
 };
 

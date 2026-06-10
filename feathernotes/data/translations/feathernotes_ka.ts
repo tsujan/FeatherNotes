@@ -1055,9 +1055,9 @@
         <location filename="../../fn.cpp" line="4700"/>
         <location filename="../../fn.cpp" line="4963"/>
         <location filename="../../fn.cpp" line="5916"/>
-        <location filename="../../fn.cpp" line="6195"/>
-        <location filename="../../fn.cpp" line="6293"/>
-        <location filename="../../fn.cpp" line="6393"/>
+        <location filename="../../fn.cpp" line="6197"/>
+        <location filename="../../fn.cpp" line="6295"/>
+        <location filename="../../fn.cpp" line="6395"/>
         <source>Cancel</source>
         <translation>გაუქმება</translation>
     </message>
@@ -1126,9 +1126,9 @@
         <location filename="../../fn.cpp" line="4701"/>
         <location filename="../../fn.cpp" line="4964"/>
         <location filename="../../fn.cpp" line="5918"/>
-        <location filename="../../fn.cpp" line="6196"/>
-        <location filename="../../fn.cpp" line="6294"/>
-        <location filename="../../fn.cpp" line="6394"/>
+        <location filename="../../fn.cpp" line="6198"/>
+        <location filename="../../fn.cpp" line="6296"/>
+        <location filename="../../fn.cpp" line="6396"/>
         <source>OK</source>
         <translation>დიახ</translation>
     </message>
@@ -1195,7 +1195,7 @@
         <translation>ბმულის ჩასმა</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6139"/>
+        <location filename="../../fn.cpp" line="6141"/>
         <source>HTML Files</source>
         <translation>HTML ფაილები</translation>
     </message>
@@ -1245,9 +1245,9 @@ Please disable tray in Preferences.</source>
         <location filename="../../fn.cpp" line="5757"/>
         <location filename="../../fn.cpp" line="5766"/>
         <location filename="../../fn.cpp" line="5905"/>
-        <location filename="../../fn.cpp" line="6096"/>
-        <location filename="../../fn.cpp" line="6105"/>
-        <location filename="../../fn.cpp" line="6132"/>
+        <location filename="../../fn.cpp" line="6098"/>
+        <location filename="../../fn.cpp" line="6107"/>
+        <location filename="../../fn.cpp" line="6134"/>
         <source>Untitled</source>
         <translation>უსათაურო</translation>
     </message>
@@ -1439,104 +1439,104 @@ Do you want to replace it?
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6137"/>
+        <location filename="../../fn.cpp" line="6139"/>
         <source>Save HTML As...</source>
         <translation>HTML-ის შენახვა, როგორც...</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6163"/>
+        <location filename="../../fn.cpp" line="6165"/>
         <source>Set Password</source>
         <translation>პაროლის დაყენება</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6172"/>
+        <location filename="../../fn.cpp" line="6174"/>
         <source>Type password</source>
         <translation>აკრიფეთ პაროლი</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6184"/>
+        <location filename="../../fn.cpp" line="6186"/>
         <source>Retype password</source>
         <translation>თავიდან აკრიფეთ პაროლი</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6256"/>
+        <location filename="../../fn.cpp" line="6258"/>
         <source>&lt;center&gt;Passwords were different. Retry!&lt;/center&gt;</source>
         <translation>&lt;center&gt;პაროლები განსხვავდება. თავიდან სცადეთ!&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6276"/>
-        <location filename="../../fn.cpp" line="6284"/>
-        <location filename="../../fn.cpp" line="6376"/>
-        <location filename="../../fn.cpp" line="6384"/>
+        <location filename="../../fn.cpp" line="6278"/>
+        <location filename="../../fn.cpp" line="6286"/>
+        <location filename="../../fn.cpp" line="6378"/>
+        <location filename="../../fn.cpp" line="6386"/>
         <source>Enter Password</source>
         <translation>შეიყვანეთ პაროლი</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6356"/>
-        <location filename="../../fn.cpp" line="6390"/>
+        <location filename="../../fn.cpp" line="6358"/>
+        <location filename="../../fn.cpp" line="6392"/>
         <source>&lt;center&gt;Wrong password. Retry!&lt;/center&gt;</source>
         <translation>&lt;center&gt;პაროლი არასწორია. თავიდან სცადეთ!&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6457"/>
+        <location filename="../../fn.cpp" line="6459"/>
         <source>A lightweight notes manager</source>
         <translation>მსუბუქი მმართველი შენიშვნებისთვის</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6458"/>
+        <location filename="../../fn.cpp" line="6460"/>
         <source>based on Qt</source>
         <translation>დაფუძნებულია Qt-ზე</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6459"/>
+        <location filename="../../fn.cpp" line="6461"/>
         <source>Author</source>
         <translation>ავტორი</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6461"/>
-        <location filename="../../fn.cpp" line="6462"/>
+        <location filename="../../fn.cpp" line="6463"/>
+        <location filename="../../fn.cpp" line="6464"/>
         <source>About FeatherNotes</source>
         <translation>FeatherNotes-ის შესახებ</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6461"/>
+        <location filename="../../fn.cpp" line="6463"/>
         <source>Translators</source>
         <translation>მთარგმნელები</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6645"/>
+        <location filename="../../fn.cpp" line="6647"/>
         <source>See Preferences → Text → Spell Checking!</source>
         <translation>იხილეთ მორგება → ტექსტი → მართლწერის შემოწმება!</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6661"/>
+        <location filename="../../fn.cpp" line="6663"/>
         <source>You need to add a Hunspell dictionary.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6666"/>
+        <location filename="../../fn.cpp" line="6668"/>
         <source>The Hunspell dictionary does not exist.</source>
         <translation>Hunspell-ის ლექსიკონი არ არსებობს.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6674"/>
+        <location filename="../../fn.cpp" line="6676"/>
         <source>The Hunspell dictionary is not accompanied by an affix file.</source>
         <translation>Hunspell-ის ლექსიკონს აფიქსის ფაილი არ მოჰყვება.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6692"/>
-        <location filename="../../fn.cpp" line="6707"/>
-        <location filename="../../fn.cpp" line="6719"/>
+        <location filename="../../fn.cpp" line="6694"/>
+        <location filename="../../fn.cpp" line="6709"/>
+        <location filename="../../fn.cpp" line="6721"/>
         <source>No misspelling from text cursor.</source>
         <translation>მართლწერის შესამოწმებელი ტექსტი კურსორთან არ არსებობს.</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6731"/>
+        <location filename="../../fn.cpp" line="6733"/>
         <source>Spell Checking</source>
         <translation>მართლწერის შემოწმება</translation>
     </message>
     <message>
-        <location filename="../../fn.cpp" line="6460"/>
+        <location filename="../../fn.cpp" line="6462"/>
         <source>aka.</source>
         <translation>ცნობილი, როგორც.</translation>
     </message>

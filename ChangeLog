@@ -1,6 +1,8 @@
 V1.4.1
 ---------
  * Allowed saving of node icons if they are imported images.
+ * Escape node names on exporting to HTML.
+ * Fixed using of dictionary encoding with Hunspell.
 
 V1.4.0
 ---------

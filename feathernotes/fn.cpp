@@ -3032,7 +3032,7 @@ void FN::nodeIcon()
     QToolButton *openBtn = new QToolButton();
     openBtn->setIcon (symbolicIcon::icon (":icons/document-open.svg"));
     openBtn->setToolTip (tr ("Open image"));
-    connect (openBtn, &QAbstractButton::clicked, dlg, [=] {
+    connect (openBtn, &QAbstractButton::clicked, dlg, [=, this] {
         QString path;
         if (!xmlPath_.isEmpty())
         {
@@ -6057,9 +6057,9 @@ QString FN::nodeAddress (QModelIndex index)
         l.prepend (model_->data (indx, Qt::DisplayRole).toString());
         indx = model_->parent (indx);
     }
-    bool rtl = l.join (" ").isRightToLeft();
     for (QString &str : l)
         str = str.toHtmlEscaped();
+    bool rtl = l.join (" ").isRightToLeft();
     if (rtl)
         res = l.join (" ← ");
     else
