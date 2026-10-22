@@ -53,6 +53,20 @@ int main(int argc, char *argv[])
     singleton.setApplicationName (name);
     singleton.setApplicationVersion (version);
 
+    QStringList info;
+    if (argc > 1)
+    {
+        info << QString::fromUtf8 (argv[1]);
+        if (argc > 2)
+            info << QString::fromUtf8 (argv[2]);
+    }
+
+    if (!singleton.isPrimaryInstance())
+    {
+        singleton.sendInfo (info); // is sent to the primary instance
+        return 0;
+    }
+
     QTranslator qtTranslator;
     if (qtTranslator.load ("qt_" + QLocale::system().name(), QLibraryInfo::path (QLibraryInfo::TranslationsPath)))
         singleton.installTranslator (&qtTranslator);
@@ -67,20 +81,6 @@ int main(int argc, char *argv[])
 #endif
     {
         singleton.installTranslator (&FPTranslator);
-    }
-
-    QStringList info;
-    if (argc > 1)
-    {
-        info << QString::fromUtf8 (argv[1]);
-        if (argc > 2)
-            info << QString::fromUtf8 (argv[2]);
-    }
-
-    if (!singleton.isPrimaryInstance())
-    {
-        singleton.sendInfo (info); // is sent to the primary instance
-        return 0;
     }
 
 #if not defined (Q_OS_WIN)
