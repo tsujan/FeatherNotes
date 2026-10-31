@@ -52,7 +52,7 @@
     <message>
         <location filename="../../fn.ui" line="100"/>
         <source>Search...</source>
-        <translation>Arama...</translation>
+        <translation>Ara...</translation>
     </message>
     <message>
         <location filename="../../fn.ui" line="115"/>
@@ -1866,7 +1866,7 @@ ek bir dosya olmalıdır.</translation>
     <message>
         <location filename="../../pref.cpp" line="509"/>
         <source>The typed shortcut was reserved.</source>
-        <translation>Yazılan kısayol rezerve edildi.</translation>
+        <translation>Yazılan kısayol ayrıltıldı.</translation>
     </message>
     <message>
         <location filename="../../pref.cpp" line="624"/>
@@ -1899,17 +1899,17 @@ ek bir dosya olmalıdır.</translation>
     <message>
         <location filename="../../spellDialog.ui" line="87"/>
         <source>Ignore Once</source>
-        <translation>Bir Kerelik Yoksay</translation>
+        <translation>Bir Defalık Yoksay</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="100"/>
         <source>Ignore All</source>
-        <translation>Hepsini Yoksay</translation>
+        <translation>Tümünü Yoksay</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="129"/>
         <source>Correct Once</source>
-        <translation>Bir Kerelik Düzelt</translation>
+        <translation>Bir Defalık Düzelt</translation>
     </message>
     <message>
         <location filename="../../spellDialog.ui" line="142"/>
